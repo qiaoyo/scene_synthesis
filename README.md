@@ -1,0 +1,41 @@
+# Scene Layout RAG
+
+该目录包含一个可本地运行的RAG原型，用于将IsaacSim场景资产(MD/CSV)整理为可检索的知识库，并基于自然语言指令给出物体布局建议。
+
+## 软件环境建议
+1. **基础系统**: Ubuntu 22.04 + Python 3.10 (推荐使用 [micromamba](https://mamba.readthedocs.io) 或 Conda 管理虚拟环境)。
+2. **GPU 驱动**: 安装与 48G + 24G 双显卡匹配的最新 NVIDIA 驱动，随后安装 CUDA 12.1 对应的 `cudnn`。
+3. **PyTorch**: 通过 `pip install torch --index-url https://download.pytorch.org/whl/cu121` 获取GPU版 PyTorch 2.1+。
+4. **Python 依赖**: `pip install -r requirements.txt` (包含 sentence-transformers、transformers、accelerate、peft、datasets、faiss-gpu、bitsandbytes 等)。
+5. **开发工具**: 可选安装 `uv` 或 `poetry` 做包管理，`pre-commit` 做静态检查。
+
+## 项目结构
+```
+scene_layout_rag/   # RAG核心库
+scripts/            # 训练 / 推理 / 构建脚本
+requirements.txt
+```
+
+## 典型工作流
+1. **构建索引**
+   ```bash
+   cd /home/qiaoyo/python_proj/scene_synthesis/src
+   python scripts/ingest_assets.py
+   ```
+2. **即时推理**
+   ```bash
+   python scripts/run_inference.py "在入库区放置两排可折叠纸箱"
+   ```
+3. **LoRA 微调**
+   ```bash
+   python scripts/train_layout_model.py --model mistralai/Mistral-7B-Instruct-v0.2 --output runs/lora-layout
+   ```
+4. **CLI 快速测试**
+   ```bash
+   python -m scene_layout_rag.cli "请给出AGV通道与传送带的布局"
+   ```
+
+## 下一步可扩展方向
+- 接入企业内部的 USD 元数据或实时库存系统（通过 `AssetPaths` 自定义 CSV/MD 路径）。
+- 将 `layout_reasoner` 替换为学习型策略（例如训练一个小型几何网络或RL agent）。
+- 使用 `FastAPI`/`Gradio` 暴露在线接口，与IsaacSim USD生成脚本直接联动。
