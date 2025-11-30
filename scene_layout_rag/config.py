@@ -12,7 +12,7 @@ _DEFAULT_PROJECT_ROOT = _SRC_ROOT
 
 def _detect_assets_root() -> Path:
     candidates = [
-        _SRC_ROOT / "assets",
+        _SRC_ROOT / "data" / "assets",
         _SRC_ROOT.parent / "assets",
     ]
     for candidate in candidates:

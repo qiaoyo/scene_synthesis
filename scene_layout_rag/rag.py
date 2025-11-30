@@ -1,13 +1,14 @@
 """High level pipeline orchestrating ingestion, retrieval, and layout reasoning."""
 from __future__ import annotations
 
-from typing import List
+from typing import List, Sequence
 
 from .asset_loader import AssetIngestor
 from .config import ProjectConfig
-from .data_models import AssetDocument, LayoutPlan, SceneCommand
+from .data_models import AssetDocument, LayoutPlan, LayoutElement, SceneCommand
 from .embedding import EmbeddingBackend
 from .layout_reasoner import LayoutReasoner
+from .llm_planner import LLMPlanner
 from .vector_store import LocalVectorStore, RetrievalResult
 
 
@@ -22,6 +23,7 @@ class SceneLayoutRAG:
         self._embedder: EmbeddingBackend | None = None
         self._index: LocalVectorStore | None = None
         self._reasoner = LayoutReasoner()
+        self._planner: LLMPlanner | None = None
 
     @property
     def document_count(self) -> int:
@@ -57,7 +59,51 @@ class SceneLayoutRAG:
         print(f"[SceneLayoutRAG] 根据查询构建布局方案, 命中数量: {len(hits)}")
         command = SceneCommand(raw_text=command_text, language=self.config.language)
         doc_scores = [(hit.document, hit.score) for hit in hits]
-        return self._reasoner.build_plan(command, doc_scores)
+        planner_notes = None
+        plan_elements: Sequence[LayoutElement] | None = None
+        if self.config.model.llm_name_or_path:
+            try:
+                self._planner = self._planner or LLMPlanner(self.config)
+                planner_notes, placement_dicts = self._planner.plan(command_text, [doc for doc, _ in doc_scores])
+                if placement_dicts:
+                    plan_elements = self._build_elements_from_llm(placement_dicts, doc_scores)
+            except Exception as exc:  # pragma: no cover - defensive logging
+                print(f"[SceneLayoutRAG] LLM规划失败，回落到启发式策略: {exc}")
+                plan_elements = None
+        if plan_elements is None or len(plan_elements) == 0:
+            plan = self._reasoner.build_plan(command, doc_scores)
+            plan.planner_notes = planner_notes
+            return plan
+        return LayoutPlan(command=command, elements=plan_elements, retrieved_docs=[doc for doc, _ in doc_scores], planner_notes=planner_notes)
+
+    def _build_elements_from_llm(self, placement_dicts: Sequence[dict], doc_scores: Sequence[tuple[AssetDocument, float]]) -> List[LayoutElement]:
+        doc_by_id = {doc.doc_id: (doc, score) for doc, score in doc_scores}
+        doc_by_asset = {doc.metadata.get("asset_category", doc.doc_id): (doc, score) for doc, score in doc_scores}
+        elements: List[LayoutElement] = []
+        for entry in placement_dicts:
+            asset_id = str(entry.get("asset_id") or "")
+            doc_entry = doc_by_id.get(asset_id) or doc_by_asset.get(asset_id)
+            if doc_entry is None:
+                continue
+            doc, score = doc_entry
+            usd_path = entry.get("usd_path") or doc.metadata.get("usd_path", "")
+            pos = entry.get("position") or {}
+            transform = {
+                "x": float(pos.get("x", 0.0)),
+                "y": float(pos.get("y", 0.0)),
+                "z": float(pos.get("z", 0.0)),
+            }
+            reasoning = entry.get("reason") or "由LLM规划得出的位置"
+            elements.append(
+                LayoutElement(
+                    asset_id=asset_id or doc.metadata.get("asset_category", doc.doc_id),
+                    usd_path=usd_path,
+                    transform=transform,
+                    score=score,
+                    reasoning=reasoning,
+                )
+            )
+        return elements
 
 
 __all__ = ["SceneLayoutRAG"]

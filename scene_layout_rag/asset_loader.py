@@ -3,8 +3,9 @@ from __future__ import annotations
 
 import csv
 import hashlib
+import json
 from pathlib import Path
-from typing import Iterable, List
+from typing import Iterable, List, Optional
 
 from .config import ProjectConfig
 from .data_models import AssetDocument
@@ -13,6 +14,38 @@ from .text_splitter import chunk_text, chunk_by_paragraph
 
 def _hash_text(text: str) -> str:
     return hashlib.sha1(text.encode("utf-8")).hexdigest()[:16]
+
+
+def _parse_bbox(raw: Optional[str]) -> Optional[dict]:
+    if raw is None:
+        return None
+    value = raw.strip()
+    if not value:
+        return None
+    try:
+        parsed = json.loads(value)
+        if isinstance(parsed, dict):
+            return parsed
+        if isinstance(parsed, (list, tuple)) and len(parsed) >= 3:
+            return {"size": [float(parsed[0]), float(parsed[1]), float(parsed[2])], "unit": "m"}
+    except json.JSONDecodeError:
+        pass
+    separators = [",", "x", "X", "*"]
+    for sep in separators:
+        if sep in value:
+            try:
+                parts = [float(p.strip()) for p in value.split(sep) if p.strip()]
+                if len(parts) >= 3:
+                    return {"size": parts[:3], "unit": "m"}
+            except ValueError:
+                continue
+    try:
+        parts = [float(p.strip()) for p in value.split() if p.strip()]
+        if len(parts) >= 3:
+            return {"size": parts[:3], "unit": "m"}
+    except ValueError:
+        return None
+    return None
 
 
 def load_csv_documents(csv_path: Path, chunk_size: int, chunk_overlap: int) -> List[AssetDocument]:
@@ -28,6 +61,7 @@ def load_csv_documents(csv_path: Path, chunk_size: int, chunk_overlap: int) -> L
             long_desc = row[3].strip()
             base_text = f"类型:{asset_category}\nUSD:{usd_path}\n{short_desc}\n{long_desc}"
             chunks = chunk_text(base_text, chunk_size, chunk_overlap)
+            bbox = _parse_bbox(row[4]) if len(row) >= 5 else None
             for chunk_idx, chunk in enumerate(chunks):
                 doc_id = f"{csv_path.stem}-{idx}-{chunk_idx}-{_hash_text(chunk)}"
                 documents.append(
@@ -39,6 +73,7 @@ def load_csv_documents(csv_path: Path, chunk_size: int, chunk_overlap: int) -> L
                             "usd_path": usd_path,
                             "source": str(csv_path),
                             "row_index": idx,
+                            "bbox": bbox,
                         },
                     )
                 )

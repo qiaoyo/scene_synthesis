@@ -28,6 +28,7 @@ requirements.txt
    ```bash
    python scripts/run_inference.py "在入库区放置两排可折叠纸箱"
    ```
+   > 说明：推理阶段会先使用 sentence-transformers 检索相关资产，再将命中的资产（含 bbox）连同需求一起喂给本地 LLM（`ModelConfig.llm_name_or_path` 对应的模型）生成布局方案。若 LLM 解析失败，则自动回落到启发式推理。
 3. **LoRA 微调**
    ```bash
    python scripts/train_layout_model.py --model mistralai/Mistral-7B-Instruct-v0.2 --output runs/lora-layout
@@ -36,6 +37,10 @@ requirements.txt
    ```bash
    python -m scene_layout_rag.cli "请给出AGV通道与传送带的布局"
    ```
+
+## 资产CSV格式扩展
+- 在原有 `类别, USD路径, 短描述, 长描述` 基础上，第5列可填写 `bbox`（JSON 或 `长,宽,高` 数值），例如：`0.8,0.6,0.5` 或 `{"size":[0.8,0.6,0.5],"unit":"m"}`。若留空则使用 1m 的默认值。
+- `ingest_assets.py` 会自动解析该列并将 bbox 信息加入文档元数据，供 LLM 推理阶段使用。
 
 ## 下一步可扩展方向
 - 接入企业内部的 USD 元数据或实时库存系统（通过 `AssetPaths` 自定义 CSV/MD 路径）。

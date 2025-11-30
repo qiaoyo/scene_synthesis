@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Any, Dict, List, Sequence
+from typing import Any, Dict, List, Optional, Sequence
 
 
 @dataclass
@@ -44,6 +44,7 @@ class LayoutPlan:
     command: SceneCommand
     elements: Sequence[LayoutElement]
     retrieved_docs: Sequence[AssetDocument] = field(default_factory=list)
+    planner_notes: Optional[str] = None
 
     def summary(self) -> List[Dict[str, Any]]:
         return [
