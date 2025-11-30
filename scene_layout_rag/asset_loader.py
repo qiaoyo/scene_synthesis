@@ -68,14 +68,19 @@ class AssetIngestor:
         self.config = config
 
     def build_documents(self) -> List[AssetDocument]:
+        print("[AssetIngestor] 开始加载 CSV / Markdown 资产")
         docs: List[AssetDocument] = []
         for csv_path in self.config.asset_paths.inventory_csvs:
+            print(f"[AssetIngestor] 处理 CSV: {csv_path}")
             docs.extend(load_csv_documents(csv_path, self.config.chunk_size, self.config.chunk_overlap))
         for md_path in self.config.asset_paths.scene_md_files:
+            print(f"[AssetIngestor] 处理 Markdown: {md_path}")
             docs.extend(load_markdown_documents(md_path))
         if self.config.asset_paths.extra_documents_dir and self.config.asset_paths.extra_documents_dir.exists():
             for text_file in self.config.asset_paths.extra_documents_dir.glob("**/*.txt"):
+                print(f"[AssetIngestor] 处理附加文本: {text_file}")
                 docs.extend(load_markdown_documents(text_file))
+        print(f"[AssetIngestor] 资产加载完毕，共 {len(docs)} 条文档")
         return docs
 
 

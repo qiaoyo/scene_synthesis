@@ -19,9 +19,11 @@ def main() -> None:
     parser.add_argument("--top-k", type=int, default=5)
     args = parser.parse_args()
 
+    print("[Script] 启动推理流程")
     pipeline = SceneLayoutRAG(ProjectConfig())
     plan = pipeline.generate_layout(args.command, top_k=args.top_k)
     print(json.dumps(plan.summary(), ensure_ascii=False, indent=2))
+    print("[Script] 推理完成")
 
 
 if __name__ == "__main__":

@@ -17,12 +17,15 @@ def main() -> None:
     parser.add_argument("--index-dir", type=Path, default=None, help="Optional directory for vector indexes")
     args = parser.parse_args()
 
+    print("[Script] 启动资产索引构建流程")
     config = ProjectConfig()
     if args.index_dir:
         config.index_dir = args.index_dir
+        print(f"[Script] 使用自定义索引目录: {config.index_dir}")
     pipeline = SceneLayoutRAG(config)
     pipeline.retrieve("初始化测试", top_k=1)
     print(f"Indexed {pipeline.document_count} documents. Index directory: {config.index_dir}")
+    print("[Script] ingest_assets 完成")
 
 
 if __name__ == "__main__":

@@ -80,15 +80,18 @@ def main() -> None:
     parser.add_argument("--max-examples", type=int, default=2000)
     args = parser.parse_args()
 
+    print("[Script] 启动 LoRA 训练流程")
     cfg = ProjectConfig()
     cfg.model.llm_name_or_path = args.model
     pipeline = SceneLayoutRAG(cfg)
     dataset = build_instruction_dataset(pipeline, max_examples=args.max_examples)
+    print(f"[Script] 指令数据集准备完成，样本数: {len(dataset)}")
 
     tokenizer = AutoTokenizer.from_pretrained(args.model, use_fast=False)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
     tokenized = tokenize_dataset(dataset, tokenizer)
+    print("[Script] 数据 tokenization 完成")
 
     model = create_model(cfg)
     training_args = TrainingArguments(
@@ -106,6 +109,7 @@ def main() -> None:
     trainer.train()
     model.save_pretrained(args.output)
     tokenizer.save_pretrained(args.output)
+    print(f"[Script] 训练完成，模型已保存至 {args.output}")
 
 
 if __name__ == "__main__":

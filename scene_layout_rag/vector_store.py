@@ -31,13 +31,24 @@ class LocalVectorStore:
         self._documents: List[AssetDocument] = []
 
     def _normalize(self, vectors: np.ndarray) -> np.ndarray:
+        if vectors.ndim == 1:
+            vectors = vectors.reshape(1, -1)
+        if vectors.size == 0:
+            return vectors
         norms = np.linalg.norm(vectors, axis=1, keepdims=True) + 1e-10
         return vectors / norms
 
     def add(self, embeddings: Sequence[Sequence[float]], documents: Sequence[AssetDocument]) -> None:
         if len(embeddings) != len(documents):
             raise ValueError("Embeddings and documents must have the same length")
-        matrix = np.asarray(embeddings, dtype="float32")
+        matrix = [foo.cpu().detach().numpy().astype("float32") for foo in embeddings]
+        matrix = np.asarray(matrix, dtype="float32")
+        if matrix.ndim == 1:
+            matrix = matrix.reshape(1, -1)
+        if matrix.size == 0:
+            print("[VectorStore] 收到空的嵌入矩阵，跳过添加")
+            return
+        print(f"[VectorStore] 添加 {matrix.shape[0]} 条向量到索引")
         matrix = self._normalize(matrix)
         if self._use_faiss:
             self._index.add(matrix)
@@ -46,7 +57,7 @@ class LocalVectorStore:
         self._documents.extend(documents)
 
     def search(self, query_vector: Sequence[float], top_k: int = 5) -> List[RetrievalResult]:
-        query = np.asarray([query_vector], dtype="float32")
+        query = np.asarray([query_vector.cpu().detach()], dtype="float32")
         query = self._normalize(query)
         if self._use_faiss:
             scores, indices = self._index.search(query, top_k)

@@ -19,10 +19,12 @@ class EmbeddingBackend:
         self.model_name = model_name
         self.batch_size = batch_size
         self.device = device
+        print(f"[EmbeddingBackend] 准备加载嵌入模型: {model_name} (device={device or 'auto'})")
         self._model = self._load_model()
 
     @lru_cache(maxsize=1)
     def _load_model(self) -> SentenceTransformer:
+        print("[EmbeddingBackend] 正在加载 SentenceTransformer 模型...")
         return SentenceTransformer(self.model_name, device=self.device)
 
     @property
@@ -30,9 +32,11 @@ class EmbeddingBackend:
         return self._model.get_sentence_embedding_dimension()
 
     def embed_documents(self, texts: Sequence[str]) -> List[List[float]]:
+        print(f"[EmbeddingBackend] 对 {len(texts)} 条文档进行嵌入计算")
         return self._model.encode(list(texts), batch_size=self.batch_size, show_progress_bar=True, convert_to_numpy=False)
 
     def embed_query(self, text: str) -> List[float]:
+        print("[EmbeddingBackend] 计算查询向量")
         return self._model.encode(text, batch_size=1, show_progress_bar=False, convert_to_numpy=False)
 
 
