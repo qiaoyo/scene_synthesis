@@ -5,9 +5,23 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import List, Optional
 
+_MODULE_DIR = Path(__file__).resolve().parent
+_SRC_ROOT = _MODULE_DIR.parent
+_DEFAULT_PROJECT_ROOT = _SRC_ROOT
 
-_DEFAULT_PROJECT_ROOT = Path(__file__).resolve().parents[2]
-_DEFAULT_ASSETS_ROOT = _DEFAULT_PROJECT_ROOT / "data" / "assets"
+
+def _detect_assets_root() -> Path:
+    candidates = [
+        _SRC_ROOT / "assets",
+        _SRC_ROOT.parent / "assets",
+    ]
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate
+    return candidates[0]
+
+
+_DEFAULT_ASSETS_ROOT = _detect_assets_root()
 
 
 @dataclass

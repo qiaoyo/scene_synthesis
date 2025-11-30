@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import sys
 from pathlib import Path
 from random import sample
 
@@ -9,6 +10,10 @@ import torch
 from datasets import Dataset
 from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
 from transformers import AutoModelForCausalLM, AutoTokenizer, Trainer, TrainingArguments
+
+SRC_ROOT = Path(__file__).resolve().parents[1]
+if str(SRC_ROOT) not in sys.path:
+    sys.path.insert(0, str(SRC_ROOT))
 
 from scene_layout_rag import ProjectConfig, SceneLayoutRAG
 

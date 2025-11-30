@@ -11,12 +11,14 @@
 
 ## 项目结构
 ```
-scene_layout_rag/   # RAG核心库
+scene_layout_rag/   # RAG核心库（以 src 作为项目根）
 scripts/            # 训练 / 推理 / 构建脚本
 requirements.txt
 ```
 
 ## 典型工作流
+> 请在 `/home/qiaoyo/python_proj/scene_synthesis/src` 下执行命令；`scene_layout_rag` 模块会自动把当前 `src` 视为项目根。如需在其他路径运行脚本，可通过 `PYTHONPATH=/path/to/src` 暴露此目录。
+
 1. **构建索引**
    ```bash
    cd /home/qiaoyo/python_proj/scene_synthesis/src
