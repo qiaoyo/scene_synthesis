@@ -14,12 +14,12 @@ from .config import ProjectConfig
 _PROMPT_TEMPLATE = """你是一名工业场景布局规划助手。你会得到一个自然语言需求和若干资产信息。
 每个资产包含唯一ID、USD路径、功能描述以及包围盒尺寸(bbox)。
 请综合需求与资产信息，规划这些资产在场景中的位置，输出 JSON 数组，每个元素结构如下：
-{
+{{
   "asset_id": "资产编号",
   "usd_path": "USD路径",
-  "position": {"x": 浮点数, "y": 浮点数, "z": 浮点数},
+  "position": {{"x": 浮点数, "y": 浮点数, "z": 浮点数}},
   "reason": "简短中文说明"
-}
+}}
 坐标范围建议在 -10 到 10 米。
 需求: {command}
 资产信息:
@@ -34,7 +34,7 @@ class LLMPlanner:
         self.config = config
         self._model = None
         self._tokenizer = None
-        self._device = None
+        self._device = config.model.device
 
     def _ensure_model(self) -> None:
         if self._model is not None and self._tokenizer is not None:
@@ -48,10 +48,10 @@ class LLMPlanner:
         kwargs: Dict[str, Any] = {}
         if self.config.model.use_8bit:
             kwargs["load_in_8bit"] = True
-            kwargs["device_map"] = "auto"
+            kwargs["device_map"] = "cuda:0"
         elif self.config.model.load_in_4bit:
             kwargs["load_in_4bit"] = True
-            kwargs["device_map"] = "auto"
+            kwargs["device_map"] = "cuda:0"
         else:
             device = self.config.model.device or ("cuda" if torch.cuda.is_available() else "cpu")
             kwargs["device_map"] = None

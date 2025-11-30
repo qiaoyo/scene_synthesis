@@ -52,8 +52,8 @@ class ModelConfig:
     llm_name_or_path: str = "mistralai/Mistral-7B-Instruct-v0.2"
     max_new_tokens: int = 512
     temperature: float = 0.2
-    device: Optional[str] = None
-    use_8bit: bool = True
+    device: str = "cuda:0"
+    use_8bit: bool = False
     load_in_4bit: bool = False
     gradient_checkpointing: bool = True
     lora_rank: int = 32
