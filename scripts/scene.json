@@ -1,0 +1,162 @@
+[
+  {
+    "asset_id": "Rack",
+    "usd_path": "/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Shelves/RackLargeEmpty_A1.usd",
+    "position": [
+      6.0,
+      0.0,
+      0.0
+    ],
+    "score": 0.4161246418952942
+  },
+  {
+    "asset_id": "Workbench",
+    "usd_path": "/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Furnishing/Workbenches/LabWorkbench_A/LabWorkbench_A06_01.usd",
+    "position": [
+      5.54,
+      2.3,
+      0.0
+    ],
+    "score": 0.4150194227695465
+  },
+  {
+    "asset_id": "Rack",
+    "usd_path": "/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Shelves/RackLargeEmpty_A2.usd",
+    "position": [
+      4.24,
+      4.24,
+      0.0
+    ],
+    "score": 0.403689980506897
+  },
+  {
+    "asset_id": "Rack",
+    "usd_path": "/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Shelving/Racks/Rack_N/Rack_N01_PR_NVD_01.usd",
+    "position": [
+      2.3,
+      5.54,
+      0.0
+    ],
+    "score": 0.3986952006816864
+  },
+  {
+    "asset_id": "Rack",
+    "usd_path": "/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Shelving/Racks/Rack_M/Rack_M12_PR_NVD_01.usd",
+    "position": [
+      0.0,
+      6.0,
+      0.0
+    ],
+    "score": 0.3825896680355072
+  },
+  {
+    "asset_id": "Box",
+    "usd_path": "/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Shipping/Wood_Crates/Standard_A/StandardWoodCrate_A06_120x100x100cm_PR_NV_01.usd",
+    "position": [
+      -2.3,
+      5.54,
+      0.0
+    ],
+    "score": 0.3734227418899536
+  },
+  {
+    "asset_id": "Rack",
+    "usd_path": "/media/simple/another_Documents/isaacsim_assets/assets/Pallet_Rack/Pallet_Rack.usdc",
+    "position": [
+      -4.24,
+      4.24,
+      0.0
+    ],
+    "score": 0.3727368116378784
+  },
+  {
+    "asset_id": "Rack",
+    "usd_path": "/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Shelving/Racks/Rack_G/Rack_G06_PR_NVD_01.usd",
+    "position": [
+      -5.54,
+      2.3,
+      0.0
+    ],
+    "score": 0.3670816421508789
+  },
+  {
+    "asset_id": "Box",
+    "usd_path": "/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Containers/Cardboard/Cardbox_A1.usd",
+    "position": [
+      -6.0,
+      0.0,
+      0.0
+    ],
+    "score": 0.36675453186035156
+  },
+  {
+    "asset_id": "Workbench",
+    "usd_path": "/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Furnishing/Workbenches/MetalWorktable_A/MetalWorktable_A18_01.usd",
+    "position": [
+      -5.54,
+      -2.3,
+      0.0
+    ],
+    "score": 0.36447006464004517
+  },
+  {
+    "asset_id": "Box",
+    "usd_path": "/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Storage/Containers/Container_H/Container_H14_60x40x15cm_PR_V_NVD_01.usd",
+    "position": [
+      -4.24,
+      -4.24,
+      0.0
+    ],
+    "score": 0.36049360036849976
+  },
+  {
+    "asset_id": "Vehicle",
+    "usd_path": "/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/4.5/Isaac/Props/Forklift/forklift.usd",
+    "position": [
+      -2.3,
+      -5.54,
+      0.0
+    ],
+    "score": 0.3573228120803833
+  },
+  {
+    "asset_id": "Vehicle",
+    "usd_path": "/media/simple/another_Documents/isaacsim_assets/assets/AGV_ready_1/AGV_ready_1.usdc",
+    "position": [
+      -0.0,
+      -6.0,
+      0.0
+    ],
+    "score": 0.35341766476631165
+  },
+  {
+    "asset_id": "Rack",
+    "usd_path": "/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Shelving/Industrial/TireRack_A/TireRack_A01_PR_NVD_01.usd",
+    "position": [
+      2.3,
+      -5.54,
+      0.0
+    ],
+    "score": 0.3524862229824066
+  },
+  {
+    "asset_id": "Rack",
+    "usd_path": "/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Shelving/Racks/Rack_L/Rack_L08_PR_NVD_01.usd",
+    "position": [
+      4.24,
+      -4.24,
+      0.0
+    ],
+    "score": 0.3507489264011383
+  },
+  {
+    "asset_id": "Workbench",
+    "usd_path": "/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Furnishing/Workbenches/LabWorkbench_A/LabWorkbench_A03_01.usd",
+    "position": [
+      5.54,
+      -2.3,
+      0.0
+    ],
+    "score": 0.3481828570365906
+  }
+]

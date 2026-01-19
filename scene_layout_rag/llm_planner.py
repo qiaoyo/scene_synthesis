@@ -11,21 +11,39 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from .data_models import AssetDocument
 from .config import ProjectConfig
 
-_PROMPT_TEMPLATE = """你是一名工业场景布局规划助手。你会得到一个自然语言需求和若干资产信息。
-每个资产包含唯一ID、USD路径、功能描述以及包围盒尺寸(bbox)。
-请综合需求与资产信息，规划这些资产在场景中的位置，输出 JSON 数组，每个元素结构如下：
-{{
-  "asset_id": "资产编号",
-  "usd_path": "USD路径",
-  "position": {{"x": 浮点数, "y": 浮点数, "z": 浮点数}},
-  "reason": "简短中文说明"
-}}
-坐标范围建议在 -10 到 10 米。
-需求: {command}
-资产信息:
-{assets}
-请只输出上述 JSON 数组，不要添加多余说明。"""
+# _PROMPT_TEMPLATE = """你是一名工业场景布局规划助手。你会得到一个自然语言需求和若干资产信息。
+# 每个资产包含唯一ID、USD路径、功能描述以及包围盒尺寸(bbox)。
+# 请综合需求与资产信息以及场景上下文，规划这些资产在场景中的位置，输出 JSON 数组，每个元素结构如下：
+# {{
+#   "asset_id": "资产编号",
+#   "usd_path": "USD路径",
+#   "position": {{"x": 浮点数, "y": 浮点数, "z": 浮点数}},
+#   "reason": "简短中文说明"
+# }}
+# 坐标范围建议在 -10 到 10 米。
+# 需求: {command}
+# 资产信息:
+# {assets}
+# 场景上下文:
+# {scene_context}
+# 请只输出上述 JSON 数组，不要添加多余说明。"""
 
+_PROMPT_TEMPLATE ="""You are an industrial scene layout planning assistant. You will receive a natural language requirement along with several asset descriptions.  
+Each asset includes a unique ID, USD path, functional description, and bounding box dimensions (bbox).  
+Based on the requirement, asset information, and scene context, plan the placement of these assets within the scene.  
+Output a JSON array where each element has the following structure:
+{{
+  "asset_id": "Asset ID",
+  "usd_path": "USD path",
+  "position": {{"x": float, "y": float, "z": float}},
+  "reason": "Brief explanation in English"
+}}
+Recommended coordinate range: -10 to 10 meters.  
+Requirement: {command}  
+Asset Information:  
+{assets}  
+Please output only the JSON array above, without any additional explanation.
+"""
 
 class LLMPlanner:
     """Generate layout proposals with a local CausalLM."""
@@ -110,6 +128,5 @@ class LLMPlanner:
         completion = self._tokenizer.decode(generated_ids, skip_special_tokens=True).strip()
         placements = self._extract_json(completion)
         return completion, placements
-
 
 __all__ = ["LLMPlanner"]

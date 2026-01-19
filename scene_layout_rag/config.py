@@ -34,10 +34,20 @@ class AssetPaths:
     extra_documents_dir: Optional[Path] = None
 
     def __post_init__(self) -> None:
+        csv_dir = self.assets_root / "csv"
+        md_dir = self.assets_root / "md"
         if not self.inventory_csvs:
-            self.inventory_csvs = sorted(self.assets_root.glob("*.csv"))
+            csv_files: List[Path] = []
+            csv_files.extend(self.assets_root.glob("*.csv"))
+            if csv_dir.exists():
+                csv_files.extend(csv_dir.glob("*.csv"))
+            self.inventory_csvs = sorted(csv_files)
         if not self.scene_md_files:
-            self.scene_md_files = sorted(self.assets_root.glob("*.md"))
+            md_files: List[Path] = []
+            md_files.extend(self.assets_root.glob("*.md"))
+            if md_dir.exists():
+                md_files.extend(md_dir.glob("*.md"))
+            self.scene_md_files = sorted(md_files)
         if self.extra_documents_dir is None:
             custom_dir = self.assets_root / "docs"
             self.extra_documents_dir = custom_dir if custom_dir.exists() else None
@@ -52,7 +62,7 @@ class ModelConfig:
     llm_name_or_path: str = "mistralai/Mistral-7B-Instruct-v0.2"
     max_new_tokens: int = 512
     temperature: float = 0.2
-    device: str = "cuda:0"
+    device: str = "cuda:1"
     use_8bit: bool = False
     load_in_4bit: bool = False
     gradient_checkpointing: bool = True
@@ -69,7 +79,8 @@ class ProjectConfig:
     index_dir: Path = _DEFAULT_PROJECT_ROOT / "data" / "indexes"
     chunk_size: int = 512
     chunk_overlap: int = 64
-    language: str = "zh"
+    #language: str = "zh"
+    language: str = "en"
 
     def ensure_directories(self) -> None:
         self.index_dir.mkdir(parents=True, exist_ok=True)

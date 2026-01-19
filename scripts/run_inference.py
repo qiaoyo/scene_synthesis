@@ -25,6 +25,6 @@ def main() -> None:
     print(json.dumps(plan.summary(), ensure_ascii=False, indent=2))
     print("[Script] 推理完成")
 
-
 if __name__ == "__main__":
+    
     main()

@@ -51,10 +51,16 @@ def _parse_bbox(raw: Optional[str]) -> Optional[dict]:
 def load_csv_documents(csv_path: Path, chunk_size: int, chunk_overlap: int) -> List[AssetDocument]:
     documents: List[AssetDocument] = []
     with csv_path.open("r", encoding="utf-8") as f:
-        reader = csv.reader(f)
-        for idx, row in enumerate(reader):
-            if not row or len(row) < 4:
+        # 过滤空白物理行
+        reader = csv.reader(line for line in f if line.strip())
+        # 跳过首行（表头）
+        next(reader, None)
+        content_idx = 0  # 仅统计有效数据行
+        for raw_idx, row in enumerate(reader,start=2):
+            # 跳过空行或无效行（列数不足或整行都为空白）
+            if len(row) < 4 or not any(c.strip() for c in row):
                 continue
+            
             asset_category = row[0].strip() or csv_path.stem
             usd_path = row[1].strip()
             short_desc = row[2].strip()
@@ -63,7 +69,7 @@ def load_csv_documents(csv_path: Path, chunk_size: int, chunk_overlap: int) -> L
             chunks = chunk_text(base_text, chunk_size, chunk_overlap)
             bbox = _parse_bbox(row[4]) if len(row) >= 5 else None
             for chunk_idx, chunk in enumerate(chunks):
-                doc_id = f"{csv_path.stem}-{idx}-{chunk_idx}-{_hash_text(chunk)}"
+                doc_id = f"{csv_path.stem}-{content_idx}-{chunk_idx}-{_hash_text(chunk)}"
                 documents.append(
                     AssetDocument(
                         doc_id=doc_id,
@@ -72,11 +78,14 @@ def load_csv_documents(csv_path: Path, chunk_size: int, chunk_overlap: int) -> L
                             "asset_category": asset_category,
                             "usd_path": usd_path,
                             "source": str(csv_path),
-                            "row_index": idx,
+                            "row_index": content_idx,   # 连续有效行号
+                            "raw_row_index": raw_idx,   # 原始文件行号（含跳过的行）
                             "bbox": bbox,
+                            "doc_type": "csv",          #标记为资产文档
                         },
                     )
                 )
+            content_idx += 1
     return documents
 
 
@@ -90,7 +99,8 @@ def load_markdown_documents(md_path: Path, block_size: int = 3) -> List[AssetDoc
             AssetDocument(
                 doc_id=doc_id,
                 content=chunk,
-                metadata={"source": str(md_path), "section": idx},
+                metadata={"source": str(md_path), "section": idx, "doc_type": "md"},
+                
             )
         )
     return documents

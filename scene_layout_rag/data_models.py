@@ -56,6 +56,7 @@ class LayoutPlan:
                     e.transform.get("y", 0.0),
                     e.transform.get("z", 0.0),
                 ],
+                "scale":[0.01,0.01,0.01],
                 "score": e.score,
             }
             for e in self.elements

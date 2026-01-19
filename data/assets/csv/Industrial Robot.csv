@@ -1,0 +1,106 @@
+Assets Type,Path,Tag,Description
+Industrial Robot,/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/4.5/Isaac/Robots/FactoryFranka/factory_franka_instanceable.usd,"Model: Franka Research 3
+Manufacturer:   Agile Robots(Franka)
+DOF:  7
+DNA:DA(a)
+Scale:3","Functional Features: This robotic arm is Franka Research 3 (FR3) with 7 degrees of freedom. It is versatile, used for researching robotic control algorithms in scientific fields, precise assembly and flexible operations in industrial scenarios, and assisting minimally invasive surgery training in the medical field. Its high flexibility and force control precision enable it to handle complex tasks, playing a role in laboratories, intelligent manufacturing production lines, medical teaching institutions, etc.
+Visual Features: It is mainly white, with gray joint parts. The material has a texture combining industrial plastic and metal, and the surface treatment is smooth and delicate, featuring a sense of technology and practicality. The black background highlights its concise industrial design style."
+Industrial Robot,/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/4.5/Isaac/Robots/UR10/ur10e_robotiq2f-140.usd,"Model: UR10
+Manufacturer:   Universal Robots
+DOF:  6
+DNA:DA(b)
+Scale:2","Functional Features: This robotic arm is UR10 with 6 degrees of freedom. It is used for material handling, precision assembly, welding, palletizing in industrial automation, and robot technology research in scientific fields. With a high payload (up to 10kg) and a long working range (1300mm), it is suitable for scenarios like automotive manufacturing, electronic production, logistics and warehousing, efficiently completing tasks with high repeatability and precision requirements.
+Visual Features: It is mainly light gray, with light blue decorations at the joints. The material is a combination of industrial high-strength plastic and metal, with a smooth and somewhat matte surface finish. The overall design is concise and compact, and the black background highlights the sense of technology and professionalism of a modern industrial robot."
+Industrial Robot,/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/4.5/Isaac/Robots/Ufactory/xarm7/xarm7.usd,"Model: xarm7
+Manufacturer:   UFactory
+DOF:  7
+DNA:DA(c)
+Scale:3","Functional Features: This robotic arm is xArm 7 with 7 degrees of freedom, and it is versatile. It can be used for precision assembly, material sorting, quality inspection in the industrial field; supports robot algorithm research and educational training in scientific research scenarios; and can also realize personalized services such as coffee making and commodity sorting in the commercial field. Its high flexibility and precise control ability make it suitable for intelligent manufacturing production lines, university laboratories, new retail stores and other application scenarios, and can efficiently complete various complex tasks.
+Visual Features: It is mainly white. The material combines industrial plastic and metal, and the surface treatment is smooth and delicate, showing a concise and modern sense of technology. The black end gripper forms a visual contrast, and the overall design, set off by the black background, highlights the professionalism and delicacy of industrial products."
+Industrial Robot,/media/simple/another_Documents/isaacsim_assets/assets/Robotic_Arm_-_Brazo_Robotico/robot.usd,"Model: IRB
+Manufacturer:   ABB
+DOF:  6
+DNA:DA(d)
+Scale:1","Functional Features: This object is an industrial robotic arm featuring a multi-joint structure with a gripper at the end, designed for tasks such as grasping, transporting, or assembling components. Its functional characteristics include high-precision and repeatable automated operations, making it ideal for applications like welding, assembly, material handling, and painting in manufacturing environments. The three-axis coordinate arrows (red, green, and blue) at the base represent the X, Y, and Z directions, indicating the robot’s capability for multi-axis movement and spatial manipulation—essential for complex path planning and 3D operations.
+Visual Features: Visually, the robotic arm is bright yellow, enhancing visibility in industrial settings. It is likely constructed from a combination of high-strength metals and engineering plastics, balancing durability with weight efficiency. The surface is smooth, with some joints possibly treated with matte or anti-slip coatings for added resilience. The overall design is modern and compact, reflecting the precision and efficiency of contemporary automation systems."
+Industrial Robot,/media/simple/another_Documents/isaacsim_assets/assets/Black_Honey_-_Robotic_Arm/Black_Honey_-_Robotic_Arm.usdc,"Model: KR 6 R700
+Manufacturer: KUKA 
+DOF:  6
+DNA:DA(e)
+Scale:2","Functional Features: This robotic arm features a multi-joint structure and a mechanical gripper, designed for precise object handling and manipulation. It is widely used in automated production lines, smart manufacturing, assembly tasks, and laboratory automation. The articulated joints enable complex motion planning in 3D space, adapting to various process requirements. The compact gripper is ideal for handling small or delicate components, enhancing operational efficiency and consistency. QR codes and warning labels on the arm support operational identification and safety management.
+Visual Features: Visually, the robotic arm adopts a striking orange-and-black color scheme, offering strong industrial identity and visual alertness. The casing is typically made of high-strength aluminum alloy or composite materials, balancing lightweight design with structural integrity. Surface treatments like coating or anodizing improve wear resistance and corrosion protection while enhancing the overall finish. The joints are compactly designed, and cables are neatly arranged, reflecting a high level of engineering integration and industrial aesthetics."
+Industrial Robot,/media/simple/another_Documents/isaacsim_assets/assets/INDUSTRIAL_ROBOTIC_ARM/INDUSTRIAL_ROBOTIC_ARM.usdc,"Model: CRX-5iA/10iA
+Manufacturer: FANUC
+DOF:  6
+DNA:DA(f)
+Scale:1","Functional Features: The image shows an industrial robotic arm with multiple articulated joints and an end-effector (gripper), commonly used in automated manufacturing environments. Its functional characteristics include high-precision repeatability and flexible spatial motion, making it suitable for tasks such as assembly, material handling, welding, painting, and sorting. The arm’s jointed structure enables it to follow complex paths and integrate seamlessly into smart manufacturing systems, enhancing productivity, reducing labor costs, and improving operational consistency and safety.
+Visual Features:Visually, the robotic arm is bright yellow, offering high visibility in industrial settings. It is likely constructed from high-strength alloy steel or aluminum alloy, balancing structural rigidity with weight efficiency. The surface is smooth, possibly treated with paint or anodizing to improve corrosion resistance and durability. The overall form is compact, with fluid joint transitions, reflecting a modern industrial design that emphasizes both functionality and engineering aesthetics."
+Industrial Robot,/media/simple/another_Documents/isaacsim_assets/assets/Robotic_Manipulator_low_poly/processed_Robotic_Manipulator_low_poly.usdc,"Model: Andrew+ Pipetting Robot
+Manufacturer: Andrew Alliance
+DOF:  6
+DNA:DA(g)
+Scale:1","Functional Features: This object is a collaborative robotic arm equipped with a pipette end effector. Functionally, it is mainly used for precise liquid handling, with common application scenarios including sample pipetting in biological laboratories, reagent dispensing in chemical experiments, and fine material handling in industrial micro-assembly. It features flexible collaboration and high-precision operation, enabling safe co-working with personnel.
+Visual Features:Visually, it adopts a white-yellow color scheme: white as the main body color and yellow for structural reinforced parts. The material shows a combination of plastic and metal texture, with smooth surface treatment and sci-fi-style line design. The base is a circular white pedestal, and the overall shape is compact and lightweight, conforming to the compact appearance of desktop equipment."
+Industrial Robot,/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/IsaacLab/Robots/FrankaEmika/panda_instanceable1.usd,"Model: Franka Emika Panda
+Manufacturer: Franka Emika
+DOF:  7
+DNA:DA(h)
+Scale:1.5","Functional Features: This robotic arm is the Franka Emika Panda, a high-precision, lightweight cobot designed for collaborative tasks. Its primary functions include assembly, gripping, insertion, testing, and educational demonstrations. It is widely used in smart manufacturing, research labs, training environments, and even medical assistance. With 7 degrees of freedom and sensitive force control, it excels in dynamic, human-centric environments where flexibility and precision are essential.
+Visual Features:Visually, the arm features a sleek, modern design with a matte white finish and dark gray or black accents at the joints, giving it a clean and high-tech appearance. The outer shell is made from high-strength composite materials or aluminum alloy, with a smooth coated surface that enhances corrosion resistance and ease of maintenance. Its compact, rounded joints and minimalistic form emphasize safety and approachability, aligning with the ergonomic and aesthetic standards of collaborative robotics."
+Industrial Robot,/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/Robots/Agibot/A2D/A2D.usd,"Model: Walker X
+Manufacturer: UBTECH Robotics
+DOF:  7
+DNA:DA(i)
+Scale:1.5","Functional Features:This humanoid robot is a versatile service platform equipped with dual multi-joint arms and a mobile wheeled base, enabling it to adapt to dynamic environments and interact with humans. Its functional features include performing daily service tasks (e.g., object delivery, door operation, device manipulation), engaging in voice or gesture-based interaction, and supporting human-robot collaboration in research, exhibitions, and educational settings. With 7 degrees of freedom per arm and dynamic balance control, it excels in complex bimanual operations, making it suitable for smart homes, public services, and interactive demonstrations.
+Visual Features:Visually, the robot presents a sleek, modern aesthetic with a high-contrast white and black color scheme, accented by red lines that enhance its tech-forward appearance. The outer shell is likely made of high-strength plastic or composite materials, finished with a matte surface to reduce glare and improve tactile quality. Its rounded, helmet-like head adds a friendly touch, while the claw-shaped hands emphasize functionality. The overall design is compact and harmonious, balancing safety, usability, and visual appeal for human-centered environments."
+Industrial Robot,/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/Robots/Denso/CobottaPro900/cobotta_pro_900.usd,"Model: Cobotta Pro 900
+Manufacturer: Denso
+DOF:  6
+DNA:DA(j)
+Scale:1.5","Functional Features:The robotic arm shown is the Cobotta Pro 900 by DENSO, a high-precision collaborative robot designed for industrial automation and human-robot interaction. Its functional features include six degrees of freedom for flexible motion, making it suitable for tasks such as assembly, inspection, material handling, and lab automation. The Cobotta Pro 900 supports integration with vision systems and force sensors, offering advanced path planning and fine manipulation capabilities. It is widely used in electronics manufacturing, medical device handling, and research environments. Its compact form and built-in safety features enable safe operation alongside human workers, enhancing collaborative productivity.
+Visual Features:Visually, the arm features a clean, streamlined industrial design with a matte white body and dark gray or metallic joints, conveying a modern and professional appearance. It is constructed from high-strength aluminum alloy and engineering plastics, balancing lightweight structure with rigidity. The surface is treated with coating and anodizing processes for corrosion resistance and refined texture. The end effector resembles a claw, suitable for various gripping tasks. Its compact, rounded joints reflect a design philosophy centered on safety and ergonomic collaboration."
+Industrial Robot,/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/Robots/Kawasaki/RS007L/rs007l_onrobot_rg2.usd,"Model: RS007L
+Manufacturer: Kawasaki Robotics
+DOF:  6
+DNA:DA(k)
+Scale:1.5","Functional Features:This is the RS007L industrial robot arm developed by Kawasaki Robotics, a lightweight, high-speed 6-axis manipulator. Its functional features include high-precision handling, rapid assembly, fine manipulation, and repetitive inspection tasks. It is ideal for electronics manufacturing, medical device processing, food packaging, and lab automation. With a reach of 930 mm and repeatability of ±0.03 mm, the RS007L operates efficiently in compact spaces and supports integration with vision systems and end-effectors, making it suitable for flexible automation cells and collaborative workstations.
+Visual Features:Visually, the arm features a clean, streamlined industrial design with a matte white body and gray or metallic joints, combining modern aesthetics with professional appeal. The structure is made from aluminum alloy and engineering plastics, with coated and anodized surfaces for corrosion resistance and refined texture. The joints are compact with internal cable routing, and the end includes a standard flange for quick tool changes. The overall form emphasizes lightweight construction and rigidity, reflecting the core traits of a high-performance industrial robot."
+Industrial Robot,/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/Robots/RobotStudio/so100/so100.usd,"Model: IRB 140
+Manufacturer: ABB
+DOF:  6
+DNA:DA(l)
+Scale:5","Functional Features:This is a typical six-axis industrial robotic arm from ABB, model IRB 140 (referred to as ""so100"" in simulation platforms). Its functional features include high-precision handling, assembly, polishing, dispensing, and inspection. It is widely used in electronics manufacturing, metal processing, educational research, and automation labs. With a compact structure and excellent repeatability, it is ideal for high-speed, high-accuracy tasks in confined workspaces. The arm supports integration with various end-effectors and vision systems, making it suitable for flexible automation cells and robotics education.
+Visual Features:Visually, the robot features a striking industrial yellow finish for enhanced visibility and safety in factory environments. The structure is made of high-strength metal with coated and corrosion-resistant surfaces, ensuring durability and industrial robustness. The joints are accented with dark covers, highlighting articulation points and drive components. The end-effector is a claw-style gripper, suited for diverse manipulation tasks. Its compact, angular design reflects the industrial emphasis on rigidity, precision, and reliability."
+Industrial Robot,/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/Robots/RobotStudio/so101_new_calib/so101_new_calib.usd,"Model: IRB  120
+Manufacturer: ABB
+DOF:  6
+DNA:DA(m)
+Scale:5","Functional Features:This is the IRB 120, a lightweight six-axis industrial robot developed by ABB, designed for high-precision, low-payload automation tasks. Its functional features include flexible six-degree-of-freedom motion, making it ideal for precision assembly, small-part handling, lab automation, and educational research. With a repeatability of ±0.01 mm, it excels in confined spaces where accuracy is critical, such as electronics manufacturing, medical device assembly, and robotics training platforms. Its compact and lightweight design allows easy integration into workstations or teaching setups, and it is frequently used in simulation environments for path planning, control algorithm testing, and calibration.
+Visual Features:Visually, the robot features a bright industrial yellow finish for enhanced visibility and safety. It is constructed from high-strength aluminum alloy and engineering plastics, with coated and anodized surfaces for corrosion resistance and a refined industrial look. The joints are tightly connected with internal cable routing, and the end includes a standard flange for quick tool changes. Its compact, rounded form reflects a design focused on precision, agility, and user-friendly integration."
+Industrial Robot,/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/Robots/Ufactory/xarm7/xarm7.usd,"Model: xArm 7
+Manufacturer: UFactory
+DOF:  7
+DNA:DA(n)
+Scale:2","Functional Features:This is the xArm 7, a 7-degree-of-freedom collaborative robotic arm developed by UFactory, designed for tasks requiring high flexibility and safe human-robot interaction. Its functional features include precision assembly, vision-guided picking, lab automation, light-duty handling, and educational or research applications. Widely used in smart manufacturing, robotics education, AI labs, and service robotics, the xArm 7 supports ROS/ROS 2 and offers open APIs for easy integration of motion planning, force control, and vision algorithms. Its 7-axis configuration allows for enhanced dexterity and obstacle avoidance in tight spaces, making it ideal for collaborative workstations and flexible automation cells.
+Visual Features:Visually, the arm features a sleek, modern design with a matte white finish, gray joint accents, and a contrasting black gripper. The body is constructed from high-strength aluminum alloy and engineering plastics, with anodized and coated surfaces for corrosion resistance and a refined industrial look. The joints are compact with internal cable routing, and the overall form is smooth and rounded, emphasizing safety and ergonomic interaction in shared workspaces."
+Industrial Robot,/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/Samples/ROS2/Robots/ur10e_robotiq2f-140_ROS.usd,"Model: UR10e
+Manufacturer: Universal Robots
+DOF:  6
+DNA:DA(o)
+Scale:1","Functional Features:This is an industrial robotic system composed of the UR10e collaborative arm from Universal Robots and the 2F-140 two-finger gripper from Robotiq. It is widely used in automated assembly, material handling, packaging, machine tending, and quality inspection. The UR10e features 6 degrees of freedom, a maximum payload of 12.5 kg, and a reach of 1300 mm, making it suitable for handling medium to large parts. Its collaborative design allows safe operation alongside human workers. With ROS 2 support and industrial communication compatibility, it integrates easily into smart manufacturing and research environments. The Robotiq 2F-140 gripper offers adaptive gripping for objects of various shapes and sizes, enhancing flexibility and versatility.
+Visual Features:Visually, the UR10e arm features a sleek silver-gray body with signature light blue joint covers, presenting a clean and modern industrial aesthetic. The structure is primarily aluminum alloy with anodized surfaces for corrosion resistance and rigidity. The gripper is dark gray, made from a combination of engineering plastics and metal, with a matte finish that emphasizes its functional design. The overall system reflects modularity, ease of integration, and safe collaboration—hallmarks of next-generation industrial robotics.
+"
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
