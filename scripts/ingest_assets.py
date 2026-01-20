@@ -23,7 +23,9 @@ def main() -> None:
         config.index_dir = args.index_dir
         print(f"[Script] 使用自定义索引目录: {config.index_dir}")
     pipeline = SceneLayoutRAG(config)
-    pipeline.retrieve("初始化测试", top_k=1)
+    # Trigger index build (assets + scene templates).
+    pipeline.retrieve_assets("初始化测试", top_k=1)
+    pipeline.retrieve_scenes("初始化测试", top_k=1)
     print(f"Indexed {pipeline.document_count} documents. Index directory: {config.index_dir}")
     print("[Script] ingest_assets 完成")
 

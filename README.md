@@ -29,6 +29,15 @@ requirements.txt
    python scripts/run_inference.py "在入库区放置两排可折叠纸箱"
    ```
    > 说明：推理阶段会先使用 sentence-transformers 检索相关资产，再将命中的资产（含 bbox）连同需求一起喂给本地 LLM（`ModelConfig.llm_name_or_path` 对应的模型）生成布局方案。若 LLM 解析失败，则自动回落到启发式推理。
+3. **ReAct(模板模仿) 推理**
+   ```bash
+   python scripts/react_agent.py "请在分拣中心规划传送带、AGV通道和装箱区" --max-assets 8
+   ```
+   > 说明：该模式会先自动判断场景类型，然后从 md 中选择最相近的场景模板，提取 “Referenced Xforms” 作为锚点，再从 csv 中检索/筛选设备，并按模板的摆放关系生成布局（无需依赖大模型也可运行）。
+   如需让本地 LLM 以 ReAct 方式驱动工具调用，可加 `--llm`：
+   ```bash
+   python scripts/react_agent.py --llm "请在分拣中心规划传送带、AGV通道和装箱区"
+   ```
 3. **LoRA 微调**
    ```bash
    python scripts/train_layout_model.py --model mistralai/Mistral-7B-Instruct-v0.2 --output runs/lora-layout
@@ -37,10 +46,19 @@ requirements.txt
    ```bash
    python -m scene_layout_rag.cli "请给出AGV通道与传送带的布局"
    ```
+   或使用 `--react`：
+   ```bash
+   python -m scene_layout_rag.cli --react "请给出AGV通道与传送带的布局"
+   ```
+   以及 `--react-llm`：
+   ```bash
+   python -m scene_layout_rag.cli --react-llm "请给出AGV通道与传送带的布局"
+   ```
 
 ## 资产CSV格式扩展
 - 在原有 `类别, USD路径, 短描述, 长描述` 基础上，第5列可填写 `bbox`（JSON 或 `长,宽,高` 数值），例如：`0.8,0.6,0.5` 或 `{"size":[0.8,0.6,0.5],"unit":"m"}`。若留空则使用 1m 的默认值。
 - `ingest_assets.py` 会自动解析该列并将 bbox 信息加入文档元数据，供 LLM 推理阶段使用。
+- 若 CSV 第3列(Tag)中包含 `Scale:<float>`，则会自动解析为资产缩放比例，并在输出 `scene.json` 时写入 `scale` 字段。
 
 ## 下一步可扩展方向
 - 接入企业内部的 USD 元数据或实时库存系统（通过 `AssetPaths` 自定义 CSV/MD 路径）。

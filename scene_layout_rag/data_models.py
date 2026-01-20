@@ -35,6 +35,9 @@ class LayoutElement:
     transform: Dict[str, float]
     score: float
     reasoning: str
+    # Isaac Sim assets often require per-asset scaling; default keeps backward compatibility.
+    scale: List[float] = field(default_factory=lambda: [0.01, 0.01, 0.01])
+    rotation: List[float] = field(default_factory=lambda: [0.0, 0.0, 0.0])
 
 
 @dataclass
@@ -56,7 +59,8 @@ class LayoutPlan:
                     e.transform.get("y", 0.0),
                     e.transform.get("z", 0.0),
                 ],
-                "scale":[0.01,0.01,0.01],
+                "scale": e.scale,
+                "rotation": e.rotation,
                 "score": e.score,
             }
             for e in self.elements

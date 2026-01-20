@@ -9,6 +9,7 @@ from .data_models import AssetDocument, LayoutPlan, LayoutElement, SceneCommand
 from .embedding import EmbeddingBackend
 from .layout_reasoner import LayoutReasoner
 from .llm_planner import LLMPlanner
+from .react_agent import SceneLayoutReActAgent
 from .vector_store import LocalVectorStore, RetrievalResult
 
 
@@ -34,6 +35,20 @@ class SceneLayoutRAG:
     @property
     def documents(self) -> List[AssetDocument]:
         return self._documents
+
+    def get_scene_names(self) -> List[str]:
+        names = {d.metadata.get("scene_name") for d in self._documents if d.metadata.get("doc_type") == "md"}
+        return sorted(n for n in names if isinstance(n, str) and n)
+
+    def get_scene_anchor_documents(self, scene_name: str) -> List[AssetDocument]:
+        """Return all parsed referenced-xform anchors for a scene template."""
+        return [
+            d
+            for d in self._documents
+            if d.metadata.get("doc_type") == "md"
+            and d.metadata.get("md_kind") == "referenced_xform"
+            and d.metadata.get("scene_name") == scene_name
+        ]
 
     def _ensure_index(self) -> None:
         # if self._index is not None:
@@ -94,12 +109,14 @@ class SceneLayoutRAG:
         planner_notes = None
         plan_elements: Sequence[LayoutElement] | None = None
         
-        if self.config.model.llm_name_or_path and asset_doc_scores:
+        # LLM planning can benefit from scene docs (anchors/rules) even if asset retrieval is weak.
+        if self.config.model.llm_name_or_path and (asset_doc_scores or scene_doc_scores):
             try:
                 self._planner = self._planner or LLMPlanner(self.config)
                 planner_notes, placement_dicts = self._planner.plan(
                     command_text,
-                    [doc for doc, _ in asset_doc_scores] + [doc for doc, _ in scene_doc_scores],
+                    asset_documents=[doc for doc, _ in asset_doc_scores],
+                    scene_documents=[doc for doc, _ in scene_doc_scores],
                 )
                 if placement_dicts:
                     plan_elements = self._build_elements_from_llm(placement_dicts, asset_doc_scores)
@@ -118,6 +135,28 @@ class SceneLayoutRAG:
             elements=plan_elements,
             retrieved_docs=[doc for doc, _ in (asset_doc_scores + scene_doc_scores)],
             planner_notes=planner_notes,
+        )
+
+    def generate_layout_react(self, command_text: str, *, top_k_assets: int = 12, max_assets: int = 8) -> LayoutPlan:
+        """ReAct-style pipeline: scene type -> template -> asset selection -> template imitation."""
+        agent = SceneLayoutReActAgent(self)
+        return agent.generate_layout(command_text, top_k_assets=top_k_assets, max_assets=max_assets)
+
+    def generate_layout_react_llm(
+        self,
+        command_text: str,
+        *,
+        top_k_assets: int = 12,
+        max_assets: int = 8,
+        max_steps: int = 6,
+    ) -> LayoutPlan:
+        """LLM-driven ReAct loop over local tools (optional)."""
+        agent = SceneLayoutReActAgent(self)
+        return agent.generate_layout_llm(
+            command_text,
+            top_k_assets=top_k_assets,
+            max_assets=max_assets,
+            max_steps=max_steps,
         )
         
     def _build_elements_from_llm(self, placement_dicts: Sequence[dict], doc_scores: Sequence[tuple[AssetDocument, float]]) -> List[LayoutElement]:
@@ -147,6 +186,18 @@ class SceneLayoutRAG:
                 px, py, pz = 0.0, 0.0, 0.0
             transform = {"x": px, "y": py, "z": pz}
             reasoning = entry.get("reason") or "由LLM规划得出的位置"
+            scale_value = entry.get("scale") or doc.metadata.get("scale")
+            if isinstance(scale_value, (int, float)):
+                scale = [float(scale_value)] * 3
+            elif isinstance(scale_value, (list, tuple)) and len(scale_value) >= 3:
+                scale = [float(scale_value[0]), float(scale_value[1]), float(scale_value[2])]
+            else:
+                scale = [0.01, 0.01, 0.01]
+            rotation = entry.get("rotation")
+            if isinstance(rotation, (list, tuple)) and len(rotation) >= 3:
+                rotation_list = [float(rotation[0]), float(rotation[1]), float(rotation[2])]
+            else:
+                rotation_list = [0.0, 0.0, 0.0]
             elements.append(
                 LayoutElement(
                     asset_id=asset_id or doc.metadata.get("asset_category", doc.doc_id),
@@ -154,6 +205,8 @@ class SceneLayoutRAG:
                     transform=transform,
                     score=score,
                     reasoning=reasoning,
+                    scale=scale,
+                    rotation=rotation_list,
                 )
             )
         return elements

@@ -43,12 +43,15 @@ class LayoutReasoner:
         reasoning = f"放置在{rel_x:.2f},{rel_y:.2f}区域以满足描述中的功能需求"
         usd_path = doc.metadata.get("usd_path", "")
         asset_id = doc.metadata.get("asset_category", doc.doc_id)
+        scale_value = doc.metadata.get("scale")
+        scale = [float(scale_value)] * 3 if isinstance(scale_value, (int, float)) else [0.01, 0.01, 0.01]
         return LayoutElement(
             asset_id=str(asset_id),
             usd_path=usd_path,
             transform=transform,
             score=score,
             reasoning=reasoning,
+            scale=scale,
         )
 
     def build_plan(self, command: SceneCommand, docs: Sequence[tuple[AssetDocument, float]]) -> LayoutPlan:

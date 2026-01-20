@@ -5,7 +5,7 @@
             "type": "debugpy",
             "request": "launch",
             "program": "${file}",
-            "args": ["Create a warehouse scenario", "--top-k", "8", "--max-steps", "4"],
+            "args": ["Create a assemble scenario", "--top-k", "8", "--max-steps", "128"],
             "env": {
         "http_proxy": "http://127.0.0.1:7897",
         "https_proxy": "http://127.0.0.1:7897",

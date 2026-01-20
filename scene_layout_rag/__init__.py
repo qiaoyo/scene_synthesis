@@ -3,6 +3,7 @@
 from .config import AssetPaths, ModelConfig, ProjectConfig
 from .rag import SceneLayoutRAG
 from .llm_planner import LLMPlanner
+from .react_agent import SceneLayoutReActAgent
 
 __all__ = [
     "AssetPaths",
@@ -10,4 +11,5 @@ __all__ = [
     "ProjectConfig",
     "SceneLayoutRAG",
     "LLMPlanner",
+    "SceneLayoutReActAgent",
 ]

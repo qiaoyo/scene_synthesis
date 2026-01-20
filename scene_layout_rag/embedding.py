@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 from functools import lru_cache
-from typing import List, Sequence
+from typing import Sequence
 
 try:
     from sentence_transformers import SentenceTransformer
@@ -31,13 +31,28 @@ class EmbeddingBackend:
     def embedding_dim(self) -> int:
         return self._model.get_sentence_embedding_dimension()
 
-    def embed_documents(self, texts: Sequence[str]) -> List[List[float]]:
-        print(f"[EmbeddingBackend] 对 {len(texts)} 条文档进行嵌入计算")
-        return self._model.encode(list(texts), batch_size=self.batch_size, show_progress_bar=True, convert_to_numpy=False)
+    def embed_documents(self, texts: Sequence[str]):
+        """Embed a batch of texts.
 
-    def embed_query(self, text: str) -> List[float]:
+        We return a torch.Tensor when torch is available (SentenceTransformer default backend),
+        which keeps downstream code (vector store) consistent across environments.
+        """
+        print(f"[EmbeddingBackend] 对 {len(texts)} 条文档进行嵌入计算")
+        return self._model.encode(
+            list(texts),
+            batch_size=self.batch_size,
+            show_progress_bar=True,
+            convert_to_tensor=True,
+        )
+
+    def embed_query(self, text: str):
         print("[EmbeddingBackend] 计算查询向量")
-        return self._model.encode(text, batch_size=1, show_progress_bar=False, convert_to_numpy=False)
+        return self._model.encode(
+            text,
+            batch_size=1,
+            show_progress_bar=False,
+            convert_to_tensor=True,
+        )
 
 
 __all__ = ["EmbeddingBackend"]

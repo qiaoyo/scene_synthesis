@@ -5,11 +5,9 @@ import json
 import re
 from typing import Any, Dict, List, Sequence, Tuple
 
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
-
 from .data_models import AssetDocument
 from .config import ProjectConfig
+from .local_llm import GenerationConfig, LocalCausalLM
 
 # _PROMPT_TEMPLATE = """你是一名工业场景布局规划助手。你会得到一个自然语言需求和若干资产信息。
 # 每个资产包含唯一ID、USD路径、功能描述以及包围盒尺寸(bbox)。
@@ -30,6 +28,8 @@ from .config import ProjectConfig
 
 _PROMPT_TEMPLATE ="""You are an industrial scene layout planning assistant. You will receive a natural language requirement along with several asset descriptions.  
 Each asset includes a unique ID, USD path, functional description, and bounding box dimensions (bbox).  
+You will also receive scene context which may include existing referenced Xforms with world-space bounding boxes/centers.  
+Use the scene context as constraints/anchors when relevant (e.g., reuse an existing center as a suggested placement for a similar item type).  
 Based on the requirement, asset information, and scene context, plan the placement of these assets within the scene.  
 Output a JSON array where each element has the following structure:
 {{
@@ -42,6 +42,8 @@ Recommended coordinate range: -10 to 10 meters.
 Requirement: {command}  
 Asset Information:  
 {assets}  
+Scene Context:  
+{scene_context}  
 Please output only the JSON array above, without any additional explanation.
 """
 
@@ -50,39 +52,16 @@ class LLMPlanner:
 
     def __init__(self, config: ProjectConfig):
         self.config = config
-        self._model = None
-        self._tokenizer = None
-        self._device = config.model.device
-
-    def _ensure_model(self) -> None:
-        if self._model is not None and self._tokenizer is not None:
-            return
-        model_name = self.config.model.llm_name_or_path
-        if not model_name:
-            raise ValueError("ModelConfig.llm_name_or_path 未设置，无法加载本地LLM")
-        tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=False)
-        if tokenizer.pad_token is None:
-            tokenizer.pad_token = tokenizer.eos_token
-        kwargs: Dict[str, Any] = {}
-        if self.config.model.use_8bit:
-            kwargs["load_in_8bit"] = True
-            kwargs["device_map"] = "cuda:0"
-        elif self.config.model.load_in_4bit:
-            kwargs["load_in_4bit"] = True
-            kwargs["device_map"] = "cuda:0"
-        else:
-            device = self.config.model.device or ("cuda" if torch.cuda.is_available() else "cpu")
-            kwargs["device_map"] = None
-            kwargs["torch_dtype"] = torch.float16 if device.startswith("cuda") and torch.cuda.is_available() else torch.float32
-        model = AutoModelForCausalLM.from_pretrained(model_name, **kwargs)
-        if kwargs.get("device_map") is None:
-            target_device = self.config.model.device or ("cuda" if torch.cuda.is_available() else "cpu")
-            model.to(target_device)
-            self._device = torch.device(target_device)
-        else:
-            self._device = next(model.parameters()).device
-        self._model = model
-        self._tokenizer = tokenizer
+        self._llm = LocalCausalLM(
+            model_name_or_path=config.model.llm_name_or_path,
+            device=config.model.device,
+            use_8bit=config.model.use_8bit,
+            load_in_4bit=config.model.load_in_4bit,
+            generation=GenerationConfig(
+                max_new_tokens=config.model.max_new_tokens,
+                temperature=config.model.temperature,
+            ),
+        )
 
     def _format_assets(self, documents: Sequence[AssetDocument]) -> str:
         lines = []
@@ -97,6 +76,31 @@ class LLMPlanner:
             lines.append(f"- ID:{asset_id} | USD:{usd_path} | bbox:{bbox_text} | 描述:{snippet}")
         return "\n".join(lines)
 
+    def _format_scene_context(self, documents: Sequence[AssetDocument], max_items: int = 16) -> str:
+        if not documents:
+            return "(none)"
+        lines: List[str] = []
+        for doc in list(documents)[:max_items]:
+            kind = doc.metadata.get("md_kind", "md")
+            if kind == "referenced_xform":
+                prim = doc.metadata.get("prim_path", "")
+                payload = doc.metadata.get("payload", "")
+                bbox = doc.metadata.get("bbox_world") or {}
+                size = bbox.get("size")
+                center = bbox.get("center")
+                lines.append(f"- Xform:{prim} payload:{payload} bbox_world.size:{size} bbox_world.center:{center}")
+            elif kind == "scene_meta":
+                usda = doc.metadata.get("usda_path", "")
+                unit = doc.metadata.get("meters_per_unit", "")
+                axis = doc.metadata.get("up_axis", "")
+                lines.append(f"- SceneMeta usda:{usda} meters_per_unit:{unit} up_axis:{axis}")
+            else:
+                snippet = doc.content.replace("\n", " ").strip()
+                if len(snippet) > 280:
+                    snippet = snippet[:280] + "..."
+                lines.append(f"- {snippet}")
+        return "\n".join(lines) if lines else "(none)"
+
     def _extract_json(self, text: str) -> List[Dict[str, Any]]:
         match = re.search(r"\[[\s\S]*\]", text)
         if not match:
@@ -110,22 +114,16 @@ class LLMPlanner:
             return []
         return []
 
-    def plan(self, command: str, documents: Sequence[AssetDocument]) -> Tuple[str, List[Dict[str, Any]]]:
-        self._ensure_model()
-        assert self._model is not None and self._tokenizer is not None
-        assets_text = self._format_assets(documents)
-        prompt = _PROMPT_TEMPLATE.format(command=command, assets=assets_text)
-        inputs = self._tokenizer(prompt, return_tensors="pt")
-        inputs = {k: v.to(self._device) for k, v in inputs.items()}
-        with torch.no_grad():
-            generated = self._model.generate(
-                **inputs,
-                max_new_tokens=self.config.model.max_new_tokens,
-                temperature=self.config.model.temperature,
-                do_sample=self.config.model.temperature > 0,
-            )
-        generated_ids = generated[0][inputs["input_ids"].shape[1] :]
-        completion = self._tokenizer.decode(generated_ids, skip_special_tokens=True).strip()
+    def plan(
+        self,
+        command: str,
+        asset_documents: Sequence[AssetDocument],
+        scene_documents: Sequence[AssetDocument] | None = None,
+    ) -> Tuple[str, List[Dict[str, Any]]]:
+        assets_text = self._format_assets(asset_documents)
+        scene_text = self._format_scene_context(scene_documents or [])
+        prompt = _PROMPT_TEMPLATE.format(command=command, assets=assets_text, scene_context=scene_text)
+        completion = self._llm.generate(prompt)
         placements = self._extract_json(completion)
         return completion, placements
 
