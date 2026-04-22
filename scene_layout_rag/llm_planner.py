@@ -3,13 +3,18 @@ from __future__ import annotations
 
 import json
 import re
-from typing import Any, Dict, List, Sequence, Tuple
+from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from .data_models import AssetDocument
 from .config import ProjectConfig
+
+try:
+    import requests as _requests
+except ImportError:
+    _requests = None
 
 _PROMPT_TEMPLATE = """你是一名工业场景布局规划助手。你会得到一个自然语言需求和若干资产信息。
 每个资产包含唯一ID、USD路径、功能描述以及包围盒尺寸(bbox)。
@@ -110,6 +115,69 @@ class LLMPlanner:
         completion = self._tokenizer.decode(generated_ids, skip_special_tokens=True).strip()
         placements = self._extract_json(completion)
         return completion, placements
+
+    # ------------------------------------------------------------------
+    # ReAct interface -- single-turn call used by the agent loop
+    # ------------------------------------------------------------------
+
+    def react_call(self, system_prompt: str, user_prompt: str) -> str:
+        """Run a single LLM turn for the ReAct agent.
+
+        Supports two backends:
+        - **Local model** (default): uses the HuggingFace model loaded by ``_ensure_model()``.
+        - **Remote API**: if ``config.model.llm_api_url`` is set, sends a POST
+          request to an OpenAI-compatible chat completions endpoint.
+
+        Returns the raw text completion.
+        """
+        api_url = getattr(self.config.model, "llm_api_url", "")
+        if api_url:
+            return self._react_call_api(system_prompt, user_prompt)
+        return self._react_call_local(system_prompt, user_prompt)
+
+    def _react_call_local(self, system_prompt: str, user_prompt: str) -> str:
+        self._ensure_model()
+        assert self._model is not None and self._tokenizer is not None
+
+        # Build instruction-style prompt
+        prompt = f"[INST] {system_prompt}\n\n{user_prompt} [/INST]"
+        inputs = self._tokenizer(prompt, return_tensors="pt", truncation=True, max_length=4096)
+        inputs = {k: v.to(self._device) for k, v in inputs.items()}
+        with torch.no_grad():
+            generated = self._model.generate(
+                **inputs,
+                max_new_tokens=self.config.model.max_new_tokens,
+                temperature=self.config.model.temperature,
+                do_sample=self.config.model.temperature > 0,
+            )
+        generated_ids = generated[0][inputs["input_ids"].shape[1]:]
+        return self._tokenizer.decode(generated_ids, skip_special_tokens=True).strip()
+
+    def _react_call_api(self, system_prompt: str, user_prompt: str) -> str:
+        if _requests is None:
+            raise ImportError("requests 库未安装，无法调用远程 API")
+        api_url = self.config.model.llm_api_url
+        api_key = getattr(self.config.model, "llm_api_key", "")
+        model_name = getattr(self.config.model, "llm_api_model", "")
+        headers = {"Content-Type": "application/json"}
+        if api_key:
+            headers["Authorization"] = f"Bearer {api_key}"
+        payload = {
+            "model": model_name,
+            "messages": [
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt},
+            ],
+            "temperature": self.config.model.temperature,
+            "max_tokens": self.config.model.max_new_tokens,
+        }
+        resp = _requests.post(api_url, json=payload, headers=headers, timeout=120)
+        resp.raise_for_status()
+        data = resp.json()
+        choices = data.get("choices", [])
+        if choices:
+            return choices[0].get("message", {}).get("content", "")
+        return ""
 
 
 __all__ = ["LLMPlanner"]

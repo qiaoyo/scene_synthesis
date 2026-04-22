@@ -1,11 +1,18 @@
 """High level pipeline orchestrating ingestion, retrieval, and layout reasoning."""
 from __future__ import annotations
 
-from typing import List, Sequence
+import json
+from typing import Dict, List, Sequence, Tuple
 
 from .asset_loader import AssetIngestor
 from .config import ProjectConfig
-from .data_models import AssetDocument, LayoutPlan, LayoutElement, SceneCommand
+from .data_models import (
+    AgentTrace,
+    AssetDocument,
+    LayoutPlan,
+    LayoutElement,
+    SceneCommand,
+)
 from .embedding import EmbeddingBackend
 from .layout_reasoner import LayoutReasoner
 from .llm_planner import LLMPlanner
@@ -75,6 +82,73 @@ class SceneLayoutRAG:
             plan.planner_notes = planner_notes
             return plan
         return LayoutPlan(command=command, elements=plan_elements, retrieved_docs=[doc for doc, _ in doc_scores], planner_notes=planner_notes)
+
+    # ------------------------------------------------------------------
+    # ReAct mode
+    # ------------------------------------------------------------------
+
+    def generate_layout_react(self, command_text: str) -> Tuple[LayoutPlan, AgentTrace]:
+        """Generate a layout using the ReAct agent loop.
+
+        Unlike :meth:`generate_layout`, this method runs an iterative
+        Think → Act → Observe → Reflect cycle.  RAG retrieval happens
+        *inside* the loop via the ``retrieve_assets`` tool.
+        """
+        from .agent import ReActAgent
+        from .observer import SceneObserver
+        from .tools import build_default_registry
+
+        self._ensure_index()
+        assert self._index is not None and self._embedder is not None
+
+        catalog_summary = self._build_catalog_summary()
+
+        planner = self._planner or LLMPlanner(self.config)
+        self._planner = planner
+
+        registry = build_default_registry()
+        observer = SceneObserver(physics_enabled=self.config.agent.physics_enabled)
+
+        agent = ReActAgent(
+            llm=planner,
+            tool_registry=registry,
+            observer=observer,
+            vector_store=self._index,
+            embedder=self._embedder,
+            max_steps=self.config.agent.max_steps,
+            reflection_enabled=self.config.agent.reflection_enabled,
+            max_lessons=self.config.agent.max_lessons,
+            max_working_memory=self.config.agent.max_working_memory,
+        )
+
+        scene, trace = agent.run(command_text, catalog_summary)
+
+        # Convert SceneState → LayoutPlan for backward compatibility
+        command = SceneCommand(raw_text=command_text, language=self.config.language)
+        elements = [
+            LayoutElement(
+                asset_id=a.asset_id,
+                usd_path=a.usd_path,
+                transform={"x": a.position[0], "y": a.position[1], "z": a.position[2]},
+                score=1.0,
+                reasoning=a.description or "ReAct agent placement",
+            )
+            for a in scene.assets.values()
+        ]
+        plan = LayoutPlan(command=command, elements=elements, planner_notes=f"ReAct: {trace.total_steps} steps")
+        return plan, trace
+
+    def _build_catalog_summary(self) -> Dict[str, Any]:
+        """Build a summary of the asset catalog for the agent's warm-start context."""
+        categories: Dict[str, int] = {}
+        for doc in self._documents:
+            cat = doc.metadata.get("asset_category", "unknown")
+            categories[cat] = categories.get(cat, 0) + 1
+        return {
+            "available_categories": sorted(categories.keys()),
+            "category_counts": categories,
+            "total_assets": len(self._documents),
+        }
 
     def _build_elements_from_llm(self, placement_dicts: Sequence[dict], doc_scores: Sequence[tuple[AssetDocument, float]]) -> List[LayoutElement]:
         doc_by_id = {doc.doc_id: (doc, score) for doc, score in doc_scores}

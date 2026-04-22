@@ -62,4 +62,47 @@ class LayoutPlan:
         ]
 
 
-__all__ = ["AssetDocument", "SceneCommand", "LayoutElement", "LayoutPlan"]
+# ------------------------------------------------------------------
+# ReAct agent data structures
+# ------------------------------------------------------------------
+
+@dataclass
+class ActionRecord:
+    """Single step in an agent trace."""
+    step: int
+    thought: str
+    action: str
+    action_input: Dict[str, Any]
+    result_ok: bool
+    observation_ok: bool
+
+
+@dataclass
+class Lesson:
+    """A reflection lesson learned from a failed action."""
+    step: int
+    situation: str
+    mistake: str
+    correction: str
+
+
+@dataclass
+class AgentTrace:
+    """Complete execution trace of a ReAct agent run."""
+    command: str
+    steps: List[ActionRecord] = field(default_factory=list)
+    lessons: List[Lesson] = field(default_factory=list)
+    final_scene_dict: Dict[str, Any] = field(default_factory=dict)
+    total_steps: int = 0
+    success: bool = False
+
+
+__all__ = [
+    "AssetDocument",
+    "SceneCommand",
+    "LayoutElement",
+    "LayoutPlan",
+    "ActionRecord",
+    "Lesson",
+    "AgentTrace",
+]
