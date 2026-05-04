@@ -68,10 +68,10 @@ class AssetPaths:
 @dataclass
 class ModelConfig:
     """Holds model related knobs for embeddings, LLMs, and layout heads."""
-
+    llm_backend: str = "api"  # api, local, mock
     embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2"
     embedding_batch_size: int = 32
-    llm_name_or_path: str = "mistralai/Mistral-7B-Instruct-v0.2"
+    llm_name_or_path: str = "mistralai/Mistral-7B-Instruct-v0.3"
     max_new_tokens: int = 512
     temperature: float = 0.2
     device: str = "cuda:1"
@@ -81,9 +81,9 @@ class ModelConfig:
     lora_rank: int = 32
     lora_alpha: int = 64
     # Remote API support (OpenAI-compatible endpoint)
-    llm_api_url: str = ""
-    llm_api_key: str = ""
-    llm_api_model: str = ""
+    llm_api_url: str = "https://openrouter.ai/api/v1/chat/completions"
+    llm_api_key: str = "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"
+    llm_api_model: str = "openrouter/free"
 
 
 @dataclass

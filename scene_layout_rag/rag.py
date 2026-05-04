@@ -68,7 +68,8 @@ class SceneLayoutRAG:
         doc_scores = [(hit.document, hit.score) for hit in hits]
         planner_notes = None
         plan_elements: Sequence[LayoutElement] | None = None
-        if self.config.model.llm_name_or_path:
+        if (self.config.model.llm_backend == "local"
+            and self.config.model.llm_name_or_path):
             try:
                 self._planner = self._planner or LLMPlanner(self.config)
                 planner_notes, placement_dicts = self._planner.plan(command_text, [doc for doc, _ in doc_scores])

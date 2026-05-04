@@ -5,9 +5,6 @@ import json
 import re
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
-
 from .data_models import AssetDocument
 from .config import ProjectConfig
 
@@ -16,7 +13,8 @@ try:
 except ImportError:
     _requests = None
 
-_PROMPT_TEMPLATE = """你是一名工业场景布局规划助手。你会得到一个自然语言需求和若干资产信息。
+_PROMPT_TEMPLATE = """
+你是一名工业场景布局规划助手。你会得到一个自然语言需求和若干资产信息。
 每个资产包含唯一ID、USD路径、功能描述以及包围盒尺寸(bbox)。
 请综合需求与资产信息，规划这些资产在场景中的位置，输出 JSON 数组，每个元素结构如下：
 {{
@@ -29,7 +27,8 @@ _PROMPT_TEMPLATE = """你是一名工业场景布局规划助手。你会得到�
 需求: {command}
 资产信息:
 {assets}
-请只输出上述 JSON 数组，不要添加多余说明。"""
+请只输出上述 JSON 数组，不要添加多余说明。
+"""
 
 
 class LLMPlanner:
@@ -39,11 +38,23 @@ class LLMPlanner:
         self.config = config
         self._model = None
         self._tokenizer = None
+        self._torch = None
         self._device = config.model.device
 
     def _ensure_model(self) -> None:
+        try:
+            import torch
+            from transformers import AutoModelForCausalLM, AutoTokenizer
+        except ImportError as exc:
+            raise ImportError(
+                "本地 LLM 模式需要安装 torch 和 transformers；"
+                "如果你使用远程 API，请设置 --llm-backend api 或 --api-url。"
+            ) from exc
+
+        self._torch = torch
         if self._model is not None and self._tokenizer is not None:
             return
+
         model_name = self.config.model.llm_name_or_path
         if not model_name:
             raise ValueError("ModelConfig.llm_name_or_path 未设置，无法加载本地LLM")
@@ -99,7 +110,8 @@ class LLMPlanner:
 
     def plan(self, command: str, documents: Sequence[AssetDocument]) -> Tuple[str, List[Dict[str, Any]]]:
         self._ensure_model()
-        assert self._model is not None and self._tokenizer is not None
+        assert self._model is not None and self._tokenizer is not None and self._torch is not None
+        torch = self._torch
         assets_text = self._format_assets(documents)
         prompt = _PROMPT_TEMPLATE.format(command=command, assets=assets_text)
         inputs = self._tokenizer(prompt, return_tensors="pt")
@@ -121,23 +133,21 @@ class LLMPlanner:
     # ------------------------------------------------------------------
 
     def react_call(self, system_prompt: str, user_prompt: str) -> str:
-        """Run a single LLM turn for the ReAct agent.
+        backend = getattr(self.config.model, "llm_backend", "api")
 
-        Supports two backends:
-        - **Local model** (default): uses the HuggingFace model loaded by ``_ensure_model()``.
-        - **Remote API**: if ``config.model.llm_api_url`` is set, sends a POST
-          request to an OpenAI-compatible chat completions endpoint.
-
-        Returns the raw text completion.
-        """
-        api_url = getattr(self.config.model, "llm_api_url", "")
-        if api_url:
+        if backend == "api":
             return self._react_call_api(system_prompt, user_prompt)
-        return self._react_call_local(system_prompt, user_prompt)
+
+        if backend == "local":
+            return self._react_call_local(system_prompt, user_prompt)
+
+        raise ValueError(f"未知 llm_backend: {backend}")
+
 
     def _react_call_local(self, system_prompt: str, user_prompt: str) -> str:
         self._ensure_model()
-        assert self._model is not None and self._tokenizer is not None
+        assert self._model is not None and self._tokenizer is not None and self._torch is not None
+        torch = self._torch
 
         # Build instruction-style prompt
         prompt = f"[INST] {system_prompt}\n\n{user_prompt} [/INST]"
@@ -157,6 +167,8 @@ class LLMPlanner:
         if _requests is None:
             raise ImportError("requests 库未安装，无法调用远程 API")
         api_url = self.config.model.llm_api_url
+        if not api_url:
+            raise ValueError("llm_backend=api 时必须提供 --api-url")
         api_key = getattr(self.config.model, "llm_api_key", "")
         model_name = getattr(self.config.model, "llm_api_model", "")
         headers = {"Content-Type": "application/json"}

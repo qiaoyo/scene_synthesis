@@ -26,8 +26,9 @@ requirements.txt
    ```
 2. **即时推理**
    ```bash
-   python scripts/run_inference.py "在入库区放置两排可折叠纸箱"
+   python -m scene_layout_rag.cli "在入库区放置两排可折叠纸箱"
    ```
+   > 兼容说明：`python scripts/run_inference.py ...` 仍可使用，但它只是转发到 `scene_layout_rag.cli`，后续建议统一使用模块 CLI 入口。
    > 说明：推理阶段会先使用 sentence-transformers 检索相关资产，再将命中的资产（含 bbox）连同需求一起喂给本地 LLM（`ModelConfig.llm_name_or_path` 对应的模型）生成布局方案。若 LLM 解析失败，则自动回落到启发式推理。
 3. **LoRA 微调**
    ```bash
@@ -35,7 +36,7 @@ requirements.txt
    ```
 4. **CLI 快速测试**
    ```bash
-   python -m scene_layout_rag.cli "请给出AGV通道与传送带的布局"
+   python -m scene_layout_rag.cli "请给出AGV通道与传送带的布局" --react
    ```
 
 ## 资产CSV格式扩展

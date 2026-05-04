@@ -5,7 +5,7 @@ import argparse
 import json
 from pathlib import Path
 
-from .config import ProjectConfig
+from .config import ProjectConfig, AssetPaths
 from .rag import SceneLayoutRAG
 
 
@@ -20,6 +20,11 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--no-reflect", dest="no_reflect", action="store_true", help="Disable reflection in ReAct mode")
     parser.add_argument("--physics", action="store_true", help="Enable Isaac Sim physics validation")
     # LLM API options
+    parser.add_argument(
+    "--llm-backend",
+    choices=["api", "local", "mock"],
+    default="api",
+    help="选择 LLM 后端：api=远程接口，local=本地模型",)
     parser.add_argument("--api-url", dest="api_url", type=str, default="", help="OpenAI-compatible API URL for LLM")
     parser.add_argument("--api-key", dest="api_key", type=str, default="", help="API key for remote LLM")
     parser.add_argument("--api-model", dest="api_model", type=str, default="", help="Model name for remote LLM")
@@ -33,10 +38,9 @@ def main() -> None:
     args = parser.parse_args()
 
     config = ProjectConfig()
+    config.model.llm_backend = args.llm_backend
     if args.assets:
-        config.asset_paths.assets_root = args.assets
-        config.asset_paths.inventory_csvs = sorted(Path(args.assets).glob("*.csv"))
-        config.asset_paths.scene_md_files = sorted(Path(args.assets).glob("*.md"))
+        config.asset_paths = AssetPaths(assets_root=args.assets)
     if args.api_url:
         config.model.llm_api_url = args.api_url
     if args.api_key:

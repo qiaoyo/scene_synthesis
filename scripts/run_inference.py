@@ -1,8 +1,6 @@
-"""Convenience script to run inference on the layout RAG pipeline."""
+"""Deprecated compatibility wrapper for the canonical CLI entrypoint."""
 from __future__ import annotations
 
-import argparse
-import json
 import sys
 from pathlib import Path
 
@@ -10,20 +8,17 @@ SRC_ROOT = Path(__file__).resolve().parents[1]
 if str(SRC_ROOT) not in sys.path:
     sys.path.insert(0, str(SRC_ROOT))
 
-from scene_layout_rag import ProjectConfig, SceneLayoutRAG
-
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Run scene layout inference")
-    parser.add_argument("command", help="Scene description prompt")
-    parser.add_argument("--top-k", type=int, default=5)
-    args = parser.parse_args()
+    print(
+        "[Deprecated] scripts/run_inference.py delegates to "
+        "`python -m scene_layout_rag.cli`. Please use the module CLI directly.",
+        file=sys.stderr,
+    )
 
-    print("[Script] 启动推理流程")
-    pipeline = SceneLayoutRAG(ProjectConfig())
-    plan = pipeline.generate_layout(args.command, top_k=args.top_k)
-    print(json.dumps(plan.summary(), ensure_ascii=False, indent=2))
-    print("[Script] 推理完成")
+    from scene_layout_rag.cli import main as cli_main
+
+    cli_main()
 
 
 if __name__ == "__main__":

@@ -90,7 +90,6 @@ def load_layout_from_json(json_path):
         asset_id = item.get("asset_id", "Asset")
         usd_path = item["usd_path"]
         position = item.get("position", [0, 0, 0])
-        scale = item.get("scale", [0.01, 0.01, 0.01])
         rotation = item.get("rotation", [0, 0, 0])
 
         # 生成唯一 prim_path
