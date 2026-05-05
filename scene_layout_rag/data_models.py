@@ -1,108 +1,163 @@
-"""Common dataclasses shared across the RAG stack."""
+"""Plain-data structures shared across the RAG corpus and the ReAct agent.
+
+设计原则:
+- 资产语料里的每条文档统一使用 ``AssetDocument``，content + metadata 二段式，
+  方便序列化为 JSONL 索引（确定性、可读、可 diff）。
+- 场景运行时使用 ``SceneState`` + ``Instance``，描述当前布局、支撑关系和
+  语义标记；ReAct 的工具与观察器都围绕它读写。
+- ``Action`` / ``Observation`` / ``Reflection`` / ``Lesson`` 是 ReAct 循环里
+  线程之间传递的纯数据载体，避免把 LLM 输出和工具输出耦合到具体类。
+"""
 from __future__ import annotations
 
-from dataclasses import dataclass, field
-from typing import Any, Dict, List, Optional, Sequence
+from dataclasses import asdict, dataclass, field
+from typing import Any, Dict, List, Optional, Tuple
 
 
 @dataclass
 class AssetDocument:
-    """Represents a single text chunk that can be embedded and retrieved."""
+    """统一的资产/场景文档结构，落到 ``data/indexes/corpus.jsonl``。"""
 
     doc_id: str
     content: str
     metadata: Dict[str, Any] = field(default_factory=dict)
+    embedding: Optional[List[float]] = None
 
-    def as_dict(self) -> Dict[str, Any]:
-        return {"id": self.doc_id, "content": self.content, "metadata": self.metadata}
+    def to_dict(self) -> Dict[str, Any]:
+        data = asdict(self)
+        # embedding 体积大且只在 FAISS 模式下需要持久化
+        if data.get("embedding") is None:
+            data.pop("embedding", None)
+        return data
+
+    @classmethod
+    def from_dict(cls, payload: Dict[str, Any]) -> "AssetDocument":
+        return cls(
+            doc_id=payload["doc_id"],
+            content=payload["content"],
+            metadata=dict(payload.get("metadata", {})),
+            embedding=payload.get("embedding"),
+        )
+
+
+# ---------- 场景运行时 ----------
+
+Vec3 = Tuple[float, float, float]
 
 
 @dataclass
-class SceneCommand:
-    """Normalized scene instruction from a user prompt or script."""
+class Instance:
+    """场景中已经放置好的一个资产实例。"""
 
-    raw_text: str
-    language: str = "zh"
-    structured_goals: Dict[str, Any] = field(default_factory=dict)
-
-
-@dataclass
-class LayoutElement:
-    """Minimal unit describing an asset placement candidate."""
-
-    asset_id: str
+    instance_id: str
+    asset_type: str
+    asset_doc_id: str  # 指向语料库里的某条 AssetDocument
     usd_path: str
-    transform: Dict[str, float]
-    score: float
-    reasoning: str
+    position: List[float] = field(default_factory=lambda: [0.0, 0.0, 0.0])
+    rotation_deg: float = 0.0  # 仅绕 Z 轴
+    bbox_size: List[float] = field(default_factory=lambda: [1.0, 1.0, 1.0])
+    parent_instance_id: Optional[str] = None  # set_support 之后才会有
+    tags: Dict[str, str] = field(default_factory=dict)
+    description: Optional[str] = None  # 从资产文档继承的文本描述
+
+    def aabb(self) -> Tuple[List[float], List[float]]:
+        """返回该实例当前的轴对齐包围盒 ``(min, max)``。
+
+        说明：本项目第一阶段不支持任意旋转的精确 OBB 碰撞，``rotation_deg`` 只用于
+        资产朝向标注。``check_collision`` 用 AABB；接入 IsaacSim 之后可替换。
+        """
+        cx, cy, cz = self.position
+        sx, sy, sz = self.bbox_size
+        half = [sx / 2.0, sy / 2.0, sz / 2.0]
+        bbox_min = [cx - half[0], cy - half[1], cz - half[2]]
+        bbox_max = [cx + half[0], cy + half[1], cz + half[2]]
+        return bbox_min, bbox_max
+
+    def to_dict(self) -> Dict[str, Any]:
+        return asdict(self)
 
 
 @dataclass
-class LayoutPlan:
-    """Aggregate of layout elements for downstream USD generation."""
+class SceneState:
+    """整张场景的运行时快照。"""
 
-    command: SceneCommand
-    elements: Sequence[LayoutElement]
-    retrieved_docs: Sequence[AssetDocument] = field(default_factory=list)
-    planner_notes: Optional[str] = None
+    instances: Dict[str, Instance] = field(default_factory=dict)
+    # 反向索引：parent_id -> [child_ids]
+    support_children: Dict[str, List[str]] = field(default_factory=dict)
+    # 高层语义标签，供 LLM 记忆当前布局意图
+    work_zones: List[Dict[str, Any]] = field(default_factory=list)
+    notes: List[str] = field(default_factory=list)
 
-    def summary(self) -> List[Dict[str, Any]]:
-        return [
-            {
-                "asset_id": e.asset_id,
-                "usd_path": e.usd_path,
-                "position": [
-                    e.transform.get("x", 0.0),
-                    e.transform.get("y", 0.0),
-                    e.transform.get("z", 0.0),
-                ],
-                "score": e.score,
-            }
-            for e in self.elements
-        ]
+    def to_dict(self) -> Dict[str, Any]:
+        return {
+            "instances": {iid: inst.to_dict() for iid, inst in self.instances.items()},
+            "support_children": dict(self.support_children),
+            "work_zones": list(self.work_zones),
+            "notes": list(self.notes),
+        }
 
 
-# ------------------------------------------------------------------
-# ReAct agent data structures
-# ------------------------------------------------------------------
+# ---------- ReAct 三段式 ----------
 
 @dataclass
-class ActionRecord:
-    """Single step in an agent trace."""
-    step: int
-    thought: str
-    action: str
-    action_input: Dict[str, Any]
-    result_ok: bool
-    observation_ok: bool
+class Action:
+    """LLM 决策出的一次动作。"""
+
+    tool: str
+    tool_input: Dict[str, Any] = field(default_factory=dict)
+    thought: str = ""
+
+    def to_dict(self) -> Dict[str, Any]:
+        return asdict(self)
+
+
+@dataclass
+class Observation:
+    """一次工具执行后的全面观测。结构对齐 ``方案/优化.md`` 中的优化方向 2。"""
+
+    ok: bool = True
+    tool_result: Dict[str, Any] = field(default_factory=dict)
+    validation: Dict[str, Any] = field(default_factory=dict)
+    scene_semantics: Dict[str, Any] = field(default_factory=dict)
+    support_state: Dict[str, Any] = field(default_factory=dict)
+    physics_feedback: Dict[str, Any] = field(default_factory=dict)
+    suggestions: List[str] = field(default_factory=list)
+    error: Optional[str] = None
+
+    def to_dict(self) -> Dict[str, Any]:
+        return asdict(self)
+
+
+@dataclass
+class Reflection:
+    """LLM 在观察失败后产出的反思。"""
+
+    summary: str = ""
+    cause: str = ""
+    next_strategy: str = ""
+
+    def to_dict(self) -> Dict[str, Any]:
+        return asdict(self)
 
 
 @dataclass
 class Lesson:
-    """A reflection lesson learned from a failed action."""
-    step: int
+    """沉淀到 lessons_learned 中的复用经验。"""
+
     situation: str
     mistake: str
     correction: str
 
-
-@dataclass
-class AgentTrace:
-    """Complete execution trace of a ReAct agent run."""
-    command: str
-    steps: List[ActionRecord] = field(default_factory=list)
-    lessons: List[Lesson] = field(default_factory=list)
-    final_scene_dict: Dict[str, Any] = field(default_factory=dict)
-    total_steps: int = 0
-    success: bool = False
+    def to_dict(self) -> Dict[str, Any]:
+        return asdict(self)
 
 
 __all__ = [
     "AssetDocument",
-    "SceneCommand",
-    "LayoutElement",
-    "LayoutPlan",
-    "ActionRecord",
+    "Instance",
+    "SceneState",
+    "Action",
+    "Observation",
+    "Reflection",
     "Lesson",
-    "AgentTrace",
 ]

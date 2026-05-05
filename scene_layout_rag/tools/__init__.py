@@ -1,38 +1,15 @@
-"""Tool abstraction layer for the ReAct agent."""
+"""ReAct 工具集。每个工具都用统一的 ``Tool`` 接口注册，方便 LLM 调用。"""
+from .base import TOOL_REGISTRY, Tool, ToolContext, ToolResult, register_tool
+from . import (  # noqa: F401  -- import for registration side-effect
+    check_collision,
+    check_support,
+    delete_asset,
+    move_asset,
+    place_instance,
+    query_scene,
+    retrieve_assets,
+    set_support,
+    simulate_step,
+)
 
-from .base import BaseTool, ToolResult, ToolRegistry
-from .retrieve_assets import RetrieveAssetsTool
-from .place_instance import PlaceInstanceTool
-from .move_asset import MoveAssetTool
-from .delete_asset import DeleteAssetTool
-from .query_scene import QuerySceneTool
-from .check_collision import CheckCollisionTool
-from .check_support import CheckSupportTool
-from .set_support import SetSupportTool
-from .simulate_step import SimulateStepTool
-
-
-def build_default_registry() -> ToolRegistry:
-    """Create a registry with all built-in tools."""
-    registry = ToolRegistry()
-    for tool_cls in [
-        RetrieveAssetsTool,
-        PlaceInstanceTool,
-        MoveAssetTool,
-        DeleteAssetTool,
-        QuerySceneTool,
-        CheckCollisionTool,
-        CheckSupportTool,
-        SetSupportTool,
-        SimulateStepTool,
-    ]:
-        registry.register(tool_cls())
-    return registry
-
-
-__all__ = [
-    "BaseTool",
-    "ToolResult",
-    "ToolRegistry",
-    "build_default_registry",
-]
+__all__ = ["TOOL_REGISTRY", "Tool", "ToolContext", "ToolResult", "register_tool"]

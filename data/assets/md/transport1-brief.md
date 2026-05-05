@@ -6,8 +6,28 @@
 *  **单位与坐标系 (Units & Coordinate System):**
    *   **米(Meters Per Unit):**1.0
    *   **Up Axis:**Z
+*  **场景描述(Scene Describe):**  该场景展示了一个多层次、立体化的自动化物流分拣中心，厂房内部由庞大的蓝色钢制滚筒输送网络交织成复杂的网格布局。核心设备包括覆盖全场的多级银灰色金属滚筒输送机，其上分布着大量灰色条状工件，以及在系统边缘线性排布的四台米白色六轴大型工业机器人。每台机器人下方均精准对接了多台顶部搭载深蓝色料框的黄色AGV，构成了柔性的地面搬运系统。整体规划体现了“顶部三维分拨、侧向机器人码放、底部AGV集群转运”的高效协同逻辑，通过纵向空间的深度开发与多机集群的精密衔接，实现了海量物料的高频、全自动流转，是现代智慧工厂极致空间利用与数字化集成作业的典型缩影。
+* **设备数量(Device Number):**
+  * **Scene: 1**
+  * **IndustrialRobot: 4**
+  * **Workbench: 0**
+  * **Conveyor: 16**
+  * **AGV: 4**
+  * **Forklift: 0**
+  * **Box: 4**
+  * **Rack: 0**
+  * **Pallet: 0**
+  * **Part: 152**
+  * **Decoration: 0**
 
 ## 2.场景对象层级(Scene Hierarchy)
+*   Render (Prim)
+    *   OmniverseKit (Prim)
+        *   HydraTextures (Prim)
+            *   omni_kit_widget_viewport_ViewportTexture_0 (RenderProduct)
+    *   OmniverseGlobalRenderSettings (RenderSettings)
+    *   Vars (Prim)
+        *   LdrColor (RenderVar)
 *   World (Prim)
     *   DomeLight (DomeLight)
     *   SunLight (DistantLight)
@@ -9132,8 +9152,6 @@
         *   node__Size_8_Length_28_SUPPRESSION_A_Simplified (Xform)
             *   geometry_1 (Mesh)
     *   PartOnConveyor1_4 (Xform)
-        *   node__Size_8_Length_28_SUPPRESSION_A_Simplified (Xform)
-            *   geometry_1 (Mesh)
     *   PartOnConveyor1_5 (Xform)
         *   node__Size_8_Length_28_SUPPRESSION_A_Simplified (Xform)
             *   geometry_1 (Mesh)
@@ -9840,7 +9858,7 @@
 
 
 ### '/World/PartOnConveyor_1' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(5.100, 6.200, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_1/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -9850,7 +9868,7 @@
 
 
 ### '/World/PartOnConveyor_2' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(5.100, 7.400, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_2/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -9860,7 +9878,7 @@
 
 
 ### '/World/PartOnConveyor_3' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(9.110, 6.200, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_3/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -9870,7 +9888,7 @@
 
 
 ### '/World/PartOnConveyor_4' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(9.110, 7.400, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_4/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -9880,7 +9898,7 @@
 
 
 ### '/World/PartOnConveyor_5' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(13.120, 6.200, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_5/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -9890,7 +9908,7 @@
 
 
 ### '/World/PartOnConveyor_6' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(13.120, 7.400, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_6/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -9900,7 +9918,7 @@
 
 
 ### '/World/PartOnConveyor_7' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(17.130, 6.200, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_7/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -9910,7 +9928,7 @@
 
 
 ### '/World/PartOnConveyor_8' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(17.130, 7.400, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_8/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -9920,7 +9938,7 @@
 
 
 ### '/World/PartOnConveyor_9' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(5.100, 9.160, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_9/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -9930,7 +9948,7 @@
 
 
 ### '/World/PartOnConveyor_10' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(5.100, 10.360, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_10/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -9940,7 +9958,7 @@
 
 
 ### '/World/PartOnConveyor_11' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(9.110, 9.160, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_11/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -9950,7 +9968,7 @@
 
 
 ### '/World/PartOnConveyor_12' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(9.110, 10.360, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_12/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -9960,7 +9978,7 @@
 
 
 ### '/World/PartOnConveyor_13' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(13.120, 9.160, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_13/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -9970,7 +9988,7 @@
 
 
 ### '/World/PartOnConveyor_14' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(13.120, 10.360, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_14/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -9980,7 +9998,7 @@
 
 
 ### '/World/PartOnConveyor_15' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(17.130, 9.160, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_15/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -9990,7 +10008,7 @@
 
 
 ### '/World/PartOnConveyor_16' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(17.130, 10.360, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_16/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10000,7 +10018,7 @@
 
 
 ### '/World/PartOnConveyor_17' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(5.100, 12.120, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_17/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10010,7 +10028,7 @@
 
 
 ### '/World/PartOnConveyor_18' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(5.100, 13.320, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_18/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10020,7 +10038,7 @@
 
 
 ### '/World/PartOnConveyor_19' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(9.110, 12.120, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_19/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10030,7 +10048,7 @@
 
 
 ### '/World/PartOnConveyor_20' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(9.110, 13.320, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_20/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10040,7 +10058,7 @@
 
 
 ### '/World/PartOnConveyor_21' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(13.120, 12.120, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_21/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10050,7 +10068,7 @@
 
 
 ### '/World/PartOnConveyor_22' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(13.120, 13.320, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_22/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10060,7 +10078,7 @@
 
 
 ### '/World/PartOnConveyor_23' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(17.130, 12.120, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_23/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10070,7 +10088,7 @@
 
 
 ### '/World/PartOnConveyor_24' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(17.130, 13.320, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_24/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10080,7 +10098,7 @@
 
 
 ### '/World/PartOnConveyor_25' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(5.100, 15.080, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_25/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10090,7 +10108,7 @@
 
 
 ### '/World/PartOnConveyor_26' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(5.100, 16.280, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_26/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10100,7 +10118,7 @@
 
 
 ### '/World/PartOnConveyor_27' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(9.110, 15.080, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_27/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10110,7 +10128,7 @@
 
 
 ### '/World/PartOnConveyor_28' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(9.110, 16.280, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_28/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10120,7 +10138,7 @@
 
 
 ### '/World/PartOnConveyor_29' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(13.120, 15.080, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_29/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10130,7 +10148,7 @@
 
 
 ### '/World/PartOnConveyor_30' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(13.120, 16.280, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_30/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10140,7 +10158,7 @@
 
 
 ### '/World/PartOnConveyor_31' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(17.130, 15.080, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_31/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10150,7 +10168,7 @@
 
 
 ### '/World/PartOnConveyor_32' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(17.130, 16.280, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor_32/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10160,7 +10178,7 @@
 
 
 ### '/World/PartOnConveyor1_1' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(3.400, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_1/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10170,7 +10188,7 @@
 
 
 ### '/World/PartOnConveyor1_2' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(4.400, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_2/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10180,7 +10198,7 @@
 
 
 ### '/World/PartOnConveyor1_3' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(5.400, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_3/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10190,17 +10208,17 @@
 
 
 ### '/World/PartOnConveyor1_4' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
-* BBox (world): size=(28.000, 8.000, 7.000), center=(6.400, 5.430, 1.815)
-* 几何统计: Mesh=1, Vertices=2310, Faces=4628
-* 子Mesh材质: /World/PartOnConveyor1_4/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/partobj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
+* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(0.000, 0.000, 0.000)
+* 几何统计: Mesh=0, Vertices=0, Faces=0
 
 
 ---
 
 
 ### '/World/PartOnConveyor1_5' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(7.400, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_5/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10210,7 +10228,7 @@
 
 
 ### '/World/PartOnConveyor1_6' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(8.400, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_6/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10220,7 +10238,7 @@
 
 
 ### '/World/PartOnConveyor1_7' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(9.400, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_7/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10230,7 +10248,7 @@
 
 
 ### '/World/PartOnConveyor1_8' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(7.410, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_8/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10240,7 +10258,7 @@
 
 
 ### '/World/PartOnConveyor1_9' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(8.410, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_9/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10250,7 +10268,7 @@
 
 
 ### '/World/PartOnConveyor1_10' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(9.410, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_10/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10260,7 +10278,7 @@
 
 
 ### '/World/PartOnConveyor1_11' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(10.410, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_11/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10270,7 +10288,7 @@
 
 
 ### '/World/PartOnConveyor1_12' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(11.410, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_12/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10280,7 +10298,7 @@
 
 
 ### '/World/PartOnConveyor1_13' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(12.410, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_13/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10290,7 +10308,7 @@
 
 
 ### '/World/PartOnConveyor1_14' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(13.410, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_14/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10300,7 +10318,7 @@
 
 
 ### '/World/PartOnConveyor1_15' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(11.420, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_15/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10310,7 +10328,7 @@
 
 
 ### '/World/PartOnConveyor1_16' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(12.420, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_16/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10320,7 +10338,7 @@
 
 
 ### '/World/PartOnConveyor1_17' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(13.420, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_17/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10330,7 +10348,7 @@
 
 
 ### '/World/PartOnConveyor1_18' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(14.420, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_18/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10340,7 +10358,7 @@
 
 
 ### '/World/PartOnConveyor1_19' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(15.420, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_19/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10350,7 +10368,7 @@
 
 
 ### '/World/PartOnConveyor1_20' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(16.420, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_20/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10360,7 +10378,7 @@
 
 
 ### '/World/PartOnConveyor1_21' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(17.420, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_21/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10370,7 +10388,7 @@
 
 
 ### '/World/PartOnConveyor1_22' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(15.430, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_22/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10380,7 +10398,7 @@
 
 
 ### '/World/PartOnConveyor1_23' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(16.430, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_23/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10390,7 +10408,7 @@
 
 
 ### '/World/PartOnConveyor1_24' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(17.430, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_24/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10400,7 +10418,7 @@
 
 
 ### '/World/PartOnConveyor1_25' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(18.430, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_25/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10410,7 +10428,7 @@
 
 
 ### '/World/PartOnConveyor1_26' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(19.430, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_26/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10420,7 +10438,7 @@
 
 
 ### '/World/PartOnConveyor1_27' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(20.430, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_27/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10430,7 +10448,7 @@
 
 
 ### '/World/PartOnConveyor1_28' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(21.430, 5.430, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_28/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10440,7 +10458,7 @@
 
 
 ### '/World/PartOnConveyor1_29' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(3.400, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_29/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10450,7 +10468,7 @@
 
 
 ### '/World/PartOnConveyor1_30' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(4.400, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_30/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10460,7 +10478,7 @@
 
 
 ### '/World/PartOnConveyor1_31' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(5.400, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_31/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10470,7 +10488,7 @@
 
 
 ### '/World/PartOnConveyor1_32' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(6.400, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_32/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10480,7 +10498,7 @@
 
 
 ### '/World/PartOnConveyor1_33' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(7.400, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_33/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10490,7 +10508,7 @@
 
 
 ### '/World/PartOnConveyor1_34' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(8.400, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_34/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10500,7 +10518,7 @@
 
 
 ### '/World/PartOnConveyor1_35' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(9.400, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_35/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10510,7 +10528,7 @@
 
 
 ### '/World/PartOnConveyor1_36' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(7.410, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_36/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10520,7 +10538,7 @@
 
 
 ### '/World/PartOnConveyor1_37' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(8.410, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_37/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10530,7 +10548,7 @@
 
 
 ### '/World/PartOnConveyor1_38' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(9.410, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_38/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10540,7 +10558,7 @@
 
 
 ### '/World/PartOnConveyor1_39' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(10.410, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_39/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10550,7 +10568,7 @@
 
 
 ### '/World/PartOnConveyor1_40' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(11.410, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_40/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10560,7 +10578,7 @@
 
 
 ### '/World/PartOnConveyor1_41' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(12.410, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_41/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10570,7 +10588,7 @@
 
 
 ### '/World/PartOnConveyor1_42' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(13.410, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_42/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10580,7 +10598,7 @@
 
 
 ### '/World/PartOnConveyor1_43' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(11.420, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_43/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10590,7 +10608,7 @@
 
 
 ### '/World/PartOnConveyor1_44' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(12.420, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_44/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10600,7 +10618,7 @@
 
 
 ### '/World/PartOnConveyor1_45' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(13.420, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_45/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10610,7 +10628,7 @@
 
 
 ### '/World/PartOnConveyor1_46' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(14.420, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_46/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10620,7 +10638,7 @@
 
 
 ### '/World/PartOnConveyor1_47' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(15.420, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_47/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10630,7 +10648,7 @@
 
 
 ### '/World/PartOnConveyor1_48' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(16.420, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_48/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10640,7 +10658,7 @@
 
 
 ### '/World/PartOnConveyor1_49' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(17.420, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_49/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10650,7 +10668,7 @@
 
 
 ### '/World/PartOnConveyor1_50' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(15.430, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_50/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10660,7 +10678,7 @@
 
 
 ### '/World/PartOnConveyor1_51' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(16.430, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_51/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10670,7 +10688,7 @@
 
 
 ### '/World/PartOnConveyor1_52' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(17.430, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_52/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10680,7 +10698,7 @@
 
 
 ### '/World/PartOnConveyor1_53' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(18.430, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_53/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10690,7 +10708,7 @@
 
 
 ### '/World/PartOnConveyor1_54' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(19.430, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_54/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10700,7 +10718,7 @@
 
 
 ### '/World/PartOnConveyor1_55' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(20.430, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_55/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10710,7 +10728,7 @@
 
 
 ### '/World/PartOnConveyor1_56' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(21.430, 8.390, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_56/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10720,7 +10738,7 @@
 
 
 ### '/World/PartOnConveyor1_57' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(3.400, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_57/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10730,7 +10748,7 @@
 
 
 ### '/World/PartOnConveyor1_58' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(4.400, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_58/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10740,7 +10758,7 @@
 
 
 ### '/World/PartOnConveyor1_59' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(5.400, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_59/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10750,7 +10768,7 @@
 
 
 ### '/World/PartOnConveyor1_60' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(6.400, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_60/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10760,7 +10778,7 @@
 
 
 ### '/World/PartOnConveyor1_61' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(7.400, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_61/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10770,7 +10788,7 @@
 
 
 ### '/World/PartOnConveyor1_62' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(8.400, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_62/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10780,7 +10798,7 @@
 
 
 ### '/World/PartOnConveyor1_63' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(9.400, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_63/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10790,7 +10808,7 @@
 
 
 ### '/World/PartOnConveyor1_64' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(7.410, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_64/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10800,7 +10818,7 @@
 
 
 ### '/World/PartOnConveyor1_65' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(8.410, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_65/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10810,7 +10828,7 @@
 
 
 ### '/World/PartOnConveyor1_66' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(9.410, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_66/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10820,7 +10838,7 @@
 
 
 ### '/World/PartOnConveyor1_67' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(10.410, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_67/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10830,7 +10848,7 @@
 
 
 ### '/World/PartOnConveyor1_68' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(11.410, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_68/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10840,7 +10858,7 @@
 
 
 ### '/World/PartOnConveyor1_69' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(12.410, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_69/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10850,7 +10868,7 @@
 
 
 ### '/World/PartOnConveyor1_70' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(13.410, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_70/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10860,7 +10878,7 @@
 
 
 ### '/World/PartOnConveyor1_71' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(11.420, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_71/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10870,7 +10888,7 @@
 
 
 ### '/World/PartOnConveyor1_72' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(12.420, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_72/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10880,7 +10898,7 @@
 
 
 ### '/World/PartOnConveyor1_73' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(13.420, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_73/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10890,7 +10908,7 @@
 
 
 ### '/World/PartOnConveyor1_74' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(14.420, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_74/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10900,7 +10918,7 @@
 
 
 ### '/World/PartOnConveyor1_75' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(15.420, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_75/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10910,7 +10928,7 @@
 
 
 ### '/World/PartOnConveyor1_76' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(16.420, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_76/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10920,7 +10938,7 @@
 
 
 ### '/World/PartOnConveyor1_77' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(17.420, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_77/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10930,7 +10948,7 @@
 
 
 ### '/World/PartOnConveyor1_78' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(15.430, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_78/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10940,7 +10958,7 @@
 
 
 ### '/World/PartOnConveyor1_79' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(16.430, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_79/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10950,7 +10968,7 @@
 
 
 ### '/World/PartOnConveyor1_80' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(17.430, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_80/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10960,7 +10978,7 @@
 
 
 ### '/World/PartOnConveyor1_81' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(18.430, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_81/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10970,7 +10988,7 @@
 
 
 ### '/World/PartOnConveyor1_82' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(19.430, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_82/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10980,7 +10998,7 @@
 
 
 ### '/World/PartOnConveyor1_83' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(20.430, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_83/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -10990,7 +11008,7 @@
 
 
 ### '/World/PartOnConveyor1_84' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(21.430, 11.350, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_84/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11000,7 +11018,7 @@
 
 
 ### '/World/PartOnConveyor1_85' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(3.400, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_85/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11010,7 +11028,7 @@
 
 
 ### '/World/PartOnConveyor1_86' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(4.400, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_86/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11020,7 +11038,7 @@
 
 
 ### '/World/PartOnConveyor1_87' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(5.400, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_87/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11030,7 +11048,7 @@
 
 
 ### '/World/PartOnConveyor1_88' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(6.400, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_88/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11040,7 +11058,7 @@
 
 
 ### '/World/PartOnConveyor1_89' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(7.400, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_89/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11050,7 +11068,7 @@
 
 
 ### '/World/PartOnConveyor1_90' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(8.400, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_90/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11060,7 +11078,7 @@
 
 
 ### '/World/PartOnConveyor1_91' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(9.400, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_91/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11070,7 +11088,7 @@
 
 
 ### '/World/PartOnConveyor1_92' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(7.410, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_92/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11080,7 +11098,7 @@
 
 
 ### '/World/PartOnConveyor1_93' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(8.410, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_93/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11090,7 +11108,7 @@
 
 
 ### '/World/PartOnConveyor1_94' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(9.410, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_94/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11100,7 +11118,7 @@
 
 
 ### '/World/PartOnConveyor1_95' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(10.410, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_95/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11110,7 +11128,7 @@
 
 
 ### '/World/PartOnConveyor1_96' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(11.410, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_96/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11120,7 +11138,7 @@
 
 
 ### '/World/PartOnConveyor1_97' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(12.410, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_97/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11130,7 +11148,7 @@
 
 
 ### '/World/PartOnConveyor1_98' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(13.410, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_98/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11140,7 +11158,7 @@
 
 
 ### '/World/PartOnConveyor1_99' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(11.420, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_99/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11150,7 +11168,7 @@
 
 
 ### '/World/PartOnConveyor1_100' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(12.420, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_100/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11160,7 +11178,7 @@
 
 
 ### '/World/PartOnConveyor1_101' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(13.420, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_101/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11170,7 +11188,7 @@
 
 
 ### '/World/PartOnConveyor1_102' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(14.420, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_102/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11180,7 +11198,7 @@
 
 
 ### '/World/PartOnConveyor1_103' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(15.420, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_103/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11190,7 +11208,7 @@
 
 
 ### '/World/PartOnConveyor1_104' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(16.420, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_104/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11200,7 +11218,7 @@
 
 
 ### '/World/PartOnConveyor1_105' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(17.420, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_105/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11210,7 +11228,7 @@
 
 
 ### '/World/PartOnConveyor1_106' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(15.430, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_106/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11220,7 +11238,7 @@
 
 
 ### '/World/PartOnConveyor1_107' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(16.430, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_107/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11230,7 +11248,7 @@
 
 
 ### '/World/PartOnConveyor1_108' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(17.430, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_108/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11240,7 +11258,7 @@
 
 
 ### '/World/PartOnConveyor1_109' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(18.430, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_109/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11250,7 +11268,7 @@
 
 
 ### '/World/PartOnConveyor1_110' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(19.430, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_110/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11260,7 +11278,7 @@
 
 
 ### '/World/PartOnConveyor1_111' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(20.430, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_111/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11270,7 +11288,7 @@
 
 
 ### '/World/PartOnConveyor1_112' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(21.430, 14.310, 1.815)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartOnConveyor1_112/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11280,7 +11298,7 @@
 
 
 ### '/World/PartInCarton_1' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(5.500, 4.400, 0.300)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartInCarton_1/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11290,7 +11308,7 @@
 
 
 ### '/World/PartInCarton_2' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(9.510, 4.400, 0.300)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartInCarton_2/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11300,7 +11318,7 @@
 
 
 ### '/World/PartInCarton_3' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(13.520, 4.400, 0.300)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartInCarton_3/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11310,7 +11328,7 @@
 
 
 ### '/World/PartInCarton_4' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(17.530, 4.400, 0.300)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartInCarton_4/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11320,7 +11338,7 @@
 
 
 ### '/World/PartInCarton_5' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(5.500, 4.250, 0.300)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartInCarton_5/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11330,7 +11348,7 @@
 
 
 ### '/World/PartInCarton_6' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(9.510, 4.250, 0.300)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartInCarton_6/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11340,7 +11358,7 @@
 
 
 ### '/World/PartInCarton_7' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(13.520, 4.250, 0.300)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartInCarton_7/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定
@@ -11350,7 +11368,7 @@
 
 
 ### '/World/PartInCarton_8' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd
 * BBox (world): size=(28.000, 8.000, 7.000), center=(17.530, 4.250, 0.300)
 * 几何统计: Mesh=1, Vertices=2310, Faces=4628
 * 子Mesh材质: /World/PartInCarton_8/node__Size_8_Length_28_SUPPRESSION_A_Simplified/geometry_1 -> 未绑定

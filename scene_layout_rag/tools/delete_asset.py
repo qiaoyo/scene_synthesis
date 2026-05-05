@@ -1,39 +1,48 @@
-"""Delete an asset instance from the scene."""
+"""delete_asset — 从场景里删除一个实例。"""
 from __future__ import annotations
 
-from typing import Any, Dict
+from typing import Any
 
-from .base import BaseTool, ToolResult
+from ..data_models import Instance
+from .base import Tool, ToolContext, ToolResult, make_openai_tool_schema, register_tool
 
 
-class DeleteAssetTool(BaseTool):
+@register_tool
+class DeleteAssetTool(Tool):
     name = "delete_asset"
-    description = "从场景中删除一个资产实例"
+    description = "删除场景中已存在的实例；该实例支撑的子项会被解绑（不连带删除）。"
+    schema = make_openai_tool_schema(
+        name,
+        description,
+        {"instance_id": {"type": "string", "description": "目标实例 id"}},
+        required=["instance_id"],
+    )
 
-    parameters_schema = {
-        "instance_id": {
-            "type": "str",
-            "required": True,
-            "description": "要删除的资产实例 ID，如 'Conveyor_1'",
-        },
-    }
-
-    def execute(self, params: Dict[str, Any], **ctx: Any) -> ToolResult:
-        scene = ctx.get("scene")
-        if scene is None:
-            return ToolResult(ok=False, error="scene 未提供")
-
-        instance_id = params.get("instance_id", "")
-        if not instance_id:
-            return ToolResult(ok=False, error="instance_id 为必填参数")
-
-        asset = scene.get_asset(instance_id)
-        if asset is None:
-            return ToolResult(ok=False, error=f"未找到资产: {instance_id}")
-
-        removed = scene.remove_asset(instance_id)
-        return ToolResult(ok=True, result={
-            "deleted_id": removed.instance_id,
-            "asset_id": removed.asset_id,
-            "position": list(removed.position),
+    def run(self, context: ToolContext, **kwargs: Any) -> ToolResult:
+        iid = str(kwargs["instance_id"])
+        # 先记录被解绑的 children
+        unparented = list(context.scene.state.support_children.get(iid, []))
+        context.scene.delete(iid)
+        return ToolResult(ok=True, data={
+            "instance_id": iid,
+            "unparented_children": unparented,
         })
+
+    def run_test(self, context: ToolContext) -> ToolResult:
+        instance_id = "__tool_test_delete_asset"
+        if instance_id in context.scene.state.instances:
+            context.scene.delete(instance_id)
+        context.scene.add_instance(Instance(
+            instance_id=instance_id,
+            asset_type="Box",
+            asset_doc_id="box-doc",
+            usd_path="/assets/box.usdz",
+            position=[0.0, 0.0, 0.5],
+            bbox_size=[1.0, 1.0, 1.0],
+        ))
+        result = self(context, instance_id=instance_id)
+        if not result.ok:
+            return result
+        if instance_id in context.scene.state.instances:
+            return ToolResult(ok=False, error="delete_asset run_test did not remove instance")
+        return ToolResult(ok=True, data={"tested": self.name})

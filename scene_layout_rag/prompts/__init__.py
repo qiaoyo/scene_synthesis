@@ -1,25 +1,21 @@
-"""Prompt templates for the ReAct agent."""
-
 from .templates import (
-    SYSTEM_PROMPT,
-    STEP_PROMPT,
-    REFLECT_PROMPT,
-    STRATEGY_PROMPT,
-    SUPPORT_PROMPT,
-    format_step_prompt,
-    format_reflect_prompt,
-    format_strategy_prompt,
-    format_support_prompt,
+    REFLECT_SYSTEM,
+    STRATEGY_SYSTEM,
+    SUPPORT_SYSTEM,
+    THINK_SYSTEM,
+    build_reflect_prompt,
+    build_strategy_prompt,
+    build_support_prompt,
+    build_think_prompt,
 )
 
 __all__ = [
-    "SYSTEM_PROMPT",
-    "STEP_PROMPT",
-    "REFLECT_PROMPT",
-    "STRATEGY_PROMPT",
-    "SUPPORT_PROMPT",
-    "format_step_prompt",
-    "format_reflect_prompt",
-    "format_strategy_prompt",
-    "format_support_prompt",
+    "THINK_SYSTEM",
+    "REFLECT_SYSTEM",
+    "SUPPORT_SYSTEM",
+    "STRATEGY_SYSTEM",
+    "build_think_prompt",
+    "build_reflect_prompt",
+    "build_support_prompt",
+    "build_strategy_prompt",
 ]

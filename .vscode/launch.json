@@ -4,8 +4,8 @@
             "name": "Python Debugger: Python File",
             "type": "debugpy",
             "request": "launch",
-            "module": "scene_layout_rag.cli",
-            "args": ["Create a assemble scenario", "--react", "--max-steps","100"],
+            "module": "scene_layout_rag.test.test_query_scene_tool",
+            "args": [""],
             "env": {
         "http_proxy": "http://127.0.0.1:7897",
         "https_proxy": "http://127.0.0.1:7897",

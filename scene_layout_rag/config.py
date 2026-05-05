@@ -1,6 +1,7 @@
 """Configuration objects for the scene layout RAG stack."""
 from __future__ import annotations
 
+import os
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import List, Optional
@@ -68,10 +69,10 @@ class AssetPaths:
 @dataclass
 class ModelConfig:
     """Holds model related knobs for embeddings, LLMs, and layout heads."""
-    llm_backend: str = "api"  # api, local, mock
+    llm_backend: str = "local"  # 仅实现了 local（transformers）；其它值会抛错
     embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2"
     embedding_batch_size: int = 32
-    llm_name_or_path: str = "mistralai/Mistral-7B-Instruct-v0.3"
+    llm_name_or_path: str = "mistralai/Mistral-7B-Instruct-v0.2"
     max_new_tokens: int = 512
     temperature: float = 0.2
     device: str = "cuda:1"
@@ -80,10 +81,11 @@ class ModelConfig:
     gradient_checkpointing: bool = True
     lora_rank: int = 32
     lora_alpha: int = 64
-    # Remote API support (OpenAI-compatible endpoint)
-    llm_api_url: str = "https://openrouter.ai/api/v1/chat/completions"
-    llm_api_key: str = "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"
-    llm_api_model: str = "openrouter/free"
+    # OpenAI SDK / Responses API support
+    llm_api_base_url: str = "https://openrouter.ai/api/v1"
+    #llm_api_key: str = os.environ.get("OPENROUTER_API_KEY", "")
+    llm_api_key: str = "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"
+    llm_api_model: str = "inclusionai/ling-2.6-1t:free"
 
 
 @dataclass
@@ -109,13 +111,18 @@ class ProjectConfig:
     model: ModelConfig = field(default_factory=ModelConfig)
     agent: AgentConfig = field(default_factory=AgentConfig)
     index_dir: Path = _DEFAULT_PROJECT_ROOT / "data" / "indexes"
+    output_dir: Path = _DEFAULT_PROJECT_ROOT / "outputs"
     chunk_size: int = 512
     chunk_overlap: int = 64
     #language: str = "zh"
     language: str = "en"
+    # 资产索引：始终写 corpus.jsonl；默认同时构建 FAISS 向量索引（依赖缺失会自动回退）
+    enable_faiss: bool = True
+    retrieval_top_k: int = 5
 
     def ensure_directories(self) -> None:
         self.index_dir.mkdir(parents=True, exist_ok=True)
+        self.output_dir.mkdir(parents=True, exist_ok=True)
 
 
 __all__ = ["AssetPaths", "ModelConfig", "AgentConfig", "ProjectConfig"]

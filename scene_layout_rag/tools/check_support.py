@@ -1,95 +1,69 @@
-"""Check support relationships for an asset."""
+"""check_support — 几何上验证某条支撑关系是否成立（不修改场景）。"""
 from __future__ import annotations
 
-from typing import Any, Dict, List
+from typing import Any
 
-from .base import BaseTool, ToolResult
-
-
-def _xy_overlap_ratio(child_pos, child_bbox, parent_pos, parent_bbox) -> float:
-    """Return the fraction of the child's bottom area that overlaps the parent's top area."""
-    c_xmin = child_pos[0] - child_bbox[0] / 2.0
-    c_xmax = child_pos[0] + child_bbox[0] / 2.0
-    c_ymin = child_pos[1] - child_bbox[1] / 2.0
-    c_ymax = child_pos[1] + child_bbox[1] / 2.0
-
-    p_xmin = parent_pos[0] - parent_bbox[0] / 2.0
-    p_xmax = parent_pos[0] + parent_bbox[0] / 2.0
-    p_ymin = parent_pos[1] - parent_bbox[1] / 2.0
-    p_ymax = parent_pos[1] + parent_bbox[1] / 2.0
-
-    ox = max(0.0, min(c_xmax, p_xmax) - max(c_xmin, p_xmin))
-    oy = max(0.0, min(c_ymax, p_ymax) - max(c_ymin, p_ymin))
-    child_area = child_bbox[0] * child_bbox[1]
-    if child_area <= 0:
-        return 0.0
-    return (ox * oy) / child_area
+from ..data_models import Instance
+from ..validators import check_support_geometry, evaluate_support_state
+from .base import Tool, ToolContext, ToolResult, make_openai_tool_schema, register_tool
 
 
-def find_support_candidates(instance_id: str, scene: Any) -> List[Dict[str, Any]]:
-    """Find assets that could geometrically support *instance_id*."""
-    child = scene.get_asset(instance_id)
-    if child is None:
-        return []
-
-    child_bottom_z = child.position[2] - child.bbox[2] / 2.0
-    candidates = []
-
-    for a in scene.assets.values():
-        if a.instance_id == instance_id:
-            continue
-        parent_top_z = a.position[2] + a.bbox[2] / 2.0
-        z_gap = abs(child_bottom_z - parent_top_z)
-        if z_gap > 0.2:
-            continue
-        ratio = _xy_overlap_ratio(child.position, child.bbox, a.position, a.bbox)
-        if ratio > 0.05:
-            candidates.append({
-                "instance_id": a.instance_id,
-                "asset_id": a.asset_id,
-                "top_z": round(parent_top_z, 3),
-                "z_gap": round(z_gap, 3),
-                "xy_overlap_ratio": round(ratio, 3),
-            })
-
-    candidates.sort(key=lambda c: (-c["xy_overlap_ratio"], c["z_gap"]))
-    return candidates
-
-
-class CheckSupportTool(BaseTool):
+@register_tool
+class CheckSupportTool(Tool):
     name = "check_support"
-    description = "检查一个资产的支撑关系（哪些物体可以支撑它）"
-
-    parameters_schema = {
-        "instance_id": {
-            "type": "str",
-            "required": True,
-            "description": "要检查支撑关系的资产实例 ID",
+    description = "检查支撑关系：可指定 child/parent 单独验证；不传则评估当前所有 set_support 关系。"
+    schema = make_openai_tool_schema(
+        name,
+        description,
+        {
+            "child_id": {"type": "string", "description": "child 实例 id"},
+            "parent_id": {"type": "string", "description": "parent 实例 id（与 child_id 同时给出）"},
         },
-    }
+    )
 
-    @property
-    def modifies_scene(self) -> bool:
-        return False
+    def run(self, context: ToolContext, **kwargs: Any) -> ToolResult:
+        child_id = kwargs.get("child_id")
+        parent_id = kwargs.get("parent_id")
+        if child_id and parent_id:
+            child = context.scene.get(child_id)
+            parent = context.scene.get(parent_id)
+            geo = check_support_geometry(child, parent)
+            return ToolResult(ok=True, data={
+                "child": child_id,
+                "parent": parent_id,
+                **geo,
+            })
+        if child_id or parent_id:
+            return ToolResult(ok=False, error="child_id 与 parent_id 必须同时给出，或都不给。")
+        return ToolResult(ok=True, data=evaluate_support_state(context.scene.state))
 
-    def execute(self, params: Dict[str, Any], **ctx: Any) -> ToolResult:
-        scene = ctx.get("scene")
-        if scene is None:
-            return ToolResult(ok=False, error="scene 未提供")
-
-        instance_id = params.get("instance_id", "")
-        if not instance_id:
-            return ToolResult(ok=False, error="instance_id 为必填参数")
-
-        asset = scene.get_asset(instance_id)
-        if asset is None:
-            return ToolResult(ok=False, error=f"未找到资产: {instance_id}")
-
-        candidates = find_support_candidates(instance_id, scene)
-        current_parent = asset.support_parent
-
-        return ToolResult(ok=True, result={
-            "instance_id": instance_id,
-            "current_parent": current_parent,
-            "candidates": candidates,
-        })
+    def run_test(self, context: ToolContext) -> ToolResult:
+        parent_id = "__tool_test_check_support_parent"
+        child_id = "__tool_test_check_support_child"
+        for instance_id in (child_id, parent_id):
+            if instance_id in context.scene.state.instances:
+                context.scene.delete(instance_id)
+        context.scene.add_instance(Instance(
+            instance_id=parent_id,
+            asset_type="Workbench",
+            asset_doc_id="workbench-doc",
+            usd_path="/assets/workbench.usdz",
+            position=[0.0, 0.0, 0.5],
+            bbox_size=[2.0, 2.0, 1.0],
+        ))
+        context.scene.add_instance(Instance(
+            instance_id=child_id,
+            asset_type="Box",
+            asset_doc_id="box-doc",
+            usd_path="/assets/box.usdz",
+            position=[0.0, 0.0, 1.5],
+            bbox_size=[1.0, 1.0, 1.0],
+        ))
+        result = self(context, child_id=child_id, parent_id=parent_id)
+        if not result.ok:
+            return result
+        if result.data.get("ok") is not True:
+            return ToolResult(ok=False, error="check_support run_test expected valid support")
+        context.scene.delete(child_id)
+        context.scene.delete(parent_id)
+        return ToolResult(ok=True, data={"tested": self.name})

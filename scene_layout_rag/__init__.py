@@ -1,12 +1,27 @@
-"""Scene layout RAG package."""
+"""Scene-layout RAG + ReAct agent package."""
+from __future__ import annotations
 
-from .config import AssetPaths, ModelConfig, AgentConfig, ProjectConfig
-from .data_models import AgentTrace
+from .config import AgentConfig, AssetPaths, ModelConfig, ProjectConfig
+from .data_models import (
+    Action,
+    AssetDocument,
+    Instance,
+    Lesson,
+    Observation,
+    Reflection,
+    SceneState,
+)
 
 __all__ = [
+    "AgentConfig",
     "AssetPaths",
     "ModelConfig",
-    "AgentConfig",
     "ProjectConfig",
-    "AgentTrace",
+    "AssetDocument",
+    "Instance",
+    "Action",
+    "Observation",
+    "Reflection",
+    "Lesson",
+    "SceneState",
 ]

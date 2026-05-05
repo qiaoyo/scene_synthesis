@@ -6,8 +6,28 @@
 *  **单位与坐标系 (Units & Coordinate System):**
    *   **米(Meters Per Unit):**1.0
    *   **Up Axis:**Z
+*  **场景描述(Scene Describe):**  该场景展示了一个极具复杂度和高度集成化的物流分拣与仓储中转中心，其空间格局呈现出多层次、立体化的网格布局特征。车间内部空间被庞大的蓝色钢制货架与输送系统占据，墙面为简约的浅灰色工业板材，地面铺设了具有灰色、红色与黑色斑驳纹理的高强度工业地毯，不仅具有吸音减震的作用，也通过色彩暗示了不同的功能作业区。整个空间被精准划分为高位输送区、自动化立体缓存区以及机器人协作码放区，体现了极高的空间利用效率和现代物流工程的规划逻辑。在设备识别与排布方面，该场景的核心是一套覆盖全场的多层蓝色滚筒输送网络。这套网络由数以百计的银灰色金属滚筒组成，框架采用了耐磨的蓝色喷涂钢件，具备多级垂直支撑结构。输送带分为主干道与众多的垂直分支，每一段输送线上都均匀分布着大量灰色条状工件。这种错落有致的交叉布局模式，允许物料在不同高度、不同方向之间进行快速切换与缓存。输送机框架下方还隐蔽地布置了成排的白色线缆管路，为密集的传感器和驱动电机提供电力与信号支持。在系统的边缘地带，该场景配置了一个由多台高性能工业机器人组成的自动化作业阵列。图中识别出至少四台米白色涂装的大型六轴工业机器人，它们采取线性并列排布。每台机器人均固定在厚实的圆形基座上，机械臂伸展跨度大，末端配备了可多向转动的精密抓手。这些机器人正处于协同作业状态，负责将输送线终端流出的工件精准抓取并码放到下方的移动载具上。动态搬运设备方面，该场景中出现了多台黄色顶部的自动引导运输车（AGV）。这些AGV身形小巧，分布在机器人作业区的正下方通道中。每台AGV顶部都精准地承载着一个深蓝色的塑料物流框，与上方的机器人作业高度完美衔接。AGV的数量与机器人形成了灵活的配比关系，通过集群调度实现物料从机器人码放点到后续仓储区的柔性流转。从整体规划结构分析，该场景是一个典型的“立体化分拣+平面化码放”的集成系统。设备间的排布关系呈现出极强的三维空间耦合：顶部的网格状输送系统负责宏观的物料分拨与流量控制，侧向的机器人阵列执行末端的精细化操作，底部的AGV集群则完成了最后的水平搬运闭环。这种纵向延伸的规划方式，极大地压缩了地面作业面积，同时也通过多机协作（机器人+AGV）降低了人工干预的需求。整个车间规划展现了数字化工厂在处理海量、高频物流任务时的极致效率与精密协同逻辑，是当代智慧物流中心的高标准缩影。
+* **设备数量(Device Number):**
+  * **Scene: 1**
+  * **IndustrialRobot: 4**
+  * **Workbench: 0**
+  * **Conveyor: 16**
+  * **AGV: 4**
+  * **Forklift: 0**
+  * **Box: 4**
+  * **Rack: 0**
+  * **Pallet: 0**
+  * **Part: 152**
+  * **Decoration: 0**
 
 ## 2.场景对象层级(Scene Hierarchy)
+*   Render (Prim)
+    *   OmniverseKit (Prim)
+        *   HydraTextures (Prim)
+            *   omni_kit_widget_viewport_ViewportTexture_0 (RenderProduct)
+    *   OmniverseGlobalRenderSettings (RenderSettings)
+    *   Vars (Prim)
+        *   LdrColor (RenderVar)
 *   World (Prim)
     *   DomeLight (DomeLight)
     *   SunLight (DistantLight)
@@ -9132,8 +9152,6 @@
         *   node__Size_8_Length_28_SUPPRESSION_A_Simplified (Xform)
             *   geometry_1 (Mesh)
     *   PartOnConveyor1_4 (Xform)
-        *   node__Size_8_Length_28_SUPPRESSION_A_Simplified (Xform)
-            *   geometry_1 (Mesh)
     *   PartOnConveyor1_5 (Xform)
         *   node__Size_8_Length_28_SUPPRESSION_A_Simplified (Xform)
             *   geometry_1 (Mesh)
@@ -9866,7 +9884,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_1
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(5.100, 6.200, 1.815)'
@@ -9879,7 +9897,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_2
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(5.100, 7.400, 1.815)'
@@ -9892,7 +9910,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_3
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(9.110, 6.200, 1.815)'
@@ -9905,7 +9923,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_4
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(9.110, 7.400, 1.815)'
@@ -9918,7 +9936,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_5
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(13.120, 6.200, 1.815)'
@@ -9931,7 +9949,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_6
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(13.120, 7.400, 1.815)'
@@ -9944,7 +9962,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_7
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(17.130, 6.200, 1.815)'
@@ -9957,7 +9975,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_8
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(17.130, 7.400, 1.815)'
@@ -9970,7 +9988,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_9
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(5.100, 9.160, 1.815)'
@@ -9983,7 +10001,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_10
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(5.100, 10.360, 1.815)'
@@ -9996,7 +10014,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_11
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(9.110, 9.160, 1.815)'
@@ -10009,7 +10027,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_12
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(9.110, 10.360, 1.815)'
@@ -10022,7 +10040,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_13
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(13.120, 9.160, 1.815)'
@@ -10035,7 +10053,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_14
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(13.120, 10.360, 1.815)'
@@ -10048,7 +10066,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_15
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(17.130, 9.160, 1.815)'
@@ -10061,7 +10079,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_16
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(17.130, 10.360, 1.815)'
@@ -10074,7 +10092,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_17
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(5.100, 12.120, 1.815)'
@@ -10087,7 +10105,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_18
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(5.100, 13.320, 1.815)'
@@ -10100,7 +10118,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_19
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(9.110, 12.120, 1.815)'
@@ -10113,7 +10131,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_20
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(9.110, 13.320, 1.815)'
@@ -10126,7 +10144,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_21
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(13.120, 12.120, 1.815)'
@@ -10139,7 +10157,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_22
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(13.120, 13.320, 1.815)'
@@ -10152,7 +10170,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_23
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(17.130, 12.120, 1.815)'
@@ -10165,7 +10183,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_24
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(17.130, 13.320, 1.815)'
@@ -10178,7 +10196,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_25
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(5.100, 15.080, 1.815)'
@@ -10191,7 +10209,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_26
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(5.100, 16.280, 1.815)'
@@ -10204,7 +10222,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_27
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(9.110, 15.080, 1.815)'
@@ -10217,7 +10235,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_28
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(9.110, 16.280, 1.815)'
@@ -10230,7 +10248,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_29
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(13.120, 15.080, 1.815)'
@@ -10243,7 +10261,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_30
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(13.120, 16.280, 1.815)'
@@ -10256,7 +10274,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_31
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(17.130, 15.080, 1.815)'
@@ -10269,7 +10287,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor_32
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(17.130, 16.280, 1.815)'
@@ -10282,7 +10300,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_1
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(3.400, 5.430, 1.815)'
@@ -10295,7 +10313,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_2
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(4.400, 5.430, 1.815)'
@@ -10308,7 +10326,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_3
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(5.400, 5.430, 1.815)'
@@ -10320,11 +10338,15 @@
 ### /World/PartOnConveyor1_4
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_4
 *  **Prim类型 (Prim Type):**Xform
+*  **变换信息 (Transform):**
+   *   **平移 (Translate):**'(0.000, 0.000, 0.000)'
+   *   **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+   *   **缩放 (Scale):**'(1.000, 1.000, 1.000)'
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/partobj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(28.000, 8.000, 7.000)'
-   *   Center: '(6.400, 5.430, 1.815)'
+   *   Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+   *   Center: '(0.000, 0.000, 0.000)'
 
 
 ---
@@ -10334,7 +10356,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_5
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(7.400, 5.430, 1.815)'
@@ -10347,7 +10369,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_6
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(8.400, 5.430, 1.815)'
@@ -10360,7 +10382,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_7
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(9.400, 5.430, 1.815)'
@@ -10373,7 +10395,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_8
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(7.410, 5.430, 1.815)'
@@ -10386,7 +10408,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_9
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(8.410, 5.430, 1.815)'
@@ -10399,7 +10421,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_10
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(9.410, 5.430, 1.815)'
@@ -10412,7 +10434,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_11
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(10.410, 5.430, 1.815)'
@@ -10425,7 +10447,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_12
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(11.410, 5.430, 1.815)'
@@ -10438,7 +10460,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_13
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(12.410, 5.430, 1.815)'
@@ -10451,7 +10473,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_14
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(13.410, 5.430, 1.815)'
@@ -10464,7 +10486,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_15
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(11.420, 5.430, 1.815)'
@@ -10477,7 +10499,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_16
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(12.420, 5.430, 1.815)'
@@ -10490,7 +10512,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_17
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(13.420, 5.430, 1.815)'
@@ -10503,7 +10525,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_18
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(14.420, 5.430, 1.815)'
@@ -10516,7 +10538,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_19
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(15.420, 5.430, 1.815)'
@@ -10529,7 +10551,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_20
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(16.420, 5.430, 1.815)'
@@ -10542,7 +10564,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_21
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(17.420, 5.430, 1.815)'
@@ -10555,7 +10577,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_22
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(15.430, 5.430, 1.815)'
@@ -10568,7 +10590,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_23
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(16.430, 5.430, 1.815)'
@@ -10581,7 +10603,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_24
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(17.430, 5.430, 1.815)'
@@ -10594,7 +10616,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_25
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(18.430, 5.430, 1.815)'
@@ -10607,7 +10629,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_26
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(19.430, 5.430, 1.815)'
@@ -10620,7 +10642,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_27
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(20.430, 5.430, 1.815)'
@@ -10633,7 +10655,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_28
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(21.430, 5.430, 1.815)'
@@ -10646,7 +10668,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_29
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(3.400, 8.390, 1.815)'
@@ -10659,7 +10681,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_30
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(4.400, 8.390, 1.815)'
@@ -10672,7 +10694,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_31
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(5.400, 8.390, 1.815)'
@@ -10685,7 +10707,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_32
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(6.400, 8.390, 1.815)'
@@ -10698,7 +10720,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_33
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(7.400, 8.390, 1.815)'
@@ -10711,7 +10733,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_34
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(8.400, 8.390, 1.815)'
@@ -10724,7 +10746,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_35
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(9.400, 8.390, 1.815)'
@@ -10737,7 +10759,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_36
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(7.410, 8.390, 1.815)'
@@ -10750,7 +10772,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_37
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(8.410, 8.390, 1.815)'
@@ -10763,7 +10785,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_38
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(9.410, 8.390, 1.815)'
@@ -10776,7 +10798,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_39
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(10.410, 8.390, 1.815)'
@@ -10789,7 +10811,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_40
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(11.410, 8.390, 1.815)'
@@ -10802,7 +10824,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_41
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(12.410, 8.390, 1.815)'
@@ -10815,7 +10837,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_42
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(13.410, 8.390, 1.815)'
@@ -10828,7 +10850,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_43
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(11.420, 8.390, 1.815)'
@@ -10841,7 +10863,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_44
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(12.420, 8.390, 1.815)'
@@ -10854,7 +10876,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_45
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(13.420, 8.390, 1.815)'
@@ -10867,7 +10889,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_46
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(14.420, 8.390, 1.815)'
@@ -10880,7 +10902,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_47
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(15.420, 8.390, 1.815)'
@@ -10893,7 +10915,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_48
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(16.420, 8.390, 1.815)'
@@ -10906,7 +10928,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_49
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(17.420, 8.390, 1.815)'
@@ -10919,7 +10941,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_50
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(15.430, 8.390, 1.815)'
@@ -10932,7 +10954,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_51
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(16.430, 8.390, 1.815)'
@@ -10945,7 +10967,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_52
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(17.430, 8.390, 1.815)'
@@ -10958,7 +10980,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_53
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(18.430, 8.390, 1.815)'
@@ -10971,7 +10993,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_54
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(19.430, 8.390, 1.815)'
@@ -10984,7 +11006,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_55
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(20.430, 8.390, 1.815)'
@@ -10997,7 +11019,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_56
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(21.430, 8.390, 1.815)'
@@ -11010,7 +11032,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_57
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(3.400, 11.350, 1.815)'
@@ -11023,7 +11045,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_58
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(4.400, 11.350, 1.815)'
@@ -11036,7 +11058,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_59
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(5.400, 11.350, 1.815)'
@@ -11049,7 +11071,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_60
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(6.400, 11.350, 1.815)'
@@ -11062,7 +11084,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_61
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(7.400, 11.350, 1.815)'
@@ -11075,7 +11097,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_62
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(8.400, 11.350, 1.815)'
@@ -11088,7 +11110,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_63
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(9.400, 11.350, 1.815)'
@@ -11101,7 +11123,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_64
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(7.410, 11.350, 1.815)'
@@ -11114,7 +11136,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_65
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(8.410, 11.350, 1.815)'
@@ -11127,7 +11149,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_66
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(9.410, 11.350, 1.815)'
@@ -11140,7 +11162,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_67
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(10.410, 11.350, 1.815)'
@@ -11153,7 +11175,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_68
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(11.410, 11.350, 1.815)'
@@ -11166,7 +11188,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_69
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(12.410, 11.350, 1.815)'
@@ -11179,7 +11201,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_70
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(13.410, 11.350, 1.815)'
@@ -11192,7 +11214,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_71
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(11.420, 11.350, 1.815)'
@@ -11205,7 +11227,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_72
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(12.420, 11.350, 1.815)'
@@ -11218,7 +11240,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_73
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(13.420, 11.350, 1.815)'
@@ -11231,7 +11253,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_74
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(14.420, 11.350, 1.815)'
@@ -11244,7 +11266,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_75
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(15.420, 11.350, 1.815)'
@@ -11257,7 +11279,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_76
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(16.420, 11.350, 1.815)'
@@ -11270,7 +11292,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_77
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(17.420, 11.350, 1.815)'
@@ -11283,7 +11305,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_78
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(15.430, 11.350, 1.815)'
@@ -11296,7 +11318,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_79
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(16.430, 11.350, 1.815)'
@@ -11309,7 +11331,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_80
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(17.430, 11.350, 1.815)'
@@ -11322,7 +11344,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_81
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(18.430, 11.350, 1.815)'
@@ -11335,7 +11357,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_82
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(19.430, 11.350, 1.815)'
@@ -11348,7 +11370,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_83
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(20.430, 11.350, 1.815)'
@@ -11361,7 +11383,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_84
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(21.430, 11.350, 1.815)'
@@ -11374,7 +11396,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_85
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(3.400, 14.310, 1.815)'
@@ -11387,7 +11409,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_86
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(4.400, 14.310, 1.815)'
@@ -11400,7 +11422,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_87
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(5.400, 14.310, 1.815)'
@@ -11413,7 +11435,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_88
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(6.400, 14.310, 1.815)'
@@ -11426,7 +11448,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_89
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(7.400, 14.310, 1.815)'
@@ -11439,7 +11461,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_90
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(8.400, 14.310, 1.815)'
@@ -11452,7 +11474,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_91
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(9.400, 14.310, 1.815)'
@@ -11465,7 +11487,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_92
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(7.410, 14.310, 1.815)'
@@ -11478,7 +11500,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_93
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(8.410, 14.310, 1.815)'
@@ -11491,7 +11513,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_94
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(9.410, 14.310, 1.815)'
@@ -11504,7 +11526,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_95
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(10.410, 14.310, 1.815)'
@@ -11517,7 +11539,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_96
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(11.410, 14.310, 1.815)'
@@ -11530,7 +11552,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_97
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(12.410, 14.310, 1.815)'
@@ -11543,7 +11565,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_98
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(13.410, 14.310, 1.815)'
@@ -11556,7 +11578,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_99
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(11.420, 14.310, 1.815)'
@@ -11569,7 +11591,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_100
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(12.420, 14.310, 1.815)'
@@ -11582,7 +11604,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_101
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(13.420, 14.310, 1.815)'
@@ -11595,7 +11617,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_102
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(14.420, 14.310, 1.815)'
@@ -11608,7 +11630,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_103
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(15.420, 14.310, 1.815)'
@@ -11621,7 +11643,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_104
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(16.420, 14.310, 1.815)'
@@ -11634,7 +11656,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_105
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(17.420, 14.310, 1.815)'
@@ -11647,7 +11669,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_106
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(15.430, 14.310, 1.815)'
@@ -11660,7 +11682,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_107
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(16.430, 14.310, 1.815)'
@@ -11673,7 +11695,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_108
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(17.430, 14.310, 1.815)'
@@ -11686,7 +11708,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_109
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(18.430, 14.310, 1.815)'
@@ -11699,7 +11721,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_110
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(19.430, 14.310, 1.815)'
@@ -11712,7 +11734,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_111
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(20.430, 14.310, 1.815)'
@@ -11725,7 +11747,7 @@
 *  **Prim路径 (Prim Path):**/World/PartOnConveyor1_112
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(21.430, 14.310, 1.815)'
@@ -11738,7 +11760,7 @@
 *  **Prim路径 (Prim Path):**/World/PartInCarton_1
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(5.500, 4.400, 0.300)'
@@ -11751,7 +11773,7 @@
 *  **Prim路径 (Prim Path):**/World/PartInCarton_2
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(9.510, 4.400, 0.300)'
@@ -11764,7 +11786,7 @@
 *  **Prim路径 (Prim Path):**/World/PartInCarton_3
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(13.520, 4.400, 0.300)'
@@ -11777,7 +11799,7 @@
 *  **Prim路径 (Prim Path):**/World/PartInCarton_4
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(17.530, 4.400, 0.300)'
@@ -11790,7 +11812,7 @@
 *  **Prim路径 (Prim Path):**/World/PartInCarton_5
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(5.500, 4.250, 0.300)'
@@ -11803,7 +11825,7 @@
 *  **Prim路径 (Prim Path):**/World/PartInCarton_6
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(9.510, 4.250, 0.300)'
@@ -11816,7 +11838,7 @@
 *  **Prim路径 (Prim Path):**/World/PartInCarton_7
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(13.520, 4.250, 0.300)'
@@ -11829,7 +11851,7 @@
 *  **Prim路径 (Prim Path):**/World/PartInCarton_8
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
+       *   [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(17.530, 4.250, 0.300)'

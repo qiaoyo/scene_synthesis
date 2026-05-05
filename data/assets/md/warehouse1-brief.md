@@ -6,6 +6,19 @@
 *  **单位与坐标系 (Units & Coordinate System):**
    *   **米(Meters Per Unit):**1.0
    *   **Up Axis:**Z
+*  **场景描述(Scene Describe):**  该场景是高密度的自动化零部件仓储分拣中心。空间格局由矩阵排列的蓝色双层货架划定，底层存储蓝色周转箱，顶层摆放料盒，极大提升了垂直空间利用率。核心设备为多台移动协作机器人（白色AGV底座结合六轴机械臂），它们在巷道间穿梭执行“手脚协同”的物料抓取任务。此外，该场景远端配有黄色叉车辅助入库，地面铺设高光地坪以支持视觉导航。整体规划严谨，通过机器人集群与模块化货架的有机结合，实现了高效的无人化拣选，展现出极强的秩序感与现代工业自动化作业逻辑。
+* **设备数量(Device Number):**
+  * **Scene: 1**
+  * **IndustrialRobot: 6**
+  * **Workbench: 0**
+  * **Conveyor: 0**
+  * **AGV: 0**
+  * **Forklift: 2**
+  * **Box: 278**
+  * **Rack: 30**
+  * **Pallet: 0**
+  * **Part: 180**
+  * **Decoration: 0**
 
 ## 2.场景对象层级(Scene Hierarchy)
 *   World (Prim)
@@ -8719,7 +8732,7 @@
 
 
 ### '/World/PartA_1' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-23.500, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_1/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8729,7 +8742,7 @@
 
 
 ### '/World/PartA_2' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-22.940, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_2/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8739,7 +8752,7 @@
 
 
 ### '/World/PartA_3' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-22.380, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_3/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8749,7 +8762,7 @@
 
 
 ### '/World/PartA_4' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-21.820, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_4/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8759,7 +8772,7 @@
 
 
 ### '/World/PartA_5' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-21.260, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_5/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8769,7 +8782,7 @@
 
 
 ### '/World/PartA_6' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-20.700, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_6/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8779,7 +8792,7 @@
 
 
 ### '/World/PartA_7' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-19.400, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_7/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8789,7 +8802,7 @@
 
 
 ### '/World/PartA_8' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-18.840, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_8/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8799,7 +8812,7 @@
 
 
 ### '/World/PartA_9' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-18.280, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_9/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8809,7 +8822,7 @@
 
 
 ### '/World/PartA_10' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-17.720, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_10/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8819,7 +8832,7 @@
 
 
 ### '/World/PartA_11' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-17.160, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_11/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8829,7 +8842,7 @@
 
 
 ### '/World/PartA_12' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-16.600, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_12/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8839,7 +8852,7 @@
 
 
 ### '/World/PartA_13' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-15.300, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_13/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8849,7 +8862,7 @@
 
 
 ### '/World/PartA_14' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-14.740, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_14/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8859,7 +8872,7 @@
 
 
 ### '/World/PartA_15' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-14.180, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_15/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8869,7 +8882,7 @@
 
 
 ### '/World/PartA_16' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-13.620, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_16/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8879,7 +8892,7 @@
 
 
 ### '/World/PartA_17' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-13.060, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_17/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8889,7 +8902,7 @@
 
 
 ### '/World/PartA_18' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-12.500, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_18/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8899,7 +8912,7 @@
 
 
 ### '/World/PartA_19' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-11.200, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_19/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8909,7 +8922,7 @@
 
 
 ### '/World/PartA_20' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-10.640, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_20/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8919,7 +8932,7 @@
 
 
 ### '/World/PartA_21' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-10.080, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_21/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8929,7 +8942,7 @@
 
 
 ### '/World/PartA_22' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-9.520, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_22/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8939,7 +8952,7 @@
 
 
 ### '/World/PartA_23' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-8.960, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_23/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8949,7 +8962,7 @@
 
 
 ### '/World/PartA_24' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-8.400, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_24/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8959,7 +8972,7 @@
 
 
 ### '/World/PartA_25' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-7.100, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_25/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8969,7 +8982,7 @@
 
 
 ### '/World/PartA_26' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-6.540, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_26/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8979,7 +8992,7 @@
 
 
 ### '/World/PartA_27' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-5.980, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_27/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8989,7 +9002,7 @@
 
 
 ### '/World/PartA_28' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-5.420, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_28/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -8999,7 +9012,7 @@
 
 
 ### '/World/PartA_29' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-4.860, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_29/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9009,7 +9022,7 @@
 
 
 ### '/World/PartA_30' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-4.300, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_30/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9019,7 +9032,7 @@
 
 
 ### '/World/PartA_31' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-3.000, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_31/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9029,7 +9042,7 @@
 
 
 ### '/World/PartA_32' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-2.440, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_32/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9039,7 +9052,7 @@
 
 
 ### '/World/PartA_33' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-1.880, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_33/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9049,7 +9062,7 @@
 
 
 ### '/World/PartA_34' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-1.320, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_34/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9059,7 +9072,7 @@
 
 
 ### '/World/PartA_35' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-0.760, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_35/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9069,7 +9082,7 @@
 
 
 ### '/World/PartA_36' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-0.200, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_36/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9079,7 +9092,7 @@
 
 
 ### '/World/PartA_37' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(1.100, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_37/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9089,7 +9102,7 @@
 
 
 ### '/World/PartA_38' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(1.660, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_38/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9099,7 +9112,7 @@
 
 
 ### '/World/PartA_39' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(2.220, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_39/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9109,7 +9122,7 @@
 
 
 ### '/World/PartA_40' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(2.780, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_40/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9119,7 +9132,7 @@
 
 
 ### '/World/PartA_41' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(3.340, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_41/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9129,7 +9142,7 @@
 
 
 ### '/World/PartA_42' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(3.900, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_42/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9139,7 +9152,7 @@
 
 
 ### '/World/PartA_43' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(5.200, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_43/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9149,7 +9162,7 @@
 
 
 ### '/World/PartA_44' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(5.760, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_44/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9159,7 +9172,7 @@
 
 
 ### '/World/PartA_45' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(6.320, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_45/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9169,7 +9182,7 @@
 
 
 ### '/World/PartA_46' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(6.880, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_46/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9179,7 +9192,7 @@
 
 
 ### '/World/PartA_47' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(7.440, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_47/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9189,7 +9202,7 @@
 
 
 ### '/World/PartA_48' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(8.000, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_48/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9199,7 +9212,7 @@
 
 
 ### '/World/PartA_49' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(9.300, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_49/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9209,7 +9222,7 @@
 
 
 ### '/World/PartA_50' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(9.860, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_50/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9219,7 +9232,7 @@
 
 
 ### '/World/PartA_51' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(10.420, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_51/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9229,7 +9242,7 @@
 
 
 ### '/World/PartA_52' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(10.980, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_52/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9239,7 +9252,7 @@
 
 
 ### '/World/PartA_53' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(11.540, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_53/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9249,7 +9262,7 @@
 
 
 ### '/World/PartA_54' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(12.100, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_54/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9259,7 +9272,7 @@
 
 
 ### '/World/PartA_55' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(13.400, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_55/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9269,7 +9282,7 @@
 
 
 ### '/World/PartA_56' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(13.960, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_56/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9279,7 +9292,7 @@
 
 
 ### '/World/PartA_57' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(14.520, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_57/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9289,7 +9302,7 @@
 
 
 ### '/World/PartA_58' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(15.080, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_58/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9299,7 +9312,7 @@
 
 
 ### '/World/PartA_59' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(15.640, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_59/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9309,7 +9322,7 @@
 
 
 ### '/World/PartA_60' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(16.200, -6.870, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_60/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9319,7 +9332,7 @@
 
 
 ### '/World/PartA_61' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-23.500, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_61/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9329,7 +9342,7 @@
 
 
 ### '/World/PartA_62' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-22.940, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_62/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9339,7 +9352,7 @@
 
 
 ### '/World/PartA_63' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-22.380, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_63/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9349,7 +9362,7 @@
 
 
 ### '/World/PartA_64' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-21.820, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_64/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9359,7 +9372,7 @@
 
 
 ### '/World/PartA_65' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-21.260, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_65/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9369,7 +9382,7 @@
 
 
 ### '/World/PartA_66' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-20.700, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_66/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9379,7 +9392,7 @@
 
 
 ### '/World/PartA_67' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-19.400, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_67/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9389,7 +9402,7 @@
 
 
 ### '/World/PartA_68' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-18.840, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_68/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9399,7 +9412,7 @@
 
 
 ### '/World/PartA_69' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-18.280, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_69/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9409,7 +9422,7 @@
 
 
 ### '/World/PartA_70' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-17.720, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_70/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9419,7 +9432,7 @@
 
 
 ### '/World/PartA_71' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-17.160, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_71/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9429,7 +9442,7 @@
 
 
 ### '/World/PartA_72' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-16.600, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_72/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9439,7 +9452,7 @@
 
 
 ### '/World/PartA_73' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-15.300, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_73/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9449,7 +9462,7 @@
 
 
 ### '/World/PartA_74' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-14.740, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_74/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9459,7 +9472,7 @@
 
 
 ### '/World/PartA_75' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-14.180, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_75/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9469,7 +9482,7 @@
 
 
 ### '/World/PartA_76' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-13.620, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_76/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9479,7 +9492,7 @@
 
 
 ### '/World/PartA_77' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-13.060, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_77/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9489,7 +9502,7 @@
 
 
 ### '/World/PartA_78' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-12.500, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_78/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9499,7 +9512,7 @@
 
 
 ### '/World/PartA_79' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-11.200, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_79/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9509,7 +9522,7 @@
 
 
 ### '/World/PartA_80' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-10.640, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_80/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9519,7 +9532,7 @@
 
 
 ### '/World/PartA_81' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-10.080, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_81/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9529,7 +9542,7 @@
 
 
 ### '/World/PartA_82' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-9.520, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_82/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9539,7 +9552,7 @@
 
 
 ### '/World/PartA_83' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-8.960, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_83/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9549,7 +9562,7 @@
 
 
 ### '/World/PartA_84' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-8.400, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_84/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9559,7 +9572,7 @@
 
 
 ### '/World/PartA_85' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-7.100, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_85/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9569,7 +9582,7 @@
 
 
 ### '/World/PartA_86' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-6.540, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_86/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9579,7 +9592,7 @@
 
 
 ### '/World/PartA_87' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-5.980, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_87/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9589,7 +9602,7 @@
 
 
 ### '/World/PartA_88' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-5.420, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_88/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9599,7 +9612,7 @@
 
 
 ### '/World/PartA_89' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-4.860, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_89/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9609,7 +9622,7 @@
 
 
 ### '/World/PartA_90' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-4.300, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_90/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9619,7 +9632,7 @@
 
 
 ### '/World/PartA_91' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-3.000, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_91/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9629,7 +9642,7 @@
 
 
 ### '/World/PartA_92' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-2.440, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_92/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9639,7 +9652,7 @@
 
 
 ### '/World/PartA_93' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-1.880, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_93/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9649,7 +9662,7 @@
 
 
 ### '/World/PartA_94' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-1.320, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_94/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9659,7 +9672,7 @@
 
 
 ### '/World/PartA_95' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-0.760, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_95/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9669,7 +9682,7 @@
 
 
 ### '/World/PartA_96' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-0.200, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_96/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9679,7 +9692,7 @@
 
 
 ### '/World/PartA_97' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(1.100, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_97/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9689,7 +9702,7 @@
 
 
 ### '/World/PartA_98' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(1.660, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_98/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9699,7 +9712,7 @@
 
 
 ### '/World/PartA_99' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(2.220, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_99/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9709,7 +9722,7 @@
 
 
 ### '/World/PartA_100' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(2.780, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_100/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9719,7 +9732,7 @@
 
 
 ### '/World/PartA_101' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(3.340, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_101/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9729,7 +9742,7 @@
 
 
 ### '/World/PartA_102' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(3.900, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_102/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9739,7 +9752,7 @@
 
 
 ### '/World/PartA_103' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(5.200, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_103/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9749,7 +9762,7 @@
 
 
 ### '/World/PartA_104' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(5.760, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_104/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9759,7 +9772,7 @@
 
 
 ### '/World/PartA_105' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(6.320, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_105/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9769,7 +9782,7 @@
 
 
 ### '/World/PartA_106' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(6.880, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_106/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9779,7 +9792,7 @@
 
 
 ### '/World/PartA_107' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(7.440, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_107/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9789,7 +9802,7 @@
 
 
 ### '/World/PartA_108' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(8.000, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_108/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9799,7 +9812,7 @@
 
 
 ### '/World/PartA_109' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(9.300, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_109/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9809,7 +9822,7 @@
 
 
 ### '/World/PartA_110' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(9.860, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_110/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9819,7 +9832,7 @@
 
 
 ### '/World/PartA_111' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(10.420, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_111/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9829,7 +9842,7 @@
 
 
 ### '/World/PartA_112' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(10.980, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_112/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9839,7 +9852,7 @@
 
 
 ### '/World/PartA_113' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(11.540, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_113/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9849,7 +9862,7 @@
 
 
 ### '/World/PartA_114' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(12.100, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_114/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9859,7 +9872,7 @@
 
 
 ### '/World/PartA_115' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(13.400, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_115/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9869,7 +9882,7 @@
 
 
 ### '/World/PartA_116' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(13.960, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_116/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9879,7 +9892,7 @@
 
 
 ### '/World/PartA_117' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(14.520, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_117/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9889,7 +9902,7 @@
 
 
 ### '/World/PartA_118' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(15.080, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_118/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9899,7 +9912,7 @@
 
 
 ### '/World/PartA_119' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(15.640, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_119/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9909,7 +9922,7 @@
 
 
 ### '/World/PartA_120' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(16.200, 0.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_120/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9919,7 +9932,7 @@
 
 
 ### '/World/PartA_121' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-23.500, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_121/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9929,7 +9942,7 @@
 
 
 ### '/World/PartA_122' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-22.940, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_122/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9939,7 +9952,7 @@
 
 
 ### '/World/PartA_123' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-22.380, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_123/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9949,7 +9962,7 @@
 
 
 ### '/World/PartA_124' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-21.820, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_124/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9959,7 +9972,7 @@
 
 
 ### '/World/PartA_125' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-21.260, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_125/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9969,7 +9982,7 @@
 
 
 ### '/World/PartA_126' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-20.700, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_126/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9979,7 +9992,7 @@
 
 
 ### '/World/PartA_127' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-19.400, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_127/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9989,7 +10002,7 @@
 
 
 ### '/World/PartA_128' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-18.840, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_128/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -9999,7 +10012,7 @@
 
 
 ### '/World/PartA_129' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-18.280, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_129/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10009,7 +10022,7 @@
 
 
 ### '/World/PartA_130' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-17.720, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_130/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10019,7 +10032,7 @@
 
 
 ### '/World/PartA_131' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-17.160, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_131/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10029,7 +10042,7 @@
 
 
 ### '/World/PartA_132' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-16.600, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_132/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10039,7 +10052,7 @@
 
 
 ### '/World/PartA_133' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-15.300, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_133/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10049,7 +10062,7 @@
 
 
 ### '/World/PartA_134' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-14.740, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_134/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10059,7 +10072,7 @@
 
 
 ### '/World/PartA_135' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-14.180, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_135/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10069,7 +10082,7 @@
 
 
 ### '/World/PartA_136' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-13.620, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_136/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10079,7 +10092,7 @@
 
 
 ### '/World/PartA_137' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-13.060, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_137/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10089,7 +10102,7 @@
 
 
 ### '/World/PartA_138' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-12.500, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_138/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10099,7 +10112,7 @@
 
 
 ### '/World/PartA_139' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-11.200, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_139/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10109,7 +10122,7 @@
 
 
 ### '/World/PartA_140' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-10.640, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_140/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10119,7 +10132,7 @@
 
 
 ### '/World/PartA_141' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-10.080, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_141/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10129,7 +10142,7 @@
 
 
 ### '/World/PartA_142' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-9.520, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_142/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10139,7 +10152,7 @@
 
 
 ### '/World/PartA_143' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-8.960, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_143/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10149,7 +10162,7 @@
 
 
 ### '/World/PartA_144' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-8.400, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_144/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10159,7 +10172,7 @@
 
 
 ### '/World/PartA_145' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-7.100, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_145/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10169,7 +10182,7 @@
 
 
 ### '/World/PartA_146' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-6.540, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_146/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10179,7 +10192,7 @@
 
 
 ### '/World/PartA_147' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-5.980, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_147/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10189,7 +10202,7 @@
 
 
 ### '/World/PartA_148' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-5.420, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_148/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10199,7 +10212,7 @@
 
 
 ### '/World/PartA_149' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-4.860, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_149/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10209,7 +10222,7 @@
 
 
 ### '/World/PartA_150' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-4.300, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_150/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10219,7 +10232,7 @@
 
 
 ### '/World/PartA_151' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-3.000, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_151/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10229,7 +10242,7 @@
 
 
 ### '/World/PartA_152' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-2.440, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_152/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10239,7 +10252,7 @@
 
 
 ### '/World/PartA_153' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-1.880, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_153/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10249,7 +10262,7 @@
 
 
 ### '/World/PartA_154' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-1.320, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_154/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10259,7 +10272,7 @@
 
 
 ### '/World/PartA_155' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-0.760, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_155/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10269,7 +10282,7 @@
 
 
 ### '/World/PartA_156' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(-0.200, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_156/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10279,7 +10292,7 @@
 
 
 ### '/World/PartA_157' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(1.100, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_157/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10289,7 +10302,7 @@
 
 
 ### '/World/PartA_158' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(1.660, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_158/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10299,7 +10312,7 @@
 
 
 ### '/World/PartA_159' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(2.220, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_159/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10309,7 +10322,7 @@
 
 
 ### '/World/PartA_160' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(2.780, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_160/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10319,7 +10332,7 @@
 
 
 ### '/World/PartA_161' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(3.340, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_161/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10329,7 +10342,7 @@
 
 
 ### '/World/PartA_162' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(3.900, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_162/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10339,7 +10352,7 @@
 
 
 ### '/World/PartA_163' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(5.200, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_163/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10349,7 +10362,7 @@
 
 
 ### '/World/PartA_164' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(5.760, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_164/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10359,7 +10372,7 @@
 
 
 ### '/World/PartA_165' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(6.320, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_165/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10369,7 +10382,7 @@
 
 
 ### '/World/PartA_166' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(6.880, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_166/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10379,7 +10392,7 @@
 
 
 ### '/World/PartA_167' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(7.440, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_167/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10389,7 +10402,7 @@
 
 
 ### '/World/PartA_168' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(8.000, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_168/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10399,7 +10412,7 @@
 
 
 ### '/World/PartA_169' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(9.300, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_169/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10409,7 +10422,7 @@
 
 
 ### '/World/PartA_170' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(9.860, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_170/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10419,7 +10432,7 @@
 
 
 ### '/World/PartA_171' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(10.420, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_171/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10429,7 +10442,7 @@
 
 
 ### '/World/PartA_172' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(10.980, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_172/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10439,7 +10452,7 @@
 
 
 ### '/World/PartA_173' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(11.540, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_173/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10449,7 +10462,7 @@
 
 
 ### '/World/PartA_174' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(12.100, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_174/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10459,7 +10472,7 @@
 
 
 ### '/World/PartA_175' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(13.400, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_175/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10469,7 +10482,7 @@
 
 
 ### '/World/PartA_176' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(13.960, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_176/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10479,7 +10492,7 @@
 
 
 ### '/World/PartA_177' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(14.520, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_177/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10489,7 +10502,7 @@
 
 
 ### '/World/PartA_178' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(15.080, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_178/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10499,7 +10512,7 @@
 
 
 ### '/World/PartA_179' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(15.640, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_179/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定
@@ -10509,7 +10522,7 @@
 
 
 ### '/World/PartA_180' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd
 * BBox (world): size=(3.816, 1.400, 1.000), center=(16.200, 7.130, 2.450)
 * 几何统计: Mesh=1, Vertices=414, Faces=824
 * 子Mesh材质: /World/PartA_180/node__Size_1_0x1_4x4_SUPPRESSION_Default/geometry_1 -> 未绑定

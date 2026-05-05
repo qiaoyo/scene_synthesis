@@ -1,195 +1,382 @@
-"""LLM-backed planner that generates layout proposals from retrieved assets."""
+"""LLM planner.
+
+支持两种后端：
+- ``local``: 本地 transformers
+- ``openai_sdk``: 通过 OpenAI SDK 调用 Responses API，并把 tool list 直接传给模型
+
+``LLMPlanner`` 暴露 4 个高层方法：
+- ``think_and_decide``: 思考 + 决定下一步工具调用
+- ``reflect``: 失败时反思
+- ``decide_support``: 选择支撑父项
+- ``adjust_strategy``: 累积失败后调整全局策略
+"""
 from __future__ import annotations
 
 import json
 import re
-from typing import Any, Dict, List, Optional, Sequence, Tuple
+from dataclasses import dataclass
+from typing import Any, Dict, List, Optional
 
-from .data_models import AssetDocument
 from .config import ProjectConfig
+from .prompts.templates import (
+    REFLECT_SYSTEM,
+    STRATEGY_SYSTEM,
+    SUPPORT_SYSTEM,
+    THINK_SYSTEM,
+    build_reflect_prompt,
+    build_strategy_prompt,
+    build_support_prompt,
+    build_think_prompt,
+)
 
-try:
-    import requests as _requests
-except ImportError:
-    _requests = None
 
-_PROMPT_TEMPLATE = """
-你是一名工业场景布局规划助手。你会得到一个自然语言需求和若干资产信息。
-每个资产包含唯一ID、USD路径、功能描述以及包围盒尺寸(bbox)。
-请综合需求与资产信息，规划这些资产在场景中的位置，输出 JSON 数组，每个元素结构如下：
-{{
-  "asset_id": "资产编号",
-  "usd_path": "USD路径",
-  "position": {{"x": 浮点数, "y": 浮点数, "z": 浮点数}},
-  "reason": "简短中文说明"
-}}
-坐标范围建议在 -10 到 10 米。
-需求: {command}
-资产信息:
-{assets}
-请只输出上述 JSON 数组，不要添加多余说明。
-"""
+_JSON_BLOCK_RE = re.compile(r"\{.*\}", re.DOTALL)
+_CODE_FENCE_RE = re.compile(r"```(?:json)?\s*(.*?)```", re.DOTALL | re.IGNORECASE)
+
+
+def _extract_json(text: str) -> Dict[str, Any]:
+    """从模型输出里抠出第一个 ``{...}``，解析失败则抛 ValueError。"""
+    text = text.strip()
+    fenced = _CODE_FENCE_RE.findall(text)
+    if fenced:
+        text = "\n".join(part.strip() for part in fenced if part.strip()) or text
+    # 先尝试整段解析
+    try:
+        obj = json.loads(text)
+        if isinstance(obj, dict):
+            return obj
+    except json.JSONDecodeError:
+        pass
+    # 再尝试匹配最大花括号块
+    m = _JSON_BLOCK_RE.search(text)
+    if m is None:
+        raise ValueError(f"输出不是 JSON: {text[:200]}")
+    snippet = m.group(0)
+    try:
+        return json.loads(snippet)
+    except json.JSONDecodeError:
+        # 兜底：去除可能的尾部多余字符
+        for end in range(len(snippet), 0, -1):
+            try:
+                obj = json.loads(snippet[:end])
+                if isinstance(obj, dict):
+                    return obj
+            except json.JSONDecodeError:
+                continue
+        raise ValueError(f"无法解析 JSON: {snippet[:200]}")
+
+
+@dataclass
+class LLMResponse:
+    raw: str
+    parsed: Dict[str, Any]
 
 
 class LLMPlanner:
-    """Generate layout proposals with a local CausalLM."""
+    """LLM 推理封装。"""
 
     def __init__(self, config: ProjectConfig):
+        if config.model.llm_backend not in {"local", "openai_sdk"}:
+            raise ValueError(f"不支持的 llm_backend: {config.model.llm_backend!r}")
         self.config = config
         self._model = None
         self._tokenizer = None
-        self._torch = None
-        self._device = config.model.device
+        self._client = None
 
-    def _ensure_model(self) -> None:
-        try:
-            import torch
-            from transformers import AutoModelForCausalLM, AutoTokenizer
-        except ImportError as exc:
-            raise ImportError(
-                "本地 LLM 模式需要安装 torch 和 transformers；"
-                "如果你使用远程 API，请设置 --llm-backend api 或 --api-url。"
-            ) from exc
+    # -- 模型生命周期 --
 
-        self._torch = torch
-        if self._model is not None and self._tokenizer is not None:
+    def _ensure_loaded(self) -> None:
+        if self.config.model.llm_backend != "local":
             return
+        if self._model is not None:
+            return
+        from transformers import AutoModelForCausalLM, AutoTokenizer  # noqa: WPS433
+        import torch  # noqa: WPS433
 
-        model_name = self.config.model.llm_name_or_path
-        if not model_name:
-            raise ValueError("ModelConfig.llm_name_or_path 未设置，无法加载本地LLM")
-        tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=False)
-        if tokenizer.pad_token is None:
-            tokenizer.pad_token = tokenizer.eos_token
+        cfg = self.config.model
+        print(f"[LLMPlanner] 加载本地模型: {cfg.llm_name_or_path} -> {cfg.device}")
         kwargs: Dict[str, Any] = {}
-        if self.config.model.use_8bit:
-            kwargs["load_in_8bit"] = True
-            kwargs["device_map"] = "cuda:0"
-        elif self.config.model.load_in_4bit:
+        if cfg.load_in_4bit:
             kwargs["load_in_4bit"] = True
-            kwargs["device_map"] = "cuda:0"
+        elif cfg.use_8bit:
+            kwargs["load_in_8bit"] = True
         else:
-            device = self.config.model.device or ("cuda" if torch.cuda.is_available() else "cpu")
-            kwargs["device_map"] = None
-            kwargs["torch_dtype"] = torch.float16 if device.startswith("cuda") and torch.cuda.is_available() else torch.float32
-        model = AutoModelForCausalLM.from_pretrained(model_name, **kwargs)
-        if kwargs.get("device_map") is None:
-            target_device = self.config.model.device or ("cuda" if torch.cuda.is_available() else "cpu")
-            model.to(target_device)
-            self._device = torch.device(target_device)
-        else:
-            self._device = next(model.parameters()).device
-        self._model = model
-        self._tokenizer = tokenizer
+            kwargs["torch_dtype"] = torch.bfloat16 if torch.cuda.is_available() else torch.float32
 
-    def _format_assets(self, documents: Sequence[AssetDocument]) -> str:
-        lines = []
-        for doc in documents:
-            asset_id = doc.metadata.get("asset_category", doc.doc_id)
-            usd_path = doc.metadata.get("usd_path", "未知")
-            bbox = doc.metadata.get("bbox") or {"size": [1.0, 1.0, 1.0], "unit": "m"}
-            bbox_text = json.dumps(bbox, ensure_ascii=False)
-            snippet = doc.content.replace("\n", " ")
-            if len(snippet) > 280:
-                snippet = snippet[:280] + "..."
-            lines.append(f"- ID:{asset_id} | USD:{usd_path} | bbox:{bbox_text} | 描述:{snippet}")
+        tokenizer = AutoTokenizer.from_pretrained(cfg.llm_name_or_path, trust_remote_code=True)
+        if tokenizer.pad_token_id is None:
+            tokenizer.pad_token = tokenizer.eos_token
+
+        model = AutoModelForCausalLM.from_pretrained(
+            cfg.llm_name_or_path, trust_remote_code=True, **kwargs
+        )
+        # 量化模式下不要再 .to(device)，由 accelerate 接管
+        if not (cfg.load_in_4bit or cfg.use_8bit):
+            model = model.to(cfg.device)
+        model.eval()
+        self._tokenizer = tokenizer
+        self._model = model
+
+    def _ensure_client(self) -> None:
+        if self.config.model.llm_backend != "openai_sdk":
+            return
+        if self._client is not None:
+            return
+        if not self.config.model.llm_api_key:
+            raise ValueError("llm_api_key 为空，无法使用 openai_sdk 后端")
+        from openai import OpenAI  # noqa: WPS433
+
+        self._client = OpenAI(
+            api_key=self.config.model.llm_api_key,
+            base_url=self.config.model.llm_api_base_url,
+        )
+
+    def _generate_local(self, messages: List[Dict[str, str]], force_greedy: bool = False) -> str:
+        self._ensure_loaded()
+        import torch  # noqa: WPS433
+
+        tokenizer = self._tokenizer
+        model = self._model
+        cfg = self.config.model
+        prompt = self._build_local_prompt(messages)
+        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+
+        generation_kwargs: Dict[str, Any] = {
+            "max_new_tokens": cfg.max_new_tokens,
+            "pad_token_id": tokenizer.pad_token_id,
+            "do_sample": False if force_greedy else cfg.temperature > 0,
+        }
+        if generation_kwargs["do_sample"]:
+            generation_kwargs["temperature"] = max(cfg.temperature, 1e-5)
+
+        with torch.no_grad():
+            outputs = model.generate(**inputs, **generation_kwargs)
+        new_tokens = outputs[0, inputs["input_ids"].shape[1]:]
+        return tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
+
+    def _build_local_prompt(self, messages: List[Dict[str, str]]) -> str:
+        tokenizer = self._tokenizer
+        model_name = self.config.model.llm_name_or_path.lower()
+        if "mistral" in model_name:
+            parts = [item["content"].strip() for item in messages if item.get("content")]
+            body = "\n\n".join(parts)
+            return f"[INST] {body} [/INST]"
+        if hasattr(tokenizer, "apply_chat_template"):
+            return tokenizer.apply_chat_template(
+                messages, tokenize=False, add_generation_prompt=True
+            )
+        system = ""
+        user = ""
+        for item in messages:
+            if item.get("role") == "system":
+                system = item.get("content", "")
+            elif item.get("role") == "user":
+                user = item.get("content", "")
+        return f"<<SYS>>\n{system}\n<</SYS>>\n\n{user}\n"
+
+    def _local_tool_system_prompt(self, tools: List[Dict[str, Any]]) -> str:
+        lines = [
+            "You are a tool-calling planner.",
+            "Available tools:",
+        ]
+        for tool in tools:
+            params = tool.get("parameters", {})
+            properties = params.get("properties", {})
+            required = set(params.get("required", []))
+            arg_lines = []
+            for param_name, spec in properties.items():
+                spec_type = spec.get("type")
+                if spec_type is None and "anyOf" in spec:
+                    spec_type = "|".join(
+                        item.get("type", "any")
+                        for item in spec["anyOf"]
+                        if isinstance(item, dict)
+                    ) or "any"
+                desc = spec.get("description", "")
+                suffix = "required" if param_name in required else "optional"
+                arg_lines.append(f"{param_name}:{spec_type or 'any'} ({suffix}) {desc}")
+            args = "; ".join(arg_lines) if arg_lines else "(no parameters)"
+            lines.append(f"- {tool['name']}: {tool.get('description', '')} | {args}")
+        lines.extend([
+            "",
+            "Rules:",
+            "1. When choosing a tool, output exactly one JSON object and nothing else.",
+            "2. Preferred format: {\"thought\":\"...\",\"action\":\"tool_name\",\"action_input\":{...}}.",
+            "3. If the task is complete, output: {\"thought\":\"...\",\"action\":\"finish\",\"action_input\":{\"reason\":\"...\"}}.",
+            "4. action must be one of the available tool names or finish.",
+            "5. action_input may only contain fields defined for the selected tool.",
+            "6. Do not use markdown, code fences, or natural-language explanations outside JSON.",
+        ])
         return "\n".join(lines)
 
-    def _extract_json(self, text: str) -> List[Dict[str, Any]]:
-        match = re.search(r"\[[\s\S]*\]", text)
-        if not match:
-            return []
-        segment = match.group(0)
+    @staticmethod
+    def _normalize_tool_decision(parsed: Dict[str, Any]) -> Dict[str, Any]:
+        if "action" in parsed:
+            action_input = parsed.get("action_input")
+            if action_input is None:
+                parsed["action_input"] = {}
+            elif not isinstance(action_input, dict):
+                parsed["action_input"] = {"_invalid": action_input}
+            parsed["thought"] = str(parsed.get("thought", ""))
+            return parsed
+        if "name" in parsed:
+            parameters = parsed.get("parameters")
+            if parameters is None:
+                parameters = {}
+            elif not isinstance(parameters, dict):
+                parameters = {"_invalid": parameters}
+            return {
+                "thought": str(parsed.get("thought", "")),
+                "action": str(parsed.get("name", "")),
+                "action_input": parameters,
+            }
+        return parsed
+
+    # -- 通用 chat 调用 --
+
+    def _chat(self, system: str, user: str) -> LLMResponse:
+        if self.config.model.llm_backend == "openai_sdk":
+            return self._chat_openai(system, user)
+        text = self._generate_local([
+            {"role": "system", "content": system},
+            {"role": "user", "content": user},
+        ])
+        parsed: Dict[str, Any]
         try:
-            data = json.loads(segment)
-            if isinstance(data, list):
-                return [item for item in data if isinstance(item, dict)]
-        except json.JSONDecodeError:
-            return []
-        return []
+            parsed = _extract_json(text)
+        except ValueError as exc:
+            print(f"[LLMPlanner] JSON 解析失败: {exc}")
+            parsed = {"_parse_error": str(exc), "_raw": text[:500]}
+        return LLMResponse(raw=text, parsed=parsed)
 
-    def plan(self, command: str, documents: Sequence[AssetDocument]) -> Tuple[str, List[Dict[str, Any]]]:
-        self._ensure_model()
-        assert self._model is not None and self._tokenizer is not None and self._torch is not None
-        torch = self._torch
-        assets_text = self._format_assets(documents)
-        prompt = _PROMPT_TEMPLATE.format(command=command, assets=assets_text)
-        inputs = self._tokenizer(prompt, return_tensors="pt")
-        inputs = {k: v.to(self._device) for k, v in inputs.items()}
-        with torch.no_grad():
-            generated = self._model.generate(
-                **inputs,
-                max_new_tokens=self.config.model.max_new_tokens,
-                temperature=self.config.model.temperature,
-                do_sample=self.config.model.temperature > 0,
-            )
-        generated_ids = generated[0][inputs["input_ids"].shape[1] :]
-        completion = self._tokenizer.decode(generated_ids, skip_special_tokens=True).strip()
-        placements = self._extract_json(completion)
-        return completion, placements
+    def _tool_chat_local(self, system: str, user: str, tools: List[Dict[str, Any]]) -> LLMResponse:
+        text = self._generate_local([
+            {"role": "system", "content": system},
+            {"role": "system", "content": self._local_tool_system_prompt(tools)},
+            {"role": "user", "content": user},
+        ], force_greedy=True)
+        try:
+            parsed = self._normalize_tool_decision(_extract_json(text))
+        except ValueError as exc:
+            print(f"[LLMPlanner] Local tool JSON 解析失败: {exc}")
+            parsed = {"_parse_error": str(exc), "_raw": text[:500]}
+        return LLMResponse(raw=text, parsed=parsed)
 
-    # ------------------------------------------------------------------
-    # ReAct interface -- single-turn call used by the agent loop
-    # ------------------------------------------------------------------
-
-    def react_call(self, system_prompt: str, user_prompt: str) -> str:
-        backend = getattr(self.config.model, "llm_backend", "api")
-
-        if backend == "api":
-            return self._react_call_api(system_prompt, user_prompt)
-
-        if backend == "local":
-            return self._react_call_local(system_prompt, user_prompt)
-
-        raise ValueError(f"未知 llm_backend: {backend}")
-
-
-    def _react_call_local(self, system_prompt: str, user_prompt: str) -> str:
-        self._ensure_model()
-        assert self._model is not None and self._tokenizer is not None and self._torch is not None
-        torch = self._torch
-
-        # Build instruction-style prompt
-        prompt = f"[INST] {system_prompt}\n\n{user_prompt} [/INST]"
-        inputs = self._tokenizer(prompt, return_tensors="pt", truncation=True, max_length=4096)
-        inputs = {k: v.to(self._device) for k, v in inputs.items()}
-        with torch.no_grad():
-            generated = self._model.generate(
-                **inputs,
-                max_new_tokens=self.config.model.max_new_tokens,
-                temperature=self.config.model.temperature,
-                do_sample=self.config.model.temperature > 0,
-            )
-        generated_ids = generated[0][inputs["input_ids"].shape[1]:]
-        return self._tokenizer.decode(generated_ids, skip_special_tokens=True).strip()
-
-    def _react_call_api(self, system_prompt: str, user_prompt: str) -> str:
-        if _requests is None:
-            raise ImportError("requests 库未安装，无法调用远程 API")
-        api_url = self.config.model.llm_api_url
-        if not api_url:
-            raise ValueError("llm_backend=api 时必须提供 --api-url")
-        api_key = getattr(self.config.model, "llm_api_key", "")
-        model_name = getattr(self.config.model, "llm_api_model", "")
-        headers = {"Content-Type": "application/json"}
-        if api_key:
-            headers["Authorization"] = f"Bearer {api_key}"
-        payload = {
-            "model": model_name,
-            "messages": [
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt},
+    def _chat_openai(self, system: str, user: str) -> LLMResponse:
+        self._ensure_client()
+        response = self._client.responses.create(
+            model=self.config.model.llm_api_model,
+            input=[
+                {"role": "system", "content": system},
+                {"role": "user", "content": user},
             ],
-            "temperature": self.config.model.temperature,
-            "max_tokens": self.config.model.max_new_tokens,
-        }
-        resp = _requests.post(api_url, json=payload, headers=headers, timeout=120)
-        resp.raise_for_status()
-        data = resp.json()
-        choices = data.get("choices", [])
-        if choices:
-            return choices[0].get("message", {}).get("content", "")
-        return ""
+        )
+        text = getattr(response, "output_text", "") or ""
+        try:
+            parsed = _extract_json(text)
+        except ValueError as exc:
+            print(f"[LLMPlanner] OpenAI JSON 解析失败: {exc}")
+            parsed = {"_parse_error": str(exc), "_raw": text[:500]}
+        return LLMResponse(raw=text, parsed=parsed)
+
+    def _tool_chat_openai(self, system: str, user: str, tools: List[Dict[str, Any]]) -> LLMResponse:
+        self._ensure_client()
+        response = self._client.responses.create(
+            model=self.config.model.llm_api_model,
+            input=[
+                {"role": "system", "content": system},
+                {"role": "user", "content": user},
+            ],
+            tools=tools,
+            tool_choice="required",
+        )
+        parsed = self._parse_tool_decision(response)
+        raw = getattr(response, "output_text", "") or json.dumps(parsed, ensure_ascii=False)
+        return LLMResponse(raw=raw, parsed=parsed)
+
+    def _parse_tool_decision(self, response: Any) -> Dict[str, Any]:
+        output = getattr(response, "output", None) or []
+        for item in output:
+            item_type = getattr(item, "type", None)
+            if item_type == "function_call":
+                raw_args = getattr(item, "arguments", "") or "{}"
+                try:
+                    arguments = json.loads(raw_args)
+                except json.JSONDecodeError as exc:
+                    return {
+                        "_parse_error": f"tool arguments 不是合法 JSON: {exc}",
+                        "_raw": raw_args[:500],
+                    }
+                return self._normalize_tool_decision({
+                    "thought": "",
+                    "name": getattr(item, "name", ""),
+                    "parameters": arguments,
+                })
+        text = getattr(response, "output_text", "") or ""
+        try:
+            parsed = self._normalize_tool_decision(_extract_json(text))
+        except ValueError as exc:
+            return {"_parse_error": str(exc), "_raw": text[:500]}
+        return parsed
+
+    # -- 高层 API --
+
+    def think_and_decide(
+        self,
+        command: str,
+        scene_summary: Dict[str, Any],
+        last_observation: Optional[Dict[str, Any]],
+        tool_specs: List[Dict[str, Any]],
+        lessons: List[Dict[str, Any]],
+        strategy: Optional[str],
+        step: int,
+        max_steps: int,
+    ) -> LLMResponse:
+        prompt = build_think_prompt(
+            command=command,
+            scene_summary=scene_summary,
+            last_observation=last_observation,
+            tool_specs=tool_specs,
+            lessons=lessons,
+            strategy=strategy,
+            step=step,
+            max_steps=max_steps,
+        )
+        if self.config.model.llm_backend == "openai_sdk":
+            return self._tool_chat_openai(THINK_SYSTEM, prompt, tool_specs)
+        if self.config.model.llm_backend == "local":
+            return self._tool_chat_local(THINK_SYSTEM, prompt, tool_specs)
+        return self._chat(THINK_SYSTEM, prompt)
+
+    def reflect(
+        self,
+        thought: str,
+        action: str,
+        action_input: Dict[str, Any],
+        observation: Dict[str, Any],
+        command: str,
+    ) -> LLMResponse:
+        prompt = build_reflect_prompt(thought, action, action_input, observation, command)
+        return self._chat(REFLECT_SYSTEM, prompt)
+
+    def decide_support(
+        self,
+        child_id: str,
+        child_summary: Dict[str, Any],
+        candidates: List[Dict[str, Any]],
+        context: str,
+    ) -> LLMResponse:
+        prompt = build_support_prompt(child_id, child_summary, candidates, context)
+        return self._chat(SUPPORT_SYSTEM, prompt)
+
+    def adjust_strategy(
+        self,
+        command: str,
+        recent_observations: List[Dict[str, Any]],
+        recent_reflections: List[Dict[str, Any]],
+    ) -> LLMResponse:
+        prompt = build_strategy_prompt(command, recent_observations, recent_reflections)
+        return self._chat(STRATEGY_SYSTEM, prompt)
 
 
-__all__ = ["LLMPlanner"]
+__all__ = ["LLMPlanner", "LLMResponse"]

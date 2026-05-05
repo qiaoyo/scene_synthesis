@@ -1,184 +1,356 @@
-"""High level pipeline orchestrating ingestion, retrieval, and layout reasoning."""
+"""Asset corpus + retrieval (JSON-first, FAISS by default).
+
+数据布局（用户问题里特别要求的「数据放在哪儿」）:
+
+    data/assets/csv/*.csv         <- 原始资产清单（已存在）
+    data/assets/md/*.md           <- 场景模板（已存在）
+    data/assets/docs/*.jsonl      <- 场景先验文本（已存在）
+    data/indexes/corpus.jsonl     <- ★ 索引产物：每行一个 AssetDocument
+    data/indexes/vectors.faiss    <- 默认产出：FAISS 索引文件
+    data/indexes/index_meta.json  <- 默认产出：FAISS 与文档的对齐元信息
+
+为什么用 JSONL 作为「事实源」：
+- 确定性、人类可读、可 diff、可被 grep；不依赖 GPU 也能加载。
+- FAISS 是默认的加速层。当 sentence-transformers/faiss 依赖缺失时，自动
+  回退到 BM25-lite 关键词检索；corpus.jsonl 是数据本体，不会丢。
+"""
 from __future__ import annotations
 
 import json
-from typing import Dict, List, Sequence, Tuple
+import math
+import re
+from collections import Counter
+from pathlib import Path
+from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 from .asset_loader import AssetIngestor
 from .config import ProjectConfig
-from .data_models import (
-    AgentTrace,
-    AssetDocument,
-    LayoutPlan,
-    LayoutElement,
-    SceneCommand,
-)
-from .embedding import EmbeddingBackend
-from .layout_reasoner import LayoutReasoner
-from .llm_planner import LLMPlanner
-from .vector_store import LocalVectorStore, RetrievalResult
+from .data_models import AssetDocument
 
 
-class SceneLayoutRAG:
-    def __init__(self, config: ProjectConfig | None = None):
-        self.config = config or ProjectConfig()
-        self.config.ensure_directories()
-        print(f"[SceneLayoutRAG] 初始化，索引目录: {self.config.index_dir}")
-        self.ingestor = AssetIngestor(self.config)
-        self._documents = self.ingestor.build_documents()
-        print(f"[SceneLayoutRAG] 文档总数: {len(self._documents)}")
-        self._embedder: EmbeddingBackend | None = None
-        self._index: LocalVectorStore | None = None
-        self._reasoner = LayoutReasoner()
-        self._planner: LLMPlanner | None = None
+CORPUS_FILE = "corpus.jsonl"
+FAISS_FILE = "vectors.faiss"
+FAISS_META_FILE = "index_meta.json"
 
-    @property
-    def document_count(self) -> int:
-        return len(self._documents)
 
-    @property
-    def documents(self) -> List[AssetDocument]:
-        return self._documents
+# ---------- 持久化 ----------
 
-    def _ensure_index(self) -> None:
-        if self._index is not None:
-            return
-        print("[SceneLayoutRAG] 构建向量索引...")
-        self._embedder = EmbeddingBackend(
-            model_name=self.config.model.embedding_model,
-            device=self.config.model.device,
-            batch_size=self.config.model.embedding_batch_size,
+def save_corpus(documents: Iterable[AssetDocument], index_dir: Path) -> Path:
+    index_dir.mkdir(parents=True, exist_ok=True)
+    out_path = index_dir / CORPUS_FILE
+    with out_path.open("w", encoding="utf-8") as f:
+        for doc in documents:
+            f.write(json.dumps(doc.to_dict(), ensure_ascii=False) + "\n")
+    return out_path
+
+
+def load_corpus(index_dir: Path) -> List[AssetDocument]:
+    path = index_dir / CORPUS_FILE
+    if not path.exists():
+        raise FileNotFoundError(
+            f"Corpus not found at {path}. Run `python -m scene_layout_rag.cli ingest` first."
         )
-        embeddings = self._embedder.embed_documents([doc.content for doc in self._documents])
-        self._index = LocalVectorStore(dimension=self._embedder.embedding_dim)
-        self._index.add(embeddings, self._documents)
-        print("[SceneLayoutRAG] 向量索引构建完成")
-
-    def retrieve(self, query: str, top_k: int = 5) -> List[RetrievalResult]:
-        self._ensure_index()
-        assert self._index is not None and self._embedder is not None
-        print(f"[SceneLayoutRAG] 执行检索: top_k={top_k}")
-        query_vec = self._embedder.embed_query(query)
-        return self._index.search(query_vec, top_k=top_k)
-
-    def generate_layout(self, command_text: str, top_k: int = 5) -> LayoutPlan:
-        hits = self.retrieve(command_text, top_k=top_k)
-        print(f"[SceneLayoutRAG] 根据查询构建布局方案, 命中数量: {len(hits)}")
-        command = SceneCommand(raw_text=command_text, language=self.config.language)
-        doc_scores = [(hit.document, hit.score) for hit in hits]
-        planner_notes = None
-        plan_elements: Sequence[LayoutElement] | None = None
-        if (self.config.model.llm_backend == "local"
-            and self.config.model.llm_name_or_path):
-            try:
-                self._planner = self._planner or LLMPlanner(self.config)
-                planner_notes, placement_dicts = self._planner.plan(command_text, [doc for doc, _ in doc_scores])
-                if placement_dicts:
-                    plan_elements = self._build_elements_from_llm(placement_dicts, doc_scores)
-            except Exception as exc:  # pragma: no cover - defensive logging
-                print(f"[SceneLayoutRAG] LLM规划失败，回落到启发式策略: {exc}")
-                plan_elements = None
-        if plan_elements is None or len(plan_elements) == 0:
-            plan = self._reasoner.build_plan(command, doc_scores)
-            plan.planner_notes = planner_notes
-            return plan
-        return LayoutPlan(command=command, elements=plan_elements, retrieved_docs=[doc for doc, _ in doc_scores], planner_notes=planner_notes)
-
-    # ------------------------------------------------------------------
-    # ReAct mode
-    # ------------------------------------------------------------------
-
-    def generate_layout_react(self, command_text: str) -> Tuple[LayoutPlan, AgentTrace]:
-        """Generate a layout using the ReAct agent loop.
-
-        Unlike :meth:`generate_layout`, this method runs an iterative
-        Think → Act → Observe → Reflect cycle.  RAG retrieval happens
-        *inside* the loop via the ``retrieve_assets`` tool.
-        """
-        from .agent import ReActAgent
-        from .observer import SceneObserver
-        from .tools import build_default_registry
-
-        self._ensure_index()
-        assert self._index is not None and self._embedder is not None
-
-        catalog_summary = self._build_catalog_summary()
-
-        planner = self._planner or LLMPlanner(self.config)
-        self._planner = planner
-
-        registry = build_default_registry()
-        observer = SceneObserver(physics_enabled=self.config.agent.physics_enabled)
-
-        agent = ReActAgent(
-            llm=planner,
-            tool_registry=registry,
-            observer=observer,
-            vector_store=self._index,
-            embedder=self._embedder,
-            max_steps=self.config.agent.max_steps,
-            reflection_enabled=self.config.agent.reflection_enabled,
-            max_lessons=self.config.agent.max_lessons,
-            max_working_memory=self.config.agent.max_working_memory,
-        )
-
-        scene, trace = agent.run(command_text, catalog_summary)
-
-        # Convert SceneState → LayoutPlan for backward compatibility
-        command = SceneCommand(raw_text=command_text, language=self.config.language)
-        elements = [
-            LayoutElement(
-                asset_id=a.asset_id,
-                usd_path=a.usd_path,
-                transform={"x": a.position[0], "y": a.position[1], "z": a.position[2]},
-                score=1.0,
-                reasoning=a.description or "ReAct agent placement",
-            )
-            for a in scene.assets.values()
-        ]
-        plan = LayoutPlan(command=command, elements=elements, planner_notes=f"ReAct: {trace.total_steps} steps")
-        return plan, trace
-
-    def _build_catalog_summary(self) -> Dict[str, Any]:
-        """Build a summary of the asset catalog for the agent's warm-start context."""
-        categories: Dict[str, int] = {}
-        for doc in self._documents:
-            cat = doc.metadata.get("asset_category", "unknown")
-            categories[cat] = categories.get(cat, 0) + 1
-        return {
-            "available_categories": sorted(categories.keys()),
-            "category_counts": categories,
-            "total_assets": len(self._documents),
-        }
-
-    def _build_elements_from_llm(self, placement_dicts: Sequence[dict], doc_scores: Sequence[tuple[AssetDocument, float]]) -> List[LayoutElement]:
-        doc_by_id = {doc.doc_id: (doc, score) for doc, score in doc_scores}
-        doc_by_asset = {doc.metadata.get("asset_category", doc.doc_id): (doc, score) for doc, score in doc_scores}
-        elements: List[LayoutElement] = []
-        for entry in placement_dicts:
-            asset_id = str(entry.get("asset_id") or "")
-            doc_entry = doc_by_id.get(asset_id) or doc_by_asset.get(asset_id)
-            if doc_entry is None:
+    docs: List[AssetDocument] = []
+    with path.open("r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
                 continue
-            doc, score = doc_entry
-            usd_path = entry.get("usd_path") or doc.metadata.get("usd_path", "")
-            pos = entry.get("position") or {}
-            transform = {
-                "x": float(pos.get("x", 0.0)),
-                "y": float(pos.get("y", 0.0)),
-                "z": float(pos.get("z", 0.0)),
-            }
-            reasoning = entry.get("reason") or "由LLM规划得出的位置"
-            elements.append(
-                LayoutElement(
-                    asset_id=asset_id or doc.metadata.get("asset_category", doc.doc_id),
-                    usd_path=usd_path,
-                    transform=transform,
-                    score=score,
-                    reasoning=reasoning,
-                )
+            docs.append(AssetDocument.from_dict(json.loads(line)))
+    return docs
+
+
+# ---------- 关键词检索（无 GPU 依赖） ----------
+
+_TOKEN_RE = re.compile(r"[a-z0-9]+|[一-鿿]")
+
+
+def _tokenize(text: str) -> List[str]:
+    return _TOKEN_RE.findall(text.lower())
+
+
+def _match_filters(metadata: Dict[str, Any], filters: Dict[str, Any]) -> bool:
+    """支持 ``{"asset_type": "Conveyor"}`` 与 ``{"asset_type": ["Conveyor","Box"]}``。"""
+    for key, expected in filters.items():
+        actual = metadata.get(key)
+        if isinstance(expected, (list, tuple, set)):
+            if actual not in expected:
+                return False
+        else:
+            if actual != expected:
+                return False
+    return True
+
+
+class KeywordRetriever:
+    """轻量的 BM25-lite 检索器，作为始终可用的兜底。
+
+    选择理由：避免 100% 依赖嵌入模型。当 sentence-transformers 不可用或 corpus
+    很小（几千条）时，BM25 已能覆盖主要查询。
+    """
+
+    k1 = 1.5
+    b = 0.75
+
+    def __init__(self, documents: List[AssetDocument]):
+        self.documents = documents
+        self.tokens: List[List[str]] = [_tokenize(d.content) for d in documents]
+        self.doc_lens = [len(t) for t in self.tokens]
+        self.avgdl = (sum(self.doc_lens) / len(self.doc_lens)) if self.doc_lens else 0.0
+        self.df: Counter = Counter()
+        for tokens in self.tokens:
+            for term in set(tokens):
+                self.df[term] += 1
+        self.n_docs = len(documents)
+
+    def _idf(self, term: str) -> float:
+        df = self.df.get(term, 0)
+        return math.log((self.n_docs - df + 0.5) / (df + 0.5) + 1.0)
+
+    def search(
+        self,
+        query: str,
+        top_k: int = 5,
+        filters: Optional[Dict[str, Any]] = None,
+    ) -> List[Tuple[AssetDocument, float]]:
+        q_tokens = _tokenize(query)
+        if not q_tokens:
+            return []
+        scores: List[Tuple[int, float]] = []
+        for idx, tokens in enumerate(self.tokens):
+            if filters and not _match_filters(self.documents[idx].metadata, filters):
+                continue
+            if not tokens:
+                continue
+            tf = Counter(tokens)
+            dl = self.doc_lens[idx]
+            score = 0.0
+            for term in q_tokens:
+                if term not in tf:
+                    continue
+                idf = self._idf(term)
+                tf_t = tf[term]
+                denom = tf_t + self.k1 * (1.0 - self.b + self.b * dl / max(self.avgdl, 1e-6))
+                score += idf * (tf_t * (self.k1 + 1.0)) / max(denom, 1e-6)
+            if score > 0:
+                scores.append((idx, score))
+        scores.sort(key=lambda x: x[1], reverse=True)
+        return [(self.documents[i], s) for i, s in scores[:top_k]]
+
+
+# ---------- FAISS 加速层 ----------
+
+class FaissRetriever:
+    """sentence-transformers 嵌入 + FAISS IndexFlatIP 余弦相似度。
+
+    依赖缺失时由 ``AssetRAG`` 捕获 ImportError 并回退到关键词检索。
+    """
+
+    def __init__(
+        self,
+        documents: List[AssetDocument],
+        embedding_model: str,
+        batch_size: int = 32,
+        device: Optional[str] = None,
+    ):
+        from sentence_transformers import SentenceTransformer  # noqa: WPS433
+        import faiss  # noqa: WPS433
+        import numpy as np  # noqa: WPS433
+
+        self.documents = documents
+        self.encoder = SentenceTransformer(embedding_model, device=device)
+        self.embedding_model = embedding_model
+        texts = [d.content for d in documents]
+        embeddings = self.encoder.encode(
+            texts,
+            batch_size=batch_size,
+            convert_to_numpy=True,
+            show_progress_bar=True,
+            normalize_embeddings=True,
+        )
+        self.embeddings = embeddings.astype("float32")
+        self.dim = int(self.embeddings.shape[1])
+        self.index = faiss.IndexFlatIP(self.dim)
+        self.index.add(self.embeddings)
+        self._faiss = faiss
+        self._np = np
+
+    @classmethod
+    def from_disk(
+        cls,
+        documents: List[AssetDocument],
+        index_dir: Path,
+        embedding_model: str,
+        device: Optional[str] = None,
+    ) -> "FaissRetriever":
+        """跳过重新嵌入，直接从磁盘载入向量索引。"""
+        from sentence_transformers import SentenceTransformer  # noqa: WPS433
+        import faiss  # noqa: WPS433
+        import numpy as np  # noqa: WPS433
+
+        meta_path = index_dir / FAISS_META_FILE
+        index_path = index_dir / FAISS_FILE
+        if not (meta_path.exists() and index_path.exists()):
+            raise FileNotFoundError(f"FAISS artifacts missing in {index_dir}")
+        meta = json.loads(meta_path.read_text(encoding="utf-8"))
+        if meta.get("doc_ids") != [d.doc_id for d in documents]:
+            raise RuntimeError(
+                "FAISS index doc_ids 与 corpus.jsonl 不一致，请删除 vectors.faiss 后重建。"
             )
-        return elements
+        obj = cls.__new__(cls)
+        obj.documents = documents
+        obj.encoder = SentenceTransformer(meta.get("encoder", embedding_model), device=device)
+        obj.embedding_model = meta.get("encoder", embedding_model)
+        obj.dim = int(meta["dim"])
+        obj.index = faiss.read_index(str(index_path))
+        obj._faiss = faiss
+        obj._np = np
+        obj.embeddings = None  # 加载模式下不需要重持有原向量
+        return obj
+
+    def save(self, index_dir: Path) -> None:
+        index_dir.mkdir(parents=True, exist_ok=True)
+        self._faiss.write_index(self.index, str(index_dir / FAISS_FILE))
+        meta = {
+            "doc_ids": [d.doc_id for d in self.documents],
+            "dim": self.dim,
+            "encoder": self.embedding_model,
+        }
+        (index_dir / FAISS_META_FILE).write_text(
+            json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+
+    def search(
+        self,
+        query: str,
+        top_k: int = 5,
+        filters: Optional[Dict[str, Any]] = None,
+    ) -> List[Tuple[AssetDocument, float]]:
+        q = self.encoder.encode(
+            [query], convert_to_numpy=True, normalize_embeddings=True
+        ).astype("float32")
+        oversample = len(self.documents) if filters else top_k
+        scores, ids = self.index.search(q, min(oversample, len(self.documents)))
+        results: List[Tuple[AssetDocument, float]] = []
+        for idx, score in zip(ids[0].tolist(), scores[0].tolist()):
+            if idx < 0:
+                continue
+            doc = self.documents[idx]
+            if filters and not _match_filters(doc.metadata, filters):
+                continue
+            results.append((doc, float(score)))
+            if len(results) >= top_k:
+                break
+        return results
 
 
-__all__ = ["SceneLayoutRAG"]
+# ---------- 顶层封装 ----------
+
+class AssetRAG:
+    """统一的检索入口；优先使用 FAISS，依赖缺失时回退关键词。"""
+
+    def __init__(self, config: ProjectConfig):
+        self.config = config
+        self.documents: List[AssetDocument] = []
+        self.keyword: Optional[KeywordRetriever] = None
+        self.faiss: Optional[FaissRetriever] = None
+
+    # -- 构建 / 持久化 --
+
+    def build(self, save: bool = True) -> List[AssetDocument]:
+        ingestor = AssetIngestor(self.config)
+        self.documents = ingestor.build_documents()
+        if save:
+            self.config.ensure_directories()
+            corpus_path = save_corpus(self.documents, self.config.index_dir)
+            print(f"[AssetRAG] 写入语料: {corpus_path} ({len(self.documents)} 条)")
+        self.keyword = KeywordRetriever(self.documents)
+        if self.config.enable_faiss:
+            self._build_faiss(save=save)
+        return self.documents
+
+    def load(self) -> List[AssetDocument]:
+        self.documents = load_corpus(self.config.index_dir)
+        self.keyword = KeywordRetriever(self.documents)
+        if self.config.enable_faiss:
+            self._load_or_build_faiss()
+        return self.documents
+
+    def _build_faiss(self, save: bool) -> None:
+        try:
+            self.faiss = FaissRetriever(
+                self.documents,
+                embedding_model=self.config.model.embedding_model,
+                batch_size=self.config.model.embedding_batch_size,
+                device=self.config.model.device,
+            )
+        except ImportError as exc:
+            print(f"[AssetRAG] FAISS 依赖缺失，跳过向量索引构建: {exc}")
+            self.faiss = None
+            return
+        if save:
+            self.faiss.save(self.config.index_dir)
+            print(f"[AssetRAG] 写入 FAISS: {self.config.index_dir / FAISS_FILE}")
+
+    def _load_or_build_faiss(self) -> None:
+        try:
+            self.faiss = FaissRetriever.from_disk(
+                self.documents,
+                index_dir=self.config.index_dir,
+                embedding_model=self.config.model.embedding_model,
+                device=self.config.model.device,
+            )
+            print(f"[AssetRAG] 已加载 FAISS: {self.config.index_dir / FAISS_FILE}")
+        except FileNotFoundError:
+            print("[AssetRAG] 未发现 FAISS 文件，按 corpus.jsonl 现场构建并落盘")
+            self._build_faiss(save=True)
+        except ImportError as exc:
+            print(f"[AssetRAG] FAISS 不可用，回退关键词检索: {exc}")
+            self.faiss = None
+
+    # -- 查询 --
+
+    def retrieve(
+        self,
+        query: str,
+        top_k: Optional[int] = None,
+        filters: Optional[Dict[str, Any]] = None,
+        prefer: str = "auto",
+    ) -> List[Tuple[AssetDocument, float]]:
+        """检索资产/场景文档。
+
+        prefer:
+          - ``"auto"``: 有 FAISS 时优先，没有则关键词。
+          - ``"keyword"``: 强制关键词。
+          - ``"faiss"``: 强制 FAISS（不可用则报错）。
+        """
+        k = top_k or self.config.retrieval_top_k
+        retriever = self._select_retriever(prefer)
+        return retriever.search(query, top_k=k, filters=filters)
+
+    def _select_retriever(self, prefer: str):
+        if prefer == "faiss":
+            if self.faiss is None:
+                raise RuntimeError("FAISS retriever 不可用，请检查 enable_faiss / 依赖安装")
+            return self.faiss
+        if prefer == "keyword":
+            if self.keyword is None:
+                raise RuntimeError("Keyword retriever 未初始化，请先调用 build/load")
+            return self.keyword
+        if self.faiss is not None:
+            return self.faiss
+        if self.keyword is None:
+            raise RuntimeError("Retriever 未初始化，请先调用 build/load")
+        return self.keyword
+
+
+__all__ = [
+    "AssetRAG",
+    "KeywordRetriever",
+    "FaissRetriever",
+    "save_corpus",
+    "load_corpus",
+    "CORPUS_FILE",
+    "FAISS_FILE",
+    "FAISS_META_FILE",
+]

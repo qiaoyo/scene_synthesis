@@ -1,110 +1,138 @@
-"""Base classes for the tool system."""
+"""Tool ABC + registry.
+
+工具必须把输入 schema 描述成 OpenAI SDK function tool 格式（见 ``Tool.schema``），
+方便 LLM 在 prompt 里看到准确的用法说明，也便于运行时校验，对应 ``方案/优化.md``：
+「工具输入输出严格限定格式和内容」。
+"""
 from __future__ import annotations
 
-import json
-from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
+
+from ..rag import AssetRAG
+from ..scene_state import SceneStateManager
+
+
+@dataclass
+class ToolContext:
+    """工具运行所需的运行时上下文。"""
+
+    scene: SceneStateManager
+    rag: AssetRAG
+    physics_enabled: bool = False
+    extras: Dict[str, Any] = field(default_factory=dict)
 
 
 @dataclass
 class ToolResult:
-    """Standardised return value from every tool execution."""
+    """所有工具的统一返回结构。"""
+
     ok: bool
-    result: Dict[str, Any] = field(default_factory=dict)
-    error: str = ""
+    data: Dict[str, Any] = field(default_factory=dict)
+    error: Optional[str] = None
 
     def to_dict(self) -> Dict[str, Any]:
-        d: Dict[str, Any] = {"ok": self.ok}
-        if self.ok:
-            d["result"] = self.result
-        else:
-            d["error"] = self.error
-        return d
+        return {"ok": self.ok, "data": self.data, "error": self.error}
 
 
-class BaseTool(ABC):
-    """Abstract base for all agent tools."""
+class Tool:
+    """工具接口。子类需要：
 
-    @property
-    @abstractmethod
-    def name(self) -> str:
-        """Machine-readable tool name, e.g. ``place_instance``."""
+    - 设置 ``name`` / ``description`` / OpenAI SDK 格式的 ``schema``
+    - 实现 ``run(context, **kwargs) -> ToolResult``
+    - 实现 ``run_test(context) -> ToolResult``
+    """
 
-    @property
-    @abstractmethod
-    def description(self) -> str:
-        """One-line Chinese description shown to the LLM."""
+    name: str = ""
+    description: str = ""
+    # OpenAI Responses API function tool schema. 输出统一是 ToolResult。
+    schema: Dict[str, Any] = {}
 
-    @property
-    @abstractmethod
-    def parameters_schema(self) -> Dict[str, Any]:
-        """JSON-Schema-style dict describing accepted parameters."""
+    def run(self, context: ToolContext, **kwargs: Any) -> ToolResult:
+        raise NotImplementedError
 
-    @property
-    def modifies_scene(self) -> bool:
-        """Return *True* if execution mutates the scene state."""
-        return True
+    def run_test(self, context: ToolContext) -> ToolResult:
+        raise NotImplementedError
 
-    @abstractmethod
-    def execute(self, params: Dict[str, Any], **ctx: Any) -> ToolResult:
-        """Run the tool. ``ctx`` carries shared objects (scene, embedder, ...)."""
+    # ---- 输入校验 ----
 
-    # ------------------------------------------------------------------
-    # Prompt helpers
-    # ------------------------------------------------------------------
+    def validate(self, kwargs: Dict[str, Any]) -> Optional[str]:
+        parameters = self.schema.get("parameters", {})
+        properties = parameters.get("properties", {})
+        required_fields = parameters.get("required", [])
+        for field_name in required_fields:
+            if field_name not in kwargs:
+                return f"missing required field: {field_name}"
+        unknown = set(kwargs) - set(properties)
+        if unknown:
+            return f"unknown fields: {sorted(unknown)}"
+        return None
 
-    def describe_for_prompt(self) -> str:
-        """Render a human/LLM-readable description of the tool."""
-        lines = [
-            f"工具名: {self.name}",
-            f"功能: {self.description}",
-            "参数:",
-        ]
-        for pname, spec in self.parameters_schema.items():
-            ptype = spec.get("type", "any")
-            required = spec.get("required", False)
-            desc = spec.get("description", "")
-            tag = "必填" if required else "可选"
-            lines.append(f"  - {pname} ({ptype}, {tag}): {desc}")
-        lines.append(f"修改场景: {'是' if self.modifies_scene else '否'}")
-        return "\n".join(lines)
-
-
-class ToolRegistry:
-    """Holds references to all available tools."""
-
-    def __init__(self) -> None:
-        self._tools: Dict[str, BaseTool] = {}
-
-    def register(self, tool: BaseTool) -> None:
-        self._tools[tool.name] = tool
-
-    def get(self, name: str) -> Optional[BaseTool]:
-        return self._tools.get(name)
-
-    def list_names(self) -> List[str]:
-        return list(self._tools.keys())
-
-    def is_scene_modifier(self, name: str) -> bool:
-        tool = self._tools.get(name)
-        return tool.modifies_scene if tool else False
-
-    def generate_tools_prompt(self) -> str:
-        """Generate a combined description block for all tools."""
-        sections = [t.describe_for_prompt() for t in self._tools.values()]
-        return "\n\n".join(sections)
-
-    def execute(
-        self,
-        tool_name: str,
-        params: Dict[str, Any],
-        **ctx: Any,
-    ) -> ToolResult:
-        tool = self._tools.get(tool_name)
-        if tool is None:
-            return ToolResult(ok=False, error=f"未知工具: {tool_name}")
+    def __call__(self, context: ToolContext, **kwargs: Any) -> ToolResult:
+        err = self.validate(kwargs)
+        if err is not None:
+            return ToolResult(ok=False, error=err)
         try:
-            return tool.execute(params, **ctx)
-        except Exception as exc:
+            return self.run(context, **kwargs)
+        except (ValueError, KeyError) as exc:
             return ToolResult(ok=False, error=str(exc))
+
+
+TOOL_REGISTRY: Dict[str, Tool] = {}
+
+
+def make_openai_tool_schema(
+    name: str,
+    description: str,
+    properties: Dict[str, Any],
+    required: Optional[List[str]] = None,
+) -> Dict[str, Any]:
+    """构造可直接传给 OpenAI SDK ``tools`` 参数的 function tool。
+
+    这里显式保留 ``strict=False``：当前工具有不少可选参数，如果让 Responses API
+    自动切到 strict 模式，会把可选字段也收紧成必填，改变现有调用语义。
+    """
+    return {
+        "type": "function",
+        "name": name,
+        "description": description,
+        "parameters": {
+            "type": "object",
+            "properties": properties,
+            "required": list(required or []),
+            "additionalProperties": False,
+        },
+        "strict": False,
+    }
+
+
+def register_tool(tool_cls: type) -> type:
+    instance = tool_cls()
+    if not instance.name:
+        raise ValueError(f"{tool_cls.__name__} 没有定义 name")
+    if instance.name in TOOL_REGISTRY:
+        raise ValueError(f"工具重复注册: {instance.name}")
+    TOOL_REGISTRY[instance.name] = instance
+    return tool_cls
+
+
+def list_tool_specs() -> List[Dict[str, Any]]:
+    """供 LLM prompt / OpenAI SDK ``tools`` 参数使用的工具规格列表。"""
+    return [tool.schema for tool in TOOL_REGISTRY.values()]
+
+
+def list_openai_tools() -> List[Dict[str, Any]]:
+    """显式语义化的别名：返回可直接传给 OpenAI SDK 的 tools 列表。"""
+    return list_tool_specs()
+
+
+__all__ = [
+    "Tool",
+    "ToolContext",
+    "ToolResult",
+    "TOOL_REGISTRY",
+    "list_openai_tools",
+    "make_openai_tool_schema",
+    "register_tool",
+    "list_tool_specs",
+]

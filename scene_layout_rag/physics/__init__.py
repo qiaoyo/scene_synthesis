@@ -1,22 +1,7 @@
-"""Physics simulation integration (optional -- requires Isaac Sim 5.1)."""
-from __future__ import annotations
+"""Physics integration boundary.
 
-ISAAC_AVAILABLE: bool = False
-
-try:
-    # Guard: only set True if the simulation app can be imported.
-    # The actual SimulationApp is NOT created here -- that happens
-    # inside IsaacBridge.__init__() because it must be a singleton
-    # and requires specific GPU/headless settings.
-    from isaacsim.simulation_app import SimulationApp as _SimApp  # noqa: F401
-    ISAAC_AVAILABLE = True
-except ImportError:
-    pass
-
-# Lazy imports -- avoid importing pxr at module level
-if ISAAC_AVAILABLE:
-    from .physics_validator import PhysicsValidator
-else:
-    PhysicsValidator = None  # type: ignore[assignment,misc]
-
-__all__ = ["ISAAC_AVAILABLE", "PhysicsValidator"]
+当前默认走 ``validators.run_static_simulation`` 做 AABB / 几何近似。后续接入
+IsaacSim 时只需实现 ``isaac_bridge.IsaacBridge`` 并在 ``Observer`` 里替换
+``physics_callable``，其它代码不需要改。
+"""
+from .isaac_bridge import IsaacBridge  # noqa: F401

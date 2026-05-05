@@ -1,48 +1,62 @@
-"""Move an existing asset to a new position."""
+"""move_asset — 平移已有实例。"""
 from __future__ import annotations
 
-from typing import Any, Dict
+from typing import Any, List
 
-from .base import BaseTool, ToolResult
+from ..data_models import Instance
+from .base import Tool, ToolContext, ToolResult, make_openai_tool_schema, register_tool
 
 
-class MoveAssetTool(BaseTool):
+@register_tool
+class MoveAssetTool(Tool):
     name = "move_asset"
-    description = "移动已有资产到新位置（也可用于调整Z轴高度）"
-
-    parameters_schema = {
-        "instance_id": {
-            "type": "str",
-            "required": True,
-            "description": "资产实例 ID，如 'Conveyor_1'",
+    description = "把场景中已存在的实例平移到 new_position。"
+    schema = make_openai_tool_schema(
+        name,
+        description,
+        {
+            "instance_id": {"type": "string", "description": "目标实例 id"},
+            "new_position": {
+                "type": "array",
+                "items": {"type": "number"},
+                "minItems": 3,
+                "maxItems": 3,
+                "description": "[x, y, z]，米",
+            },
         },
-        "new_position": {
-            "type": "list[float]",
-            "required": True,
-            "description": "新的世界坐标 [x, y, z]，单位米",
-        },
-    }
+        required=["instance_id", "new_position"],
+    )
 
-    def execute(self, params: Dict[str, Any], **ctx: Any) -> ToolResult:
-        scene = ctx.get("scene")
-        if scene is None:
-            return ToolResult(ok=False, error="scene 未提供")
-
-        instance_id = params.get("instance_id", "")
-        new_position = params.get("new_position")
-        if not instance_id or new_position is None:
-            return ToolResult(ok=False, error="instance_id 和 new_position 为必填参数")
-
-        asset = scene.get_asset(instance_id)
-        if asset is None:
-            return ToolResult(ok=False, error=f"未找到资产: {instance_id}")
-
-        old_position = list(asset.position)
-        new_pos = tuple(float(v) for v in new_position)
-        scene.move_asset(instance_id, new_pos)
-
-        return ToolResult(ok=True, result={
-            "instance_id": instance_id,
-            "old_position": old_position,
-            "new_position": list(new_pos),
+    def run(self, context: ToolContext, **kwargs: Any) -> ToolResult:
+        iid = str(kwargs["instance_id"])
+        new_pos = kwargs["new_position"]
+        if not isinstance(new_pos, (list, tuple)) or len(new_pos) != 3:
+            return ToolResult(ok=False, error="new_position 必须是长度为 3 的列表")
+        new_pos = [float(v) for v in new_pos]
+        old = list(context.scene.get(iid).position)
+        context.scene.move(iid, new_pos)
+        return ToolResult(ok=True, data={
+            "instance_id": iid,
+            "old_position": old,
+            "new_position": new_pos,
         })
+
+    def run_test(self, context: ToolContext) -> ToolResult:
+        instance_id = "__tool_test_move_asset"
+        if instance_id not in context.scene.state.instances:
+            context.scene.add_instance(Instance(
+                instance_id=instance_id,
+                asset_type="Box",
+                asset_doc_id="box-doc",
+                usd_path="/assets/box.usdz",
+                position=[0.0, 0.0, 0.5],
+                bbox_size=[1.0, 1.0, 1.0],
+            ))
+        result = self(context, instance_id=instance_id, new_position=[1.0, 2.0, 0.5])
+        if not result.ok:
+            return result
+        moved = context.scene.get(instance_id)
+        if moved.position != [1.0, 2.0, 0.5]:
+            return ToolResult(ok=False, error="move_asset run_test did not update position")
+        context.scene.delete(instance_id)
+        return ToolResult(ok=True, data={"tested": self.name})

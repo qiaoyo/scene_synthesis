@@ -1,71 +1,88 @@
-"""AABB collision detection tool."""
+"""check_collision — 主动检测碰撞。
+
+默认走 AABB；将来接 IsaacSim 时只需让 ``ToolContext.physics_enabled=True`` 并
+通过 ``context.extras['isaac_bridge']`` 注入 ``IsaacBridge`` 实例。
+"""
 from __future__ import annotations
 
-from typing import Any, Dict
+from typing import Any, Dict, List
 
-from .base import BaseTool, ToolResult
-
-
-def _aabb_overlap(pos_a: tuple, bbox_a: tuple, pos_b: tuple, bbox_b: tuple) -> float:
-    """Compute overlap volume between two axis-aligned bounding boxes.
-
-    Each box is centred at *pos* with half-extents *bbox/2*.
-    Returns 0.0 if the boxes do not overlap.
-    """
-    overlap = 1.0
-    for i in range(3):
-        a_min = pos_a[i] - bbox_a[i] / 2.0
-        a_max = pos_a[i] + bbox_a[i] / 2.0
-        b_min = pos_b[i] - bbox_b[i] / 2.0
-        b_max = pos_b[i] + bbox_b[i] / 2.0
-        lo = max(a_min, b_min)
-        hi = min(a_max, b_max)
-        if lo >= hi:
-            return 0.0
-        overlap *= hi - lo
-    return overlap
+from ..data_models import Instance
+from ..validators import aabb_collisions, aabb_overlap
+from .base import Tool, ToolContext, ToolResult, make_openai_tool_schema, register_tool
 
 
-class CheckCollisionTool(BaseTool):
+@register_tool
+class CheckCollisionTool(Tool):
     name = "check_collision"
-    description = "检测场景中的碰撞（AABB 包围盒检测）"
-
-    parameters_schema = {
-        "instance_id": {
-            "type": "str",
-            "required": False,
-            "description": "检查特定资产的碰撞；省略则检查全部",
+    description = "检测当前场景的所有 AABB 碰撞；可选地只检查某一对实例。"
+    schema = make_openai_tool_schema(
+        name,
+        description,
+        {
+            "instance_id_a": {"type": "string", "description": "若与 instance_id_b 同时给出，只比较这两个"},
+            "instance_id_b": {"type": "string", "description": "见上"},
         },
-    }
+    )
 
-    @property
-    def modifies_scene(self) -> bool:
-        return False
+    def run(self, context: ToolContext, **kwargs: Any) -> ToolResult:
+        a_id = kwargs.get("instance_id_a")
+        b_id = kwargs.get("instance_id_b")
+        bridge = context.extras.get("isaac_bridge") if context.physics_enabled else None
+        if bridge is not None:
+            # 留出真实物理通道
+            try:
+                contacts = bridge.query_contacts(context.scene.state)
+                return ToolResult(ok=True, data={"backend": "isaac", **contacts})
+            except NotImplementedError:
+                pass  # 退回 AABB
 
-    def execute(self, params: Dict[str, Any], **ctx: Any) -> ToolResult:
-        scene = ctx.get("scene")
-        if scene is None:
-            return ToolResult(ok=False, error="scene 未提供")
+        if a_id and b_id:
+            a = context.scene.get(a_id)
+            b = context.scene.get(b_id)
+            a_min, a_max = a.aabb()
+            b_min, b_max = b.aabb()
+            collision = aabb_overlap(a_min, a_max, b_min, b_max)
+            return ToolResult(ok=True, data={
+                "backend": "aabb",
+                "pair": [a_id, b_id],
+                "collision": bool(collision),
+            })
 
-        target_id = params.get("instance_id")
-        assets = list(scene.assets.values())
-        collisions = []
-
-        for i, a in enumerate(assets):
-            if target_id and a.instance_id != target_id:
-                continue
-            for b in assets[i + 1:] if not target_id else assets:
-                if a.instance_id == b.instance_id:
-                    continue
-                vol = _aabb_overlap(a.position, a.bbox, b.position, b.bbox)
-                if vol > 0:
-                    collisions.append({
-                        "a": a.instance_id,
-                        "b": b.instance_id,
-                        "overlap_volume": round(vol, 4),
-                    })
-
-        return ToolResult(ok=True, result={
-            "collision_count": len(collisions),
+        collisions: List[Dict[str, Any]] = aabb_collisions(context.scene.state)
+        return ToolResult(ok=True, data={
+            "backend": "aabb",
             "collisions": collisions,
+            "ok": len(collisions) == 0,
         })
+
+    def run_test(self, context: ToolContext) -> ToolResult:
+        a_id = "__tool_test_collision_a"
+        b_id = "__tool_test_collision_b"
+        for instance_id in (a_id, b_id):
+            if instance_id in context.scene.state.instances:
+                context.scene.delete(instance_id)
+        context.scene.add_instance(Instance(
+            instance_id=a_id,
+            asset_type="Box",
+            asset_doc_id="box-doc",
+            usd_path="/assets/box.usdz",
+            position=[0.0, 0.0, 0.5],
+            bbox_size=[1.0, 1.0, 1.0],
+        ))
+        context.scene.add_instance(Instance(
+            instance_id=b_id,
+            asset_type="Box",
+            asset_doc_id="box-doc",
+            usd_path="/assets/box.usdz",
+            position=[0.0, 0.0, 0.5],
+            bbox_size=[1.0, 1.0, 1.0],
+        ))
+        result = self(context, instance_id_a=a_id, instance_id_b=b_id)
+        if not result.ok:
+            return result
+        if result.data.get("collision") is not True:
+            return ToolResult(ok=False, error="check_collision run_test expected collision")
+        context.scene.delete(a_id)
+        context.scene.delete(b_id)
+        return ToolResult(ok=True, data={"tested": self.name})

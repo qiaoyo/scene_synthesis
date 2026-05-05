@@ -1,0 +1,693 @@
+{
+  "command": "Build a tiny demo sorting cell.",
+  "steps": [
+    {
+      "step": 0,
+      "thought": "Place conveyor as backbone of the sorting cell.",
+      "action": {
+        "tool": "place_instance",
+        "tool_input": {
+          "asset_doc_id": "Conveyor_with_bbox_meters-0-9bf3f109fc72d5c2",
+          "position": [
+            0,
+            0,
+            1.1555265
+          ]
+        }
+      },
+      "observation": {
+        "ok": true,
+        "tool_result": {
+          "ok": true,
+          "data": {
+            "instance_id": "Conveyor_1",
+            "asset_type": "Conveyor",
+            "position": [
+              0.0,
+              0.0,
+              1.1555265
+            ],
+            "bbox_size": [
+              4.081744,
+              8.029083,
+              2.311053
+            ],
+            "parent_instance_id": null
+          },
+          "error": null
+        },
+        "validation": {
+          "ok": true,
+          "tool_ok": true,
+          "collisions": []
+        },
+        "scene_semantics": {
+          "corridors": [],
+          "work_zones": [],
+          "flow_paths": [
+            {
+              "type": "conveyor",
+              "members": [
+                "Conveyor_1"
+              ],
+              "connected": true
+            }
+          ]
+        },
+        "support_state": {
+          "valid_relations": [],
+          "invalid_relations": []
+        },
+        "physics_feedback": {
+          "stable": true,
+          "fallen_assets": [],
+          "contacts": [],
+          "warnings": []
+        },
+        "suggestions": [],
+        "error": null
+      },
+      "reflection": null
+    },
+    {
+      "step": 1,
+      "thought": "Place a box on top of the conveyor, registering support.",
+      "action": {
+        "tool": "place_instance",
+        "tool_input": {
+          "asset_doc_id": "Box_with_bbox_meters-1-f500ce1701b5e46b",
+          "position": [
+            0,
+            0,
+            2.4408974999999997
+          ],
+          "parent_instance_id": "Conveyor_1"
+        }
+      },
+      "observation": {
+        "ok": true,
+        "tool_result": {
+          "ok": true,
+          "data": {
+            "instance_id": "Box_1",
+            "asset_type": "Box",
+            "position": [
+              0.0,
+              0.0,
+              2.4408974999999997
+            ],
+            "bbox_size": [
+              0.513243,
+              0.510562,
+              0.259689
+            ],
+            "parent_instance_id": "Conveyor_1"
+          },
+          "error": null
+        },
+        "validation": {
+          "ok": true,
+          "tool_ok": true,
+          "collisions": []
+        },
+        "scene_semantics": {
+          "corridors": [],
+          "work_zones": [],
+          "flow_paths": [
+            {
+              "type": "conveyor",
+              "members": [
+                "Conveyor_1"
+              ],
+              "connected": true
+            }
+          ]
+        },
+        "support_state": {
+          "valid_relations": [
+            {
+              "child": "Box_1",
+              "parent": "Conveyor_1",
+              "ok": true,
+              "z_gap": 0.0,
+              "xy_coverage": 1.0,
+              "issues": []
+            }
+          ],
+          "invalid_relations": []
+        },
+        "physics_feedback": {
+          "stable": true,
+          "fallen_assets": [],
+          "contacts": [
+            {
+              "child": "Box_1",
+              "parent": "Conveyor_1",
+              "type": "support"
+            }
+          ],
+          "warnings": []
+        },
+        "suggestions": [],
+        "error": null
+      },
+      "reflection": null
+    },
+    {
+      "step": 2,
+      "thought": "Move the box far away to break the support relation (intentional bug).",
+      "action": {
+        "tool": "move_asset",
+        "tool_input": {
+          "instance_id": "Box_1",
+          "new_position": [
+            10,
+            10,
+            1.0
+          ]
+        }
+      },
+      "observation": {
+        "ok": false,
+        "tool_result": {
+          "ok": true,
+          "data": {
+            "instance_id": "Box_1",
+            "old_position": [
+              0.0,
+              0.0,
+              2.4408974999999997
+            ],
+            "new_position": [
+              10.0,
+              10.0,
+              1.0
+            ]
+          },
+          "error": null
+        },
+        "validation": {
+          "ok": true,
+          "tool_ok": true,
+          "collisions": []
+        },
+        "scene_semantics": {
+          "corridors": [
+            {
+              "from": "Conveyor_1",
+              "to": "Box_1",
+              "width": 7.703,
+              "axis": "x",
+              "blocked": false
+            }
+          ],
+          "work_zones": [],
+          "flow_paths": [
+            {
+              "type": "conveyor",
+              "members": [
+                "Conveyor_1"
+              ],
+              "connected": true
+            }
+          ]
+        },
+        "support_state": {
+          "valid_relations": [],
+          "invalid_relations": [
+            {
+              "child": "Box_1",
+              "parent": "Conveyor_1",
+              "ok": false,
+              "z_gap": -1.4408974999999997,
+              "xy_coverage": 0.0,
+              "issues": [
+                "z_gap=-1.441 超出阈值 ±0.050",
+                "xy_coverage=0.00 低于阈值 0.40"
+              ]
+            }
+          ]
+        },
+        "physics_feedback": {
+          "stable": false,
+          "fallen_assets": [
+            "Box_1"
+          ],
+          "contacts": [
+            {
+              "child": "Box_1",
+              "parent": "Conveyor_1",
+              "type": "support"
+            }
+          ],
+          "warnings": [
+            "Box_1 不能稳定支撑在 Conveyor_1 上：z_gap=-1.441 超出阈值 ±0.050; xy_coverage=0.00 低于阈值 0.40"
+          ]
+        },
+        "suggestions": [
+          "支撑关系不稳: Box_1 在 Conveyor_1 上 - z_gap=-1.441 超出阈值 ±0.050; xy_coverage=0.00 低于阈值 0.40",
+          "物理告警: Box_1 不能稳定支撑在 Conveyor_1 上：z_gap=-1.441 超出阈值 ±0.050; xy_coverage=0.00 低于阈值 0.40"
+        ],
+        "error": null
+      },
+      "reflection": {
+        "summary": "violation observed",
+        "cause": "geometry/collision detected by validators",
+        "next_strategy": "Re-check parent bbox before placing children, and avoid colliding positions."
+      }
+    },
+    {
+      "step": 3,
+      "thought": "Place another box at exactly Conveyor_1 origin to force a collision.",
+      "action": {
+        "tool": "place_instance",
+        "tool_input": {
+          "asset_doc_id": "Box_with_bbox_meters-1-f500ce1701b5e46b",
+          "position": [
+            0,
+            0,
+            1.1555265
+          ],
+          "instance_id": "Box_2"
+        }
+      },
+      "observation": {
+        "ok": false,
+        "tool_result": {
+          "ok": true,
+          "data": {
+            "instance_id": "Box_2",
+            "asset_type": "Box",
+            "position": [
+              0.0,
+              0.0,
+              1.1555265
+            ],
+            "bbox_size": [
+              0.513243,
+              0.510562,
+              0.259689
+            ],
+            "parent_instance_id": null
+          },
+          "error": null
+        },
+        "validation": {
+          "ok": false,
+          "tool_ok": true,
+          "collisions": [
+            {
+              "a": "Conveyor_1",
+              "b": "Box_2",
+              "a_type": "Conveyor",
+              "b_type": "Box"
+            }
+          ]
+        },
+        "scene_semantics": {
+          "corridors": [
+            {
+              "from": "Conveyor_1",
+              "to": "Box_1",
+              "width": 7.703,
+              "axis": "x",
+              "blocked": false
+            },
+            {
+              "from": "Box_1",
+              "to": "Box_2",
+              "width": 9.487,
+              "axis": "x",
+              "blocked": false
+            }
+          ],
+          "work_zones": [],
+          "flow_paths": [
+            {
+              "type": "conveyor",
+              "members": [
+                "Conveyor_1"
+              ],
+              "connected": true
+            }
+          ]
+        },
+        "support_state": {
+          "valid_relations": [],
+          "invalid_relations": [
+            {
+              "child": "Box_1",
+              "parent": "Conveyor_1",
+              "ok": false,
+              "z_gap": -1.4408974999999997,
+              "xy_coverage": 0.0,
+              "issues": [
+                "z_gap=-1.441 超出阈值 ±0.050",
+                "xy_coverage=0.00 低于阈值 0.40"
+              ]
+            }
+          ]
+        },
+        "physics_feedback": {
+          "stable": false,
+          "fallen_assets": [
+            "Box_1",
+            "Box_2"
+          ],
+          "contacts": [
+            {
+              "child": "Box_1",
+              "parent": "Conveyor_1",
+              "type": "support"
+            }
+          ],
+          "warnings": [
+            "Box_1 不能稳定支撑在 Conveyor_1 上：z_gap=-1.441 超出阈值 ±0.050; xy_coverage=0.00 低于阈值 0.40",
+            "Box_2 底面悬空 (z_min=1.026)"
+          ]
+        },
+        "suggestions": [
+          "AABB 碰撞: Conveyor_1 (Conveyor) 与 Box_2 (Box)；考虑挪开或调整尺寸。",
+          "支撑关系不稳: Box_1 在 Conveyor_1 上 - z_gap=-1.441 超出阈值 ±0.050; xy_coverage=0.00 低于阈值 0.40",
+          "物理告警: Box_1 不能稳定支撑在 Conveyor_1 上：z_gap=-1.441 超出阈值 ±0.050; xy_coverage=0.00 低于阈值 0.40",
+          "物理告警: Box_2 底面悬空 (z_min=1.026)"
+        ],
+        "error": null
+      },
+      "reflection": {
+        "summary": "violation observed",
+        "cause": "geometry/collision detected by validators",
+        "next_strategy": "Re-check parent bbox before placing children, and avoid colliding positions."
+      }
+    },
+    {
+      "step": 4,
+      "thought": "Inspect.",
+      "action": {
+        "tool": "query_scene",
+        "tool_input": {}
+      },
+      "observation": {
+        "ok": false,
+        "tool_result": {
+          "ok": true,
+          "data": {
+            "instances": [
+              {
+                "instance_id": "Conveyor_1",
+                "asset_type": "Conveyor",
+                "asset_doc_id": "Conveyor_with_bbox_meters-0-9bf3f109fc72d5c2",
+                "position": [
+                  0.0,
+                  0.0,
+                  1.1555265
+                ],
+                "rotation_deg": 0.0,
+                "bbox_size": [
+                  4.081744,
+                  8.029083,
+                  2.311053
+                ],
+                "bbox_min": [
+                  -2.040872,
+                  -4.0145415,
+                  0.0
+                ],
+                "bbox_max": [
+                  2.040872,
+                  4.0145415,
+                  2.311053
+                ],
+                "parent_instance_id": null
+              },
+              {
+                "instance_id": "Box_1",
+                "asset_type": "Box",
+                "asset_doc_id": "Box_with_bbox_meters-1-f500ce1701b5e46b",
+                "position": [
+                  10.0,
+                  10.0,
+                  1.0
+                ],
+                "rotation_deg": 0.0,
+                "bbox_size": [
+                  0.513243,
+                  0.510562,
+                  0.259689
+                ],
+                "bbox_min": [
+                  9.7433785,
+                  9.744719,
+                  0.8701555
+                ],
+                "bbox_max": [
+                  10.2566215,
+                  10.255281,
+                  1.1298445
+                ],
+                "parent_instance_id": "Conveyor_1"
+              },
+              {
+                "instance_id": "Box_2",
+                "asset_type": "Box",
+                "asset_doc_id": "Box_with_bbox_meters-1-f500ce1701b5e46b",
+                "position": [
+                  0.0,
+                  0.0,
+                  1.1555265
+                ],
+                "rotation_deg": 0.0,
+                "bbox_size": [
+                  0.513243,
+                  0.510562,
+                  0.259689
+                ],
+                "bbox_min": [
+                  -0.2566215,
+                  -0.255281,
+                  1.025682
+                ],
+                "bbox_max": [
+                  0.2566215,
+                  0.255281,
+                  1.2853709999999998
+                ],
+                "parent_instance_id": null
+              }
+            ],
+            "support_children": {
+              "Conveyor_1": [
+                "Box_1"
+              ]
+            },
+            "instance_count": 3
+          },
+          "error": null
+        },
+        "validation": {
+          "ok": false,
+          "tool_ok": true,
+          "collisions": [
+            {
+              "a": "Conveyor_1",
+              "b": "Box_2",
+              "a_type": "Conveyor",
+              "b_type": "Box"
+            }
+          ]
+        },
+        "scene_semantics": {
+          "corridors": [
+            {
+              "from": "Conveyor_1",
+              "to": "Box_1",
+              "width": 7.703,
+              "axis": "x",
+              "blocked": false
+            },
+            {
+              "from": "Box_1",
+              "to": "Box_2",
+              "width": 9.487,
+              "axis": "x",
+              "blocked": false
+            }
+          ],
+          "work_zones": [],
+          "flow_paths": [
+            {
+              "type": "conveyor",
+              "members": [
+                "Conveyor_1"
+              ],
+              "connected": true
+            }
+          ]
+        },
+        "support_state": {
+          "valid_relations": [],
+          "invalid_relations": [
+            {
+              "child": "Box_1",
+              "parent": "Conveyor_1",
+              "ok": false,
+              "z_gap": -1.4408974999999997,
+              "xy_coverage": 0.0,
+              "issues": [
+                "z_gap=-1.441 超出阈值 ±0.050",
+                "xy_coverage=0.00 低于阈值 0.40"
+              ]
+            }
+          ]
+        },
+        "physics_feedback": {
+          "stable": false,
+          "fallen_assets": [
+            "Box_1",
+            "Box_2"
+          ],
+          "contacts": [
+            {
+              "child": "Box_1",
+              "parent": "Conveyor_1",
+              "type": "support"
+            }
+          ],
+          "warnings": [
+            "Box_1 不能稳定支撑在 Conveyor_1 上：z_gap=-1.441 超出阈值 ±0.050; xy_coverage=0.00 低于阈值 0.40",
+            "Box_2 底面悬空 (z_min=1.026)"
+          ]
+        },
+        "suggestions": [
+          "AABB 碰撞: Conveyor_1 (Conveyor) 与 Box_2 (Box)；考虑挪开或调整尺寸。",
+          "支撑关系不稳: Box_1 在 Conveyor_1 上 - z_gap=-1.441 超出阈值 ±0.050; xy_coverage=0.00 低于阈值 0.40",
+          "物理告警: Box_1 不能稳定支撑在 Conveyor_1 上：z_gap=-1.441 超出阈值 ±0.050; xy_coverage=0.00 低于阈值 0.40",
+          "物理告警: Box_2 底面悬空 (z_min=1.026)"
+        ],
+        "error": null
+      },
+      "reflection": {
+        "summary": "violation observed",
+        "cause": "geometry/collision detected by validators",
+        "next_strategy": "Re-check parent bbox before placing children, and avoid colliding positions."
+      }
+    },
+    {
+      "step": 5,
+      "thought": "Done.",
+      "action": {
+        "tool": "finish",
+        "tool_input": {
+          "reason": "demo done"
+        }
+      },
+      "observation": {
+        "ok": true,
+        "tool_result": {
+          "ok": true,
+          "data": {
+            "reason": "demo done"
+          }
+        }
+      },
+      "reflection": null
+    }
+  ],
+  "lessons": [
+    {
+      "situation": "action=move_asset: violation observed",
+      "mistake": "geometry/collision detected by validators",
+      "correction": "Re-check parent bbox before placing children, and avoid colliding positions."
+    },
+    {
+      "situation": "action=place_instance: violation observed",
+      "mistake": "geometry/collision detected by validators",
+      "correction": "Re-check parent bbox before placing children, and avoid colliding positions."
+    },
+    {
+      "situation": "action=query_scene: violation observed",
+      "mistake": "geometry/collision detected by validators",
+      "correction": "Re-check parent bbox before placing children, and avoid colliding positions."
+    }
+  ],
+  "strategy": "Always call query_scene before placing or moving assets to confirm coordinates.",
+  "final_scene": {
+    "instances": {
+      "Conveyor_1": {
+        "instance_id": "Conveyor_1",
+        "asset_type": "Conveyor",
+        "asset_doc_id": "Conveyor_with_bbox_meters-0-9bf3f109fc72d5c2",
+        "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Conveyor/ConveyorBelt_A16.usdz",
+        "position": [
+          0.0,
+          0.0,
+          1.1555265
+        ],
+        "rotation_deg": 0.0,
+        "bbox_size": [
+          4.081744,
+          8.029083,
+          2.311053
+        ],
+        "parent_instance_id": null,
+        "tags": {
+          "Shape": "circular",
+          "Directionality": "one-way",
+          "DNA": "DC(a)"
+        }
+      },
+      "Box_1": {
+        "instance_id": "Box_1",
+        "asset_type": "Box",
+        "asset_doc_id": "Box_with_bbox_meters-1-f500ce1701b5e46b",
+        "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Box/Cardbox_C1.usdz",
+        "position": [
+          10.0,
+          10.0,
+          1.0
+        ],
+        "rotation_deg": 0.0,
+        "bbox_size": [
+          0.513243,
+          0.510562,
+          0.259689
+        ],
+        "parent_instance_id": "Conveyor_1",
+        "tags": {
+          "Colsure": "Close",
+          "DNA": "DF(b)"
+        }
+      },
+      "Box_2": {
+        "instance_id": "Box_2",
+        "asset_type": "Box",
+        "asset_doc_id": "Box_with_bbox_meters-1-f500ce1701b5e46b",
+        "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Box/Cardbox_C1.usdz",
+        "position": [
+          0.0,
+          0.0,
+          1.1555265
+        ],
+        "rotation_deg": 0.0,
+        "bbox_size": [
+          0.513243,
+          0.510562,
+          0.259689
+        ],
+        "parent_instance_id": null,
+        "tags": {
+          "Colsure": "Close",
+          "DNA": "DF(b)"
+        }
+      }
+    },
+    "support_children": {
+      "Conveyor_1": [
+        "Box_1"
+      ]
+    },
+    "work_zones": [],
+    "notes": []
+  },
+  "finish_reason": "finish"
+}

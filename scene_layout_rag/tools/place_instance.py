@@ -1,85 +1,136 @@
-"""Place a new asset instance into the scene."""
+"""place_instance — 在场景中新增一个资产实例。
+
+输入要求：必须给出 ``asset_doc_id``（语料库里查到的真实资产）；位置 ``position``
+必填；``bbox_size`` 不传时从资产文档读取；可选 ``parent_instance_id`` 把
+新实例直接登记为某个已有实例的支撑子项。
+"""
 from __future__ import annotations
 
-from typing import Any, Dict
+from typing import Any, Dict, List, Optional
 
-from .base import BaseTool, ToolResult
+from ..data_models import AssetDocument, Instance
+from .base import Tool, ToolContext, ToolResult, make_openai_tool_schema, register_tool
 
 
-class PlaceInstanceTool(BaseTool):
+@register_tool
+class PlaceInstanceTool(Tool):
     name = "place_instance"
-    description = "在场景中放置一个新的资产实例"
+    description = "在场景中放置一个新资产实例。必须先用 retrieve_assets 拿到 asset_doc_id。"
+    schema = make_openai_tool_schema(
+        name,
+        description,
+        {
+            "asset_doc_id": {"type": "string", "description": "来自 corpus 的资产文档 id"},
+            "position": {
+                "type": "array",
+                "items": {"type": "number"},
+                "minItems": 3,
+                "maxItems": 3,
+                "description": "[x, y, z]，米",
+            },
+            "rotation_deg": {"type": "number", "description": "绕 Z 轴旋转角度，默认 0"},
+            "bbox_size": {
+                "type": "array",
+                "items": {"type": "number"},
+                "minItems": 3,
+                "maxItems": 3,
+                "description": "[sx, sy, sz]，缺省取资产文档的 bbox.size",
+            },
+            "instance_id": {"type": "string", "description": "自定义 id，缺省自动生成"},
+            "parent_instance_id": {"type": "string", "description": "若指定，则同时登记支撑关系"},
+        },
+        required=["asset_doc_id", "position"],
+    )
 
-    parameters_schema = {
-        "asset_id": {
-            "type": "str",
-            "required": True,
-            "description": "资产类别 ID，如 'Conveyor'",
-        },
-        "usd_path": {
-            "type": "str",
-            "required": True,
-            "description": "USD 模型文件路径",
-        },
-        "position": {
-            "type": "list[float]",
-            "required": True,
-            "description": "世界坐标 [x, y, z]，单位米",
-        },
-        "rotation": {
-            "type": "list[float]",
-            "required": False,
-            "description": "欧拉角 [rx, ry, rz]，单位度，默认 [0,0,0]",
-        },
-        "bbox": {
-            "type": "list[float]",
-            "required": False,
-            "description": "包围盒 [宽, 长, 高]，单位米",
-        },
-        "description": {
-            "type": "str",
-            "required": False,
-            "description": "语义描述（外观/用途）",
-        },
-    }
+    def run(self, context: ToolContext, **kwargs: Any) -> ToolResult:
+        doc_id = str(kwargs["asset_doc_id"])
+        position = _validate_vec3(kwargs["position"], "position")
+        rotation = float(kwargs.get("rotation_deg", 0.0))
 
-    def execute(self, params: Dict[str, Any], **ctx: Any) -> ToolResult:
-        scene = ctx.get("scene")
-        if scene is None:
-            return ToolResult(ok=False, error="scene 未提供")
+        doc = _find_doc(context, doc_id)
+        if doc is None:
+            return ToolResult(ok=False, error=f"asset_doc_id 不在语料库中: {doc_id}")
+        if doc.metadata.get("doc_type") != "asset":
+            return ToolResult(ok=False, error=f"asset_doc_id 必须指向 doc_type=asset 的文档: {doc_id}")
 
-        asset_id = params.get("asset_id", "")
-        usd_path = params.get("usd_path", "")
-        position = params.get("position")
-        if not asset_id or position is None:
-            return ToolResult(ok=False, error="asset_id 和 position 为必填参数")
+        asset_type = str(doc.metadata.get("asset_type") or "Unknown")
+        usd_path = str(doc.metadata.get("usd_path") or "")
+        bbox_size = kwargs.get("bbox_size") or doc.metadata.get("bbox_size") or [1.0, 1.0, 1.0]
+        bbox_size = _validate_vec3(bbox_size, "bbox_size")
 
-        position = tuple(float(v) for v in position)
-        rotation = tuple(float(v) for v in params.get("rotation", [0, 0, 0]))
-        raw_bbox = params.get("bbox")
-        if raw_bbox and isinstance(raw_bbox, (list, tuple)) and len(raw_bbox) == 3:
-            bbox = tuple(float(v) for v in raw_bbox)
-        elif isinstance(raw_bbox, dict) and "size" in raw_bbox:
-            bbox = tuple(float(v) for v in raw_bbox["size"])
-        else:
-            bbox = (1.0, 1.0, 1.0)
-        description = params.get("description", "")
+        instance_id = kwargs.get("instance_id") or context.scene.next_instance_id(asset_type)
+        if instance_id in context.scene.state.instances:
+            return ToolResult(ok=False, error=f"instance_id 已存在: {instance_id}")
 
-        from ..scene_state import AssetInstance
-        instance_id = scene.generate_instance_id(asset_id)
-        instance = AssetInstance(
+        inst = Instance(
             instance_id=instance_id,
-            asset_id=asset_id,
+            asset_type=asset_type,
+            asset_doc_id=doc_id,
             usd_path=usd_path,
-            position=position,
-            rotation=rotation,
-            bbox=bbox,
-            description=description,
+            position=list(position),
+            rotation_deg=rotation,
+            bbox_size=list(bbox_size),
+            tags=dict(doc.metadata.get("tags") or {}),
+            description=str(doc.metadata.get("description") or ""),
         )
-        scene.add_asset(instance)
+        context.scene.add_instance(inst)
 
-        return ToolResult(ok=True, result={
+        parent_id: Optional[str] = kwargs.get("parent_instance_id")
+        if parent_id:
+            try:
+                context.scene.set_support(instance_id, parent_id)
+            except (KeyError, ValueError) as exc:
+                # 放置成功但支撑登记失败，回滚实例避免不一致
+                context.scene.delete(instance_id)
+                return ToolResult(ok=False, error=f"set_support 失败: {exc}")
+
+        return ToolResult(ok=True, data={
             "instance_id": instance_id,
-            "position": list(position),
-            "bbox": list(bbox),
+            "asset_type": asset_type,
+            "usd_path": usd_path,
+            "position": inst.position,
+            "bbox_size": inst.bbox_size,
+            "parent_instance_id": parent_id,
+            "tags": inst.tags,
+            "description": inst.description,
         })
+
+    def run_test(self, context: ToolContext) -> ToolResult:
+        doc = _first_asset_doc(context)
+        if doc is None:
+            return ToolResult(ok=False, error="place_instance run_test found no asset docs")
+        result = self(
+            context,
+            asset_doc_id=doc.doc_id,
+            position=[0.0, 0.0, 0.5],
+        )
+        if not result.ok:
+            return result
+        
+        instance_id = result.data.get("instance_id")
+        if not instance_id:
+            return ToolResult(ok=False, error="place_instance run_test did not return instance_id")
+        if instance_id not in context.scene.state.instances:
+            return ToolResult(ok=False, error="place_instance run_test did not add instance")
+        context.scene.delete(instance_id)
+        return ToolResult(ok=True, data={"tested": self.name})
+
+
+def _validate_vec3(value: Any, label: str) -> List[float]:
+    if not isinstance(value, (list, tuple)) or len(value) != 3:
+        raise ValueError(f"{label} 必须是长度为 3 的列表")
+    return [float(v) for v in value]
+
+
+def _find_doc(context: ToolContext, doc_id: str):
+    for doc in context.rag.documents:
+        if doc.doc_id == doc_id:
+            return doc
+    return None
+
+
+def _first_asset_doc(context: ToolContext) -> Optional[AssetDocument]:
+    for doc in context.rag.documents:
+        if doc.metadata.get("doc_type") == "asset":
+            return doc
+    return None

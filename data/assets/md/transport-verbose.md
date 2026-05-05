@@ -6,6 +6,19 @@
 *  **单位与坐标系 (Units & Coordinate System):**
    *   **米(Meters Per Unit):**1.0
    *   **Up Axis:**Z
+*  **场景描述(Scene Describe):**  该场景展示了一个极具规模且高度规范化的工业自动化作业车间，其空间格局呈现出典型的矩阵式生产线布局。厂房背景展现了浓厚的工业质感，墙面采用了深褐色的工业护墙板，上方分布着密集的竖向格栅式采光窗，这种结构既保证了充足的自然光线，也维持了厂房内部的私密性与温控稳定性。车间左侧配备了一扇巨大的白色工业卷帘门，其简洁的设计预示着此处为主要的物料进出口或设备维护通道。地面铺设了具有大理石纹理的高强度复合工业地坪，深灰与红褐交织的色块不仅提升了空间的层次感，也具备卓越的耐磨与防滑性能，能够承载大型自动化设备的长期运行。在工业设备识别与排布方面，该场景的核心是呈对角线线性排列的六轴联动工业机器人阵列。图中清晰可见至少六台规格统一的黄色高性能工业机器人。这些机器人的涂装采用了醒目的柠檬黄，底座则通过白色的圆形稳固座与地面连接。每台机器人的机械臂均由三个主要关节段组成，具备极高的运动空间冗余度。机器人的末端执行器配备了精密的两指平行气动夹爪，此时正处于不同的作业姿态：前排的机器人手臂向下俯冲，似乎在准备抓取物料；而后排的机器人则保持着警戒或待命姿态。这种阶梯状的排布方式，不仅最大化地利用了横向的作业空间，也避免了各机器人作业半径之间的物理干涉，形成了极佳的视觉韵律感。与机器人阵列平行对应的是多条模块化的工业输送装置。这些输送机支架采用了轻量化的铝合金原色设计，结构简洁且坚固，每个模块下方由四个矩形立柱支撑。输送带表面覆盖着黑色的防滑合成材料，其宽度与机器人夹爪的抓取范围完美匹配。输送机被划分为多个独立的短距离单元，这种设计允许生产线根据具体的工艺流程进行快速重组或局部维护。在每台机器人身侧的地面上，还配置了一个蓝色的塑料物流周转框。这些料框的数量与机器人一一对应，用于存放分拣后的成品或待加工的半成品工件。从整体规划结构分析，该场景体现了极高的生产线柔性与标准化特征。区域划分逻辑极其严密：左侧区域预留为物流物流通道，中央区域为由“机器人+输送机+料框”构成的核心生产单元。设备间的排布关系呈现出“点对点”的精准协同模式，即每台机器人负责其正前方输送带上的物料流转，并将处理后的物料投放至身侧的蓝色料框中，或者从料框中拾取物料放置到输送带上。这种高度重复、等间距的布局方式是现代汽车制造、精密电子组装或重型零件码放车间的典型特征，它极大地优化了物流路径，降低了生产过程中的非增值时间。整个车间规划整齐划一，没有任何多余的杂物，展现了数字化工厂在空间管理与设备集成方面的极高水准。
+* **设备数量(Device Number):**
+  * **Scene: 1**
+  * **IndustrialRobot: 6**
+  * **Workbench: 0**
+  * **Conveyor: 6**
+  * **AGV: 6**
+  * **Forklift: 0**
+  * **Box: 6**
+  * **Rack: 0**
+  * **Pallet: 0**
+  * **Part: 0**
+  * **Decoration: 0**
 
 ## 2.场景对象层级(Scene Hierarchy)
 *   World (Xform)
@@ -254,8 +267,6 @@
                                 *   Cylinder001_01___Default_0 (Xform)
                                     *   Cylinder001_01___Default_0 (Mesh)
                         *   Object005 (Xform)
-                            *   Object005_01___Default_0 (Xform)
-                                *   Object005_01___Default_0 (Mesh)
     *   Robotic_Arm___Brazo_Robotico_01 (Xform)
         *   Materials (Scope)
             *   _1___Default (Material)
@@ -373,8 +384,6 @@
                                 *   Cylinder001_01___Default_0 (Xform)
                                     *   Cylinder001_01___Default_0 (Mesh)
                         *   Object005 (Xform)
-                            *   Object005_01___Default_0 (Xform)
-                                *   Object005_01___Default_0 (Mesh)
     *   Robotic_Arm___Brazo_Robotico_02 (Xform)
         *   Materials (Scope)
             *   _1___Default (Material)
@@ -492,8 +501,6 @@
                                 *   Cylinder001_01___Default_0 (Xform)
                                     *   Cylinder001_01___Default_0 (Mesh)
                         *   Object005 (Xform)
-                            *   Object005_01___Default_0 (Xform)
-                                *   Object005_01___Default_0 (Mesh)
     *   Robotic_Arm___Brazo_Robotico_03 (Xform)
         *   Materials (Scope)
             *   _1___Default (Material)
@@ -611,8 +618,6 @@
                                 *   Cylinder001_01___Default_0 (Xform)
                                     *   Cylinder001_01___Default_0 (Mesh)
                         *   Object005 (Xform)
-                            *   Object005_01___Default_0 (Xform)
-                                *   Object005_01___Default_0 (Mesh)
     *   Robotic_Arm___Brazo_Robotico_04 (Xform)
         *   Materials (Scope)
             *   _1___Default (Material)
@@ -730,8 +735,6 @@
                                 *   Cylinder001_01___Default_0 (Xform)
                                     *   Cylinder001_01___Default_0 (Mesh)
                         *   Object005 (Xform)
-                            *   Object005_01___Default_0 (Xform)
-                                *   Object005_01___Default_0 (Mesh)
     *   Robotic_Arm___Brazo_Robotico_05 (Xform)
         *   Materials (Scope)
             *   _1___Default (Material)
@@ -849,8 +852,6 @@
                                 *   Cylinder001_01___Default_0 (Xform)
                                     *   Cylinder001_01___Default_0 (Mesh)
                         *   Object005 (Xform)
-                            *   Object005_01___Default_0 (Xform)
-                                *   Object005_01___Default_0 (Mesh)
     *   AGV_ready_1 (Xform)
         *   Materials (Scope)
             *   ASELSAN_CATS_04 (Material)
@@ -3911,8 +3912,8 @@
 *  **外部引用 (Referenced USD Files):**
        *   [reference] '../assets/Robotic_Arm_-_Brazo_Robotico/Robotic_Arm_-_Brazo_Robotico.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(2.228, 3.000, 3.583)'
-   *   Center: '(10.500, -14.642, 1.670)'
+   *   Size: '(1.736, 2.613, 3.217)'
+   *   Center: '(10.500, -14.643, 1.556)'
 
 
 ---
@@ -3924,8 +3925,8 @@
 *  **外部引用 (Referenced USD Files):**
        *   [reference] '../assets/Robotic_Arm_-_Brazo_Robotico/Robotic_Arm_-_Brazo_Robotico.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(2.228, 3.000, 3.583)'
-   *   Center: '(5.500, -14.642, 1.670)'
+   *   Size: '(1.736, 2.613, 3.217)'
+   *   Center: '(5.500, -14.643, 1.556)'
 
 
 ---
@@ -3937,8 +3938,8 @@
 *  **外部引用 (Referenced USD Files):**
        *   [reference] '../assets/Robotic_Arm_-_Brazo_Robotico/Robotic_Arm_-_Brazo_Robotico.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(2.228, 3.000, 3.583)'
-   *   Center: '(0.500, -14.642, 1.670)'
+   *   Size: '(1.736, 2.613, 3.217)'
+   *   Center: '(0.500, -14.643, 1.556)'
 
 
 ---
@@ -3950,8 +3951,8 @@
 *  **外部引用 (Referenced USD Files):**
        *   [reference] '../assets/Robotic_Arm_-_Brazo_Robotico/Robotic_Arm_-_Brazo_Robotico.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(2.228, 3.000, 3.583)'
-   *   Center: '(-4.500, -14.642, 1.670)'
+   *   Size: '(1.736, 2.613, 3.217)'
+   *   Center: '(-4.500, -14.643, 1.556)'
 
 
 ---
@@ -3963,8 +3964,8 @@
 *  **外部引用 (Referenced USD Files):**
        *   [reference] '../assets/Robotic_Arm_-_Brazo_Robotico/Robotic_Arm_-_Brazo_Robotico.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(2.228, 3.000, 3.583)'
-   *   Center: '(-9.500, -14.642, 1.670)'
+   *   Size: '(1.736, 2.613, 3.217)'
+   *   Center: '(-9.500, -14.643, 1.556)'
 
 
 ---
@@ -3976,8 +3977,8 @@
 *  **外部引用 (Referenced USD Files):**
        *   [reference] '../assets/Robotic_Arm_-_Brazo_Robotico/Robotic_Arm_-_Brazo_Robotico.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(2.228, 3.000, 3.583)'
-   *   Center: '(-14.500, -14.642, 1.670)'
+   *   Size: '(1.736, 2.613, 3.217)'
+   *   Center: '(-14.500, -14.643, 1.556)'
 
 
 ---
@@ -3989,8 +3990,8 @@
 *  **外部引用 (Referenced USD Files):**
        *   [reference] '../assets/AGV_ready_1/AGV_ready_1.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(145.656, 34.004, 66.850)'
-   *   Center: '(3.182, -14.477, 0.213)'
+   *   Size: '(1.457, 0.340, 0.669)'
+   *   Center: '(3.497, -15.184, 0.155)'
 
 
 ---
@@ -4002,8 +4003,8 @@
 *  **外部引用 (Referenced USD Files):**
        *   [reference] '../assets/AGV_ready_1/AGV_ready_1.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(145.656, 34.004, 66.850)'
-   *   Center: '(-1.818, -14.477, 0.213)'
+   *   Size: '(1.457, 0.340, 0.669)'
+   *   Center: '(-1.503, -15.184, 0.155)'
 
 
 ---
@@ -4015,8 +4016,8 @@
 *  **外部引用 (Referenced USD Files):**
        *   [reference] '../assets/AGV_ready_1/AGV_ready_1.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(145.656, 34.004, 66.850)'
-   *   Center: '(-6.818, -14.477, 0.213)'
+   *   Size: '(1.457, 0.340, 0.669)'
+   *   Center: '(-6.503, -15.184, 0.155)'
 
 
 ---
@@ -4028,8 +4029,8 @@
 *  **外部引用 (Referenced USD Files):**
        *   [reference] '../assets/AGV_ready_1/AGV_ready_1.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(145.656, 34.004, 66.850)'
-   *   Center: '(-11.818, -14.477, 0.213)'
+   *   Size: '(1.457, 0.340, 0.669)'
+   *   Center: '(-11.503, -15.184, 0.155)'
 
 
 ---
@@ -4041,8 +4042,8 @@
 *  **外部引用 (Referenced USD Files):**
        *   [reference] '../assets/AGV_ready_1/AGV_ready_1.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(145.656, 34.004, 66.850)'
-   *   Center: '(8.182, -14.477, 0.213)'
+   *   Size: '(1.457, 0.340, 0.669)'
+   *   Center: '(8.497, -15.184, 0.155)'
 
 
 ---
@@ -4054,8 +4055,8 @@
 *  **外部引用 (Referenced USD Files):**
        *   [reference] '../assets/AGV_ready_1/AGV_ready_1.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(145.656, 34.004, 66.850)'
-   *   Center: '(-16.818, -14.477, 0.213)'
+   *   Size: '(1.457, 0.340, 0.669)'
+   *   Center: '(-16.503, -15.184, 0.155)'
 
 
 ---
@@ -4065,10 +4066,10 @@
 *  **Prim路径 (Prim Path):**/World/Plastic_Crate_1_
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '../assets/Plastic_Crate(1)/Plastic_Crate(1).usdc'
+       *   [reference] '../assets/Plastic_Crate(1)/Plastic_Crate.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(1.028, 0.884, 1.019)'
-   *   Center: '(8.300, -14.804, 0.811)'
+   *   Size: '(0.424, 0.365, 0.421)'
+   *   Center: '(9.217, -14.477, 0.549)'
 
 
 ---
@@ -4078,10 +4079,10 @@
 *  **Prim路径 (Prim Path):**/World/Plastic_Crate_1__01
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '../assets/Plastic_Crate(1)/Plastic_Crate(1).usdc'
+       *   [reference] '../assets/Plastic_Crate(1)/Plastic_Crate.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(1.028, 0.884, 1.019)'
-   *   Center: '(3.300, -14.804, 0.811)'
+   *   Size: '(0.424, 0.365, 0.421)'
+   *   Center: '(4.217, -14.477, 0.549)'
 
 
 ---
@@ -4091,10 +4092,10 @@
 *  **Prim路径 (Prim Path):**/World/Plastic_Crate_1__02
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '../assets/Plastic_Crate(1)/Plastic_Crate(1).usdc'
+       *   [reference] '../assets/Plastic_Crate(1)/Plastic_Crate.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(1.028, 0.884, 1.019)'
-   *   Center: '(-1.700, -14.804, 0.811)'
+   *   Size: '(0.424, 0.365, 0.421)'
+   *   Center: '(-0.783, -14.477, 0.549)'
 
 
 ---
@@ -4104,10 +4105,10 @@
 *  **Prim路径 (Prim Path):**/World/Plastic_Crate_1__03
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '../assets/Plastic_Crate(1)/Plastic_Crate(1).usdc'
+       *   [reference] '../assets/Plastic_Crate(1)/Plastic_Crate.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(1.028, 0.884, 1.019)'
-   *   Center: '(-6.700, -14.804, 0.811)'
+   *   Size: '(0.424, 0.365, 0.421)'
+   *   Center: '(-5.783, -14.477, 0.549)'
 
 
 ---
@@ -4117,10 +4118,10 @@
 *  **Prim路径 (Prim Path):**/World/Plastic_Crate_1__04
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '../assets/Plastic_Crate(1)/Plastic_Crate(1).usdc'
+       *   [reference] '../assets/Plastic_Crate(1)/Plastic_Crate.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(1.028, 0.884, 1.019)'
-   *   Center: '(-11.700, -14.804, 0.811)'
+   *   Size: '(0.424, 0.365, 0.421)'
+   *   Center: '(-10.783, -14.477, 0.549)'
 
 
 ---
@@ -4130,10 +4131,10 @@
 *  **Prim路径 (Prim Path):**/World/Plastic_Crate_1__05
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '../assets/Plastic_Crate(1)/Plastic_Crate(1).usdc'
+       *   [reference] '../assets/Plastic_Crate(1)/Plastic_Crate.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(1.028, 0.884, 1.019)'
-   *   Center: '(-16.700, -14.804, 0.811)'
+   *   Size: '(0.424, 0.365, 0.421)'
+   *   Center: '(-15.783, -14.477, 0.549)'
 
 
 ---

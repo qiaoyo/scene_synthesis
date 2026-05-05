@@ -6,79 +6,72 @@
 *  **单位与坐标系 (Units & Coordinate System):**
    *   **米(Meters Per Unit):**1.0
    *   **Up Axis:**Z
+*  **场景描述(Scene Describe):**  该场景展示了一个高度自动化且布局严整的智慧仓储中心，其空间格局呈现出典型的宽敞工业厂房特征，核心区域被划分为密集的货物存储区与宽阔的自动化拣选通道。厂房背景展现出稳重的工业风格，墙面由深褐色护墙板与整齐排布的竖向采光窗构成，保证了室内光环境的稳定。地面铺设了具有大理石质感的深灰色与红褐色复合型工业地坪，这种高强度地平不仅提升了车间的视觉档次，也为各类移动自动化设备提供了平稳、耐磨的行驶界面。车间的一侧预留了大型出入口，背景呈现黑色，暗示了与外部装卸平台或进料区的连接。在工业设备识别与排布方面，该场景采用了多组并列排布的重型仓储货架系统。这些货架框架采用了工业蓝色的喷涂钢件，横梁则为鲜艳的橙红色，这种高对比度的色彩组合不仅增强了结构识别度，也符合工业安全视觉标准。货架为双层或三层结构，每一层都承载着不同规格的包装货物：左侧货架上主要存放着印有标识的浅棕色中型纸箱；而右侧货架则承载着体型更庞大的木制出口包装箱，箱体上清晰可见各类物流标识和加固条。货架之间预留了足够宽阔的通道，以满足多台自动化设备的并行作业需求。该场景的自动化核心由多类智能移动机器人组成。首先，识别到一台体型较大的白色复合型移动机器人（Composite Mobile Robot），它集成了一个方正的移动底座和一台安装在顶部的多轴精密协作机械臂。机械臂末端配备了专用的抓取执行器，能够从货架上自主完成货物的存取动作。机器人的移动平台上还搭载了一个蓝色的物流塑料筐，用于存放拣选出的零散物料。此外，在地面通道中还部署了多台小型化的黄色穿梭车或搬运机器人。这些小型设备身形扁平，顶部具有载货平台，能够灵活地在货架底层或窄道中穿梭，执行长距离的物料转运任务。地面上散落分布着两个深蓝色的物流周转筐，作为临时的物料中转节点。从整体规划结构分析，该场景体现了现代物流系统“以空间换效率”的策略。区域划分逻辑清晰：两侧为静态的仓储货架区，中央为由复合机器人和搬运机器人构成的动态作业流。设备间的排布关系展现了高度的协同性——重型货架负责垂直维度的密度存储，复合机器人负责垂直与水平维度的精准拣选，而小型搬运设备则负责平面维度的快速补给。这种“立体存储+多机协同拣选”的规划方式，极大地缩减了传统仓库中人工寻找和搬运货物的时间，实现了物流数据的实时同步与作业流的高效闭环。整个场景没有任何余赘杂物，展现了工业4.0时代智慧仓储在空间优化与设备高度集成方面的卓越水平。
+* **设备数量(Device Number):**
+  * **Scene: 1**
+  * **IndustrialRobot: 1**
+  * **Workbench: 0**
+  * **Conveyor: 0**
+  * **AGV: 2**
+  * **Forklift: 0**
+  * **Box: 47**
+  * **Rack: 7**
+  * **Pallet: 0**
+  * **Part: 0**
+  * **Decoration: 0**
 
 ## 2.场景对象层级(Scene Hierarchy)
 *   World (Xform)
     *   factory (Xform)
-        *   Root (Xform)
-            *   Lights (Xform)
-                *   Lights (Xform)
-                    *   RectLight (RectLight)
-                    *   RectLight_01 (RectLight)
-                    *   RectLight_02 (RectLight)
-                    *   RectLight_03 (RectLight)
-                    *   RectLight_04 (RectLight)
-                    *   RectLight_05 (RectLight)
-                    *   Environment (Prim)
-                        *   sky (DomeLight)
-            *   MarkingLines (Xform)
-                *   MarkingLines (Xform)
-                    *   SM_WarehouseLine_A1 (Mesh)
-                    *   Looks (Scope)
-                        *   MarkingLines (Material)
-                            *   Shader (Shader)
-            *   Warehouse01 (Xform)
-                *   Warehouse01 (Xform)
-                    *   SM_YellowPaint_A1 (Mesh)
-                    *   SM_WhitePaint_B1 (Mesh)
-                    *   SM_WhitePaint_A1 (Mesh)
-                    *   SM_Metal_A1 (Mesh)
-                    *   SM_GlossyMetal_C1 (Mesh)
-                    *   SM_GlossyMetal_A1 (Mesh)
-                    *   SM_Gate_A1 (Mesh)
-                    *   SM_Floor_A1 (Mesh)
-                    *   SM_BluePaint_A1 (Mesh)
-                    *   SM_RoomWalls_A1 (Mesh)
-                    *   SM_Glass_A1 (Mesh)
-                    *   SM_Ceiling_A1 (Mesh)
-                    *   SM_GlassDoor_A1 (Mesh)
-                    *   SM_Gate_B1 (Mesh)
-                    *   SM_Lamp_A1 (Mesh)
-                    *   SM_GlossyMetal_B1 (Mesh)
-                    *   SM_Gate_C1 (Mesh)
-                    *   Looks (Scope)
-                        *   BluePaint (Material)
-                            *   Shader (Shader)
-                        *   Ceiling (Material)
-                            *   Shader (Shader)
-                        *   Floor (Material)
-                            *   Shader (Shader)
-                        *   Gate_A (Material)
-                            *   Shader (Shader)
-                        *   Gate_B (Material)
-                            *   Shader (Shader)
-                        *   Gate_C (Material)
-                            *   Shader (Shader)
-                        *   Glass (Material)
-                            *   Shader (Shader)
-                        *   GlossyMetal_A (Material)
-                            *   Shader (Shader)
-                        *   GlossyMetal_B (Material)
-                            *   Shader (Shader)
-                        *   GlossyMetal_C (Material)
-                            *   Shader (Shader)
-                        *   Lamp (Material)
-                            *   Shader (Shader)
-                        *   Metal_A (Material)
-                            *   Shader (Shader)
-                        *   RoomWalls (Material)
-                            *   Shader (Shader)
-                        *   WhitePaint_A (Material)
-                            *   Shader (Shader)
-                        *   WhitePaint_B (Material)
-                            *   Shader (Shader)
-                        *   YellowPaint (Material)
-                            *   Shader (Shader)
+        *   Materials (Scope)
+            *   WindowsIndustrial_frontSolid_OpenWindows_Mat (Material)
+                *   pbr_shader (Shader)
+                *   uvset0 (Shader)
+                *   tex_base (Shader)
+            *   WindowsIndustrial_frontSolid_Mat (Material)
+                *   pbr_shader (Shader)
+                *   uvset0 (Shader)
+                *   tex_base (Shader)
+            *   WindowsIndustrial_frontDoorclosed_Mat (Material)
+                *   pbr_shader (Shader)
+                *   uvset0 (Shader)
+                *   tex_base (Shader)
+            *   WindowsIndustrial_frontDoorOpen_Mat (Material)
+                *   pbr_shader (Shader)
+                *   uvset0 (Shader)
+                *   tex_base (Shader)
+            *   WindowsIndustrial_front_Mat (Material)
+                *   pbr_shader (Shader)
+                *   uvset0 (Shader)
+                *   tex_base (Shader)
+            *   _1___Default (Material)
+                *   pbr_shader (Shader)
+                *   uvset0 (Shader)
+                *   tex_base (Shader)
+            *   _0___Default (Material)
+                *   pbr_shader (Shader)
+                *   uvset0 (Shader)
+                *   tex_base (Shader)
+        *   Meshes (Xform)
+            *   Sketchfab_model (Xform)
+                *   cc020ec10d3e484ab6eb350963eb38d0_fbx (Xform)
+                    *   RootNode (Xform)
+                        *   Factory002 (Xform)
+                            *   Factory002_WindowsIndustrial_frontSolid_OpenWindows_Mat_0 (Xform)
+                                *   Factory002_WindowsIndustrial_frontSolid_OpenWindows_Mat_0 (Mesh)
+                            *   Factory002_WindowsIndustrial_frontSolid_Mat_0 (Xform)
+                                *   Factory002_WindowsIndustrial_frontSolid_Mat_0 (Mesh)
+                            *   Factory002_WindowsIndustrial_frontDoorclosed_Mat_0 (Xform)
+                                *   Factory002_WindowsIndustrial_frontDoorclosed_Mat_0 (Mesh)
+                            *   Factory002_WindowsIndustrial_frontDoorOpen_Mat_0 (Xform)
+                                *   Factory002_WindowsIndustrial_frontDoorOpen_Mat_0 (Mesh)
+                            *   Factory002_WindowsIndustrial_front_Mat_0 (Xform)
+                                *   Factory002_WindowsIndustrial_front_Mat_0 (Mesh)
+                            *   Factory002_11___Default_0 (Xform)
+                                *   Factory002_11___Default_0 (Mesh)
+                        *   Object001 (Xform)
+                            *   Object001_20___Default_0 (Xform)
+                                *   Object001_20___Default_0 (Mesh)
     *   RackLargeEmpty_A1 (Xform)
         *   RackLargeEmpty_A1 (Xform)
             *   RackLegs_A1_2x4_01 (Mesh)
@@ -1506,19 +1499,6 @@
                             *   Object_4 (Xform)
                                 *   Box003_Material__1_0 (Xform)
                                     *   Box003_Material__1_0 (Mesh)
-    *   carton_08 (Xform)
-        *   Materials (Scope)
-            *   _6___Default (Material)
-                *   pbr_shader (Shader)
-                *   uvset0 (Shader)
-                *   tex_base (Shader)
-        *   Meshes (Xform)
-            *   Sketchfab_model (Xform)
-                *   f49ad5edc352496894d3a02181012422_fbx (Xform)
-                    *   RootNode (Xform)
-                        *   Box072 (Xform)
-                            *   Box072_06___Default_0 (Xform)
-                                *   Box072_06___Default_0 (Mesh)
     *   Cardbox_A1_04 (Xform)
         *   Cardbox_A1 (Mesh)
         *   Looks (Scope)
@@ -1598,6 +1578,13 @@
     *   Cardbox_D3_06 (Prim)
 *   Environment (Xform)
     *   defaultLight (DistantLight)
+*   Render (Prim)
+    *   OmniverseKit (Prim)
+        *   HydraTextures (Prim)
+            *   omni_kit_widget_viewport_ViewportTexture_0 (RenderProduct)
+    *   OmniverseGlobalRenderSettings (RenderSettings)
+    *   Vars (Prim)
+        *   LdrColor (RenderVar)
 
 ## 3. 对象详细描述 (Detailed Prim Descriptions)
 
@@ -1605,10 +1592,10 @@
 *  **Prim路径 (Prim Path):**/World/factory
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '../scene/factory.usdz'
+       *   [reference] '../scene/factory/factory.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(228.000, 231.523, 53.960)'
-   *   Center: '(0.542, 0.599, 0.000)'
+   *   Size: '(49.139, 19.897, 67.754)'
+   *   Center: '(4.932, -39.847, -17.842)'
 
 
 ---
@@ -1633,8 +1620,8 @@
 *  **外部引用 (Referenced USD Files):**
        *   [reference] '../assets/carton/carton.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(1.436, 1.436, 1.436)'
-   *   Center: '(-8.086, -49.397, -25.756)'
+   *   Size: '(35.888, 35.888, 35.888)'
+   *   Center: '(-8.086, -49.397, -26.294)'
 
 
 ---
@@ -1646,8 +1633,8 @@
 *  **外部引用 (Referenced USD Files):**
        *   [reference] '../assets/carton/carton.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(1.436, 1.436, 1.436)'
-   *   Center: '(-9.885, -49.306, -25.756)'
+   *   Size: '(35.888, 35.888, 35.888)'
+   *   Center: '(-9.885, -49.306, -26.294)'
 
 
 ---
@@ -1659,8 +1646,8 @@
 *  **外部引用 (Referenced USD Files):**
        *   [reference] '../assets/carton/carton.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(1.436, 1.436, 1.436)'
-   *   Center: '(-9.885, -49.306, -23.866)'
+   *   Size: '(35.888, 35.888, 35.888)'
+   *   Center: '(-9.885, -49.306, -24.405)'
 
 
 ---
@@ -1672,8 +1659,8 @@
 *  **外部引用 (Referenced USD Files):**
        *   [reference] '../assets/carton/carton.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(1.436, 1.436, 1.436)'
-   *   Center: '(-8.086, -49.397, -23.866)'
+   *   Size: '(35.888, 35.888, 35.888)'
+   *   Center: '(-8.086, -49.397, -24.405)'
 
 
 ---
@@ -1971,8 +1958,8 @@
 *  **外部引用 (Referenced USD Files):**
        *   [reference] '../assets/carton/carton.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(1.436, 1.436, 1.436)'
-   *   Center: '(4.820, -49.397, -23.866)'
+   *   Size: '(35.888, 35.888, 35.888)'
+   *   Center: '(4.820, -49.397, -24.405)'
 
 
 ---
@@ -1984,8 +1971,8 @@
 *  **外部引用 (Referenced USD Files):**
        *   [reference] '../assets/carton/carton.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(1.436, 1.436, 1.436)'
-   *   Center: '(3.022, -49.306, -23.866)'
+   *   Size: '(35.888, 35.888, 35.888)'
+   *   Center: '(3.022, -49.306, -24.405)'
 
 
 ---
@@ -1997,8 +1984,8 @@
 *  **外部引用 (Referenced USD Files):**
        *   [reference] '../assets/carton/carton.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(1.436, 1.436, 1.436)'
-   *   Center: '(3.022, -49.306, -25.756)'
+   *   Size: '(35.888, 35.888, 35.888)'
+   *   Center: '(3.022, -49.306, -26.294)'
 
 
 ---
@@ -2010,8 +1997,8 @@
 *  **外部引用 (Referenced USD Files):**
        *   [reference] '../assets/carton/carton.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(1.436, 1.436, 1.436)'
-   *   Center: '(4.820, -49.397, -25.756)'
+   *   Size: '(35.888, 35.888, 35.888)'
+   *   Center: '(4.820, -49.397, -26.294)'
 
 
 ---
@@ -2127,8 +2114,8 @@
 *  **外部引用 (Referenced USD Files):**
        *   [reference] '../assets/AGV_ready_1/AGV_ready_1.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(145.656, 34.004, 66.850)'
-   *   Center: '(4.489, -46.069, -26.921)'
+   *   Size: '(1.457, 0.340, 0.669)'
+   *   Center: '(3.782, -46.384, -26.979)'
 
 
 ---
@@ -2164,10 +2151,10 @@
 *  **Prim路径 (Prim Path):**/World/Plastic_Crate_1_
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '../assets/Plastic_Crate(1)/Plastic_Crate(1).usdc'
+       *   [reference] '../assets/Plastic_Crate(1)/Plastic_Crate.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(1.028, 0.884, 1.019)'
-   *   Center: '(7.480, -41.092, -26.533)'
+   *   Size: '(0.424, 0.365, 0.421)'
+   *   Center: '(5.058, -46.349, -26.796)'
 
 
 ---
@@ -2177,23 +2164,10 @@
 *  **Prim路径 (Prim Path):**/World/Plastic_Crate_1__01
 *  **Prim类型 (Prim Type):**Xform
 *  **外部引用 (Referenced USD Files):**
-       *   [reference] '../assets/Plastic_Crate(1)/Plastic_Crate(1).usdc'
+       *   [reference] '../assets/Plastic_Crate(1)/Plastic_Crate.usdc'
 *  **世界包围盒 (World BBox):**
-   *   Size: '(1.028, 0.884, 1.019)'
-   *   Center: '(-1.808, -46.020, -25.199)'
-
-
----
-
-
-### /World/carton_08
-*  **Prim路径 (Prim Path):**/World/carton_08
-*  **Prim类型 (Prim Type):**Xform
-*  **外部引用 (Referenced USD Files):**
-       *   [reference] '../assets/carton/carton.usdc'
-*  **世界包围盒 (World BBox):**
-   *   Size: '(1.436, 1.436, 1.436)'
-   *   Center: '(-8.881, -39.200, -22.897)'
+   *   Size: '(0.424, 0.365, 0.421)'
+   *   Center: '(-1.785, -46.006, -25.461)'
 
 
 ---
@@ -2383,477 +2357,267 @@
 
 ## 4. 材质库 (Material Library)
 
-### /World/factory/Root/MarkingLines/MarkingLines/Looks/MarkingLines
-*  **Prim路径 (Prim Path):**/World/factory/Root/MarkingLines/MarkingLines/Looks/MarkingLines
+### /World/factory/Materials/WindowsIndustrial_frontSolid_OpenWindows_Mat
+*  **Prim路径 (Prim Path):**/World/factory/Materials/WindowsIndustrial_frontSolid_OpenWindows_Mat
 *  **Prim类型 (Prim Type):**Material
 *  **材质网络 (Material & Shader Details):**
    *   **Surface Outputs:**
-       *   'outputs:surface'
-       *   'outputs:mdl:surface' -> '/World/factory/Root/MarkingLines/MarkingLines/Looks/MarkingLines/Shader'
-       *   Connection: 'out' (Output)'
+       *   'outputs:surface' -> '/World/factory/Materials/WindowsIndustrial_frontSolid_OpenWindows_Mat/pbr_shader'
+       *   Shader ID: 'UsdPreviewSurface'
+       *   Connection: 'surface' (Output)'
    *   **Shader 节点 (Shader Nodes):**
-       *   '/World/factory/Root/MarkingLines/MarkingLines/Looks/MarkingLines/Shader'
-       *   Implementation: 'sourceAsset'
-       *   Source Assets:
-           *   [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
+       *   '/World/factory/Materials/WindowsIndustrial_frontSolid_OpenWindows_Mat/pbr_shader' (ID: 'UsdPreviewSurface')
+       *   Implementation: 'id'
        *   Inputs:
-           *   'diffuse_color_constant' [color3f] = '(0.941, 0.678, 0.169)'
-           *   'reflection_roughness_texture_influence' [float] = '0.5'
-
-
----
-
-
-### /World/factory/Root/Warehouse01/Warehouse01/Looks/BluePaint
-*  **Prim路径 (Prim Path):**/World/factory/Root/Warehouse01/Warehouse01/Looks/BluePaint
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface'
-       *   'outputs:mdl:surface' -> '/World/factory/Root/Warehouse01/Warehouse01/Looks/BluePaint/Shader'
-       *   Connection: 'out' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/factory/Root/Warehouse01/Warehouse01/Looks/BluePaint/Shader'
-       *   Implementation: 'sourceAsset'
-       *   Source Assets:
-           *   [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
+           *   'diffuseColor' [color3f]
+               *   Connected: '/World/factory/Materials/WindowsIndustrial_frontSolid_OpenWindows_Mat/tex_base.outputs:rgb' @ '/World/factory/Materials/WindowsIndustrial_frontSolid_OpenWindows_Mat/tex_base'
+                   *   Shader ID: 'UsdUVTexture'
+                   *   Texture: '0/WindowsIndustrial-frontSolid-OpenWindows_Mat_baseColor.jpg'
+           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
+           *   'metallic' [float] = '0'
+           *   'normal' [normal3f] = '(1.000, 1.000, 1.000)'
+           *   'occlusion' [float] = '1'
+           *   'roughness' [float] = '0.957705'
+       *   '/World/factory/Materials/WindowsIndustrial_frontSolid_OpenWindows_Mat/tex_base' (ID: 'UsdUVTexture')
+       *   Implementation: 'id'
        *   纹理引用 (Texture Assets):
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_YellowPaint_A1_Normal.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_YellowPaint_A1_ORM.png'
+           *   '0/WindowsIndustrial-frontSolid-OpenWindows_Mat_baseColor.jpg'
        *   Inputs:
-           *   'diffuse_color_constant' [color3f] = '(0.196, 0.278, 0.455)'
-           *   'metallic_texture_influence' [float] = '1'
-           *   'normalmap_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_YellowPaint_A1_Normal.png'
-           *   'ORM_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_YellowPaint_A1_ORM.png'
-           *   'reflection_roughness_texture_influence' [float] = '1'
+           *   'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
+           *   'file' [asset] = '0/WindowsIndustrial-frontSolid-OpenWindows_Mat_baseColor.jpg'
+           *   'st' [float2]
+               *   Connected: '/World/factory/Materials/WindowsIndustrial_frontSolid_OpenWindows_Mat/uvset0.outputs:result' @ '/World/factory/Materials/WindowsIndustrial_frontSolid_OpenWindows_Mat/uvset0'
+                   *   Shader ID: 'UsdPrimvarReader_float2'
+       *   '/World/factory/Materials/WindowsIndustrial_frontSolid_OpenWindows_Mat/uvset0' (ID: 'UsdPrimvarReader_float2')
+       *   Implementation: 'id'
 
 
 ---
 
 
-### /World/factory/Root/Warehouse01/Warehouse01/Looks/Ceiling
-*  **Prim路径 (Prim Path):**/World/factory/Root/Warehouse01/Warehouse01/Looks/Ceiling
+### /World/factory/Materials/WindowsIndustrial_frontSolid_Mat
+*  **Prim路径 (Prim Path):**/World/factory/Materials/WindowsIndustrial_frontSolid_Mat
 *  **Prim类型 (Prim Type):**Material
 *  **材质网络 (Material & Shader Details):**
    *   **Surface Outputs:**
-       *   'outputs:surface'
-       *   'outputs:mdl:surface' -> '/World/factory/Root/Warehouse01/Warehouse01/Looks/Ceiling/Shader'
-       *   Connection: 'out' (Output)'
+       *   'outputs:surface' -> '/World/factory/Materials/WindowsIndustrial_frontSolid_Mat/pbr_shader'
+       *   Shader ID: 'UsdPreviewSurface'
+       *   Connection: 'surface' (Output)'
    *   **Shader 节点 (Shader Nodes):**
-       *   '/World/factory/Root/Warehouse01/Warehouse01/Looks/Ceiling/Shader'
-       *   Implementation: 'sourceAsset'
-       *   Source Assets:
-           *   [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
+       *   '/World/factory/Materials/WindowsIndustrial_frontSolid_Mat/pbr_shader' (ID: 'UsdPreviewSurface')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'diffuseColor' [color3f]
+               *   Connected: '/World/factory/Materials/WindowsIndustrial_frontSolid_Mat/tex_base.outputs:rgb' @ '/World/factory/Materials/WindowsIndustrial_frontSolid_Mat/tex_base'
+                   *   Shader ID: 'UsdUVTexture'
+                   *   Texture: '0/WindowsIndustrial-frontSolid_Mat_baseColor.jpg'
+           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
+           *   'metallic' [float] = '0'
+           *   'normal' [normal3f] = '(1.000, 1.000, 1.000)'
+           *   'occlusion' [float] = '1'
+           *   'roughness' [float] = '0.957705'
+       *   '/World/factory/Materials/WindowsIndustrial_frontSolid_Mat/tex_base' (ID: 'UsdUVTexture')
+       *   Implementation: 'id'
        *   纹理引用 (Texture Assets):
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Ceiling_A1_Albedo.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Ceiling_A1_Emissive.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Ceiling_A1_Normal.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Ceiling_A1_ORM.png'
+           *   '0/WindowsIndustrial-frontSolid_Mat_baseColor.jpg'
        *   Inputs:
-           *   'albedo_add' [float] = '0.75'
-           *   'diffuse_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Ceiling_A1_Albedo.png'
-           *   'emissive_color' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'emissive_color_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Ceiling_A1_Emissive.png'
-           *   'emissive_intensity' [float] = '10000'
-           *   'metallic_texture_influence' [float] = '1'
-           *   'normalmap_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Ceiling_A1_Normal.png'
-           *   'ORM_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Ceiling_A1_ORM.png'
-           *   'reflection_roughness_texture_influence' [float] = '1'
+           *   'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
+           *   'file' [asset] = '0/WindowsIndustrial-frontSolid_Mat_baseColor.jpg'
+           *   'st' [float2]
+               *   Connected: '/World/factory/Materials/WindowsIndustrial_frontSolid_Mat/uvset0.outputs:result' @ '/World/factory/Materials/WindowsIndustrial_frontSolid_Mat/uvset0'
+                   *   Shader ID: 'UsdPrimvarReader_float2'
+       *   '/World/factory/Materials/WindowsIndustrial_frontSolid_Mat/uvset0' (ID: 'UsdPrimvarReader_float2')
+       *   Implementation: 'id'
 
 
 ---
 
 
-### /World/factory/Root/Warehouse01/Warehouse01/Looks/Floor
-*  **Prim路径 (Prim Path):**/World/factory/Root/Warehouse01/Warehouse01/Looks/Floor
+### /World/factory/Materials/WindowsIndustrial_frontDoorclosed_Mat
+*  **Prim路径 (Prim Path):**/World/factory/Materials/WindowsIndustrial_frontDoorclosed_Mat
 *  **Prim类型 (Prim Type):**Material
 *  **材质网络 (Material & Shader Details):**
    *   **Surface Outputs:**
-       *   'outputs:surface'
-       *   'outputs:mdl:surface' -> '/World/factory/Root/Warehouse01/Warehouse01/Looks/Floor/Shader'
-       *   Connection: 'out' (Output)'
+       *   'outputs:surface' -> '/World/factory/Materials/WindowsIndustrial_frontDoorclosed_Mat/pbr_shader'
+       *   Shader ID: 'UsdPreviewSurface'
+       *   Connection: 'surface' (Output)'
    *   **Shader 节点 (Shader Nodes):**
-       *   '/World/factory/Root/Warehouse01/Warehouse01/Looks/Floor/Shader'
-       *   Implementation: 'sourceAsset'
-       *   Source Assets:
-           *   [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
+       *   '/World/factory/Materials/WindowsIndustrial_frontDoorclosed_Mat/pbr_shader' (ID: 'UsdPreviewSurface')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'diffuseColor' [color3f]
+               *   Connected: '/World/factory/Materials/WindowsIndustrial_frontDoorclosed_Mat/tex_base.outputs:rgb' @ '/World/factory/Materials/WindowsIndustrial_frontDoorclosed_Mat/tex_base'
+                   *   Shader ID: 'UsdUVTexture'
+                   *   Texture: '0/WindowsIndustrial-frontDoorclosed_Mat_baseColor.jpg'
+           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
+           *   'metallic' [float] = '0'
+           *   'normal' [normal3f] = '(1.000, 1.000, 1.000)'
+           *   'occlusion' [float] = '1'
+           *   'roughness' [float] = '0.957705'
+       *   '/World/factory/Materials/WindowsIndustrial_frontDoorclosed_Mat/tex_base' (ID: 'UsdUVTexture')
+       *   Implementation: 'id'
        *   纹理引用 (Texture Assets):
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Floor_A1_Albedo.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Floor_A1_Normal.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Floor_A1_ORM.png'
+           *   '0/WindowsIndustrial-frontDoorclosed_Mat_baseColor.jpg'
        *   Inputs:
-           *   'diffuse_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Floor_A1_Albedo.png'
-           *   'metallic_texture_influence' [float] = '1'
-           *   'normalmap_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Floor_A1_Normal.png'
-           *   'ORM_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Floor_A1_ORM.png'
-           *   'reflection_roughness_texture_influence' [float] = '1'
-           *   'texture_scale' [float2] = '(0.250, 0.250)'
+           *   'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
+           *   'file' [asset] = '0/WindowsIndustrial-frontDoorclosed_Mat_baseColor.jpg'
+           *   'st' [float2]
+               *   Connected: '/World/factory/Materials/WindowsIndustrial_frontDoorclosed_Mat/uvset0.outputs:result' @ '/World/factory/Materials/WindowsIndustrial_frontDoorclosed_Mat/uvset0'
+                   *   Shader ID: 'UsdPrimvarReader_float2'
+       *   '/World/factory/Materials/WindowsIndustrial_frontDoorclosed_Mat/uvset0' (ID: 'UsdPrimvarReader_float2')
+       *   Implementation: 'id'
 
 
 ---
 
 
-### /World/factory/Root/Warehouse01/Warehouse01/Looks/Gate_A
-*  **Prim路径 (Prim Path):**/World/factory/Root/Warehouse01/Warehouse01/Looks/Gate_A
+### /World/factory/Materials/WindowsIndustrial_frontDoorOpen_Mat
+*  **Prim路径 (Prim Path):**/World/factory/Materials/WindowsIndustrial_frontDoorOpen_Mat
 *  **Prim类型 (Prim Type):**Material
 *  **材质网络 (Material & Shader Details):**
    *   **Surface Outputs:**
-       *   'outputs:surface'
-       *   'outputs:mdl:surface' -> '/World/factory/Root/Warehouse01/Warehouse01/Looks/Gate_A/Shader'
-       *   Connection: 'out' (Output)'
+       *   'outputs:surface' -> '/World/factory/Materials/WindowsIndustrial_frontDoorOpen_Mat/pbr_shader'
+       *   Shader ID: 'UsdPreviewSurface'
+       *   Connection: 'surface' (Output)'
    *   **Shader 节点 (Shader Nodes):**
-       *   '/World/factory/Root/Warehouse01/Warehouse01/Looks/Gate_A/Shader'
-       *   Implementation: 'sourceAsset'
-       *   Source Assets:
-           *   [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
+       *   '/World/factory/Materials/WindowsIndustrial_frontDoorOpen_Mat/pbr_shader' (ID: 'UsdPreviewSurface')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'diffuseColor' [color3f]
+               *   Connected: '/World/factory/Materials/WindowsIndustrial_frontDoorOpen_Mat/tex_base.outputs:rgb' @ '/World/factory/Materials/WindowsIndustrial_frontDoorOpen_Mat/tex_base'
+                   *   Shader ID: 'UsdUVTexture'
+                   *   Texture: '0/WindowsIndustrial-frontDoorOpen_Mat_baseColor.jpg'
+           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
+           *   'metallic' [float] = '0'
+           *   'normal' [normal3f] = '(1.000, 1.000, 1.000)'
+           *   'occlusion' [float] = '1'
+           *   'roughness' [float] = '0.957705'
+       *   '/World/factory/Materials/WindowsIndustrial_frontDoorOpen_Mat/tex_base' (ID: 'UsdUVTexture')
+       *   Implementation: 'id'
        *   纹理引用 (Texture Assets):
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Gate_A1_Albedo.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Gate_A1_Normal.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Gate_A1_ORM.png'
+           *   '0/WindowsIndustrial-frontDoorOpen_Mat_baseColor.jpg'
        *   Inputs:
-           *   'diffuse_color_constant' [color3f] = '(1.000, 1.000, 1.000)'
-           *   'diffuse_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Gate_A1_Albedo.png'
-           *   'emissive_color' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'emissive_intensity' [float] = '5000'
-           *   'metallic_texture_influence' [float] = '1'
-           *   'normalmap_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Gate_A1_Normal.png'
-           *   'ORM_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Gate_A1_ORM.png'
-           *   'reflection_roughness_texture_influence' [float] = '1'
+           *   'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
+           *   'file' [asset] = '0/WindowsIndustrial-frontDoorOpen_Mat_baseColor.jpg'
+           *   'st' [float2]
+               *   Connected: '/World/factory/Materials/WindowsIndustrial_frontDoorOpen_Mat/uvset0.outputs:result' @ '/World/factory/Materials/WindowsIndustrial_frontDoorOpen_Mat/uvset0'
+                   *   Shader ID: 'UsdPrimvarReader_float2'
+       *   '/World/factory/Materials/WindowsIndustrial_frontDoorOpen_Mat/uvset0' (ID: 'UsdPrimvarReader_float2')
+       *   Implementation: 'id'
 
 
 ---
 
 
-### /World/factory/Root/Warehouse01/Warehouse01/Looks/Gate_B
-*  **Prim路径 (Prim Path):**/World/factory/Root/Warehouse01/Warehouse01/Looks/Gate_B
+### /World/factory/Materials/WindowsIndustrial_front_Mat
+*  **Prim路径 (Prim Path):**/World/factory/Materials/WindowsIndustrial_front_Mat
 *  **Prim类型 (Prim Type):**Material
 *  **材质网络 (Material & Shader Details):**
    *   **Surface Outputs:**
-       *   'outputs:surface'
-       *   'outputs:mdl:surface' -> '/World/factory/Root/Warehouse01/Warehouse01/Looks/Gate_B/Shader'
-       *   Connection: 'out' (Output)'
+       *   'outputs:surface' -> '/World/factory/Materials/WindowsIndustrial_front_Mat/pbr_shader'
+       *   Shader ID: 'UsdPreviewSurface'
+       *   Connection: 'surface' (Output)'
    *   **Shader 节点 (Shader Nodes):**
-       *   '/World/factory/Root/Warehouse01/Warehouse01/Looks/Gate_B/Shader'
-       *   Implementation: 'sourceAsset'
-       *   Source Assets:
-           *   [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
+       *   '/World/factory/Materials/WindowsIndustrial_front_Mat/pbr_shader' (ID: 'UsdPreviewSurface')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'diffuseColor' [color3f]
+               *   Connected: '/World/factory/Materials/WindowsIndustrial_front_Mat/tex_base.outputs:rgb' @ '/World/factory/Materials/WindowsIndustrial_front_Mat/tex_base'
+                   *   Shader ID: 'UsdUVTexture'
+                   *   Texture: '0/WindowsIndustrial-front_Mat_baseColor.jpg'
+           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
+           *   'metallic' [float] = '0'
+           *   'normal' [normal3f] = '(1.000, 1.000, 1.000)'
+           *   'occlusion' [float] = '1'
+           *   'roughness' [float] = '0.957705'
+       *   '/World/factory/Materials/WindowsIndustrial_front_Mat/tex_base' (ID: 'UsdUVTexture')
+       *   Implementation: 'id'
        *   纹理引用 (Texture Assets):
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Gate_B_Albedo.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Gate_B_Normal.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Gate_B_ORM.png'
+           *   '0/WindowsIndustrial-front_Mat_baseColor.jpg'
        *   Inputs:
-           *   'diffuse_color_constant' [color3f] = '(1.000, 1.000, 1.000)'
-           *   'diffuse_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Gate_B_Albedo.png'
-           *   'metallic_texture_influence' [float] = '1'
-           *   'normalmap_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Gate_B_Normal.png'
-           *   'ORM_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Gate_B_ORM.png'
-           *   'reflection_roughness_texture_influence' [float] = '1'
+           *   'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
+           *   'file' [asset] = '0/WindowsIndustrial-front_Mat_baseColor.jpg'
+           *   'st' [float2]
+               *   Connected: '/World/factory/Materials/WindowsIndustrial_front_Mat/uvset0.outputs:result' @ '/World/factory/Materials/WindowsIndustrial_front_Mat/uvset0'
+                   *   Shader ID: 'UsdPrimvarReader_float2'
+       *   '/World/factory/Materials/WindowsIndustrial_front_Mat/uvset0' (ID: 'UsdPrimvarReader_float2')
+       *   Implementation: 'id'
 
 
 ---
 
 
-### /World/factory/Root/Warehouse01/Warehouse01/Looks/Gate_C
-*  **Prim路径 (Prim Path):**/World/factory/Root/Warehouse01/Warehouse01/Looks/Gate_C
+### /World/factory/Materials/_1___Default
+*  **Prim路径 (Prim Path):**/World/factory/Materials/_1___Default
 *  **Prim类型 (Prim Type):**Material
 *  **材质网络 (Material & Shader Details):**
    *   **Surface Outputs:**
-       *   'outputs:surface'
-       *   'outputs:mdl:surface' -> '/World/factory/Root/Warehouse01/Warehouse01/Looks/Gate_C/Shader'
-       *   Connection: 'out' (Output)'
+       *   'outputs:surface' -> '/World/factory/Materials/_1___Default/pbr_shader'
+       *   Shader ID: 'UsdPreviewSurface'
+       *   Connection: 'surface' (Output)'
    *   **Shader 节点 (Shader Nodes):**
-       *   '/World/factory/Root/Warehouse01/Warehouse01/Looks/Gate_C/Shader'
-       *   Implementation: 'sourceAsset'
-       *   Source Assets:
-           *   [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
+       *   '/World/factory/Materials/_1___Default/pbr_shader' (ID: 'UsdPreviewSurface')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'diffuseColor' [color3f]
+               *   Connected: '/World/factory/Materials/_1___Default/tex_base.outputs:rgb' @ '/World/factory/Materials/_1___Default/tex_base'
+                   *   Shader ID: 'UsdUVTexture'
+                   *   Texture: '0/11_-_Default_baseColor.jpg'
+           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
+           *   'metallic' [float] = '0'
+           *   'normal' [normal3f] = '(1.000, 1.000, 1.000)'
+           *   'occlusion' [float] = '1'
+           *   'roughness' [float] = '0.892971'
+       *   '/World/factory/Materials/_1___Default/tex_base' (ID: 'UsdUVTexture')
+       *   Implementation: 'id'
        *   纹理引用 (Texture Assets):
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Gate_C1_Albedo.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Gate_C1_Normal.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Gate_C1_ORM.png'
+           *   '0/11_-_Default_baseColor.jpg'
        *   Inputs:
-           *   'diffuse_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Gate_C1_Albedo.png'
-           *   'metallic_texture_influence' [float] = '1'
-           *   'normalmap_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Gate_C1_Normal.png'
-           *   'ORM_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Gate_C1_ORM.png'
-           *   'reflection_roughness_texture_influence' [float] = '1'
+           *   'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
+           *   'file' [asset] = '0/11_-_Default_baseColor.jpg'
+           *   'st' [float2]
+               *   Connected: '/World/factory/Materials/_1___Default/uvset0.outputs:result' @ '/World/factory/Materials/_1___Default/uvset0'
+                   *   Shader ID: 'UsdPrimvarReader_float2'
+       *   '/World/factory/Materials/_1___Default/uvset0' (ID: 'UsdPrimvarReader_float2')
+       *   Implementation: 'id'
 
 
 ---
 
 
-### /World/factory/Root/Warehouse01/Warehouse01/Looks/Glass
-*  **Prim路径 (Prim Path):**/World/factory/Root/Warehouse01/Warehouse01/Looks/Glass
+### /World/factory/Materials/_0___Default
+*  **Prim路径 (Prim Path):**/World/factory/Materials/_0___Default
 *  **Prim类型 (Prim Type):**Material
 *  **材质网络 (Material & Shader Details):**
    *   **Surface Outputs:**
-       *   'outputs:surface'
-       *   'outputs:mdl:surface' -> '/World/factory/Root/Warehouse01/Warehouse01/Looks/Glass/Shader'
-       *   Connection: 'out' (Output)'
+       *   'outputs:surface' -> '/World/factory/Materials/_0___Default/pbr_shader'
+       *   Shader ID: 'UsdPreviewSurface'
+       *   Connection: 'surface' (Output)'
    *   **Shader 节点 (Shader Nodes):**
-       *   '/World/factory/Root/Warehouse01/Warehouse01/Looks/Glass/Shader'
-       *   Implementation: 'sourceAsset'
-       *   Source Assets:
-           *   [mdl] 'OmniGlass.mdl' (Sub Id: 'OmniGlass')
+       *   '/World/factory/Materials/_0___Default/pbr_shader' (ID: 'UsdPreviewSurface')
+       *   Implementation: 'id'
        *   Inputs:
-           *   'cutout_opacity' [float] = '0'
-           *   'glass_ior' [float] = '1.52'
-
-
----
-
-
-### /World/factory/Root/Warehouse01/Warehouse01/Looks/GlossyMetal_A
-*  **Prim路径 (Prim Path):**/World/factory/Root/Warehouse01/Warehouse01/Looks/GlossyMetal_A
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface'
-       *   'outputs:mdl:surface' -> '/World/factory/Root/Warehouse01/Warehouse01/Looks/GlossyMetal_A/Shader'
-       *   Connection: 'out' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/factory/Root/Warehouse01/Warehouse01/Looks/GlossyMetal_A/Shader'
-       *   Implementation: 'sourceAsset'
-       *   Source Assets:
-           *   [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
+           *   'diffuseColor' [color3f]
+               *   Connected: '/World/factory/Materials/_0___Default/tex_base.outputs:rgb' @ '/World/factory/Materials/_0___Default/tex_base'
+                   *   Shader ID: 'UsdUVTexture'
+                   *   Texture: '0/20_-_Default_baseColor.jpg'
+           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
+           *   'metallic' [float] = '0'
+           *   'normal' [normal3f] = '(1.000, 1.000, 1.000)'
+           *   'occlusion' [float] = '1'
+           *   'roughness' [float] = '0.892971'
+       *   '/World/factory/Materials/_0___Default/tex_base' (ID: 'UsdUVTexture')
+       *   Implementation: 'id'
        *   纹理引用 (Texture Assets):
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_GlossyMetal_A1_Albedo.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_GlossyMetal_A1_Normal.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_GlossyMetal_A1_ORM.png'
+           *   '0/20_-_Default_baseColor.jpg'
        *   Inputs:
-           *   'diffuse_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_GlossyMetal_A1_Albedo.png'
-           *   'metallic_texture_influence' [float] = '1'
-           *   'normalmap_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_GlossyMetal_A1_Normal.png'
-           *   'ORM_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_GlossyMetal_A1_ORM.png'
-           *   'reflection_roughness_texture_influence' [float] = '1'
-           *   'texture_rotate' [float] = '90'
-
-
----
-
-
-### /World/factory/Root/Warehouse01/Warehouse01/Looks/GlossyMetal_B
-*  **Prim路径 (Prim Path):**/World/factory/Root/Warehouse01/Warehouse01/Looks/GlossyMetal_B
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface'
-       *   'outputs:mdl:surface' -> '/World/factory/Root/Warehouse01/Warehouse01/Looks/GlossyMetal_B/Shader'
-       *   Connection: 'out' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/factory/Root/Warehouse01/Warehouse01/Looks/GlossyMetal_B/Shader'
-       *   Implementation: 'sourceAsset'
-       *   Source Assets:
-           *   [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-       *   纹理引用 (Texture Assets):
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_GlossyMetal_B1_Albedo.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_GlossyMetal_B1_Normal.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_GlossyMetal_B1_ORM.png'
-       *   Inputs:
-           *   'diffuse_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_GlossyMetal_B1_Albedo.png'
-           *   'metallic_texture_influence' [float] = '1'
-           *   'normalmap_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_GlossyMetal_B1_Normal.png'
-           *   'ORM_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_GlossyMetal_B1_ORM.png'
-           *   'reflection_roughness_texture_influence' [float] = '1'
-
-
----
-
-
-### /World/factory/Root/Warehouse01/Warehouse01/Looks/GlossyMetal_C
-*  **Prim路径 (Prim Path):**/World/factory/Root/Warehouse01/Warehouse01/Looks/GlossyMetal_C
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface'
-       *   'outputs:mdl:surface' -> '/World/factory/Root/Warehouse01/Warehouse01/Looks/GlossyMetal_C/Shader'
-       *   Connection: 'out' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/factory/Root/Warehouse01/Warehouse01/Looks/GlossyMetal_C/Shader'
-       *   Implementation: 'sourceAsset'
-       *   Source Assets:
-           *   [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-       *   纹理引用 (Texture Assets):
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_GlossyMetal_C1_Albedo.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_GlossyMetal_C1_Normal.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_GlossyMetal_C1_ORM.png'
-       *   Inputs:
-           *   'diffuse_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_GlossyMetal_C1_Albedo.png'
-           *   'metallic_texture_influence' [float] = '1'
-           *   'normalmap_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_GlossyMetal_C1_Normal.png'
-           *   'ORM_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_GlossyMetal_C1_ORM.png'
-           *   'reflection_roughness_texture_influence' [float] = '1'
-
-
----
-
-
-### /World/factory/Root/Warehouse01/Warehouse01/Looks/Lamp
-*  **Prim路径 (Prim Path):**/World/factory/Root/Warehouse01/Warehouse01/Looks/Lamp
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface'
-       *   'outputs:mdl:surface' -> '/World/factory/Root/Warehouse01/Warehouse01/Looks/Lamp/Shader'
-       *   Connection: 'out' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/factory/Root/Warehouse01/Warehouse01/Looks/Lamp/Shader'
-       *   Implementation: 'sourceAsset'
-       *   Source Assets:
-           *   [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-       *   纹理引用 (Texture Assets):
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Lamp_A1_Albedo.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Lamp_A1_Emissive.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Lamp_A1_Normal.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Lamp_A1_ORM.png'
-       *   Inputs:
-           *   'diffuse_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Lamp_A1_Albedo.png'
-           *   'emissive_color' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'emissive_color_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Lamp_A1_Emissive.png'
-           *   'emissive_intensity' [float] = '10000'
-           *   'metallic_texture_influence' [float] = '1'
-           *   'normalmap_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Lamp_A1_Normal.png'
-           *   'ORM_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Lamp_A1_ORM.png'
-           *   'reflection_roughness_texture_influence' [float] = '1'
-
-
----
-
-
-### /World/factory/Root/Warehouse01/Warehouse01/Looks/Metal_A
-*  **Prim路径 (Prim Path):**/World/factory/Root/Warehouse01/Warehouse01/Looks/Metal_A
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface'
-       *   'outputs:mdl:surface' -> '/World/factory/Root/Warehouse01/Warehouse01/Looks/Metal_A/Shader'
-       *   Connection: 'out' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/factory/Root/Warehouse01/Warehouse01/Looks/Metal_A/Shader'
-       *   Implementation: 'sourceAsset'
-       *   Source Assets:
-           *   [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-       *   纹理引用 (Texture Assets):
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Metal_A1_Albedo.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Metal_A1_Normal.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Metal_A1_ORM.png'
-       *   Inputs:
-           *   'diffuse_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Metal_A1_Albedo.png'
-           *   'metallic_texture_influence' [float] = '1'
-           *   'normalmap_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Metal_A1_Normal.png'
-           *   'ORM_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_Metal_A1_ORM.png'
-           *   'reflection_roughness_texture_influence' [float] = '1'
-
-
----
-
-
-### /World/factory/Root/Warehouse01/Warehouse01/Looks/RoomWalls
-*  **Prim路径 (Prim Path):**/World/factory/Root/Warehouse01/Warehouse01/Looks/RoomWalls
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface'
-       *   'outputs:mdl:surface' -> '/World/factory/Root/Warehouse01/Warehouse01/Looks/RoomWalls/Shader'
-       *   Connection: 'out' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/factory/Root/Warehouse01/Warehouse01/Looks/RoomWalls/Shader'
-       *   Implementation: 'sourceAsset'
-       *   Source Assets:
-           *   [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-       *   纹理引用 (Texture Assets):
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_RoomWalls_A1_Albedo.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_RoomWalls_A1_Normal.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_RoomWalls_A1_ORM.png'
-       *   Inputs:
-           *   'diffuse_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_RoomWalls_A1_Albedo.png'
-           *   'metallic_texture_influence' [float] = '1'
-           *   'normalmap_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_RoomWalls_A1_Normal.png'
-           *   'ORM_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_RoomWalls_A1_ORM.png'
-           *   'reflection_roughness_texture_influence' [float] = '1'
-
-
----
-
-
-### /World/factory/Root/Warehouse01/Warehouse01/Looks/WhitePaint_A
-*  **Prim路径 (Prim Path):**/World/factory/Root/Warehouse01/Warehouse01/Looks/WhitePaint_A
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface'
-       *   'outputs:mdl:surface' -> '/World/factory/Root/Warehouse01/Warehouse01/Looks/WhitePaint_A/Shader'
-       *   Connection: 'out' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/factory/Root/Warehouse01/Warehouse01/Looks/WhitePaint_A/Shader'
-       *   Implementation: 'sourceAsset'
-       *   Source Assets:
-           *   [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-       *   纹理引用 (Texture Assets):
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_WhitePaint_A1_Albedo.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_WhitePaint_A1_Normal.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_WhitePaint_A1_ORM.png'
-       *   Inputs:
-           *   'diffuse_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_WhitePaint_A1_Albedo.png'
-           *   'metallic_texture_influence' [float] = '1'
-           *   'normalmap_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_WhitePaint_A1_Normal.png'
-           *   'ORM_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_WhitePaint_A1_ORM.png'
-           *   'reflection_roughness_texture_influence' [float] = '1'
-
-
----
-
-
-### /World/factory/Root/Warehouse01/Warehouse01/Looks/WhitePaint_B
-*  **Prim路径 (Prim Path):**/World/factory/Root/Warehouse01/Warehouse01/Looks/WhitePaint_B
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface'
-       *   'outputs:mdl:surface' -> '/World/factory/Root/Warehouse01/Warehouse01/Looks/WhitePaint_B/Shader'
-       *   Connection: 'out' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/factory/Root/Warehouse01/Warehouse01/Looks/WhitePaint_B/Shader'
-       *   Implementation: 'sourceAsset'
-       *   Source Assets:
-           *   [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-       *   纹理引用 (Texture Assets):
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_WhitePaint_B1_Albedo.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_WhitePaint_B1_Normal.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_WhitePaint_B1_ORM.png'
-       *   Inputs:
-           *   'diffuse_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_WhitePaint_B1_Albedo.png'
-           *   'metallic_texture_influence' [float] = '1'
-           *   'normalmap_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_WhitePaint_B1_Normal.png'
-           *   'ORM_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_WhitePaint_B1_ORM.png'
-           *   'reflection_roughness_texture_influence' [float] = '1'
-
-
----
-
-
-### /World/factory/Root/Warehouse01/Warehouse01/Looks/YellowPaint
-*  **Prim路径 (Prim Path):**/World/factory/Root/Warehouse01/Warehouse01/Looks/YellowPaint
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface'
-       *   'outputs:mdl:surface' -> '/World/factory/Root/Warehouse01/Warehouse01/Looks/YellowPaint/Shader'
-       *   Connection: 'out' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/factory/Root/Warehouse01/Warehouse01/Looks/YellowPaint/Shader'
-       *   Implementation: 'sourceAsset'
-       *   Source Assets:
-           *   [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-       *   纹理引用 (Texture Assets):
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_YellowPaint_A1_Albedo.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_YellowPaint_A1_Normal.png'
-           *   '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_YellowPaint_A1_ORM.png'
-       *   Inputs:
-           *   'diffuse_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_YellowPaint_A1_Albedo.png'
-           *   'metallic_texture_influence' [float] = '1'
-           *   'normalmap_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_YellowPaint_A1_Normal.png'
-           *   'ORM_texture' [asset] = '/media/simple/another_Documents/isaacsim_assets/Assets/new/Industrial_NVD@10012/Assets/ArchVis/Industrial/Buildings/Warehouse/Textures/T_YellowPaint_A1_ORM.png'
-           *   'reflection_roughness_texture_influence' [float] = '1'
+           *   'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
+           *   'file' [asset] = '0/20_-_Default_baseColor.jpg'
+           *   'st' [float2]
+               *   Connected: '/World/factory/Materials/_0___Default/uvset0.outputs:result' @ '/World/factory/Materials/_0___Default/uvset0'
+                   *   Shader ID: 'UsdPrimvarReader_float2'
+       *   '/World/factory/Materials/_0___Default/uvset0' (ID: 'UsdPrimvarReader_float2')
+       *   Implementation: 'id'
 
 
 ---
@@ -9013,44 +8777,6 @@
                *   Connected: '/World/Plastic_Crate_1__01/Materials/Material_1/uvset0.outputs:result' @ '/World/Plastic_Crate_1__01/Materials/Material_1/uvset0'
                    *   Shader ID: 'UsdPrimvarReader_float2'
        *   '/World/Plastic_Crate_1__01/Materials/Material_1/uvset0' (ID: 'UsdPrimvarReader_float2')
-       *   Implementation: 'id'
-
-
----
-
-
-### /World/carton_08/Materials/_6___Default
-*  **Prim路径 (Prim Path):**/World/carton_08/Materials/_6___Default
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/carton_08/Materials/_6___Default/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/carton_08/Materials/_6___Default/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f]
-               *   Connected: '/World/carton_08/Materials/_6___Default/tex_base.outputs:rgb' @ '/World/carton_08/Materials/_6___Default/tex_base'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/06_-_Default_baseColor.jpg'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(1.000, 1.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.892971'
-       *   '/World/carton_08/Materials/_6___Default/tex_base' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/06_-_Default_baseColor.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
-           *   'file' [asset] = '0/06_-_Default_baseColor.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/carton_08/Materials/_6___Default/uvset0.outputs:result' @ '/World/carton_08/Materials/_6___Default/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/carton_08/Materials/_6___Default/uvset0' (ID: 'UsdPrimvarReader_float2')
        *   Implementation: 'id'
 
 

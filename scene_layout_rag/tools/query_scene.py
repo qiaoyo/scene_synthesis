@@ -1,85 +1,73 @@
-"""Query the current scene state."""
+"""query_scene — 查询当前场景状态。
+
+按 ``方案/优化.md`` 重新定义为：行动前的「就绪检查」工具，返回 LLM 决策需要的
+精确数据，包括实例列表、bbox、支撑关系、空闲空间统计等。
+"""
 from __future__ import annotations
 
-from typing import Any, Dict
+from typing import Any, Dict, List, Optional
 
-from .base import BaseTool, ToolResult
+from ..data_models import Instance
+from .base import Tool, ToolContext, ToolResult, make_openai_tool_schema, register_tool
 
 
-class QuerySceneTool(BaseTool):
+@register_tool
+class QuerySceneTool(Tool):
     name = "query_scene"
-    description = "查询当前场景状态，获取资产列表、统计信息或单个资产详情"
-
-    parameters_schema = {
-        "instance_id": {
-            "type": "str",
-            "required": False,
-            "description": "查询特定资产的详情，如 'Conveyor_1'",
+    description = "返回当前场景的精确状态，供 LLM 在决策前读取（实例尺寸、位置、支撑关系等）。"
+    schema = make_openai_tool_schema(
+        name,
+        description,
+        {
+            "instance_id": {"type": "string", "description": "若指定，只返回这一个实例的详情"},
+            "asset_type": {"type": "string", "description": "若指定，只返回该类别的实例"},
         },
-        "asset_type": {
-            "type": "str",
-            "required": False,
-            "description": "按类型过滤资产列表，如 'Conveyor'",
-        },
-        "summary": {
-            "type": "bool",
-            "required": False,
-            "description": "设为 true 返回统计摘要而非完整列表",
-        },
-    }
+    )
 
-    @property
-    def modifies_scene(self) -> bool:
-        return False
-
-    def execute(self, params: Dict[str, Any], **ctx: Any) -> ToolResult:
-        scene = ctx.get("scene")
-        if scene is None:
-            return ToolResult(ok=False, error="scene 未提供")
-
-        instance_id = params.get("instance_id")
-        asset_type = params.get("asset_type")
-        summary = params.get("summary", False)
-
-        # Single asset query
-        if instance_id:
-            asset = scene.get_asset(instance_id)
-            if asset is None:
-                return ToolResult(ok=False, error=f"未找到资产: {instance_id}")
-            return ToolResult(ok=True, result={
-                "instance_id": asset.instance_id,
-                "asset_id": asset.asset_id,
-                "usd_path": asset.usd_path,
-                "position": list(asset.position),
-                "rotation": list(asset.rotation),
-                "bbox": list(asset.bbox),
-                "description": asset.description,
-                "support_parent": asset.support_parent,
-                "support_children": asset.support_children,
+    def run(self, context: ToolContext, **kwargs: Any) -> ToolResult:
+        instances: List[Dict[str, Any]] = []
+        target_id: Optional[str] = kwargs.get("instance_id")
+        asset_type: Optional[str] = kwargs.get("asset_type")
+        for inst in context.scene.state.instances.values():
+            if target_id and inst.instance_id != target_id:
+                continue
+            if asset_type and inst.asset_type != asset_type:
+                continue
+            bbox_min, bbox_max = inst.aabb()
+            instances.append({
+                "instance_id": inst.instance_id,
+                "asset_type": inst.asset_type,
+                "asset_doc_id": inst.asset_doc_id,
+                "position": inst.position,
+                "rotation_deg": inst.rotation_deg,
+                "bbox_size": inst.bbox_size,
+                "bbox_min": bbox_min,
+                "bbox_max": bbox_max,
+                "parent_instance_id": inst.parent_instance_id,
             })
-
-        # List / filter
-        assets = scene.list_assets(asset_type=asset_type)
-
-        if summary:
-            type_counts: Dict[str, int] = {}
-            for a in assets:
-                type_counts[a.asset_id] = type_counts.get(a.asset_id, 0) + 1
-            return ToolResult(ok=True, result={
-                "total_assets": len(assets),
-                "bounds": list(scene.bounds),
-                "type_counts": type_counts,
-            })
-
-        return ToolResult(ok=True, result={
-            "total_assets": len(assets),
-            "assets": [
-                {
-                    "instance_id": a.instance_id,
-                    "asset_id": a.asset_id,
-                    "position": list(a.position),
-                    "bbox": list(a.bbox),
-                }
-                for a in assets
-            ],
+        if target_id and not instances:
+            return ToolResult(ok=False, error=f"未找到实例: {target_id}")
+        return ToolResult(ok=True, data={
+            "instances": instances,
+            "support_children": dict(context.scene.state.support_children),
+            "instance_count": len(context.scene.state.instances),
         })
+
+    def run_test(self, context: ToolContext) -> ToolResult:
+        instance_id = "__tool_test_query_scene"
+        if instance_id not in context.scene.state.instances:
+            context.scene.add_instance(Instance(
+                instance_id=instance_id,
+                asset_type="Box",
+                asset_doc_id="box-doc",
+                usd_path="/assets/box.usdz",
+                position=[0.0, 0.0, 0.5],
+                bbox_size=[1.0, 1.0, 1.0],
+            ))
+        result = self(context, instance_id=instance_id)
+        if not result.ok:
+            return result
+        if not result.data.get("instances"):
+            return ToolResult(ok=False, error="query_scene run_test returned no instance")
+        context.scene.delete(instance_id)
+        return ToolResult(ok=True, data={"tested": self.name})

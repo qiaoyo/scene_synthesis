@@ -1,5 +1,3 @@
-"""ReAct agent module."""
+from .react_agent import ReActAgent, RunRecord
 
-from .react_agent import ReActAgent
-
-__all__ = ["ReActAgent"]
+__all__ = ["ReActAgent", "RunRecord"]

@@ -6,79 +6,72 @@
 *  **单位与坐标系 (Units & Coordinate System):**
    *   **米(Meters Per Unit):**1.0
    *   **Up Axis:**Z
+*  **场景描述(Scene Describe):**  该场景展示了一个整齐有序的智慧仓储中心，空间上由对称排布的蓝框架、橙横梁重型货架界定存储区，分别码放着纸箱与木质包装箱。作业核心为一台搭载协作机械臂的白色复合移动机器人，配合地面灵活穿梭的扁平黄色搬运机器人及蓝色物流周转筐，实现了货物的自动化存取与转运。整体规划逻辑严密，通过“侧向静态存储+中央动态拣选”的排布方式，将高密度立体仓储与柔性移动物流深度集成，展现了现代工厂在自动化存储与多机协同作业方面的标准化与高效性。
+* **设备数量(Device Number):**
+  * **Scene: 1**
+  * **IndustrialRobot: 1**
+  * **Workbench: 0**
+  * **Conveyor: 0**
+  * **AGV: 2**
+  * **Forklift: 0**
+  * **Box: 47**
+  * **Rack: 7**
+  * **Pallet: 0**
+  * **Part: 0**
+  * **Decoration: 0**
 
 ## 2.场景对象层级(Scene Hierarchy)
 *   World (Xform)
     *   factory (Xform)
-        *   Root (Xform)
-            *   Lights (Xform)
-                *   Lights (Xform)
-                    *   RectLight (RectLight)
-                    *   RectLight_01 (RectLight)
-                    *   RectLight_02 (RectLight)
-                    *   RectLight_03 (RectLight)
-                    *   RectLight_04 (RectLight)
-                    *   RectLight_05 (RectLight)
-                    *   Environment (Prim)
-                        *   sky (DomeLight)
-            *   MarkingLines (Xform)
-                *   MarkingLines (Xform)
-                    *   SM_WarehouseLine_A1 (Mesh)
-                    *   Looks (Scope)
-                        *   MarkingLines (Material)
-                            *   Shader (Shader)
-            *   Warehouse01 (Xform)
-                *   Warehouse01 (Xform)
-                    *   SM_YellowPaint_A1 (Mesh)
-                    *   SM_WhitePaint_B1 (Mesh)
-                    *   SM_WhitePaint_A1 (Mesh)
-                    *   SM_Metal_A1 (Mesh)
-                    *   SM_GlossyMetal_C1 (Mesh)
-                    *   SM_GlossyMetal_A1 (Mesh)
-                    *   SM_Gate_A1 (Mesh)
-                    *   SM_Floor_A1 (Mesh)
-                    *   SM_BluePaint_A1 (Mesh)
-                    *   SM_RoomWalls_A1 (Mesh)
-                    *   SM_Glass_A1 (Mesh)
-                    *   SM_Ceiling_A1 (Mesh)
-                    *   SM_GlassDoor_A1 (Mesh)
-                    *   SM_Gate_B1 (Mesh)
-                    *   SM_Lamp_A1 (Mesh)
-                    *   SM_GlossyMetal_B1 (Mesh)
-                    *   SM_Gate_C1 (Mesh)
-                    *   Looks (Scope)
-                        *   BluePaint (Material)
-                            *   Shader (Shader)
-                        *   Ceiling (Material)
-                            *   Shader (Shader)
-                        *   Floor (Material)
-                            *   Shader (Shader)
-                        *   Gate_A (Material)
-                            *   Shader (Shader)
-                        *   Gate_B (Material)
-                            *   Shader (Shader)
-                        *   Gate_C (Material)
-                            *   Shader (Shader)
-                        *   Glass (Material)
-                            *   Shader (Shader)
-                        *   GlossyMetal_A (Material)
-                            *   Shader (Shader)
-                        *   GlossyMetal_B (Material)
-                            *   Shader (Shader)
-                        *   GlossyMetal_C (Material)
-                            *   Shader (Shader)
-                        *   Lamp (Material)
-                            *   Shader (Shader)
-                        *   Metal_A (Material)
-                            *   Shader (Shader)
-                        *   RoomWalls (Material)
-                            *   Shader (Shader)
-                        *   WhitePaint_A (Material)
-                            *   Shader (Shader)
-                        *   WhitePaint_B (Material)
-                            *   Shader (Shader)
-                        *   YellowPaint (Material)
-                            *   Shader (Shader)
+        *   Materials (Scope)
+            *   WindowsIndustrial_frontSolid_OpenWindows_Mat (Material)
+                *   pbr_shader (Shader)
+                *   uvset0 (Shader)
+                *   tex_base (Shader)
+            *   WindowsIndustrial_frontSolid_Mat (Material)
+                *   pbr_shader (Shader)
+                *   uvset0 (Shader)
+                *   tex_base (Shader)
+            *   WindowsIndustrial_frontDoorclosed_Mat (Material)
+                *   pbr_shader (Shader)
+                *   uvset0 (Shader)
+                *   tex_base (Shader)
+            *   WindowsIndustrial_frontDoorOpen_Mat (Material)
+                *   pbr_shader (Shader)
+                *   uvset0 (Shader)
+                *   tex_base (Shader)
+            *   WindowsIndustrial_front_Mat (Material)
+                *   pbr_shader (Shader)
+                *   uvset0 (Shader)
+                *   tex_base (Shader)
+            *   _1___Default (Material)
+                *   pbr_shader (Shader)
+                *   uvset0 (Shader)
+                *   tex_base (Shader)
+            *   _0___Default (Material)
+                *   pbr_shader (Shader)
+                *   uvset0 (Shader)
+                *   tex_base (Shader)
+        *   Meshes (Xform)
+            *   Sketchfab_model (Xform)
+                *   cc020ec10d3e484ab6eb350963eb38d0_fbx (Xform)
+                    *   RootNode (Xform)
+                        *   Factory002 (Xform)
+                            *   Factory002_WindowsIndustrial_frontSolid_OpenWindows_Mat_0 (Xform)
+                                *   Factory002_WindowsIndustrial_frontSolid_OpenWindows_Mat_0 (Mesh)
+                            *   Factory002_WindowsIndustrial_frontSolid_Mat_0 (Xform)
+                                *   Factory002_WindowsIndustrial_frontSolid_Mat_0 (Mesh)
+                            *   Factory002_WindowsIndustrial_frontDoorclosed_Mat_0 (Xform)
+                                *   Factory002_WindowsIndustrial_frontDoorclosed_Mat_0 (Mesh)
+                            *   Factory002_WindowsIndustrial_frontDoorOpen_Mat_0 (Xform)
+                                *   Factory002_WindowsIndustrial_frontDoorOpen_Mat_0 (Mesh)
+                            *   Factory002_WindowsIndustrial_front_Mat_0 (Xform)
+                                *   Factory002_WindowsIndustrial_front_Mat_0 (Mesh)
+                            *   Factory002_11___Default_0 (Xform)
+                                *   Factory002_11___Default_0 (Mesh)
+                        *   Object001 (Xform)
+                            *   Object001_20___Default_0 (Xform)
+                                *   Object001_20___Default_0 (Mesh)
     *   RackLargeEmpty_A1 (Xform)
         *   RackLargeEmpty_A1 (Xform)
             *   RackLegs_A1_2x4_01 (Mesh)
@@ -1506,19 +1499,6 @@
                             *   Object_4 (Xform)
                                 *   Box003_Material__1_0 (Xform)
                                     *   Box003_Material__1_0 (Mesh)
-    *   carton_08 (Xform)
-        *   Materials (Scope)
-            *   _6___Default (Material)
-                *   pbr_shader (Shader)
-                *   uvset0 (Shader)
-                *   tex_base (Shader)
-        *   Meshes (Xform)
-            *   Sketchfab_model (Xform)
-                *   f49ad5edc352496894d3a02181012422_fbx (Xform)
-                    *   RootNode (Xform)
-                        *   Box072 (Xform)
-                            *   Box072_06___Default_0 (Xform)
-                                *   Box072_06___Default_0 (Mesh)
     *   Cardbox_A1_04 (Xform)
         *   Cardbox_A1 (Mesh)
         *   Looks (Scope)
@@ -1598,14 +1578,21 @@
     *   Cardbox_D3_06 (Prim)
 *   Environment (Xform)
     *   defaultLight (DistantLight)
+*   Render (Prim)
+    *   OmniverseKit (Prim)
+        *   HydraTextures (Prim)
+            *   omni_kit_widget_viewport_ViewportTexture_0 (RenderProduct)
+    *   OmniverseGlobalRenderSettings (RenderSettings)
+    *   Vars (Prim)
+        *   LdrColor (RenderVar)
 
 ## 3. 外部引用Xform简报(Referenced Xforms)
 
 ### '/World/factory' (Xform)
-* 引用: payload:../scene/factory.usdz
-* BBox (world): size=(228.000, 231.523, 53.960), center=(0.542, 0.599, 0.000)
-* 几何统计: Mesh=18, Vertices=1758725, Faces=1917403
-* 子Mesh材质: /World/factory/Root/MarkingLines/MarkingLines/SM_WarehouseLine_A1 -> 未绑定, /World/factory/Root/Warehouse01/Warehouse01/SM_YellowPaint_A1 -> 未绑定, /World/factory/Root/Warehouse01/Warehouse01/SM_WhitePaint_B1 -> 未绑定, /World/factory/Root/Warehouse01/Warehouse01/SM_WhitePaint_A1 -> 未绑定, /World/factory/Root/Warehouse01/Warehouse01/SM_Metal_A1 -> 未绑定, /World/factory/Root/Warehouse01/Warehouse01/SM_GlossyMetal_C1 -> 未绑定, /World/factory/Root/Warehouse01/Warehouse01/SM_GlossyMetal_A1 -> 未绑定, /World/factory/Root/Warehouse01/Warehouse01/SM_Gate_A1 -> 未绑定, /World/factory/Root/Warehouse01/Warehouse01/SM_Floor_A1 -> 未绑定, /World/factory/Root/Warehouse01/Warehouse01/SM_BluePaint_A1 -> 未绑定, /World/factory/Root/Warehouse01/Warehouse01/SM_RoomWalls_A1 -> 未绑定, /World/factory/Root/Warehouse01/Warehouse01/SM_Glass_A1 -> 未绑定, /World/factory/Root/Warehouse01/Warehouse01/SM_Ceiling_A1 -> 未绑定, /World/factory/Root/Warehouse01/Warehouse01/SM_GlassDoor_A1 -> 未绑定, /World/factory/Root/Warehouse01/Warehouse01/SM_Gate_B1 -> 未绑定, /World/factory/Root/Warehouse01/Warehouse01/SM_Lamp_A1 -> 未绑定, /World/factory/Root/Warehouse01/Warehouse01/SM_GlossyMetal_B1 -> 未绑定, /World/factory/Root/Warehouse01/Warehouse01/SM_Gate_C1 -> 未绑定
+* 引用: payload:../scene/factory/factory.usdc
+* BBox (world): size=(49.139, 19.897, 67.754), center=(4.932, -39.847, -17.842)
+* 几何统计: Mesh=7, Vertices=2044, Faces=946
+* 子Mesh材质: /World/factory/Meshes/Sketchfab_model/cc020ec10d3e484ab6eb350963eb38d0_fbx/RootNode/Factory002/Factory002_WindowsIndustrial_frontSolid_OpenWindows_Mat_0/Factory002_WindowsIndustrial_frontSolid_OpenWindows_Mat_0 -> 未绑定, /World/factory/Meshes/Sketchfab_model/cc020ec10d3e484ab6eb350963eb38d0_fbx/RootNode/Factory002/Factory002_WindowsIndustrial_frontSolid_Mat_0/Factory002_WindowsIndustrial_frontSolid_Mat_0 -> 未绑定, /World/factory/Meshes/Sketchfab_model/cc020ec10d3e484ab6eb350963eb38d0_fbx/RootNode/Factory002/Factory002_WindowsIndustrial_frontDoorclosed_Mat_0/Factory002_WindowsIndustrial_frontDoorclosed_Mat_0 -> 未绑定, /World/factory/Meshes/Sketchfab_model/cc020ec10d3e484ab6eb350963eb38d0_fbx/RootNode/Factory002/Factory002_WindowsIndustrial_frontDoorOpen_Mat_0/Factory002_WindowsIndustrial_frontDoorOpen_Mat_0 -> 未绑定, /World/factory/Meshes/Sketchfab_model/cc020ec10d3e484ab6eb350963eb38d0_fbx/RootNode/Factory002/Factory002_WindowsIndustrial_front_Mat_0/Factory002_WindowsIndustrial_front_Mat_0 -> 未绑定, /World/factory/Meshes/Sketchfab_model/cc020ec10d3e484ab6eb350963eb38d0_fbx/RootNode/Factory002/Factory002_11___Default_0/Factory002_11___Default_0 -> 未绑定, /World/factory/Meshes/Sketchfab_model/cc020ec10d3e484ab6eb350963eb38d0_fbx/RootNode/Object001/Object001_20___Default_0/Object001_20___Default_0 -> 未绑定
 
 
 ---
@@ -1623,7 +1610,7 @@
 
 ### '/World/carton' (Xform)
 * 引用: payload:../assets/carton/carton.usdc
-* BBox (world): size=(1.436, 1.436, 1.436), center=(-8.086, -49.397, -25.756)
+* BBox (world): size=(35.888, 35.888, 35.888), center=(-8.086, -49.397, -26.294)
 * 几何统计: Mesh=1, Vertices=56, Faces=44
 * 子Mesh材质: /World/carton/Meshes/Sketchfab_model/f49ad5edc352496894d3a02181012422_fbx/RootNode/Box072/Box072_06___Default_0/Box072_06___Default_0 -> 未绑定
 
@@ -1633,7 +1620,7 @@
 
 ### '/World/carton_01' (Xform)
 * 引用: payload:../assets/carton/carton.usdc
-* BBox (world): size=(1.436, 1.436, 1.436), center=(-9.885, -49.306, -25.756)
+* BBox (world): size=(35.888, 35.888, 35.888), center=(-9.885, -49.306, -26.294)
 * 几何统计: Mesh=1, Vertices=56, Faces=44
 * 子Mesh材质: /World/carton_01/Meshes/Sketchfab_model/f49ad5edc352496894d3a02181012422_fbx/RootNode/Box072/Box072_06___Default_0/Box072_06___Default_0 -> 未绑定
 
@@ -1643,7 +1630,7 @@
 
 ### '/World/carton_02' (Xform)
 * 引用: payload:../assets/carton/carton.usdc
-* BBox (world): size=(1.436, 1.436, 1.436), center=(-9.885, -49.306, -23.866)
+* BBox (world): size=(35.888, 35.888, 35.888), center=(-9.885, -49.306, -24.405)
 * 几何统计: Mesh=1, Vertices=56, Faces=44
 * 子Mesh材质: /World/carton_02/Meshes/Sketchfab_model/f49ad5edc352496894d3a02181012422_fbx/RootNode/Box072/Box072_06___Default_0/Box072_06___Default_0 -> 未绑定
 
@@ -1653,7 +1640,7 @@
 
 ### '/World/carton_03' (Xform)
 * 引用: payload:../assets/carton/carton.usdc
-* BBox (world): size=(1.436, 1.436, 1.436), center=(-8.086, -49.397, -23.866)
+* BBox (world): size=(35.888, 35.888, 35.888), center=(-8.086, -49.397, -24.405)
 * 几何统计: Mesh=1, Vertices=56, Faces=44
 * 子Mesh材质: /World/carton_03/Meshes/Sketchfab_model/f49ad5edc352496894d3a02181012422_fbx/RootNode/Box072/Box072_06___Default_0/Box072_06___Default_0 -> 未绑定
 
@@ -1883,7 +1870,7 @@
 
 ### '/World/carton_04' (Xform)
 * 引用: payload:../assets/carton/carton.usdc
-* BBox (world): size=(1.436, 1.436, 1.436), center=(4.820, -49.397, -23.866)
+* BBox (world): size=(35.888, 35.888, 35.888), center=(4.820, -49.397, -24.405)
 * 几何统计: Mesh=1, Vertices=56, Faces=44
 * 子Mesh材质: /World/carton_04/Meshes/Sketchfab_model/f49ad5edc352496894d3a02181012422_fbx/RootNode/Box072/Box072_06___Default_0/Box072_06___Default_0 -> 未绑定
 
@@ -1893,7 +1880,7 @@
 
 ### '/World/carton_05' (Xform)
 * 引用: payload:../assets/carton/carton.usdc
-* BBox (world): size=(1.436, 1.436, 1.436), center=(3.022, -49.306, -23.866)
+* BBox (world): size=(35.888, 35.888, 35.888), center=(3.022, -49.306, -24.405)
 * 几何统计: Mesh=1, Vertices=56, Faces=44
 * 子Mesh材质: /World/carton_05/Meshes/Sketchfab_model/f49ad5edc352496894d3a02181012422_fbx/RootNode/Box072/Box072_06___Default_0/Box072_06___Default_0 -> 未绑定
 
@@ -1903,7 +1890,7 @@
 
 ### '/World/carton_06' (Xform)
 * 引用: payload:../assets/carton/carton.usdc
-* BBox (world): size=(1.436, 1.436, 1.436), center=(3.022, -49.306, -25.756)
+* BBox (world): size=(35.888, 35.888, 35.888), center=(3.022, -49.306, -26.294)
 * 几何统计: Mesh=1, Vertices=56, Faces=44
 * 子Mesh材质: /World/carton_06/Meshes/Sketchfab_model/f49ad5edc352496894d3a02181012422_fbx/RootNode/Box072/Box072_06___Default_0/Box072_06___Default_0 -> 未绑定
 
@@ -1913,7 +1900,7 @@
 
 ### '/World/carton_07' (Xform)
 * 引用: payload:../assets/carton/carton.usdc
-* BBox (world): size=(1.436, 1.436, 1.436), center=(4.820, -49.397, -25.756)
+* BBox (world): size=(35.888, 35.888, 35.888), center=(4.820, -49.397, -26.294)
 * 几何统计: Mesh=1, Vertices=56, Faces=44
 * 子Mesh材质: /World/carton_07/Meshes/Sketchfab_model/f49ad5edc352496894d3a02181012422_fbx/RootNode/Box072/Box072_06___Default_0/Box072_06___Default_0 -> 未绑定
 
@@ -2003,7 +1990,7 @@
 
 ### '/World/AGV_ready_1' (Xform)
 * 引用: payload:../assets/AGV_ready_1/AGV_ready_1.usdc
-* BBox (world): size=(145.656, 34.004, 66.850), center=(4.489, -46.069, -26.921)
+* BBox (world): size=(1.457, 0.340, 0.669), center=(3.782, -46.384, -26.979)
 * 几何统计: Mesh=171, Vertices=1634024, Faces=683203
 * 子Mesh材质: /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_2/Object_0 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_3/Object_1 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_4/Object_2 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_5/Object_3 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_6/Object_4 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_7/Object_5 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_8/Object_6 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_9/Object_7 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_10/Object_8 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_11/Object_9 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_12/Object_10 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_13/Object_11 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_14/Object_12 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_15/Object_13 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_16/Object_14 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_17/Object_15 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_18/Object_16 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_19/Object_17 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_20/Object_18 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_21/Object_19 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_22/Object_20 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_23/Object_21 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_24/Object_22 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_25/Object_23 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_26/Object_24 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_27/Object_25 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_28/Object_26 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_29/Object_27 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_30/Object_28 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_31/Object_29 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_32/Object_30 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_33/Object_31 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_34/Object_32 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_35/Object_33 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_36/Object_34 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_37/Object_35 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_38/Object_36 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_39/Object_37 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_40/Object_38 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_41/Object_39 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_42/Object_40 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_43/Object_41 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_44/Object_42 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_45/Object_43 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_46/Object_44 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_47/Object_45 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_48/Object_46 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_49/Object_47 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_50/Object_48 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_51/Object_49 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_52/Object_50 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_53/Object_51 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_54/Object_52 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_55/Object_53 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_56/Object_54 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_57/Object_55 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_58/Object_56 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_59/Object_57 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_60/Object_58 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_61/Object_59 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_62/Object_60 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_63/Object_61 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_64/Object_62 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_65/Object_63 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_66/Object_64 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_67/Object_65 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_68/Object_66 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_69/Object_67 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_70/Object_68 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_71/Object_69 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_72/Object_70 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_73/Object_71 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_74/Object_72 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_75/Object_73 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_76/Object_74 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_77/Object_75 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_78/Object_76 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_79/Object_77 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_80/Object_78 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_81/Object_79 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_82/Object_80 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_83/Object_81 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_84/Object_82 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_85/Object_83 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_86/Object_84 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_87/Object_85 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_88/Object_86 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_89/Object_87 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_90/Object_88 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_91/Object_89 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_92/Object_90 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_93/Object_91 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_94/Object_92 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_95/Object_93 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_96/Object_94 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_97/Object_95 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_98/Object_96 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_99/Object_97 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_100/Object_98 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_101/Object_99 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_102/Object_100 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_103/Object_101 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_104/Object_102 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_105/Object_103 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_106/Object_104 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_107/Object_105 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_108/Object_106 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_109/Object_107 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_110/Object_108 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_111/Object_109 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_112/Object_110 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_113/Object_111 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_114/Object_112 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_115/Object_113 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_116/Object_114 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_117/Object_115 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_118/Object_116 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_119/Object_117 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_120/Object_118 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_121/Object_119 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_122/Object_120 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_123/Object_121 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_124/Object_122 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_125/Object_123 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_126/Object_124 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_127/Object_125 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_128/Object_126 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_129/Object_127 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_130/Object_128 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_131/Object_129 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_132/Object_130 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_133/Object_131 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_134/Object_132 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_135/Object_133 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_136/Object_134 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_137/Object_135 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_138/Object_136 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_139/Object_137 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_140/Object_138 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_141/Object_139 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_142/Object_140 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_143/Object_141 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_144/Object_142 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_145/Object_143 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_146/Object_144 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_147/Object_145 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_148/Object_146 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_149/Object_147 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_150/Object_148 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_151/Object_149 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_152/Object_150 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_153/Object_151 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_154/Object_152 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_155/Object_153 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_156/Object_154 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_157/Object_155 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_158/Object_156 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_159/Object_157 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_160/Object_158 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_161/Object_159 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_162/Object_160 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_163/Object_161 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_164/Object_162 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_165/Object_163 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_166/Object_164 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_167/Object_165 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_168/Object_166 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_169/Object_167 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_170/Object_168 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_171/Object_169 -> 未绑定, /World/AGV_ready_1/Meshes/Sketchfab_model/AGV_ready_1_obj_cleaner_materialmerger_gles/Object_172/Object_170 -> 未绑定
 
@@ -2032,8 +2019,8 @@
 
 
 ### '/World/Plastic_Crate_1_' (Xform)
-* 引用: payload:../assets/Plastic_Crate(1)/Plastic_Crate(1).usdc
-* BBox (world): size=(1.028, 0.884, 1.019), center=(7.480, -41.092, -26.533)
+* 引用: payload:../assets/Plastic_Crate(1)/Plastic_Crate.usdc
+* BBox (world): size=(0.424, 0.365, 0.421), center=(5.058, -46.349, -26.796)
 * 几何统计: Mesh=1, Vertices=490, Faces=528
 * 子Mesh材质: /World/Plastic_Crate_1_/Meshes/Sketchfab_model/Plastic_Crate_FBX/RootNode/Box003/Object_4/Box003_Material__1_0/Box003_Material__1_0 -> 未绑定
 
@@ -2042,20 +2029,10 @@
 
 
 ### '/World/Plastic_Crate_1__01' (Xform)
-* 引用: payload:../assets/Plastic_Crate(1)/Plastic_Crate(1).usdc
-* BBox (world): size=(1.028, 0.884, 1.019), center=(-1.808, -46.020, -25.199)
+* 引用: payload:../assets/Plastic_Crate(1)/Plastic_Crate.usdc
+* BBox (world): size=(0.424, 0.365, 0.421), center=(-1.785, -46.006, -25.461)
 * 几何统计: Mesh=1, Vertices=490, Faces=528
 * 子Mesh材质: /World/Plastic_Crate_1__01/Meshes/Sketchfab_model/Plastic_Crate_FBX/RootNode/Box003/Object_4/Box003_Material__1_0/Box003_Material__1_0 -> 未绑定
-
-
----
-
-
-### '/World/carton_08' (Xform)
-* 引用: payload:../assets/carton/carton.usdc
-* BBox (world): size=(1.436, 1.436, 1.436), center=(-8.881, -39.200, -22.897)
-* 几何统计: Mesh=1, Vertices=56, Faces=44
-* 子Mesh材质: /World/carton_08/Meshes/Sketchfab_model/f49ad5edc352496894d3a02181012422_fbx/RootNode/Box072/Box072_06___Default_0/Box072_06___Default_0 -> 未绑定
 
 
 ---
