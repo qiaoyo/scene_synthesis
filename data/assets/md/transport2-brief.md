@@ -6,14 +6,14 @@
 *  **单位与坐标系 (Units & Coordinate System):**
    *   **米(Meters Per Unit):**1.0
    *   **Up Axis:**Z
-*  **场景描述(Scene Describe):**  该场景是一个高度智能化且空间布局精密的多机协同自动化物流车间。厂区空间规划科学，灰色工业地坪上绘有严整的黄色安全线与红白警示区，白色墙面挂载着多个灰色电控箱。核心输送体系由一套蓝色的辊筒流水线构成，涵盖直线段、U型弯道及Y型分拣支路，纵横交错构成物料流转主轴。多台白色六轴工业机器人战略性地排布于输送节点，精准执行抓取与移载任务。移动搬运体系由一台蓝色高位拣选叉车与多台小型黄色AGV组成，前者负责高位物料存取，后者在地面穿梭补料，与固定式输送线形成了点对线的立体作业逻辑。此外，现场配备有木质托盘与蓝色周转箱等辅助工装，所有设备间距经过精密计算，在保障机器人最大作业空间的同时实现了极致的空间利用率，整体呈现出一种高效、精准、有序的现代化无人生产格局。
+*  **场景描述(Scene Describe):** 该场景展现了一个高度自动化的现代工业物流配送中心，整体布局采用模块化与柔性化相结合的立体空间规划。车间环境开阔，深色工业地坪上布满了黄色安全标线、红白危险区警示及“KEEP CLEAR”导向标识，界定了严谨的作业边界。核心物流骨架由蓝色金属滚筒输送系统构成，通过直线、弧形及T型交汇的排布方式，实现了物料的高效流转。在输送线关键节点，多台白黄相间的六轴工业机器人稳固安置在黑白配色的工作台上，精准执行周转箱的抓取与接驳任务。与之协同的是大量低扁平化的黄色AGV（自动导引车），它们搭载着蓝色或黑色周转箱，在地面数字化路径上穿梭，填补了固定输送带以外的柔性配送需求。此外，场景边缘配置了带有复杂门架结构的蓝色自动化堆垛叉车，负责垂直空间的物料存取。整段布局通过“点（机器人）、线（输送带）、面（AGV）”的有机整合，将各类机械、流水线、控制柜及工装设备紧密串联，形成了一个秩序井然、高效协作的数字化生产与物流体系。
 * **设备数量(Device Number):**
   * **Scene: 1**
   * **IndustrialRobot: 4**
-  * **Workbench: 0**
+  * **Workbench: 4**
   * **Conveyor: 1**
   * **AGV: 4**
-  * **Forklift: 10**
+  * **Forklift: 1**
   * **Box: 4**
   * **Rack: 0**
   * **Pallet: 0**
@@ -21,6 +21,13 @@
   * **Decoration: 0**
 
 ## 2.场景对象层级(Scene Hierarchy)
+*   Render (Prim)
+    *   OmniverseKit (Prim)
+        *   HydraTextures (Prim)
+            *   omni_kit_widget_viewport_ViewportTexture_0 (RenderProduct)
+    *   OmniverseGlobalRenderSettings (RenderSettings)
+    *   Vars (Prim)
+        *   LdrColor (RenderVar)
 *   World (Prim)
     *   DomeLight (DomeLight)
     *   SunLight (DistantLight)
@@ -4254,415 +4261,6 @@
                         *   SM_ConveyorBelt_A23_RubberBand82_01 (Mesh)
                         *   SM_ConveyorBelt_A23_RubberBand83_01 (Mesh)
                         *   SM_ConveyorBelt_A23_RubberBand84_01 (Mesh)
-    *   RobotArm (Xform)
-        *   Materials (Scope)
-            *   Brass___Polished (Material)
-                *   pbr_shader (Shader)
-            *   Aluminum___Anodized_Glossy_Grey (Material)
-                *   pbr_shader (Shader)
-            *   Paint___Enamel_Glossy_Yellow (Material)
-                *   pbr_shader (Shader)
-            *   Body1__0 (Material)
-                *   pbr_shader (Shader)
-            *   Steel___Satin (Material)
-                *   pbr_shader (Shader)
-            *   Paint___Enamel_Glossy_Black (Material)
-                *   pbr_shader (Shader)
-        *   Meshes (Xform)
-            *   Sketchfab_model (Xform)
-                *   c87c2a6ebd5447f7ac496076c3c610d3_fbx (Xform)
-                    *   RootNode (Xform)
-                        *   PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84 (Xform)
-                            *   Component_1_Base_1 (Xform)
-                                *   Component_1_Base (Xform)
-                                    *   Component2_1 (Xform)
-                                        *   Component2 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component24_1 (Xform)
-                                        *   Component24 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component25_1 (Xform)
-                                        *   Component25 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component26_1 (Xform)
-                                        *   Component26 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component27_1 (Xform)
-                                        *   Component27 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component28_1 (Xform)
-                                        *   Component28 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                            *   Component_2_Jaw_1_1 (Xform)
-                                *   Component_2_Jaw_1 (Xform)
-                                    *   Component4_1 (Xform)
-                                        *   Component4 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component17_1 (Xform)
-                                        *   Component17 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                            *   Component_3_Jaw_2_1 (Xform)
-                                *   Component_3_Jaw_2 (Xform)
-                                    *   Component6_1 (Xform)
-                                        *   Component6 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Paint___Enamel_Glossy__Yellow__0 (Xform)
-                                                    *   Body1_Paint___Enamel_Glossy__Yellow__0 (Mesh)
-                                                *   Body1__0 (Xform)
-                                                    *   Body1__0 (Mesh)
-                                    *   Component29_1 (Xform)
-                                        *   Component29 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component30_1 (Xform)
-                                        *   Component30 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component31_1 (Xform)
-                                        *   Component31 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component32_1 (Xform)
-                                        *   Component32 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component33_1 (Xform)
-                                        *   Component33 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component34_1 (Xform)
-                                        *   Component34 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component35_1 (Xform)
-                                        *   Component35 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component36_1 (Xform)
-                                        *   Component36 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component37_1 (Xform)
-                                        *   Component37 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component38_1 (Xform)
-                                        *   Component38 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component39_1 (Xform)
-                                        *   Component39 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component40_1 (Xform)
-                                        *   Component40 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component41_1 (Xform)
-                                        *   Component41 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component42_1 (Xform)
-                                        *   Component42 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                            *   Component_4_Jaw_3_1 (Xform)
-                                *   Component_4_Jaw_3 (Xform)
-                                    *   Component8_1 (Xform)
-                                        *   Component8 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component22_1 (Xform)
-                                        *   Component22 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component23_1 (Xform)
-                                        *   Component23 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                            *   Component_5_Jaw_4_1 (Xform)
-                                *   Component_5_Jaw_4 (Xform)
-                                    *   Component10_1 (Xform)
-                                        *   Component10 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Paint___Enamel_Glossy__Black__0 (Xform)
-                                                    *   Body1_Paint___Enamel_Glossy__Black__0 (Mesh)
-                                                *   Body1__0 (Xform)
-                                                    *   Body1__0 (Mesh)
-                                    *   Component20_1 (Xform)
-                                        *   Component20 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component21_1 (Xform)
-                                        *   Component21 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                            *   Component_6_Jaw_5_1 (Xform)
-                                *   Component_6_Jaw_5 (Xform)
-                                    *   Component12_1 (Xform)
-                                        *   Component12 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component18_1 (Xform)
-                                        *   Component18 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component19_1 (Xform)
-                                        *   Component19 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Paint___Enamel_Glossy__Yellow__0 (Xform)
-                                                    *   Body1_Paint___Enamel_Glossy__Yellow__0 (Mesh)
-                            *   Component_7_Jaw_6_1 (Xform)
-                                *   Component_7_Jaw_6 (Xform)
-                                    *   Component14_1 (Xform)
-                                        *   Component14 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component43_1 (Xform)
-                                        *   Component43 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                            *   Component_8_Jaw_7_1 (Xform)
-                                *   Component_8_Jaw_7 (Xform)
-                                    *   Component16_1 (Xform)
-                                        *   Component16 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component16_2 (Xform)
-                                        *   Component16 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-    *   RobotArm1 (Xform)
-        *   Materials (Scope)
-            *   Robot_hand (Material)
-                *   pbr_shader (Shader)
-                *   uvset0 (Shader)
-                *   tex_base (Shader)
-                *   tex_metallic (Shader)
-                *   tex_roughness (Shader)
-                *   tex_normal (Shader)
-                *   tex_occlusion (Shader)
-            *   Stand (Material)
-                *   pbr_shader (Shader)
-                *   uvset0 (Shader)
-                *   tex_base (Shader)
-                *   tex_metallic (Shader)
-                *   tex_roughness (Shader)
-                *   tex_normal (Shader)
-                *   tex_emissive (Shader)
-                *   tex_occlusion (Shader)
-        *   Meshes (Xform)
-            *   Sketchfab_model (Xform)
-                *   Collada_visual_scene_group (Xform)
-                    *   Robotic_hand_018_low (Xform)
-                        *   defaultMaterial (Xform)
-                            *   defaultMaterial (Mesh)
-                    *   Robotic_hand_016_low (Xform)
-                        *   defaultMaterial (Xform)
-                            *   defaultMaterial (Mesh)
-                    *   Robotic_hand_015_low (Xform)
-                        *   defaultMaterial (Xform)
-                            *   defaultMaterial (Mesh)
-                    *   Robotic_hand_017_low (Xform)
-                        *   defaultMaterial (Xform)
-                            *   defaultMaterial (Mesh)
-                    *   Robotic_hand_014_low (Xform)
-                        *   defaultMaterial (Xform)
-                            *   defaultMaterial (Mesh)
-                    *   Robotic_hand_013_low (Xform)
-                        *   defaultMaterial (Xform)
-                            *   defaultMaterial (Mesh)
-                    *   Robotic_hand_012_low (Xform)
-                        *   defaultMaterial (Xform)
-                            *   defaultMaterial (Mesh)
-                    *   Robotic_hand_011_low (Xform)
-                        *   defaultMaterial (Xform)
-                            *   defaultMaterial (Mesh)
-                    *   Robotic_hand_010_low (Xform)
-                        *   defaultMaterial (Xform)
-                            *   defaultMaterial (Mesh)
-                    *   Robotic_hand_009_low (Xform)
-                        *   defaultMaterial (Xform)
-                            *   defaultMaterial (Mesh)
-                    *   Robotic_hand_008_low (Xform)
-                        *   defaultMaterial (Xform)
-                            *   defaultMaterial (Mesh)
-                    *   Robotic_hand_007_low (Xform)
-                        *   defaultMaterial (Xform)
-                            *   defaultMaterial (Mesh)
-                    *   Robotic_hand_006_low (Xform)
-                        *   defaultMaterial (Xform)
-                            *   defaultMaterial (Mesh)
-                    *   Robotic_hand_005_low (Xform)
-                        *   defaultMaterial (Xform)
-                            *   defaultMaterial (Mesh)
-                    *   Robotic_hand_004_low (Xform)
-                        *   defaultMaterial (Xform)
-                            *   defaultMaterial (Mesh)
-                    *   Robotic_hand_003_low (Xform)
-                        *   defaultMaterial (Xform)
-                            *   defaultMaterial (Mesh)
-    *   RobotArm2 (Xform)
-        *   Group (Xform)
-            *   panda_hand (Xform)
-                *   visuals (Xform)
-                *   collisions (Xform)
-                *   panda_finger_joint1 (PhysicsPrismaticJoint)
-                *   panda_finger_joint2 (PhysicsPrismaticJoint)
-            *   panda_leftfinger (Xform)
-                *   visuals (Xform)
-                *   collisions (Xform)
-            *   panda_link0 (Xform)
-                *   visuals (Xform)
-                *   collisions (Xform)
-                *   panda_joint1 (PhysicsRevoluteJoint)
-            *   panda_link1 (Xform)
-                *   visuals (Xform)
-                *   collisions (Xform)
-                *   panda_joint2 (PhysicsRevoluteJoint)
-            *   panda_link2 (Xform)
-                *   visuals (Xform)
-                *   collisions (Xform)
-                *   panda_joint3 (PhysicsRevoluteJoint)
-            *   panda_link3 (Xform)
-                *   visuals (Xform)
-                *   collisions (Xform)
-                *   panda_joint4 (PhysicsRevoluteJoint)
-            *   panda_link4 (Xform)
-                *   visuals (Xform)
-                *   collisions (Xform)
-                *   panda_joint5 (PhysicsRevoluteJoint)
-            *   panda_link5 (Xform)
-                *   visuals (Xform)
-                *   collisions (Xform)
-                *   panda_joint6 (PhysicsRevoluteJoint)
-            *   panda_link6 (Xform)
-                *   visuals (Xform)
-                *   collisions (Xform)
-                *   panda_joint7 (PhysicsRevoluteJoint)
-            *   panda_link7 (Xform)
-                *   visuals (Xform)
-                *   collisions (Xform)
-                *   panda_hand_joint (PhysicsFixedJoint)
-            *   panda_rightfinger (Xform)
-                *   visuals (Xform)
-                *   collisions (Xform)
-            *   rootJoint (PhysicsFixedJoint)
-    *   RobotArm3 (Xform)
-        *   world (Xform)
-            *   joint_w (PhysicsFixedJoint)
-        *   root_joint (PhysicsFixedJoint)
-        *   base_link (Xform)
-            *   joint_1 (PhysicsRevoluteJoint)
-            *   visuals (Mesh)
-            *   collisions (Mesh)
-        *   J1 (Xform)
-            *   joint_2 (PhysicsRevoluteJoint)
-            *   visuals (Mesh)
-            *   collisions (Mesh)
-        *   J2 (Xform)
-            *   joint_3 (PhysicsRevoluteJoint)
-            *   visuals (Mesh)
-            *   collisions (Mesh)
-        *   J3 (Xform)
-            *   joint_4 (PhysicsRevoluteJoint)
-            *   visuals (Mesh)
-            *   collisions (Mesh)
-        *   J4 (Xform)
-            *   joint_5 (PhysicsRevoluteJoint)
-            *   visuals (Mesh)
-                *   material_0 (GeomSubset)
-                *   material_1 (GeomSubset)
-            *   collisions (Mesh)
-        *   J5 (Xform)
-            *   joint_6 (PhysicsRevoluteJoint)
-            *   visuals (Mesh)
-                *   material_0 (GeomSubset)
-                *   material_1 (GeomSubset)
-            *   collisions (Mesh)
-        *   J6 (Xform)
-            *   joint_tcp_fixed (PhysicsFixedJoint)
-            *   visuals (Mesh)
-            *   collisions (Mesh)
-        *   onrobot_rg6_base_link (Xform)
-            *   finger_joint (PhysicsRevoluteJoint)
-            *   left_inner_knuckle_joint (PhysicsRevoluteJoint)
-            *   right_inner_knuckle_joint (PhysicsRevoluteJoint)
-            *   right_outer_knuckle_joint (PhysicsRevoluteJoint)
-            *   visuals (Mesh)
-            *   collisions (Mesh)
-        *   left_outer_knuckle (Xform)
-            *   left_inner_finger_joint (PhysicsRevoluteJoint)
-            *   visuals (Mesh)
-            *   collisions (Mesh)
-        *   left_inner_finger (Xform)
-            *   visuals (Mesh)
-            *   collisions (Mesh)
-        *   left_inner_knuckle (Xform)
-            *   visuals (Mesh)
-            *   collisions (Mesh)
-        *   right_inner_knuckle (Xform)
-            *   visuals (Mesh)
-            *   collisions (Mesh)
-        *   right_outer_knuckle (Xform)
-            *   right_inner_finger_joint (PhysicsRevoluteJoint)
-            *   visuals (Mesh)
-            *   collisions (Mesh)
-        *   right_inner_finger (Xform)
-            *   visuals (Mesh)
-            *   collisions (Mesh)
-        *   Looks (Scope)
-            *   material_blinn20 (Material)
-                *   Shader (Shader)
-            *   material_blinn20_1 (Material)
-                *   Shader (Shader)
-            *   material_blinn21 (Material)
-                *   Shader (Shader)
-            *   material_CCCCCC (Material)
-                *   Shader (Shader)
-            *   material_191919 (Material)
-                *   Shader (Shader)
     *   AGV_1 (Xform)
         *   Materials (Scope)
             *   ASELSAN_CATS_04 (Material)
@@ -6755,600 +6353,131 @@
                 *   Shader (Shader)
             *   M_Forklift_B1_Blue (Material)
                 *   Shader (Shader)
-    *   forklift_2 (Xform)
-        *   lift (Xform)
-            *   SM_Forklift_Lift_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabGlass_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCab_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabDecal_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabPedal_B01_01 (Mesh)
-        *   body (Xform)
-            *   body (Xform)
-                *   SM_Forklift_RightChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_CenterChain_B01_01 (Mesh)
-                *   SM_Forklift_LeftChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_RightHose_B01_01 (Mesh)
-                *   SM_Forklift_LeftHose_B01_01 (Mesh)
-                *   SM_Forklift_HoseWheel_B01_01 (Mesh)
-                *   SM_Forklift_CenterChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_OperatorCabTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_OperatorCabBotWheels_B01_01 (Mesh)
-                *   SM_Forklift_LiftBotWheels_B01_01 (Mesh)
-                *   SM_Forklift_LiftTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_MastTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_MastBottomWheels_B01_01 (Mesh)
-                *   SM_Forklift_CenterHydralicLift_B01_01 (Mesh)
-                *   SM_Forklift_HydraulicSystem_B01_01 (Mesh)
-                *   SM_Forklift_LeftChain_B01_01 (Mesh)
-                *   SM_Forklift_RightChain_B01_01 (Mesh)
-                *   SM_Forklift_Body_B01_01 (Mesh)
-                    *   M_Forklift_B1_Body (GeomSubset)
-                    *   M_Forklift_B1_Plastic (GeomSubset)
-                *   SM_Forklift_BodyDecal_B01_01 (Mesh)
-                *   SM_Forklift_BodyGlass_B01_01 (Mesh)
-        *   back_wheel (Xform)
-            *   SM_Forklift_BackWheel_B01_01 (Mesh)
-            *   Sphere (Sphere)
-        *   roller_front_right (Xform)
-            *   SM_Forklift_LeadWheelsFrontRight_B01_01 (Mesh)
-            *   Cylinder (Cylinder)
-        *   roller_back_left (Xform)
-            *   SM_Forklift_LeadWheelsBackLeft_B01_01 (Mesh)
-            *   Cylinder_01 (Cylinder)
-        *   roller_back_right (Xform)
-            *   SM_Forklift_LeadWheelsBackRight_B01_01 (Mesh)
-            *   Cylinder_02 (Cylinder)
-        *   roller_front_left (Xform)
-            *   SM_Forklift_LeadWheelsFrontLeft_B01_01 (Mesh)
-            *   Cylinder_03 (Cylinder)
-        *   back_wheel_swivel (Xform)
-            *   SM_Forklift_BackWheelbase_B01_01 (Mesh)
-        *   lift_joint (PhysicsPrismaticJoint)
-        *   back_wheel_joints (Scope)
-            *   back_wheel_drive (PhysicsRevoluteJoint)
-            *   back_wheel_swivel (PhysicsRevoluteJoint)
-        *   roller_joints (Scope)
-            *   front_right_roller (PhysicsRevoluteJoint)
-            *   back_left_roller (PhysicsRevoluteJoint)
-            *   back_right_roller (PhysicsRevoluteJoint)
-            *   front_left_roller (PhysicsRevoluteJoint)
-        *   Looks (Scope)
-            *   M_Forklift_B1_Body (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Decals (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Glass (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Blue (Material)
-                *   Shader (Shader)
-    *   forklift_3 (Xform)
-        *   lift (Xform)
-            *   SM_Forklift_Lift_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabGlass_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCab_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabDecal_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabPedal_B01_01 (Mesh)
-        *   body (Xform)
-            *   body (Xform)
-                *   SM_Forklift_RightChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_CenterChain_B01_01 (Mesh)
-                *   SM_Forklift_LeftChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_RightHose_B01_01 (Mesh)
-                *   SM_Forklift_LeftHose_B01_01 (Mesh)
-                *   SM_Forklift_HoseWheel_B01_01 (Mesh)
-                *   SM_Forklift_CenterChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_OperatorCabTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_OperatorCabBotWheels_B01_01 (Mesh)
-                *   SM_Forklift_LiftBotWheels_B01_01 (Mesh)
-                *   SM_Forklift_LiftTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_MastTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_MastBottomWheels_B01_01 (Mesh)
-                *   SM_Forklift_CenterHydralicLift_B01_01 (Mesh)
-                *   SM_Forklift_HydraulicSystem_B01_01 (Mesh)
-                *   SM_Forklift_LeftChain_B01_01 (Mesh)
-                *   SM_Forklift_RightChain_B01_01 (Mesh)
-                *   SM_Forklift_Body_B01_01 (Mesh)
-                    *   M_Forklift_B1_Body (GeomSubset)
-                    *   M_Forklift_B1_Plastic (GeomSubset)
-                *   SM_Forklift_BodyDecal_B01_01 (Mesh)
-                *   SM_Forklift_BodyGlass_B01_01 (Mesh)
-        *   back_wheel (Xform)
-            *   SM_Forklift_BackWheel_B01_01 (Mesh)
-            *   Sphere (Sphere)
-        *   roller_front_right (Xform)
-            *   SM_Forklift_LeadWheelsFrontRight_B01_01 (Mesh)
-            *   Cylinder (Cylinder)
-        *   roller_back_left (Xform)
-            *   SM_Forklift_LeadWheelsBackLeft_B01_01 (Mesh)
-            *   Cylinder_01 (Cylinder)
-        *   roller_back_right (Xform)
-            *   SM_Forklift_LeadWheelsBackRight_B01_01 (Mesh)
-            *   Cylinder_02 (Cylinder)
-        *   roller_front_left (Xform)
-            *   SM_Forklift_LeadWheelsFrontLeft_B01_01 (Mesh)
-            *   Cylinder_03 (Cylinder)
-        *   back_wheel_swivel (Xform)
-            *   SM_Forklift_BackWheelbase_B01_01 (Mesh)
-        *   lift_joint (PhysicsPrismaticJoint)
-        *   back_wheel_joints (Scope)
-            *   back_wheel_drive (PhysicsRevoluteJoint)
-            *   back_wheel_swivel (PhysicsRevoluteJoint)
-        *   roller_joints (Scope)
-            *   front_right_roller (PhysicsRevoluteJoint)
-            *   back_left_roller (PhysicsRevoluteJoint)
-            *   back_right_roller (PhysicsRevoluteJoint)
-            *   front_left_roller (PhysicsRevoluteJoint)
-        *   Looks (Scope)
-            *   M_Forklift_B1_Body (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Decals (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Glass (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Blue (Material)
-                *   Shader (Shader)
-    *   forklift_4 (Xform)
-        *   lift (Xform)
-            *   SM_Forklift_Lift_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabGlass_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCab_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabDecal_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabPedal_B01_01 (Mesh)
-        *   body (Xform)
-            *   body (Xform)
-                *   SM_Forklift_RightChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_CenterChain_B01_01 (Mesh)
-                *   SM_Forklift_LeftChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_RightHose_B01_01 (Mesh)
-                *   SM_Forklift_LeftHose_B01_01 (Mesh)
-                *   SM_Forklift_HoseWheel_B01_01 (Mesh)
-                *   SM_Forklift_CenterChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_OperatorCabTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_OperatorCabBotWheels_B01_01 (Mesh)
-                *   SM_Forklift_LiftBotWheels_B01_01 (Mesh)
-                *   SM_Forklift_LiftTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_MastTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_MastBottomWheels_B01_01 (Mesh)
-                *   SM_Forklift_CenterHydralicLift_B01_01 (Mesh)
-                *   SM_Forklift_HydraulicSystem_B01_01 (Mesh)
-                *   SM_Forklift_LeftChain_B01_01 (Mesh)
-                *   SM_Forklift_RightChain_B01_01 (Mesh)
-                *   SM_Forklift_Body_B01_01 (Mesh)
-                    *   M_Forklift_B1_Body (GeomSubset)
-                    *   M_Forklift_B1_Plastic (GeomSubset)
-                *   SM_Forklift_BodyDecal_B01_01 (Mesh)
-                *   SM_Forklift_BodyGlass_B01_01 (Mesh)
-        *   back_wheel (Xform)
-            *   SM_Forklift_BackWheel_B01_01 (Mesh)
-            *   Sphere (Sphere)
-        *   roller_front_right (Xform)
-            *   SM_Forklift_LeadWheelsFrontRight_B01_01 (Mesh)
-            *   Cylinder (Cylinder)
-        *   roller_back_left (Xform)
-            *   SM_Forklift_LeadWheelsBackLeft_B01_01 (Mesh)
-            *   Cylinder_01 (Cylinder)
-        *   roller_back_right (Xform)
-            *   SM_Forklift_LeadWheelsBackRight_B01_01 (Mesh)
-            *   Cylinder_02 (Cylinder)
-        *   roller_front_left (Xform)
-            *   SM_Forklift_LeadWheelsFrontLeft_B01_01 (Mesh)
-            *   Cylinder_03 (Cylinder)
-        *   back_wheel_swivel (Xform)
-            *   SM_Forklift_BackWheelbase_B01_01 (Mesh)
-        *   lift_joint (PhysicsPrismaticJoint)
-        *   back_wheel_joints (Scope)
-            *   back_wheel_drive (PhysicsRevoluteJoint)
-            *   back_wheel_swivel (PhysicsRevoluteJoint)
-        *   roller_joints (Scope)
-            *   front_right_roller (PhysicsRevoluteJoint)
-            *   back_left_roller (PhysicsRevoluteJoint)
-            *   back_right_roller (PhysicsRevoluteJoint)
-            *   front_left_roller (PhysicsRevoluteJoint)
-        *   Looks (Scope)
-            *   M_Forklift_B1_Body (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Decals (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Glass (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Blue (Material)
-                *   Shader (Shader)
-    *   forklift_5 (Xform)
-        *   lift (Xform)
-            *   SM_Forklift_Lift_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabGlass_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCab_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabDecal_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabPedal_B01_01 (Mesh)
-        *   body (Xform)
-            *   body (Xform)
-                *   SM_Forklift_RightChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_CenterChain_B01_01 (Mesh)
-                *   SM_Forklift_LeftChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_RightHose_B01_01 (Mesh)
-                *   SM_Forklift_LeftHose_B01_01 (Mesh)
-                *   SM_Forklift_HoseWheel_B01_01 (Mesh)
-                *   SM_Forklift_CenterChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_OperatorCabTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_OperatorCabBotWheels_B01_01 (Mesh)
-                *   SM_Forklift_LiftBotWheels_B01_01 (Mesh)
-                *   SM_Forklift_LiftTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_MastTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_MastBottomWheels_B01_01 (Mesh)
-                *   SM_Forklift_CenterHydralicLift_B01_01 (Mesh)
-                *   SM_Forklift_HydraulicSystem_B01_01 (Mesh)
-                *   SM_Forklift_LeftChain_B01_01 (Mesh)
-                *   SM_Forklift_RightChain_B01_01 (Mesh)
-                *   SM_Forklift_Body_B01_01 (Mesh)
-                    *   M_Forklift_B1_Body (GeomSubset)
-                    *   M_Forklift_B1_Plastic (GeomSubset)
-                *   SM_Forklift_BodyDecal_B01_01 (Mesh)
-                *   SM_Forklift_BodyGlass_B01_01 (Mesh)
-        *   back_wheel (Xform)
-            *   SM_Forklift_BackWheel_B01_01 (Mesh)
-            *   Sphere (Sphere)
-        *   roller_front_right (Xform)
-            *   SM_Forklift_LeadWheelsFrontRight_B01_01 (Mesh)
-            *   Cylinder (Cylinder)
-        *   roller_back_left (Xform)
-            *   SM_Forklift_LeadWheelsBackLeft_B01_01 (Mesh)
-            *   Cylinder_01 (Cylinder)
-        *   roller_back_right (Xform)
-            *   SM_Forklift_LeadWheelsBackRight_B01_01 (Mesh)
-            *   Cylinder_02 (Cylinder)
-        *   roller_front_left (Xform)
-            *   SM_Forklift_LeadWheelsFrontLeft_B01_01 (Mesh)
-            *   Cylinder_03 (Cylinder)
-        *   back_wheel_swivel (Xform)
-            *   SM_Forklift_BackWheelbase_B01_01 (Mesh)
-        *   lift_joint (PhysicsPrismaticJoint)
-        *   back_wheel_joints (Scope)
-            *   back_wheel_drive (PhysicsRevoluteJoint)
-            *   back_wheel_swivel (PhysicsRevoluteJoint)
-        *   roller_joints (Scope)
-            *   front_right_roller (PhysicsRevoluteJoint)
-            *   back_left_roller (PhysicsRevoluteJoint)
-            *   back_right_roller (PhysicsRevoluteJoint)
-            *   front_left_roller (PhysicsRevoluteJoint)
-        *   Looks (Scope)
-            *   M_Forklift_B1_Body (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Decals (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Glass (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Blue (Material)
-                *   Shader (Shader)
-    *   forklift_6 (Xform)
-        *   lift (Xform)
-            *   SM_Forklift_Lift_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabGlass_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCab_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabDecal_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabPedal_B01_01 (Mesh)
-        *   body (Xform)
-            *   body (Xform)
-                *   SM_Forklift_RightChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_CenterChain_B01_01 (Mesh)
-                *   SM_Forklift_LeftChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_RightHose_B01_01 (Mesh)
-                *   SM_Forklift_LeftHose_B01_01 (Mesh)
-                *   SM_Forklift_HoseWheel_B01_01 (Mesh)
-                *   SM_Forklift_CenterChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_OperatorCabTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_OperatorCabBotWheels_B01_01 (Mesh)
-                *   SM_Forklift_LiftBotWheels_B01_01 (Mesh)
-                *   SM_Forklift_LiftTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_MastTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_MastBottomWheels_B01_01 (Mesh)
-                *   SM_Forklift_CenterHydralicLift_B01_01 (Mesh)
-                *   SM_Forklift_HydraulicSystem_B01_01 (Mesh)
-                *   SM_Forklift_LeftChain_B01_01 (Mesh)
-                *   SM_Forklift_RightChain_B01_01 (Mesh)
-                *   SM_Forklift_Body_B01_01 (Mesh)
-                    *   M_Forklift_B1_Body (GeomSubset)
-                    *   M_Forklift_B1_Plastic (GeomSubset)
-                *   SM_Forklift_BodyDecal_B01_01 (Mesh)
-                *   SM_Forklift_BodyGlass_B01_01 (Mesh)
-        *   back_wheel (Xform)
-            *   SM_Forklift_BackWheel_B01_01 (Mesh)
-            *   Sphere (Sphere)
-        *   roller_front_right (Xform)
-            *   SM_Forklift_LeadWheelsFrontRight_B01_01 (Mesh)
-            *   Cylinder (Cylinder)
-        *   roller_back_left (Xform)
-            *   SM_Forklift_LeadWheelsBackLeft_B01_01 (Mesh)
-            *   Cylinder_01 (Cylinder)
-        *   roller_back_right (Xform)
-            *   SM_Forklift_LeadWheelsBackRight_B01_01 (Mesh)
-            *   Cylinder_02 (Cylinder)
-        *   roller_front_left (Xform)
-            *   SM_Forklift_LeadWheelsFrontLeft_B01_01 (Mesh)
-            *   Cylinder_03 (Cylinder)
-        *   back_wheel_swivel (Xform)
-            *   SM_Forklift_BackWheelbase_B01_01 (Mesh)
-        *   lift_joint (PhysicsPrismaticJoint)
-        *   back_wheel_joints (Scope)
-            *   back_wheel_drive (PhysicsRevoluteJoint)
-            *   back_wheel_swivel (PhysicsRevoluteJoint)
-        *   roller_joints (Scope)
-            *   front_right_roller (PhysicsRevoluteJoint)
-            *   back_left_roller (PhysicsRevoluteJoint)
-            *   back_right_roller (PhysicsRevoluteJoint)
-            *   front_left_roller (PhysicsRevoluteJoint)
-        *   Looks (Scope)
-            *   M_Forklift_B1_Body (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Decals (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Glass (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Blue (Material)
-                *   Shader (Shader)
-    *   forklift_7 (Xform)
-        *   lift (Xform)
-            *   SM_Forklift_Lift_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabGlass_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCab_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabDecal_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabPedal_B01_01 (Mesh)
-        *   body (Xform)
-            *   body (Xform)
-                *   SM_Forklift_RightChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_CenterChain_B01_01 (Mesh)
-                *   SM_Forklift_LeftChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_RightHose_B01_01 (Mesh)
-                *   SM_Forklift_LeftHose_B01_01 (Mesh)
-                *   SM_Forklift_HoseWheel_B01_01 (Mesh)
-                *   SM_Forklift_CenterChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_OperatorCabTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_OperatorCabBotWheels_B01_01 (Mesh)
-                *   SM_Forklift_LiftBotWheels_B01_01 (Mesh)
-                *   SM_Forklift_LiftTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_MastTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_MastBottomWheels_B01_01 (Mesh)
-                *   SM_Forklift_CenterHydralicLift_B01_01 (Mesh)
-                *   SM_Forklift_HydraulicSystem_B01_01 (Mesh)
-                *   SM_Forklift_LeftChain_B01_01 (Mesh)
-                *   SM_Forklift_RightChain_B01_01 (Mesh)
-                *   SM_Forklift_Body_B01_01 (Mesh)
-                    *   M_Forklift_B1_Body (GeomSubset)
-                    *   M_Forklift_B1_Plastic (GeomSubset)
-                *   SM_Forklift_BodyDecal_B01_01 (Mesh)
-                *   SM_Forklift_BodyGlass_B01_01 (Mesh)
-        *   back_wheel (Xform)
-            *   SM_Forklift_BackWheel_B01_01 (Mesh)
-            *   Sphere (Sphere)
-        *   roller_front_right (Xform)
-            *   SM_Forklift_LeadWheelsFrontRight_B01_01 (Mesh)
-            *   Cylinder (Cylinder)
-        *   roller_back_left (Xform)
-            *   SM_Forklift_LeadWheelsBackLeft_B01_01 (Mesh)
-            *   Cylinder_01 (Cylinder)
-        *   roller_back_right (Xform)
-            *   SM_Forklift_LeadWheelsBackRight_B01_01 (Mesh)
-            *   Cylinder_02 (Cylinder)
-        *   roller_front_left (Xform)
-            *   SM_Forklift_LeadWheelsFrontLeft_B01_01 (Mesh)
-            *   Cylinder_03 (Cylinder)
-        *   back_wheel_swivel (Xform)
-            *   SM_Forklift_BackWheelbase_B01_01 (Mesh)
-        *   lift_joint (PhysicsPrismaticJoint)
-        *   back_wheel_joints (Scope)
-            *   back_wheel_drive (PhysicsRevoluteJoint)
-            *   back_wheel_swivel (PhysicsRevoluteJoint)
-        *   roller_joints (Scope)
-            *   front_right_roller (PhysicsRevoluteJoint)
-            *   back_left_roller (PhysicsRevoluteJoint)
-            *   back_right_roller (PhysicsRevoluteJoint)
-            *   front_left_roller (PhysicsRevoluteJoint)
-        *   Looks (Scope)
-            *   M_Forklift_B1_Body (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Decals (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Glass (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Blue (Material)
-                *   Shader (Shader)
-    *   forklift_8 (Xform)
-        *   lift (Xform)
-            *   SM_Forklift_Lift_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabGlass_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCab_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabDecal_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabPedal_B01_01 (Mesh)
-        *   body (Xform)
-            *   body (Xform)
-                *   SM_Forklift_RightChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_CenterChain_B01_01 (Mesh)
-                *   SM_Forklift_LeftChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_RightHose_B01_01 (Mesh)
-                *   SM_Forklift_LeftHose_B01_01 (Mesh)
-                *   SM_Forklift_HoseWheel_B01_01 (Mesh)
-                *   SM_Forklift_CenterChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_OperatorCabTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_OperatorCabBotWheels_B01_01 (Mesh)
-                *   SM_Forklift_LiftBotWheels_B01_01 (Mesh)
-                *   SM_Forklift_LiftTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_MastTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_MastBottomWheels_B01_01 (Mesh)
-                *   SM_Forklift_CenterHydralicLift_B01_01 (Mesh)
-                *   SM_Forklift_HydraulicSystem_B01_01 (Mesh)
-                *   SM_Forklift_LeftChain_B01_01 (Mesh)
-                *   SM_Forklift_RightChain_B01_01 (Mesh)
-                *   SM_Forklift_Body_B01_01 (Mesh)
-                    *   M_Forklift_B1_Body (GeomSubset)
-                    *   M_Forklift_B1_Plastic (GeomSubset)
-                *   SM_Forklift_BodyDecal_B01_01 (Mesh)
-                *   SM_Forklift_BodyGlass_B01_01 (Mesh)
-        *   back_wheel (Xform)
-            *   SM_Forklift_BackWheel_B01_01 (Mesh)
-            *   Sphere (Sphere)
-        *   roller_front_right (Xform)
-            *   SM_Forklift_LeadWheelsFrontRight_B01_01 (Mesh)
-            *   Cylinder (Cylinder)
-        *   roller_back_left (Xform)
-            *   SM_Forklift_LeadWheelsBackLeft_B01_01 (Mesh)
-            *   Cylinder_01 (Cylinder)
-        *   roller_back_right (Xform)
-            *   SM_Forklift_LeadWheelsBackRight_B01_01 (Mesh)
-            *   Cylinder_02 (Cylinder)
-        *   roller_front_left (Xform)
-            *   SM_Forklift_LeadWheelsFrontLeft_B01_01 (Mesh)
-            *   Cylinder_03 (Cylinder)
-        *   back_wheel_swivel (Xform)
-            *   SM_Forklift_BackWheelbase_B01_01 (Mesh)
-        *   lift_joint (PhysicsPrismaticJoint)
-        *   back_wheel_joints (Scope)
-            *   back_wheel_drive (PhysicsRevoluteJoint)
-            *   back_wheel_swivel (PhysicsRevoluteJoint)
-        *   roller_joints (Scope)
-            *   front_right_roller (PhysicsRevoluteJoint)
-            *   back_left_roller (PhysicsRevoluteJoint)
-            *   back_right_roller (PhysicsRevoluteJoint)
-            *   front_left_roller (PhysicsRevoluteJoint)
-        *   Looks (Scope)
-            *   M_Forklift_B1_Body (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Decals (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Glass (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Blue (Material)
-                *   Shader (Shader)
-    *   forklift_9 (Xform)
-        *   lift (Xform)
-            *   SM_Forklift_Lift_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabGlass_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCab_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabDecal_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabPedal_B01_01 (Mesh)
-        *   body (Xform)
-            *   body (Xform)
-                *   SM_Forklift_RightChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_CenterChain_B01_01 (Mesh)
-                *   SM_Forklift_LeftChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_RightHose_B01_01 (Mesh)
-                *   SM_Forklift_LeftHose_B01_01 (Mesh)
-                *   SM_Forklift_HoseWheel_B01_01 (Mesh)
-                *   SM_Forklift_CenterChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_OperatorCabTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_OperatorCabBotWheels_B01_01 (Mesh)
-                *   SM_Forklift_LiftBotWheels_B01_01 (Mesh)
-                *   SM_Forklift_LiftTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_MastTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_MastBottomWheels_B01_01 (Mesh)
-                *   SM_Forklift_CenterHydralicLift_B01_01 (Mesh)
-                *   SM_Forklift_HydraulicSystem_B01_01 (Mesh)
-                *   SM_Forklift_LeftChain_B01_01 (Mesh)
-                *   SM_Forklift_RightChain_B01_01 (Mesh)
-                *   SM_Forklift_Body_B01_01 (Mesh)
-                    *   M_Forklift_B1_Body (GeomSubset)
-                    *   M_Forklift_B1_Plastic (GeomSubset)
-                *   SM_Forklift_BodyDecal_B01_01 (Mesh)
-                *   SM_Forklift_BodyGlass_B01_01 (Mesh)
-        *   back_wheel (Xform)
-            *   SM_Forklift_BackWheel_B01_01 (Mesh)
-            *   Sphere (Sphere)
-        *   roller_front_right (Xform)
-            *   SM_Forklift_LeadWheelsFrontRight_B01_01 (Mesh)
-            *   Cylinder (Cylinder)
-        *   roller_back_left (Xform)
-            *   SM_Forklift_LeadWheelsBackLeft_B01_01 (Mesh)
-            *   Cylinder_01 (Cylinder)
-        *   roller_back_right (Xform)
-            *   SM_Forklift_LeadWheelsBackRight_B01_01 (Mesh)
-            *   Cylinder_02 (Cylinder)
-        *   roller_front_left (Xform)
-            *   SM_Forklift_LeadWheelsFrontLeft_B01_01 (Mesh)
-            *   Cylinder_03 (Cylinder)
-        *   back_wheel_swivel (Xform)
-            *   SM_Forklift_BackWheelbase_B01_01 (Mesh)
-        *   lift_joint (PhysicsPrismaticJoint)
-        *   back_wheel_joints (Scope)
-            *   back_wheel_drive (PhysicsRevoluteJoint)
-            *   back_wheel_swivel (PhysicsRevoluteJoint)
-        *   roller_joints (Scope)
-            *   front_right_roller (PhysicsRevoluteJoint)
-            *   back_left_roller (PhysicsRevoluteJoint)
-            *   back_right_roller (PhysicsRevoluteJoint)
-            *   front_left_roller (PhysicsRevoluteJoint)
-        *   Looks (Scope)
-            *   M_Forklift_B1_Body (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Decals (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Glass (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Blue (Material)
-                *   Shader (Shader)
-    *   forklift_10 (Xform)
-        *   lift (Xform)
-            *   SM_Forklift_Lift_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabGlass_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCab_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabDecal_B01_01 (Mesh)
-            *   SM_Forklift_OperatorCabPedal_B01_01 (Mesh)
-        *   body (Xform)
-            *   body (Xform)
-                *   SM_Forklift_RightChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_CenterChain_B01_01 (Mesh)
-                *   SM_Forklift_LeftChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_RightHose_B01_01 (Mesh)
-                *   SM_Forklift_LeftHose_B01_01 (Mesh)
-                *   SM_Forklift_HoseWheel_B01_01 (Mesh)
-                *   SM_Forklift_CenterChainWheel_B01_01 (Mesh)
-                *   SM_Forklift_OperatorCabTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_OperatorCabBotWheels_B01_01 (Mesh)
-                *   SM_Forklift_LiftBotWheels_B01_01 (Mesh)
-                *   SM_Forklift_LiftTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_MastTopWheels_B01_01 (Mesh)
-                *   SM_Forklift_MastBottomWheels_B01_01 (Mesh)
-                *   SM_Forklift_CenterHydralicLift_B01_01 (Mesh)
-                *   SM_Forklift_HydraulicSystem_B01_01 (Mesh)
-                *   SM_Forklift_LeftChain_B01_01 (Mesh)
-                *   SM_Forklift_RightChain_B01_01 (Mesh)
-                *   SM_Forklift_Body_B01_01 (Mesh)
-                    *   M_Forklift_B1_Body (GeomSubset)
-                    *   M_Forklift_B1_Plastic (GeomSubset)
-                *   SM_Forklift_BodyDecal_B01_01 (Mesh)
-                *   SM_Forklift_BodyGlass_B01_01 (Mesh)
-        *   back_wheel (Xform)
-            *   SM_Forklift_BackWheel_B01_01 (Mesh)
-            *   Sphere (Sphere)
-        *   roller_front_right (Xform)
-            *   SM_Forklift_LeadWheelsFrontRight_B01_01 (Mesh)
-            *   Cylinder (Cylinder)
-        *   roller_back_left (Xform)
-            *   SM_Forklift_LeadWheelsBackLeft_B01_01 (Mesh)
-            *   Cylinder_01 (Cylinder)
-        *   roller_back_right (Xform)
-            *   SM_Forklift_LeadWheelsBackRight_B01_01 (Mesh)
-            *   Cylinder_02 (Cylinder)
-        *   roller_front_left (Xform)
-            *   SM_Forklift_LeadWheelsFrontLeft_B01_01 (Mesh)
-            *   Cylinder_03 (Cylinder)
-        *   back_wheel_swivel (Xform)
-            *   SM_Forklift_BackWheelbase_B01_01 (Mesh)
-        *   lift_joint (PhysicsPrismaticJoint)
-        *   back_wheel_joints (Scope)
-            *   back_wheel_drive (PhysicsRevoluteJoint)
-            *   back_wheel_swivel (PhysicsRevoluteJoint)
-        *   roller_joints (Scope)
-            *   front_right_roller (PhysicsRevoluteJoint)
-            *   back_left_roller (PhysicsRevoluteJoint)
-            *   back_right_roller (PhysicsRevoluteJoint)
-            *   front_left_roller (PhysicsRevoluteJoint)
-        *   Looks (Scope)
-            *   M_Forklift_B1_Body (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Decals (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Glass (Material)
-                *   Shader (Shader)
-            *   M_Forklift_B1_Blue (Material)
-                *   Shader (Shader)
+    *   model_lab_cabinet002 (Xform)
+        *   materials (Scope)
+            *   mat_0 (Material)
+                *   PBRShader (Shader)
+            *   mat_83555 (Material)
+                *   PBRShader (Shader)
+                *   stReader (Shader)
+                *   transform_st (Shader)
+                *   diffuseTexture (Shader)
+            *   mat_83560 (Material)
+                *   PBRShader (Shader)
+                *   stReader (Shader)
+                *   transform_st (Shader)
+                *   diffuseTexture (Shader)
+            *   mat_83562 (Material)
+                *   PBRShader (Shader)
+                *   stReader (Shader)
+                *   transform_st (Shader)
+                *   diffuseTexture (Shader)
+            *   mat_83557 (Material)
+                *   PBRShader (Shader)
+                *   stReader (Shader)
+                *   transform_st (Shader)
+                *   diffuseTexture (Shader)
+            *   mat_83559 (Material)
+                *   PBRShader (Shader)
+        *   E_body_1 (Xform)
+            *   E_ComponentM4_10 (Xform)
+                *   P_b8eede2b79e829ca (Mesh)
+            *   E_leg_11 (Xform)
+                *   P_ba4078f1e3b669ca (Mesh)
+                *   P_4aef38f219bc29ca (Mesh)
+            *   E_ComponentM1_2 (Xform)
+                *   P_f41a7086758c89ca (Mesh)
+            *   E_tabletop_3 (Xform)
+                *   P_c9483ab77a6129ca (Mesh)
+            *   E_ComponentM1_4 (Xform)
+                *   P_2b27235699ab29ca (Mesh)
+            *   E_ComponentM4_5 (Xform)
+                *   P_7c4c705b64d7da6a (Mesh)
+            *   E_ComponentM4_6 (Xform)
+                *   P_2c0796fb725c29ca (Mesh)
+            *   E_ComponentM4_7 (Xform)
+                *   P_ce0cd191cc829ca (Mesh)
+            *   E_ComponentM4_8 (Xform)
+                *   P_723cbc27b245f9ca (Mesh)
+            *   E_ComponentM4_9 (Xform)
+                *   P_6acb3a38b9129ca (Mesh)
+        *   PhysicsMaterial (Material)
+    *   processed_Robotic_Manipulator_low_poly (Xform)
+        *   Materials (Scope)
+            *   Robot_hand (Material)
+                *   pbr_shader (Shader)
+                *   uvset0 (Shader)
+                *   tex_base (Shader)
+                *   tex_metallic (Shader)
+                *   tex_roughness (Shader)
+                *   tex_normal (Shader)
+                *   tex_occlusion (Shader)
+            *   Stand (Material)
+                *   pbr_shader (Shader)
+                *   uvset0 (Shader)
+                *   tex_base (Shader)
+                *   tex_metallic (Shader)
+                *   tex_roughness (Shader)
+                *   tex_normal (Shader)
+                *   tex_emissive (Shader)
+                *   tex_occlusion (Shader)
+        *   Meshes (Xform)
+            *   Sketchfab_model (Xform)
+                *   Collada_visual_scene_group (Xform)
+                    *   Robotic_hand_018_low (Xform)
+                        *   defaultMaterial (Xform)
+                            *   defaultMaterial (Mesh)
+                    *   Robotic_hand_016_low (Xform)
+                        *   defaultMaterial (Xform)
+                            *   defaultMaterial (Mesh)
+                    *   Robotic_hand_015_low (Xform)
+                        *   defaultMaterial (Xform)
+                            *   defaultMaterial (Mesh)
+                    *   Robotic_hand_017_low (Xform)
+                        *   defaultMaterial (Xform)
+                            *   defaultMaterial (Mesh)
+                    *   Robotic_hand_014_low (Xform)
+                        *   defaultMaterial (Xform)
+                            *   defaultMaterial (Mesh)
+                    *   Robotic_hand_013_low (Xform)
+                        *   defaultMaterial (Xform)
+                            *   defaultMaterial (Mesh)
+                    *   Robotic_hand_012_low (Xform)
+                        *   defaultMaterial (Xform)
+                            *   defaultMaterial (Mesh)
+                    *   Robotic_hand_011_low (Xform)
+                        *   defaultMaterial (Xform)
+                            *   defaultMaterial (Mesh)
+                    *   Robotic_hand_010_low (Xform)
+                        *   defaultMaterial (Xform)
+                            *   defaultMaterial (Mesh)
+                    *   Robotic_hand_009_low (Xform)
+                        *   defaultMaterial (Xform)
+                            *   defaultMaterial (Mesh)
+                    *   Robotic_hand_008_low (Xform)
+                        *   defaultMaterial (Xform)
+                            *   defaultMaterial (Mesh)
+                    *   Robotic_hand_007_low (Xform)
+                        *   defaultMaterial (Xform)
+                            *   defaultMaterial (Mesh)
+                    *   Robotic_hand_006_low (Xform)
+                        *   defaultMaterial (Xform)
+                            *   defaultMaterial (Mesh)
+                    *   Robotic_hand_005_low (Xform)
+                        *   defaultMaterial (Xform)
+                            *   defaultMaterial (Mesh)
+                    *   Robotic_hand_004_low (Xform)
+                        *   defaultMaterial (Xform)
+                            *   defaultMaterial (Mesh)
+                    *   Robotic_hand_003_low (Xform)
+                        *   defaultMaterial (Xform)
+                            *   defaultMaterial (Mesh)
+    *   model_lab_cabinet002_01 (Prim)
+    *   processed_Robotic_Manipulator_low_poly_01 (Prim)
+    *   model_lab_cabinet002_02 (Prim)
+    *   processed_Robotic_Manipulator_low_poly_02 (Prim)
+    *   model_lab_cabinet002_03 (Prim)
+    *   processed_Robotic_Manipulator_low_poly_03 (Prim)
 
 ## 3. 外部引用Xform简报(Referenced Xforms)
 
@@ -7633,270 +6762,6 @@
 ---
 
 
-### '/World/RobotArm' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/assets/INDUSTRIAL_ROBOTIC_ARM/INDUSTRIAL_ROBOTIC_ARM.usdc
-* BBox (world): size=(1.171, 1.898, 1.690), center=(-5.605, 7.268, 0.952)
-* 几何统计: Mesh=38, Vertices=45024, Faces=53168
-* 子Mesh材质: /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_1_Base_1/Component_1_Base/Component2_1/Component2/Body1/Body1_Brass___Polished_0/Body1_Brass___Polished_0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_1_Base_1/Component_1_Base/Component24_1/Component24/Body1/Body1_Aluminum___Anodized_Glossy__Grey__0/Body1_Aluminum___Anodized_Glossy__Grey__0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_1_Base_1/Component_1_Base/Component25_1/Component25/Body1/Body1_Aluminum___Anodized_Glossy__Grey__0/Body1_Aluminum___Anodized_Glossy__Grey__0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_1_Base_1/Component_1_Base/Component26_1/Component26/Body1/Body1_Aluminum___Anodized_Glossy__Grey__0/Body1_Aluminum___Anodized_Glossy__Grey__0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_1_Base_1/Component_1_Base/Component27_1/Component27/Body1/Body1_Aluminum___Anodized_Glossy__Grey__0/Body1_Aluminum___Anodized_Glossy__Grey__0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_1_Base_1/Component_1_Base/Component28_1/Component28/Body1/Body1_Brass___Polished_0/Body1_Brass___Polished_0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_2_Jaw_1_1/Component_2_Jaw_1/Component4_1/Component4/Body1/Body1_Aluminum___Anodized_Glossy__Grey__0/Body1_Aluminum___Anodized_Glossy__Grey__0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_2_Jaw_1_1/Component_2_Jaw_1/Component17_1/Component17/Body1/Body1_Brass___Polished_0/Body1_Brass___Polished_0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_3_Jaw_2_1/Component_3_Jaw_2/Component6_1/Component6/Body1/Body1_Paint___Enamel_Glossy__Yellow__0/Body1_Paint___Enamel_Glossy__Yellow__0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_3_Jaw_2_1/Component_3_Jaw_2/Component6_1/Component6/Body1/Body1__0/Body1__0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_3_Jaw_2_1/Component_3_Jaw_2/Component29_1/Component29/Body1/Body1_Aluminum___Anodized_Glossy__Grey__0/Body1_Aluminum___Anodized_Glossy__Grey__0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_3_Jaw_2_1/Component_3_Jaw_2/Component30_1/Component30/Body1/Body1_Steel___Satin_0/Body1_Steel___Satin_0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_3_Jaw_2_1/Component_3_Jaw_2/Component31_1/Component31/Body1/Body1_Steel___Satin_0/Body1_Steel___Satin_0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_3_Jaw_2_1/Component_3_Jaw_2/Component32_1/Component32/Body1/Body1_Steel___Satin_0/Body1_Steel___Satin_0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_3_Jaw_2_1/Component_3_Jaw_2/Component33_1/Component33/Body1/Body1_Steel___Satin_0/Body1_Steel___Satin_0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_3_Jaw_2_1/Component_3_Jaw_2/Component34_1/Component34/Body1/Body1_Steel___Satin_0/Body1_Steel___Satin_0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_3_Jaw_2_1/Component_3_Jaw_2/Component35_1/Component35/Body1/Body1_Steel___Satin_0/Body1_Steel___Satin_0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_3_Jaw_2_1/Component_3_Jaw_2/Component36_1/Component36/Body1/Body1_Steel___Satin_0/Body1_Steel___Satin_0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_3_Jaw_2_1/Component_3_Jaw_2/Component37_1/Component37/Body1/Body1_Steel___Satin_0/Body1_Steel___Satin_0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_3_Jaw_2_1/Component_3_Jaw_2/Component38_1/Component38/Body1/Body1_Steel___Satin_0/Body1_Steel___Satin_0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_3_Jaw_2_1/Component_3_Jaw_2/Component39_1/Component39/Body1/Body1_Steel___Satin_0/Body1_Steel___Satin_0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_3_Jaw_2_1/Component_3_Jaw_2/Component40_1/Component40/Body1/Body1_Steel___Satin_0/Body1_Steel___Satin_0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_3_Jaw_2_1/Component_3_Jaw_2/Component41_1/Component41/Body1/Body1_Steel___Satin_0/Body1_Steel___Satin_0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_3_Jaw_2_1/Component_3_Jaw_2/Component42_1/Component42/Body1/Body1_Steel___Satin_0/Body1_Steel___Satin_0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_4_Jaw_3_1/Component_4_Jaw_3/Component8_1/Component8/Body1/Body1_Brass___Polished_0/Body1_Brass___Polished_0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_4_Jaw_3_1/Component_4_Jaw_3/Component22_1/Component22/Body1/Body1_Brass___Polished_0/Body1_Brass___Polished_0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_4_Jaw_3_1/Component_4_Jaw_3/Component23_1/Component23/Body1/Body1_Brass___Polished_0/Body1_Brass___Polished_0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_5_Jaw_4_1/Component_5_Jaw_4/Component10_1/Component10/Body1/Body1_Paint___Enamel_Glossy__Black__0/Body1_Paint___Enamel_Glossy__Black__0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_5_Jaw_4_1/Component_5_Jaw_4/Component10_1/Component10/Body1/Body1__0/Body1__0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_5_Jaw_4_1/Component_5_Jaw_4/Component20_1/Component20/Body1/Body1_Aluminum___Anodized_Glossy__Grey__0/Body1_Aluminum___Anodized_Glossy__Grey__0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_5_Jaw_4_1/Component_5_Jaw_4/Component21_1/Component21/Body1/Body1_Steel___Satin_0/Body1_Steel___Satin_0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_6_Jaw_5_1/Component_6_Jaw_5/Component12_1/Component12/Body1/Body1_Brass___Polished_0/Body1_Brass___Polished_0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_6_Jaw_5_1/Component_6_Jaw_5/Component18_1/Component18/Body1/Body1_Brass___Polished_0/Body1_Brass___Polished_0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_6_Jaw_5_1/Component_6_Jaw_5/Component19_1/Component19/Body1/Body1_Paint___Enamel_Glossy__Yellow__0/Body1_Paint___Enamel_Glossy__Yellow__0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_7_Jaw_6_1/Component_7_Jaw_6/Component14_1/Component14/Body1/Body1_Brass___Polished_0/Body1_Brass___Polished_0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_7_Jaw_6_1/Component_7_Jaw_6/Component43_1/Component43/Body1/Body1_Aluminum___Anodized_Glossy__Grey__0/Body1_Aluminum___Anodized_Glossy__Grey__0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_8_Jaw_7_1/Component_8_Jaw_7/Component16_1/Component16/Body1/Body1_Aluminum___Anodized_Glossy__Grey__0/Body1_Aluminum___Anodized_Glossy__Grey__0 -> 未绑定, /World/RobotArm/Meshes/Sketchfab_model/c87c2a6ebd5447f7ac496076c3c610d3_fbx/RootNode/PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84/Component_8_Jaw_7_1/Component_8_Jaw_7/Component16_2/Component16/Body1/Body1_Aluminum___Anodized_Glossy__Grey__0/Body1_Aluminum___Anodized_Glossy__Grey__0 -> 未绑定
-
-
----
-
-
-### '/World/RobotArm1' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/assets/Robotic_Manipulator_low_poly/processed_Robotic_Manipulator_low_poly.usdc
-* BBox (world): size=(1.174, 0.951, 0.727), center=(-3.000, -10.000, 0.528)
-* 几何统计: Mesh=16, Vertices=4239, Faces=4548
-* 子Mesh材质: /World/RobotArm1/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_018_low/defaultMaterial/defaultMaterial -> 未绑定, /World/RobotArm1/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_016_low/defaultMaterial/defaultMaterial -> 未绑定, /World/RobotArm1/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_015_low/defaultMaterial/defaultMaterial -> 未绑定, /World/RobotArm1/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_017_low/defaultMaterial/defaultMaterial -> 未绑定, /World/RobotArm1/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_014_low/defaultMaterial/defaultMaterial -> 未绑定, /World/RobotArm1/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_013_low/defaultMaterial/defaultMaterial -> 未绑定, /World/RobotArm1/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_012_low/defaultMaterial/defaultMaterial -> 未绑定, /World/RobotArm1/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_011_low/defaultMaterial/defaultMaterial -> 未绑定, /World/RobotArm1/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_010_low/defaultMaterial/defaultMaterial -> 未绑定, /World/RobotArm1/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_009_low/defaultMaterial/defaultMaterial -> 未绑定, /World/RobotArm1/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_008_low/defaultMaterial/defaultMaterial -> 未绑定, /World/RobotArm1/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_007_low/defaultMaterial/defaultMaterial -> 未绑定, /World/RobotArm1/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_006_low/defaultMaterial/defaultMaterial -> 未绑定, /World/RobotArm1/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_005_low/defaultMaterial/defaultMaterial -> 未绑定, /World/RobotArm1/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_004_low/defaultMaterial/defaultMaterial -> 未绑定, /World/RobotArm1/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_003_low/defaultMaterial/defaultMaterial -> 未绑定
-
-
----
-
-
-### '/World/RobotArm2' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/IsaacLab/Robots/FrankaEmika/panda_instanceable1.usd
-* BBox (world): size=(0.755, 0.583, 2.508), center=(6.980, 7.500, 1.306)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
-
----
-
-
-### '/World/RobotArm2/Group/panda_hand/visuals' (Xform)
-* 引用: reference:./Props/panda_hand.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.063, 0.205, 0.092), center=(6.815, 7.498, 2.090)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
-
----
-
-
-### '/World/RobotArm2/Group/panda_hand/collisions' (Xform)
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_hand_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(6.812, 7.500, 2.136)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
-
----
-
-
-### '/World/RobotArm2/Group/panda_leftfinger/visuals' (Xform)
-* 引用: reference:./Props/panda_leftfinger.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.021, 0.026, 0.054), center=(6.791, 7.521, 1.943)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
-
----
-
-
-### '/World/RobotArm2/Group/panda_leftfinger/collisions' (Xform)
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_leftfinger_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(6.812, 7.500, 2.004)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
-
----
-
-
-### '/World/RobotArm2/Group/panda_link0/visuals' (Xform)
-* 引用: reference:./Props/panda_link0.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.226, 0.189, 0.140), center=(7.103, 7.500, 0.210)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
-
----
-
-
-### '/World/RobotArm2/Group/panda_link0/collisions' (Xform)
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link0_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(7.010, 7.500, 0.052)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
-
----
-
-
-### '/World/RobotArm2/Group/panda_link1/visuals' (Xform)
-* 引用: reference:./Props/panda_link1.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.184, 0.247), center=(7.010, 7.584, 0.647)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
-
----
-
-
-### '/World/RobotArm2/Group/panda_link1/collisions' (Xform)
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link1_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(7.010, 7.500, 0.801)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
-
----
-
-
-### '/World/RobotArm2/Group/panda_link2/visuals' (Xform)
-* 引用: reference:./Props/panda_link2.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.249, 0.184), center=(7.010, 7.417, 0.958)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
-
----
-
-
-### '/World/RobotArm2/Group/panda_link2/collisions' (Xform)
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link2_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(7.010, 7.500, 0.801)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
-
----
-
-
-### '/World/RobotArm2/Group/panda_link3/visuals' (Xform)
-* 引用: reference:./Props/panda_link3.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.193, 0.166, 0.176), center=(6.917, 7.437, 1.438)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
-
----
-
-
-### '/World/RobotArm2/Group/panda_link3/collisions' (Xform)
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link3_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(7.010, 7.500, 1.512)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
-
----
-
-
-### '/World/RobotArm2/Group/panda_link4/visuals' (Xform)
-* 引用: reference:./Props/panda_link4.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.193, 0.179, 0.166), center=(6.917, 7.563, 1.590)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
-
----
-
-
-### '/World/RobotArm2/Group/panda_link4/collisions' (Xform)
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link4_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(6.825, 7.500, 1.512)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
-
----
-
-
-### '/World/RobotArm2/Group/panda_link5/visuals' (Xform)
-* 引用: reference:./Props/panda_link5.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.185, 0.311), center=(7.010, 7.416, 2.144)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
-
----
-
-
-### '/World/RobotArm2/Group/panda_link5/collisions' (Xform)
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link5_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(7.010, 7.500, 2.376)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
-
----
-
-
-### '/World/RobotArm2/Group/panda_link6/visuals' (Xform)
-* 引用: reference:./Props/panda_link6.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.180, 0.133, 0.100), center=(6.916, 7.514, 2.411)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
-
----
-
-
-### '/World/RobotArm2/Group/panda_link6/collisions' (Xform)
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link6_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(7.010, 7.500, 2.376)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
-
----
-
-
-### '/World/RobotArm2/Group/panda_link7/visuals' (Xform)
-* 引用: reference:./Props/panda_link7.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.125, 0.125, 0.055), center=(6.770, 7.542, 2.198)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
-
----
-
-
-### '/World/RobotArm2/Group/panda_link7/collisions' (Xform)
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link7_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(6.812, 7.500, 2.376)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
-
----
-
-
-### '/World/RobotArm2/Group/panda_rightfinger/visuals' (Xform)
-* 引用: reference:./Props/panda_rightfinger.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.021, 0.026, 0.054), center=(6.833, 7.479, 1.943)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
-
----
-
-
-### '/World/RobotArm2/Group/panda_rightfinger/collisions' (Xform)
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_rightfinger_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(6.812, 7.500, 2.004)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
-
----
-
-
-### '/World/RobotArm3' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/Robots/Denso/CobottaPro900/cobotta_pro_900.usd
-* BBox (world): size=(0.275, 0.500, 2.307), center=(-1.983, 10.877, 1.216)
-* 几何统计: Mesh=28, Vertices=330990, Faces=110330
-* 子Mesh材质: /World/RobotArm3/base_link/visuals -> /World/RobotArm3/Looks/material_blinn20, /World/RobotArm3/base_link/collisions -> 未绑定, /World/RobotArm3/J1/visuals -> /World/RobotArm3/Looks/material_blinn20, /World/RobotArm3/J1/collisions -> 未绑定, /World/RobotArm3/J2/visuals -> /World/RobotArm3/Looks/material_blinn20_1, /World/RobotArm3/J2/collisions -> 未绑定, /World/RobotArm3/J3/visuals -> /World/RobotArm3/Looks/material_blinn20_1, /World/RobotArm3/J3/collisions -> 未绑定, /World/RobotArm3/J4/visuals -> 未绑定, /World/RobotArm3/J4/collisions -> 未绑定, /World/RobotArm3/J5/visuals -> 未绑定, /World/RobotArm3/J5/collisions -> 未绑定, /World/RobotArm3/J6/visuals -> /World/RobotArm3/Looks/material_blinn20, /World/RobotArm3/J6/collisions -> 未绑定, /World/RobotArm3/onrobot_rg6_base_link/visuals -> /World/RobotArm3/Looks/material_CCCCCC, /World/RobotArm3/onrobot_rg6_base_link/collisions -> 未绑定, /World/RobotArm3/left_outer_knuckle/visuals -> /World/RobotArm3/Looks/material_CCCCCC, /World/RobotArm3/left_outer_knuckle/collisions -> 未绑定, /World/RobotArm3/left_inner_finger/visuals -> /World/RobotArm3/Looks/material_191919, /World/RobotArm3/left_inner_finger/collisions -> 未绑定, /World/RobotArm3/left_inner_knuckle/visuals -> /World/RobotArm3/Looks/material_CCCCCC, /World/RobotArm3/left_inner_knuckle/collisions -> 未绑定, /World/RobotArm3/right_inner_knuckle/visuals -> /World/RobotArm3/Looks/material_CCCCCC, /World/RobotArm3/right_inner_knuckle/collisions -> 未绑定, /World/RobotArm3/right_outer_knuckle/visuals -> /World/RobotArm3/Looks/material_CCCCCC, /World/RobotArm3/right_outer_knuckle/collisions -> 未绑定, /World/RobotArm3/right_inner_finger/visuals -> /World/RobotArm3/Looks/material_191919, /World/RobotArm3/right_inner_finger/collisions -> 未绑定
-* 材质摘要:
- * /World/RobotArm3/Looks/material_191919 -> Inputs: 'diffuse_color_constant=(0.100, 0.100, 0.100)'
- * /World/RobotArm3/Looks/material_CCCCCC -> Inputs: 'diffuse_color_constant=(0.800, 0.800, 0.800)'
- * /World/RobotArm3/Looks/material_blinn20 -> Inputs: 'diffuse_color_constant=(0.753, 0.753, 0.753)', 'emissive_color=(0.024, 0.024, 0.024)'
- * /World/RobotArm3/Looks/material_blinn20_1 -> Inputs: 'diffuse_color_constant=(1.000, 1.000, 1.000)', 'emissive_color=(0.040, 0.040, 0.040)'
-
-
----
-
-
 ### '/World/AGV_1' (Xform)
 * 引用: reference:/media/simple/another_Documents/isaacsim_assets/assets/AGV_ready_1/AGV_ready_1.usdc
 * BBox (world): size=(1.457, 0.340, 0.669), center=(6.114, 8.318, 0.129)
@@ -8170,118 +7035,26 @@
 ---
 
 
-### '/World/forklift_2' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/Robots/IsaacSim/ForkliftB/forklift_b.usd
-* BBox (world): size=(1.130, 3.031, 2.935), center=(-6.000, 0.631, 1.466)
-* 几何统计: Mesh=31, Vertices=1153448, Faces=554600
-* 子Mesh材质: /World/forklift_2/lift/SM_Forklift_Lift_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body, /World/forklift_2/lift/SM_Forklift_OperatorCabGlass_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Glass, /World/forklift_2/lift/SM_Forklift_OperatorCab_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body, /World/forklift_2/lift/SM_Forklift_OperatorCabDecal_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Decals, /World/forklift_2/lift/SM_Forklift_OperatorCabPedal_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body, /World/forklift_2/body/body/SM_Forklift_RightChainWheel_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body, /World/forklift_2/body/body/SM_Forklift_CenterChain_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body, /World/forklift_2/body/body/SM_Forklift_LeftChainWheel_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body, /World/forklift_2/body/body/SM_Forklift_RightHose_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body, /World/forklift_2/body/body/SM_Forklift_LeftHose_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body, /World/forklift_2/body/body/SM_Forklift_HoseWheel_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body, /World/forklift_2/body/body/SM_Forklift_CenterChainWheel_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body, /World/forklift_2/body/body/SM_Forklift_OperatorCabTopWheels_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body, /World/forklift_2/body/body/SM_Forklift_OperatorCabBotWheels_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body, /World/forklift_2/body/body/SM_Forklift_LiftBotWheels_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body, /World/forklift_2/body/body/SM_Forklift_LiftTopWheels_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body, /World/forklift_2/body/body/SM_Forklift_MastTopWheels_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body, /World/forklift_2/body/body/SM_Forklift_MastBottomWheels_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body, /World/forklift_2/body/body/SM_Forklift_CenterHydralicLift_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body, /World/forklift_2/body/body/SM_Forklift_HydraulicSystem_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body, /World/forklift_2/body/body/SM_Forklift_LeftChain_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body, /World/forklift_2/body/body/SM_Forklift_RightChain_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body, /World/forklift_2/body/body/SM_Forklift_Body_B01_01 -> 未绑定, /World/forklift_2/body/body/SM_Forklift_BodyDecal_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Decals, /World/forklift_2/body/body/SM_Forklift_BodyGlass_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body, /World/forklift_2/back_wheel/SM_Forklift_BackWheel_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body, /World/forklift_2/roller_front_right/SM_Forklift_LeadWheelsFrontRight_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body, /World/forklift_2/roller_back_left/SM_Forklift_LeadWheelsBackLeft_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body, /World/forklift_2/roller_back_right/SM_Forklift_LeadWheelsBackRight_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body, /World/forklift_2/roller_front_left/SM_Forklift_LeadWheelsFrontLeft_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body, /World/forklift_2/back_wheel_swivel/SM_Forklift_BackWheelbase_B01_01 -> /World/forklift_2/Looks/M_Forklift_B1_Body
+### '/World/model_lab_cabinet002' (Xform)
+* 引用: payload:../device_data/usdz/Workbench/model_lab_cabinet002.usdz
+* BBox (world): size=(0.750, 1.500, 0.800), center=(-2.845, -9.491, 0.450)
+* 几何统计: Mesh=11, Vertices=3992, Faces=2268
+* 子Mesh材质: /World/model_lab_cabinet002/E_body_1/E_ComponentM4_10/P_b8eede2b79e829ca -> /World/model_lab_cabinet002/materials/mat_83555, /World/model_lab_cabinet002/E_body_1/E_leg_11/P_ba4078f1e3b669ca -> /World/model_lab_cabinet002/materials/mat_83557, /World/model_lab_cabinet002/E_body_1/E_leg_11/P_4aef38f219bc29ca -> /World/model_lab_cabinet002/materials/mat_83559, /World/model_lab_cabinet002/E_body_1/E_ComponentM1_2/P_f41a7086758c89ca -> /World/model_lab_cabinet002/materials/mat_83555, /World/model_lab_cabinet002/E_body_1/E_tabletop_3/P_c9483ab77a6129ca -> /World/model_lab_cabinet002/materials/mat_83560, /World/model_lab_cabinet002/E_body_1/E_ComponentM1_4/P_2b27235699ab29ca -> /World/model_lab_cabinet002/materials/mat_83555, /World/model_lab_cabinet002/E_body_1/E_ComponentM4_5/P_7c4c705b64d7da6a -> /World/model_lab_cabinet002/materials/mat_83555, /World/model_lab_cabinet002/E_body_1/E_ComponentM4_6/P_2c0796fb725c29ca -> /World/model_lab_cabinet002/materials/mat_83555, /World/model_lab_cabinet002/E_body_1/E_ComponentM4_7/P_ce0cd191cc829ca -> /World/model_lab_cabinet002/materials/mat_83555, /World/model_lab_cabinet002/E_body_1/E_ComponentM4_8/P_723cbc27b245f9ca -> /World/model_lab_cabinet002/materials/mat_83555, /World/model_lab_cabinet002/E_body_1/E_ComponentM4_9/P_6acb3a38b9129ca -> /World/model_lab_cabinet002/materials/mat_83555
 * 材质摘要:
- * /World/forklift_2/Looks/M_Forklift_B1_Body -> Inputs: 'metallic_texture_influence=1', 'reflection_roughness_texture_influence=1', Textures: './Props/Source/Textures/T_Forklift_B1_Albedo.<UDIM>.png', './Props/Source/Textures/T_Forklift_B1_Normal.<UDIM>.png', './Props/Source/Textures/T_Forklift_B1_ORM.<UDIM>.png'
- * /World/forklift_2/Looks/M_Forklift_B1_Decals -> Inputs: 'metallic_texture_influence=1', 'opacity_threshold=0.2', 'reflection_roughness_texture_influence=1', Textures: './Props/Source/Textures/T_Forklift_B1_Decal_Albedo.png', './Props/Source/Textures/T_Forklift_B1_Decal_Normal.png', './Props/Source/Textures/T_Forklift_B1_Decal_Opacity.png'
+ * /World/model_lab_cabinet002/materials/mat_83555 -> Inputs: 'clearcoat=0.05', 'clearcoatRoughness=0.05', 'emissiveColor=(0.000, 0.000, 0.000)', 'ior=1', 'metallic=0.06', 'opacity=1', 'roughness=0.1', 'specularColor=(0.000, 0.000, 0.000)', 'rotation=0', 'scale=(10.758, 10.000)', 'translation=(0.000, 0.000)', Textures: '0/b34614490170b5b5a1196c0c642293a6.png'
+ * /World/model_lab_cabinet002/materials/mat_83557 -> Inputs: 'clearcoat=0.05', 'clearcoatRoughness=0.05', 'emissiveColor=(0.000, 0.000, 0.000)', 'ior=1', 'opacity=1', 'roughness=0.5', 'specularColor=(0.000, 0.000, 0.000)', 'rotation=0', 'scale=(9.843, 9.843)', 'translation=(0.000, 0.000)', Textures: '0/877f390708c33c74fbabd5ea1b887144.png'
+ * /World/model_lab_cabinet002/materials/mat_83559 -> Inputs: 'clearcoat=0.05', 'clearcoatRoughness=0.05', 'diffuseColor=(0.527, 0.527, 0.527)', 'emissiveColor=(0.000, 0.000, 0.000)', 'ior=1', 'opacity=1', 'roughness=0.5', 'specularColor=(0.000, 0.000, 0.000)'
+ * /World/model_lab_cabinet002/materials/mat_83560 -> Inputs: 'clearcoat=0.05', 'clearcoatRoughness=0.05', 'emissiveColor=(0.000, 0.000, 0.000)', 'ior=1', 'metallic=0.09', 'opacity=1', 'roughness=0.12', 'specularColor=(0.000, 0.000, 0.000)', 'rotation=0', 'scale=(10.758, 10.000)', 'translation=(0.000, 0.000)', Textures: '0/06765b98648f9263a71250f976cb083f.png'
 
 
 ---
 
 
-### '/World/forklift_3' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/Robots/IsaacSim/ForkliftB/forklift_b.usd
-* BBox (world): size=(1.130, 3.031, 2.935), center=(-6.000, 0.631, 1.466)
-* 几何统计: Mesh=31, Vertices=1153448, Faces=554600
-* 子Mesh材质: /World/forklift_3/lift/SM_Forklift_Lift_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body, /World/forklift_3/lift/SM_Forklift_OperatorCabGlass_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Glass, /World/forklift_3/lift/SM_Forklift_OperatorCab_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body, /World/forklift_3/lift/SM_Forklift_OperatorCabDecal_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Decals, /World/forklift_3/lift/SM_Forklift_OperatorCabPedal_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body, /World/forklift_3/body/body/SM_Forklift_RightChainWheel_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body, /World/forklift_3/body/body/SM_Forklift_CenterChain_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body, /World/forklift_3/body/body/SM_Forklift_LeftChainWheel_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body, /World/forklift_3/body/body/SM_Forklift_RightHose_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body, /World/forklift_3/body/body/SM_Forklift_LeftHose_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body, /World/forklift_3/body/body/SM_Forklift_HoseWheel_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body, /World/forklift_3/body/body/SM_Forklift_CenterChainWheel_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body, /World/forklift_3/body/body/SM_Forklift_OperatorCabTopWheels_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body, /World/forklift_3/body/body/SM_Forklift_OperatorCabBotWheels_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body, /World/forklift_3/body/body/SM_Forklift_LiftBotWheels_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body, /World/forklift_3/body/body/SM_Forklift_LiftTopWheels_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body, /World/forklift_3/body/body/SM_Forklift_MastTopWheels_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body, /World/forklift_3/body/body/SM_Forklift_MastBottomWheels_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body, /World/forklift_3/body/body/SM_Forklift_CenterHydralicLift_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body, /World/forklift_3/body/body/SM_Forklift_HydraulicSystem_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body, /World/forklift_3/body/body/SM_Forklift_LeftChain_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body, /World/forklift_3/body/body/SM_Forklift_RightChain_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body, /World/forklift_3/body/body/SM_Forklift_Body_B01_01 -> 未绑定, /World/forklift_3/body/body/SM_Forklift_BodyDecal_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Decals, /World/forklift_3/body/body/SM_Forklift_BodyGlass_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body, /World/forklift_3/back_wheel/SM_Forklift_BackWheel_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body, /World/forklift_3/roller_front_right/SM_Forklift_LeadWheelsFrontRight_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body, /World/forklift_3/roller_back_left/SM_Forklift_LeadWheelsBackLeft_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body, /World/forklift_3/roller_back_right/SM_Forklift_LeadWheelsBackRight_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body, /World/forklift_3/roller_front_left/SM_Forklift_LeadWheelsFrontLeft_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body, /World/forklift_3/back_wheel_swivel/SM_Forklift_BackWheelbase_B01_01 -> /World/forklift_3/Looks/M_Forklift_B1_Body
-* 材质摘要:
- * /World/forklift_3/Looks/M_Forklift_B1_Body -> Inputs: 'metallic_texture_influence=1', 'reflection_roughness_texture_influence=1', Textures: './Props/Source/Textures/T_Forklift_B1_Albedo.<UDIM>.png', './Props/Source/Textures/T_Forklift_B1_Normal.<UDIM>.png', './Props/Source/Textures/T_Forklift_B1_ORM.<UDIM>.png'
- * /World/forklift_3/Looks/M_Forklift_B1_Decals -> Inputs: 'metallic_texture_influence=1', 'opacity_threshold=0.2', 'reflection_roughness_texture_influence=1', Textures: './Props/Source/Textures/T_Forklift_B1_Decal_Albedo.png', './Props/Source/Textures/T_Forklift_B1_Decal_Normal.png', './Props/Source/Textures/T_Forklift_B1_Decal_Opacity.png'
-
-
----
-
-
-### '/World/forklift_4' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/Robots/IsaacSim/ForkliftB/forklift_b.usd
-* BBox (world): size=(1.130, 3.031, 2.935), center=(-6.000, 0.631, 1.466)
-* 几何统计: Mesh=31, Vertices=1153448, Faces=554600
-* 子Mesh材质: /World/forklift_4/lift/SM_Forklift_Lift_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body, /World/forklift_4/lift/SM_Forklift_OperatorCabGlass_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Glass, /World/forklift_4/lift/SM_Forklift_OperatorCab_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body, /World/forklift_4/lift/SM_Forklift_OperatorCabDecal_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Decals, /World/forklift_4/lift/SM_Forklift_OperatorCabPedal_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body, /World/forklift_4/body/body/SM_Forklift_RightChainWheel_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body, /World/forklift_4/body/body/SM_Forklift_CenterChain_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body, /World/forklift_4/body/body/SM_Forklift_LeftChainWheel_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body, /World/forklift_4/body/body/SM_Forklift_RightHose_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body, /World/forklift_4/body/body/SM_Forklift_LeftHose_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body, /World/forklift_4/body/body/SM_Forklift_HoseWheel_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body, /World/forklift_4/body/body/SM_Forklift_CenterChainWheel_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body, /World/forklift_4/body/body/SM_Forklift_OperatorCabTopWheels_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body, /World/forklift_4/body/body/SM_Forklift_OperatorCabBotWheels_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body, /World/forklift_4/body/body/SM_Forklift_LiftBotWheels_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body, /World/forklift_4/body/body/SM_Forklift_LiftTopWheels_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body, /World/forklift_4/body/body/SM_Forklift_MastTopWheels_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body, /World/forklift_4/body/body/SM_Forklift_MastBottomWheels_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body, /World/forklift_4/body/body/SM_Forklift_CenterHydralicLift_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body, /World/forklift_4/body/body/SM_Forklift_HydraulicSystem_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body, /World/forklift_4/body/body/SM_Forklift_LeftChain_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body, /World/forklift_4/body/body/SM_Forklift_RightChain_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body, /World/forklift_4/body/body/SM_Forklift_Body_B01_01 -> 未绑定, /World/forklift_4/body/body/SM_Forklift_BodyDecal_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Decals, /World/forklift_4/body/body/SM_Forklift_BodyGlass_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body, /World/forklift_4/back_wheel/SM_Forklift_BackWheel_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body, /World/forklift_4/roller_front_right/SM_Forklift_LeadWheelsFrontRight_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body, /World/forklift_4/roller_back_left/SM_Forklift_LeadWheelsBackLeft_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body, /World/forklift_4/roller_back_right/SM_Forklift_LeadWheelsBackRight_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body, /World/forklift_4/roller_front_left/SM_Forklift_LeadWheelsFrontLeft_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body, /World/forklift_4/back_wheel_swivel/SM_Forklift_BackWheelbase_B01_01 -> /World/forklift_4/Looks/M_Forklift_B1_Body
-* 材质摘要:
- * /World/forklift_4/Looks/M_Forklift_B1_Body -> Inputs: 'metallic_texture_influence=1', 'reflection_roughness_texture_influence=1', Textures: './Props/Source/Textures/T_Forklift_B1_Albedo.<UDIM>.png', './Props/Source/Textures/T_Forklift_B1_Normal.<UDIM>.png', './Props/Source/Textures/T_Forklift_B1_ORM.<UDIM>.png'
- * /World/forklift_4/Looks/M_Forklift_B1_Decals -> Inputs: 'metallic_texture_influence=1', 'opacity_threshold=0.2', 'reflection_roughness_texture_influence=1', Textures: './Props/Source/Textures/T_Forklift_B1_Decal_Albedo.png', './Props/Source/Textures/T_Forklift_B1_Decal_Normal.png', './Props/Source/Textures/T_Forklift_B1_Decal_Opacity.png'
-
-
----
-
-
-### '/World/forklift_5' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/Robots/IsaacSim/ForkliftB/forklift_b.usd
-* BBox (world): size=(1.130, 3.031, 2.935), center=(-6.000, 0.631, 1.466)
-* 几何统计: Mesh=31, Vertices=1153448, Faces=554600
-* 子Mesh材质: /World/forklift_5/lift/SM_Forklift_Lift_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body, /World/forklift_5/lift/SM_Forklift_OperatorCabGlass_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Glass, /World/forklift_5/lift/SM_Forklift_OperatorCab_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body, /World/forklift_5/lift/SM_Forklift_OperatorCabDecal_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Decals, /World/forklift_5/lift/SM_Forklift_OperatorCabPedal_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body, /World/forklift_5/body/body/SM_Forklift_RightChainWheel_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body, /World/forklift_5/body/body/SM_Forklift_CenterChain_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body, /World/forklift_5/body/body/SM_Forklift_LeftChainWheel_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body, /World/forklift_5/body/body/SM_Forklift_RightHose_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body, /World/forklift_5/body/body/SM_Forklift_LeftHose_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body, /World/forklift_5/body/body/SM_Forklift_HoseWheel_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body, /World/forklift_5/body/body/SM_Forklift_CenterChainWheel_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body, /World/forklift_5/body/body/SM_Forklift_OperatorCabTopWheels_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body, /World/forklift_5/body/body/SM_Forklift_OperatorCabBotWheels_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body, /World/forklift_5/body/body/SM_Forklift_LiftBotWheels_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body, /World/forklift_5/body/body/SM_Forklift_LiftTopWheels_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body, /World/forklift_5/body/body/SM_Forklift_MastTopWheels_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body, /World/forklift_5/body/body/SM_Forklift_MastBottomWheels_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body, /World/forklift_5/body/body/SM_Forklift_CenterHydralicLift_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body, /World/forklift_5/body/body/SM_Forklift_HydraulicSystem_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body, /World/forklift_5/body/body/SM_Forklift_LeftChain_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body, /World/forklift_5/body/body/SM_Forklift_RightChain_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body, /World/forklift_5/body/body/SM_Forklift_Body_B01_01 -> 未绑定, /World/forklift_5/body/body/SM_Forklift_BodyDecal_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Decals, /World/forklift_5/body/body/SM_Forklift_BodyGlass_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body, /World/forklift_5/back_wheel/SM_Forklift_BackWheel_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body, /World/forklift_5/roller_front_right/SM_Forklift_LeadWheelsFrontRight_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body, /World/forklift_5/roller_back_left/SM_Forklift_LeadWheelsBackLeft_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body, /World/forklift_5/roller_back_right/SM_Forklift_LeadWheelsBackRight_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body, /World/forklift_5/roller_front_left/SM_Forklift_LeadWheelsFrontLeft_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body, /World/forklift_5/back_wheel_swivel/SM_Forklift_BackWheelbase_B01_01 -> /World/forklift_5/Looks/M_Forklift_B1_Body
-* 材质摘要:
- * /World/forklift_5/Looks/M_Forklift_B1_Body -> Inputs: 'metallic_texture_influence=1', 'reflection_roughness_texture_influence=1', Textures: './Props/Source/Textures/T_Forklift_B1_Albedo.<UDIM>.png', './Props/Source/Textures/T_Forklift_B1_Normal.<UDIM>.png', './Props/Source/Textures/T_Forklift_B1_ORM.<UDIM>.png'
- * /World/forklift_5/Looks/M_Forklift_B1_Decals -> Inputs: 'metallic_texture_influence=1', 'opacity_threshold=0.2', 'reflection_roughness_texture_influence=1', Textures: './Props/Source/Textures/T_Forklift_B1_Decal_Albedo.png', './Props/Source/Textures/T_Forklift_B1_Decal_Normal.png', './Props/Source/Textures/T_Forklift_B1_Decal_Opacity.png'
-
-
----
-
-
-### '/World/forklift_6' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/Robots/IsaacSim/ForkliftB/forklift_b.usd
-* BBox (world): size=(1.130, 3.031, 2.935), center=(-6.000, 0.631, 1.466)
-* 几何统计: Mesh=31, Vertices=1153448, Faces=554600
-* 子Mesh材质: /World/forklift_6/lift/SM_Forklift_Lift_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body, /World/forklift_6/lift/SM_Forklift_OperatorCabGlass_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Glass, /World/forklift_6/lift/SM_Forklift_OperatorCab_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body, /World/forklift_6/lift/SM_Forklift_OperatorCabDecal_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Decals, /World/forklift_6/lift/SM_Forklift_OperatorCabPedal_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body, /World/forklift_6/body/body/SM_Forklift_RightChainWheel_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body, /World/forklift_6/body/body/SM_Forklift_CenterChain_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body, /World/forklift_6/body/body/SM_Forklift_LeftChainWheel_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body, /World/forklift_6/body/body/SM_Forklift_RightHose_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body, /World/forklift_6/body/body/SM_Forklift_LeftHose_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body, /World/forklift_6/body/body/SM_Forklift_HoseWheel_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body, /World/forklift_6/body/body/SM_Forklift_CenterChainWheel_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body, /World/forklift_6/body/body/SM_Forklift_OperatorCabTopWheels_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body, /World/forklift_6/body/body/SM_Forklift_OperatorCabBotWheels_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body, /World/forklift_6/body/body/SM_Forklift_LiftBotWheels_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body, /World/forklift_6/body/body/SM_Forklift_LiftTopWheels_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body, /World/forklift_6/body/body/SM_Forklift_MastTopWheels_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body, /World/forklift_6/body/body/SM_Forklift_MastBottomWheels_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body, /World/forklift_6/body/body/SM_Forklift_CenterHydralicLift_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body, /World/forklift_6/body/body/SM_Forklift_HydraulicSystem_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body, /World/forklift_6/body/body/SM_Forklift_LeftChain_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body, /World/forklift_6/body/body/SM_Forklift_RightChain_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body, /World/forklift_6/body/body/SM_Forklift_Body_B01_01 -> 未绑定, /World/forklift_6/body/body/SM_Forklift_BodyDecal_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Decals, /World/forklift_6/body/body/SM_Forklift_BodyGlass_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body, /World/forklift_6/back_wheel/SM_Forklift_BackWheel_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body, /World/forklift_6/roller_front_right/SM_Forklift_LeadWheelsFrontRight_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body, /World/forklift_6/roller_back_left/SM_Forklift_LeadWheelsBackLeft_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body, /World/forklift_6/roller_back_right/SM_Forklift_LeadWheelsBackRight_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body, /World/forklift_6/roller_front_left/SM_Forklift_LeadWheelsFrontLeft_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body, /World/forklift_6/back_wheel_swivel/SM_Forklift_BackWheelbase_B01_01 -> /World/forklift_6/Looks/M_Forklift_B1_Body
-* 材质摘要:
- * /World/forklift_6/Looks/M_Forklift_B1_Body -> Inputs: 'metallic_texture_influence=1', 'reflection_roughness_texture_influence=1', Textures: './Props/Source/Textures/T_Forklift_B1_Albedo.<UDIM>.png', './Props/Source/Textures/T_Forklift_B1_Normal.<UDIM>.png', './Props/Source/Textures/T_Forklift_B1_ORM.<UDIM>.png'
- * /World/forklift_6/Looks/M_Forklift_B1_Decals -> Inputs: 'metallic_texture_influence=1', 'opacity_threshold=0.2', 'reflection_roughness_texture_influence=1', Textures: './Props/Source/Textures/T_Forklift_B1_Decal_Albedo.png', './Props/Source/Textures/T_Forklift_B1_Decal_Normal.png', './Props/Source/Textures/T_Forklift_B1_Decal_Opacity.png'
-
-
----
-
-
-### '/World/forklift_7' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/Robots/IsaacSim/ForkliftB/forklift_b.usd
-* BBox (world): size=(1.130, 3.031, 2.935), center=(-6.000, 0.631, 1.466)
-* 几何统计: Mesh=31, Vertices=1153448, Faces=554600
-* 子Mesh材质: /World/forklift_7/lift/SM_Forklift_Lift_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body, /World/forklift_7/lift/SM_Forklift_OperatorCabGlass_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Glass, /World/forklift_7/lift/SM_Forklift_OperatorCab_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body, /World/forklift_7/lift/SM_Forklift_OperatorCabDecal_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Decals, /World/forklift_7/lift/SM_Forklift_OperatorCabPedal_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body, /World/forklift_7/body/body/SM_Forklift_RightChainWheel_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body, /World/forklift_7/body/body/SM_Forklift_CenterChain_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body, /World/forklift_7/body/body/SM_Forklift_LeftChainWheel_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body, /World/forklift_7/body/body/SM_Forklift_RightHose_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body, /World/forklift_7/body/body/SM_Forklift_LeftHose_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body, /World/forklift_7/body/body/SM_Forklift_HoseWheel_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body, /World/forklift_7/body/body/SM_Forklift_CenterChainWheel_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body, /World/forklift_7/body/body/SM_Forklift_OperatorCabTopWheels_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body, /World/forklift_7/body/body/SM_Forklift_OperatorCabBotWheels_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body, /World/forklift_7/body/body/SM_Forklift_LiftBotWheels_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body, /World/forklift_7/body/body/SM_Forklift_LiftTopWheels_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body, /World/forklift_7/body/body/SM_Forklift_MastTopWheels_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body, /World/forklift_7/body/body/SM_Forklift_MastBottomWheels_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body, /World/forklift_7/body/body/SM_Forklift_CenterHydralicLift_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body, /World/forklift_7/body/body/SM_Forklift_HydraulicSystem_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body, /World/forklift_7/body/body/SM_Forklift_LeftChain_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body, /World/forklift_7/body/body/SM_Forklift_RightChain_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body, /World/forklift_7/body/body/SM_Forklift_Body_B01_01 -> 未绑定, /World/forklift_7/body/body/SM_Forklift_BodyDecal_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Decals, /World/forklift_7/body/body/SM_Forklift_BodyGlass_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body, /World/forklift_7/back_wheel/SM_Forklift_BackWheel_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body, /World/forklift_7/roller_front_right/SM_Forklift_LeadWheelsFrontRight_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body, /World/forklift_7/roller_back_left/SM_Forklift_LeadWheelsBackLeft_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body, /World/forklift_7/roller_back_right/SM_Forklift_LeadWheelsBackRight_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body, /World/forklift_7/roller_front_left/SM_Forklift_LeadWheelsFrontLeft_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body, /World/forklift_7/back_wheel_swivel/SM_Forklift_BackWheelbase_B01_01 -> /World/forklift_7/Looks/M_Forklift_B1_Body
-* 材质摘要:
- * /World/forklift_7/Looks/M_Forklift_B1_Body -> Inputs: 'metallic_texture_influence=1', 'reflection_roughness_texture_influence=1', Textures: './Props/Source/Textures/T_Forklift_B1_Albedo.<UDIM>.png', './Props/Source/Textures/T_Forklift_B1_Normal.<UDIM>.png', './Props/Source/Textures/T_Forklift_B1_ORM.<UDIM>.png'
- * /World/forklift_7/Looks/M_Forklift_B1_Decals -> Inputs: 'metallic_texture_influence=1', 'opacity_threshold=0.2', 'reflection_roughness_texture_influence=1', Textures: './Props/Source/Textures/T_Forklift_B1_Decal_Albedo.png', './Props/Source/Textures/T_Forklift_B1_Decal_Normal.png', './Props/Source/Textures/T_Forklift_B1_Decal_Opacity.png'
-
-
----
-
-
-### '/World/forklift_8' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/Robots/IsaacSim/ForkliftB/forklift_b.usd
-* BBox (world): size=(1.130, 3.031, 2.935), center=(-6.000, 0.631, 1.466)
-* 几何统计: Mesh=31, Vertices=1153448, Faces=554600
-* 子Mesh材质: /World/forklift_8/lift/SM_Forklift_Lift_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body, /World/forklift_8/lift/SM_Forklift_OperatorCabGlass_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Glass, /World/forklift_8/lift/SM_Forklift_OperatorCab_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body, /World/forklift_8/lift/SM_Forklift_OperatorCabDecal_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Decals, /World/forklift_8/lift/SM_Forklift_OperatorCabPedal_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body, /World/forklift_8/body/body/SM_Forklift_RightChainWheel_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body, /World/forklift_8/body/body/SM_Forklift_CenterChain_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body, /World/forklift_8/body/body/SM_Forklift_LeftChainWheel_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body, /World/forklift_8/body/body/SM_Forklift_RightHose_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body, /World/forklift_8/body/body/SM_Forklift_LeftHose_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body, /World/forklift_8/body/body/SM_Forklift_HoseWheel_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body, /World/forklift_8/body/body/SM_Forklift_CenterChainWheel_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body, /World/forklift_8/body/body/SM_Forklift_OperatorCabTopWheels_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body, /World/forklift_8/body/body/SM_Forklift_OperatorCabBotWheels_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body, /World/forklift_8/body/body/SM_Forklift_LiftBotWheels_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body, /World/forklift_8/body/body/SM_Forklift_LiftTopWheels_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body, /World/forklift_8/body/body/SM_Forklift_MastTopWheels_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body, /World/forklift_8/body/body/SM_Forklift_MastBottomWheels_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body, /World/forklift_8/body/body/SM_Forklift_CenterHydralicLift_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body, /World/forklift_8/body/body/SM_Forklift_HydraulicSystem_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body, /World/forklift_8/body/body/SM_Forklift_LeftChain_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body, /World/forklift_8/body/body/SM_Forklift_RightChain_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body, /World/forklift_8/body/body/SM_Forklift_Body_B01_01 -> 未绑定, /World/forklift_8/body/body/SM_Forklift_BodyDecal_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Decals, /World/forklift_8/body/body/SM_Forklift_BodyGlass_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body, /World/forklift_8/back_wheel/SM_Forklift_BackWheel_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body, /World/forklift_8/roller_front_right/SM_Forklift_LeadWheelsFrontRight_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body, /World/forklift_8/roller_back_left/SM_Forklift_LeadWheelsBackLeft_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body, /World/forklift_8/roller_back_right/SM_Forklift_LeadWheelsBackRight_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body, /World/forklift_8/roller_front_left/SM_Forklift_LeadWheelsFrontLeft_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body, /World/forklift_8/back_wheel_swivel/SM_Forklift_BackWheelbase_B01_01 -> /World/forklift_8/Looks/M_Forklift_B1_Body
-* 材质摘要:
- * /World/forklift_8/Looks/M_Forklift_B1_Body -> Inputs: 'metallic_texture_influence=1', 'reflection_roughness_texture_influence=1', Textures: './Props/Source/Textures/T_Forklift_B1_Albedo.<UDIM>.png', './Props/Source/Textures/T_Forklift_B1_Normal.<UDIM>.png', './Props/Source/Textures/T_Forklift_B1_ORM.<UDIM>.png'
- * /World/forklift_8/Looks/M_Forklift_B1_Decals -> Inputs: 'metallic_texture_influence=1', 'opacity_threshold=0.2', 'reflection_roughness_texture_influence=1', Textures: './Props/Source/Textures/T_Forklift_B1_Decal_Albedo.png', './Props/Source/Textures/T_Forklift_B1_Decal_Normal.png', './Props/Source/Textures/T_Forklift_B1_Decal_Opacity.png'
-
-
----
-
-
-### '/World/forklift_9' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/Robots/IsaacSim/ForkliftB/forklift_b.usd
-* BBox (world): size=(1.130, 3.031, 2.935), center=(-6.000, 0.631, 1.466)
-* 几何统计: Mesh=31, Vertices=1153448, Faces=554600
-* 子Mesh材质: /World/forklift_9/lift/SM_Forklift_Lift_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body, /World/forklift_9/lift/SM_Forklift_OperatorCabGlass_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Glass, /World/forklift_9/lift/SM_Forklift_OperatorCab_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body, /World/forklift_9/lift/SM_Forklift_OperatorCabDecal_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Decals, /World/forklift_9/lift/SM_Forklift_OperatorCabPedal_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body, /World/forklift_9/body/body/SM_Forklift_RightChainWheel_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body, /World/forklift_9/body/body/SM_Forklift_CenterChain_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body, /World/forklift_9/body/body/SM_Forklift_LeftChainWheel_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body, /World/forklift_9/body/body/SM_Forklift_RightHose_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body, /World/forklift_9/body/body/SM_Forklift_LeftHose_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body, /World/forklift_9/body/body/SM_Forklift_HoseWheel_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body, /World/forklift_9/body/body/SM_Forklift_CenterChainWheel_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body, /World/forklift_9/body/body/SM_Forklift_OperatorCabTopWheels_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body, /World/forklift_9/body/body/SM_Forklift_OperatorCabBotWheels_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body, /World/forklift_9/body/body/SM_Forklift_LiftBotWheels_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body, /World/forklift_9/body/body/SM_Forklift_LiftTopWheels_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body, /World/forklift_9/body/body/SM_Forklift_MastTopWheels_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body, /World/forklift_9/body/body/SM_Forklift_MastBottomWheels_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body, /World/forklift_9/body/body/SM_Forklift_CenterHydralicLift_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body, /World/forklift_9/body/body/SM_Forklift_HydraulicSystem_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body, /World/forklift_9/body/body/SM_Forklift_LeftChain_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body, /World/forklift_9/body/body/SM_Forklift_RightChain_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body, /World/forklift_9/body/body/SM_Forklift_Body_B01_01 -> 未绑定, /World/forklift_9/body/body/SM_Forklift_BodyDecal_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Decals, /World/forklift_9/body/body/SM_Forklift_BodyGlass_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body, /World/forklift_9/back_wheel/SM_Forklift_BackWheel_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body, /World/forklift_9/roller_front_right/SM_Forklift_LeadWheelsFrontRight_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body, /World/forklift_9/roller_back_left/SM_Forklift_LeadWheelsBackLeft_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body, /World/forklift_9/roller_back_right/SM_Forklift_LeadWheelsBackRight_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body, /World/forklift_9/roller_front_left/SM_Forklift_LeadWheelsFrontLeft_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body, /World/forklift_9/back_wheel_swivel/SM_Forklift_BackWheelbase_B01_01 -> /World/forklift_9/Looks/M_Forklift_B1_Body
-* 材质摘要:
- * /World/forklift_9/Looks/M_Forklift_B1_Body -> Inputs: 'metallic_texture_influence=1', 'reflection_roughness_texture_influence=1', Textures: './Props/Source/Textures/T_Forklift_B1_Albedo.<UDIM>.png', './Props/Source/Textures/T_Forklift_B1_Normal.<UDIM>.png', './Props/Source/Textures/T_Forklift_B1_ORM.<UDIM>.png'
- * /World/forklift_9/Looks/M_Forklift_B1_Decals -> Inputs: 'metallic_texture_influence=1', 'opacity_threshold=0.2', 'reflection_roughness_texture_influence=1', Textures: './Props/Source/Textures/T_Forklift_B1_Decal_Albedo.png', './Props/Source/Textures/T_Forklift_B1_Decal_Normal.png', './Props/Source/Textures/T_Forklift_B1_Decal_Opacity.png'
-
-
----
-
-
-### '/World/forklift_10' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/Robots/IsaacSim/ForkliftB/forklift_b.usd
-* BBox (world): size=(1.130, 3.031, 2.935), center=(-6.000, 0.631, 1.466)
-* 几何统计: Mesh=31, Vertices=1153448, Faces=554600
-* 子Mesh材质: /World/forklift_10/lift/SM_Forklift_Lift_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body, /World/forklift_10/lift/SM_Forklift_OperatorCabGlass_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Glass, /World/forklift_10/lift/SM_Forklift_OperatorCab_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body, /World/forklift_10/lift/SM_Forklift_OperatorCabDecal_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Decals, /World/forklift_10/lift/SM_Forklift_OperatorCabPedal_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body, /World/forklift_10/body/body/SM_Forklift_RightChainWheel_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body, /World/forklift_10/body/body/SM_Forklift_CenterChain_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body, /World/forklift_10/body/body/SM_Forklift_LeftChainWheel_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body, /World/forklift_10/body/body/SM_Forklift_RightHose_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body, /World/forklift_10/body/body/SM_Forklift_LeftHose_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body, /World/forklift_10/body/body/SM_Forklift_HoseWheel_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body, /World/forklift_10/body/body/SM_Forklift_CenterChainWheel_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body, /World/forklift_10/body/body/SM_Forklift_OperatorCabTopWheels_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body, /World/forklift_10/body/body/SM_Forklift_OperatorCabBotWheels_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body, /World/forklift_10/body/body/SM_Forklift_LiftBotWheels_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body, /World/forklift_10/body/body/SM_Forklift_LiftTopWheels_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body, /World/forklift_10/body/body/SM_Forklift_MastTopWheels_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body, /World/forklift_10/body/body/SM_Forklift_MastBottomWheels_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body, /World/forklift_10/body/body/SM_Forklift_CenterHydralicLift_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body, /World/forklift_10/body/body/SM_Forklift_HydraulicSystem_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body, /World/forklift_10/body/body/SM_Forklift_LeftChain_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body, /World/forklift_10/body/body/SM_Forklift_RightChain_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body, /World/forklift_10/body/body/SM_Forklift_Body_B01_01 -> 未绑定, /World/forklift_10/body/body/SM_Forklift_BodyDecal_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Decals, /World/forklift_10/body/body/SM_Forklift_BodyGlass_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body, /World/forklift_10/back_wheel/SM_Forklift_BackWheel_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body, /World/forklift_10/roller_front_right/SM_Forklift_LeadWheelsFrontRight_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body, /World/forklift_10/roller_back_left/SM_Forklift_LeadWheelsBackLeft_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body, /World/forklift_10/roller_back_right/SM_Forklift_LeadWheelsBackRight_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body, /World/forklift_10/roller_front_left/SM_Forklift_LeadWheelsFrontLeft_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body, /World/forklift_10/back_wheel_swivel/SM_Forklift_BackWheelbase_B01_01 -> /World/forklift_10/Looks/M_Forklift_B1_Body
-* 材质摘要:
- * /World/forklift_10/Looks/M_Forklift_B1_Body -> Inputs: 'metallic_texture_influence=1', 'reflection_roughness_texture_influence=1', Textures: './Props/Source/Textures/T_Forklift_B1_Albedo.<UDIM>.png', './Props/Source/Textures/T_Forklift_B1_Normal.<UDIM>.png', './Props/Source/Textures/T_Forklift_B1_ORM.<UDIM>.png'
- * /World/forklift_10/Looks/M_Forklift_B1_Decals -> Inputs: 'metallic_texture_influence=1', 'opacity_threshold=0.2', 'reflection_roughness_texture_influence=1', Textures: './Props/Source/Textures/T_Forklift_B1_Decal_Albedo.png', './Props/Source/Textures/T_Forklift_B1_Decal_Normal.png', './Props/Source/Textures/T_Forklift_B1_Decal_Opacity.png'
+### '/World/processed_Robotic_Manipulator_low_poly' (Xform)
+* 引用: payload:../device_data/usdz/IndustrialRobot/processed_Robotic_Manipulator_low_poly.usdz
+* BBox (world): size=(117.387, 95.149, 72.734), center=(-3.219, -9.595, 1.327)
+* 几何统计: Mesh=16, Vertices=4239, Faces=4548
+* 子Mesh材质: /World/processed_Robotic_Manipulator_low_poly/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_018_low/defaultMaterial/defaultMaterial -> 未绑定, /World/processed_Robotic_Manipulator_low_poly/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_016_low/defaultMaterial/defaultMaterial -> 未绑定, /World/processed_Robotic_Manipulator_low_poly/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_015_low/defaultMaterial/defaultMaterial -> 未绑定, /World/processed_Robotic_Manipulator_low_poly/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_017_low/defaultMaterial/defaultMaterial -> 未绑定, /World/processed_Robotic_Manipulator_low_poly/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_014_low/defaultMaterial/defaultMaterial -> 未绑定, /World/processed_Robotic_Manipulator_low_poly/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_013_low/defaultMaterial/defaultMaterial -> 未绑定, /World/processed_Robotic_Manipulator_low_poly/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_012_low/defaultMaterial/defaultMaterial -> 未绑定, /World/processed_Robotic_Manipulator_low_poly/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_011_low/defaultMaterial/defaultMaterial -> 未绑定, /World/processed_Robotic_Manipulator_low_poly/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_010_low/defaultMaterial/defaultMaterial -> 未绑定, /World/processed_Robotic_Manipulator_low_poly/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_009_low/defaultMaterial/defaultMaterial -> 未绑定, /World/processed_Robotic_Manipulator_low_poly/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_008_low/defaultMaterial/defaultMaterial -> 未绑定, /World/processed_Robotic_Manipulator_low_poly/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_007_low/defaultMaterial/defaultMaterial -> 未绑定, /World/processed_Robotic_Manipulator_low_poly/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_006_low/defaultMaterial/defaultMaterial -> 未绑定, /World/processed_Robotic_Manipulator_low_poly/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_005_low/defaultMaterial/defaultMaterial -> 未绑定, /World/processed_Robotic_Manipulator_low_poly/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_004_low/defaultMaterial/defaultMaterial -> 未绑定, /World/processed_Robotic_Manipulator_low_poly/Meshes/Sketchfab_model/Collada_visual_scene_group/Robotic_hand_003_low/defaultMaterial/defaultMaterial -> 未绑定
 
 
 ---

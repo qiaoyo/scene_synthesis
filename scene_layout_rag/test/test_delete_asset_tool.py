@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import sys
 from pathlib import Path
+from openai import OpenAI
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
@@ -10,8 +11,6 @@ from scene_layout_rag.config import ProjectConfig
 from scene_layout_rag.rag import AssetRAG
 from scene_layout_rag.scene_state import SceneStateManager
 from scene_layout_rag.tools.base import TOOL_REGISTRY, ToolContext
-
-
 
 ###
 #测试脚本里， 增加测试内容，vllm 快速启动一个本地的qwen-32B， 和一条指定的使用指定工具的命令输入。（测试多次，多次使用不同的命令）， 检查llm是否能够hit tool和正确的给require的参数和参数变量。

@@ -5,13 +5,15 @@
 * **USDA文件路径(USDA File Path):**`/media/simple/another_Documents/isaacsim_assets/scenedata/assembly1.usda`
 * **默认Prim (Default Prim):**'Not Set'
 * **单位与坐标系 (Units & Coordinate System):**
+
   * **米(Meters Per Unit):**1.0
-  * **Up Axis:Z
-* **场景描述(Scene Describe):** 该工业场景呈现为一个极具规模感、模块化程度极高的现代化多线自动化生产车间。整个空间的规划逻辑采用了“多列并行、工站集群”的阵列式排布结构，旨在实现大批量工件的高速流转与分布式处理。车间空间格局开阔，地面呈现为纯净的白色哑光质感，极大地提升了环境的明亮度与清洁感，同时也为移动机器人的路径识别提供了理想的物理基准；墙体部分由浅色方块砖饰面，基部配有仿天然石材纹理的护墙装饰，呈现出工业美学与功能性的结合。在设备规划层面，场景的核心由多条平行排布的长程输送系统定义。可见约5至6条独立的带式输送流水线横向贯穿作业区，每条输送线均采用鲜艳的工业蓝金属框架结构，这种框架集成了竖向支撑脚与水平承载梁，展现出极强的结构强度。输送带表面为纯黑色抗静电材质，其上等间距排布着大量的深灰色半圆柱形（D型）工业零部件。输送线的支架系统高度统一，形成了视觉上的极强韵律感，这种阵列式排布不仅最大化了场地利用率，也便于物料在不同生产线间的逻辑划分。在每一条输送线旁侧，密集部署了大量的白色多关节工业机器人及配套的辅助工装。这些机器人呈线性阵列分布，每台机器人底座固定于地面，机身呈现出平滑的现代感设计，属于典型的协作型六轴机器人。机器人的分布密度极高，能够精准覆盖输送线上的特定区段，负责零部件的抓取、检测或装配作业。与机器人交错排布的是一系列黄色移动作业站（工装桌），这些桌子采用明黄色的金属骨架配以厚实的木质作业顶面，桌面上整齐摆放着待加工的零部件，桌身侧方还集成有蓝色的工具抽屉，作为机器人作业的辅助缓存区或人工干预站。自动化物流系统是该场景的另一大亮点。在作业站之间的宽敞通道内，部署了多台黄色的自主移动机器人（AGV/AMR）。这些移动平台采用低重心设计，底盘为黑色，上层承载平台为明黄色，顶部装载有灰色的标准化物流周转箱。AGV的分布位置呈现出动态流转的态势，有的停靠在作业站旁进行接料，有的则在通道中进行长距离移载，其数量与作业站数量形成了约1:1的逻辑配套。这种“固定流水线+协作机器人+柔性AGV”的组合，完整构建了一个无人化、智能化的现代工业实景。在3D场景合成与虚拟搭建中，该场景提供了极丰富的资产重复利用性与几何对齐逻辑。材质表现上，输送线的蓝色金属漆面、机器人的白色半哑光涂层、作业站的木质纹理以及ABS材质的周转箱共同构成了多维度的工业视觉层次。光影环境设定为全局均匀的漫反射照明，模拟了厂房顶层全覆盖的LED灯板效果，光线分布极度平衡，消除了深重阴影，仅在设备落地处保留了微妙的环境光遮蔽（AO）阴影，从而确保了每一个机械部件在任何视角下都具有清晰的体积感与结构边界，是构建高精细度数字孪生工厂的理想参考样本。
+  * **Up Axis:**Z
+* **场景描述(Scene Describe):** 该工业车间模拟场景呈现出一种矩阵式、模块化且高度重复的现代化生产线布局，整体规划强调空间利用率与多工位并行的作业逻辑。车间地面为纯白色，不仅增强了视觉上的洁净感，也为自动化设备的传感器识别提供了良好的背景。从空间格局上看，整个区域被清晰地划分为两大功能带：纵向排布的物流输送区与横向延伸的机器人加工作业区。输送区由多条平行的蓝色高架输送线组成，这些输送线采用统一的钢性框架支撑，支腿呈淡蓝色，横梁上方安装有黑色橡胶材质的传送带，带面上正输送着大量形状规整的半圆弧形灰色工件。输送线的数量较多，呈等间距矩阵分布，形成了强大的物料流转网络。在输送线的侧翼，平行排列着一系列标准化的机器人作业单元。每个单元的核心是一组拼合式的黄色木质工作台，台面上方集成了一套双机协作系统：一台白色的轻型协作机器人与一台橙黑相间的六轴工业机器人共同部署在同一工作站内。这种“白+橙”的机器人配置出现了至少六组，它们呈直线矩阵排列，每一组都精准对接一条或多条输送线。机器人的机械臂末端安装有精密的抓取或焊接夹具，正处于对台面上散落的工件进行精细化操作的状态。工作台下方设有开放式的多层储物架，便于存放工序所需的零配件或周转工具。在机器人作业区与输送区之间的宽敞通道内，部署了多台黄色的自动导引运输车（AGV）。这些AGV底盘低矮，轮廓圆润，顶部载有一个半透明的周转箱，正按照预设的网格路径在各个机器人工作站之间灵活穿梭，执行零部件的补给或成品转运任务。AGV的数量与机器人工作站的数量相匹配，确保了整个系统在物流层面的高频响应。此外，车间背景处可见一排低矮的仓储式货架，采用深蓝色框架，可能用于原材料的暂存。从整体规划结构来看，该布局采用了典型的“分布式单元+集中式输送”的架构。每一组机器人工作站都是一个独立的加工细胞，而平行的蓝色输送线则构成了贯穿全场的生产大动脉。这种排布方式具有极强的可扩展性，可以根据产能需求灵活增减作业单元。设备间的相互关系极为明确：AGV负责点对点的柔性接驳，机器人负责工位内的精密操作，而输送线则负责跨区域的大规模流转。整个场景中没有冗余的控制柜露出，暗示所有设备可能通过地板下的布线或无线网络实现了高度集成的中央集群控制。
 * **设备数量(Device Number):**
+
   * **Scene: 1**
   * **IndustrialRobot: 14**
-  * **Workbench: 7**
+  * **Workbench: 21**
   * **Conveyor: 28**
   * **AGV: 6**
   * **Forklift: 0**
@@ -23,6 +25,13 @@
 
 ## 2.场景对象层级(Scene Hierarchy)
 
+* Render (Prim)
+  * OmniverseKit (Prim)
+    * HydraTextures (Prim)
+      * omni_kit_widget_viewport_ViewportTexture_0 (RenderProduct)
+  * OmniverseGlobalRenderSettings (RenderSettings)
+  * Vars (Prim)
+    * LdrColor (RenderVar)
 * World (Prim)
   * DomeLight (DomeLight)
   * SunLight (DistantLight)
@@ -1381,930 +1390,6 @@
     * Belt (Xform)
       * SM_ConveyorBelt_A09_Belt_02 (Mesh)
     * Anchorpoint (Xform)
-  * RobotArm1_1 (Xform)
-    * panda_link0 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint1 (PhysicsRevoluteJoint)
-    * root_joint (PhysicsFixedJoint)
-    * panda_link1 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint2 (PhysicsRevoluteJoint)
-    * panda_link2 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint3 (PhysicsRevoluteJoint)
-    * panda_link3 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint4 (PhysicsRevoluteJoint)
-    * panda_link4 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint5 (PhysicsRevoluteJoint)
-    * panda_link5 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint6 (PhysicsRevoluteJoint)
-    * panda_link6 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint7 (PhysicsRevoluteJoint)
-    * panda_link7 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_hand_joint (PhysicsFixedJoint)
-    * panda_hand (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_finger_joint1 (PhysicsPrismaticJoint)
-      * panda_finger_joint2 (PhysicsPrismaticJoint)
-      * panda_fingertip_centered_joint (PhysicsFixedJoint)
-    * panda_leftfinger (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-    * panda_rightfinger (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-    * panda_fingertip_centered (Xform)
-  * RobotArm1_2 (Xform)
-    * panda_link0 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint1 (PhysicsRevoluteJoint)
-    * root_joint (PhysicsFixedJoint)
-    * panda_link1 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint2 (PhysicsRevoluteJoint)
-    * panda_link2 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint3 (PhysicsRevoluteJoint)
-    * panda_link3 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint4 (PhysicsRevoluteJoint)
-    * panda_link4 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint5 (PhysicsRevoluteJoint)
-    * panda_link5 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint6 (PhysicsRevoluteJoint)
-    * panda_link6 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint7 (PhysicsRevoluteJoint)
-    * panda_link7 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_hand_joint (PhysicsFixedJoint)
-    * panda_hand (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_finger_joint1 (PhysicsPrismaticJoint)
-      * panda_finger_joint2 (PhysicsPrismaticJoint)
-      * panda_fingertip_centered_joint (PhysicsFixedJoint)
-    * panda_leftfinger (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-    * panda_rightfinger (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-    * panda_fingertip_centered (Xform)
-  * RobotArm1_3 (Xform)
-    * panda_link0 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint1 (PhysicsRevoluteJoint)
-    * root_joint (PhysicsFixedJoint)
-    * panda_link1 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint2 (PhysicsRevoluteJoint)
-    * panda_link2 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint3 (PhysicsRevoluteJoint)
-    * panda_link3 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint4 (PhysicsRevoluteJoint)
-    * panda_link4 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint5 (PhysicsRevoluteJoint)
-    * panda_link5 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint6 (PhysicsRevoluteJoint)
-    * panda_link6 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint7 (PhysicsRevoluteJoint)
-    * panda_link7 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_hand_joint (PhysicsFixedJoint)
-    * panda_hand (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_finger_joint1 (PhysicsPrismaticJoint)
-      * panda_finger_joint2 (PhysicsPrismaticJoint)
-      * panda_fingertip_centered_joint (PhysicsFixedJoint)
-    * panda_leftfinger (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-    * panda_rightfinger (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-    * panda_fingertip_centered (Xform)
-  * RobotArm1_4 (Xform)
-    * panda_link0 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint1 (PhysicsRevoluteJoint)
-    * root_joint (PhysicsFixedJoint)
-    * panda_link1 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint2 (PhysicsRevoluteJoint)
-    * panda_link2 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint3 (PhysicsRevoluteJoint)
-    * panda_link3 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint4 (PhysicsRevoluteJoint)
-    * panda_link4 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint5 (PhysicsRevoluteJoint)
-    * panda_link5 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint6 (PhysicsRevoluteJoint)
-    * panda_link6 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint7 (PhysicsRevoluteJoint)
-    * panda_link7 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_hand_joint (PhysicsFixedJoint)
-    * panda_hand (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_finger_joint1 (PhysicsPrismaticJoint)
-      * panda_finger_joint2 (PhysicsPrismaticJoint)
-      * panda_fingertip_centered_joint (PhysicsFixedJoint)
-    * panda_leftfinger (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-    * panda_rightfinger (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-    * panda_fingertip_centered (Xform)
-  * RobotArm1_5 (Xform)
-    * panda_link0 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint1 (PhysicsRevoluteJoint)
-    * root_joint (PhysicsFixedJoint)
-    * panda_link1 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint2 (PhysicsRevoluteJoint)
-    * panda_link2 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint3 (PhysicsRevoluteJoint)
-    * panda_link3 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint4 (PhysicsRevoluteJoint)
-    * panda_link4 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint5 (PhysicsRevoluteJoint)
-    * panda_link5 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint6 (PhysicsRevoluteJoint)
-    * panda_link6 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint7 (PhysicsRevoluteJoint)
-    * panda_link7 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_hand_joint (PhysicsFixedJoint)
-    * panda_hand (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_finger_joint1 (PhysicsPrismaticJoint)
-      * panda_finger_joint2 (PhysicsPrismaticJoint)
-      * panda_fingertip_centered_joint (PhysicsFixedJoint)
-    * panda_leftfinger (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-    * panda_rightfinger (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-    * panda_fingertip_centered (Xform)
-  * RobotArm1_6 (Xform)
-    * panda_link0 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint1 (PhysicsRevoluteJoint)
-    * root_joint (PhysicsFixedJoint)
-    * panda_link1 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint2 (PhysicsRevoluteJoint)
-    * panda_link2 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint3 (PhysicsRevoluteJoint)
-    * panda_link3 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint4 (PhysicsRevoluteJoint)
-    * panda_link4 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint5 (PhysicsRevoluteJoint)
-    * panda_link5 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint6 (PhysicsRevoluteJoint)
-    * panda_link6 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint7 (PhysicsRevoluteJoint)
-    * panda_link7 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_hand_joint (PhysicsFixedJoint)
-    * panda_hand (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_finger_joint1 (PhysicsPrismaticJoint)
-      * panda_finger_joint2 (PhysicsPrismaticJoint)
-      * panda_fingertip_centered_joint (PhysicsFixedJoint)
-    * panda_leftfinger (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-    * panda_rightfinger (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-    * panda_fingertip_centered (Xform)
-  * RobotArm1_7 (Xform)
-    * panda_link0 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint1 (PhysicsRevoluteJoint)
-    * root_joint (PhysicsFixedJoint)
-    * panda_link1 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint2 (PhysicsRevoluteJoint)
-    * panda_link2 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint3 (PhysicsRevoluteJoint)
-    * panda_link3 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint4 (PhysicsRevoluteJoint)
-    * panda_link4 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint5 (PhysicsRevoluteJoint)
-    * panda_link5 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint6 (PhysicsRevoluteJoint)
-    * panda_link6 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_joint7 (PhysicsRevoluteJoint)
-    * panda_link7 (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_hand_joint (PhysicsFixedJoint)
-    * panda_hand (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-      * panda_finger_joint1 (PhysicsPrismaticJoint)
-      * panda_finger_joint2 (PhysicsPrismaticJoint)
-      * panda_fingertip_centered_joint (PhysicsFixedJoint)
-    * panda_leftfinger (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-    * panda_rightfinger (Xform)
-      * visuals (Prim)
-      * collisions (Prim)
-    * panda_fingertip_centered (Xform)
-  * RobotArm2_1 (Xform)
-    * gripper (Xform)
-      * Looks (Scope)
-        * DefaultMaterial (Material)
-          * DefaultMaterial (Shader)
-        * j____________ (Material)
-          * j____________ (Shader)
-      * joints (Scope)
-        * drive_joint (PhysicsRevoluteJoint)
-        * left_finger_joint (PhysicsRevoluteJoint)
-        * left_inner_knuckle_joint (PhysicsRevoluteJoint)
-        * right_inner_knuckle_joint (PhysicsRevoluteJoint)
-        * right_outer_knuckle_joint (PhysicsRevoluteJoint)
-        * right_finger_joint (PhysicsRevoluteJoint)
-      * xarm_gripper_base_link (Xform)
-        * link_tcp (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * left_outer_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * left_finger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * left_inner_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * right_inner_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * right_outer_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * right_finger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * root_joint (PhysicsFixedJoint)
-    * Looks (Scope)
-      * material_Black (Material)
-        * Shader (Shader)
-      * material_Red (Material)
-        * Shader (Shader)
-      * material_Silver (Material)
-        * Shader (Shader)
-      * material_White (Material)
-        * Shader (Shader)
-      * material_______________ (Material)
-        * material_______________ (Shader)
-      * material____________ (Material)
-        * material____________ (Shader)
-    * joints (Scope)
-      * joint1 (PhysicsRevoluteJoint)
-      * joint2 (PhysicsRevoluteJoint)
-      * joint3 (PhysicsRevoluteJoint)
-      * joint4 (PhysicsRevoluteJoint)
-      * joint5 (PhysicsRevoluteJoint)
-      * joint6 (PhysicsRevoluteJoint)
-      * joint7 (PhysicsRevoluteJoint)
-    * world (Xform)
-      * link_base (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link1 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link2 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link3 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link4 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link5 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link6 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link7 (Xform)
-      * link_eef (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * root_joint (PhysicsFixedJoint)
-  * RobotArm2_2 (Xform)
-    * gripper (Xform)
-      * Looks (Scope)
-        * DefaultMaterial (Material)
-          * DefaultMaterial (Shader)
-        * j____________ (Material)
-          * j____________ (Shader)
-      * joints (Scope)
-        * drive_joint (PhysicsRevoluteJoint)
-        * left_finger_joint (PhysicsRevoluteJoint)
-        * left_inner_knuckle_joint (PhysicsRevoluteJoint)
-        * right_inner_knuckle_joint (PhysicsRevoluteJoint)
-        * right_outer_knuckle_joint (PhysicsRevoluteJoint)
-        * right_finger_joint (PhysicsRevoluteJoint)
-      * xarm_gripper_base_link (Xform)
-        * link_tcp (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * left_outer_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * left_finger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * left_inner_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * right_inner_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * right_outer_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * right_finger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * root_joint (PhysicsFixedJoint)
-    * Looks (Scope)
-      * material_Black (Material)
-        * Shader (Shader)
-      * material_Red (Material)
-        * Shader (Shader)
-      * material_Silver (Material)
-        * Shader (Shader)
-      * material_White (Material)
-        * Shader (Shader)
-      * material_______________ (Material)
-        * material_______________ (Shader)
-      * material____________ (Material)
-        * material____________ (Shader)
-    * joints (Scope)
-      * joint1 (PhysicsRevoluteJoint)
-      * joint2 (PhysicsRevoluteJoint)
-      * joint3 (PhysicsRevoluteJoint)
-      * joint4 (PhysicsRevoluteJoint)
-      * joint5 (PhysicsRevoluteJoint)
-      * joint6 (PhysicsRevoluteJoint)
-      * joint7 (PhysicsRevoluteJoint)
-    * world (Xform)
-      * link_base (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link1 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link2 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link3 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link4 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link5 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link6 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link7 (Xform)
-      * link_eef (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * root_joint (PhysicsFixedJoint)
-  * RobotArm2_3 (Xform)
-    * gripper (Xform)
-      * Looks (Scope)
-        * DefaultMaterial (Material)
-          * DefaultMaterial (Shader)
-        * j____________ (Material)
-          * j____________ (Shader)
-      * joints (Scope)
-        * drive_joint (PhysicsRevoluteJoint)
-        * left_finger_joint (PhysicsRevoluteJoint)
-        * left_inner_knuckle_joint (PhysicsRevoluteJoint)
-        * right_inner_knuckle_joint (PhysicsRevoluteJoint)
-        * right_outer_knuckle_joint (PhysicsRevoluteJoint)
-        * right_finger_joint (PhysicsRevoluteJoint)
-      * xarm_gripper_base_link (Xform)
-        * link_tcp (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * left_outer_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * left_finger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * left_inner_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * right_inner_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * right_outer_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * right_finger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * root_joint (PhysicsFixedJoint)
-    * Looks (Scope)
-      * material_Black (Material)
-        * Shader (Shader)
-      * material_Red (Material)
-        * Shader (Shader)
-      * material_Silver (Material)
-        * Shader (Shader)
-      * material_White (Material)
-        * Shader (Shader)
-      * material_______________ (Material)
-        * material_______________ (Shader)
-      * material____________ (Material)
-        * material____________ (Shader)
-    * joints (Scope)
-      * joint1 (PhysicsRevoluteJoint)
-      * joint2 (PhysicsRevoluteJoint)
-      * joint3 (PhysicsRevoluteJoint)
-      * joint4 (PhysicsRevoluteJoint)
-      * joint5 (PhysicsRevoluteJoint)
-      * joint6 (PhysicsRevoluteJoint)
-      * joint7 (PhysicsRevoluteJoint)
-    * world (Xform)
-      * link_base (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link1 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link2 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link3 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link4 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link5 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link6 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link7 (Xform)
-      * link_eef (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * root_joint (PhysicsFixedJoint)
-  * RobotArm2_4 (Xform)
-    * gripper (Xform)
-      * Looks (Scope)
-        * DefaultMaterial (Material)
-          * DefaultMaterial (Shader)
-        * j____________ (Material)
-          * j____________ (Shader)
-      * joints (Scope)
-        * drive_joint (PhysicsRevoluteJoint)
-        * left_finger_joint (PhysicsRevoluteJoint)
-        * left_inner_knuckle_joint (PhysicsRevoluteJoint)
-        * right_inner_knuckle_joint (PhysicsRevoluteJoint)
-        * right_outer_knuckle_joint (PhysicsRevoluteJoint)
-        * right_finger_joint (PhysicsRevoluteJoint)
-      * xarm_gripper_base_link (Xform)
-        * link_tcp (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * left_outer_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * left_finger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * left_inner_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * right_inner_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * right_outer_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * right_finger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * root_joint (PhysicsFixedJoint)
-    * Looks (Scope)
-      * material_Black (Material)
-        * Shader (Shader)
-      * material_Red (Material)
-        * Shader (Shader)
-      * material_Silver (Material)
-        * Shader (Shader)
-      * material_White (Material)
-        * Shader (Shader)
-      * material_______________ (Material)
-        * material_______________ (Shader)
-      * material____________ (Material)
-        * material____________ (Shader)
-    * joints (Scope)
-      * joint1 (PhysicsRevoluteJoint)
-      * joint2 (PhysicsRevoluteJoint)
-      * joint3 (PhysicsRevoluteJoint)
-      * joint4 (PhysicsRevoluteJoint)
-      * joint5 (PhysicsRevoluteJoint)
-      * joint6 (PhysicsRevoluteJoint)
-      * joint7 (PhysicsRevoluteJoint)
-    * world (Xform)
-      * link_base (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link1 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link2 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link3 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link4 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link5 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link6 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link7 (Xform)
-      * link_eef (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * root_joint (PhysicsFixedJoint)
-  * RobotArm2_5 (Xform)
-    * gripper (Xform)
-      * Looks (Scope)
-        * DefaultMaterial (Material)
-          * DefaultMaterial (Shader)
-        * j____________ (Material)
-          * j____________ (Shader)
-      * joints (Scope)
-        * drive_joint (PhysicsRevoluteJoint)
-        * left_finger_joint (PhysicsRevoluteJoint)
-        * left_inner_knuckle_joint (PhysicsRevoluteJoint)
-        * right_inner_knuckle_joint (PhysicsRevoluteJoint)
-        * right_outer_knuckle_joint (PhysicsRevoluteJoint)
-        * right_finger_joint (PhysicsRevoluteJoint)
-      * xarm_gripper_base_link (Xform)
-        * link_tcp (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * left_outer_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * left_finger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * left_inner_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * right_inner_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * right_outer_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * right_finger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * root_joint (PhysicsFixedJoint)
-    * Looks (Scope)
-      * material_Black (Material)
-        * Shader (Shader)
-      * material_Red (Material)
-        * Shader (Shader)
-      * material_Silver (Material)
-        * Shader (Shader)
-      * material_White (Material)
-        * Shader (Shader)
-      * material_______________ (Material)
-        * material_______________ (Shader)
-      * material____________ (Material)
-        * material____________ (Shader)
-    * joints (Scope)
-      * joint1 (PhysicsRevoluteJoint)
-      * joint2 (PhysicsRevoluteJoint)
-      * joint3 (PhysicsRevoluteJoint)
-      * joint4 (PhysicsRevoluteJoint)
-      * joint5 (PhysicsRevoluteJoint)
-      * joint6 (PhysicsRevoluteJoint)
-      * joint7 (PhysicsRevoluteJoint)
-    * world (Xform)
-      * link_base (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link1 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link2 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link3 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link4 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link5 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link6 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link7 (Xform)
-      * link_eef (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * root_joint (PhysicsFixedJoint)
-  * RobotArm2_6 (Xform)
-    * gripper (Xform)
-      * Looks (Scope)
-        * DefaultMaterial (Material)
-          * DefaultMaterial (Shader)
-        * j____________ (Material)
-          * j____________ (Shader)
-      * joints (Scope)
-        * drive_joint (PhysicsRevoluteJoint)
-        * left_finger_joint (PhysicsRevoluteJoint)
-        * left_inner_knuckle_joint (PhysicsRevoluteJoint)
-        * right_inner_knuckle_joint (PhysicsRevoluteJoint)
-        * right_outer_knuckle_joint (PhysicsRevoluteJoint)
-        * right_finger_joint (PhysicsRevoluteJoint)
-      * xarm_gripper_base_link (Xform)
-        * link_tcp (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * left_outer_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * left_finger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * left_inner_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * right_inner_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * right_outer_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * right_finger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * root_joint (PhysicsFixedJoint)
-    * Looks (Scope)
-      * material_Black (Material)
-        * Shader (Shader)
-      * material_Red (Material)
-        * Shader (Shader)
-      * material_Silver (Material)
-        * Shader (Shader)
-      * material_White (Material)
-        * Shader (Shader)
-      * material_______________ (Material)
-        * material_______________ (Shader)
-      * material____________ (Material)
-        * material____________ (Shader)
-    * joints (Scope)
-      * joint1 (PhysicsRevoluteJoint)
-      * joint2 (PhysicsRevoluteJoint)
-      * joint3 (PhysicsRevoluteJoint)
-      * joint4 (PhysicsRevoluteJoint)
-      * joint5 (PhysicsRevoluteJoint)
-      * joint6 (PhysicsRevoluteJoint)
-      * joint7 (PhysicsRevoluteJoint)
-    * world (Xform)
-      * link_base (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link1 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link2 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link3 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link4 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link5 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link6 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link7 (Xform)
-      * link_eef (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * root_joint (PhysicsFixedJoint)
-  * RobotArm2_7 (Xform)
-    * gripper (Xform)
-      * Looks (Scope)
-        * DefaultMaterial (Material)
-          * DefaultMaterial (Shader)
-        * j____________ (Material)
-          * j____________ (Shader)
-      * joints (Scope)
-        * drive_joint (PhysicsRevoluteJoint)
-        * left_finger_joint (PhysicsRevoluteJoint)
-        * left_inner_knuckle_joint (PhysicsRevoluteJoint)
-        * right_inner_knuckle_joint (PhysicsRevoluteJoint)
-        * right_outer_knuckle_joint (PhysicsRevoluteJoint)
-        * right_finger_joint (PhysicsRevoluteJoint)
-      * xarm_gripper_base_link (Xform)
-        * link_tcp (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * left_outer_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * left_finger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * left_inner_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * right_inner_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * right_outer_knuckle (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * right_finger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * root_joint (PhysicsFixedJoint)
-    * Looks (Scope)
-      * material_Black (Material)
-        * Shader (Shader)
-      * material_Red (Material)
-        * Shader (Shader)
-      * material_Silver (Material)
-        * Shader (Shader)
-      * material_White (Material)
-        * Shader (Shader)
-      * material_______________ (Material)
-        * material_______________ (Shader)
-      * material____________ (Material)
-        * material____________ (Shader)
-    * joints (Scope)
-      * joint1 (PhysicsRevoluteJoint)
-      * joint2 (PhysicsRevoluteJoint)
-      * joint3 (PhysicsRevoluteJoint)
-      * joint4 (PhysicsRevoluteJoint)
-      * joint5 (PhysicsRevoluteJoint)
-      * joint6 (PhysicsRevoluteJoint)
-      * joint7 (PhysicsRevoluteJoint)
-    * world (Xform)
-      * link_base (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link1 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link2 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link3 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link4 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link5 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link6 (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * link7 (Xform)
-      * link_eef (Xform)
-      * visuals (Xform)
-      * collisions (Xform)
-    * root_joint (PhysicsFixedJoint)
   * PartA_OnBelt_1 (Xform)
     * node__Size_1_0x1_4x4_SUPPRESSION_Default (Xform)
       * geometry_1 (Mesh)
@@ -5677,6 +4762,316 @@
               * Object_4 (Xform)
                 * Box003_Material__1_0 (Xform)
                   * Box003_Material__1_0 (Mesh)
+  * Workbench_02 (Xform)
+  * Workbench_03 (Xform)
+  * Workbench_04 (Xform)
+  * Workbench_05 (Xform)
+  * Workbench_06 (Xform)
+  * Workbench_07 (Xform)
+  * Workbench_08 (Xform)
+  * Workbench_09 (Xform)
+  * Workbench_10 (Xform)
+  * Workbench_11 (Xform)
+  * Workbench_12 (Xform)
+  * Workbench_13 (Xform)
+  * Workbench_14 (Xform)
+  * Workbench_15 (Xform)
+  * Black_Honey___Robotic_Arm (Xform)
+    * Materials (Scope)
+      * robo_arm (Material)
+        * pbr_shader (Shader)
+        * uvset0 (Shader)
+        * tex_base (Shader)
+        * tex_metallic (Shader)
+        * tex_roughness (Shader)
+        * tex_normal (Shader)
+        * tex_emissive (Shader)
+      * robot_base (Material)
+        * pbr_shader (Shader)
+        * uvset0 (Shader)
+        * tex_base (Shader)
+        * tex_metallic (Shader)
+        * tex_roughness (Shader)
+        * tex_normal (Shader)
+        * tex_emissive (Shader)
+    * Meshes (Xform)
+      * Sketchfab_model (Xform)
+        * root (Xform)
+          * GLTF_SceneRootNode (Xform)
+            * roboarm_001_low_0 (Xform)
+              * Object_4 (Xform)
+                * Object_0 (Mesh)
+            * roboarm_002_low_1 (Xform)
+              * Object_6 (Xform)
+                * Object_1 (Mesh)
+            * roboarm_003_low_2 (Xform)
+              * Object_8 (Xform)
+                * Object_2 (Mesh)
+            * roboarm_004_low_3 (Xform)
+              * Object_10 (Xform)
+                * Object_3 (Mesh)
+            * roboarm_005_low_4 (Xform)
+              * Object_12 (Xform)
+                * Object_4 (Mesh)
+            * roboarm_006_low_5 (Xform)
+              * Object_14 (Xform)
+                * Object_5 (Mesh)
+            * roboarm_007_low_6 (Xform)
+              * Object_16 (Xform)
+                * Object_6 (Mesh)
+            * roboarm_008_low_7 (Xform)
+              * Object_18 (Xform)
+                * Object_7 (Mesh)
+            * roboarm_009_low_8 (Xform)
+              * Object_20 (Xform)
+                * Object_8 (Mesh)
+            * roboarm_010_low_9 (Xform)
+              * Object_22 (Xform)
+                * Object_9 (Mesh)
+            * roboarm_011_low_10 (Xform)
+              * Object_24 (Xform)
+                * Object_10 (Mesh)
+            * roboarm_012_low_11 (Xform)
+              * Object_26 (Xform)
+                * Object_11 (Mesh)
+            * roboarm_013_low_12 (Xform)
+              * Object_28 (Xform)
+                * Object_12 (Mesh)
+            * roboarm_014_low_13 (Xform)
+              * Object_30 (Xform)
+                * Object_13 (Mesh)
+            * roboarm_015_low_14 (Xform)
+              * Object_32 (Xform)
+                * Object_14 (Mesh)
+            * roboarm_016_low_15 (Xform)
+              * Object_34 (Xform)
+                * Object_15 (Mesh)
+            * roboarm_017_low_16 (Xform)
+              * Object_36 (Xform)
+                * Object_16 (Mesh)
+            * roboarm_018_low_17 (Xform)
+              * Object_38 (Xform)
+                * Object_17 (Mesh)
+            * roboarm_019_low_18 (Xform)
+              * Object_40 (Xform)
+                * Object_18 (Mesh)
+            * roboarm_020_low_19 (Xform)
+              * Object_42 (Xform)
+                * Object_19 (Mesh)
+            * roboarm_021_low_20 (Xform)
+              * Object_44 (Xform)
+                * Object_20 (Mesh)
+            * roboarm_022_low_21 (Xform)
+              * Object_46 (Xform)
+                * Object_21 (Mesh)
+            * roboarm_023_low_22 (Xform)
+              * Object_48 (Xform)
+                * Object_22 (Mesh)
+            * roboarm_024_low_23 (Xform)
+              * Object_50 (Xform)
+                * Object_23 (Mesh)
+            * roboarm_025_low_24 (Xform)
+              * Object_52 (Xform)
+                * Object_24 (Mesh)
+            * roboarm_026_low_25 (Xform)
+              * Object_54 (Xform)
+                * Object_25 (Mesh)
+            * roboarm_027_low_26 (Xform)
+              * Object_56 (Xform)
+                * Object_26 (Mesh)
+            * roboarm_028_low_27 (Xform)
+              * Object_58 (Xform)
+                * Object_27 (Mesh)
+            * roboarm_low_28 (Xform)
+              * Object_60 (Xform)
+                * Object_28 (Mesh)
+            * robot_base_010_low_29 (Xform)
+              * Object_62 (Xform)
+                * Object_29 (Mesh)
+            * robot_base_001_low_30 (Xform)
+              * Object_64 (Xform)
+                * Object_30 (Mesh)
+            * robot_base_002_low_31 (Xform)
+              * Object_66 (Xform)
+                * Object_31 (Mesh)
+            * robot_base_003_low_32 (Xform)
+              * Object_68 (Xform)
+                * Object_32 (Mesh)
+            * robot_base_004_low_33 (Xform)
+              * Object_70 (Xform)
+                * Object_33 (Mesh)
+            * robot_base_005_low_34 (Xform)
+              * Object_72 (Xform)
+                * Object_34 (Mesh)
+            * robot_base_006_low_35 (Xform)
+              * Object_74 (Xform)
+                * Object_35 (Mesh)
+            * robot_base_008_low_36 (Xform)
+              * Object_76 (Xform)
+                * Object_36 (Mesh)
+            * robot_base_009_low_37 (Xform)
+              * Object_78 (Xform)
+                * Object_37 (Mesh)
+            * robot_base_018_low_38 (Xform)
+              * Object_80 (Xform)
+                * Object_38 (Mesh)
+            * robot_base_011_low_39 (Xform)
+              * Object_82 (Xform)
+                * Object_39 (Mesh)
+            * robot_base_012_low_40 (Xform)
+              * Object_84 (Xform)
+                * Object_40 (Mesh)
+            * robot_base_013_low_41 (Xform)
+              * Object_86 (Xform)
+                * Object_41 (Mesh)
+            * robot_base_014_low_42 (Xform)
+              * Object_88 (Xform)
+                * Object_42 (Mesh)
+            * robot_base_015_low_43 (Xform)
+              * Object_90 (Xform)
+                * Object_43 (Mesh)
+            * robot_base_016_low_44 (Xform)
+              * Object_92 (Xform)
+                * Object_44 (Mesh)
+            * robot_base_017_low_45 (Xform)
+              * Object_94 (Xform)
+                * Object_45 (Mesh)
+            * robot_base_020_low_46 (Xform)
+              * Object_96 (Xform)
+                * Object_46 (Mesh)
+            * robot_base_019_low_47 (Xform)
+              * Object_98 (Xform)
+                * Object_47 (Mesh)
+            * robot_base_021_low_48 (Xform)
+              * Object_100 (Xform)
+                * Object_48 (Mesh)
+            * robot_base_022_low_49 (Xform)
+              * Object_102 (Xform)
+                * Object_49 (Mesh)
+            * robot_base_023_low_50 (Xform)
+              * Object_104 (Xform)
+                * Object_50 (Mesh)
+            * robot_base_low_51 (Xform)
+              * Object_106 (Xform)
+                * Object_51 (Mesh)
+            * robot_base_024_low_52 (Xform)
+              * Object_108 (Xform)
+                * Object_52 (Mesh)
+            * robot_base_025_low_53 (Xform)
+              * Object_110 (Xform)
+                * Object_53 (Mesh)
+            * robot_base_026_low_54 (Xform)
+              * Object_112 (Xform)
+                * Object_54 (Mesh)
+            * robot_base_027_low_55 (Xform)
+              * Object_114 (Xform)
+                * Object_55 (Mesh)
+            * robot_base_028_low_56 (Xform)
+              * Object_116 (Xform)
+                * Object_56 (Mesh)
+            * robot_base_029_low_57 (Xform)
+              * Object_118 (Xform)
+                * Object_57 (Mesh)
+            * robot_base_030_low_58 (Xform)
+              * Object_120 (Xform)
+                * Object_58 (Mesh)
+            * robot_base_031_low_59 (Xform)
+              * Object_122 (Xform)
+                * Object_59 (Mesh)
+            * robot_base_032_low_60 (Xform)
+              * Object_124 (Xform)
+                * Object_60 (Mesh)
+            * robot_base_007_low_61 (Xform)
+              * Object_126 (Xform)
+                * Object_61 (Mesh)
+            * robot_base_033_low_62 (Xform)
+              * Object_128 (Xform)
+                * Object_62 (Mesh)
+            * robot_base_035_low_63 (Xform)
+              * Object_130 (Xform)
+                * Object_63 (Mesh)
+  * rs007l_onrobot_rg2 (Xform)
+    * world (Xform)
+      * world2base (PhysicsFixedJoint)
+    * root_joint (PhysicsFixedJoint)
+    * base_link (Xform)
+      * joint1 (PhysicsRevoluteJoint)
+      * visuals (Mesh)
+      * collisions (Mesh)
+    * link1 (Xform)
+      * joint2 (PhysicsRevoluteJoint)
+      * visuals (Mesh)
+      * collisions (Mesh)
+    * link2 (Xform)
+      * joint3 (PhysicsRevoluteJoint)
+      * visuals (Mesh)
+      * collisions (Mesh)
+    * link3 (Xform)
+      * joint4 (PhysicsRevoluteJoint)
+      * visuals (Mesh)
+      * collisions (Mesh)
+    * link4 (Xform)
+      * joint5 (PhysicsRevoluteJoint)
+      * visuals (Mesh)
+      * collisions (Mesh)
+    * link5 (Xform)
+      * joint6 (PhysicsRevoluteJoint)
+      * visuals (Mesh)
+      * collisions (Mesh)
+    * link6 (Xform)
+      * rs007l2rg2 (PhysicsFixedJoint)
+      * visuals (Mesh)
+      * collisions (Mesh)
+    * onrobot_rg2_base_link (Xform)
+      * finger_joint (PhysicsRevoluteJoint)
+      * gripper_center_joint (PhysicsFixedJoint)
+      * left_inner_knuckle_joint (PhysicsRevoluteJoint)
+      * right_inner_knuckle_joint (PhysicsRevoluteJoint)
+      * right_outer_knuckle_joint (PhysicsRevoluteJoint)
+      * visuals (Mesh)
+      * collisions (Mesh)
+    * left_outer_knuckle (Xform)
+      * left_inner_finger_joint (PhysicsRevoluteJoint)
+      * visuals (Mesh)
+      * collisions (Mesh)
+    * left_inner_finger (Xform)
+      * visuals (Mesh)
+      * collisions (Mesh)
+    * gripper_center (Xform)
+    * left_inner_knuckle (Xform)
+      * visuals (Mesh)
+      * collisions (Mesh)
+    * right_inner_knuckle (Xform)
+      * visuals (Mesh)
+      * collisions (Mesh)
+    * right_outer_knuckle (Xform)
+      * right_inner_finger_joint (PhysicsRevoluteJoint)
+      * visuals (Mesh)
+      * collisions (Mesh)
+    * right_inner_finger (Xform)
+      * visuals (Mesh)
+      * collisions (Mesh)
+    * Looks (Scope)
+      * material_Black (Material)
+        * Shader (Shader)
+      * material_White (Material)
+        * Shader (Shader)
+      * material_CCCCCC (Material)
+        * Shader (Shader)
+      * material_191919 (Material)
+        * Shader (Shader)
+  * Black_Honey___Robotic_Arm_01 (Prim)
+  * rs007l_onrobot_rg2_01 (Prim)
+  * Black_Honey___Robotic_Arm_02 (Prim)
+  * rs007l_onrobot_rg2_02 (Prim)
+  * Black_Honey___Robotic_Arm_03 (Prim)
+  * rs007l_onrobot_rg2_03 (Prim)
+  * Black_Honey___Robotic_Arm_04 (Prim)
+  * Black_Honey___Robotic_Arm_05 (Prim)
+  * rs007l_onrobot_rg2_04 (Prim)
+  * rs007l_onrobot_rg2_05 (Prim)
+  * Black_Honey___Robotic_Arm_06 (Prim)
+  * rs007l_onrobot_rg2_06 (Prim)
 
 ## 3. 对象详细描述 (Detailed Prim Descriptions)
 
@@ -6109,4045 +5504,6 @@
 * **世界包围盒 (World BBox):**
   * Size: '(4.003, 1.177, 2.311)'
   * Center: '(-15.037, 14.987, 1.155)'
-
----
-
-### /World/RobotArm1_1
-
-* **Prim路径 (Prim Path):**/World/RobotArm1_1
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  * [reference] '/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/4.5/Isaac/Robots/FactoryFranka/factory_franka_instanceable.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(1.006, 0.778, 3.344)'
-  * Center: '(-0.959, -16.199, 1.672)'
-
----
-
-### /World/RobotArm1_2
-
-* **Prim路径 (Prim Path):**/World/RobotArm1_2
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  * [reference] '/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/4.5/Isaac/Robots/FactoryFranka/factory_franka_instanceable.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(1.006, 0.778, 3.344)'
-  * Center: '(-0.959, -11.199, 1.672)'
-
----
-
-### /World/RobotArm1_3
-
-* **Prim路径 (Prim Path):**/World/RobotArm1_3
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  * [reference] '/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/4.5/Isaac/Robots/FactoryFranka/factory_franka_instanceable.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(1.006, 0.778, 3.344)'
-  * Center: '(-0.959, -6.199, 1.672)'
-
----
-
-### /World/RobotArm1_4
-
-* **Prim路径 (Prim Path):**/World/RobotArm1_4
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  * [reference] '/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/4.5/Isaac/Robots/FactoryFranka/factory_franka_instanceable.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(1.006, 0.778, 3.344)'
-  * Center: '(-0.959, -1.199, 1.672)'
-
----
-
-### /World/RobotArm1_5
-
-* **Prim路径 (Prim Path):**/World/RobotArm1_5
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  * [reference] '/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/4.5/Isaac/Robots/FactoryFranka/factory_franka_instanceable.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(1.006, 0.778, 3.344)'
-  * Center: '(-0.959, 3.801, 1.672)'
-
----
-
-### /World/RobotArm1_6
-
-* **Prim路径 (Prim Path):**/World/RobotArm1_6
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  * [reference] '/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/4.5/Isaac/Robots/FactoryFranka/factory_franka_instanceable.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(1.006, 0.778, 3.344)'
-  * Center: '(-0.959, 8.801, 1.672)'
-
----
-
-### /World/RobotArm1_7
-
-* **Prim路径 (Prim Path):**/World/RobotArm1_7
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  * [reference] '/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/4.5/Isaac/Robots/FactoryFranka/factory_franka_instanceable.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(1.006, 0.778, 3.344)'
-  * Center: '(-0.959, 13.801, 1.672)'
-
----
-
-### /World/RobotArm2_1
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  * [reference] '/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/4.5/Isaac/Robots/Ufactory/xarm7/xarm7.usd'
-  * [reference] './configuration/xarm7_physics.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.924, 0.682, 1.938)'
-  * Center: '(-1.273, -13.814, 0.844)'
-
----
-
-### /World/RobotArm2_1/gripper
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/gripper
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  * [reference] '../xarm_gripper/xarm_gripper.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.225, 0.519, 0.486)'
-  * Center: '(-1.618, -13.800, 0.118)'
-
----
-
-### /World/RobotArm2_1/gripper/xarm_gripper_base_link/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/gripper/xarm_gripper_base_link/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/xarm_gripper_base_link'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.225, 0.319, 0.313)'
-  * Center: '(-1.618, -13.800, 0.205)'
-
----
-
-### /World/RobotArm2_1/gripper/xarm_gripper_base_link/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/gripper/xarm_gripper_base_link/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/xarm_gripper_base_link'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, -13.800, 0.361)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_1/gripper/left_outer_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/gripper/left_outer_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/left_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.035, 0.232, 0.167)'
-  * Center: '(-1.618, -13.657, 0.124)'
-
----
-
-### /World/RobotArm2_1/gripper/left_outer_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/gripper/left_outer_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/left_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, -13.695, 0.184)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_1/gripper/left_finger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/gripper/left_finger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/left_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.096, 0.096, 0.201)'
-  * Center: '(-1.618, -13.619, -0.025)'
-
----
-
-### /World/RobotArm2_1/gripper/left_finger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/gripper/left_finger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/left_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, -13.589, 0.058)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_1/gripper/left_inner_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/gripper/left_inner_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/left_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.084, 0.142, 0.162)'
-  * Center: '(-1.618, -13.687, 0.076)'
-
----
-
-### /World/RobotArm2_1/gripper/left_inner_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/gripper/left_inner_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/left_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, -13.740, 0.139)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_1/gripper/right_inner_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/gripper/right_inner_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/right_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.084, 0.142, 0.162)'
-  * Center: '(-1.618, -13.913, 0.076)'
-
----
-
-### /World/RobotArm2_1/gripper/right_inner_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/gripper/right_inner_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/right_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, -13.860, 0.139)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_1/gripper/right_outer_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/gripper/right_outer_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/right_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.035, 0.232, 0.167)'
-  * Center: '(-1.618, -13.943, 0.124)'
-
----
-
-### /World/RobotArm2_1/gripper/right_outer_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/gripper/right_outer_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/right_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, -13.905, 0.184)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_1/gripper/right_finger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/gripper/right_finger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/right_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.096, 0.096, 0.201)'
-  * Center: '(-1.618, -13.981, -0.025)'
-
----
-
-### /World/RobotArm2_1/gripper/right_finger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/gripper/right_finger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/right_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, -14.011, 0.058)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_1/world/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/world/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/world'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.378, 0.378, 0.451)'
-  * Center: '(-1.000, -13.800, 0.226)'
-
----
-
-### /World/RobotArm2_1/world/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/world/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/world'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, -13.800, 0.000)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_1/link1/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/link1/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link1'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.291, 0.348, 0.494)'
-  * Center: '(-1.000, -13.803, 0.700)'
-
----
-
-### /World/RobotArm2_1/link1/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/link1/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link1'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, -13.800, 0.801)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_1/link2/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/link2/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link2'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.291, 0.489, 0.694)'
-  * Center: '(-1.000, -13.911, 1.002)'
-
----
-
-### /World/RobotArm2_1/link2/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/link2/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link2'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, -13.800, 0.801)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_1/link3/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/link3/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link3'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.424, 0.344, 0.463)'
-  * Center: '(-1.079, -13.834, 1.582)'
-
----
-
-### /World/RobotArm2_1/link3/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/link3/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link3'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, -13.800, 1.680)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_1/link4/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/link4/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link4'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.502, 0.462, 0.621)'
-  * Center: '(-1.275, -13.704, 1.503)'
-
----
-
-### /World/RobotArm2_1/link4/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/link4/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link4'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.157, -13.800, 1.680)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_1/link5/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/link5/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link5'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.270, 0.394, 0.661)'
-  * Center: '(-1.390, -13.738, 0.867)'
-
----
-
-### /World/RobotArm2_1/link5/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/link5/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link5'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.390, -13.800, 0.652)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_1/link6/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/link6/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link6'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.461, 0.300, 0.317)'
-  * Center: '(-1.504, -13.833, 0.609)'
-
----
-
-### /World/RobotArm2_1/link6/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/link6/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link6'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.390, -13.800, 0.652)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_1/link7/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/link7/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link7'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.233, 0.279, 0.099)'
-  * Center: '(-1.618, -13.823, 0.411)'
-
----
-
-### /World/RobotArm2_1/link7/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/link7/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link7'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, -13.800, 0.361)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_2
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  * [reference] '/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/4.5/Isaac/Robots/Ufactory/xarm7/xarm7.usd'
-  * [reference] './configuration/xarm7_physics.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.924, 0.682, 1.938)'
-  * Center: '(-1.273, -8.814, 0.844)'
-
----
-
-### /World/RobotArm2_2/gripper
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/gripper
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  * [reference] '../xarm_gripper/xarm_gripper.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.225, 0.519, 0.486)'
-  * Center: '(-1.618, -8.800, 0.118)'
-
----
-
-### /World/RobotArm2_2/gripper/xarm_gripper_base_link/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/gripper/xarm_gripper_base_link/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/xarm_gripper_base_link'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.225, 0.319, 0.313)'
-  * Center: '(-1.618, -8.800, 0.205)'
-
----
-
-### /World/RobotArm2_2/gripper/xarm_gripper_base_link/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/gripper/xarm_gripper_base_link/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/xarm_gripper_base_link'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, -8.800, 0.361)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_2/gripper/left_outer_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/gripper/left_outer_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/left_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.035, 0.232, 0.167)'
-  * Center: '(-1.618, -8.657, 0.124)'
-
----
-
-### /World/RobotArm2_2/gripper/left_outer_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/gripper/left_outer_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/left_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, -8.695, 0.184)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_2/gripper/left_finger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/gripper/left_finger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/left_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.096, 0.096, 0.201)'
-  * Center: '(-1.618, -8.619, -0.025)'
-
----
-
-### /World/RobotArm2_2/gripper/left_finger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/gripper/left_finger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/left_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, -8.589, 0.058)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_2/gripper/left_inner_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/gripper/left_inner_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/left_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.084, 0.142, 0.162)'
-  * Center: '(-1.618, -8.687, 0.076)'
-
----
-
-### /World/RobotArm2_2/gripper/left_inner_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/gripper/left_inner_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/left_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, -8.740, 0.139)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_2/gripper/right_inner_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/gripper/right_inner_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/right_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.084, 0.142, 0.162)'
-  * Center: '(-1.618, -8.913, 0.076)'
-
----
-
-### /World/RobotArm2_2/gripper/right_inner_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/gripper/right_inner_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/right_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, -8.860, 0.139)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_2/gripper/right_outer_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/gripper/right_outer_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/right_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.035, 0.232, 0.167)'
-  * Center: '(-1.618, -8.943, 0.124)'
-
----
-
-### /World/RobotArm2_2/gripper/right_outer_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/gripper/right_outer_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/right_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, -8.905, 0.184)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_2/gripper/right_finger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/gripper/right_finger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/right_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.096, 0.096, 0.201)'
-  * Center: '(-1.618, -8.981, -0.025)'
-
----
-
-### /World/RobotArm2_2/gripper/right_finger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/gripper/right_finger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/right_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, -9.011, 0.058)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_2/world/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/world/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/world'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.378, 0.378, 0.451)'
-  * Center: '(-1.000, -8.800, 0.226)'
-
----
-
-### /World/RobotArm2_2/world/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/world/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/world'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, -8.800, 0.000)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_2/link1/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/link1/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link1'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.291, 0.348, 0.494)'
-  * Center: '(-1.000, -8.803, 0.700)'
-
----
-
-### /World/RobotArm2_2/link1/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/link1/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link1'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, -8.800, 0.801)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_2/link2/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/link2/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link2'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.291, 0.489, 0.694)'
-  * Center: '(-1.000, -8.911, 1.002)'
-
----
-
-### /World/RobotArm2_2/link2/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/link2/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link2'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, -8.800, 0.801)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_2/link3/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/link3/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link3'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.424, 0.344, 0.463)'
-  * Center: '(-1.079, -8.834, 1.582)'
-
----
-
-### /World/RobotArm2_2/link3/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/link3/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link3'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, -8.800, 1.680)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_2/link4/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/link4/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link4'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.502, 0.462, 0.621)'
-  * Center: '(-1.275, -8.704, 1.503)'
-
----
-
-### /World/RobotArm2_2/link4/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/link4/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link4'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.157, -8.800, 1.680)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_2/link5/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/link5/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link5'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.270, 0.394, 0.661)'
-  * Center: '(-1.390, -8.738, 0.867)'
-
----
-
-### /World/RobotArm2_2/link5/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/link5/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link5'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.390, -8.800, 0.652)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_2/link6/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/link6/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link6'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.461, 0.300, 0.317)'
-  * Center: '(-1.504, -8.833, 0.609)'
-
----
-
-### /World/RobotArm2_2/link6/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/link6/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link6'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.390, -8.800, 0.652)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_2/link7/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/link7/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link7'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.233, 0.279, 0.099)'
-  * Center: '(-1.618, -8.823, 0.411)'
-
----
-
-### /World/RobotArm2_2/link7/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/link7/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link7'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, -8.800, 0.361)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_3
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  * [reference] '/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/4.5/Isaac/Robots/Ufactory/xarm7/xarm7.usd'
-  * [reference] './configuration/xarm7_physics.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.924, 0.682, 1.938)'
-  * Center: '(-1.273, -3.814, 0.844)'
-
----
-
-### /World/RobotArm2_3/gripper
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/gripper
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  * [reference] '../xarm_gripper/xarm_gripper.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.225, 0.519, 0.486)'
-  * Center: '(-1.618, -3.800, 0.118)'
-
----
-
-### /World/RobotArm2_3/gripper/xarm_gripper_base_link/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/gripper/xarm_gripper_base_link/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/xarm_gripper_base_link'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.225, 0.319, 0.313)'
-  * Center: '(-1.618, -3.800, 0.205)'
-
----
-
-### /World/RobotArm2_3/gripper/xarm_gripper_base_link/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/gripper/xarm_gripper_base_link/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/xarm_gripper_base_link'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, -3.800, 0.361)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_3/gripper/left_outer_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/gripper/left_outer_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/left_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.035, 0.232, 0.167)'
-  * Center: '(-1.618, -3.657, 0.124)'
-
----
-
-### /World/RobotArm2_3/gripper/left_outer_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/gripper/left_outer_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/left_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, -3.695, 0.184)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_3/gripper/left_finger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/gripper/left_finger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/left_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.096, 0.096, 0.201)'
-  * Center: '(-1.618, -3.619, -0.025)'
-
----
-
-### /World/RobotArm2_3/gripper/left_finger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/gripper/left_finger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/left_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, -3.589, 0.058)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_3/gripper/left_inner_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/gripper/left_inner_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/left_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.084, 0.142, 0.162)'
-  * Center: '(-1.618, -3.687, 0.076)'
-
----
-
-### /World/RobotArm2_3/gripper/left_inner_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/gripper/left_inner_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/left_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, -3.740, 0.139)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_3/gripper/right_inner_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/gripper/right_inner_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/right_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.084, 0.142, 0.162)'
-  * Center: '(-1.618, -3.913, 0.076)'
-
----
-
-### /World/RobotArm2_3/gripper/right_inner_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/gripper/right_inner_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/right_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, -3.860, 0.139)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_3/gripper/right_outer_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/gripper/right_outer_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/right_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.035, 0.232, 0.167)'
-  * Center: '(-1.618, -3.943, 0.124)'
-
----
-
-### /World/RobotArm2_3/gripper/right_outer_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/gripper/right_outer_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/right_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, -3.905, 0.184)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_3/gripper/right_finger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/gripper/right_finger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/right_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.096, 0.096, 0.201)'
-  * Center: '(-1.618, -3.981, -0.025)'
-
----
-
-### /World/RobotArm2_3/gripper/right_finger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/gripper/right_finger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/right_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, -4.011, 0.058)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_3/world/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/world/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/world'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.378, 0.378, 0.451)'
-  * Center: '(-1.000, -3.800, 0.226)'
-
----
-
-### /World/RobotArm2_3/world/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/world/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/world'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, -3.800, 0.000)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_3/link1/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/link1/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link1'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.291, 0.348, 0.494)'
-  * Center: '(-1.000, -3.803, 0.700)'
-
----
-
-### /World/RobotArm2_3/link1/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/link1/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link1'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, -3.800, 0.801)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_3/link2/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/link2/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link2'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.291, 0.489, 0.694)'
-  * Center: '(-1.000, -3.911, 1.002)'
-
----
-
-### /World/RobotArm2_3/link2/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/link2/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link2'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, -3.800, 0.801)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_3/link3/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/link3/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link3'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.424, 0.344, 0.463)'
-  * Center: '(-1.079, -3.834, 1.582)'
-
----
-
-### /World/RobotArm2_3/link3/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/link3/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link3'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, -3.800, 1.680)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_3/link4/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/link4/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link4'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.502, 0.462, 0.621)'
-  * Center: '(-1.275, -3.704, 1.503)'
-
----
-
-### /World/RobotArm2_3/link4/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/link4/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link4'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.157, -3.800, 1.680)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_3/link5/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/link5/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link5'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.270, 0.394, 0.661)'
-  * Center: '(-1.390, -3.738, 0.867)'
-
----
-
-### /World/RobotArm2_3/link5/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/link5/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link5'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.390, -3.800, 0.652)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_3/link6/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/link6/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link6'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.461, 0.300, 0.317)'
-  * Center: '(-1.504, -3.833, 0.609)'
-
----
-
-### /World/RobotArm2_3/link6/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/link6/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link6'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.390, -3.800, 0.652)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_3/link7/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/link7/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link7'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.233, 0.279, 0.099)'
-  * Center: '(-1.618, -3.823, 0.411)'
-
----
-
-### /World/RobotArm2_3/link7/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/link7/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link7'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, -3.800, 0.361)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_4
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  * [reference] '/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/4.5/Isaac/Robots/Ufactory/xarm7/xarm7.usd'
-  * [reference] './configuration/xarm7_physics.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.924, 0.682, 1.938)'
-  * Center: '(-1.273, 1.186, 0.844)'
-
----
-
-### /World/RobotArm2_4/gripper
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/gripper
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  * [reference] '../xarm_gripper/xarm_gripper.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.225, 0.519, 0.486)'
-  * Center: '(-1.618, 1.200, 0.118)'
-
----
-
-### /World/RobotArm2_4/gripper/xarm_gripper_base_link/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/gripper/xarm_gripper_base_link/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/xarm_gripper_base_link'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.225, 0.319, 0.313)'
-  * Center: '(-1.618, 1.200, 0.205)'
-
----
-
-### /World/RobotArm2_4/gripper/xarm_gripper_base_link/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/gripper/xarm_gripper_base_link/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/xarm_gripper_base_link'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 1.200, 0.361)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_4/gripper/left_outer_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/gripper/left_outer_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/left_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.035, 0.232, 0.167)'
-  * Center: '(-1.618, 1.343, 0.124)'
-
----
-
-### /World/RobotArm2_4/gripper/left_outer_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/gripper/left_outer_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/left_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 1.305, 0.184)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_4/gripper/left_finger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/gripper/left_finger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/left_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.096, 0.096, 0.201)'
-  * Center: '(-1.618, 1.381, -0.025)'
-
----
-
-### /World/RobotArm2_4/gripper/left_finger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/gripper/left_finger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/left_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 1.411, 0.058)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_4/gripper/left_inner_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/gripper/left_inner_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/left_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.084, 0.142, 0.162)'
-  * Center: '(-1.618, 1.313, 0.076)'
-
----
-
-### /World/RobotArm2_4/gripper/left_inner_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/gripper/left_inner_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/left_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 1.260, 0.139)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_4/gripper/right_inner_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/gripper/right_inner_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/right_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.084, 0.142, 0.162)'
-  * Center: '(-1.618, 1.087, 0.076)'
-
----
-
-### /World/RobotArm2_4/gripper/right_inner_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/gripper/right_inner_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/right_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 1.140, 0.139)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_4/gripper/right_outer_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/gripper/right_outer_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/right_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.035, 0.232, 0.167)'
-  * Center: '(-1.618, 1.057, 0.124)'
-
----
-
-### /World/RobotArm2_4/gripper/right_outer_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/gripper/right_outer_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/right_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 1.095, 0.184)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_4/gripper/right_finger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/gripper/right_finger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/right_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.096, 0.096, 0.201)'
-  * Center: '(-1.618, 1.019, -0.025)'
-
----
-
-### /World/RobotArm2_4/gripper/right_finger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/gripper/right_finger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/right_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 0.989, 0.058)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_4/world/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/world/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/world'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.378, 0.378, 0.451)'
-  * Center: '(-1.000, 1.200, 0.226)'
-
----
-
-### /World/RobotArm2_4/world/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/world/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/world'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, 1.200, 0.000)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_4/link1/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/link1/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link1'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.291, 0.348, 0.494)'
-  * Center: '(-1.000, 1.197, 0.700)'
-
----
-
-### /World/RobotArm2_4/link1/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/link1/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link1'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, 1.200, 0.801)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_4/link2/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/link2/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link2'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.291, 0.489, 0.694)'
-  * Center: '(-1.000, 1.089, 1.002)'
-
----
-
-### /World/RobotArm2_4/link2/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/link2/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link2'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, 1.200, 0.801)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_4/link3/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/link3/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link3'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.424, 0.344, 0.463)'
-  * Center: '(-1.079, 1.166, 1.582)'
-
----
-
-### /World/RobotArm2_4/link3/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/link3/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link3'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, 1.200, 1.680)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_4/link4/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/link4/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link4'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.502, 0.462, 0.621)'
-  * Center: '(-1.275, 1.296, 1.503)'
-
----
-
-### /World/RobotArm2_4/link4/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/link4/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link4'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.157, 1.200, 1.680)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_4/link5/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/link5/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link5'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.270, 0.394, 0.661)'
-  * Center: '(-1.390, 1.262, 0.867)'
-
----
-
-### /World/RobotArm2_4/link5/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/link5/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link5'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.390, 1.200, 0.652)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_4/link6/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/link6/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link6'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.461, 0.300, 0.317)'
-  * Center: '(-1.504, 1.167, 0.609)'
-
----
-
-### /World/RobotArm2_4/link6/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/link6/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link6'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.390, 1.200, 0.652)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_4/link7/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/link7/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link7'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.233, 0.279, 0.099)'
-  * Center: '(-1.618, 1.177, 0.411)'
-
----
-
-### /World/RobotArm2_4/link7/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/link7/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link7'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 1.200, 0.361)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_5
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  * [reference] '/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/4.5/Isaac/Robots/Ufactory/xarm7/xarm7.usd'
-  * [reference] './configuration/xarm7_physics.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.924, 0.682, 1.938)'
-  * Center: '(-1.273, 6.186, 0.844)'
-
----
-
-### /World/RobotArm2_5/gripper
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/gripper
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  * [reference] '../xarm_gripper/xarm_gripper.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.225, 0.519, 0.486)'
-  * Center: '(-1.618, 6.200, 0.118)'
-
----
-
-### /World/RobotArm2_5/gripper/xarm_gripper_base_link/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/gripper/xarm_gripper_base_link/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/xarm_gripper_base_link'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.225, 0.319, 0.313)'
-  * Center: '(-1.618, 6.200, 0.205)'
-
----
-
-### /World/RobotArm2_5/gripper/xarm_gripper_base_link/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/gripper/xarm_gripper_base_link/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/xarm_gripper_base_link'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 6.200, 0.361)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_5/gripper/left_outer_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/gripper/left_outer_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/left_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.035, 0.232, 0.167)'
-  * Center: '(-1.618, 6.343, 0.124)'
-
----
-
-### /World/RobotArm2_5/gripper/left_outer_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/gripper/left_outer_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/left_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 6.305, 0.184)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_5/gripper/left_finger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/gripper/left_finger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/left_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.096, 0.096, 0.201)'
-  * Center: '(-1.618, 6.381, -0.025)'
-
----
-
-### /World/RobotArm2_5/gripper/left_finger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/gripper/left_finger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/left_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 6.411, 0.058)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_5/gripper/left_inner_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/gripper/left_inner_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/left_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.084, 0.142, 0.162)'
-  * Center: '(-1.618, 6.313, 0.076)'
-
----
-
-### /World/RobotArm2_5/gripper/left_inner_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/gripper/left_inner_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/left_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 6.260, 0.139)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_5/gripper/right_inner_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/gripper/right_inner_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/right_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.084, 0.142, 0.162)'
-  * Center: '(-1.618, 6.087, 0.076)'
-
----
-
-### /World/RobotArm2_5/gripper/right_inner_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/gripper/right_inner_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/right_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 6.140, 0.139)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_5/gripper/right_outer_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/gripper/right_outer_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/right_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.035, 0.232, 0.167)'
-  * Center: '(-1.618, 6.057, 0.124)'
-
----
-
-### /World/RobotArm2_5/gripper/right_outer_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/gripper/right_outer_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/right_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 6.095, 0.184)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_5/gripper/right_finger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/gripper/right_finger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/right_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.096, 0.096, 0.201)'
-  * Center: '(-1.618, 6.019, -0.025)'
-
----
-
-### /World/RobotArm2_5/gripper/right_finger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/gripper/right_finger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/right_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 5.989, 0.058)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_5/world/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/world/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/world'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.378, 0.378, 0.451)'
-  * Center: '(-1.000, 6.200, 0.226)'
-
----
-
-### /World/RobotArm2_5/world/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/world/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/world'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, 6.200, 0.000)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_5/link1/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/link1/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link1'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.291, 0.348, 0.494)'
-  * Center: '(-1.000, 6.197, 0.700)'
-
----
-
-### /World/RobotArm2_5/link1/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/link1/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link1'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, 6.200, 0.801)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_5/link2/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/link2/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link2'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.291, 0.489, 0.694)'
-  * Center: '(-1.000, 6.089, 1.002)'
-
----
-
-### /World/RobotArm2_5/link2/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/link2/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link2'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, 6.200, 0.801)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_5/link3/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/link3/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link3'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.424, 0.344, 0.463)'
-  * Center: '(-1.079, 6.166, 1.582)'
-
----
-
-### /World/RobotArm2_5/link3/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/link3/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link3'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, 6.200, 1.680)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_5/link4/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/link4/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link4'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.502, 0.462, 0.621)'
-  * Center: '(-1.275, 6.296, 1.503)'
-
----
-
-### /World/RobotArm2_5/link4/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/link4/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link4'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.157, 6.200, 1.680)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_5/link5/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/link5/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link5'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.270, 0.394, 0.661)'
-  * Center: '(-1.390, 6.262, 0.867)'
-
----
-
-### /World/RobotArm2_5/link5/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/link5/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link5'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.390, 6.200, 0.652)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_5/link6/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/link6/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link6'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.461, 0.300, 0.317)'
-  * Center: '(-1.504, 6.167, 0.609)'
-
----
-
-### /World/RobotArm2_5/link6/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/link6/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link6'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.390, 6.200, 0.652)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_5/link7/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/link7/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link7'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.233, 0.279, 0.099)'
-  * Center: '(-1.618, 6.177, 0.411)'
-
----
-
-### /World/RobotArm2_5/link7/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/link7/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link7'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 6.200, 0.361)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_6
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  * [reference] '/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/4.5/Isaac/Robots/Ufactory/xarm7/xarm7.usd'
-  * [reference] './configuration/xarm7_physics.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.924, 0.682, 1.938)'
-  * Center: '(-1.273, 11.186, 0.844)'
-
----
-
-### /World/RobotArm2_6/gripper
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/gripper
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  * [reference] '../xarm_gripper/xarm_gripper.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.225, 0.519, 0.486)'
-  * Center: '(-1.618, 11.200, 0.118)'
-
----
-
-### /World/RobotArm2_6/gripper/xarm_gripper_base_link/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/gripper/xarm_gripper_base_link/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/xarm_gripper_base_link'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.225, 0.319, 0.313)'
-  * Center: '(-1.618, 11.200, 0.205)'
-
----
-
-### /World/RobotArm2_6/gripper/xarm_gripper_base_link/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/gripper/xarm_gripper_base_link/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/xarm_gripper_base_link'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 11.200, 0.361)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_6/gripper/left_outer_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/gripper/left_outer_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/left_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.035, 0.232, 0.167)'
-  * Center: '(-1.618, 11.343, 0.124)'
-
----
-
-### /World/RobotArm2_6/gripper/left_outer_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/gripper/left_outer_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/left_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 11.305, 0.184)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_6/gripper/left_finger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/gripper/left_finger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/left_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.096, 0.096, 0.201)'
-  * Center: '(-1.618, 11.381, -0.025)'
-
----
-
-### /World/RobotArm2_6/gripper/left_finger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/gripper/left_finger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/left_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 11.411, 0.058)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_6/gripper/left_inner_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/gripper/left_inner_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/left_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.084, 0.142, 0.162)'
-  * Center: '(-1.618, 11.313, 0.076)'
-
----
-
-### /World/RobotArm2_6/gripper/left_inner_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/gripper/left_inner_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/left_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 11.260, 0.139)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_6/gripper/right_inner_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/gripper/right_inner_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/right_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.084, 0.142, 0.162)'
-  * Center: '(-1.618, 11.087, 0.076)'
-
----
-
-### /World/RobotArm2_6/gripper/right_inner_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/gripper/right_inner_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/right_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 11.140, 0.139)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_6/gripper/right_outer_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/gripper/right_outer_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/right_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.035, 0.232, 0.167)'
-  * Center: '(-1.618, 11.057, 0.124)'
-
----
-
-### /World/RobotArm2_6/gripper/right_outer_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/gripper/right_outer_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/right_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 11.095, 0.184)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_6/gripper/right_finger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/gripper/right_finger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/right_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.096, 0.096, 0.201)'
-  * Center: '(-1.618, 11.019, -0.025)'
-
----
-
-### /World/RobotArm2_6/gripper/right_finger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/gripper/right_finger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/right_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 10.989, 0.058)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_6/world/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/world/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/world'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.378, 0.378, 0.451)'
-  * Center: '(-1.000, 11.200, 0.226)'
-
----
-
-### /World/RobotArm2_6/world/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/world/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/world'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, 11.200, 0.000)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_6/link1/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/link1/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link1'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.291, 0.348, 0.494)'
-  * Center: '(-1.000, 11.197, 0.700)'
-
----
-
-### /World/RobotArm2_6/link1/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/link1/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link1'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, 11.200, 0.801)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_6/link2/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/link2/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link2'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.291, 0.489, 0.694)'
-  * Center: '(-1.000, 11.089, 1.002)'
-
----
-
-### /World/RobotArm2_6/link2/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/link2/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link2'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, 11.200, 0.801)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_6/link3/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/link3/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link3'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.424, 0.344, 0.463)'
-  * Center: '(-1.079, 11.166, 1.582)'
-
----
-
-### /World/RobotArm2_6/link3/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/link3/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link3'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, 11.200, 1.680)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_6/link4/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/link4/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link4'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.502, 0.462, 0.621)'
-  * Center: '(-1.275, 11.296, 1.503)'
-
----
-
-### /World/RobotArm2_6/link4/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/link4/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link4'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.157, 11.200, 1.680)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_6/link5/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/link5/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link5'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.270, 0.394, 0.661)'
-  * Center: '(-1.390, 11.262, 0.867)'
-
----
-
-### /World/RobotArm2_6/link5/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/link5/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link5'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.390, 11.200, 0.652)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_6/link6/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/link6/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link6'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.461, 0.300, 0.317)'
-  * Center: '(-1.504, 11.167, 0.609)'
-
----
-
-### /World/RobotArm2_6/link6/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/link6/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link6'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.390, 11.200, 0.652)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_6/link7/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/link7/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link7'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.233, 0.279, 0.099)'
-  * Center: '(-1.618, 11.177, 0.411)'
-
----
-
-### /World/RobotArm2_6/link7/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/link7/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link7'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 11.200, 0.361)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_7
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  * [reference] '/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/4.5/Isaac/Robots/Ufactory/xarm7/xarm7.usd'
-  * [reference] './configuration/xarm7_physics.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.924, 0.682, 1.938)'
-  * Center: '(-1.273, 16.186, 0.844)'
-
----
-
-### /World/RobotArm2_7/gripper
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/gripper
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  * [reference] '../xarm_gripper/xarm_gripper.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.225, 0.519, 0.486)'
-  * Center: '(-1.618, 16.200, 0.118)'
-
----
-
-### /World/RobotArm2_7/gripper/xarm_gripper_base_link/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/gripper/xarm_gripper_base_link/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/xarm_gripper_base_link'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.225, 0.319, 0.313)'
-  * Center: '(-1.618, 16.200, 0.205)'
-
----
-
-### /World/RobotArm2_7/gripper/xarm_gripper_base_link/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/gripper/xarm_gripper_base_link/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/xarm_gripper_base_link'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 16.200, 0.361)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_7/gripper/left_outer_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/gripper/left_outer_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/left_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.035, 0.232, 0.167)'
-  * Center: '(-1.618, 16.343, 0.124)'
-
----
-
-### /World/RobotArm2_7/gripper/left_outer_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/gripper/left_outer_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/left_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 16.305, 0.184)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_7/gripper/left_finger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/gripper/left_finger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/left_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.096, 0.096, 0.201)'
-  * Center: '(-1.618, 16.381, -0.025)'
-
----
-
-### /World/RobotArm2_7/gripper/left_finger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/gripper/left_finger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/left_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 16.411, 0.058)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_7/gripper/left_inner_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/gripper/left_inner_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/left_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.084, 0.142, 0.162)'
-  * Center: '(-1.618, 16.313, 0.076)'
-
----
-
-### /World/RobotArm2_7/gripper/left_inner_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/gripper/left_inner_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/left_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 16.260, 0.139)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_7/gripper/right_inner_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/gripper/right_inner_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/right_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.084, 0.142, 0.162)'
-  * Center: '(-1.618, 16.087, 0.076)'
-
----
-
-### /World/RobotArm2_7/gripper/right_inner_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/gripper/right_inner_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/right_inner_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 16.140, 0.139)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_7/gripper/right_outer_knuckle/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/gripper/right_outer_knuckle/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/right_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.035, 0.232, 0.167)'
-  * Center: '(-1.618, 16.057, 0.124)'
-
----
-
-### /World/RobotArm2_7/gripper/right_outer_knuckle/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/gripper/right_outer_knuckle/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/right_outer_knuckle'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 16.095, 0.184)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_7/gripper/right_finger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/gripper/right_finger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/right_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.096, 0.096, 0.201)'
-  * Center: '(-1.618, 16.019, -0.025)'
-
----
-
-### /World/RobotArm2_7/gripper/right_finger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/gripper/right_finger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/right_finger'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 15.989, 0.058)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_7/world/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/world/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/world'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.378, 0.378, 0.451)'
-  * Center: '(-1.000, 16.200, 0.226)'
-
----
-
-### /World/RobotArm2_7/world/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/world/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/world'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, 16.200, 0.000)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_7/link1/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/link1/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link1'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.291, 0.348, 0.494)'
-  * Center: '(-1.000, 16.197, 0.700)'
-
----
-
-### /World/RobotArm2_7/link1/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/link1/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link1'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, 16.200, 0.801)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_7/link2/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/link2/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link2'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.291, 0.489, 0.694)'
-  * Center: '(-1.000, 16.089, 1.002)'
-
----
-
-### /World/RobotArm2_7/link2/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/link2/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link2'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, 16.200, 0.801)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_7/link3/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/link3/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link3'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.424, 0.344, 0.463)'
-  * Center: '(-1.079, 16.166, 1.582)'
-
----
-
-### /World/RobotArm2_7/link3/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/link3/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link3'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.000, 16.200, 1.680)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_7/link4/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/link4/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link4'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.502, 0.462, 0.621)'
-  * Center: '(-1.275, 16.296, 1.503)'
-
----
-
-### /World/RobotArm2_7/link4/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/link4/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link4'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.157, 16.200, 1.680)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_7/link5/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/link5/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link5'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.270, 0.394, 0.661)'
-  * Center: '(-1.390, 16.262, 0.867)'
-
----
-
-### /World/RobotArm2_7/link5/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/link5/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link5'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.390, 16.200, 0.652)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_7/link6/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/link6/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link6'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.461, 0.300, 0.317)'
-  * Center: '(-1.504, 16.167, 0.609)'
-
----
-
-### /World/RobotArm2_7/link6/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/link6/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link6'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.390, 16.200, 0.652)'
-* **物理属性 (Physics):**
-  * **Collider:** True
-
----
-
-### /World/RobotArm2_7/link7/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/link7/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/visuals/link7'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.233, 0.279, 0.099)'
-  * Center: '(-1.618, 16.177, 0.411)'
-
----
-
-### /World/RobotArm2_7/link7/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/link7/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  * [reference] 'Reference 1'
-  * Prim Path: '/colliders/link7'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-1.618, 16.200, 0.361)'
-* **物理属性 (Physics):**
-  * **Collider:** True
 
 ---
 
@@ -11671,7 +7027,7 @@
   * [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd'
 * **世界包围盒 (World BBox):**
   * Size: '(3.816, 1.400, 1.000)'
-  * Center: '(0.000, -15.540, 0.892)'
+  * Center: '(0.000, -15.248, 0.892)'
 
 ---
 
@@ -11683,7 +7039,7 @@
   * [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd'
 * **世界包围盒 (World BBox):**
   * Size: '(3.816, 1.400, 1.000)'
-  * Center: '(0.000, -10.540, 0.892)'
+  * Center: '(0.000, -10.248, 0.892)'
 
 ---
 
@@ -11695,7 +7051,7 @@
   * [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd'
 * **世界包围盒 (World BBox):**
   * Size: '(3.816, 1.400, 1.000)'
-  * Center: '(0.000, -5.540, 0.892)'
+  * Center: '(0.000, -5.248, 0.892)'
 
 ---
 
@@ -11707,7 +7063,7 @@
   * [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd'
 * **世界包围盒 (World BBox):**
   * Size: '(3.816, 1.400, 1.000)'
-  * Center: '(0.000, -0.540, 0.892)'
+  * Center: '(0.000, -0.248, 0.892)'
 
 ---
 
@@ -11719,7 +7075,7 @@
   * [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd'
 * **世界包围盒 (World BBox):**
   * Size: '(3.816, 1.400, 1.000)'
-  * Center: '(0.000, 4.460, 0.892)'
+  * Center: '(0.000, 4.752, 0.892)'
 
 ---
 
@@ -11731,7 +7087,7 @@
   * [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ban_Yuan_Jian/Woodruff keys GB_converted/0;Size=1.0x1.4x4;SUPPRESSION=Default.usd'
 * **世界包围盒 (World BBox):**
   * Size: '(3.816, 1.400, 1.000)'
-  * Center: '(0.000, 9.460, 0.892)'
+  * Center: '(0.000, 9.752, 0.892)'
 
 ---
 
@@ -11743,7 +7099,7 @@
   * [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 * **世界包围盒 (World BBox):**
   * Size: '(28.000, 8.000, 7.000)'
-  * Center: '(0.000, -15.000, 0.892)'
+  * Center: '(0.000, -14.708, 0.892)'
 
 ---
 
@@ -11755,7 +7111,7 @@
   * [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 * **世界包围盒 (World BBox):**
   * Size: '(28.000, 8.000, 7.000)'
-  * Center: '(0.000, -10.000, 0.892)'
+  * Center: '(0.000, -9.708, 0.892)'
 
 ---
 
@@ -11767,7 +7123,7 @@
   * [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 * **世界包围盒 (World BBox):**
   * Size: '(28.000, 8.000, 7.000)'
-  * Center: '(0.000, -5.000, 0.892)'
+  * Center: '(0.000, -4.708, 0.892)'
 
 ---
 
@@ -11779,7 +7135,7 @@
   * [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 * **世界包围盒 (World BBox):**
   * Size: '(28.000, 8.000, 7.000)'
-  * Center: '(0.000, 0.000, 0.892)'
+  * Center: '(0.000, 0.292, 0.892)'
 
 ---
 
@@ -11791,7 +7147,7 @@
   * [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 * **世界包围盒 (World BBox):**
   * Size: '(28.000, 8.000, 7.000)'
-  * Center: '(0.000, 5.000, 0.892)'
+  * Center: '(0.000, 5.292, 0.892)'
 
 ---
 
@@ -11803,7 +7159,7 @@
   * [reference] '/media/simple/another_Documents/isaacsim_assets/part/obj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
 * **世界包围盒 (World BBox):**
   * Size: '(28.000, 8.000, 7.000)'
-  * Center: '(0.000, 10.000, 0.892)'
+  * Center: '(0.000, 10.292, 0.892)'
 
 ---
 
@@ -11815,7 +7171,7 @@
   * [reference] '/media/simple/another_Documents/isaacsim_assets/assets/AGV_ready_1/AGV_ready_1.usdc'
 * **世界包围盒 (World BBox):**
   * Size: '(1.457, 0.340, 0.669)'
-  * Center: '(1.082, -14.286, 0.059)'
+  * Center: '(2.098, -14.286, 0.059)'
 
 ---
 
@@ -11827,7 +7183,7 @@
   * [reference] '/media/simple/another_Documents/isaacsim_assets/assets/AGV_ready_1/AGV_ready_1.usdc'
 * **世界包围盒 (World BBox):**
   * Size: '(1.457, 0.340, 0.669)'
-  * Center: '(1.082, -9.286, 0.059)'
+  * Center: '(2.098, -9.286, 0.059)'
 
 ---
 
@@ -11839,7 +7195,7 @@
   * [reference] '/media/simple/another_Documents/isaacsim_assets/assets/AGV_ready_1/AGV_ready_1.usdc'
 * **世界包围盒 (World BBox):**
   * Size: '(1.457, 0.340, 0.669)'
-  * Center: '(1.082, -4.286, 0.059)'
+  * Center: '(2.098, -4.286, 0.059)'
 
 ---
 
@@ -11851,7 +7207,7 @@
   * [reference] '/media/simple/another_Documents/isaacsim_assets/assets/AGV_ready_1/AGV_ready_1.usdc'
 * **世界包围盒 (World BBox):**
   * Size: '(1.457, 0.340, 0.669)'
-  * Center: '(1.082, 0.714, 0.059)'
+  * Center: '(2.098, 0.714, 0.059)'
 
 ---
 
@@ -11863,7 +7219,7 @@
   * [reference] '/media/simple/another_Documents/isaacsim_assets/assets/AGV_ready_1/AGV_ready_1.usdc'
 * **世界包围盒 (World BBox):**
   * Size: '(1.457, 0.340, 0.669)'
-  * Center: '(1.082, 5.714, 0.059)'
+  * Center: '(2.098, 5.714, 0.059)'
 
 ---
 
@@ -11875,7 +7231,7 @@
   * [reference] '/media/simple/another_Documents/isaacsim_assets/assets/AGV_ready_1/AGV_ready_1.usdc'
 * **世界包围盒 (World BBox):**
   * Size: '(1.457, 0.340, 0.669)'
-  * Center: '(1.082, 10.714, 0.059)'
+  * Center: '(2.098, 10.714, 0.059)'
 
 ---
 
@@ -11887,7 +7243,7 @@
   * [reference] '/media/simple/another_Documents/isaacsim_assets/assets/Plastic_Crate(1)/Plastic_Crate.usdc'
 * **世界包围盒 (World BBox):**
   * Size: '(0.424, 0.365, 0.421)'
-  * Center: '(1.077, -14.473, 0.404)'
+  * Center: '(2.093, -14.473, 0.404)'
 
 ---
 
@@ -11899,7 +7255,7 @@
   * [reference] '/media/simple/another_Documents/isaacsim_assets/assets/Plastic_Crate(1)/Plastic_Crate.usdc'
 * **世界包围盒 (World BBox):**
   * Size: '(0.424, 0.365, 0.421)'
-  * Center: '(1.077, -9.473, 0.404)'
+  * Center: '(2.093, -9.473, 0.404)'
 
 ---
 
@@ -11911,7 +7267,7 @@
   * [reference] '/media/simple/another_Documents/isaacsim_assets/assets/Plastic_Crate(1)/Plastic_Crate.usdc'
 * **世界包围盒 (World BBox):**
   * Size: '(0.424, 0.365, 0.421)'
-  * Center: '(1.077, -4.473, 0.404)'
+  * Center: '(2.093, -4.473, 0.404)'
 
 ---
 
@@ -11923,7 +7279,7 @@
   * [reference] '/media/simple/another_Documents/isaacsim_assets/assets/Plastic_Crate(1)/Plastic_Crate.usdc'
 * **世界包围盒 (World BBox):**
   * Size: '(0.424, 0.365, 0.421)'
-  * Center: '(1.077, 0.527, 0.404)'
+  * Center: '(2.093, 0.527, 0.404)'
 
 ---
 
@@ -11935,7 +7291,7 @@
   * [reference] '/media/simple/another_Documents/isaacsim_assets/assets/Plastic_Crate(1)/Plastic_Crate.usdc'
 * **世界包围盒 (World BBox):**
   * Size: '(0.424, 0.365, 0.421)'
-  * Center: '(1.077, 5.527, 0.404)'
+  * Center: '(2.093, 5.527, 0.404)'
 
 ---
 
@@ -11947,7 +7303,199 @@
   * [reference] '/media/simple/another_Documents/isaacsim_assets/assets/Plastic_Crate(1)/Plastic_Crate.usdc'
 * **世界包围盒 (World BBox):**
   * Size: '(0.424, 0.365, 0.421)'
-  * Center: '(1.077, 10.527, 0.404)'
+  * Center: '(2.093, 10.527, 0.404)'
+
+---
+
+### /World/Workbench_02
+
+* **Prim路径 (Prim Path):**/World/Workbench_02
+* **Prim类型 (Prim Type):**Xform
+* **外部引用 (Referenced USD Files):**
+  * [reference] 'file:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Furnishing/Workbenches/MetalWorktable_A/MetalWorktable_A12_01.usd'
+* **世界包围盒 (World BBox):**
+  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+  * Center: '(0.000, 0.000, 0.000)'
+
+---
+
+### /World/Workbench_03
+
+* **Prim路径 (Prim Path):**/World/Workbench_03
+* **Prim类型 (Prim Type):**Xform
+* **外部引用 (Referenced USD Files):**
+  * [reference] 'file:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Furnishing/Workbenches/MetalWorktable_A/MetalWorktable_A12_01.usd'
+* **世界包围盒 (World BBox):**
+  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+  * Center: '(0.000, 0.000, 0.000)'
+
+---
+
+### /World/Workbench_04
+
+* **Prim路径 (Prim Path):**/World/Workbench_04
+* **Prim类型 (Prim Type):**Xform
+* **外部引用 (Referenced USD Files):**
+  * [reference] 'file:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Furnishing/Workbenches/MetalWorktable_A/MetalWorktable_A12_01.usd'
+* **世界包围盒 (World BBox):**
+  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+  * Center: '(0.000, 0.000, 0.000)'
+
+---
+
+### /World/Workbench_05
+
+* **Prim路径 (Prim Path):**/World/Workbench_05
+* **Prim类型 (Prim Type):**Xform
+* **外部引用 (Referenced USD Files):**
+  * [reference] 'file:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Furnishing/Workbenches/MetalWorktable_A/MetalWorktable_A12_01.usd'
+* **世界包围盒 (World BBox):**
+  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+  * Center: '(0.000, 0.000, 0.000)'
+
+---
+
+### /World/Workbench_06
+
+* **Prim路径 (Prim Path):**/World/Workbench_06
+* **Prim类型 (Prim Type):**Xform
+* **外部引用 (Referenced USD Files):**
+  * [reference] 'file:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Furnishing/Workbenches/MetalWorktable_A/MetalWorktable_A12_01.usd'
+* **世界包围盒 (World BBox):**
+  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+  * Center: '(0.000, 0.000, 0.000)'
+
+---
+
+### /World/Workbench_07
+
+* **Prim路径 (Prim Path):**/World/Workbench_07
+* **Prim类型 (Prim Type):**Xform
+* **外部引用 (Referenced USD Files):**
+  * [reference] 'file:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Furnishing/Workbenches/MetalWorktable_A/MetalWorktable_A12_01.usd'
+* **世界包围盒 (World BBox):**
+  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+  * Center: '(0.000, 0.000, 0.000)'
+
+---
+
+### /World/Workbench_08
+
+* **Prim路径 (Prim Path):**/World/Workbench_08
+* **Prim类型 (Prim Type):**Xform
+* **外部引用 (Referenced USD Files):**
+  * [reference] 'file:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Furnishing/Workbenches/MetalWorktable_A/MetalWorktable_A12_01.usd'
+* **世界包围盒 (World BBox):**
+  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+  * Center: '(0.000, 0.000, 0.000)'
+
+---
+
+### /World/Workbench_09
+
+* **Prim路径 (Prim Path):**/World/Workbench_09
+* **Prim类型 (Prim Type):**Xform
+* **外部引用 (Referenced USD Files):**
+  * [reference] 'file:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Furnishing/Workbenches/MetalWorktable_A/MetalWorktable_A12_01.usd'
+* **世界包围盒 (World BBox):**
+  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+  * Center: '(0.000, 0.000, 0.000)'
+
+---
+
+### /World/Workbench_10
+
+* **Prim路径 (Prim Path):**/World/Workbench_10
+* **Prim类型 (Prim Type):**Xform
+* **外部引用 (Referenced USD Files):**
+  * [reference] 'file:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Furnishing/Workbenches/MetalWorktable_A/MetalWorktable_A12_01.usd'
+* **世界包围盒 (World BBox):**
+  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+  * Center: '(0.000, 0.000, 0.000)'
+
+---
+
+### /World/Workbench_11
+
+* **Prim路径 (Prim Path):**/World/Workbench_11
+* **Prim类型 (Prim Type):**Xform
+* **外部引用 (Referenced USD Files):**
+  * [reference] 'file:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Furnishing/Workbenches/MetalWorktable_A/MetalWorktable_A12_01.usd'
+* **世界包围盒 (World BBox):**
+  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+  * Center: '(0.000, 0.000, 0.000)'
+
+---
+
+### /World/Workbench_12
+
+* **Prim路径 (Prim Path):**/World/Workbench_12
+* **Prim类型 (Prim Type):**Xform
+* **外部引用 (Referenced USD Files):**
+  * [reference] 'file:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Furnishing/Workbenches/MetalWorktable_A/MetalWorktable_A12_01.usd'
+* **世界包围盒 (World BBox):**
+  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+  * Center: '(0.000, 0.000, 0.000)'
+
+---
+
+### /World/Workbench_13
+
+* **Prim路径 (Prim Path):**/World/Workbench_13
+* **Prim类型 (Prim Type):**Xform
+* **外部引用 (Referenced USD Files):**
+  * [reference] 'file:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Furnishing/Workbenches/MetalWorktable_A/MetalWorktable_A12_01.usd'
+* **世界包围盒 (World BBox):**
+  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+  * Center: '(0.000, 0.000, 0.000)'
+
+---
+
+### /World/Workbench_14
+
+* **Prim路径 (Prim Path):**/World/Workbench_14
+* **Prim类型 (Prim Type):**Xform
+* **外部引用 (Referenced USD Files):**
+  * [reference] 'file:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Furnishing/Workbenches/MetalWorktable_A/MetalWorktable_A12_01.usd'
+* **世界包围盒 (World BBox):**
+  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+  * Center: '(0.000, 0.000, 0.000)'
+
+---
+
+### /World/Workbench_15
+
+* **Prim路径 (Prim Path):**/World/Workbench_15
+* **Prim类型 (Prim Type):**Xform
+* **外部引用 (Referenced USD Files):**
+  * [reference] 'file:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Furnishing/Workbenches/MetalWorktable_A/MetalWorktable_A12_01.usd'
+* **世界包围盒 (World BBox):**
+  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+  * Center: '(0.000, 0.000, 0.000)'
+
+---
+
+### /World/Black_Honey___Robotic_Arm
+
+* **Prim路径 (Prim Path):**/World/Black_Honey___Robotic_Arm
+* **Prim类型 (Prim Type):**Xform
+* **外部引用 (Referenced USD Files):**
+  * [reference] '../device_data/usdz/IndustrialRobot/Black_Honey_-_Robotic_Arm.usdz'
+* **世界包围盒 (World BBox):**
+  * Size: '(80.801, 227.335, 36.268)'
+  * Center: '(-0.800, -15.705, 1.863)'
+
+---
+
+### /World/rs007l_onrobot_rg2
+
+* **Prim路径 (Prim Path):**/World/rs007l_onrobot_rg2
+* **Prim类型 (Prim Type):**Xform
+* **外部引用 (Referenced USD Files):**
+  * [reference] '../device_data/usdz/IndustrialRobot/rs007l_onrobot_rg2.usdz'
+* **世界包围盒 (World BBox):**
+  * Size: '(0.381, 0.319, 1.585)'
+  * Center: '(0.691, -14.327, 1.632)'
 
 ---
 
@@ -19385,1266 +14933,6 @@
       * 'diffuse_tint' [color3f] = '(0.772, 0.772, 0.772)'
       * 'reflection_roughness_constant' [float] = '0.67'
       * 'reflection_roughness_texture_influence' [float] = '0.88'
-
----
-
-### /World/RobotArm2_1/gripper/Looks/DefaultMaterial
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/gripper/Looks/DefaultMaterial
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_1/gripper/Looks/DefaultMaterial/DefaultMaterial'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_1/gripper/Looks/DefaultMaterial/DefaultMaterial'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_1/gripper/Looks/j____________
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/gripper/Looks/j____________
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_1/gripper/Looks/j____________/j____________'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_1/gripper/Looks/j____________/j____________'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.000, 0.000, 0.000)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_1/Looks/material_Black
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/Looks/material_Black
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_1/Looks/material_Black/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_1/Looks/material_Black/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.000, 0.000, 0.000)'
-
----
-
-### /World/RobotArm2_1/Looks/material_Red
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/Looks/material_Red
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_1/Looks/material_Red/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_1/Looks/material_Red/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.800, 0.000, 0.000)'
-
----
-
-### /World/RobotArm2_1/Looks/material_Silver
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/Looks/material_Silver
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_1/Looks/material_Silver/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_1/Looks/material_Silver/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.753, 0.753, 0.753)'
-
----
-
-### /World/RobotArm2_1/Looks/material_White
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/Looks/material_White
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_1/Looks/material_White/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_1/Looks/material_White/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(1.000, 1.000, 1.000)'
-
----
-
-### /World/RobotArm2_1/Looks/material_______________
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/Looks/material_______________
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_1/Looks/material_______________/material_______________'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_1/Looks/material_______________/material_______________'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.500, 0.500, 0.500)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_1/Looks/material____________
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_1/Looks/material____________
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_1/Looks/material____________/material____________'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_1/Looks/material____________/material____________'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_2/gripper/Looks/DefaultMaterial
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/gripper/Looks/DefaultMaterial
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_2/gripper/Looks/DefaultMaterial/DefaultMaterial'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_2/gripper/Looks/DefaultMaterial/DefaultMaterial'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_2/gripper/Looks/j____________
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/gripper/Looks/j____________
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_2/gripper/Looks/j____________/j____________'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_2/gripper/Looks/j____________/j____________'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.000, 0.000, 0.000)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_2/Looks/material_Black
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/Looks/material_Black
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_2/Looks/material_Black/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_2/Looks/material_Black/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.000, 0.000, 0.000)'
-
----
-
-### /World/RobotArm2_2/Looks/material_Red
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/Looks/material_Red
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_2/Looks/material_Red/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_2/Looks/material_Red/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.800, 0.000, 0.000)'
-
----
-
-### /World/RobotArm2_2/Looks/material_Silver
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/Looks/material_Silver
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_2/Looks/material_Silver/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_2/Looks/material_Silver/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.753, 0.753, 0.753)'
-
----
-
-### /World/RobotArm2_2/Looks/material_White
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/Looks/material_White
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_2/Looks/material_White/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_2/Looks/material_White/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(1.000, 1.000, 1.000)'
-
----
-
-### /World/RobotArm2_2/Looks/material_______________
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/Looks/material_______________
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_2/Looks/material_______________/material_______________'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_2/Looks/material_______________/material_______________'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.500, 0.500, 0.500)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_2/Looks/material____________
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_2/Looks/material____________
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_2/Looks/material____________/material____________'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_2/Looks/material____________/material____________'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_3/gripper/Looks/DefaultMaterial
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/gripper/Looks/DefaultMaterial
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_3/gripper/Looks/DefaultMaterial/DefaultMaterial'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_3/gripper/Looks/DefaultMaterial/DefaultMaterial'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_3/gripper/Looks/j____________
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/gripper/Looks/j____________
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_3/gripper/Looks/j____________/j____________'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_3/gripper/Looks/j____________/j____________'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.000, 0.000, 0.000)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_3/Looks/material_Black
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/Looks/material_Black
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_3/Looks/material_Black/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_3/Looks/material_Black/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.000, 0.000, 0.000)'
-
----
-
-### /World/RobotArm2_3/Looks/material_Red
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/Looks/material_Red
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_3/Looks/material_Red/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_3/Looks/material_Red/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.800, 0.000, 0.000)'
-
----
-
-### /World/RobotArm2_3/Looks/material_Silver
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/Looks/material_Silver
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_3/Looks/material_Silver/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_3/Looks/material_Silver/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.753, 0.753, 0.753)'
-
----
-
-### /World/RobotArm2_3/Looks/material_White
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/Looks/material_White
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_3/Looks/material_White/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_3/Looks/material_White/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(1.000, 1.000, 1.000)'
-
----
-
-### /World/RobotArm2_3/Looks/material_______________
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/Looks/material_______________
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_3/Looks/material_______________/material_______________'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_3/Looks/material_______________/material_______________'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.500, 0.500, 0.500)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_3/Looks/material____________
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_3/Looks/material____________
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_3/Looks/material____________/material____________'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_3/Looks/material____________/material____________'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_4/gripper/Looks/DefaultMaterial
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/gripper/Looks/DefaultMaterial
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_4/gripper/Looks/DefaultMaterial/DefaultMaterial'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_4/gripper/Looks/DefaultMaterial/DefaultMaterial'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_4/gripper/Looks/j____________
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/gripper/Looks/j____________
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_4/gripper/Looks/j____________/j____________'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_4/gripper/Looks/j____________/j____________'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.000, 0.000, 0.000)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_4/Looks/material_Black
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/Looks/material_Black
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_4/Looks/material_Black/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_4/Looks/material_Black/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.000, 0.000, 0.000)'
-
----
-
-### /World/RobotArm2_4/Looks/material_Red
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/Looks/material_Red
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_4/Looks/material_Red/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_4/Looks/material_Red/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.800, 0.000, 0.000)'
-
----
-
-### /World/RobotArm2_4/Looks/material_Silver
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/Looks/material_Silver
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_4/Looks/material_Silver/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_4/Looks/material_Silver/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.753, 0.753, 0.753)'
-
----
-
-### /World/RobotArm2_4/Looks/material_White
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/Looks/material_White
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_4/Looks/material_White/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_4/Looks/material_White/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(1.000, 1.000, 1.000)'
-
----
-
-### /World/RobotArm2_4/Looks/material_______________
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/Looks/material_______________
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_4/Looks/material_______________/material_______________'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_4/Looks/material_______________/material_______________'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.500, 0.500, 0.500)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_4/Looks/material____________
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_4/Looks/material____________
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_4/Looks/material____________/material____________'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_4/Looks/material____________/material____________'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_5/gripper/Looks/DefaultMaterial
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/gripper/Looks/DefaultMaterial
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_5/gripper/Looks/DefaultMaterial/DefaultMaterial'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_5/gripper/Looks/DefaultMaterial/DefaultMaterial'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_5/gripper/Looks/j____________
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/gripper/Looks/j____________
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_5/gripper/Looks/j____________/j____________'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_5/gripper/Looks/j____________/j____________'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.000, 0.000, 0.000)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_5/Looks/material_Black
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/Looks/material_Black
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_5/Looks/material_Black/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_5/Looks/material_Black/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.000, 0.000, 0.000)'
-
----
-
-### /World/RobotArm2_5/Looks/material_Red
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/Looks/material_Red
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_5/Looks/material_Red/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_5/Looks/material_Red/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.800, 0.000, 0.000)'
-
----
-
-### /World/RobotArm2_5/Looks/material_Silver
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/Looks/material_Silver
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_5/Looks/material_Silver/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_5/Looks/material_Silver/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.753, 0.753, 0.753)'
-
----
-
-### /World/RobotArm2_5/Looks/material_White
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/Looks/material_White
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_5/Looks/material_White/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_5/Looks/material_White/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(1.000, 1.000, 1.000)'
-
----
-
-### /World/RobotArm2_5/Looks/material_______________
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/Looks/material_______________
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_5/Looks/material_______________/material_______________'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_5/Looks/material_______________/material_______________'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.500, 0.500, 0.500)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_5/Looks/material____________
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_5/Looks/material____________
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_5/Looks/material____________/material____________'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_5/Looks/material____________/material____________'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_6/gripper/Looks/DefaultMaterial
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/gripper/Looks/DefaultMaterial
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_6/gripper/Looks/DefaultMaterial/DefaultMaterial'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_6/gripper/Looks/DefaultMaterial/DefaultMaterial'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_6/gripper/Looks/j____________
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/gripper/Looks/j____________
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_6/gripper/Looks/j____________/j____________'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_6/gripper/Looks/j____________/j____________'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.000, 0.000, 0.000)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_6/Looks/material_Black
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/Looks/material_Black
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_6/Looks/material_Black/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_6/Looks/material_Black/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.000, 0.000, 0.000)'
-
----
-
-### /World/RobotArm2_6/Looks/material_Red
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/Looks/material_Red
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_6/Looks/material_Red/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_6/Looks/material_Red/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.800, 0.000, 0.000)'
-
----
-
-### /World/RobotArm2_6/Looks/material_Silver
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/Looks/material_Silver
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_6/Looks/material_Silver/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_6/Looks/material_Silver/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.753, 0.753, 0.753)'
-
----
-
-### /World/RobotArm2_6/Looks/material_White
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/Looks/material_White
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_6/Looks/material_White/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_6/Looks/material_White/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(1.000, 1.000, 1.000)'
-
----
-
-### /World/RobotArm2_6/Looks/material_______________
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/Looks/material_______________
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_6/Looks/material_______________/material_______________'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_6/Looks/material_______________/material_______________'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.500, 0.500, 0.500)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_6/Looks/material____________
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_6/Looks/material____________
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_6/Looks/material____________/material____________'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_6/Looks/material____________/material____________'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_7/gripper/Looks/DefaultMaterial
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/gripper/Looks/DefaultMaterial
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_7/gripper/Looks/DefaultMaterial/DefaultMaterial'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_7/gripper/Looks/DefaultMaterial/DefaultMaterial'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_7/gripper/Looks/j____________
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/gripper/Looks/j____________
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_7/gripper/Looks/j____________/j____________'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_7/gripper/Looks/j____________/j____________'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.000, 0.000, 0.000)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_7/Looks/material_Black
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/Looks/material_Black
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_7/Looks/material_Black/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_7/Looks/material_Black/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.000, 0.000, 0.000)'
-
----
-
-### /World/RobotArm2_7/Looks/material_Red
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/Looks/material_Red
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_7/Looks/material_Red/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_7/Looks/material_Red/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.800, 0.000, 0.000)'
-
----
-
-### /World/RobotArm2_7/Looks/material_Silver
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/Looks/material_Silver
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_7/Looks/material_Silver/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_7/Looks/material_Silver/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.753, 0.753, 0.753)'
-
----
-
-### /World/RobotArm2_7/Looks/material_White
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/Looks/material_White
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_7/Looks/material_White/Shader'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_7/Looks/material_White/Shader'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(1.000, 1.000, 1.000)'
-
----
-
-### /World/RobotArm2_7/Looks/material_______________
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/Looks/material_______________
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_7/Looks/material_______________/material_______________'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_7/Looks/material_______________/material_______________'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(0.500, 0.500, 0.500)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
-
----
-
-### /World/RobotArm2_7/Looks/material____________
-
-* **Prim路径 (Prim Path):**/World/RobotArm2_7/Looks/material____________
-* **Prim类型 (Prim Type):**Material
-* **材质网络 (Material & Shader Details):**
-  * **Surface Outputs:**
-    * 'outputs:surface'
-    * 'outputs:mdl:surface' -> '/World/RobotArm2_7/Looks/material____________/material____________'
-    * Connection: 'out' (Output)'
-  * **Shader 节点 (Shader Nodes):**
-    * '/World/RobotArm2_7/Looks/material____________/material____________'
-    * Implementation: 'sourceAsset'
-    * Source Assets:
-      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
-    * Inputs:
-      * 'diffuse_color_constant' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_color' [color3f] = '(1.000, 1.000, 1.000)'
-      * 'emissive_intensity' [float] = '10000'
-      * 'opacity_constant' [float] = '1'
-      * 'opacity_threshold' [float] = '0'
-      * 'texture_rotate' [float] = '0'
-      * 'texture_scale' [float2] = '(1.000, 1.000)'
-      * 'texture_translate' [float2] = '(0.000, 0.000)'
 
 ---
 
@@ -29531,5 +23819,263 @@
           * Shader ID: 'UsdPrimvarReader_float2'
     * '/World/StackedCarton_6/Materials/Material_1/uvset0' (ID: 'UsdPrimvarReader_float2')
     * Implementation: 'id'
+
+---
+
+### /World/Black_Honey___Robotic_Arm/Materials/robo_arm
+
+* **Prim路径 (Prim Path):**/World/Black_Honey___Robotic_Arm/Materials/robo_arm
+* **Prim类型 (Prim Type):**Material
+* **材质网络 (Material & Shader Details):**
+  * **Surface Outputs:**
+    * 'outputs:surface' -> '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/pbr_shader'
+    * Shader ID: 'UsdPreviewSurface'
+    * Connection: 'surface' (Output)'
+  * **Shader 节点 (Shader Nodes):**
+    * '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/pbr_shader' (ID: 'UsdPreviewSurface')
+    * Implementation: 'id'
+    * Inputs:
+      * 'diffuseColor' [color3f]
+        * Connected: '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/tex_base.outputs:rgb' @ '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/tex_base'
+          * Shader ID: 'UsdUVTexture'
+          * Texture: '0/robo_arm_baseColor.jpg'
+      * 'emissiveColor' [color3f]
+        * Connected: '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/tex_emissive.outputs:rgb' @ '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/tex_emissive'
+          * Shader ID: 'UsdUVTexture'
+          * Texture: '0/robo_arm_emissive.jpg'
+      * 'metallic' [float]
+        * Connected: '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/tex_metallic.outputs:r' @ '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/tex_metallic'
+          * Shader ID: 'UsdUVTexture'
+          * Texture: '0/robo_arm_metallicRoughness_metal.jpg'
+      * 'normal' [normal3f]
+        * Connected: '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/tex_normal.outputs:rgb' @ '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/tex_normal'
+          * Shader ID: 'UsdUVTexture'
+          * Texture: '0/robo_arm_normal_norm.jpg'
+      * 'occlusion' [float] = '1'
+      * 'roughness' [float]
+        * Connected: '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/tex_roughness.outputs:r' @ '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/tex_roughness'
+          * Shader ID: 'UsdUVTexture'
+          * Texture: '0/robo_arm_metallicRoughness_rough.jpg'
+    * '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/tex_base' (ID: 'UsdUVTexture')
+    * Implementation: 'id'
+    * 纹理引用 (Texture Assets):
+      * '0/robo_arm_baseColor.jpg'
+    * Inputs:
+      * 'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
+      * 'file' [asset] = '0/robo_arm_baseColor.jpg'
+      * 'st' [float2]
+        * Connected: '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/uvset0.outputs:result' @ '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/uvset0'
+          * Shader ID: 'UsdPrimvarReader_float2'
+    * '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/uvset0' (ID: 'UsdPrimvarReader_float2')
+    * Implementation: 'id'
+    * '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/tex_emissive' (ID: 'UsdUVTexture')
+    * Implementation: 'id'
+    * 纹理引用 (Texture Assets):
+      * '0/robo_arm_emissive.jpg'
+    * Inputs:
+      * 'fallback' [float4] = '(0.000, 0.000, 0.000, 1.000)'
+      * 'file' [asset] = '0/robo_arm_emissive.jpg'
+      * 'st' [float2]
+        * Connected: '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/uvset0.outputs:result' @ '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/uvset0'
+          * Shader ID: 'UsdPrimvarReader_float2'
+    * '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/tex_metallic' (ID: 'UsdUVTexture')
+    * Implementation: 'id'
+    * 纹理引用 (Texture Assets):
+      * '0/robo_arm_metallicRoughness_metal.jpg'
+    * Inputs:
+      * 'fallback' [float4] = '(0.000, 0.000, 0.000, 1.000)'
+      * 'file' [asset] = '0/robo_arm_metallicRoughness_metal.jpg'
+      * 'st' [float2]
+        * Connected: '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/uvset0.outputs:result' @ '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/uvset0'
+          * Shader ID: 'UsdPrimvarReader_float2'
+    * '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/tex_normal' (ID: 'UsdUVTexture')
+    * Implementation: 'id'
+    * 纹理引用 (Texture Assets):
+      * '0/robo_arm_normal_norm.jpg'
+    * Inputs:
+      * 'bias' [float4] = '(-1.000, -1.000, -1.000, -1.000)'
+      * 'fallback' [float4] = '(0.000, 0.000, 1.000, 1.000)'
+      * 'file' [asset] = '0/robo_arm_normal_norm.jpg'
+      * 'scale' [float4] = '(2.000, 2.000, 2.000, 2.000)'
+      * 'st' [float2]
+        * Connected: '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/uvset0.outputs:result' @ '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/uvset0'
+          * Shader ID: 'UsdPrimvarReader_float2'
+    * '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/tex_roughness' (ID: 'UsdUVTexture')
+    * Implementation: 'id'
+    * 纹理引用 (Texture Assets):
+      * '0/robo_arm_metallicRoughness_rough.jpg'
+    * Inputs:
+      * 'fallback' [float4] = '(1.000, 0.000, 0.000, 1.000)'
+      * 'file' [asset] = '0/robo_arm_metallicRoughness_rough.jpg'
+      * 'st' [float2]
+        * Connected: '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/uvset0.outputs:result' @ '/World/Black_Honey___Robotic_Arm/Materials/robo_arm/uvset0'
+          * Shader ID: 'UsdPrimvarReader_float2'
+
+---
+
+### /World/Black_Honey___Robotic_Arm/Materials/robot_base
+
+* **Prim路径 (Prim Path):**/World/Black_Honey___Robotic_Arm/Materials/robot_base
+* **Prim类型 (Prim Type):**Material
+* **材质网络 (Material & Shader Details):**
+  * **Surface Outputs:**
+    * 'outputs:surface' -> '/World/Black_Honey___Robotic_Arm/Materials/robot_base/pbr_shader'
+    * Shader ID: 'UsdPreviewSurface'
+    * Connection: 'surface' (Output)'
+  * **Shader 节点 (Shader Nodes):**
+    * '/World/Black_Honey___Robotic_Arm/Materials/robot_base/pbr_shader' (ID: 'UsdPreviewSurface')
+    * Implementation: 'id'
+    * Inputs:
+      * 'diffuseColor' [color3f]
+        * Connected: '/World/Black_Honey___Robotic_Arm/Materials/robot_base/tex_base.outputs:rgb' @ '/World/Black_Honey___Robotic_Arm/Materials/robot_base/tex_base'
+          * Shader ID: 'UsdUVTexture'
+          * Texture: '0/robot_base_baseColor.jpg'
+      * 'emissiveColor' [color3f]
+        * Connected: '/World/Black_Honey___Robotic_Arm/Materials/robot_base/tex_emissive.outputs:rgb' @ '/World/Black_Honey___Robotic_Arm/Materials/robot_base/tex_emissive'
+          * Shader ID: 'UsdUVTexture'
+          * Texture: '0/robot_base_emissive.jpg'
+      * 'metallic' [float]
+        * Connected: '/World/Black_Honey___Robotic_Arm/Materials/robot_base/tex_metallic.outputs:r' @ '/World/Black_Honey___Robotic_Arm/Materials/robot_base/tex_metallic'
+          * Shader ID: 'UsdUVTexture'
+          * Texture: '0/robot_base_metallicRoughness_metal.jpg'
+      * 'normal' [normal3f]
+        * Connected: '/World/Black_Honey___Robotic_Arm/Materials/robot_base/tex_normal.outputs:rgb' @ '/World/Black_Honey___Robotic_Arm/Materials/robot_base/tex_normal'
+          * Shader ID: 'UsdUVTexture'
+          * Texture: '0/robot_base_normal_norm.jpg'
+      * 'occlusion' [float] = '1'
+      * 'roughness' [float]
+        * Connected: '/World/Black_Honey___Robotic_Arm/Materials/robot_base/tex_roughness.outputs:r' @ '/World/Black_Honey___Robotic_Arm/Materials/robot_base/tex_roughness'
+          * Shader ID: 'UsdUVTexture'
+          * Texture: '0/robot_base_metallicRoughness_rough.jpg'
+    * '/World/Black_Honey___Robotic_Arm/Materials/robot_base/tex_base' (ID: 'UsdUVTexture')
+    * Implementation: 'id'
+    * 纹理引用 (Texture Assets):
+      * '0/robot_base_baseColor.jpg'
+    * Inputs:
+      * 'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
+      * 'file' [asset] = '0/robot_base_baseColor.jpg'
+      * 'st' [float2]
+        * Connected: '/World/Black_Honey___Robotic_Arm/Materials/robot_base/uvset0.outputs:result' @ '/World/Black_Honey___Robotic_Arm/Materials/robot_base/uvset0'
+          * Shader ID: 'UsdPrimvarReader_float2'
+    * '/World/Black_Honey___Robotic_Arm/Materials/robot_base/uvset0' (ID: 'UsdPrimvarReader_float2')
+    * Implementation: 'id'
+    * '/World/Black_Honey___Robotic_Arm/Materials/robot_base/tex_emissive' (ID: 'UsdUVTexture')
+    * Implementation: 'id'
+    * 纹理引用 (Texture Assets):
+      * '0/robot_base_emissive.jpg'
+    * Inputs:
+      * 'fallback' [float4] = '(0.000, 0.000, 0.000, 1.000)'
+      * 'file' [asset] = '0/robot_base_emissive.jpg'
+      * 'st' [float2]
+        * Connected: '/World/Black_Honey___Robotic_Arm/Materials/robot_base/uvset0.outputs:result' @ '/World/Black_Honey___Robotic_Arm/Materials/robot_base/uvset0'
+          * Shader ID: 'UsdPrimvarReader_float2'
+    * '/World/Black_Honey___Robotic_Arm/Materials/robot_base/tex_metallic' (ID: 'UsdUVTexture')
+    * Implementation: 'id'
+    * 纹理引用 (Texture Assets):
+      * '0/robot_base_metallicRoughness_metal.jpg'
+    * Inputs:
+      * 'fallback' [float4] = '(0.000, 0.000, 0.000, 1.000)'
+      * 'file' [asset] = '0/robot_base_metallicRoughness_metal.jpg'
+      * 'st' [float2]
+        * Connected: '/World/Black_Honey___Robotic_Arm/Materials/robot_base/uvset0.outputs:result' @ '/World/Black_Honey___Robotic_Arm/Materials/robot_base/uvset0'
+          * Shader ID: 'UsdPrimvarReader_float2'
+    * '/World/Black_Honey___Robotic_Arm/Materials/robot_base/tex_normal' (ID: 'UsdUVTexture')
+    * Implementation: 'id'
+    * 纹理引用 (Texture Assets):
+      * '0/robot_base_normal_norm.jpg'
+    * Inputs:
+      * 'bias' [float4] = '(-1.000, -1.000, -1.000, -1.000)'
+      * 'fallback' [float4] = '(0.000, 0.000, 1.000, 1.000)'
+      * 'file' [asset] = '0/robot_base_normal_norm.jpg'
+      * 'scale' [float4] = '(2.000, 2.000, 2.000, 2.000)'
+      * 'st' [float2]
+        * Connected: '/World/Black_Honey___Robotic_Arm/Materials/robot_base/uvset0.outputs:result' @ '/World/Black_Honey___Robotic_Arm/Materials/robot_base/uvset0'
+          * Shader ID: 'UsdPrimvarReader_float2'
+    * '/World/Black_Honey___Robotic_Arm/Materials/robot_base/tex_roughness' (ID: 'UsdUVTexture')
+    * Implementation: 'id'
+    * 纹理引用 (Texture Assets):
+      * '0/robot_base_metallicRoughness_rough.jpg'
+    * Inputs:
+      * 'fallback' [float4] = '(1.000, 0.000, 0.000, 1.000)'
+      * 'file' [asset] = '0/robot_base_metallicRoughness_rough.jpg'
+      * 'st' [float2]
+        * Connected: '/World/Black_Honey___Robotic_Arm/Materials/robot_base/uvset0.outputs:result' @ '/World/Black_Honey___Robotic_Arm/Materials/robot_base/uvset0'
+          * Shader ID: 'UsdPrimvarReader_float2'
+
+---
+
+### /World/rs007l_onrobot_rg2/Looks/material_Black
+
+* **Prim路径 (Prim Path):**/World/rs007l_onrobot_rg2/Looks/material_Black
+* **Prim类型 (Prim Type):**Material
+* **材质网络 (Material & Shader Details):**
+  * **Surface Outputs:**
+    * 'outputs:surface'
+    * 'outputs:mdl:surface' -> '/World/rs007l_onrobot_rg2/Looks/material_Black/Shader'
+    * Connection: 'out' (Output)'
+  * **Shader 节点 (Shader Nodes):**
+    * '/World/rs007l_onrobot_rg2/Looks/material_Black/Shader'
+    * Implementation: 'sourceAsset'
+    * Source Assets:
+      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
+    * Inputs:
+      * 'diffuse_color_constant' [color3f] = '(0.000, 0.000, 0.000)'
+
+---
+
+### /World/rs007l_onrobot_rg2/Looks/material_White
+
+* **Prim路径 (Prim Path):**/World/rs007l_onrobot_rg2/Looks/material_White
+* **Prim类型 (Prim Type):**Material
+* **材质网络 (Material & Shader Details):**
+  * **Surface Outputs:**
+    * 'outputs:surface'
+    * 'outputs:mdl:surface' -> '/World/rs007l_onrobot_rg2/Looks/material_White/Shader'
+    * Connection: 'out' (Output)'
+  * **Shader 节点 (Shader Nodes):**
+    * '/World/rs007l_onrobot_rg2/Looks/material_White/Shader'
+    * Implementation: 'sourceAsset'
+    * Source Assets:
+      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
+    * Inputs:
+      * 'diffuse_color_constant' [color3f] = '(1.000, 1.000, 1.000)'
+
+---
+
+### /World/rs007l_onrobot_rg2/Looks/material_CCCCCC
+
+* **Prim路径 (Prim Path):**/World/rs007l_onrobot_rg2/Looks/material_CCCCCC
+* **Prim类型 (Prim Type):**Material
+* **材质网络 (Material & Shader Details):**
+  * **Surface Outputs:**
+    * 'outputs:surface'
+    * 'outputs:mdl:surface' -> '/World/rs007l_onrobot_rg2/Looks/material_CCCCCC/Shader'
+    * Connection: 'out' (Output)'
+  * **Shader 节点 (Shader Nodes):**
+    * '/World/rs007l_onrobot_rg2/Looks/material_CCCCCC/Shader'
+    * Implementation: 'sourceAsset'
+    * Source Assets:
+      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
+    * Inputs:
+      * 'diffuse_color_constant' [color3f] = '(0.800, 0.800, 0.800)'
+
+---
+
+### /World/rs007l_onrobot_rg2/Looks/material_191919
+
+* **Prim路径 (Prim Path):**/World/rs007l_onrobot_rg2/Looks/material_191919
+* **Prim类型 (Prim Type):**Material
+* **材质网络 (Material & Shader Details):**
+  * **Surface Outputs:**
+    * 'outputs:surface'
+    * 'outputs:mdl:surface' -> '/World/rs007l_onrobot_rg2/Looks/material_191919/Shader'
+    * Connection: 'out' (Output)'
+  * **Shader 节点 (Shader Nodes):**
+    * '/World/rs007l_onrobot_rg2/Looks/material_191919/Shader'
+    * Implementation: 'sourceAsset'
+    * Source Assets:
+      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
+    * Inputs:
+      * 'diffuse_color_constant' [color3f] = '(0.100, 0.100, 0.100)'
 
 ---

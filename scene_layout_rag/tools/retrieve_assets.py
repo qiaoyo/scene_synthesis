@@ -30,19 +30,46 @@ def _retrieve_documents(
             "score": round(float(score), 4),
             "asset_type": doc.metadata.get("asset_type"),
             "doc_type": doc.metadata.get("doc_type"),
-            "scene_id": doc.metadata.get("scene_id"),
-            "scene_name": doc.metadata.get("scene_name"),
-            "template_detail": doc.metadata.get("template_detail"),
-            "core_asset_types": doc.metadata.get("core_asset_types"),
             "usd_path": doc.metadata.get("usd_path"),
+            "instance_id": doc.metadata.get("instance_id"),
             "bbox": doc.metadata.get("bbox"),
             "tags": doc.metadata.get("tags"),
             "description": doc.metadata.get("description"),
             "content": doc.content,
             "preview": doc.content[:240],
         })
-    return ToolResult(ok=True, data={"hits": items, "query": query, "filters": filters})
+    return ToolResult(ok=True, data={"catch": items, "query": query, "filters": filters})
 
+def _retrieve_documents_scene(
+    context: ToolContext,
+    query: str,
+    top_k: int,
+    doc_type: str,
+    asset_type: Optional[Any] = None,
+    scene_id: Optional[str] = None,
+) -> ToolResult:
+    query = query.strip()
+    if not query:
+        return ToolResult(ok=False, error="query is empty")
+    filters: Dict[str, Any] = {"doc_type": doc_type}
+    if asset_type is not None:
+        filters["asset_type"] = asset_type
+    if scene_id:
+        filters["scene_id"] = scene_id
+    results = context.rag.retrieve(query, top_k=top_k, filters=filters)
+    items: List[Dict[str, Any]] = []
+    for doc, score in results:
+        items.append({
+            "doc_id": doc.doc_id,
+            "score": round(float(score), 4),
+            "doc_type": doc.metadata.get("doc_type"),
+            "scene_id": doc.metadata.get("scene_id"),
+            "scene_name": doc.metadata.get("scene_name"),
+            "template_detail": doc.metadata.get("template_detail"),
+            "content": doc.content,
+            "preview": doc.content[:240],
+        })
+    return ToolResult(ok=True, data={"catch": items, "query": query, "filters": filters})
 
 @register_tool
 class RetrieveSceneTemplateTool(Tool):
@@ -56,11 +83,11 @@ class RetrieveSceneTemplateTool(Tool):
             "top_k": {"type": "integer", "description": "返回条数，默认 5"},
             "scene_id": {"type": "string", "description": "限定场景类型，例如 assembly / warehouse / sorting"},
         },
-        required=["query"],
+        required=["query", "top_k"],
     )
 
     def run(self, context: ToolContext, **kwargs: Any) -> ToolResult:
-        return _retrieve_documents(
+        return _retrieve_documents_scene(
             context=context,
             query=str(kwargs["query"]),
             top_k=int(kwargs.get("top_k", 5)),
@@ -105,7 +132,7 @@ class RetrieveAssetsTool(Tool):
                 "description": "限定资产类别，例如 'Conveyor'",
             },
         },
-        required=["query"],
+        required=["query", "top_k"],
     )
 
     def run(self, context: ToolContext, **kwargs: Any) -> ToolResult:

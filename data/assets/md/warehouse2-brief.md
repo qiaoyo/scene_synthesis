@@ -6,21 +6,28 @@
 *  **单位与坐标系 (Units & Coordinate System):**
    *   **米(Meters Per Unit):**1.0
    *   **Up Axis:**Z
-*  **场景描述(Scene Describe):**  该场景构建了一个高集成度的智慧仓储作业区，空间上由沿墙排布的长程蓝黄重型货架界定，货架采用“五层混储”模式存放蓝色工业料筐与棕色包装纸箱。核心作业设备包含两台配备协作机械臂的白色AMR移动机器人和一台亮黄色自动化电动叉车，在设有黄色导向线与警戒线的深蓝色地坪上协同运作。整体规划逻辑分明，通过叉车处理底层重物与复合机器人精准拣选外层轻货的差异化分工，实现了垂直空间的高效利用与水平物流的柔性流转，充分展现了智能工厂动静分离、多机集成的数字化管理水平。
+*  **场景描述(Scene Describe):** 该场景展示了一个高度标准化的现代数字化仓库，整体采用L型密集存储与中央动态作业相结合的规划模式。厂区沿墙排布蓝黄相间的四层工业货架，按照“重件两端、轻件中间”的逻辑有序存放蓝色周转箱与贴标纸盒。作业区部署了多台集成分拣平台与协作机械臂的白色AMR移动机器人，并辅以黄色平衡重式叉车，实现了从精密分拣到大宗搬运的人机协同。顶部悬挂成排LED工业照明灯具，并配有严整的电缆管路。整段布局通过稳定的货架阵列、流动的智能设备与规范的木质托盘等工装载体，构建了一个秩序井然、高效协作的智慧物流生态系统。
 * **设备数量(Device Number):**
   * **Scene: 1**
-  * **IndustrialRobot: 2**
+  * **IndustrialRobot: 0**
   * **Workbench: 0**
   * **Conveyor: 0**
   * **AGV: 2**
   * **Forklift: 2**
-  * **Box: 213**
+  * **Box: 273**
   * **Rack: 21**
   * **Pallet: 6**
   * **Part: 0**
   * **Decoration: 0**
 
 ## 2.场景对象层级(Scene Hierarchy)
+*   Render (Prim)
+    *   OmniverseKit (Prim)
+        *   HydraTextures (Prim)
+            *   omni_kit_widget_viewport_ViewportTexture_0 (RenderProduct)
+    *   OmniverseGlobalRenderSettings (RenderSettings)
+    *   Vars (Prim)
+        *   LdrColor (RenderVar)
 *   World (Prim)
     *   DomeLight (DomeLight)
     *   SunLight (DistantLight)
@@ -4394,32 +4401,6 @@
         *   Looks (Scope)
             *   Cardboard_A3 (Material)
                 *   Shader (Shader)
-    *   agv_1 (Xform)
-        *   S_ForkliftBody (Mesh)
-            *   subset (GeomSubset)
-        *   S_ForkliftFork (Xform)
-            *   S_ForkliftFork (Mesh)
-                *   subset (GeomSubset)
-            *   collision_box (Mesh)
-            *   Materials (Scope)
-                *   OmniPBR (Material)
-                    *   Shader (Shader)
-        *   Materials (Scope)
-            *   OmniPBR (Material)
-                *   Shader (Shader)
-    *   agv_2 (Xform)
-        *   S_ForkliftBody (Mesh)
-            *   subset (GeomSubset)
-        *   S_ForkliftFork (Xform)
-            *   S_ForkliftFork (Mesh)
-                *   subset (GeomSubset)
-            *   collision_box (Mesh)
-            *   Materials (Scope)
-                *   OmniPBR (Material)
-                    *   Shader (Shader)
-        *   Materials (Scope)
-            *   OmniPBR (Material)
-                *   Shader (Shader)
     *   BlockPallet_A09_PR_NVD_03 (Xform)
         *   SM_BlockPallet_A09_01 (Mesh)
             *   M_BlockPallet_A01_Body (GeomSubset)
@@ -4461,6 +4442,32 @@
         *   Pallet_A1 (Mesh)
         *   Looks (Scope)
             *   Pallet (Material)
+                *   Shader (Shader)
+    *   forklift (Xform)
+        *   S_ForkliftBody (Mesh)
+            *   subset (GeomSubset)
+        *   S_ForkliftFork (Xform)
+            *   S_ForkliftFork (Mesh)
+                *   subset (GeomSubset)
+            *   collision_box (Mesh)
+            *   Materials (Scope)
+                *   OmniPBR (Material)
+                    *   Shader (Shader)
+        *   Materials (Scope)
+            *   OmniPBR (Material)
+                *   Shader (Shader)
+    *   forklift_01 (Xform)
+        *   S_ForkliftBody (Mesh)
+            *   subset (GeomSubset)
+        *   S_ForkliftFork (Xform)
+            *   S_ForkliftFork (Mesh)
+                *   subset (GeomSubset)
+            *   collision_box (Mesh)
+            *   Materials (Scope)
+                *   OmniPBR (Material)
+                    *   Shader (Shader)
+        *   Materials (Scope)
+            *   OmniPBR (Material)
                 *   Shader (Shader)
 
 ## 3. 外部引用Xform简报(Referenced Xforms)
@@ -7666,58 +7673,6 @@
 ---
 
 
-### '/World/agv_1' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/4.5/Isaac/Props/Forklift/forklift.usd
-* BBox (world): size=(1.214, 3.495, 2.155), center=(-4.000, -8.000, 1.076)
-* 几何统计: Mesh=3, Vertices=372658, Faces=158591
-* 子Mesh材质: /World/agv_1/S_ForkliftBody -> /World/agv_1/Materials/OmniPBR, /World/agv_1/S_ForkliftFork/S_ForkliftFork -> /World/agv_1/S_ForkliftFork/Materials/OmniPBR, /World/agv_1/S_ForkliftFork/collision_box -> 未绑定
-* 材质摘要:
- * /World/agv_1/Materials/OmniPBR -> Inputs: 'reflection_roughness_texture_influence=1', Textures: './Textures/T_Forklift_D.png', './Textures/T_Forklift_N.png', './Textures/T_Forklift_ORM.png'
- * /World/agv_1/S_ForkliftFork/Materials/OmniPBR -> Inputs: 'reflection_roughness_texture_influence=1', Textures: './Textures/T_Forklift_D.png', './Textures/T_Forklift_N.png', './Textures/T_Forklift_ORM.png'
-
-
----
-
-
-### '/World/agv_1/S_ForkliftFork' (Xform)
-* 引用: reference:./S_ForkliftFork.usd
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(1.149, 1.263, 0.992), center=(-4.000, -6.884, 0.553)
-* 几何统计: Mesh=2, Vertices=4560, Faces=2366
-* 子Mesh材质: /World/agv_1/S_ForkliftFork/S_ForkliftFork -> /World/agv_1/S_ForkliftFork/Materials/OmniPBR, /World/agv_1/S_ForkliftFork/collision_box -> 未绑定
-* 材质摘要:
- * /World/agv_1/S_ForkliftFork/Materials/OmniPBR -> Inputs: 'reflection_roughness_texture_influence=1', Textures: './Textures/T_Forklift_D.png', './Textures/T_Forklift_N.png', './Textures/T_Forklift_ORM.png'
-
-
----
-
-
-### '/World/agv_2' (Xform)
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/4.5/Isaac/Props/Forklift/forklift.usd
-* BBox (world): size=(1.214, 3.495, 2.155), center=(-6.288, 8.042, 1.076)
-* 几何统计: Mesh=3, Vertices=372658, Faces=158591
-* 子Mesh材质: /World/agv_2/S_ForkliftBody -> /World/agv_2/Materials/OmniPBR, /World/agv_2/S_ForkliftFork/S_ForkliftFork -> /World/agv_2/S_ForkliftFork/Materials/OmniPBR, /World/agv_2/S_ForkliftFork/collision_box -> 未绑定
-* 材质摘要:
- * /World/agv_2/Materials/OmniPBR -> Inputs: 'reflection_roughness_texture_influence=1', Textures: './Textures/T_Forklift_D.png', './Textures/T_Forklift_N.png', './Textures/T_Forklift_ORM.png'
- * /World/agv_2/S_ForkliftFork/Materials/OmniPBR -> Inputs: 'reflection_roughness_texture_influence=1', Textures: './Textures/T_Forklift_D.png', './Textures/T_Forklift_N.png', './Textures/T_Forklift_ORM.png'
-
-
----
-
-
-### '/World/agv_2/S_ForkliftFork' (Xform)
-* 引用: reference:./S_ForkliftFork.usd
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(1.149, 1.263, 0.992), center=(-6.288, 9.158, 0.553)
-* 几何统计: Mesh=2, Vertices=4560, Faces=2366
-* 子Mesh材质: /World/agv_2/S_ForkliftFork/S_ForkliftFork -> /World/agv_2/S_ForkliftFork/Materials/OmniPBR, /World/agv_2/S_ForkliftFork/collision_box -> 未绑定
-* 材质摘要:
- * /World/agv_2/S_ForkliftFork/Materials/OmniPBR -> Inputs: 'reflection_roughness_texture_influence=1', Textures: './Textures/T_Forklift_D.png', './Textures/T_Forklift_N.png', './Textures/T_Forklift_ORM.png'
-
-
----
-
-
 ### '/World/BlockPallet_A09_PR_NVD_03' (Xform)
 * 引用: payload:../Assets/Isaac/5.0/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Shipping/Pallets/Wood/Block_A/BlockPallet_A09_PR_NVD_01.usd
 * BBox (world): size=(100.004, 120.161, 16.180), center=(-5.783, 10.788, 0.454)
@@ -7773,6 +7728,58 @@
 * BBox (world): size=(120.420, 80.039, 20.865), center=(4.519, 9.558, 0.572)
 * 几何统计: Mesh=1, Vertices=1064, Faces=1026
 * 子Mesh材质: /World/Pallet_A1_02/Pallet_A1 -> 未绑定
+
+
+---
+
+
+### '/World/forklift' (Xform)
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/4.5/Isaac/Props/Forklift/forklift.usd
+* BBox (world): size=(1.214, 3.495, 2.155), center=(-4.000, -8.000, 1.076)
+* 几何统计: Mesh=3, Vertices=372658, Faces=158591
+* 子Mesh材质: /World/forklift/S_ForkliftBody -> /World/forklift/Materials/OmniPBR, /World/forklift/S_ForkliftFork/S_ForkliftFork -> /World/forklift/S_ForkliftFork/Materials/OmniPBR, /World/forklift/S_ForkliftFork/collision_box -> 未绑定
+* 材质摘要:
+ * /World/forklift/Materials/OmniPBR -> Inputs: 'reflection_roughness_texture_influence=1', Textures: './Textures/T_Forklift_D.png', './Textures/T_Forklift_N.png', './Textures/T_Forklift_ORM.png'
+ * /World/forklift/S_ForkliftFork/Materials/OmniPBR -> Inputs: 'reflection_roughness_texture_influence=1', Textures: './Textures/T_Forklift_D.png', './Textures/T_Forklift_N.png', './Textures/T_Forklift_ORM.png'
+
+
+---
+
+
+### '/World/forklift/S_ForkliftFork' (Xform)
+* 引用: reference:./S_ForkliftFork.usd
+* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
+* BBox (world): size=(1.149, 1.263, 0.992), center=(-4.000, -6.884, 0.553)
+* 几何统计: Mesh=2, Vertices=4560, Faces=2366
+* 子Mesh材质: /World/forklift/S_ForkliftFork/S_ForkliftFork -> /World/forklift/S_ForkliftFork/Materials/OmniPBR, /World/forklift/S_ForkliftFork/collision_box -> 未绑定
+* 材质摘要:
+ * /World/forklift/S_ForkliftFork/Materials/OmniPBR -> Inputs: 'reflection_roughness_texture_influence=1', Textures: './Textures/T_Forklift_D.png', './Textures/T_Forklift_N.png', './Textures/T_Forklift_ORM.png'
+
+
+---
+
+
+### '/World/forklift_01' (Xform)
+* 引用: reference:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/4.5/Isaac/Props/Forklift/forklift.usd
+* BBox (world): size=(1.214, 3.495, 2.155), center=(-6.288, 8.042, 1.076)
+* 几何统计: Mesh=3, Vertices=372658, Faces=158591
+* 子Mesh材质: /World/forklift_01/S_ForkliftBody -> /World/forklift_01/Materials/OmniPBR, /World/forklift_01/S_ForkliftFork/S_ForkliftFork -> /World/forklift_01/S_ForkliftFork/Materials/OmniPBR, /World/forklift_01/S_ForkliftFork/collision_box -> 未绑定
+* 材质摘要:
+ * /World/forklift_01/Materials/OmniPBR -> Inputs: 'reflection_roughness_texture_influence=1', Textures: './Textures/T_Forklift_D.png', './Textures/T_Forklift_N.png', './Textures/T_Forklift_ORM.png'
+ * /World/forklift_01/S_ForkliftFork/Materials/OmniPBR -> Inputs: 'reflection_roughness_texture_influence=1', Textures: './Textures/T_Forklift_D.png', './Textures/T_Forklift_N.png', './Textures/T_Forklift_ORM.png'
+
+
+---
+
+
+### '/World/forklift_01/S_ForkliftFork' (Xform)
+* 引用: reference:./S_ForkliftFork.usd
+* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
+* BBox (world): size=(1.149, 1.263, 0.992), center=(-6.288, 9.158, 0.553)
+* 几何统计: Mesh=2, Vertices=4560, Faces=2366
+* 子Mesh材质: /World/forklift_01/S_ForkliftFork/S_ForkliftFork -> /World/forklift_01/S_ForkliftFork/Materials/OmniPBR, /World/forklift_01/S_ForkliftFork/collision_box -> 未绑定
+* 材质摘要:
+ * /World/forklift_01/S_ForkliftFork/Materials/OmniPBR -> Inputs: 'reflection_roughness_texture_influence=1', Textures: './Textures/T_Forklift_D.png', './Textures/T_Forklift_N.png', './Textures/T_Forklift_ORM.png'
 
 
 ---

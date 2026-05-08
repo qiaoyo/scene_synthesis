@@ -28,6 +28,7 @@ from .prompts.templates import (
     build_support_prompt,
     build_think_prompt,
 )
+from .tools.base import get_tool_function_spec
 
 
 _JSON_BLOCK_RE = re.compile(r"\{.*\}", re.DOTALL)
@@ -180,7 +181,8 @@ class LLMPlanner:
             "Available tools:",
         ]
         for tool in tools:
-            params = tool.get("parameters", {})
+            function_spec = get_tool_function_spec(tool)
+            params = function_spec.get("parameters", {})
             properties = params.get("properties", {})
             required = set(params.get("required", []))
             arg_lines = []
@@ -196,7 +198,9 @@ class LLMPlanner:
                 suffix = "required" if param_name in required else "optional"
                 arg_lines.append(f"{param_name}:{spec_type or 'any'} ({suffix}) {desc}")
             args = "; ".join(arg_lines) if arg_lines else "(no parameters)"
-            lines.append(f"- {tool['name']}: {tool.get('description', '')} | {args}")
+            lines.append(
+                f"- {function_spec['name']}: {function_spec.get('description', '')} | {args}"
+            )
         lines.extend([
             "",
             "Rules:",

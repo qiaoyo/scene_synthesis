@@ -6,18 +6,18 @@
 *  **单位与坐标系 (Units & Coordinate System):**
    *   **米(Meters Per Unit):**1.0
    *   **Up Axis:**Z
-*  **场景描述(Scene Describe):**  该场景展示了一个极具规模且高度规范化的工业自动化作业车间，其空间格局呈现出典型的矩阵式生产线布局。厂房背景展现了浓厚的工业质感，墙面采用了深褐色的工业护墙板，上方分布着密集的竖向格栅式采光窗，这种结构既保证了充足的自然光线，也维持了厂房内部的私密性与温控稳定性。车间左侧配备了一扇巨大的白色工业卷帘门，其简洁的设计预示着此处为主要的物料进出口或设备维护通道。地面铺设了具有大理石纹理的高强度复合工业地坪，深灰与红褐交织的色块不仅提升了空间的层次感，也具备卓越的耐磨与防滑性能，能够承载大型自动化设备的长期运行。在工业设备识别与排布方面，该场景的核心是呈对角线线性排列的六轴联动工业机器人阵列。图中清晰可见至少六台规格统一的黄色高性能工业机器人。这些机器人的涂装采用了醒目的柠檬黄，底座则通过白色的圆形稳固座与地面连接。每台机器人的机械臂均由三个主要关节段组成，具备极高的运动空间冗余度。机器人的末端执行器配备了精密的两指平行气动夹爪，此时正处于不同的作业姿态：前排的机器人手臂向下俯冲，似乎在准备抓取物料；而后排的机器人则保持着警戒或待命姿态。这种阶梯状的排布方式，不仅最大化地利用了横向的作业空间，也避免了各机器人作业半径之间的物理干涉，形成了极佳的视觉韵律感。与机器人阵列平行对应的是多条模块化的工业输送装置。这些输送机支架采用了轻量化的铝合金原色设计，结构简洁且坚固，每个模块下方由四个矩形立柱支撑。输送带表面覆盖着黑色的防滑合成材料，其宽度与机器人夹爪的抓取范围完美匹配。输送机被划分为多个独立的短距离单元，这种设计允许生产线根据具体的工艺流程进行快速重组或局部维护。在每台机器人身侧的地面上，还配置了一个蓝色的塑料物流周转框。这些料框的数量与机器人一一对应，用于存放分拣后的成品或待加工的半成品工件。从整体规划结构分析，该场景体现了极高的生产线柔性与标准化特征。区域划分逻辑极其严密：左侧区域预留为物流物流通道，中央区域为由“机器人+输送机+料框”构成的核心生产单元。设备间的排布关系呈现出“点对点”的精准协同模式，即每台机器人负责其正前方输送带上的物料流转，并将处理后的物料投放至身侧的蓝色料框中，或者从料框中拾取物料放置到输送带上。这种高度重复、等间距的布局方式是现代汽车制造、精密电子组装或重型零件码放车间的典型特征，它极大地优化了物流路径，降低了生产过程中的非增值时间。整个车间规划整齐划一，没有任何多余的杂物，展现了数字化工厂在空间管理与设备集成方面的极高水准。
+*  **场景描述(Scene Describe):** 该场景呈现出一个高度秩序化、矩阵式排布的现代化工业转运与自动化分拣中心，整体规划严谨地遵循了“标准化单元并行”的设计原则，展现了一个极具规模感的无人化作业空间。从厂区的空间格局来看，地面铺设了具有大理石质感的深灰色瓷砖，瓷砖表面带有自然分布的浅红色纹理，不仅提升了车间的视觉品质，也为自动化设备的平稳运行提供了极佳的水平基准。整个车间被划分为多个重复的自动化分拣作业集群，这些集群在空间上呈纵向等间距排列，形成了一个强大的物料处理矩阵。核心工业设备由至少四组完全一致的“输送-分拣”单元构成，每一组单元内部都包含两个关键模块：首先是作为物料主脉络的带式输送机，这些输送装置采用了银灰色的精钢架构支撑，支腿呈细长的“H”型分布，其上方安装有黑色的耐磨橡胶传送带。在传送带面上，可以清晰地观察到多个呈等距分布的圆形白色工件，正由输送机向作业端稳步推进。其次是紧邻每一条输送机首端部署的独立分拣基座，该基座采用了醒目的深蓝色箱体式结构，底部配有微型滑轮，暗示其具备一定的位移灵活性。在每一个蓝色基座顶部，均垂直安装了一台修长的白色六轴协作机器人，这些机器人处于统一的待命或抓取姿态，其机械臂线条圆润且关节灵活，专门负责从相邻的输送带上精准提取工件。在设备排布方式上，该场景采用了典型的“线性输送+端点处理”的一对一耦合结构。四组机器人作业站呈直线方阵在车间内铺开，每一组机器人阵列都精准地对应着一条独立的物流输送线。在机器人与输送线之间的空旷地面上，散落分布着多个淡蓝色的镂空塑料周转筐，这些容器被放置在机器人的作业半径内，用于暂存已分类的工件或作为废品收集箱。场景的背景处可见由深褐色金属质感板材构成的防护墙，墙面上带有细密的横向凹槽纹理，为整个自动化区域提供了物理隔离，墙脚处还可见一条醒目的黄色安全警示线，划定了明确的人机作业边界。从整体规划结构分析，该场景巧妙地将“分布式单元”与“标准化模块”深度融合。每一组蓝色基座与白色机械臂的组合都是一个独立的逻辑节点，而多条并行的银灰色输送链则构成了车间的吞吐枢纽。这种重复性的矩阵式布局具有极强的可扩展性，可以根据产线的实际负荷需求进行灵活的模块增减。设备间的间距经过了精密的空间冗余计算，确保了每一台六轴机器人在执行大幅度挥转动作时，其工作包络圆不会与相邻的输送架发生任何物理干涉。整个车间内没有任何杂乱的电缆或冗余的控制屏显，暗示所有工业机械均通过集中的地下总线或工业无线网络接入了顶层的制造执行系统。这种由深蓝色、银灰色、白色和瓷砖质感构成的工业景观，不仅在视觉上层次分明，更在功能上诠释了现代工厂追求极致效率、高度柔性以及无人化作业的规划哲学。该场景中，每一处设备的分布位置、每一个周转筐的摆放细节，都标志着一个处于极佳运行状态、具备高度协同能力的自动化转运示范工程模型。
 * **设备数量(Device Number):**
   * **Scene: 1**
   * **IndustrialRobot: 6**
-  * **Workbench: 0**
-  * **Conveyor: 6**
-  * **AGV: 6**
+  * **Workbench: 6**
+  * **Conveyor: 9**
+  * **AGV: 0**
   * **Forklift: 0**
   * **Box: 6**
   * **Rack: 0**
   * **Pallet: 0**
-  * **Part: 0**
+  * **Part: 24**
   * **Decoration: 0**
 
 ## 2.场景对象层级(Scene Hierarchy)
@@ -150,708 +150,6 @@
                         *   Cylinder001 (Xform)
                             *   Cylinder001_Material__0_0 (Xform)
                                 *   Cylinder001_Material__0_0 (Mesh)
-    *   Robotic_Arm___Brazo_Robotico (Xform)
-        *   Materials (Scope)
-            *   _1___Default (Material)
-                *   pbr_shader (Shader)
-                *   uvset0 (Shader)
-                *   tex_base (Shader)
-        *   Meshes (Xform)
-            *   Sketchfab_model (Xform)
-                *   brazo_FBX (Xform)
-                    *   RootNode (Xform)
-                        *   Base (Xform)
-                            *   Base_01___Default_0 (Xform)
-                                *   Base_01___Default_0 (Mesh)
-                        *   Base_1 (Xform)
-                            *   Arm01 (Xform)
-                                *   Arm02 (Xform)
-                                    *   Cylinder016 (Xform)
-                                        *   Cylinder016_01___Default_0 (Xform)
-                                            *   Cylinder016_01___Default_0 (Mesh)
-                                    *   Arm03 (Xform)
-                                        *   Arm03Rotation (Xform)
-                                            *   Cylinder020 (Xform)
-                                                *   Cylinder020_01___Default_0 (Xform)
-                                                    *   Cylinder020_01___Default_0 (Mesh)
-                                            *   Cylinder019 (Xform)
-                                                *   Cylinder019_01___Default_0 (Xform)
-                                                    *   Cylinder019_01___Default_0 (Mesh)
-                                            *   Expand01 (Xform)
-                                                *   Expand02 (Xform)
-                                                    *   Expand03 (Xform)
-                                                        *   Cylinder022 (Xform)
-                                                            *   Object_20 (Xform)
-                                                                *   Cylinder022_01___Default_0 (Xform)
-                                                                    *   Cylinder022_01___Default_0 (Mesh)
-                                                        *   Object003 (Xform)
-                                                            *   Object003_01___Default_0 (Xform)
-                                                                *   Object003_01___Default_0 (Mesh)
-                                                        *   Finger01 (Xform)
-                                                            *   Box005 (Xform)
-                                                                *   Box005_01___Default_0 (Xform)
-                                                                    *   Box005_01___Default_0 (Mesh)
-                                                            *   Box006 (Xform)
-                                                                *   Box006_01___Default_0 (Xform)
-                                                                    *   Box006_01___Default_0 (Mesh)
-                                                            *   Box007 (Xform)
-                                                                *   Box007_01___Default_0 (Xform)
-                                                                    *   Box007_01___Default_0 (Mesh)
-                                                        *   Finger02 (Xform)
-                                                            *   Box004 (Xform)
-                                                                *   Box004_01___Default_0 (Xform)
-                                                                    *   Box004_01___Default_0 (Mesh)
-                                                            *   Box003 (Xform)
-                                                                *   Box003_01___Default_0 (Xform)
-                                                                    *   Box003_01___Default_0 (Mesh)
-                                                            *   Box002 (Xform)
-                                                                *   Box002_01___Default_0 (Xform)
-                                                                    *   Box002_01___Default_0 (Mesh)
-                                                    *   Object004 (Xform)
-                                                        *   Object004_01___Default_0 (Xform)
-                                                            *   Object004_01___Default_0 (Mesh)
-                                                *   Cylinder021 (Xform)
-                                                    *   Cylinder021_01___Default_0 (Xform)
-                                                        *   Cylinder021_01___Default_0 (Mesh)
-                                        *   Cylinder017 (Xform)
-                                            *   Cylinder017_01___Default_0 (Xform)
-                                                *   Cylinder017_01___Default_0 (Mesh)
-                                        *   Cylinder018 (Xform)
-                                            *   Cylinder018_01___Default_0 (Xform)
-                                                *   Cylinder018_01___Default_0 (Mesh)
-                                    *   Cylinder014 (Xform)
-                                        *   Cylinder014_01___Default_0 (Xform)
-                                            *   Cylinder014_01___Default_0 (Mesh)
-                                    *   Cylinder013 (Xform)
-                                        *   Cylinder013_01___Default_0 (Xform)
-                                            *   Cylinder013_01___Default_0 (Mesh)
-                                    *   Cylinder012 (Xform)
-                                        *   Cylinder012_01___Default_0 (Xform)
-                                            *   Cylinder012_01___Default_0 (Mesh)
-                                    *   Cylinder011 (Xform)
-                                        *   Cylinder011_01___Default_0 (Xform)
-                                            *   Cylinder011_01___Default_0 (Mesh)
-                                    *   Box001 (Xform)
-                                        *   Box001_01___Default_0 (Xform)
-                                            *   Box001_01___Default_0 (Mesh)
-                                    *   Cylinder009 (Xform)
-                                        *   Cylinder009_01___Default_0 (Xform)
-                                            *   Cylinder009_01___Default_0 (Mesh)
-                                    *   Object002 (Xform)
-                                        *   Object002_01___Default_0 (Xform)
-                                            *   Object002_01___Default_0 (Mesh)
-                                    *   Cylinder010 (Xform)
-                                        *   Cylinder010_01___Default_0 (Xform)
-                                            *   Cylinder010_01___Default_0 (Mesh)
-                                *   Cylinder008 (Xform)
-                                    *   Cylinder008_01___Default_0 (Xform)
-                                        *   Cylinder008_01___Default_0 (Mesh)
-                                *   Cylinder007 (Xform)
-                                    *   Cylinder007_01___Default_0 (Xform)
-                                        *   Cylinder007_01___Default_0 (Mesh)
-                                *   Cylinder005 (Xform)
-                                    *   Cylinder005_01___Default_0 (Xform)
-                                        *   Cylinder005_01___Default_0 (Mesh)
-                                *   Cylinder006 (Xform)
-                                    *   Cylinder006_01___Default_0 (Xform)
-                                        *   Cylinder006_01___Default_0 (Mesh)
-                            *   Cylinder002 (Xform)
-                                *   Object_71 (Xform)
-                                    *   Cylinder002_01___Default_0 (Xform)
-                                        *   Cylinder002_01___Default_0 (Mesh)
-                            *   Cylinder003 (Xform)
-                                *   Object_74 (Xform)
-                                    *   Cylinder003_01___Default_0 (Xform)
-                                        *   Cylinder003_01___Default_0 (Mesh)
-                            *   Cylinder001 (Xform)
-                                *   Cylinder001_01___Default_0 (Xform)
-                                    *   Cylinder001_01___Default_0 (Mesh)
-                        *   Object005 (Xform)
-    *   Robotic_Arm___Brazo_Robotico_01 (Xform)
-        *   Materials (Scope)
-            *   _1___Default (Material)
-                *   pbr_shader (Shader)
-                *   uvset0 (Shader)
-                *   tex_base (Shader)
-        *   Meshes (Xform)
-            *   Sketchfab_model (Xform)
-                *   brazo_FBX (Xform)
-                    *   RootNode (Xform)
-                        *   Base (Xform)
-                            *   Base_01___Default_0 (Xform)
-                                *   Base_01___Default_0 (Mesh)
-                        *   Base_1 (Xform)
-                            *   Arm01 (Xform)
-                                *   Arm02 (Xform)
-                                    *   Cylinder016 (Xform)
-                                        *   Cylinder016_01___Default_0 (Xform)
-                                            *   Cylinder016_01___Default_0 (Mesh)
-                                    *   Arm03 (Xform)
-                                        *   Arm03Rotation (Xform)
-                                            *   Cylinder020 (Xform)
-                                                *   Cylinder020_01___Default_0 (Xform)
-                                                    *   Cylinder020_01___Default_0 (Mesh)
-                                            *   Cylinder019 (Xform)
-                                                *   Cylinder019_01___Default_0 (Xform)
-                                                    *   Cylinder019_01___Default_0 (Mesh)
-                                            *   Expand01 (Xform)
-                                                *   Expand02 (Xform)
-                                                    *   Expand03 (Xform)
-                                                        *   Cylinder022 (Xform)
-                                                            *   Object_20 (Xform)
-                                                                *   Cylinder022_01___Default_0 (Xform)
-                                                                    *   Cylinder022_01___Default_0 (Mesh)
-                                                        *   Object003 (Xform)
-                                                            *   Object003_01___Default_0 (Xform)
-                                                                *   Object003_01___Default_0 (Mesh)
-                                                        *   Finger01 (Xform)
-                                                            *   Box005 (Xform)
-                                                                *   Box005_01___Default_0 (Xform)
-                                                                    *   Box005_01___Default_0 (Mesh)
-                                                            *   Box006 (Xform)
-                                                                *   Box006_01___Default_0 (Xform)
-                                                                    *   Box006_01___Default_0 (Mesh)
-                                                            *   Box007 (Xform)
-                                                                *   Box007_01___Default_0 (Xform)
-                                                                    *   Box007_01___Default_0 (Mesh)
-                                                        *   Finger02 (Xform)
-                                                            *   Box004 (Xform)
-                                                                *   Box004_01___Default_0 (Xform)
-                                                                    *   Box004_01___Default_0 (Mesh)
-                                                            *   Box003 (Xform)
-                                                                *   Box003_01___Default_0 (Xform)
-                                                                    *   Box003_01___Default_0 (Mesh)
-                                                            *   Box002 (Xform)
-                                                                *   Box002_01___Default_0 (Xform)
-                                                                    *   Box002_01___Default_0 (Mesh)
-                                                    *   Object004 (Xform)
-                                                        *   Object004_01___Default_0 (Xform)
-                                                            *   Object004_01___Default_0 (Mesh)
-                                                *   Cylinder021 (Xform)
-                                                    *   Cylinder021_01___Default_0 (Xform)
-                                                        *   Cylinder021_01___Default_0 (Mesh)
-                                        *   Cylinder017 (Xform)
-                                            *   Cylinder017_01___Default_0 (Xform)
-                                                *   Cylinder017_01___Default_0 (Mesh)
-                                        *   Cylinder018 (Xform)
-                                            *   Cylinder018_01___Default_0 (Xform)
-                                                *   Cylinder018_01___Default_0 (Mesh)
-                                    *   Cylinder014 (Xform)
-                                        *   Cylinder014_01___Default_0 (Xform)
-                                            *   Cylinder014_01___Default_0 (Mesh)
-                                    *   Cylinder013 (Xform)
-                                        *   Cylinder013_01___Default_0 (Xform)
-                                            *   Cylinder013_01___Default_0 (Mesh)
-                                    *   Cylinder012 (Xform)
-                                        *   Cylinder012_01___Default_0 (Xform)
-                                            *   Cylinder012_01___Default_0 (Mesh)
-                                    *   Cylinder011 (Xform)
-                                        *   Cylinder011_01___Default_0 (Xform)
-                                            *   Cylinder011_01___Default_0 (Mesh)
-                                    *   Box001 (Xform)
-                                        *   Box001_01___Default_0 (Xform)
-                                            *   Box001_01___Default_0 (Mesh)
-                                    *   Cylinder009 (Xform)
-                                        *   Cylinder009_01___Default_0 (Xform)
-                                            *   Cylinder009_01___Default_0 (Mesh)
-                                    *   Object002 (Xform)
-                                        *   Object002_01___Default_0 (Xform)
-                                            *   Object002_01___Default_0 (Mesh)
-                                    *   Cylinder010 (Xform)
-                                        *   Cylinder010_01___Default_0 (Xform)
-                                            *   Cylinder010_01___Default_0 (Mesh)
-                                *   Cylinder008 (Xform)
-                                    *   Cylinder008_01___Default_0 (Xform)
-                                        *   Cylinder008_01___Default_0 (Mesh)
-                                *   Cylinder007 (Xform)
-                                    *   Cylinder007_01___Default_0 (Xform)
-                                        *   Cylinder007_01___Default_0 (Mesh)
-                                *   Cylinder005 (Xform)
-                                    *   Cylinder005_01___Default_0 (Xform)
-                                        *   Cylinder005_01___Default_0 (Mesh)
-                                *   Cylinder006 (Xform)
-                                    *   Cylinder006_01___Default_0 (Xform)
-                                        *   Cylinder006_01___Default_0 (Mesh)
-                            *   Cylinder002 (Xform)
-                                *   Object_71 (Xform)
-                                    *   Cylinder002_01___Default_0 (Xform)
-                                        *   Cylinder002_01___Default_0 (Mesh)
-                            *   Cylinder003 (Xform)
-                                *   Object_74 (Xform)
-                                    *   Cylinder003_01___Default_0 (Xform)
-                                        *   Cylinder003_01___Default_0 (Mesh)
-                            *   Cylinder001 (Xform)
-                                *   Cylinder001_01___Default_0 (Xform)
-                                    *   Cylinder001_01___Default_0 (Mesh)
-                        *   Object005 (Xform)
-    *   Robotic_Arm___Brazo_Robotico_02 (Xform)
-        *   Materials (Scope)
-            *   _1___Default (Material)
-                *   pbr_shader (Shader)
-                *   uvset0 (Shader)
-                *   tex_base (Shader)
-        *   Meshes (Xform)
-            *   Sketchfab_model (Xform)
-                *   brazo_FBX (Xform)
-                    *   RootNode (Xform)
-                        *   Base (Xform)
-                            *   Base_01___Default_0 (Xform)
-                                *   Base_01___Default_0 (Mesh)
-                        *   Base_1 (Xform)
-                            *   Arm01 (Xform)
-                                *   Arm02 (Xform)
-                                    *   Cylinder016 (Xform)
-                                        *   Cylinder016_01___Default_0 (Xform)
-                                            *   Cylinder016_01___Default_0 (Mesh)
-                                    *   Arm03 (Xform)
-                                        *   Arm03Rotation (Xform)
-                                            *   Cylinder020 (Xform)
-                                                *   Cylinder020_01___Default_0 (Xform)
-                                                    *   Cylinder020_01___Default_0 (Mesh)
-                                            *   Cylinder019 (Xform)
-                                                *   Cylinder019_01___Default_0 (Xform)
-                                                    *   Cylinder019_01___Default_0 (Mesh)
-                                            *   Expand01 (Xform)
-                                                *   Expand02 (Xform)
-                                                    *   Expand03 (Xform)
-                                                        *   Cylinder022 (Xform)
-                                                            *   Object_20 (Xform)
-                                                                *   Cylinder022_01___Default_0 (Xform)
-                                                                    *   Cylinder022_01___Default_0 (Mesh)
-                                                        *   Object003 (Xform)
-                                                            *   Object003_01___Default_0 (Xform)
-                                                                *   Object003_01___Default_0 (Mesh)
-                                                        *   Finger01 (Xform)
-                                                            *   Box005 (Xform)
-                                                                *   Box005_01___Default_0 (Xform)
-                                                                    *   Box005_01___Default_0 (Mesh)
-                                                            *   Box006 (Xform)
-                                                                *   Box006_01___Default_0 (Xform)
-                                                                    *   Box006_01___Default_0 (Mesh)
-                                                            *   Box007 (Xform)
-                                                                *   Box007_01___Default_0 (Xform)
-                                                                    *   Box007_01___Default_0 (Mesh)
-                                                        *   Finger02 (Xform)
-                                                            *   Box004 (Xform)
-                                                                *   Box004_01___Default_0 (Xform)
-                                                                    *   Box004_01___Default_0 (Mesh)
-                                                            *   Box003 (Xform)
-                                                                *   Box003_01___Default_0 (Xform)
-                                                                    *   Box003_01___Default_0 (Mesh)
-                                                            *   Box002 (Xform)
-                                                                *   Box002_01___Default_0 (Xform)
-                                                                    *   Box002_01___Default_0 (Mesh)
-                                                    *   Object004 (Xform)
-                                                        *   Object004_01___Default_0 (Xform)
-                                                            *   Object004_01___Default_0 (Mesh)
-                                                *   Cylinder021 (Xform)
-                                                    *   Cylinder021_01___Default_0 (Xform)
-                                                        *   Cylinder021_01___Default_0 (Mesh)
-                                        *   Cylinder017 (Xform)
-                                            *   Cylinder017_01___Default_0 (Xform)
-                                                *   Cylinder017_01___Default_0 (Mesh)
-                                        *   Cylinder018 (Xform)
-                                            *   Cylinder018_01___Default_0 (Xform)
-                                                *   Cylinder018_01___Default_0 (Mesh)
-                                    *   Cylinder014 (Xform)
-                                        *   Cylinder014_01___Default_0 (Xform)
-                                            *   Cylinder014_01___Default_0 (Mesh)
-                                    *   Cylinder013 (Xform)
-                                        *   Cylinder013_01___Default_0 (Xform)
-                                            *   Cylinder013_01___Default_0 (Mesh)
-                                    *   Cylinder012 (Xform)
-                                        *   Cylinder012_01___Default_0 (Xform)
-                                            *   Cylinder012_01___Default_0 (Mesh)
-                                    *   Cylinder011 (Xform)
-                                        *   Cylinder011_01___Default_0 (Xform)
-                                            *   Cylinder011_01___Default_0 (Mesh)
-                                    *   Box001 (Xform)
-                                        *   Box001_01___Default_0 (Xform)
-                                            *   Box001_01___Default_0 (Mesh)
-                                    *   Cylinder009 (Xform)
-                                        *   Cylinder009_01___Default_0 (Xform)
-                                            *   Cylinder009_01___Default_0 (Mesh)
-                                    *   Object002 (Xform)
-                                        *   Object002_01___Default_0 (Xform)
-                                            *   Object002_01___Default_0 (Mesh)
-                                    *   Cylinder010 (Xform)
-                                        *   Cylinder010_01___Default_0 (Xform)
-                                            *   Cylinder010_01___Default_0 (Mesh)
-                                *   Cylinder008 (Xform)
-                                    *   Cylinder008_01___Default_0 (Xform)
-                                        *   Cylinder008_01___Default_0 (Mesh)
-                                *   Cylinder007 (Xform)
-                                    *   Cylinder007_01___Default_0 (Xform)
-                                        *   Cylinder007_01___Default_0 (Mesh)
-                                *   Cylinder005 (Xform)
-                                    *   Cylinder005_01___Default_0 (Xform)
-                                        *   Cylinder005_01___Default_0 (Mesh)
-                                *   Cylinder006 (Xform)
-                                    *   Cylinder006_01___Default_0 (Xform)
-                                        *   Cylinder006_01___Default_0 (Mesh)
-                            *   Cylinder002 (Xform)
-                                *   Object_71 (Xform)
-                                    *   Cylinder002_01___Default_0 (Xform)
-                                        *   Cylinder002_01___Default_0 (Mesh)
-                            *   Cylinder003 (Xform)
-                                *   Object_74 (Xform)
-                                    *   Cylinder003_01___Default_0 (Xform)
-                                        *   Cylinder003_01___Default_0 (Mesh)
-                            *   Cylinder001 (Xform)
-                                *   Cylinder001_01___Default_0 (Xform)
-                                    *   Cylinder001_01___Default_0 (Mesh)
-                        *   Object005 (Xform)
-    *   Robotic_Arm___Brazo_Robotico_03 (Xform)
-        *   Materials (Scope)
-            *   _1___Default (Material)
-                *   pbr_shader (Shader)
-                *   uvset0 (Shader)
-                *   tex_base (Shader)
-        *   Meshes (Xform)
-            *   Sketchfab_model (Xform)
-                *   brazo_FBX (Xform)
-                    *   RootNode (Xform)
-                        *   Base (Xform)
-                            *   Base_01___Default_0 (Xform)
-                                *   Base_01___Default_0 (Mesh)
-                        *   Base_1 (Xform)
-                            *   Arm01 (Xform)
-                                *   Arm02 (Xform)
-                                    *   Cylinder016 (Xform)
-                                        *   Cylinder016_01___Default_0 (Xform)
-                                            *   Cylinder016_01___Default_0 (Mesh)
-                                    *   Arm03 (Xform)
-                                        *   Arm03Rotation (Xform)
-                                            *   Cylinder020 (Xform)
-                                                *   Cylinder020_01___Default_0 (Xform)
-                                                    *   Cylinder020_01___Default_0 (Mesh)
-                                            *   Cylinder019 (Xform)
-                                                *   Cylinder019_01___Default_0 (Xform)
-                                                    *   Cylinder019_01___Default_0 (Mesh)
-                                            *   Expand01 (Xform)
-                                                *   Expand02 (Xform)
-                                                    *   Expand03 (Xform)
-                                                        *   Cylinder022 (Xform)
-                                                            *   Object_20 (Xform)
-                                                                *   Cylinder022_01___Default_0 (Xform)
-                                                                    *   Cylinder022_01___Default_0 (Mesh)
-                                                        *   Object003 (Xform)
-                                                            *   Object003_01___Default_0 (Xform)
-                                                                *   Object003_01___Default_0 (Mesh)
-                                                        *   Finger01 (Xform)
-                                                            *   Box005 (Xform)
-                                                                *   Box005_01___Default_0 (Xform)
-                                                                    *   Box005_01___Default_0 (Mesh)
-                                                            *   Box006 (Xform)
-                                                                *   Box006_01___Default_0 (Xform)
-                                                                    *   Box006_01___Default_0 (Mesh)
-                                                            *   Box007 (Xform)
-                                                                *   Box007_01___Default_0 (Xform)
-                                                                    *   Box007_01___Default_0 (Mesh)
-                                                        *   Finger02 (Xform)
-                                                            *   Box004 (Xform)
-                                                                *   Box004_01___Default_0 (Xform)
-                                                                    *   Box004_01___Default_0 (Mesh)
-                                                            *   Box003 (Xform)
-                                                                *   Box003_01___Default_0 (Xform)
-                                                                    *   Box003_01___Default_0 (Mesh)
-                                                            *   Box002 (Xform)
-                                                                *   Box002_01___Default_0 (Xform)
-                                                                    *   Box002_01___Default_0 (Mesh)
-                                                    *   Object004 (Xform)
-                                                        *   Object004_01___Default_0 (Xform)
-                                                            *   Object004_01___Default_0 (Mesh)
-                                                *   Cylinder021 (Xform)
-                                                    *   Cylinder021_01___Default_0 (Xform)
-                                                        *   Cylinder021_01___Default_0 (Mesh)
-                                        *   Cylinder017 (Xform)
-                                            *   Cylinder017_01___Default_0 (Xform)
-                                                *   Cylinder017_01___Default_0 (Mesh)
-                                        *   Cylinder018 (Xform)
-                                            *   Cylinder018_01___Default_0 (Xform)
-                                                *   Cylinder018_01___Default_0 (Mesh)
-                                    *   Cylinder014 (Xform)
-                                        *   Cylinder014_01___Default_0 (Xform)
-                                            *   Cylinder014_01___Default_0 (Mesh)
-                                    *   Cylinder013 (Xform)
-                                        *   Cylinder013_01___Default_0 (Xform)
-                                            *   Cylinder013_01___Default_0 (Mesh)
-                                    *   Cylinder012 (Xform)
-                                        *   Cylinder012_01___Default_0 (Xform)
-                                            *   Cylinder012_01___Default_0 (Mesh)
-                                    *   Cylinder011 (Xform)
-                                        *   Cylinder011_01___Default_0 (Xform)
-                                            *   Cylinder011_01___Default_0 (Mesh)
-                                    *   Box001 (Xform)
-                                        *   Box001_01___Default_0 (Xform)
-                                            *   Box001_01___Default_0 (Mesh)
-                                    *   Cylinder009 (Xform)
-                                        *   Cylinder009_01___Default_0 (Xform)
-                                            *   Cylinder009_01___Default_0 (Mesh)
-                                    *   Object002 (Xform)
-                                        *   Object002_01___Default_0 (Xform)
-                                            *   Object002_01___Default_0 (Mesh)
-                                    *   Cylinder010 (Xform)
-                                        *   Cylinder010_01___Default_0 (Xform)
-                                            *   Cylinder010_01___Default_0 (Mesh)
-                                *   Cylinder008 (Xform)
-                                    *   Cylinder008_01___Default_0 (Xform)
-                                        *   Cylinder008_01___Default_0 (Mesh)
-                                *   Cylinder007 (Xform)
-                                    *   Cylinder007_01___Default_0 (Xform)
-                                        *   Cylinder007_01___Default_0 (Mesh)
-                                *   Cylinder005 (Xform)
-                                    *   Cylinder005_01___Default_0 (Xform)
-                                        *   Cylinder005_01___Default_0 (Mesh)
-                                *   Cylinder006 (Xform)
-                                    *   Cylinder006_01___Default_0 (Xform)
-                                        *   Cylinder006_01___Default_0 (Mesh)
-                            *   Cylinder002 (Xform)
-                                *   Object_71 (Xform)
-                                    *   Cylinder002_01___Default_0 (Xform)
-                                        *   Cylinder002_01___Default_0 (Mesh)
-                            *   Cylinder003 (Xform)
-                                *   Object_74 (Xform)
-                                    *   Cylinder003_01___Default_0 (Xform)
-                                        *   Cylinder003_01___Default_0 (Mesh)
-                            *   Cylinder001 (Xform)
-                                *   Cylinder001_01___Default_0 (Xform)
-                                    *   Cylinder001_01___Default_0 (Mesh)
-                        *   Object005 (Xform)
-    *   Robotic_Arm___Brazo_Robotico_04 (Xform)
-        *   Materials (Scope)
-            *   _1___Default (Material)
-                *   pbr_shader (Shader)
-                *   uvset0 (Shader)
-                *   tex_base (Shader)
-        *   Meshes (Xform)
-            *   Sketchfab_model (Xform)
-                *   brazo_FBX (Xform)
-                    *   RootNode (Xform)
-                        *   Base (Xform)
-                            *   Base_01___Default_0 (Xform)
-                                *   Base_01___Default_0 (Mesh)
-                        *   Base_1 (Xform)
-                            *   Arm01 (Xform)
-                                *   Arm02 (Xform)
-                                    *   Cylinder016 (Xform)
-                                        *   Cylinder016_01___Default_0 (Xform)
-                                            *   Cylinder016_01___Default_0 (Mesh)
-                                    *   Arm03 (Xform)
-                                        *   Arm03Rotation (Xform)
-                                            *   Cylinder020 (Xform)
-                                                *   Cylinder020_01___Default_0 (Xform)
-                                                    *   Cylinder020_01___Default_0 (Mesh)
-                                            *   Cylinder019 (Xform)
-                                                *   Cylinder019_01___Default_0 (Xform)
-                                                    *   Cylinder019_01___Default_0 (Mesh)
-                                            *   Expand01 (Xform)
-                                                *   Expand02 (Xform)
-                                                    *   Expand03 (Xform)
-                                                        *   Cylinder022 (Xform)
-                                                            *   Object_20 (Xform)
-                                                                *   Cylinder022_01___Default_0 (Xform)
-                                                                    *   Cylinder022_01___Default_0 (Mesh)
-                                                        *   Object003 (Xform)
-                                                            *   Object003_01___Default_0 (Xform)
-                                                                *   Object003_01___Default_0 (Mesh)
-                                                        *   Finger01 (Xform)
-                                                            *   Box005 (Xform)
-                                                                *   Box005_01___Default_0 (Xform)
-                                                                    *   Box005_01___Default_0 (Mesh)
-                                                            *   Box006 (Xform)
-                                                                *   Box006_01___Default_0 (Xform)
-                                                                    *   Box006_01___Default_0 (Mesh)
-                                                            *   Box007 (Xform)
-                                                                *   Box007_01___Default_0 (Xform)
-                                                                    *   Box007_01___Default_0 (Mesh)
-                                                        *   Finger02 (Xform)
-                                                            *   Box004 (Xform)
-                                                                *   Box004_01___Default_0 (Xform)
-                                                                    *   Box004_01___Default_0 (Mesh)
-                                                            *   Box003 (Xform)
-                                                                *   Box003_01___Default_0 (Xform)
-                                                                    *   Box003_01___Default_0 (Mesh)
-                                                            *   Box002 (Xform)
-                                                                *   Box002_01___Default_0 (Xform)
-                                                                    *   Box002_01___Default_0 (Mesh)
-                                                    *   Object004 (Xform)
-                                                        *   Object004_01___Default_0 (Xform)
-                                                            *   Object004_01___Default_0 (Mesh)
-                                                *   Cylinder021 (Xform)
-                                                    *   Cylinder021_01___Default_0 (Xform)
-                                                        *   Cylinder021_01___Default_0 (Mesh)
-                                        *   Cylinder017 (Xform)
-                                            *   Cylinder017_01___Default_0 (Xform)
-                                                *   Cylinder017_01___Default_0 (Mesh)
-                                        *   Cylinder018 (Xform)
-                                            *   Cylinder018_01___Default_0 (Xform)
-                                                *   Cylinder018_01___Default_0 (Mesh)
-                                    *   Cylinder014 (Xform)
-                                        *   Cylinder014_01___Default_0 (Xform)
-                                            *   Cylinder014_01___Default_0 (Mesh)
-                                    *   Cylinder013 (Xform)
-                                        *   Cylinder013_01___Default_0 (Xform)
-                                            *   Cylinder013_01___Default_0 (Mesh)
-                                    *   Cylinder012 (Xform)
-                                        *   Cylinder012_01___Default_0 (Xform)
-                                            *   Cylinder012_01___Default_0 (Mesh)
-                                    *   Cylinder011 (Xform)
-                                        *   Cylinder011_01___Default_0 (Xform)
-                                            *   Cylinder011_01___Default_0 (Mesh)
-                                    *   Box001 (Xform)
-                                        *   Box001_01___Default_0 (Xform)
-                                            *   Box001_01___Default_0 (Mesh)
-                                    *   Cylinder009 (Xform)
-                                        *   Cylinder009_01___Default_0 (Xform)
-                                            *   Cylinder009_01___Default_0 (Mesh)
-                                    *   Object002 (Xform)
-                                        *   Object002_01___Default_0 (Xform)
-                                            *   Object002_01___Default_0 (Mesh)
-                                    *   Cylinder010 (Xform)
-                                        *   Cylinder010_01___Default_0 (Xform)
-                                            *   Cylinder010_01___Default_0 (Mesh)
-                                *   Cylinder008 (Xform)
-                                    *   Cylinder008_01___Default_0 (Xform)
-                                        *   Cylinder008_01___Default_0 (Mesh)
-                                *   Cylinder007 (Xform)
-                                    *   Cylinder007_01___Default_0 (Xform)
-                                        *   Cylinder007_01___Default_0 (Mesh)
-                                *   Cylinder005 (Xform)
-                                    *   Cylinder005_01___Default_0 (Xform)
-                                        *   Cylinder005_01___Default_0 (Mesh)
-                                *   Cylinder006 (Xform)
-                                    *   Cylinder006_01___Default_0 (Xform)
-                                        *   Cylinder006_01___Default_0 (Mesh)
-                            *   Cylinder002 (Xform)
-                                *   Object_71 (Xform)
-                                    *   Cylinder002_01___Default_0 (Xform)
-                                        *   Cylinder002_01___Default_0 (Mesh)
-                            *   Cylinder003 (Xform)
-                                *   Object_74 (Xform)
-                                    *   Cylinder003_01___Default_0 (Xform)
-                                        *   Cylinder003_01___Default_0 (Mesh)
-                            *   Cylinder001 (Xform)
-                                *   Cylinder001_01___Default_0 (Xform)
-                                    *   Cylinder001_01___Default_0 (Mesh)
-                        *   Object005 (Xform)
-    *   Robotic_Arm___Brazo_Robotico_05 (Xform)
-        *   Materials (Scope)
-            *   _1___Default (Material)
-                *   pbr_shader (Shader)
-                *   uvset0 (Shader)
-                *   tex_base (Shader)
-        *   Meshes (Xform)
-            *   Sketchfab_model (Xform)
-                *   brazo_FBX (Xform)
-                    *   RootNode (Xform)
-                        *   Base (Xform)
-                            *   Base_01___Default_0 (Xform)
-                                *   Base_01___Default_0 (Mesh)
-                        *   Base_1 (Xform)
-                            *   Arm01 (Xform)
-                                *   Arm02 (Xform)
-                                    *   Cylinder016 (Xform)
-                                        *   Cylinder016_01___Default_0 (Xform)
-                                            *   Cylinder016_01___Default_0 (Mesh)
-                                    *   Arm03 (Xform)
-                                        *   Arm03Rotation (Xform)
-                                            *   Cylinder020 (Xform)
-                                                *   Cylinder020_01___Default_0 (Xform)
-                                                    *   Cylinder020_01___Default_0 (Mesh)
-                                            *   Cylinder019 (Xform)
-                                                *   Cylinder019_01___Default_0 (Xform)
-                                                    *   Cylinder019_01___Default_0 (Mesh)
-                                            *   Expand01 (Xform)
-                                                *   Expand02 (Xform)
-                                                    *   Expand03 (Xform)
-                                                        *   Cylinder022 (Xform)
-                                                            *   Object_20 (Xform)
-                                                                *   Cylinder022_01___Default_0 (Xform)
-                                                                    *   Cylinder022_01___Default_0 (Mesh)
-                                                        *   Object003 (Xform)
-                                                            *   Object003_01___Default_0 (Xform)
-                                                                *   Object003_01___Default_0 (Mesh)
-                                                        *   Finger01 (Xform)
-                                                            *   Box005 (Xform)
-                                                                *   Box005_01___Default_0 (Xform)
-                                                                    *   Box005_01___Default_0 (Mesh)
-                                                            *   Box006 (Xform)
-                                                                *   Box006_01___Default_0 (Xform)
-                                                                    *   Box006_01___Default_0 (Mesh)
-                                                            *   Box007 (Xform)
-                                                                *   Box007_01___Default_0 (Xform)
-                                                                    *   Box007_01___Default_0 (Mesh)
-                                                        *   Finger02 (Xform)
-                                                            *   Box004 (Xform)
-                                                                *   Box004_01___Default_0 (Xform)
-                                                                    *   Box004_01___Default_0 (Mesh)
-                                                            *   Box003 (Xform)
-                                                                *   Box003_01___Default_0 (Xform)
-                                                                    *   Box003_01___Default_0 (Mesh)
-                                                            *   Box002 (Xform)
-                                                                *   Box002_01___Default_0 (Xform)
-                                                                    *   Box002_01___Default_0 (Mesh)
-                                                    *   Object004 (Xform)
-                                                        *   Object004_01___Default_0 (Xform)
-                                                            *   Object004_01___Default_0 (Mesh)
-                                                *   Cylinder021 (Xform)
-                                                    *   Cylinder021_01___Default_0 (Xform)
-                                                        *   Cylinder021_01___Default_0 (Mesh)
-                                        *   Cylinder017 (Xform)
-                                            *   Cylinder017_01___Default_0 (Xform)
-                                                *   Cylinder017_01___Default_0 (Mesh)
-                                        *   Cylinder018 (Xform)
-                                            *   Cylinder018_01___Default_0 (Xform)
-                                                *   Cylinder018_01___Default_0 (Mesh)
-                                    *   Cylinder014 (Xform)
-                                        *   Cylinder014_01___Default_0 (Xform)
-                                            *   Cylinder014_01___Default_0 (Mesh)
-                                    *   Cylinder013 (Xform)
-                                        *   Cylinder013_01___Default_0 (Xform)
-                                            *   Cylinder013_01___Default_0 (Mesh)
-                                    *   Cylinder012 (Xform)
-                                        *   Cylinder012_01___Default_0 (Xform)
-                                            *   Cylinder012_01___Default_0 (Mesh)
-                                    *   Cylinder011 (Xform)
-                                        *   Cylinder011_01___Default_0 (Xform)
-                                            *   Cylinder011_01___Default_0 (Mesh)
-                                    *   Box001 (Xform)
-                                        *   Box001_01___Default_0 (Xform)
-                                            *   Box001_01___Default_0 (Mesh)
-                                    *   Cylinder009 (Xform)
-                                        *   Cylinder009_01___Default_0 (Xform)
-                                            *   Cylinder009_01___Default_0 (Mesh)
-                                    *   Object002 (Xform)
-                                        *   Object002_01___Default_0 (Xform)
-                                            *   Object002_01___Default_0 (Mesh)
-                                    *   Cylinder010 (Xform)
-                                        *   Cylinder010_01___Default_0 (Xform)
-                                            *   Cylinder010_01___Default_0 (Mesh)
-                                *   Cylinder008 (Xform)
-                                    *   Cylinder008_01___Default_0 (Xform)
-                                        *   Cylinder008_01___Default_0 (Mesh)
-                                *   Cylinder007 (Xform)
-                                    *   Cylinder007_01___Default_0 (Xform)
-                                        *   Cylinder007_01___Default_0 (Mesh)
-                                *   Cylinder005 (Xform)
-                                    *   Cylinder005_01___Default_0 (Xform)
-                                        *   Cylinder005_01___Default_0 (Mesh)
-                                *   Cylinder006 (Xform)
-                                    *   Cylinder006_01___Default_0 (Xform)
-                                        *   Cylinder006_01___Default_0 (Mesh)
-                            *   Cylinder002 (Xform)
-                                *   Object_71 (Xform)
-                                    *   Cylinder002_01___Default_0 (Xform)
-                                        *   Cylinder002_01___Default_0 (Mesh)
-                            *   Cylinder003 (Xform)
-                                *   Object_74 (Xform)
-                                    *   Cylinder003_01___Default_0 (Xform)
-                                        *   Cylinder003_01___Default_0 (Mesh)
-                            *   Cylinder001 (Xform)
-                                *   Cylinder001_01___Default_0 (Xform)
-                                    *   Cylinder001_01___Default_0 (Mesh)
-                        *   Object005 (Xform)
     *   AGV_ready_1 (Xform)
         *   Materials (Scope)
             *   ASELSAN_CATS_04 (Material)
@@ -3810,8 +3108,154 @@
                             *   Object_4 (Xform)
                                 *   Box003_Material__1_0 (Xform)
                                     *   Box003_Material__1_0 (Mesh)
+    *   Conveyor_Belt_06 (Xform)
+        *   Materials (Scope)
+            *   Material_0 (Material)
+                *   pbr_shader (Shader)
+                *   uvset0 (Shader)
+                *   tex_base (Shader)
+        *   Meshes (Xform)
+            *   Sketchfab_model (Xform)
+                *   _aaef2bbe46a4470bc765b4ce24a8c4c_fbx (Xform)
+                    *   RootNode (Xform)
+                        *   Cylinder001 (Xform)
+                            *   Cylinder001_Material__0_0 (Xform)
+                                *   Cylinder001_Material__0_0 (Mesh)
+    *   Conveyor_Belt_07 (Prim)
+    *   part (Xform)
+        *   node_36_Size_10x112x120x18_Length_38_SUPPRESSION_Default (Xform)
+            *   geometry_1 (Mesh)
+    *   part_01 (Prim)
+    *   part_02 (Prim)
+    *   part_03 (Prim)
+    *   part_04 (Prim)
+    *   Conveyor_Belt_08 (Prim)
+    *   part_05 (Prim)
+    *   part_06 (Prim)
+    *   part_07 (Prim)
+    *   part_08 (Prim)
+    *   part_09 (Prim)
+    *   part_10 (Prim)
+    *   part_23 (Prim)
+    *   part_22 (Prim)
+    *   part_21 (Prim)
+    *   part_20 (Prim)
+    *   part_19 (Prim)
+    *   part_18 (Prim)
+    *   part_17 (Prim)
+    *   part_16 (Prim)
+    *   part_15 (Prim)
+    *   part_14 (Prim)
+    *   part_13 (Prim)
+    *   part_12 (Prim)
+    *   part_11 (Prim)
+    *   part_24 (Prim)
+    *   MobileShopDesk_A01_Blue_01 (Xform)
+        *   SM_MobileShopDesk_A01_01 (Mesh)
+            *   M_MobileShopDesk_A01_Body (GeomSubset)
+            *   M_MobileShopDesk_A01_Caps (GeomSubset)
+            *   M_MobileShopDesk_A01_LocksBoltsHandlesKeys (GeomSubset)
+            *   SM_MobileShopDesk_A01_FrontJointWheelLeft_01 (Mesh)
+                *   SM_MobileShopDesk_A01_FrontWheelLeft_01 (Mesh)
+                    *   M_MobileShopDesk_A01_Wheels (GeomSubset)
+                    *   M_MobileShopDesk_A01_WheelsBody (GeomSubset)
+            *   SM_MobileShopDesk_A01_BackJointWheelLeft_01 (Mesh)
+                *   SM_MobileShopDesk_A01_BackWheelLeft_01 (Mesh)
+                    *   M_MobileShopDesk_A01_Wheels (GeomSubset)
+                    *   M_MobileShopDesk_A01_WheelsBody (GeomSubset)
+            *   SM_MobileShopDesk_A01_BackJointWheelRight_01 (Mesh)
+                *   SM_MobileShopDesk_A01_BackWheelRight_01 (Mesh)
+                    *   M_MobileShopDesk_A01_Wheels (GeomSubset)
+                    *   M_MobileShopDesk_A01_WheelsBody (GeomSubset)
+            *   SM_MobileShopDesk_A01_FrontJointWheelRight_01 (Mesh)
+                *   SM_MobileShopDesk_A01_FrontWheelRight_01 (Mesh)
+                    *   M_MobileShopDesk_A01_Wheels (GeomSubset)
+                    *   M_MobileShopDesk_A01_WheelsBody (GeomSubset)
+            *   SM_MobileShopDesk_A01_Door_01 (Mesh)
+                *   M_MobileShopDesk_A01_Body (GeomSubset)
+                *   M_MobileShopDesk_A01_LocksBoltsHandlesKeys (GeomSubset)
+            *   SM_MobileShopDesk_A01_SlidingRails_01 (Mesh)
+                *   M_MobileShopDesk_A01_Caps (GeomSubset)
+                *   M_MobileShopDesk_A01_LocksBoltsHandlesKeys (GeomSubset)
+                *   SM_MobileShopDesk_A01_Drawer_01 (Mesh)
+                    *   M_MobileShopDesk_A01_Body (GeomSubset)
+                    *   M_MobileShopDesk_A01_LocksBoltsHandlesKeys (GeomSubset)
+        *   Looks (Scope)
+            *   Metal_Glossy_A_MobileShopDesk_A (Material)
+                *   Shader (Shader)
+            *   Metal_Rough_A_MobileShopDesk_A (Material)
+                *   Shader (Shader)
+            *   Plastic_Black_A_MobileShopDesk_A (Material)
+                *   Shader (Shader)
+            *   Rubber_Gray_Glossy_A_MobileShopDesk_A (Material)
+                *   Shader (Shader)
+            *   Metal_Painted_Blue_Glossy_A_MobileShopDesk_A (Material)
+                *   Shader (Shader)
+    *   panda_instanceable1 (Xform)
+        *   Group (Xform)
+            *   panda_hand (Xform)
+                *   visuals (Xform)
+                *   collisions (Xform)
+                *   panda_finger_joint1 (PhysicsPrismaticJoint)
+                *   panda_finger_joint2 (PhysicsPrismaticJoint)
+            *   panda_leftfinger (Xform)
+                *   visuals (Xform)
+                *   collisions (Xform)
+            *   panda_link0 (Xform)
+                *   visuals (Xform)
+                *   collisions (Xform)
+                *   panda_joint1 (PhysicsRevoluteJoint)
+            *   panda_link1 (Xform)
+                *   visuals (Xform)
+                *   collisions (Xform)
+                *   panda_joint2 (PhysicsRevoluteJoint)
+            *   panda_link2 (Xform)
+                *   visuals (Xform)
+                *   collisions (Xform)
+                *   panda_joint3 (PhysicsRevoluteJoint)
+            *   panda_link3 (Xform)
+                *   visuals (Xform)
+                *   collisions (Xform)
+                *   panda_joint4 (PhysicsRevoluteJoint)
+            *   panda_link4 (Xform)
+                *   visuals (Xform)
+                *   collisions (Xform)
+                *   panda_joint5 (PhysicsRevoluteJoint)
+            *   panda_link5 (Xform)
+                *   visuals (Xform)
+                *   collisions (Xform)
+                *   panda_joint6 (PhysicsRevoluteJoint)
+            *   panda_link6 (Xform)
+                *   visuals (Xform)
+                *   collisions (Xform)
+                *   panda_joint7 (PhysicsRevoluteJoint)
+            *   panda_link7 (Xform)
+                *   visuals (Xform)
+                *   collisions (Xform)
+                *   panda_hand_joint (PhysicsFixedJoint)
+            *   panda_rightfinger (Xform)
+                *   visuals (Xform)
+                *   collisions (Xform)
+            *   rootJoint (PhysicsFixedJoint)
+    *   MobileShopDesk_A01_Blue_02 (Prim)
+    *   panda_instanceable1_01 (Prim)
+    *   MobileShopDesk_A01_Blue_03 (Prim)
+    *   panda_instanceable1_02 (Prim)
+    *   MobileShopDesk_A01_Blue_04 (Prim)
+    *   panda_instanceable1_03 (Prim)
+    *   MobileShopDesk_A01_Blue_05 (Prim)
+    *   panda_instanceable1_04 (Prim)
+    *   MobileShopDesk_A01_Blue_06 (Prim)
+    *   panda_instanceable1_05 (Prim)
 *   Environment (Xform)
     *   defaultLight (DistantLight)
+*   Render (Prim)
+    *   OmniverseKit (Prim)
+        *   HydraTextures (Prim)
+            *   omni_kit_widget_viewport_ViewportTexture_0 (RenderProduct)
+    *   OmniverseGlobalRenderSettings (RenderSettings)
+    *   Vars (Prim)
+        *   LdrColor (RenderVar)
 
 ## 3. 对象详细描述 (Detailed Prim Descriptions)
 
@@ -3901,84 +3345,6 @@
 *  **世界包围盒 (World BBox):**
    *   Size: '(0.799, 4.204, 9.846)'
    *   Center: '(-14.717, -8.092, 0.641)'
-
-
----
-
-
-### /World/Robotic_Arm___Brazo_Robotico
-*  **Prim路径 (Prim Path):**/World/Robotic_Arm___Brazo_Robotico
-*  **Prim类型 (Prim Type):**Xform
-*  **外部引用 (Referenced USD Files):**
-       *   [reference] '../assets/Robotic_Arm_-_Brazo_Robotico/Robotic_Arm_-_Brazo_Robotico.usdc'
-*  **世界包围盒 (World BBox):**
-   *   Size: '(1.736, 2.613, 3.217)'
-   *   Center: '(10.500, -14.643, 1.556)'
-
-
----
-
-
-### /World/Robotic_Arm___Brazo_Robotico_01
-*  **Prim路径 (Prim Path):**/World/Robotic_Arm___Brazo_Robotico_01
-*  **Prim类型 (Prim Type):**Xform
-*  **外部引用 (Referenced USD Files):**
-       *   [reference] '../assets/Robotic_Arm_-_Brazo_Robotico/Robotic_Arm_-_Brazo_Robotico.usdc'
-*  **世界包围盒 (World BBox):**
-   *   Size: '(1.736, 2.613, 3.217)'
-   *   Center: '(5.500, -14.643, 1.556)'
-
-
----
-
-
-### /World/Robotic_Arm___Brazo_Robotico_02
-*  **Prim路径 (Prim Path):**/World/Robotic_Arm___Brazo_Robotico_02
-*  **Prim类型 (Prim Type):**Xform
-*  **外部引用 (Referenced USD Files):**
-       *   [reference] '../assets/Robotic_Arm_-_Brazo_Robotico/Robotic_Arm_-_Brazo_Robotico.usdc'
-*  **世界包围盒 (World BBox):**
-   *   Size: '(1.736, 2.613, 3.217)'
-   *   Center: '(0.500, -14.643, 1.556)'
-
-
----
-
-
-### /World/Robotic_Arm___Brazo_Robotico_03
-*  **Prim路径 (Prim Path):**/World/Robotic_Arm___Brazo_Robotico_03
-*  **Prim类型 (Prim Type):**Xform
-*  **外部引用 (Referenced USD Files):**
-       *   [reference] '../assets/Robotic_Arm_-_Brazo_Robotico/Robotic_Arm_-_Brazo_Robotico.usdc'
-*  **世界包围盒 (World BBox):**
-   *   Size: '(1.736, 2.613, 3.217)'
-   *   Center: '(-4.500, -14.643, 1.556)'
-
-
----
-
-
-### /World/Robotic_Arm___Brazo_Robotico_04
-*  **Prim路径 (Prim Path):**/World/Robotic_Arm___Brazo_Robotico_04
-*  **Prim类型 (Prim Type):**Xform
-*  **外部引用 (Referenced USD Files):**
-       *   [reference] '../assets/Robotic_Arm_-_Brazo_Robotico/Robotic_Arm_-_Brazo_Robotico.usdc'
-*  **世界包围盒 (World BBox):**
-   *   Size: '(1.736, 2.613, 3.217)'
-   *   Center: '(-9.500, -14.643, 1.556)'
-
-
----
-
-
-### /World/Robotic_Arm___Brazo_Robotico_05
-*  **Prim路径 (Prim Path):**/World/Robotic_Arm___Brazo_Robotico_05
-*  **Prim类型 (Prim Type):**Xform
-*  **外部引用 (Referenced USD Files):**
-       *   [reference] '../assets/Robotic_Arm_-_Brazo_Robotico/Robotic_Arm_-_Brazo_Robotico.usdc'
-*  **世界包围盒 (World BBox):**
-   *   Size: '(1.736, 2.613, 3.217)'
-   *   Center: '(-14.500, -14.643, 1.556)'
 
 
 ---
@@ -4135,6 +3501,454 @@
 *  **世界包围盒 (World BBox):**
    *   Size: '(0.424, 0.365, 0.421)'
    *   Center: '(-15.783, -14.477, 0.549)'
+
+
+---
+
+
+### /World/Conveyor_Belt_06
+*  **Prim路径 (Prim Path):**/World/Conveyor_Belt_06
+*  **Prim类型 (Prim Type):**Xform
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] '../device_data/usdz/Conveyor/Conveyor_Belt.usdz'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(0.799, 4.204, 9.846)'
+   *   Center: '(-10.302, -2.983, 0.641)'
+
+
+---
+
+
+### /World/part
+*  **Prim路径 (Prim Path):**/World/part
+*  **Prim类型 (Prim Type):**Xform
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] '../device_data/usdz/Part/hua.usd'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(11.840, 11.998, 3.800)'
+   *   Center: '(5.310, -12.000, 1.157)'
+
+
+---
+
+
+### /World/MobileShopDesk_A01_Blue_01
+*  **Prim路径 (Prim Path):**/World/MobileShopDesk_A01_Blue_01
+*  **Prim类型 (Prim Type):**Xform
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] '../device_data/usdz/Workbench/MobileShopDesk_A01_Blue_01.usdz'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(61.575, 57.307, 103.782)'
+   *   Center: '(-14.529, -13.413, 0.768)'
+
+
+---
+
+
+### /World/panda_instanceable1
+*  **Prim路径 (Prim Path):**/World/panda_instanceable1
+*  **Prim类型 (Prim Type):**Xform
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] '../device_data/usdz/IndustrialRobot/panda_instanceable1.usdz'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(0.503, 0.389, 1.672)'
+   *   Center: '(-14.432, -13.514, 1.947)'
+
+
+---
+
+
+### /World/panda_instanceable1/Group/panda_hand/visuals
+*  **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_hand/visuals
+*  **Prim类型 (Prim Type):**Xform
+*  **变换信息 (Transform):**
+   *   **平移 (Translate):**'(0.000, 0.000, 0.000)'
+   *   **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+   *   **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] 'Reference 1'
+       *   Prim Path: '/Flattened_Prototype_6'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(0.063, 0.205, 0.092)'
+   *   Center: '(-14.322, -13.513, 2.470)'
+
+
+---
+
+
+### /World/panda_instanceable1/Group/panda_hand/collisions
+*  **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_hand/collisions
+*  **Prim类型 (Prim Type):**Xform
+*  **变换信息 (Transform):**
+   *   **平移 (Translate):**'(0.000, 0.000, 0.000)'
+   *   **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+   *   **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] 'Reference 1'
+       *   Prim Path: '/Flattened_Prototype_13'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+   *   Center: '(-14.321, -13.515, 2.500)'
+
+
+---
+
+
+### /World/panda_instanceable1/Group/panda_leftfinger/visuals
+*  **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_leftfinger/visuals
+*  **Prim类型 (Prim Type):**Xform
+*  **变换信息 (Transform):**
+   *   **平移 (Translate):**'(0.000, 0.000, 0.000)'
+   *   **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+   *   **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] 'Reference 1'
+       *   Prim Path: '/Flattened_Prototype_2'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(0.021, 0.026, 0.054)'
+   *   Center: '(-14.307, -13.529, 2.372)'
+
+
+---
+
+
+### /World/panda_instanceable1/Group/panda_leftfinger/collisions
+*  **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_leftfinger/collisions
+*  **Prim类型 (Prim Type):**Xform
+*  **变换信息 (Transform):**
+   *   **平移 (Translate):**'(0.000, 0.000, 0.000)'
+   *   **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+   *   **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] 'Reference 1'
+       *   Prim Path: '/Flattened_Prototype_22'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+   *   Center: '(-14.321, -13.515, 2.412)'
+
+
+---
+
+
+### /World/panda_instanceable1/Group/panda_link0/visuals
+*  **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link0/visuals
+*  **Prim类型 (Prim Type):**Xform
+*  **变换信息 (Transform):**
+   *   **平移 (Translate):**'(0.000, 0.000, 0.000)'
+   *   **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+   *   **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] 'Reference 1'
+       *   Prim Path: '/Flattened_Prototype_5'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(0.226, 0.189, 0.140)'
+   *   Center: '(-14.515, -13.515, 1.216)'
+
+
+---
+
+
+### /World/panda_instanceable1/Group/panda_link0/collisions
+*  **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link0/collisions
+*  **Prim类型 (Prim Type):**Xform
+*  **变换信息 (Transform):**
+   *   **平移 (Translate):**'(0.000, 0.000, 0.000)'
+   *   **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+   *   **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] 'Reference 1'
+       *   Prim Path: '/Flattened_Prototype_19'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+   *   Center: '(-14.453, -13.515, 1.111)'
+
+
+---
+
+
+### /World/panda_instanceable1/Group/panda_link1/visuals
+*  **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link1/visuals
+*  **Prim类型 (Prim Type):**Xform
+*  **变换信息 (Transform):**
+   *   **平移 (Translate):**'(0.000, 0.000, 0.000)'
+   *   **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+   *   **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] 'Reference 1'
+       *   Prim Path: '/Flattened_Prototype_16'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(0.110, 0.184, 0.247)'
+   *   Center: '(-14.453, -13.571, 1.507)'
+
+
+---
+
+
+### /World/panda_instanceable1/Group/panda_link1/collisions
+*  **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link1/collisions
+*  **Prim类型 (Prim Type):**Xform
+*  **变换信息 (Transform):**
+   *   **平移 (Translate):**'(0.000, 0.000, 0.000)'
+   *   **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+   *   **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] 'Reference 1'
+       *   Prim Path: '/Flattened_Prototype_18'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+   *   Center: '(-14.453, -13.515, 1.610)'
+
+
+---
+
+
+### /World/panda_instanceable1/Group/panda_link2/visuals
+*  **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link2/visuals
+*  **Prim类型 (Prim Type):**Xform
+*  **变换信息 (Transform):**
+   *   **平移 (Translate):**'(0.000, 0.000, 0.000)'
+   *   **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+   *   **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] 'Reference 1'
+       *   Prim Path: '/Flattened_Prototype_1'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(0.110, 0.249, 0.184)'
+   *   Center: '(-14.453, -13.459, 1.715)'
+
+
+---
+
+
+### /World/panda_instanceable1/Group/panda_link2/collisions
+*  **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link2/collisions
+*  **Prim类型 (Prim Type):**Xform
+*  **变换信息 (Transform):**
+   *   **平移 (Translate):**'(0.000, 0.000, 0.000)'
+   *   **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+   *   **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] 'Reference 1'
+       *   Prim Path: '/Flattened_Prototype_12'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+   *   Center: '(-14.453, -13.515, 1.610)'
+
+
+---
+
+
+### /World/panda_instanceable1/Group/panda_link3/visuals
+*  **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link3/visuals
+*  **Prim类型 (Prim Type):**Xform
+*  **变换信息 (Transform):**
+   *   **平移 (Translate):**'(0.000, 0.000, 0.000)'
+   *   **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+   *   **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] 'Reference 1'
+       *   Prim Path: '/Flattened_Prototype_14'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(0.193, 0.166, 0.176)'
+   *   Center: '(-14.391, -13.473, 2.035)'
+
+
+---
+
+
+### /World/panda_instanceable1/Group/panda_link3/collisions
+*  **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link3/collisions
+*  **Prim类型 (Prim Type):**Xform
+*  **变换信息 (Transform):**
+   *   **平移 (Translate):**'(0.000, 0.000, 0.000)'
+   *   **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+   *   **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] 'Reference 1'
+       *   Prim Path: '/Flattened_Prototype_15'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+   *   Center: '(-14.453, -13.515, 2.084)'
+
+
+---
+
+
+### /World/panda_instanceable1/Group/panda_link4/visuals
+*  **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link4/visuals
+*  **Prim类型 (Prim Type):**Xform
+*  **变换信息 (Transform):**
+   *   **平移 (Translate):**'(0.000, 0.000, 0.000)'
+   *   **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+   *   **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] 'Reference 1'
+       *   Prim Path: '/Flattened_Prototype_8'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(0.193, 0.179, 0.166)'
+   *   Center: '(-14.391, -13.557, 2.136)'
+
+
+---
+
+
+### /World/panda_instanceable1/Group/panda_link4/collisions
+*  **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link4/collisions
+*  **Prim类型 (Prim Type):**Xform
+*  **变换信息 (Transform):**
+   *   **平移 (Translate):**'(0.000, 0.000, 0.000)'
+   *   **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+   *   **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] 'Reference 1'
+       *   Prim Path: '/Flattened_Prototype_3'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+   *   Center: '(-14.329, -13.515, 2.084)'
+
+
+---
+
+
+### /World/panda_instanceable1/Group/panda_link5/visuals
+*  **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link5/visuals
+*  **Prim类型 (Prim Type):**Xform
+*  **变换信息 (Transform):**
+   *   **平移 (Translate):**'(0.000, 0.000, 0.000)'
+   *   **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+   *   **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] 'Reference 1'
+       *   Prim Path: '/Flattened_Prototype_10'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(0.110, 0.185, 0.311)'
+   *   Center: '(-14.453, -13.459, 2.505)'
+
+
+---
+
+
+### /World/panda_instanceable1/Group/panda_link5/collisions
+*  **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link5/collisions
+*  **Prim类型 (Prim Type):**Xform
+*  **变换信息 (Transform):**
+   *   **平移 (Translate):**'(0.000, 0.000, 0.000)'
+   *   **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+   *   **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] 'Reference 1'
+       *   Prim Path: '/Flattened_Prototype_4'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+   *   Center: '(-14.453, -13.515, 2.660)'
+
+
+---
+
+
+### /World/panda_instanceable1/Group/panda_link6/visuals
+*  **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link6/visuals
+*  **Prim类型 (Prim Type):**Xform
+*  **变换信息 (Transform):**
+   *   **平移 (Translate):**'(0.000, 0.000, 0.000)'
+   *   **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+   *   **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] 'Reference 1'
+       *   Prim Path: '/Flattened_Prototype_9'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(0.180, 0.133, 0.100)'
+   *   Center: '(-14.390, -13.524, 2.683)'
+
+
+---
+
+
+### /World/panda_instanceable1/Group/panda_link6/collisions
+*  **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link6/collisions
+*  **Prim类型 (Prim Type):**Xform
+*  **变换信息 (Transform):**
+   *   **平移 (Translate):**'(0.000, 0.000, 0.000)'
+   *   **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+   *   **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] 'Reference 1'
+       *   Prim Path: '/Flattened_Prototype_11'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+   *   Center: '(-14.453, -13.515, 2.660)'
+
+
+---
+
+
+### /World/panda_instanceable1/Group/panda_link7/visuals
+*  **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link7/visuals
+*  **Prim类型 (Prim Type):**Xform
+*  **变换信息 (Transform):**
+   *   **平移 (Translate):**'(0.000, 0.000, 0.000)'
+   *   **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+   *   **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] 'Reference 1'
+       *   Prim Path: '/Flattened_Prototype_17'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(0.125, 0.125, 0.055)'
+   *   Center: '(-14.293, -13.543, 2.541)'
+
+
+---
+
+
+### /World/panda_instanceable1/Group/panda_link7/collisions
+*  **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link7/collisions
+*  **Prim类型 (Prim Type):**Xform
+*  **变换信息 (Transform):**
+   *   **平移 (Translate):**'(0.000, 0.000, 0.000)'
+   *   **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+   *   **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] 'Reference 1'
+       *   Prim Path: '/Flattened_Prototype_21'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+   *   Center: '(-14.321, -13.515, 2.660)'
+
+
+---
+
+
+### /World/panda_instanceable1/Group/panda_rightfinger/visuals
+*  **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_rightfinger/visuals
+*  **Prim类型 (Prim Type):**Xform
+*  **变换信息 (Transform):**
+   *   **平移 (Translate):**'(0.000, 0.000, 0.000)'
+   *   **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+   *   **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] 'Reference 1'
+       *   Prim Path: '/Flattened_Prototype_7'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(0.021, 0.026, 0.054)'
+   *   Center: '(-14.335, -13.501, 2.372)'
+
+
+---
+
+
+### /World/panda_instanceable1/Group/panda_rightfinger/collisions
+*  **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_rightfinger/collisions
+*  **Prim类型 (Prim Type):**Xform
+*  **变换信息 (Transform):**
+   *   **平移 (Translate):**'(0.000, 0.000, 0.000)'
+   *   **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+   *   **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] 'Reference 1'
+       *   Prim Path: '/Flattened_Prototype_20'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+   *   Center: '(-14.321, -13.515, 2.412)'
 
 
 ---
@@ -4630,234 +4444,6 @@
                *   Connected: '/World/Conveyor_Belt_05/Materials/Material_0/uvset0.outputs:result' @ '/World/Conveyor_Belt_05/Materials/Material_0/uvset0'
                    *   Shader ID: 'UsdPrimvarReader_float2'
        *   '/World/Conveyor_Belt_05/Materials/Material_0/uvset0' (ID: 'UsdPrimvarReader_float2')
-       *   Implementation: 'id'
-
-
----
-
-
-### /World/Robotic_Arm___Brazo_Robotico/Materials/_1___Default
-*  **Prim路径 (Prim Path):**/World/Robotic_Arm___Brazo_Robotico/Materials/_1___Default
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/Robotic_Arm___Brazo_Robotico/Materials/_1___Default/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/Robotic_Arm___Brazo_Robotico/Materials/_1___Default/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f]
-               *   Connected: '/World/Robotic_Arm___Brazo_Robotico/Materials/_1___Default/tex_base.outputs:rgb' @ '/World/Robotic_Arm___Brazo_Robotico/Materials/_1___Default/tex_base'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/01_-_Default_baseColor.jpg'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(1.000, 1.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.223895'
-       *   '/World/Robotic_Arm___Brazo_Robotico/Materials/_1___Default/tex_base' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/01_-_Default_baseColor.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
-           *   'file' [asset] = '0/01_-_Default_baseColor.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/Robotic_Arm___Brazo_Robotico/Materials/_1___Default/uvset0.outputs:result' @ '/World/Robotic_Arm___Brazo_Robotico/Materials/_1___Default/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/Robotic_Arm___Brazo_Robotico/Materials/_1___Default/uvset0' (ID: 'UsdPrimvarReader_float2')
-       *   Implementation: 'id'
-
-
----
-
-
-### /World/Robotic_Arm___Brazo_Robotico_01/Materials/_1___Default
-*  **Prim路径 (Prim Path):**/World/Robotic_Arm___Brazo_Robotico_01/Materials/_1___Default
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/Robotic_Arm___Brazo_Robotico_01/Materials/_1___Default/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/Robotic_Arm___Brazo_Robotico_01/Materials/_1___Default/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f]
-               *   Connected: '/World/Robotic_Arm___Brazo_Robotico_01/Materials/_1___Default/tex_base.outputs:rgb' @ '/World/Robotic_Arm___Brazo_Robotico_01/Materials/_1___Default/tex_base'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/01_-_Default_baseColor.jpg'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(1.000, 1.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.223895'
-       *   '/World/Robotic_Arm___Brazo_Robotico_01/Materials/_1___Default/tex_base' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/01_-_Default_baseColor.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
-           *   'file' [asset] = '0/01_-_Default_baseColor.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/Robotic_Arm___Brazo_Robotico_01/Materials/_1___Default/uvset0.outputs:result' @ '/World/Robotic_Arm___Brazo_Robotico_01/Materials/_1___Default/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/Robotic_Arm___Brazo_Robotico_01/Materials/_1___Default/uvset0' (ID: 'UsdPrimvarReader_float2')
-       *   Implementation: 'id'
-
-
----
-
-
-### /World/Robotic_Arm___Brazo_Robotico_02/Materials/_1___Default
-*  **Prim路径 (Prim Path):**/World/Robotic_Arm___Brazo_Robotico_02/Materials/_1___Default
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/Robotic_Arm___Brazo_Robotico_02/Materials/_1___Default/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/Robotic_Arm___Brazo_Robotico_02/Materials/_1___Default/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f]
-               *   Connected: '/World/Robotic_Arm___Brazo_Robotico_02/Materials/_1___Default/tex_base.outputs:rgb' @ '/World/Robotic_Arm___Brazo_Robotico_02/Materials/_1___Default/tex_base'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/01_-_Default_baseColor.jpg'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(1.000, 1.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.223895'
-       *   '/World/Robotic_Arm___Brazo_Robotico_02/Materials/_1___Default/tex_base' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/01_-_Default_baseColor.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
-           *   'file' [asset] = '0/01_-_Default_baseColor.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/Robotic_Arm___Brazo_Robotico_02/Materials/_1___Default/uvset0.outputs:result' @ '/World/Robotic_Arm___Brazo_Robotico_02/Materials/_1___Default/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/Robotic_Arm___Brazo_Robotico_02/Materials/_1___Default/uvset0' (ID: 'UsdPrimvarReader_float2')
-       *   Implementation: 'id'
-
-
----
-
-
-### /World/Robotic_Arm___Brazo_Robotico_03/Materials/_1___Default
-*  **Prim路径 (Prim Path):**/World/Robotic_Arm___Brazo_Robotico_03/Materials/_1___Default
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/Robotic_Arm___Brazo_Robotico_03/Materials/_1___Default/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/Robotic_Arm___Brazo_Robotico_03/Materials/_1___Default/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f]
-               *   Connected: '/World/Robotic_Arm___Brazo_Robotico_03/Materials/_1___Default/tex_base.outputs:rgb' @ '/World/Robotic_Arm___Brazo_Robotico_03/Materials/_1___Default/tex_base'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/01_-_Default_baseColor.jpg'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(1.000, 1.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.223895'
-       *   '/World/Robotic_Arm___Brazo_Robotico_03/Materials/_1___Default/tex_base' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/01_-_Default_baseColor.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
-           *   'file' [asset] = '0/01_-_Default_baseColor.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/Robotic_Arm___Brazo_Robotico_03/Materials/_1___Default/uvset0.outputs:result' @ '/World/Robotic_Arm___Brazo_Robotico_03/Materials/_1___Default/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/Robotic_Arm___Brazo_Robotico_03/Materials/_1___Default/uvset0' (ID: 'UsdPrimvarReader_float2')
-       *   Implementation: 'id'
-
-
----
-
-
-### /World/Robotic_Arm___Brazo_Robotico_04/Materials/_1___Default
-*  **Prim路径 (Prim Path):**/World/Robotic_Arm___Brazo_Robotico_04/Materials/_1___Default
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/Robotic_Arm___Brazo_Robotico_04/Materials/_1___Default/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/Robotic_Arm___Brazo_Robotico_04/Materials/_1___Default/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f]
-               *   Connected: '/World/Robotic_Arm___Brazo_Robotico_04/Materials/_1___Default/tex_base.outputs:rgb' @ '/World/Robotic_Arm___Brazo_Robotico_04/Materials/_1___Default/tex_base'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/01_-_Default_baseColor.jpg'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(1.000, 1.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.223895'
-       *   '/World/Robotic_Arm___Brazo_Robotico_04/Materials/_1___Default/tex_base' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/01_-_Default_baseColor.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
-           *   'file' [asset] = '0/01_-_Default_baseColor.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/Robotic_Arm___Brazo_Robotico_04/Materials/_1___Default/uvset0.outputs:result' @ '/World/Robotic_Arm___Brazo_Robotico_04/Materials/_1___Default/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/Robotic_Arm___Brazo_Robotico_04/Materials/_1___Default/uvset0' (ID: 'UsdPrimvarReader_float2')
-       *   Implementation: 'id'
-
-
----
-
-
-### /World/Robotic_Arm___Brazo_Robotico_05/Materials/_1___Default
-*  **Prim路径 (Prim Path):**/World/Robotic_Arm___Brazo_Robotico_05/Materials/_1___Default
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/Robotic_Arm___Brazo_Robotico_05/Materials/_1___Default/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/Robotic_Arm___Brazo_Robotico_05/Materials/_1___Default/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f]
-               *   Connected: '/World/Robotic_Arm___Brazo_Robotico_05/Materials/_1___Default/tex_base.outputs:rgb' @ '/World/Robotic_Arm___Brazo_Robotico_05/Materials/_1___Default/tex_base'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/01_-_Default_baseColor.jpg'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(1.000, 1.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.223895'
-       *   '/World/Robotic_Arm___Brazo_Robotico_05/Materials/_1___Default/tex_base' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/01_-_Default_baseColor.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
-           *   'file' [asset] = '0/01_-_Default_baseColor.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/Robotic_Arm___Brazo_Robotico_05/Materials/_1___Default/uvset0.outputs:result' @ '/World/Robotic_Arm___Brazo_Robotico_05/Materials/_1___Default/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/Robotic_Arm___Brazo_Robotico_05/Materials/_1___Default/uvset0' (ID: 'UsdPrimvarReader_float2')
        *   Implementation: 'id'
 
 
@@ -14135,6 +13721,139 @@
                    *   Shader ID: 'UsdPrimvarReader_float2'
        *   '/World/Plastic_Crate_1__05/Materials/Material_1/uvset0' (ID: 'UsdPrimvarReader_float2')
        *   Implementation: 'id'
+
+
+---
+
+
+### /World/Conveyor_Belt_06/Materials/Material_0
+*  **Prim路径 (Prim Path):**/World/Conveyor_Belt_06/Materials/Material_0
+*  **Prim类型 (Prim Type):**Material
+*  **材质网络 (Material & Shader Details):**
+   *   **Surface Outputs:**
+       *   'outputs:surface' -> '/World/Conveyor_Belt_06/Materials/Material_0/pbr_shader'
+       *   Shader ID: 'UsdPreviewSurface'
+       *   Connection: 'surface' (Output)'
+   *   **Shader 节点 (Shader Nodes):**
+       *   '/World/Conveyor_Belt_06/Materials/Material_0/pbr_shader' (ID: 'UsdPreviewSurface')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'diffuseColor' [color3f]
+               *   Connected: '/World/Conveyor_Belt_06/Materials/Material_0/tex_base.outputs:rgb' @ '/World/Conveyor_Belt_06/Materials/Material_0/tex_base'
+                   *   Shader ID: 'UsdUVTexture'
+                   *   Texture: '0/Material_0_baseColor.jpg'
+           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
+           *   'metallic' [float] = '0'
+           *   'normal' [normal3f] = '(1.000, 1.000, 1.000)'
+           *   'occlusion' [float] = '1'
+           *   'roughness' [float] = '0.892971'
+       *   '/World/Conveyor_Belt_06/Materials/Material_0/tex_base' (ID: 'UsdUVTexture')
+       *   Implementation: 'id'
+       *   纹理引用 (Texture Assets):
+           *   '0/Material_0_baseColor.jpg'
+       *   Inputs:
+           *   'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
+           *   'file' [asset] = '0/Material_0_baseColor.jpg'
+           *   'st' [float2]
+               *   Connected: '/World/Conveyor_Belt_06/Materials/Material_0/uvset0.outputs:result' @ '/World/Conveyor_Belt_06/Materials/Material_0/uvset0'
+                   *   Shader ID: 'UsdPrimvarReader_float2'
+       *   '/World/Conveyor_Belt_06/Materials/Material_0/uvset0' (ID: 'UsdPrimvarReader_float2')
+       *   Implementation: 'id'
+
+
+---
+
+
+### /World/MobileShopDesk_A01_Blue_01/Looks/Metal_Glossy_A_MobileShopDesk_A
+*  **Prim路径 (Prim Path):**/World/MobileShopDesk_A01_Blue_01/Looks/Metal_Glossy_A_MobileShopDesk_A
+*  **Prim类型 (Prim Type):**Material
+*  **材质网络 (Material & Shader Details):**
+   *   **Surface Outputs:**
+       *   'outputs:surface'
+       *   'outputs:mdl:surface' -> '/World/MobileShopDesk_A01_Blue_01/Looks/Metal_Glossy_A_MobileShopDesk_A/Shader'
+       *   Connection: 'out' (Output)'
+   *   **Shader 节点 (Shader Nodes):**
+       *   '/World/MobileShopDesk_A01_Blue_01/Looks/Metal_Glossy_A_MobileShopDesk_A/Shader'
+       *   Implementation: 'sourceAsset'
+       *   Source Assets:
+           *   [mdl] '0/Metal_Glossy_A.mdl' (Sub Id: 'Metal_Glossy_A')  | Resolved: '/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Workbench/MobileShopDesk_A01_Blue_01.usdz[0/Metal_Glossy_A.mdl]'
+
+
+---
+
+
+### /World/MobileShopDesk_A01_Blue_01/Looks/Metal_Rough_A_MobileShopDesk_A
+*  **Prim路径 (Prim Path):**/World/MobileShopDesk_A01_Blue_01/Looks/Metal_Rough_A_MobileShopDesk_A
+*  **Prim类型 (Prim Type):**Material
+*  **材质网络 (Material & Shader Details):**
+   *   **Surface Outputs:**
+       *   'outputs:surface'
+       *   'outputs:mdl:surface' -> '/World/MobileShopDesk_A01_Blue_01/Looks/Metal_Rough_A_MobileShopDesk_A/Shader'
+       *   Connection: 'out' (Output)'
+   *   **Shader 节点 (Shader Nodes):**
+       *   '/World/MobileShopDesk_A01_Blue_01/Looks/Metal_Rough_A_MobileShopDesk_A/Shader'
+       *   Implementation: 'sourceAsset'
+       *   Source Assets:
+           *   [mdl] '0/Metal_Rough_A.mdl' (Sub Id: 'Metal_Rough_A')  | Resolved: '/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Workbench/MobileShopDesk_A01_Blue_01.usdz[0/Metal_Rough_A.mdl]'
+
+
+---
+
+
+### /World/MobileShopDesk_A01_Blue_01/Looks/Plastic_Black_A_MobileShopDesk_A
+*  **Prim路径 (Prim Path):**/World/MobileShopDesk_A01_Blue_01/Looks/Plastic_Black_A_MobileShopDesk_A
+*  **Prim类型 (Prim Type):**Material
+*  **材质网络 (Material & Shader Details):**
+   *   **Surface Outputs:**
+       *   'outputs:surface'
+       *   'outputs:mdl:surface' -> '/World/MobileShopDesk_A01_Blue_01/Looks/Plastic_Black_A_MobileShopDesk_A/Shader'
+       *   Connection: 'out' (Output)'
+   *   **Shader 节点 (Shader Nodes):**
+       *   '/World/MobileShopDesk_A01_Blue_01/Looks/Plastic_Black_A_MobileShopDesk_A/Shader'
+       *   Implementation: 'sourceAsset'
+       *   Source Assets:
+           *   [mdl] '2/Plastic_Black_A.mdl' (Sub Id: 'Plastic_Black_A')  | Resolved: '/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Workbench/MobileShopDesk_A01_Blue_01.usdz[2/Plastic_Black_A.mdl]'
+
+
+---
+
+
+### /World/MobileShopDesk_A01_Blue_01/Looks/Rubber_Gray_Glossy_A_MobileShopDesk_A
+*  **Prim路径 (Prim Path):**/World/MobileShopDesk_A01_Blue_01/Looks/Rubber_Gray_Glossy_A_MobileShopDesk_A
+*  **Prim类型 (Prim Type):**Material
+*  **材质网络 (Material & Shader Details):**
+   *   **Surface Outputs:**
+       *   'outputs:surface'
+       *   'outputs:mdl:surface' -> '/World/MobileShopDesk_A01_Blue_01/Looks/Rubber_Gray_Glossy_A_MobileShopDesk_A/Shader'
+       *   Connection: 'out' (Output)'
+   *   **Shader 节点 (Shader Nodes):**
+       *   '/World/MobileShopDesk_A01_Blue_01/Looks/Rubber_Gray_Glossy_A_MobileShopDesk_A/Shader'
+       *   Implementation: 'sourceAsset'
+       *   Source Assets:
+           *   [mdl] '1/Rubber_Black_Glossy_A.mdl' (Sub Id: 'Rubber_Black_Glossy_A')  | Resolved: '/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Workbench/MobileShopDesk_A01_Blue_01.usdz[1/Rubber_Black_Glossy_A.mdl]'
+       *   Inputs:
+           *   'diffuse_tint' [color3f] = '(0.293, 0.268, 0.250)'
+           *   'reflection_roughness_texture_influence' [float] = '1'
+
+
+---
+
+
+### /World/MobileShopDesk_A01_Blue_01/Looks/Metal_Painted_Blue_Glossy_A_MobileShopDesk_A
+*  **Prim路径 (Prim Path):**/World/MobileShopDesk_A01_Blue_01/Looks/Metal_Painted_Blue_Glossy_A_MobileShopDesk_A
+*  **Prim类型 (Prim Type):**Material
+*  **材质网络 (Material & Shader Details):**
+   *   **Surface Outputs:**
+       *   'outputs:surface'
+       *   'outputs:mdl:surface' -> '/World/MobileShopDesk_A01_Blue_01/Looks/Metal_Painted_Blue_Glossy_A_MobileShopDesk_A/Shader'
+       *   Connection: 'out' (Output)'
+   *   **Shader 节点 (Shader Nodes):**
+       *   '/World/MobileShopDesk_A01_Blue_01/Looks/Metal_Painted_Blue_Glossy_A_MobileShopDesk_A/Shader'
+       *   Implementation: 'sourceAsset'
+       *   Source Assets:
+           *   [mdl] '0/Metal_Painted_White_Glossy_A.mdl' (Sub Id: 'Metal_Painted_White_Glossy_A')  | Resolved: '/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Workbench/MobileShopDesk_A01_Blue_01.usdz[0/Metal_Painted_White_Glossy_A.mdl]'
+       *   Inputs:
+           *   'diffuse_tint' [color3f] = '(0.078, 0.121, 0.479)'
 
 
 ---

@@ -36,12 +36,6 @@ class ToolResult:
 
 
 class Tool:
-    """工具接口。子类需要：
-
-    - 设置 ``name`` / ``description`` / OpenAI SDK 格式的 ``schema``
-    - 实现 ``run(context, **kwargs) -> ToolResult``
-    - 实现 ``run_test(context) -> ToolResult``
-    """
 
     name: str = ""
     description: str = ""
@@ -57,7 +51,8 @@ class Tool:
     # ---- 输入校验 ----
 
     def validate(self, kwargs: Dict[str, Any]) -> Optional[str]:
-        parameters = self.schema.get("parameters", {})
+        function_spec = get_tool_function_spec(self.schema)
+        parameters = function_spec.get("parameters", {})
         properties = parameters.get("properties", {})
         required_fields = parameters.get("required", [])
         for field_name in required_fields:
@@ -74,12 +69,19 @@ class Tool:
             return ToolResult(ok=False, error=err)
         try:
             return self.run(context, **kwargs)
-        except (ValueError, KeyError) as exc:
+        except Exception as exc:
             return ToolResult(ok=False, error=str(exc))
 
 
 TOOL_REGISTRY: Dict[str, Tool] = {}
 
+
+def get_tool_function_spec(schema: Dict[str, Any]) -> Dict[str, Any]:
+    """返回 function tool 的内部规格，兼容 OpenAI 嵌套格式和旧扁平格式。"""
+    function_spec = schema.get("function")
+    if isinstance(function_spec, dict):
+        return function_spec
+    return schema
 
 def make_openai_tool_schema(
     name: str,
@@ -88,21 +90,22 @@ def make_openai_tool_schema(
     required: Optional[List[str]] = None,
 ) -> Dict[str, Any]:
     """构造可直接传给 OpenAI SDK ``tools`` 参数的 function tool。
-
     这里显式保留 ``strict=False``：当前工具有不少可选参数，如果让 Responses API
     自动切到 strict 模式，会把可选字段也收紧成必填，改变现有调用语义。
     """
     return {
         "type": "function",
-        "name": name,
-        "description": description,
-        "parameters": {
-            "type": "object",
-            "properties": properties,
-            "required": list(required or []),
-            "additionalProperties": False,
+        "function": {
+            "name": name,
+            "description": description,
+            "parameters": {
+                "type": "object",
+                "properties": properties,
+                "required": list(required or []),
+                "additionalProperties": False,
+            },
+            "strict": False,
         },
-        "strict": False,
     }
 
 
@@ -132,6 +135,7 @@ __all__ = [
     "ToolResult",
     "TOOL_REGISTRY",
     "list_openai_tools",
+    "get_tool_function_spec",
     "make_openai_tool_schema",
     "register_tool",
     "list_tool_specs",

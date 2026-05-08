@@ -36,8 +36,10 @@ class PlaceInstanceTool(Tool):
                 "maxItems": 3,
                 "description": "[sx, sy, sz]，缺省取资产文档的 bbox.size",
             },
-            "instance_id": {"type": "string", "description": "自定义 id，缺省自动生成"},
-            "parent_instance_id": {"type": "string", "description": "若指定，则同时登记支撑关系"},
+            "instance_id": {"type": "string", 
+                            "description": "查看retrieve_assets返回结果里 instance_id 字段，必须保证唯一性，不要随意编造"},
+            "parent_instance_id": {"type": "string", 
+                                   "description": "若指定，则同时登记支撑关系"},
         },
         required=["asset_doc_id", "position"],
     )
@@ -57,8 +59,7 @@ class PlaceInstanceTool(Tool):
         usd_path = str(doc.metadata.get("usd_path") or "")
         bbox_size = kwargs.get("bbox_size") or doc.metadata.get("bbox_size") or [1.0, 1.0, 1.0]
         bbox_size = _validate_vec3(bbox_size, "bbox_size")
-
-        instance_id = kwargs.get("instance_id") or context.scene.next_instance_id(asset_type)
+        instance_id = str(doc.metadata.get("instance_id") or "") or context.scene.next_instance_id(asset_type)
         if instance_id in context.scene.state.instances:
             return ToolResult(ok=False, error=f"instance_id 已存在: {instance_id}")
 
@@ -90,7 +91,6 @@ class PlaceInstanceTool(Tool):
             "usd_path": usd_path,
             "position": inst.position,
             "bbox_size": inst.bbox_size,
-            "parent_instance_id": parent_id,
             "tags": inst.tags,
             "description": inst.description,
         })

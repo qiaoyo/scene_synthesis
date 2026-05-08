@@ -217,6 +217,7 @@ def load_csv_documents(csv_path: Path, chunk_size: int, chunk_overlap: int) -> L
                 for key, value in row.items()
             }
             asset_category = _get_field(normalized_row, "Assets Type", "Asset Type", "Type") or csv_path.stem
+            instanceID = _get_field(normalized_row, "InstanceID", "Instance Id", "InstanceID", "instance_id")
             usd_path = _get_field(normalized_row, "Path", "USD", "USD Path")
             tag_raw = _get_field(normalized_row, "Tag", "Tags")
             description = _get_field(normalized_row, "Description", "Functional Features")
@@ -234,6 +235,7 @@ def load_csv_documents(csv_path: Path, chunk_size: int, chunk_overlap: int) -> L
             size_text = "unknown" if not bbox_size else " x ".join(f"{v:.3f}" for v in bbox_size)
             base_text = (
                 f"Asset type / 资产类型: {asset_category}\n"
+                f"Instance ID: {instanceID}\n"
                 f"USD path: {usd_path}\n"
                 f"Tags / 标签: {tags_text}\n"
                 f"Functional description / 功能描述: {description}\n"
@@ -252,6 +254,7 @@ def load_csv_documents(csv_path: Path, chunk_size: int, chunk_overlap: int) -> L
                         "tag_raw": tag_raw,
                         "tags": tags,
                         "description": description,
+                        "instance_id": instanceID,
                         "source": str(csv_path),
                         "row_index": idx,
                         "bbox": bbox,

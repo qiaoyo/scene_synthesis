@@ -6,18 +6,18 @@
 *  **单位与坐标系 (Units & Coordinate System):**
    *   **米(Meters Per Unit):**1.0
    *   **Up Axis:**Z
-*  **场景描述(Scene Describe):**  该场景展示了一个极具复杂度和高度集成化的物流分拣与仓储中转中心，其空间格局呈现出多层次、立体化的网格布局特征。车间内部空间被庞大的蓝色钢制货架与输送系统占据，墙面为简约的浅灰色工业板材，地面铺设了具有灰色、红色与黑色斑驳纹理的高强度工业地毯，不仅具有吸音减震的作用，也通过色彩暗示了不同的功能作业区。整个空间被精准划分为高位输送区、自动化立体缓存区以及机器人协作码放区，体现了极高的空间利用效率和现代物流工程的规划逻辑。在设备识别与排布方面，该场景的核心是一套覆盖全场的多层蓝色滚筒输送网络。这套网络由数以百计的银灰色金属滚筒组成，框架采用了耐磨的蓝色喷涂钢件，具备多级垂直支撑结构。输送带分为主干道与众多的垂直分支，每一段输送线上都均匀分布着大量灰色条状工件。这种错落有致的交叉布局模式，允许物料在不同高度、不同方向之间进行快速切换与缓存。输送机框架下方还隐蔽地布置了成排的白色线缆管路，为密集的传感器和驱动电机提供电力与信号支持。在系统的边缘地带，该场景配置了一个由多台高性能工业机器人组成的自动化作业阵列。图中识别出至少四台米白色涂装的大型六轴工业机器人，它们采取线性并列排布。每台机器人均固定在厚实的圆形基座上，机械臂伸展跨度大，末端配备了可多向转动的精密抓手。这些机器人正处于协同作业状态，负责将输送线终端流出的工件精准抓取并码放到下方的移动载具上。动态搬运设备方面，该场景中出现了多台黄色顶部的自动引导运输车（AGV）。这些AGV身形小巧，分布在机器人作业区的正下方通道中。每台AGV顶部都精准地承载着一个深蓝色的塑料物流框，与上方的机器人作业高度完美衔接。AGV的数量与机器人形成了灵活的配比关系，通过集群调度实现物料从机器人码放点到后续仓储区的柔性流转。从整体规划结构分析，该场景是一个典型的“立体化分拣+平面化码放”的集成系统。设备间的排布关系呈现出极强的三维空间耦合：顶部的网格状输送系统负责宏观的物料分拨与流量控制，侧向的机器人阵列执行末端的精细化操作，底部的AGV集群则完成了最后的水平搬运闭环。这种纵向延伸的规划方式，极大地压缩了地面作业面积，同时也通过多机协作（机器人+AGV）降低了人工干预的需求。整个车间规划展现了数字化工厂在处理海量、高频物流任务时的极致效率与精密协同逻辑，是当代智慧物流中心的高标准缩影。
+*  **场景描述(Scene Describe):** 该场景呈现出一个极其复杂且高度集成的矩阵式工业分拣与输送中心，整体规划严谨地遵循了“多层网格化”的设计逻辑，展现了一个空间利用率极高的现代智慧工厂内部景观。从车间的空间格局来看，该区域被一套庞大的蓝色钢构架立体化地分割，形成了清晰的区域划分与功能层次，地面铺设了带有红黑相间纹理的防静电地坪，为底层移动设备的精准运行提供了可靠的物理支撑。核心工业设备由一套纵横交错的多层滚筒输送系统构成，这些输送线采用了醒目的深蓝色槽钢框架，通过密集的纵向支腿架设在不同高度的空间内，构成了车间的“物料交通骨干”。滚筒表面采用了耐磨的银灰色金属材质，其上正密布着大量长方体形状的灰色工件，这些工件在交错的输送网络中正按照预设逻辑进行多向流转。在输送系统的关键交叉节点和侧翼末端，成排部署了多个标准化的机器人作业单元。每个单元均包含一个顶面为黑色的白色长方形工作台，台面上方垂直安装了一台淡黄色的六轴工业机器人，这些机械臂线条挺拔且关节处带有银色防护罩，正处于精准抓取或待命的高频作业姿态。与此同时，在输送架下方的底层通道内，部署了多台亮黄色的自动导引运输车（AGV），这些移动平台顶部载有一个深蓝色的镂空周转筐，正按照预设的网格路径在不同工位间进行物料的底层接驳，与高层输送流形成了完美的立体协同。从设备排布方式与整体规划结构分析，该场景巧妙地利用了垂直维度，将繁忙的物流分流操作抬升至半空中，从而在地面层预留了充足的AGV行驶冗余与维护通道。输送线的排布呈现出严密的网格状拓扑结构，每一处“T”型或“十”型交汇点都预留了传感定位装置，确保了工件在多线切换时的轨迹精度。机器人工作站的分布位置经过了精密的空间包络计算，确保了每一台机械臂在执行全半径挥转动作时，既能触及高层输送带末端，又能与下方的AGV进行无缝交互，这种“点、线、面”在三维空间上的深度耦合，极大提升了车间的柔性化处理能力。整个画面色彩分区极具工业逻辑：蓝色构架定义了空间骨架与长程流向，黄色移动平台标识了动态的物流变量，而淡色机器人则代表了高精度的控制核心。这种由立体滚筒矩阵、协作机器人集群、自动化存储架以及底层AGV网络构成的工业景观，深刻诠释了工业4.0时代关于“高密度集成、多智能体协同、全场景无人化”的顶层规划精髓。场景中没有任何冗余的线缆外露，所有控制逻辑似乎都已集成在蓝色的输送梁内部，展现了一个处于极佳运行节拍、具备高度自治能力的智慧制造工厂范本。
 * **设备数量(Device Number):**
   * **Scene: 1**
   * **IndustrialRobot: 4**
-  * **Workbench: 0**
+  * **Workbench: 4**
   * **Conveyor: 16**
   * **AGV: 4**
   * **Forklift: 0**
   * **Box: 4**
   * **Rack: 0**
   * **Pallet: 0**
-  * **Part: 152**
+  * **Part: 108**
   * **Decoration: 0**
 
 ## 2.场景对象层级(Scene Hierarchy)
@@ -6198,882 +6198,6 @@
             *   SM_ConveyorBelt_A60_SorterRoller05_01 (Mesh)
             *   SM_ConveyorBelt_A60_SorterRoller06_01 (Mesh)
             *   SM_ConveyorBelt_A60_Belt01_01 (Mesh)
-    *   RobotArm_1 (Xform)
-        *   Materials (Scope)
-            *   Brass___Polished (Material)
-                *   pbr_shader (Shader)
-            *   Aluminum___Anodized_Glossy_Grey (Material)
-                *   pbr_shader (Shader)
-            *   Paint___Enamel_Glossy_Yellow (Material)
-                *   pbr_shader (Shader)
-            *   Body1__0 (Material)
-                *   pbr_shader (Shader)
-            *   Steel___Satin (Material)
-                *   pbr_shader (Shader)
-            *   Paint___Enamel_Glossy_Black (Material)
-                *   pbr_shader (Shader)
-        *   Meshes (Xform)
-            *   Sketchfab_model (Xform)
-                *   c87c2a6ebd5447f7ac496076c3c610d3_fbx (Xform)
-                    *   RootNode (Xform)
-                        *   PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84 (Xform)
-                            *   Component_1_Base_1 (Xform)
-                                *   Component_1_Base (Xform)
-                                    *   Component2_1 (Xform)
-                                        *   Component2 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component24_1 (Xform)
-                                        *   Component24 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component25_1 (Xform)
-                                        *   Component25 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component26_1 (Xform)
-                                        *   Component26 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component27_1 (Xform)
-                                        *   Component27 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component28_1 (Xform)
-                                        *   Component28 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                            *   Component_2_Jaw_1_1 (Xform)
-                                *   Component_2_Jaw_1 (Xform)
-                                    *   Component4_1 (Xform)
-                                        *   Component4 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component17_1 (Xform)
-                                        *   Component17 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                            *   Component_3_Jaw_2_1 (Xform)
-                                *   Component_3_Jaw_2 (Xform)
-                                    *   Component6_1 (Xform)
-                                        *   Component6 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Paint___Enamel_Glossy__Yellow__0 (Xform)
-                                                    *   Body1_Paint___Enamel_Glossy__Yellow__0 (Mesh)
-                                                *   Body1__0 (Xform)
-                                                    *   Body1__0 (Mesh)
-                                    *   Component29_1 (Xform)
-                                        *   Component29 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component30_1 (Xform)
-                                        *   Component30 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component31_1 (Xform)
-                                        *   Component31 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component32_1 (Xform)
-                                        *   Component32 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component33_1 (Xform)
-                                        *   Component33 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component34_1 (Xform)
-                                        *   Component34 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component35_1 (Xform)
-                                        *   Component35 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component36_1 (Xform)
-                                        *   Component36 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component37_1 (Xform)
-                                        *   Component37 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component38_1 (Xform)
-                                        *   Component38 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component39_1 (Xform)
-                                        *   Component39 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component40_1 (Xform)
-                                        *   Component40 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component41_1 (Xform)
-                                        *   Component41 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component42_1 (Xform)
-                                        *   Component42 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                            *   Component_4_Jaw_3_1 (Xform)
-                                *   Component_4_Jaw_3 (Xform)
-                                    *   Component8_1 (Xform)
-                                        *   Component8 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component22_1 (Xform)
-                                        *   Component22 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component23_1 (Xform)
-                                        *   Component23 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                            *   Component_5_Jaw_4_1 (Xform)
-                                *   Component_5_Jaw_4 (Xform)
-                                    *   Component10_1 (Xform)
-                                        *   Component10 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Paint___Enamel_Glossy__Black__0 (Xform)
-                                                    *   Body1_Paint___Enamel_Glossy__Black__0 (Mesh)
-                                                *   Body1__0 (Xform)
-                                                    *   Body1__0 (Mesh)
-                                    *   Component20_1 (Xform)
-                                        *   Component20 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component21_1 (Xform)
-                                        *   Component21 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                            *   Component_6_Jaw_5_1 (Xform)
-                                *   Component_6_Jaw_5 (Xform)
-                                    *   Component12_1 (Xform)
-                                        *   Component12 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component18_1 (Xform)
-                                        *   Component18 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component19_1 (Xform)
-                                        *   Component19 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Paint___Enamel_Glossy__Yellow__0 (Xform)
-                                                    *   Body1_Paint___Enamel_Glossy__Yellow__0 (Mesh)
-                            *   Component_7_Jaw_6_1 (Xform)
-                                *   Component_7_Jaw_6 (Xform)
-                                    *   Component14_1 (Xform)
-                                        *   Component14 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component43_1 (Xform)
-                                        *   Component43 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                            *   Component_8_Jaw_7_1 (Xform)
-                                *   Component_8_Jaw_7 (Xform)
-                                    *   Component16_1 (Xform)
-                                        *   Component16 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component16_2 (Xform)
-                                        *   Component16 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-    *   RobotArm_2 (Xform)
-        *   Materials (Scope)
-            *   Brass___Polished (Material)
-                *   pbr_shader (Shader)
-            *   Aluminum___Anodized_Glossy_Grey (Material)
-                *   pbr_shader (Shader)
-            *   Paint___Enamel_Glossy_Yellow (Material)
-                *   pbr_shader (Shader)
-            *   Body1__0 (Material)
-                *   pbr_shader (Shader)
-            *   Steel___Satin (Material)
-                *   pbr_shader (Shader)
-            *   Paint___Enamel_Glossy_Black (Material)
-                *   pbr_shader (Shader)
-        *   Meshes (Xform)
-            *   Sketchfab_model (Xform)
-                *   c87c2a6ebd5447f7ac496076c3c610d3_fbx (Xform)
-                    *   RootNode (Xform)
-                        *   PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84 (Xform)
-                            *   Component_1_Base_1 (Xform)
-                                *   Component_1_Base (Xform)
-                                    *   Component2_1 (Xform)
-                                        *   Component2 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component24_1 (Xform)
-                                        *   Component24 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component25_1 (Xform)
-                                        *   Component25 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component26_1 (Xform)
-                                        *   Component26 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component27_1 (Xform)
-                                        *   Component27 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component28_1 (Xform)
-                                        *   Component28 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                            *   Component_2_Jaw_1_1 (Xform)
-                                *   Component_2_Jaw_1 (Xform)
-                                    *   Component4_1 (Xform)
-                                        *   Component4 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component17_1 (Xform)
-                                        *   Component17 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                            *   Component_3_Jaw_2_1 (Xform)
-                                *   Component_3_Jaw_2 (Xform)
-                                    *   Component6_1 (Xform)
-                                        *   Component6 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Paint___Enamel_Glossy__Yellow__0 (Xform)
-                                                    *   Body1_Paint___Enamel_Glossy__Yellow__0 (Mesh)
-                                                *   Body1__0 (Xform)
-                                                    *   Body1__0 (Mesh)
-                                    *   Component29_1 (Xform)
-                                        *   Component29 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component30_1 (Xform)
-                                        *   Component30 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component31_1 (Xform)
-                                        *   Component31 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component32_1 (Xform)
-                                        *   Component32 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component33_1 (Xform)
-                                        *   Component33 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component34_1 (Xform)
-                                        *   Component34 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component35_1 (Xform)
-                                        *   Component35 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component36_1 (Xform)
-                                        *   Component36 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component37_1 (Xform)
-                                        *   Component37 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component38_1 (Xform)
-                                        *   Component38 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component39_1 (Xform)
-                                        *   Component39 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component40_1 (Xform)
-                                        *   Component40 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component41_1 (Xform)
-                                        *   Component41 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component42_1 (Xform)
-                                        *   Component42 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                            *   Component_4_Jaw_3_1 (Xform)
-                                *   Component_4_Jaw_3 (Xform)
-                                    *   Component8_1 (Xform)
-                                        *   Component8 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component22_1 (Xform)
-                                        *   Component22 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component23_1 (Xform)
-                                        *   Component23 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                            *   Component_5_Jaw_4_1 (Xform)
-                                *   Component_5_Jaw_4 (Xform)
-                                    *   Component10_1 (Xform)
-                                        *   Component10 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Paint___Enamel_Glossy__Black__0 (Xform)
-                                                    *   Body1_Paint___Enamel_Glossy__Black__0 (Mesh)
-                                                *   Body1__0 (Xform)
-                                                    *   Body1__0 (Mesh)
-                                    *   Component20_1 (Xform)
-                                        *   Component20 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component21_1 (Xform)
-                                        *   Component21 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                            *   Component_6_Jaw_5_1 (Xform)
-                                *   Component_6_Jaw_5 (Xform)
-                                    *   Component12_1 (Xform)
-                                        *   Component12 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component18_1 (Xform)
-                                        *   Component18 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component19_1 (Xform)
-                                        *   Component19 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Paint___Enamel_Glossy__Yellow__0 (Xform)
-                                                    *   Body1_Paint___Enamel_Glossy__Yellow__0 (Mesh)
-                            *   Component_7_Jaw_6_1 (Xform)
-                                *   Component_7_Jaw_6 (Xform)
-                                    *   Component14_1 (Xform)
-                                        *   Component14 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component43_1 (Xform)
-                                        *   Component43 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                            *   Component_8_Jaw_7_1 (Xform)
-                                *   Component_8_Jaw_7 (Xform)
-                                    *   Component16_1 (Xform)
-                                        *   Component16 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component16_2 (Xform)
-                                        *   Component16 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-    *   RobotArm_3 (Xform)
-        *   Materials (Scope)
-            *   Brass___Polished (Material)
-                *   pbr_shader (Shader)
-            *   Aluminum___Anodized_Glossy_Grey (Material)
-                *   pbr_shader (Shader)
-            *   Paint___Enamel_Glossy_Yellow (Material)
-                *   pbr_shader (Shader)
-            *   Body1__0 (Material)
-                *   pbr_shader (Shader)
-            *   Steel___Satin (Material)
-                *   pbr_shader (Shader)
-            *   Paint___Enamel_Glossy_Black (Material)
-                *   pbr_shader (Shader)
-        *   Meshes (Xform)
-            *   Sketchfab_model (Xform)
-                *   c87c2a6ebd5447f7ac496076c3c610d3_fbx (Xform)
-                    *   RootNode (Xform)
-                        *   PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84 (Xform)
-                            *   Component_1_Base_1 (Xform)
-                                *   Component_1_Base (Xform)
-                                    *   Component2_1 (Xform)
-                                        *   Component2 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component24_1 (Xform)
-                                        *   Component24 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component25_1 (Xform)
-                                        *   Component25 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component26_1 (Xform)
-                                        *   Component26 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component27_1 (Xform)
-                                        *   Component27 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component28_1 (Xform)
-                                        *   Component28 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                            *   Component_2_Jaw_1_1 (Xform)
-                                *   Component_2_Jaw_1 (Xform)
-                                    *   Component4_1 (Xform)
-                                        *   Component4 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component17_1 (Xform)
-                                        *   Component17 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                            *   Component_3_Jaw_2_1 (Xform)
-                                *   Component_3_Jaw_2 (Xform)
-                                    *   Component6_1 (Xform)
-                                        *   Component6 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Paint___Enamel_Glossy__Yellow__0 (Xform)
-                                                    *   Body1_Paint___Enamel_Glossy__Yellow__0 (Mesh)
-                                                *   Body1__0 (Xform)
-                                                    *   Body1__0 (Mesh)
-                                    *   Component29_1 (Xform)
-                                        *   Component29 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component30_1 (Xform)
-                                        *   Component30 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component31_1 (Xform)
-                                        *   Component31 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component32_1 (Xform)
-                                        *   Component32 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component33_1 (Xform)
-                                        *   Component33 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component34_1 (Xform)
-                                        *   Component34 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component35_1 (Xform)
-                                        *   Component35 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component36_1 (Xform)
-                                        *   Component36 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component37_1 (Xform)
-                                        *   Component37 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component38_1 (Xform)
-                                        *   Component38 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component39_1 (Xform)
-                                        *   Component39 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component40_1 (Xform)
-                                        *   Component40 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component41_1 (Xform)
-                                        *   Component41 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component42_1 (Xform)
-                                        *   Component42 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                            *   Component_4_Jaw_3_1 (Xform)
-                                *   Component_4_Jaw_3 (Xform)
-                                    *   Component8_1 (Xform)
-                                        *   Component8 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component22_1 (Xform)
-                                        *   Component22 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component23_1 (Xform)
-                                        *   Component23 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                            *   Component_5_Jaw_4_1 (Xform)
-                                *   Component_5_Jaw_4 (Xform)
-                                    *   Component10_1 (Xform)
-                                        *   Component10 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Paint___Enamel_Glossy__Black__0 (Xform)
-                                                    *   Body1_Paint___Enamel_Glossy__Black__0 (Mesh)
-                                                *   Body1__0 (Xform)
-                                                    *   Body1__0 (Mesh)
-                                    *   Component20_1 (Xform)
-                                        *   Component20 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component21_1 (Xform)
-                                        *   Component21 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                            *   Component_6_Jaw_5_1 (Xform)
-                                *   Component_6_Jaw_5 (Xform)
-                                    *   Component12_1 (Xform)
-                                        *   Component12 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component18_1 (Xform)
-                                        *   Component18 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component19_1 (Xform)
-                                        *   Component19 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Paint___Enamel_Glossy__Yellow__0 (Xform)
-                                                    *   Body1_Paint___Enamel_Glossy__Yellow__0 (Mesh)
-                            *   Component_7_Jaw_6_1 (Xform)
-                                *   Component_7_Jaw_6 (Xform)
-                                    *   Component14_1 (Xform)
-                                        *   Component14 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component43_1 (Xform)
-                                        *   Component43 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                            *   Component_8_Jaw_7_1 (Xform)
-                                *   Component_8_Jaw_7 (Xform)
-                                    *   Component16_1 (Xform)
-                                        *   Component16 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component16_2 (Xform)
-                                        *   Component16 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-    *   RobotArm_4 (Xform)
-        *   Materials (Scope)
-            *   Brass___Polished (Material)
-                *   pbr_shader (Shader)
-            *   Aluminum___Anodized_Glossy_Grey (Material)
-                *   pbr_shader (Shader)
-            *   Paint___Enamel_Glossy_Yellow (Material)
-                *   pbr_shader (Shader)
-            *   Body1__0 (Material)
-                *   pbr_shader (Shader)
-            *   Steel___Satin (Material)
-                *   pbr_shader (Shader)
-            *   Paint___Enamel_Glossy_Black (Material)
-                *   pbr_shader (Shader)
-        *   Meshes (Xform)
-            *   Sketchfab_model (Xform)
-                *   c87c2a6ebd5447f7ac496076c3c610d3_fbx (Xform)
-                    *   RootNode (Xform)
-                        *   PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84 (Xform)
-                            *   Component_1_Base_1 (Xform)
-                                *   Component_1_Base (Xform)
-                                    *   Component2_1 (Xform)
-                                        *   Component2 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component24_1 (Xform)
-                                        *   Component24 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component25_1 (Xform)
-                                        *   Component25 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component26_1 (Xform)
-                                        *   Component26 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component27_1 (Xform)
-                                        *   Component27 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component28_1 (Xform)
-                                        *   Component28 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                            *   Component_2_Jaw_1_1 (Xform)
-                                *   Component_2_Jaw_1 (Xform)
-                                    *   Component4_1 (Xform)
-                                        *   Component4 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component17_1 (Xform)
-                                        *   Component17 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                            *   Component_3_Jaw_2_1 (Xform)
-                                *   Component_3_Jaw_2 (Xform)
-                                    *   Component6_1 (Xform)
-                                        *   Component6 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Paint___Enamel_Glossy__Yellow__0 (Xform)
-                                                    *   Body1_Paint___Enamel_Glossy__Yellow__0 (Mesh)
-                                                *   Body1__0 (Xform)
-                                                    *   Body1__0 (Mesh)
-                                    *   Component29_1 (Xform)
-                                        *   Component29 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component30_1 (Xform)
-                                        *   Component30 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component31_1 (Xform)
-                                        *   Component31 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component32_1 (Xform)
-                                        *   Component32 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component33_1 (Xform)
-                                        *   Component33 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component34_1 (Xform)
-                                        *   Component34 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component35_1 (Xform)
-                                        *   Component35 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component36_1 (Xform)
-                                        *   Component36 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component37_1 (Xform)
-                                        *   Component37 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component38_1 (Xform)
-                                        *   Component38 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component39_1 (Xform)
-                                        *   Component39 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component40_1 (Xform)
-                                        *   Component40 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component41_1 (Xform)
-                                        *   Component41 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                                    *   Component42_1 (Xform)
-                                        *   Component42 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                            *   Component_4_Jaw_3_1 (Xform)
-                                *   Component_4_Jaw_3 (Xform)
-                                    *   Component8_1 (Xform)
-                                        *   Component8 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component22_1 (Xform)
-                                        *   Component22 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component23_1 (Xform)
-                                        *   Component23 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                            *   Component_5_Jaw_4_1 (Xform)
-                                *   Component_5_Jaw_4 (Xform)
-                                    *   Component10_1 (Xform)
-                                        *   Component10 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Paint___Enamel_Glossy__Black__0 (Xform)
-                                                    *   Body1_Paint___Enamel_Glossy__Black__0 (Mesh)
-                                                *   Body1__0 (Xform)
-                                                    *   Body1__0 (Mesh)
-                                    *   Component20_1 (Xform)
-                                        *   Component20 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component21_1 (Xform)
-                                        *   Component21 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Steel___Satin_0 (Xform)
-                                                    *   Body1_Steel___Satin_0 (Mesh)
-                            *   Component_6_Jaw_5_1 (Xform)
-                                *   Component_6_Jaw_5 (Xform)
-                                    *   Component12_1 (Xform)
-                                        *   Component12 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component18_1 (Xform)
-                                        *   Component18 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component19_1 (Xform)
-                                        *   Component19 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Paint___Enamel_Glossy__Yellow__0 (Xform)
-                                                    *   Body1_Paint___Enamel_Glossy__Yellow__0 (Mesh)
-                            *   Component_7_Jaw_6_1 (Xform)
-                                *   Component_7_Jaw_6 (Xform)
-                                    *   Component14_1 (Xform)
-                                        *   Component14 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Brass___Polished_0 (Xform)
-                                                    *   Body1_Brass___Polished_0 (Mesh)
-                                    *   Component43_1 (Xform)
-                                        *   Component43 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                            *   Component_8_Jaw_7_1 (Xform)
-                                *   Component_8_Jaw_7 (Xform)
-                                    *   Component16_1 (Xform)
-                                        *   Component16 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
-                                    *   Component16_2 (Xform)
-                                        *   Component16 (Xform)
-                                            *   Body1 (Xform)
-                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
-                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
     *   AGV_1 (Xform)
         *   Materials (Scope)
             *   ASELSAN_CATS_04 (Material)
@@ -9151,7 +8275,6 @@
     *   PartOnConveyor1_3 (Xform)
         *   node__Size_8_Length_28_SUPPRESSION_A_Simplified (Xform)
             *   geometry_1 (Mesh)
-    *   PartOnConveyor1_4 (Xform)
     *   PartOnConveyor1_5 (Xform)
         *   node__Size_8_Length_28_SUPPRESSION_A_Simplified (Xform)
             *   geometry_1 (Mesh)
@@ -9500,6 +8623,280 @@
     *   PartInCarton_8 (Xform)
         *   node__Size_8_Length_28_SUPPRESSION_A_Simplified (Xform)
             *   geometry_1 (Mesh)
+    *   model_lab_cabinet002_03 (Prim)
+    *   INDUSTRIAL_ROBOTIC_ARM_03 (Prim)
+    *   model_lab_cabinet002_02 (Prim)
+    *   INDUSTRIAL_ROBOTIC_ARM_02 (Prim)
+    *   model_lab_cabinet002_01 (Prim)
+    *   INDUSTRIAL_ROBOTIC_ARM_01 (Prim)
+    *   INDUSTRIAL_ROBOTIC_ARM (Xform)
+        *   Materials (Scope)
+            *   Brass___Polished (Material)
+                *   pbr_shader (Shader)
+            *   Aluminum___Anodized_Glossy_Grey (Material)
+                *   pbr_shader (Shader)
+            *   Paint___Enamel_Glossy_Yellow (Material)
+                *   pbr_shader (Shader)
+            *   Body1__0 (Material)
+                *   pbr_shader (Shader)
+            *   Steel___Satin (Material)
+                *   pbr_shader (Shader)
+            *   Paint___Enamel_Glossy_Black (Material)
+                *   pbr_shader (Shader)
+        *   Meshes (Xform)
+            *   Sketchfab_model (Xform)
+                *   c87c2a6ebd5447f7ac496076c3c610d3_fbx (Xform)
+                    *   RootNode (Xform)
+                        *   PDM_INDUSTRIAL_ROBOTIC_ARM_PROJECT_v84 (Xform)
+                            *   Component_1_Base_1 (Xform)
+                                *   Component_1_Base (Xform)
+                                    *   Component2_1 (Xform)
+                                        *   Component2 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Brass___Polished_0 (Xform)
+                                                    *   Body1_Brass___Polished_0 (Mesh)
+                                    *   Component24_1 (Xform)
+                                        *   Component24 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
+                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
+                                    *   Component25_1 (Xform)
+                                        *   Component25 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
+                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
+                                    *   Component26_1 (Xform)
+                                        *   Component26 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
+                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
+                                    *   Component27_1 (Xform)
+                                        *   Component27 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
+                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
+                                    *   Component28_1 (Xform)
+                                        *   Component28 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Brass___Polished_0 (Xform)
+                                                    *   Body1_Brass___Polished_0 (Mesh)
+                            *   Component_2_Jaw_1_1 (Xform)
+                                *   Component_2_Jaw_1 (Xform)
+                                    *   Component4_1 (Xform)
+                                        *   Component4 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
+                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
+                                    *   Component17_1 (Xform)
+                                        *   Component17 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Brass___Polished_0 (Xform)
+                                                    *   Body1_Brass___Polished_0 (Mesh)
+                            *   Component_3_Jaw_2_1 (Xform)
+                                *   Component_3_Jaw_2 (Xform)
+                                    *   Component6_1 (Xform)
+                                        *   Component6 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Paint___Enamel_Glossy__Yellow__0 (Xform)
+                                                    *   Body1_Paint___Enamel_Glossy__Yellow__0 (Mesh)
+                                                *   Body1__0 (Xform)
+                                                    *   Body1__0 (Mesh)
+                                    *   Component29_1 (Xform)
+                                        *   Component29 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
+                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
+                                    *   Component30_1 (Xform)
+                                        *   Component30 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Steel___Satin_0 (Xform)
+                                                    *   Body1_Steel___Satin_0 (Mesh)
+                                    *   Component31_1 (Xform)
+                                        *   Component31 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Steel___Satin_0 (Xform)
+                                                    *   Body1_Steel___Satin_0 (Mesh)
+                                    *   Component32_1 (Xform)
+                                        *   Component32 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Steel___Satin_0 (Xform)
+                                                    *   Body1_Steel___Satin_0 (Mesh)
+                                    *   Component33_1 (Xform)
+                                        *   Component33 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Steel___Satin_0 (Xform)
+                                                    *   Body1_Steel___Satin_0 (Mesh)
+                                    *   Component34_1 (Xform)
+                                        *   Component34 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Steel___Satin_0 (Xform)
+                                                    *   Body1_Steel___Satin_0 (Mesh)
+                                    *   Component35_1 (Xform)
+                                        *   Component35 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Steel___Satin_0 (Xform)
+                                                    *   Body1_Steel___Satin_0 (Mesh)
+                                    *   Component36_1 (Xform)
+                                        *   Component36 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Steel___Satin_0 (Xform)
+                                                    *   Body1_Steel___Satin_0 (Mesh)
+                                    *   Component37_1 (Xform)
+                                        *   Component37 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Steel___Satin_0 (Xform)
+                                                    *   Body1_Steel___Satin_0 (Mesh)
+                                    *   Component38_1 (Xform)
+                                        *   Component38 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Steel___Satin_0 (Xform)
+                                                    *   Body1_Steel___Satin_0 (Mesh)
+                                    *   Component39_1 (Xform)
+                                        *   Component39 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Steel___Satin_0 (Xform)
+                                                    *   Body1_Steel___Satin_0 (Mesh)
+                                    *   Component40_1 (Xform)
+                                        *   Component40 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Steel___Satin_0 (Xform)
+                                                    *   Body1_Steel___Satin_0 (Mesh)
+                                    *   Component41_1 (Xform)
+                                        *   Component41 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Steel___Satin_0 (Xform)
+                                                    *   Body1_Steel___Satin_0 (Mesh)
+                                    *   Component42_1 (Xform)
+                                        *   Component42 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Steel___Satin_0 (Xform)
+                                                    *   Body1_Steel___Satin_0 (Mesh)
+                            *   Component_4_Jaw_3_1 (Xform)
+                                *   Component_4_Jaw_3 (Xform)
+                                    *   Component8_1 (Xform)
+                                        *   Component8 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Brass___Polished_0 (Xform)
+                                                    *   Body1_Brass___Polished_0 (Mesh)
+                                    *   Component22_1 (Xform)
+                                        *   Component22 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Brass___Polished_0 (Xform)
+                                                    *   Body1_Brass___Polished_0 (Mesh)
+                                    *   Component23_1 (Xform)
+                                        *   Component23 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Brass___Polished_0 (Xform)
+                                                    *   Body1_Brass___Polished_0 (Mesh)
+                            *   Component_5_Jaw_4_1 (Xform)
+                                *   Component_5_Jaw_4 (Xform)
+                                    *   Component10_1 (Xform)
+                                        *   Component10 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Paint___Enamel_Glossy__Black__0 (Xform)
+                                                    *   Body1_Paint___Enamel_Glossy__Black__0 (Mesh)
+                                                *   Body1__0 (Xform)
+                                                    *   Body1__0 (Mesh)
+                                    *   Component20_1 (Xform)
+                                        *   Component20 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
+                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
+                                    *   Component21_1 (Xform)
+                                        *   Component21 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Steel___Satin_0 (Xform)
+                                                    *   Body1_Steel___Satin_0 (Mesh)
+                            *   Component_6_Jaw_5_1 (Xform)
+                                *   Component_6_Jaw_5 (Xform)
+                                    *   Component12_1 (Xform)
+                                        *   Component12 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Brass___Polished_0 (Xform)
+                                                    *   Body1_Brass___Polished_0 (Mesh)
+                                    *   Component18_1 (Xform)
+                                        *   Component18 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Brass___Polished_0 (Xform)
+                                                    *   Body1_Brass___Polished_0 (Mesh)
+                                    *   Component19_1 (Xform)
+                                        *   Component19 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Paint___Enamel_Glossy__Yellow__0 (Xform)
+                                                    *   Body1_Paint___Enamel_Glossy__Yellow__0 (Mesh)
+                            *   Component_7_Jaw_6_1 (Xform)
+                                *   Component_7_Jaw_6 (Xform)
+                                    *   Component14_1 (Xform)
+                                        *   Component14 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Brass___Polished_0 (Xform)
+                                                    *   Body1_Brass___Polished_0 (Mesh)
+                                    *   Component43_1 (Xform)
+                                        *   Component43 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
+                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
+                            *   Component_8_Jaw_7_1 (Xform)
+                                *   Component_8_Jaw_7 (Xform)
+                                    *   Component16_1 (Xform)
+                                        *   Component16 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
+                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
+                                    *   Component16_2 (Xform)
+                                        *   Component16 (Xform)
+                                            *   Body1 (Xform)
+                                                *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Xform)
+                                                    *   Body1_Aluminum___Anodized_Glossy__Grey__0 (Mesh)
+    *   model_lab_cabinet002 (Xform)
+        *   materials (Scope)
+            *   mat_0 (Material)
+                *   PBRShader (Shader)
+            *   mat_83555 (Material)
+                *   PBRShader (Shader)
+                *   stReader (Shader)
+                *   transform_st (Shader)
+                *   diffuseTexture (Shader)
+            *   mat_83560 (Material)
+                *   PBRShader (Shader)
+                *   stReader (Shader)
+                *   transform_st (Shader)
+                *   diffuseTexture (Shader)
+            *   mat_83562 (Material)
+                *   PBRShader (Shader)
+                *   stReader (Shader)
+                *   transform_st (Shader)
+                *   diffuseTexture (Shader)
+            *   mat_83557 (Material)
+                *   PBRShader (Shader)
+                *   stReader (Shader)
+                *   transform_st (Shader)
+                *   diffuseTexture (Shader)
+            *   mat_83559 (Material)
+                *   PBRShader (Shader)
+        *   E_body_1 (Xform)
+            *   E_ComponentM4_10 (Xform)
+                *   P_b8eede2b79e829ca (Mesh)
+            *   E_leg_11 (Xform)
+                *   P_ba4078f1e3b669ca (Mesh)
+                *   P_4aef38f219bc29ca (Mesh)
+            *   E_ComponentM1_2 (Xform)
+                *   P_f41a7086758c89ca (Mesh)
+            *   E_tabletop_3 (Xform)
+                *   P_c9483ab77a6129ca (Mesh)
+            *   E_ComponentM1_4 (Xform)
+                *   P_2b27235699ab29ca (Mesh)
+            *   E_ComponentM4_5 (Xform)
+                *   P_7c4c705b64d7da6a (Mesh)
+            *   E_ComponentM4_6 (Xform)
+                *   P_2c0796fb725c29ca (Mesh)
+            *   E_ComponentM4_7 (Xform)
+                *   P_ce0cd191cc829ca (Mesh)
+            *   E_ComponentM4_8 (Xform)
+                *   P_723cbc27b245f9ca (Mesh)
+            *   E_ComponentM4_9 (Xform)
+                *   P_6acb3a38b9129ca (Mesh)
+        *   PhysicsMaterial (Material)
 
 ## 3. 对象详细描述 (Detailed Prim Descriptions)
 
@@ -9719,58 +9116,6 @@
 *  **世界包围盒 (World BBox):**
    *   Size: '(302.707, 400.012, 231.095)'
    *   Center: '(17.030, 15.319, 1.155)'
-
-
----
-
-
-### /World/RobotArm_1
-*  **Prim路径 (Prim Path):**/World/RobotArm_1
-*  **Prim类型 (Prim Type):**Xform
-*  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/assets/INDUSTRIAL_ROBOTIC_ARM/INDUSTRIAL_ROBOTIC_ARM.usdc'
-*  **世界包围盒 (World BBox):**
-   *   Size: '(1.171, 1.898, 1.690)'
-   *   Center: '(4.495, 3.768, 0.952)'
-
-
----
-
-
-### /World/RobotArm_2
-*  **Prim路径 (Prim Path):**/World/RobotArm_2
-*  **Prim类型 (Prim Type):**Xform
-*  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/assets/INDUSTRIAL_ROBOTIC_ARM/INDUSTRIAL_ROBOTIC_ARM.usdc'
-*  **世界包围盒 (World BBox):**
-   *   Size: '(1.171, 1.898, 1.690)'
-   *   Center: '(8.505, 3.768, 0.952)'
-
-
----
-
-
-### /World/RobotArm_3
-*  **Prim路径 (Prim Path):**/World/RobotArm_3
-*  **Prim类型 (Prim Type):**Xform
-*  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/assets/INDUSTRIAL_ROBOTIC_ARM/INDUSTRIAL_ROBOTIC_ARM.usdc'
-*  **世界包围盒 (World BBox):**
-   *   Size: '(1.171, 1.898, 1.690)'
-   *   Center: '(12.515, 3.768, 0.952)'
-
-
----
-
-
-### /World/RobotArm_4
-*  **Prim路径 (Prim Path):**/World/RobotArm_4
-*  **Prim类型 (Prim Type):**Xform
-*  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/assets/INDUSTRIAL_ROBOTIC_ARM/INDUSTRIAL_ROBOTIC_ARM.usdc'
-*  **世界包围盒 (World BBox):**
-   *   Size: '(1.171, 1.898, 1.690)'
-   *   Center: '(16.525, 3.768, 0.952)'
 
 
 ---
@@ -10330,23 +9675,6 @@
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(5.400, 5.430, 1.815)'
-
-
----
-
-
-### /World/PartOnConveyor1_4
-*  **Prim路径 (Prim Path):**/World/PartOnConveyor1_4
-*  **Prim类型 (Prim Type):**Xform
-*  **变换信息 (Transform):**
-   *   **平移 (Translate):**'(0.000, 0.000, 0.000)'
-   *   **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-   *   **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-*  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/partobj-20260107/_Ping_Jian/Feather keys GB_converted/6;Size=8;Length=28;SUPPRESSION=A,Simplified.usd'
-*  **世界包围盒 (World BBox):**
-   *   Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-   *   Center: '(0.000, 0.000, 0.000)'
 
 
 ---
@@ -11855,6 +11183,32 @@
 *  **世界包围盒 (World BBox):**
    *   Size: '(28.000, 8.000, 7.000)'
    *   Center: '(17.530, 4.250, 0.300)'
+
+
+---
+
+
+### /World/INDUSTRIAL_ROBOTIC_ARM
+*  **Prim路径 (Prim Path):**/World/INDUSTRIAL_ROBOTIC_ARM
+*  **Prim类型 (Prim Type):**Xform
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] '../device_data/usdz/IndustrialRobot/INDUSTRIAL_ROBOTIC_ARM.usdz'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(78.095, 126.534, 112.695)'
+   *   Center: '(4.193, 4.453, 1.435)'
+
+
+---
+
+
+### /World/model_lab_cabinet002
+*  **Prim路径 (Prim Path):**/World/model_lab_cabinet002
+*  **Prim类型 (Prim Type):**Xform
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] '../device_data/usdz/Workbench/model_lab_cabinet002.usdz'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(0.750, 1.500, 0.800)'
+   *   Center: '(4.115, 4.282, 0.400)'
 
 
 ---
@@ -24890,558 +24244,6 @@
 ---
 
 
-### /World/RobotArm_1/Materials/Brass___Polished
-*  **Prim路径 (Prim Path):**/World/RobotArm_1/Materials/Brass___Polished
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/RobotArm_1/Materials/Brass___Polished/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/RobotArm_1/Materials/Brass___Polished/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f] = '(0.953, 0.796, 0.486)'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.957705'
-
-
----
-
-
-### /World/RobotArm_1/Materials/Aluminum___Anodized_Glossy_Grey
-*  **Prim路径 (Prim Path):**/World/RobotArm_1/Materials/Aluminum___Anodized_Glossy_Grey
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/RobotArm_1/Materials/Aluminum___Anodized_Glossy_Grey/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/RobotArm_1/Materials/Aluminum___Anodized_Glossy_Grey/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f] = '(0.537, 0.537, 0.537)'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.957705'
-
-
----
-
-
-### /World/RobotArm_1/Materials/Paint___Enamel_Glossy_Yellow
-*  **Prim路径 (Prim Path):**/World/RobotArm_1/Materials/Paint___Enamel_Glossy_Yellow
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/RobotArm_1/Materials/Paint___Enamel_Glossy_Yellow/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/RobotArm_1/Materials/Paint___Enamel_Glossy_Yellow/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f] = '(0.910, 0.678, 0.137)'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.957705'
-
-
----
-
-
-### /World/RobotArm_1/Materials/Body1__0
-*  **Prim路径 (Prim Path):**/World/RobotArm_1/Materials/Body1__0
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/RobotArm_1/Materials/Body1__0/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/RobotArm_1/Materials/Body1__0/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f] = '(1.000, 1.000, 1.000)'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.6'
-
-
----
-
-
-### /World/RobotArm_1/Materials/Steel___Satin
-*  **Prim路径 (Prim Path):**/World/RobotArm_1/Materials/Steel___Satin
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/RobotArm_1/Materials/Steel___Satin/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/RobotArm_1/Materials/Steel___Satin/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f] = '(0.627, 0.627, 0.627)'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.957705'
-
-
----
-
-
-### /World/RobotArm_1/Materials/Paint___Enamel_Glossy_Black
-*  **Prim路径 (Prim Path):**/World/RobotArm_1/Materials/Paint___Enamel_Glossy_Black
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/RobotArm_1/Materials/Paint___Enamel_Glossy_Black/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/RobotArm_1/Materials/Paint___Enamel_Glossy_Black/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f] = '(0.098, 0.098, 0.098)'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.957705'
-
-
----
-
-
-### /World/RobotArm_2/Materials/Brass___Polished
-*  **Prim路径 (Prim Path):**/World/RobotArm_2/Materials/Brass___Polished
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/RobotArm_2/Materials/Brass___Polished/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/RobotArm_2/Materials/Brass___Polished/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f] = '(0.953, 0.796, 0.486)'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.957705'
-
-
----
-
-
-### /World/RobotArm_2/Materials/Aluminum___Anodized_Glossy_Grey
-*  **Prim路径 (Prim Path):**/World/RobotArm_2/Materials/Aluminum___Anodized_Glossy_Grey
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/RobotArm_2/Materials/Aluminum___Anodized_Glossy_Grey/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/RobotArm_2/Materials/Aluminum___Anodized_Glossy_Grey/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f] = '(0.537, 0.537, 0.537)'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.957705'
-
-
----
-
-
-### /World/RobotArm_2/Materials/Paint___Enamel_Glossy_Yellow
-*  **Prim路径 (Prim Path):**/World/RobotArm_2/Materials/Paint___Enamel_Glossy_Yellow
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/RobotArm_2/Materials/Paint___Enamel_Glossy_Yellow/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/RobotArm_2/Materials/Paint___Enamel_Glossy_Yellow/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f] = '(0.910, 0.678, 0.137)'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.957705'
-
-
----
-
-
-### /World/RobotArm_2/Materials/Body1__0
-*  **Prim路径 (Prim Path):**/World/RobotArm_2/Materials/Body1__0
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/RobotArm_2/Materials/Body1__0/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/RobotArm_2/Materials/Body1__0/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f] = '(1.000, 1.000, 1.000)'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.6'
-
-
----
-
-
-### /World/RobotArm_2/Materials/Steel___Satin
-*  **Prim路径 (Prim Path):**/World/RobotArm_2/Materials/Steel___Satin
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/RobotArm_2/Materials/Steel___Satin/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/RobotArm_2/Materials/Steel___Satin/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f] = '(0.627, 0.627, 0.627)'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.957705'
-
-
----
-
-
-### /World/RobotArm_2/Materials/Paint___Enamel_Glossy_Black
-*  **Prim路径 (Prim Path):**/World/RobotArm_2/Materials/Paint___Enamel_Glossy_Black
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/RobotArm_2/Materials/Paint___Enamel_Glossy_Black/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/RobotArm_2/Materials/Paint___Enamel_Glossy_Black/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f] = '(0.098, 0.098, 0.098)'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.957705'
-
-
----
-
-
-### /World/RobotArm_3/Materials/Brass___Polished
-*  **Prim路径 (Prim Path):**/World/RobotArm_3/Materials/Brass___Polished
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/RobotArm_3/Materials/Brass___Polished/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/RobotArm_3/Materials/Brass___Polished/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f] = '(0.953, 0.796, 0.486)'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.957705'
-
-
----
-
-
-### /World/RobotArm_3/Materials/Aluminum___Anodized_Glossy_Grey
-*  **Prim路径 (Prim Path):**/World/RobotArm_3/Materials/Aluminum___Anodized_Glossy_Grey
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/RobotArm_3/Materials/Aluminum___Anodized_Glossy_Grey/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/RobotArm_3/Materials/Aluminum___Anodized_Glossy_Grey/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f] = '(0.537, 0.537, 0.537)'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.957705'
-
-
----
-
-
-### /World/RobotArm_3/Materials/Paint___Enamel_Glossy_Yellow
-*  **Prim路径 (Prim Path):**/World/RobotArm_3/Materials/Paint___Enamel_Glossy_Yellow
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/RobotArm_3/Materials/Paint___Enamel_Glossy_Yellow/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/RobotArm_3/Materials/Paint___Enamel_Glossy_Yellow/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f] = '(0.910, 0.678, 0.137)'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.957705'
-
-
----
-
-
-### /World/RobotArm_3/Materials/Body1__0
-*  **Prim路径 (Prim Path):**/World/RobotArm_3/Materials/Body1__0
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/RobotArm_3/Materials/Body1__0/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/RobotArm_3/Materials/Body1__0/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f] = '(1.000, 1.000, 1.000)'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.6'
-
-
----
-
-
-### /World/RobotArm_3/Materials/Steel___Satin
-*  **Prim路径 (Prim Path):**/World/RobotArm_3/Materials/Steel___Satin
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/RobotArm_3/Materials/Steel___Satin/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/RobotArm_3/Materials/Steel___Satin/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f] = '(0.627, 0.627, 0.627)'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.957705'
-
-
----
-
-
-### /World/RobotArm_3/Materials/Paint___Enamel_Glossy_Black
-*  **Prim路径 (Prim Path):**/World/RobotArm_3/Materials/Paint___Enamel_Glossy_Black
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/RobotArm_3/Materials/Paint___Enamel_Glossy_Black/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/RobotArm_3/Materials/Paint___Enamel_Glossy_Black/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f] = '(0.098, 0.098, 0.098)'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.957705'
-
-
----
-
-
-### /World/RobotArm_4/Materials/Brass___Polished
-*  **Prim路径 (Prim Path):**/World/RobotArm_4/Materials/Brass___Polished
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/RobotArm_4/Materials/Brass___Polished/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/RobotArm_4/Materials/Brass___Polished/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f] = '(0.953, 0.796, 0.486)'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.957705'
-
-
----
-
-
-### /World/RobotArm_4/Materials/Aluminum___Anodized_Glossy_Grey
-*  **Prim路径 (Prim Path):**/World/RobotArm_4/Materials/Aluminum___Anodized_Glossy_Grey
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/RobotArm_4/Materials/Aluminum___Anodized_Glossy_Grey/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/RobotArm_4/Materials/Aluminum___Anodized_Glossy_Grey/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f] = '(0.537, 0.537, 0.537)'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.957705'
-
-
----
-
-
-### /World/RobotArm_4/Materials/Paint___Enamel_Glossy_Yellow
-*  **Prim路径 (Prim Path):**/World/RobotArm_4/Materials/Paint___Enamel_Glossy_Yellow
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/RobotArm_4/Materials/Paint___Enamel_Glossy_Yellow/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/RobotArm_4/Materials/Paint___Enamel_Glossy_Yellow/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f] = '(0.910, 0.678, 0.137)'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.957705'
-
-
----
-
-
-### /World/RobotArm_4/Materials/Body1__0
-*  **Prim路径 (Prim Path):**/World/RobotArm_4/Materials/Body1__0
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/RobotArm_4/Materials/Body1__0/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/RobotArm_4/Materials/Body1__0/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f] = '(1.000, 1.000, 1.000)'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.6'
-
-
----
-
-
-### /World/RobotArm_4/Materials/Steel___Satin
-*  **Prim路径 (Prim Path):**/World/RobotArm_4/Materials/Steel___Satin
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/RobotArm_4/Materials/Steel___Satin/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/RobotArm_4/Materials/Steel___Satin/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f] = '(0.627, 0.627, 0.627)'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.957705'
-
-
----
-
-
-### /World/RobotArm_4/Materials/Paint___Enamel_Glossy_Black
-*  **Prim路径 (Prim Path):**/World/RobotArm_4/Materials/Paint___Enamel_Glossy_Black
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/RobotArm_4/Materials/Paint___Enamel_Glossy_Black/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/RobotArm_4/Materials/Paint___Enamel_Glossy_Black/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f] = '(0.098, 0.098, 0.098)'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.957705'
-
-
----
-
-
 ### /World/AGV_1/Materials/ASELSAN_CATS_04
 *  **Prim路径 (Prim Path):**/World/AGV_1/Materials/ASELSAN_CATS_04
 *  **Prim类型 (Prim Type):**Material
@@ -31621,6 +30423,411 @@
                    *   Shader ID: 'UsdPrimvarReader_float2'
        *   '/World/Carton_4/Materials/Material_1/uvset0' (ID: 'UsdPrimvarReader_float2')
        *   Implementation: 'id'
+
+
+---
+
+
+### /World/INDUSTRIAL_ROBOTIC_ARM/Materials/Brass___Polished
+*  **Prim路径 (Prim Path):**/World/INDUSTRIAL_ROBOTIC_ARM/Materials/Brass___Polished
+*  **Prim类型 (Prim Type):**Material
+*  **材质网络 (Material & Shader Details):**
+   *   **Surface Outputs:**
+       *   'outputs:surface' -> '/World/INDUSTRIAL_ROBOTIC_ARM/Materials/Brass___Polished/pbr_shader'
+       *   Shader ID: 'UsdPreviewSurface'
+       *   Connection: 'surface' (Output)'
+   *   **Shader 节点 (Shader Nodes):**
+       *   '/World/INDUSTRIAL_ROBOTIC_ARM/Materials/Brass___Polished/pbr_shader' (ID: 'UsdPreviewSurface')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'diffuseColor' [color3f] = '(0.953, 0.796, 0.486)'
+           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
+           *   'metallic' [float] = '0'
+           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
+           *   'occlusion' [float] = '1'
+           *   'roughness' [float] = '0.957705'
+
+
+---
+
+
+### /World/INDUSTRIAL_ROBOTIC_ARM/Materials/Aluminum___Anodized_Glossy_Grey
+*  **Prim路径 (Prim Path):**/World/INDUSTRIAL_ROBOTIC_ARM/Materials/Aluminum___Anodized_Glossy_Grey
+*  **Prim类型 (Prim Type):**Material
+*  **材质网络 (Material & Shader Details):**
+   *   **Surface Outputs:**
+       *   'outputs:surface' -> '/World/INDUSTRIAL_ROBOTIC_ARM/Materials/Aluminum___Anodized_Glossy_Grey/pbr_shader'
+       *   Shader ID: 'UsdPreviewSurface'
+       *   Connection: 'surface' (Output)'
+   *   **Shader 节点 (Shader Nodes):**
+       *   '/World/INDUSTRIAL_ROBOTIC_ARM/Materials/Aluminum___Anodized_Glossy_Grey/pbr_shader' (ID: 'UsdPreviewSurface')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'diffuseColor' [color3f] = '(0.537, 0.537, 0.537)'
+           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
+           *   'metallic' [float] = '0'
+           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
+           *   'occlusion' [float] = '1'
+           *   'roughness' [float] = '0.957705'
+
+
+---
+
+
+### /World/INDUSTRIAL_ROBOTIC_ARM/Materials/Paint___Enamel_Glossy_Yellow
+*  **Prim路径 (Prim Path):**/World/INDUSTRIAL_ROBOTIC_ARM/Materials/Paint___Enamel_Glossy_Yellow
+*  **Prim类型 (Prim Type):**Material
+*  **材质网络 (Material & Shader Details):**
+   *   **Surface Outputs:**
+       *   'outputs:surface' -> '/World/INDUSTRIAL_ROBOTIC_ARM/Materials/Paint___Enamel_Glossy_Yellow/pbr_shader'
+       *   Shader ID: 'UsdPreviewSurface'
+       *   Connection: 'surface' (Output)'
+   *   **Shader 节点 (Shader Nodes):**
+       *   '/World/INDUSTRIAL_ROBOTIC_ARM/Materials/Paint___Enamel_Glossy_Yellow/pbr_shader' (ID: 'UsdPreviewSurface')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'diffuseColor' [color3f] = '(0.910, 0.678, 0.137)'
+           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
+           *   'metallic' [float] = '0'
+           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
+           *   'occlusion' [float] = '1'
+           *   'roughness' [float] = '0.957705'
+
+
+---
+
+
+### /World/INDUSTRIAL_ROBOTIC_ARM/Materials/Body1__0
+*  **Prim路径 (Prim Path):**/World/INDUSTRIAL_ROBOTIC_ARM/Materials/Body1__0
+*  **Prim类型 (Prim Type):**Material
+*  **材质网络 (Material & Shader Details):**
+   *   **Surface Outputs:**
+       *   'outputs:surface' -> '/World/INDUSTRIAL_ROBOTIC_ARM/Materials/Body1__0/pbr_shader'
+       *   Shader ID: 'UsdPreviewSurface'
+       *   Connection: 'surface' (Output)'
+   *   **Shader 节点 (Shader Nodes):**
+       *   '/World/INDUSTRIAL_ROBOTIC_ARM/Materials/Body1__0/pbr_shader' (ID: 'UsdPreviewSurface')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'diffuseColor' [color3f] = '(1.000, 1.000, 1.000)'
+           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
+           *   'metallic' [float] = '0'
+           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
+           *   'occlusion' [float] = '1'
+           *   'roughness' [float] = '0.6'
+
+
+---
+
+
+### /World/INDUSTRIAL_ROBOTIC_ARM/Materials/Steel___Satin
+*  **Prim路径 (Prim Path):**/World/INDUSTRIAL_ROBOTIC_ARM/Materials/Steel___Satin
+*  **Prim类型 (Prim Type):**Material
+*  **材质网络 (Material & Shader Details):**
+   *   **Surface Outputs:**
+       *   'outputs:surface' -> '/World/INDUSTRIAL_ROBOTIC_ARM/Materials/Steel___Satin/pbr_shader'
+       *   Shader ID: 'UsdPreviewSurface'
+       *   Connection: 'surface' (Output)'
+   *   **Shader 节点 (Shader Nodes):**
+       *   '/World/INDUSTRIAL_ROBOTIC_ARM/Materials/Steel___Satin/pbr_shader' (ID: 'UsdPreviewSurface')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'diffuseColor' [color3f] = '(0.627, 0.627, 0.627)'
+           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
+           *   'metallic' [float] = '0'
+           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
+           *   'occlusion' [float] = '1'
+           *   'roughness' [float] = '0.957705'
+
+
+---
+
+
+### /World/INDUSTRIAL_ROBOTIC_ARM/Materials/Paint___Enamel_Glossy_Black
+*  **Prim路径 (Prim Path):**/World/INDUSTRIAL_ROBOTIC_ARM/Materials/Paint___Enamel_Glossy_Black
+*  **Prim类型 (Prim Type):**Material
+*  **材质网络 (Material & Shader Details):**
+   *   **Surface Outputs:**
+       *   'outputs:surface' -> '/World/INDUSTRIAL_ROBOTIC_ARM/Materials/Paint___Enamel_Glossy_Black/pbr_shader'
+       *   Shader ID: 'UsdPreviewSurface'
+       *   Connection: 'surface' (Output)'
+   *   **Shader 节点 (Shader Nodes):**
+       *   '/World/INDUSTRIAL_ROBOTIC_ARM/Materials/Paint___Enamel_Glossy_Black/pbr_shader' (ID: 'UsdPreviewSurface')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'diffuseColor' [color3f] = '(0.098, 0.098, 0.098)'
+           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
+           *   'metallic' [float] = '0'
+           *   'normal' [normal3f] = '(0.000, 0.000, 1.000)'
+           *   'occlusion' [float] = '1'
+           *   'roughness' [float] = '0.957705'
+
+
+---
+
+
+### /World/model_lab_cabinet002/materials/mat_0
+*  **Prim路径 (Prim Path):**/World/model_lab_cabinet002/materials/mat_0
+*  **Prim类型 (Prim Type):**Material
+*  **材质网络 (Material & Shader Details):**
+   *   **Surface Outputs:**
+       *   'outputs:surface' -> '/World/model_lab_cabinet002/materials/mat_0/PBRShader'
+       *   Shader ID: 'UsdPreviewSurface'
+       *   Connection: 'surface' (Output)'
+   *   **Shader 节点 (Shader Nodes):**
+       *   '/World/model_lab_cabinet002/materials/mat_0/PBRShader' (ID: 'UsdPreviewSurface')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'clearcoat' [float] = '0.05'
+           *   'clearcoatRoughness' [float] = '0.05'
+           *   'diffuseColor' [color3f] = '(0.939, 0.965, 1.000)'
+           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
+           *   'ior' [float] = '1'
+           *   'opacity' [float] = '1'
+           *   'roughness' [float] = '0.5'
+           *   'specularColor' [color3f] = '(0.000, 0.000, 0.000)'
+
+
+---
+
+
+### /World/model_lab_cabinet002/materials/mat_83555
+*  **Prim路径 (Prim Path):**/World/model_lab_cabinet002/materials/mat_83555
+*  **Prim类型 (Prim Type):**Material
+*  **材质网络 (Material & Shader Details):**
+   *   **Surface Outputs:**
+       *   'outputs:surface' -> '/World/model_lab_cabinet002/materials/mat_83555/PBRShader'
+       *   Shader ID: 'UsdPreviewSurface'
+       *   Connection: 'surface' (Output)'
+   *   **Shader 节点 (Shader Nodes):**
+       *   '/World/model_lab_cabinet002/materials/mat_83555/PBRShader' (ID: 'UsdPreviewSurface')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'clearcoat' [float] = '0.05'
+           *   'clearcoatRoughness' [float] = '0.05'
+           *   'diffuseColor' [color3f]
+               *   Connected: '/World/model_lab_cabinet002/materials/mat_83555/diffuseTexture.outputs:rgb' @ '/World/model_lab_cabinet002/materials/mat_83555/diffuseTexture'
+                   *   Shader ID: 'UsdUVTexture'
+                   *   Texture: '0/b34614490170b5b5a1196c0c642293a6.png'
+           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
+           *   'ior' [float] = '1'
+           *   'metallic' [float] = '0.06'
+           *   'opacity' [float] = '1'
+           *   'roughness' [float] = '0.1'
+           *   'specularColor' [color3f] = '(0.000, 0.000, 0.000)'
+       *   '/World/model_lab_cabinet002/materials/mat_83555/diffuseTexture' (ID: 'UsdUVTexture')
+       *   Implementation: 'id'
+       *   纹理引用 (Texture Assets):
+           *   '0/b34614490170b5b5a1196c0c642293a6.png'
+       *   Inputs:
+           *   'file' [asset] = '0/b34614490170b5b5a1196c0c642293a6.png'
+           *   'st' [float2]
+               *   Connected: '/World/model_lab_cabinet002/materials/mat_83555/transform_st.outputs:result' @ '/World/model_lab_cabinet002/materials/mat_83555/transform_st'
+                   *   Shader ID: 'UsdTransform2d'
+       *   '/World/model_lab_cabinet002/materials/mat_83555/transform_st' (ID: 'UsdTransform2d')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'in' [float2]
+               *   Connected: '/World/model_lab_cabinet002/materials/mat_83555/stReader.outputs:result' @ '/World/model_lab_cabinet002/materials/mat_83555/stReader'
+                   *   Shader ID: 'UsdPrimvarReader_float2'
+           *   'rotation' [float] = '0'
+           *   'scale' [float2] = '(10.758, 10.000)'
+           *   'translation' [float2] = '(0.000, 0.000)'
+       *   '/World/model_lab_cabinet002/materials/mat_83555/stReader' (ID: 'UsdPrimvarReader_float2')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'varname' [string]
+               *   Connected: '/World/model_lab_cabinet002/materials/mat_83555.inputs:frame:stPrimvarName' @ '/World/model_lab_cabinet002/materials/mat_83555'
+
+
+---
+
+
+### /World/model_lab_cabinet002/materials/mat_83560
+*  **Prim路径 (Prim Path):**/World/model_lab_cabinet002/materials/mat_83560
+*  **Prim类型 (Prim Type):**Material
+*  **材质网络 (Material & Shader Details):**
+   *   **Surface Outputs:**
+       *   'outputs:surface' -> '/World/model_lab_cabinet002/materials/mat_83560/PBRShader'
+       *   Shader ID: 'UsdPreviewSurface'
+       *   Connection: 'surface' (Output)'
+   *   **Shader 节点 (Shader Nodes):**
+       *   '/World/model_lab_cabinet002/materials/mat_83560/PBRShader' (ID: 'UsdPreviewSurface')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'clearcoat' [float] = '0.05'
+           *   'clearcoatRoughness' [float] = '0.05'
+           *   'diffuseColor' [color3f]
+               *   Connected: '/World/model_lab_cabinet002/materials/mat_83560/diffuseTexture.outputs:rgb' @ '/World/model_lab_cabinet002/materials/mat_83560/diffuseTexture'
+                   *   Shader ID: 'UsdUVTexture'
+                   *   Texture: '0/06765b98648f9263a71250f976cb083f.png'
+           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
+           *   'ior' [float] = '1'
+           *   'metallic' [float] = '0.09'
+           *   'opacity' [float] = '1'
+           *   'roughness' [float] = '0.12'
+           *   'specularColor' [color3f] = '(0.000, 0.000, 0.000)'
+       *   '/World/model_lab_cabinet002/materials/mat_83560/diffuseTexture' (ID: 'UsdUVTexture')
+       *   Implementation: 'id'
+       *   纹理引用 (Texture Assets):
+           *   '0/06765b98648f9263a71250f976cb083f.png'
+       *   Inputs:
+           *   'file' [asset] = '0/06765b98648f9263a71250f976cb083f.png'
+           *   'st' [float2]
+               *   Connected: '/World/model_lab_cabinet002/materials/mat_83560/transform_st.outputs:result' @ '/World/model_lab_cabinet002/materials/mat_83560/transform_st'
+                   *   Shader ID: 'UsdTransform2d'
+       *   '/World/model_lab_cabinet002/materials/mat_83560/transform_st' (ID: 'UsdTransform2d')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'in' [float2]
+               *   Connected: '/World/model_lab_cabinet002/materials/mat_83560/stReader.outputs:result' @ '/World/model_lab_cabinet002/materials/mat_83560/stReader'
+                   *   Shader ID: 'UsdPrimvarReader_float2'
+           *   'rotation' [float] = '0'
+           *   'scale' [float2] = '(10.758, 10.000)'
+           *   'translation' [float2] = '(0.000, 0.000)'
+       *   '/World/model_lab_cabinet002/materials/mat_83560/stReader' (ID: 'UsdPrimvarReader_float2')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'varname' [string]
+               *   Connected: '/World/model_lab_cabinet002/materials/mat_83560.inputs:frame:stPrimvarName' @ '/World/model_lab_cabinet002/materials/mat_83560'
+
+
+---
+
+
+### /World/model_lab_cabinet002/materials/mat_83562
+*  **Prim路径 (Prim Path):**/World/model_lab_cabinet002/materials/mat_83562
+*  **Prim类型 (Prim Type):**Material
+*  **材质网络 (Material & Shader Details):**
+   *   **Surface Outputs:**
+       *   'outputs:surface' -> '/World/model_lab_cabinet002/materials/mat_83562/PBRShader'
+       *   Shader ID: 'UsdPreviewSurface'
+       *   Connection: 'surface' (Output)'
+   *   **Shader 节点 (Shader Nodes):**
+       *   '/World/model_lab_cabinet002/materials/mat_83562/PBRShader' (ID: 'UsdPreviewSurface')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'clearcoat' [float] = '0.05'
+           *   'clearcoatRoughness' [float] = '0.05'
+           *   'diffuseColor' [color3f]
+               *   Connected: '/World/model_lab_cabinet002/materials/mat_83562/diffuseTexture.outputs:rgb' @ '/World/model_lab_cabinet002/materials/mat_83562/diffuseTexture'
+                   *   Shader ID: 'UsdUVTexture'
+                   *   Texture: '0/877f390708c33c74fbabd5ea1b887144.png'
+           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
+           *   'ior' [float] = '1'
+           *   'opacity' [float] = '1'
+           *   'roughness' [float] = '0.5'
+           *   'specularColor' [color3f] = '(0.000, 0.000, 0.000)'
+       *   '/World/model_lab_cabinet002/materials/mat_83562/diffuseTexture' (ID: 'UsdUVTexture')
+       *   Implementation: 'id'
+       *   纹理引用 (Texture Assets):
+           *   '0/877f390708c33c74fbabd5ea1b887144.png'
+       *   Inputs:
+           *   'file' [asset] = '0/877f390708c33c74fbabd5ea1b887144.png'
+           *   'st' [float2]
+               *   Connected: '/World/model_lab_cabinet002/materials/mat_83562/transform_st.outputs:result' @ '/World/model_lab_cabinet002/materials/mat_83562/transform_st'
+                   *   Shader ID: 'UsdTransform2d'
+       *   '/World/model_lab_cabinet002/materials/mat_83562/transform_st' (ID: 'UsdTransform2d')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'in' [float2]
+               *   Connected: '/World/model_lab_cabinet002/materials/mat_83562/stReader.outputs:result' @ '/World/model_lab_cabinet002/materials/mat_83562/stReader'
+                   *   Shader ID: 'UsdPrimvarReader_float2'
+           *   'rotation' [float] = '0'
+           *   'scale' [float2] = '(5.000, 5.000)'
+           *   'translation' [float2] = '(0.000, 0.000)'
+       *   '/World/model_lab_cabinet002/materials/mat_83562/stReader' (ID: 'UsdPrimvarReader_float2')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'varname' [string]
+               *   Connected: '/World/model_lab_cabinet002/materials/mat_83562.inputs:frame:stPrimvarName' @ '/World/model_lab_cabinet002/materials/mat_83562'
+
+
+---
+
+
+### /World/model_lab_cabinet002/materials/mat_83557
+*  **Prim路径 (Prim Path):**/World/model_lab_cabinet002/materials/mat_83557
+*  **Prim类型 (Prim Type):**Material
+*  **材质网络 (Material & Shader Details):**
+   *   **Surface Outputs:**
+       *   'outputs:surface' -> '/World/model_lab_cabinet002/materials/mat_83557/PBRShader'
+       *   Shader ID: 'UsdPreviewSurface'
+       *   Connection: 'surface' (Output)'
+   *   **Shader 节点 (Shader Nodes):**
+       *   '/World/model_lab_cabinet002/materials/mat_83557/PBRShader' (ID: 'UsdPreviewSurface')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'clearcoat' [float] = '0.05'
+           *   'clearcoatRoughness' [float] = '0.05'
+           *   'diffuseColor' [color3f]
+               *   Connected: '/World/model_lab_cabinet002/materials/mat_83557/diffuseTexture.outputs:rgb' @ '/World/model_lab_cabinet002/materials/mat_83557/diffuseTexture'
+                   *   Shader ID: 'UsdUVTexture'
+                   *   Texture: '0/877f390708c33c74fbabd5ea1b887144.png'
+           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
+           *   'ior' [float] = '1'
+           *   'opacity' [float] = '1'
+           *   'roughness' [float] = '0.5'
+           *   'specularColor' [color3f] = '(0.000, 0.000, 0.000)'
+       *   '/World/model_lab_cabinet002/materials/mat_83557/diffuseTexture' (ID: 'UsdUVTexture')
+       *   Implementation: 'id'
+       *   纹理引用 (Texture Assets):
+           *   '0/877f390708c33c74fbabd5ea1b887144.png'
+       *   Inputs:
+           *   'file' [asset] = '0/877f390708c33c74fbabd5ea1b887144.png'
+           *   'st' [float2]
+               *   Connected: '/World/model_lab_cabinet002/materials/mat_83557/transform_st.outputs:result' @ '/World/model_lab_cabinet002/materials/mat_83557/transform_st'
+                   *   Shader ID: 'UsdTransform2d'
+       *   '/World/model_lab_cabinet002/materials/mat_83557/transform_st' (ID: 'UsdTransform2d')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'in' [float2]
+               *   Connected: '/World/model_lab_cabinet002/materials/mat_83557/stReader.outputs:result' @ '/World/model_lab_cabinet002/materials/mat_83557/stReader'
+                   *   Shader ID: 'UsdPrimvarReader_float2'
+           *   'rotation' [float] = '0'
+           *   'scale' [float2] = '(9.843, 9.843)'
+           *   'translation' [float2] = '(0.000, 0.000)'
+       *   '/World/model_lab_cabinet002/materials/mat_83557/stReader' (ID: 'UsdPrimvarReader_float2')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'varname' [string]
+               *   Connected: '/World/model_lab_cabinet002/materials/mat_83557.inputs:frame:stPrimvarName' @ '/World/model_lab_cabinet002/materials/mat_83557'
+
+
+---
+
+
+### /World/model_lab_cabinet002/materials/mat_83559
+*  **Prim路径 (Prim Path):**/World/model_lab_cabinet002/materials/mat_83559
+*  **Prim类型 (Prim Type):**Material
+*  **材质网络 (Material & Shader Details):**
+   *   **Surface Outputs:**
+       *   'outputs:surface' -> '/World/model_lab_cabinet002/materials/mat_83559/PBRShader'
+       *   Shader ID: 'UsdPreviewSurface'
+       *   Connection: 'surface' (Output)'
+   *   **Shader 节点 (Shader Nodes):**
+       *   '/World/model_lab_cabinet002/materials/mat_83559/PBRShader' (ID: 'UsdPreviewSurface')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'clearcoat' [float] = '0.05'
+           *   'clearcoatRoughness' [float] = '0.05'
+           *   'diffuseColor' [color3f] = '(0.527, 0.527, 0.527)'
+           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
+           *   'ior' [float] = '1'
+           *   'opacity' [float] = '1'
+           *   'roughness' [float] = '0.5'
+           *   'specularColor' [color3f] = '(0.000, 0.000, 0.000)'
+
+
+---
+
+
+### /World/model_lab_cabinet002/PhysicsMaterial
+*  **Prim路径 (Prim Path):**/World/model_lab_cabinet002/PhysicsMaterial
+*  **Prim类型 (Prim Type):**Material
+*  **材质网络 (Material & Shader Details):**
+   *   **Surface Outputs:**
+       *   'outputs:surface'
 
 
 ---

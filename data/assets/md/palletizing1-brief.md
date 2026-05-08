@@ -7,15 +7,15 @@
 * **单位与坐标系 (Units & Coordinate System):**
   * **米(Meters Per Unit):**1.0
   * **Up Axis:**Z
-* **场景描述(Scene Describe):** 该工业场景展现为一个极具规模感的多线阵列式自动化分拣单元，采用“模块化节点、分布式协作”的逻辑排布，旨在实现大批量标准化包裹的高速移载。空间格局开阔规整，地面铺设镜面反射效果显著的灰色大理石纹地砖，为设备提供坚实的物理落脚感。核心设备由约5至6组平行的工业蓝金属架带式输送机定义，每条线末端均精密配套一台白色六轴多关节机器人与一台明黄色自主移动机器人（AGV）。六轴机器人垂直锚定于地面执行末端抓取任务，AGV则作为柔性承载终端接收并堆叠印有圆形标识的浅棕色标准包裹。整体规划形成了“输送机（输入）—机器人（枢纽）—AGV（柔性输出）”的垂直交叉作业架构，各单元间保持精确的几何间距以确保AGV的导航回转空间。该场景在3D合成中提供了极佳的资产重复率与对齐参考，涵盖了蓝色金属漆面、半哑光机器人外壳、高醒目黄色涂装及石材纹理的多维材质对比，配合全局均匀的漫反射光影，是构建高吞吐量分拣中心与智慧工厂数字孪生的理想专业参考素材。
+* **场景描述(Scene Describe):** 该码垛车间采用高度标准化的矩阵式布局，由四组完全相同的自动化单元等间距排列构成。每一单元通过“蓝色高架输送线—白色协作机器人—黄色AGV移动平台”实现精准耦合：固定流水线持续输送淡黄色包装箱，安装在木质平台上的协作机器人负责末端抓取，并将其整齐堆叠至下方的AGV载货支架上。整体规划以大理石纹瓷砖地面为基底，通过单元化设计消除工位干扰，将固定的自动化生产与灵活的柔性物流深度融合，展现出一个逻辑清晰、无冗余连接且高度协同的工业4.0智能制造范本。
 * **设备数量(Device Number):**
   * **Scene: 1**
   * **IndustrialRobot: 8**
-  * **Workbench: 0**
+  * **Workbench: 8**
   * **Conveyor: 8**
   * **AGV: 8**
   * **Forklift: 0**
-  * **Box: 48**
+  * **Box: 56**
   * **Rack: 0**
   * **Pallet: 0**
   * **Part: 0**
@@ -92,374 +92,6 @@
             * Object001 (Xform)
               * Object001_20___Default_0 (Xform)
                 * Object001_20___Default_0 (Mesh)
-  * RobotArm_1 (Xform)
-    * Group (Xform)
-      * panda_hand (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_finger_joint1 (PhysicsPrismaticJoint)
-        * panda_finger_joint2 (PhysicsPrismaticJoint)
-      * panda_leftfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * panda_link0 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint1 (PhysicsRevoluteJoint)
-      * panda_link1 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint2 (PhysicsRevoluteJoint)
-      * panda_link2 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint3 (PhysicsRevoluteJoint)
-      * panda_link3 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint4 (PhysicsRevoluteJoint)
-      * panda_link4 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint5 (PhysicsRevoluteJoint)
-      * panda_link5 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint6 (PhysicsRevoluteJoint)
-      * panda_link6 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint7 (PhysicsRevoluteJoint)
-      * panda_link7 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_hand_joint (PhysicsFixedJoint)
-      * panda_rightfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * rootJoint (PhysicsFixedJoint)
-  * RobotArm_2 (Xform)
-    * Group (Xform)
-      * panda_hand (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_finger_joint1 (PhysicsPrismaticJoint)
-        * panda_finger_joint2 (PhysicsPrismaticJoint)
-      * panda_leftfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * panda_link0 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint1 (PhysicsRevoluteJoint)
-      * panda_link1 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint2 (PhysicsRevoluteJoint)
-      * panda_link2 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint3 (PhysicsRevoluteJoint)
-      * panda_link3 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint4 (PhysicsRevoluteJoint)
-      * panda_link4 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint5 (PhysicsRevoluteJoint)
-      * panda_link5 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint6 (PhysicsRevoluteJoint)
-      * panda_link6 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint7 (PhysicsRevoluteJoint)
-      * panda_link7 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_hand_joint (PhysicsFixedJoint)
-      * panda_rightfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * rootJoint (PhysicsFixedJoint)
-  * RobotArm_3 (Xform)
-    * Group (Xform)
-      * panda_hand (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_finger_joint1 (PhysicsPrismaticJoint)
-        * panda_finger_joint2 (PhysicsPrismaticJoint)
-      * panda_leftfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * panda_link0 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint1 (PhysicsRevoluteJoint)
-      * panda_link1 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint2 (PhysicsRevoluteJoint)
-      * panda_link2 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint3 (PhysicsRevoluteJoint)
-      * panda_link3 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint4 (PhysicsRevoluteJoint)
-      * panda_link4 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint5 (PhysicsRevoluteJoint)
-      * panda_link5 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint6 (PhysicsRevoluteJoint)
-      * panda_link6 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint7 (PhysicsRevoluteJoint)
-      * panda_link7 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_hand_joint (PhysicsFixedJoint)
-      * panda_rightfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * rootJoint (PhysicsFixedJoint)
-  * RobotArm_4 (Xform)
-    * Group (Xform)
-      * panda_hand (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_finger_joint1 (PhysicsPrismaticJoint)
-        * panda_finger_joint2 (PhysicsPrismaticJoint)
-      * panda_leftfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * panda_link0 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint1 (PhysicsRevoluteJoint)
-      * panda_link1 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint2 (PhysicsRevoluteJoint)
-      * panda_link2 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint3 (PhysicsRevoluteJoint)
-      * panda_link3 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint4 (PhysicsRevoluteJoint)
-      * panda_link4 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint5 (PhysicsRevoluteJoint)
-      * panda_link5 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint6 (PhysicsRevoluteJoint)
-      * panda_link6 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint7 (PhysicsRevoluteJoint)
-      * panda_link7 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_hand_joint (PhysicsFixedJoint)
-      * panda_rightfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * rootJoint (PhysicsFixedJoint)
-  * RobotArm_5 (Xform)
-    * Group (Xform)
-      * panda_hand (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_finger_joint1 (PhysicsPrismaticJoint)
-        * panda_finger_joint2 (PhysicsPrismaticJoint)
-      * panda_leftfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * panda_link0 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint1 (PhysicsRevoluteJoint)
-      * panda_link1 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint2 (PhysicsRevoluteJoint)
-      * panda_link2 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint3 (PhysicsRevoluteJoint)
-      * panda_link3 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint4 (PhysicsRevoluteJoint)
-      * panda_link4 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint5 (PhysicsRevoluteJoint)
-      * panda_link5 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint6 (PhysicsRevoluteJoint)
-      * panda_link6 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint7 (PhysicsRevoluteJoint)
-      * panda_link7 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_hand_joint (PhysicsFixedJoint)
-      * panda_rightfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * rootJoint (PhysicsFixedJoint)
-  * RobotArm_6 (Xform)
-    * Group (Xform)
-      * panda_hand (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_finger_joint1 (PhysicsPrismaticJoint)
-        * panda_finger_joint2 (PhysicsPrismaticJoint)
-      * panda_leftfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * panda_link0 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint1 (PhysicsRevoluteJoint)
-      * panda_link1 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint2 (PhysicsRevoluteJoint)
-      * panda_link2 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint3 (PhysicsRevoluteJoint)
-      * panda_link3 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint4 (PhysicsRevoluteJoint)
-      * panda_link4 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint5 (PhysicsRevoluteJoint)
-      * panda_link5 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint6 (PhysicsRevoluteJoint)
-      * panda_link6 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint7 (PhysicsRevoluteJoint)
-      * panda_link7 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_hand_joint (PhysicsFixedJoint)
-      * panda_rightfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * rootJoint (PhysicsFixedJoint)
-  * RobotArm_7 (Xform)
-    * Group (Xform)
-      * panda_hand (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_finger_joint1 (PhysicsPrismaticJoint)
-        * panda_finger_joint2 (PhysicsPrismaticJoint)
-      * panda_leftfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * panda_link0 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint1 (PhysicsRevoluteJoint)
-      * panda_link1 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint2 (PhysicsRevoluteJoint)
-      * panda_link2 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint3 (PhysicsRevoluteJoint)
-      * panda_link3 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint4 (PhysicsRevoluteJoint)
-      * panda_link4 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint5 (PhysicsRevoluteJoint)
-      * panda_link5 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint6 (PhysicsRevoluteJoint)
-      * panda_link6 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint7 (PhysicsRevoluteJoint)
-      * panda_link7 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_hand_joint (PhysicsFixedJoint)
-      * panda_rightfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * rootJoint (PhysicsFixedJoint)
-  * RobotArm_8 (Xform)
-    * Group (Xform)
-      * panda_hand (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_finger_joint1 (PhysicsPrismaticJoint)
-        * panda_finger_joint2 (PhysicsPrismaticJoint)
-      * panda_leftfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * panda_link0 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint1 (PhysicsRevoluteJoint)
-      * panda_link1 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint2 (PhysicsRevoluteJoint)
-      * panda_link2 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint3 (PhysicsRevoluteJoint)
-      * panda_link3 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint4 (PhysicsRevoluteJoint)
-      * panda_link4 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint5 (PhysicsRevoluteJoint)
-      * panda_link5 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint6 (PhysicsRevoluteJoint)
-      * panda_link6 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint7 (PhysicsRevoluteJoint)
-      * panda_link7 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_hand_joint (PhysicsFixedJoint)
-      * panda_rightfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * rootJoint (PhysicsFixedJoint)
   * agv_1 (Xform)
     * Materials (Scope)
       * ASELSAN_CATS_04 (Material)
@@ -5284,6 +4916,78 @@
             * Box072 (Xform)
               * Box072_06___Default_0 (Xform)
                 * Box072_06___Default_0 (Mesh)
+  * HeavyDutyPackingTable_A01_01 (Xform)
+    * SM_HeavyDutyPackingTable_A01_01 (Mesh)
+      * M_HeavyDutyPackingTable_A01_Body (GeomSubset)
+      * M_HeavyDutyPackingTable_A01_Bolts (GeomSubset)
+      * M_HeavyDutyPackingTable_A01_TableTop (GeomSubset)
+    * Looks (Scope)
+      * Wood_Maple_HeavyDutyPackingTable_A (Material)
+        * Shader (Shader)
+      * Metal_Glossy_A_HeavyDutyPackingTable_A (Material)
+        * Shader (Shader)
+      * Metal_Painted_Gray_Glossy_A_HeavyDutyPackingTable_A (Material)
+        * Shader (Shader)
+  * panda_instanceable1 (Xform)
+    * Group (Xform)
+      * panda_hand (Xform)
+        * visuals (Xform)
+        * collisions (Xform)
+        * panda_finger_joint1 (PhysicsPrismaticJoint)
+        * panda_finger_joint2 (PhysicsPrismaticJoint)
+      * panda_leftfinger (Xform)
+        * visuals (Xform)
+        * collisions (Xform)
+      * panda_link0 (Xform)
+        * visuals (Xform)
+        * collisions (Xform)
+        * panda_joint1 (PhysicsRevoluteJoint)
+      * panda_link1 (Xform)
+        * visuals (Xform)
+        * collisions (Xform)
+        * panda_joint2 (PhysicsRevoluteJoint)
+      * panda_link2 (Xform)
+        * visuals (Xform)
+        * collisions (Xform)
+        * panda_joint3 (PhysicsRevoluteJoint)
+      * panda_link3 (Xform)
+        * visuals (Xform)
+        * collisions (Xform)
+        * panda_joint4 (PhysicsRevoluteJoint)
+      * panda_link4 (Xform)
+        * visuals (Xform)
+        * collisions (Xform)
+        * panda_joint5 (PhysicsRevoluteJoint)
+      * panda_link5 (Xform)
+        * visuals (Xform)
+        * collisions (Xform)
+        * panda_joint6 (PhysicsRevoluteJoint)
+      * panda_link6 (Xform)
+        * visuals (Xform)
+        * collisions (Xform)
+        * panda_joint7 (PhysicsRevoluteJoint)
+      * panda_link7 (Xform)
+        * visuals (Xform)
+        * collisions (Xform)
+        * panda_hand_joint (PhysicsFixedJoint)
+      * panda_rightfinger (Xform)
+        * visuals (Xform)
+        * collisions (Xform)
+      * rootJoint (PhysicsFixedJoint)
+  * HeavyDutyPackingTable_A01_02 (Prim)
+  * panda_instanceable1_01 (Prim)
+  * HeavyDutyPackingTable_A01_03 (Prim)
+  * panda_instanceable1_02 (Prim)
+  * HeavyDutyPackingTable_A01_04 (Prim)
+  * panda_instanceable1_03 (Prim)
+  * HeavyDutyPackingTable_A01_05 (Prim)
+  * panda_instanceable1_04 (Prim)
+  * HeavyDutyPackingTable_A01_06 (Prim)
+  * panda_instanceable1_05 (Prim)
+  * HeavyDutyPackingTable_A01_07 (Prim)
+  * panda_instanceable1_06 (Prim)
+  * panda_instanceable1_07 (Prim)
+  * HeavyDutyPackingTable_A01_08 (Prim)
 
 ## 3. 外部引用Xform简报(Referenced Xforms)
 
@@ -5293,1654 +4997,6 @@
 * BBox (world): size=(49.139, 19.897, 67.754), center=(0.761, 0.769, 9.470)
 * 几何统计: Mesh=7, Vertices=2044, Faces=946
 * 子Mesh材质: /World/factory/Meshes/Sketchfab_model/cc020ec10d3e484ab6eb350963eb38d0_fbx/RootNode/Factory002/Factory002_WindowsIndustrial_frontSolid_OpenWindows_Mat_0/Factory002_WindowsIndustrial_frontSolid_OpenWindows_Mat_0 -> 未绑定, /World/factory/Meshes/Sketchfab_model/cc020ec10d3e484ab6eb350963eb38d0_fbx/RootNode/Factory002/Factory002_WindowsIndustrial_frontSolid_Mat_0/Factory002_WindowsIndustrial_frontSolid_Mat_0 -> 未绑定, /World/factory/Meshes/Sketchfab_model/cc020ec10d3e484ab6eb350963eb38d0_fbx/RootNode/Factory002/Factory002_WindowsIndustrial_frontDoorclosed_Mat_0/Factory002_WindowsIndustrial_frontDoorclosed_Mat_0 -> 未绑定, /World/factory/Meshes/Sketchfab_model/cc020ec10d3e484ab6eb350963eb38d0_fbx/RootNode/Factory002/Factory002_WindowsIndustrial_frontDoorOpen_Mat_0/Factory002_WindowsIndustrial_frontDoorOpen_Mat_0 -> 未绑定, /World/factory/Meshes/Sketchfab_model/cc020ec10d3e484ab6eb350963eb38d0_fbx/RootNode/Factory002/Factory002_WindowsIndustrial_front_Mat_0/Factory002_WindowsIndustrial_front_Mat_0 -> 未绑定, /World/factory/Meshes/Sketchfab_model/cc020ec10d3e484ab6eb350963eb38d0_fbx/RootNode/Factory002/Factory002_11___Default_0/Factory002_11___Default_0 -> 未绑定, /World/factory/Meshes/Sketchfab_model/cc020ec10d3e484ab6eb350963eb38d0_fbx/RootNode/Object001/Object001_20___Default_0/Object001_20___Default_0 -> 未绑定
-
----
-
-### '/World/RobotArm_1' (Xform)
-
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/IsaacLab/Robots/FrankaEmika/panda_instanceable1.usd
-* BBox (world): size=(0.755, 0.583, 2.508), center=(-19.980, 30.000, 1.577)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_1/Group/panda_hand/visuals' (Xform)
-
-* 引用: reference:./Props/panda_hand.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.063, 0.205, 0.092), center=(-19.815, 30.002, 2.361)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_1/Group/panda_hand/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_hand_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-19.812, 30.000, 2.406)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_1/Group/panda_leftfinger/visuals' (Xform)
-
-* 引用: reference:./Props/panda_leftfinger.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.021, 0.026, 0.054), center=(-19.791, 29.979, 2.214)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_1/Group/panda_leftfinger/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_leftfinger_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-19.812, 30.000, 2.275)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_1/Group/panda_link0/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link0.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.226, 0.189, 0.140), center=(-20.103, 30.000, 0.480)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_1/Group/panda_link0/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link0_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-20.010, 30.000, 0.323)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_1/Group/panda_link1/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link1.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.184, 0.247), center=(-20.010, 29.916, 0.918)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_1/Group/panda_link1/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link1_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-20.010, 30.000, 1.072)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_1/Group/panda_link2/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link2.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.249, 0.184), center=(-20.010, 30.083, 1.228)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_1/Group/panda_link2/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link2_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-20.010, 30.000, 1.072)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_1/Group/panda_link3/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link3.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.193, 0.166, 0.176), center=(-19.917, 30.063, 1.709)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_1/Group/panda_link3/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link3_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-20.010, 30.000, 1.783)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_1/Group/panda_link4/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link4.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.193, 0.179, 0.166), center=(-19.917, 29.937, 1.861)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_1/Group/panda_link4/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link4_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-19.825, 30.000, 1.783)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_1/Group/panda_link5/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link5.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.185, 0.311), center=(-20.010, 30.084, 2.414)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_1/Group/panda_link5/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link5_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-20.010, 30.000, 2.647)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_1/Group/panda_link6/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link6.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.180, 0.133, 0.100), center=(-19.916, 29.986, 2.681)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_1/Group/panda_link6/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link6_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-20.010, 30.000, 2.647)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_1/Group/panda_link7/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link7.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.125, 0.125, 0.055), center=(-19.770, 29.958, 2.468)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_1/Group/panda_link7/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link7_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-19.812, 30.000, 2.647)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_1/Group/panda_rightfinger/visuals' (Xform)
-
-* 引用: reference:./Props/panda_rightfinger.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.021, 0.026, 0.054), center=(-19.833, 30.021, 2.214)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_1/Group/panda_rightfinger/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_rightfinger_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-19.812, 30.000, 2.275)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_2' (Xform)
-
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/IsaacLab/Robots/FrankaEmika/panda_instanceable1.usd
-* BBox (world): size=(0.755, 0.583, 2.508), center=(-14.980, 30.000, 1.577)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_2/Group/panda_hand/visuals' (Xform)
-
-* 引用: reference:./Props/panda_hand.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.063, 0.205, 0.092), center=(-14.815, 30.002, 2.361)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_2/Group/panda_hand/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_hand_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-14.812, 30.000, 2.406)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_2/Group/panda_leftfinger/visuals' (Xform)
-
-* 引用: reference:./Props/panda_leftfinger.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.021, 0.026, 0.054), center=(-14.791, 29.979, 2.214)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_2/Group/panda_leftfinger/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_leftfinger_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-14.812, 30.000, 2.275)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_2/Group/panda_link0/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link0.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.226, 0.189, 0.140), center=(-15.103, 30.000, 0.480)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_2/Group/panda_link0/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link0_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-15.010, 30.000, 0.323)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_2/Group/panda_link1/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link1.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.184, 0.247), center=(-15.010, 29.916, 0.918)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_2/Group/panda_link1/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link1_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-15.010, 30.000, 1.072)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_2/Group/panda_link2/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link2.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.249, 0.184), center=(-15.010, 30.083, 1.228)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_2/Group/panda_link2/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link2_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-15.010, 30.000, 1.072)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_2/Group/panda_link3/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link3.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.193, 0.166, 0.176), center=(-14.917, 30.063, 1.709)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_2/Group/panda_link3/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link3_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-15.010, 30.000, 1.783)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_2/Group/panda_link4/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link4.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.193, 0.179, 0.166), center=(-14.917, 29.937, 1.861)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_2/Group/panda_link4/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link4_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-14.825, 30.000, 1.783)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_2/Group/panda_link5/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link5.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.185, 0.311), center=(-15.010, 30.084, 2.414)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_2/Group/panda_link5/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link5_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-15.010, 30.000, 2.647)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_2/Group/panda_link6/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link6.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.180, 0.133, 0.100), center=(-14.916, 29.986, 2.681)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_2/Group/panda_link6/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link6_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-15.010, 30.000, 2.647)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_2/Group/panda_link7/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link7.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.125, 0.125, 0.055), center=(-14.770, 29.958, 2.468)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_2/Group/panda_link7/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link7_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-14.812, 30.000, 2.647)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_2/Group/panda_rightfinger/visuals' (Xform)
-
-* 引用: reference:./Props/panda_rightfinger.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.021, 0.026, 0.054), center=(-14.833, 30.021, 2.214)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_2/Group/panda_rightfinger/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_rightfinger_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-14.812, 30.000, 2.275)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_3' (Xform)
-
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/IsaacLab/Robots/FrankaEmika/panda_instanceable1.usd
-* BBox (world): size=(0.755, 0.583, 2.508), center=(-9.980, 30.000, 1.577)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_3/Group/panda_hand/visuals' (Xform)
-
-* 引用: reference:./Props/panda_hand.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.063, 0.205, 0.092), center=(-9.815, 30.002, 2.361)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_3/Group/panda_hand/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_hand_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-9.812, 30.000, 2.406)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_3/Group/panda_leftfinger/visuals' (Xform)
-
-* 引用: reference:./Props/panda_leftfinger.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.021, 0.026, 0.054), center=(-9.791, 29.979, 2.214)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_3/Group/panda_leftfinger/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_leftfinger_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-9.812, 30.000, 2.275)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_3/Group/panda_link0/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link0.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.226, 0.189, 0.140), center=(-10.103, 30.000, 0.480)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_3/Group/panda_link0/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link0_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-10.010, 30.000, 0.323)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_3/Group/panda_link1/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link1.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.184, 0.247), center=(-10.010, 29.916, 0.918)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_3/Group/panda_link1/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link1_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-10.010, 30.000, 1.072)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_3/Group/panda_link2/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link2.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.249, 0.184), center=(-10.010, 30.083, 1.228)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_3/Group/panda_link2/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link2_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-10.010, 30.000, 1.072)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_3/Group/panda_link3/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link3.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.193, 0.166, 0.176), center=(-9.917, 30.063, 1.709)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_3/Group/panda_link3/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link3_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-10.010, 30.000, 1.783)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_3/Group/panda_link4/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link4.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.193, 0.179, 0.166), center=(-9.917, 29.937, 1.861)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_3/Group/panda_link4/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link4_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-9.825, 30.000, 1.783)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_3/Group/panda_link5/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link5.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.185, 0.311), center=(-10.010, 30.084, 2.414)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_3/Group/panda_link5/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link5_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-10.010, 30.000, 2.647)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_3/Group/panda_link6/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link6.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.180, 0.133, 0.100), center=(-9.916, 29.986, 2.681)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_3/Group/panda_link6/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link6_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-10.010, 30.000, 2.647)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_3/Group/panda_link7/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link7.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.125, 0.125, 0.055), center=(-9.770, 29.958, 2.468)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_3/Group/panda_link7/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link7_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-9.812, 30.000, 2.647)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_3/Group/panda_rightfinger/visuals' (Xform)
-
-* 引用: reference:./Props/panda_rightfinger.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.021, 0.026, 0.054), center=(-9.833, 30.021, 2.214)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_3/Group/panda_rightfinger/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_rightfinger_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-9.812, 30.000, 2.275)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_4' (Xform)
-
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/IsaacLab/Robots/FrankaEmika/panda_instanceable1.usd
-* BBox (world): size=(0.755, 0.583, 2.508), center=(-4.980, 30.000, 1.577)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_4/Group/panda_hand/visuals' (Xform)
-
-* 引用: reference:./Props/panda_hand.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.063, 0.205, 0.092), center=(-4.815, 30.002, 2.361)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_4/Group/panda_hand/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_hand_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-4.812, 30.000, 2.406)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_4/Group/panda_leftfinger/visuals' (Xform)
-
-* 引用: reference:./Props/panda_leftfinger.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.021, 0.026, 0.054), center=(-4.791, 29.979, 2.214)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_4/Group/panda_leftfinger/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_leftfinger_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-4.812, 30.000, 2.275)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_4/Group/panda_link0/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link0.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.226, 0.189, 0.140), center=(-5.103, 30.000, 0.480)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_4/Group/panda_link0/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link0_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-5.010, 30.000, 0.323)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_4/Group/panda_link1/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link1.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.184, 0.247), center=(-5.010, 29.916, 0.918)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_4/Group/panda_link1/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link1_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-5.010, 30.000, 1.072)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_4/Group/panda_link2/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link2.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.249, 0.184), center=(-5.010, 30.083, 1.228)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_4/Group/panda_link2/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link2_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-5.010, 30.000, 1.072)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_4/Group/panda_link3/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link3.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.193, 0.166, 0.176), center=(-4.917, 30.063, 1.709)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_4/Group/panda_link3/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link3_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-5.010, 30.000, 1.783)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_4/Group/panda_link4/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link4.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.193, 0.179, 0.166), center=(-4.917, 29.937, 1.861)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_4/Group/panda_link4/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link4_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-4.825, 30.000, 1.783)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_4/Group/panda_link5/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link5.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.185, 0.311), center=(-5.010, 30.084, 2.414)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_4/Group/panda_link5/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link5_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-5.010, 30.000, 2.647)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_4/Group/panda_link6/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link6.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.180, 0.133, 0.100), center=(-4.916, 29.986, 2.681)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_4/Group/panda_link6/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link6_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-5.010, 30.000, 2.647)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_4/Group/panda_link7/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link7.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.125, 0.125, 0.055), center=(-4.770, 29.958, 2.468)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_4/Group/panda_link7/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link7_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-4.812, 30.000, 2.647)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_4/Group/panda_rightfinger/visuals' (Xform)
-
-* 引用: reference:./Props/panda_rightfinger.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.021, 0.026, 0.054), center=(-4.833, 30.021, 2.214)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_4/Group/panda_rightfinger/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_rightfinger_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-4.812, 30.000, 2.275)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_5' (Xform)
-
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/IsaacLab/Robots/FrankaEmika/panda_instanceable1.usd
-* BBox (world): size=(0.755, 0.583, 2.508), center=(0.020, 30.000, 1.577)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_5/Group/panda_hand/visuals' (Xform)
-
-* 引用: reference:./Props/panda_hand.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.063, 0.205, 0.092), center=(0.185, 30.002, 2.361)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_5/Group/panda_hand/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_hand_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(0.188, 30.000, 2.406)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_5/Group/panda_leftfinger/visuals' (Xform)
-
-* 引用: reference:./Props/panda_leftfinger.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.021, 0.026, 0.054), center=(0.209, 29.979, 2.214)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_5/Group/panda_leftfinger/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_leftfinger_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(0.188, 30.000, 2.275)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_5/Group/panda_link0/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link0.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.226, 0.189, 0.140), center=(-0.103, 30.000, 0.480)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_5/Group/panda_link0/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link0_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-0.010, 30.000, 0.323)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_5/Group/panda_link1/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link1.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.184, 0.247), center=(-0.010, 29.916, 0.918)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_5/Group/panda_link1/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link1_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-0.010, 30.000, 1.072)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_5/Group/panda_link2/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link2.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.249, 0.184), center=(-0.010, 30.083, 1.228)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_5/Group/panda_link2/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link2_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-0.010, 30.000, 1.072)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_5/Group/panda_link3/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link3.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.193, 0.166, 0.176), center=(0.083, 30.063, 1.709)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_5/Group/panda_link3/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link3_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-0.010, 30.000, 1.783)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_5/Group/panda_link4/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link4.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.193, 0.179, 0.166), center=(0.083, 29.937, 1.861)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_5/Group/panda_link4/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link4_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(0.175, 30.000, 1.783)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_5/Group/panda_link5/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link5.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.185, 0.311), center=(-0.010, 30.084, 2.414)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_5/Group/panda_link5/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link5_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-0.010, 30.000, 2.647)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_5/Group/panda_link6/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link6.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.180, 0.133, 0.100), center=(0.084, 29.986, 2.681)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_5/Group/panda_link6/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link6_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(-0.010, 30.000, 2.647)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_5/Group/panda_link7/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link7.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.125, 0.125, 0.055), center=(0.230, 29.958, 2.468)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_5/Group/panda_link7/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link7_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(0.188, 30.000, 2.647)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_5/Group/panda_rightfinger/visuals' (Xform)
-
-* 引用: reference:./Props/panda_rightfinger.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.021, 0.026, 0.054), center=(0.167, 30.021, 2.214)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_5/Group/panda_rightfinger/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_rightfinger_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(0.188, 30.000, 2.275)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_6' (Xform)
-
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/IsaacLab/Robots/FrankaEmika/panda_instanceable1.usd
-* BBox (world): size=(0.755, 0.583, 2.508), center=(5.020, 30.000, 1.577)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_6/Group/panda_hand/visuals' (Xform)
-
-* 引用: reference:./Props/panda_hand.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.063, 0.205, 0.092), center=(5.185, 30.002, 2.361)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_6/Group/panda_hand/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_hand_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(5.188, 30.000, 2.406)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_6/Group/panda_leftfinger/visuals' (Xform)
-
-* 引用: reference:./Props/panda_leftfinger.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.021, 0.026, 0.054), center=(5.209, 29.979, 2.214)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_6/Group/panda_leftfinger/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_leftfinger_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(5.188, 30.000, 2.275)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_6/Group/panda_link0/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link0.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.226, 0.189, 0.140), center=(4.897, 30.000, 0.480)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_6/Group/panda_link0/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link0_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(4.990, 30.000, 0.323)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_6/Group/panda_link1/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link1.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.184, 0.247), center=(4.990, 29.916, 0.918)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_6/Group/panda_link1/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link1_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(4.990, 30.000, 1.072)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_6/Group/panda_link2/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link2.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.249, 0.184), center=(4.990, 30.083, 1.228)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_6/Group/panda_link2/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link2_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(4.990, 30.000, 1.072)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_6/Group/panda_link3/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link3.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.193, 0.166, 0.176), center=(5.083, 30.063, 1.709)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_6/Group/panda_link3/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link3_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(4.990, 30.000, 1.783)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_6/Group/panda_link4/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link4.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.193, 0.179, 0.166), center=(5.083, 29.937, 1.861)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_6/Group/panda_link4/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link4_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(5.175, 30.000, 1.783)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_6/Group/panda_link5/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link5.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.185, 0.311), center=(4.990, 30.084, 2.414)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_6/Group/panda_link5/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link5_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(4.990, 30.000, 2.647)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_6/Group/panda_link6/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link6.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.180, 0.133, 0.100), center=(5.084, 29.986, 2.681)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_6/Group/panda_link6/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link6_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(4.990, 30.000, 2.647)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_6/Group/panda_link7/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link7.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.125, 0.125, 0.055), center=(5.230, 29.958, 2.468)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_6/Group/panda_link7/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link7_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(5.188, 30.000, 2.647)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_6/Group/panda_rightfinger/visuals' (Xform)
-
-* 引用: reference:./Props/panda_rightfinger.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.021, 0.026, 0.054), center=(5.167, 30.021, 2.214)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_6/Group/panda_rightfinger/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_rightfinger_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(5.188, 30.000, 2.275)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_7' (Xform)
-
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/IsaacLab/Robots/FrankaEmika/panda_instanceable1.usd
-* BBox (world): size=(0.755, 0.583, 2.508), center=(10.020, 30.000, 1.577)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_7/Group/panda_hand/visuals' (Xform)
-
-* 引用: reference:./Props/panda_hand.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.063, 0.205, 0.092), center=(10.185, 30.002, 2.361)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_7/Group/panda_hand/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_hand_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(10.188, 30.000, 2.406)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_7/Group/panda_leftfinger/visuals' (Xform)
-
-* 引用: reference:./Props/panda_leftfinger.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.021, 0.026, 0.054), center=(10.209, 29.979, 2.214)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_7/Group/panda_leftfinger/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_leftfinger_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(10.188, 30.000, 2.275)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_7/Group/panda_link0/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link0.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.226, 0.189, 0.140), center=(9.897, 30.000, 0.480)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_7/Group/panda_link0/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link0_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(9.990, 30.000, 0.323)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_7/Group/panda_link1/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link1.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.184, 0.247), center=(9.990, 29.916, 0.918)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_7/Group/panda_link1/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link1_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(9.990, 30.000, 1.072)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_7/Group/panda_link2/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link2.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.249, 0.184), center=(9.990, 30.083, 1.228)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_7/Group/panda_link2/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link2_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(9.990, 30.000, 1.072)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_7/Group/panda_link3/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link3.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.193, 0.166, 0.176), center=(10.083, 30.063, 1.709)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_7/Group/panda_link3/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link3_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(9.990, 30.000, 1.783)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_7/Group/panda_link4/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link4.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.193, 0.179, 0.166), center=(10.083, 29.937, 1.861)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_7/Group/panda_link4/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link4_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(10.175, 30.000, 1.783)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_7/Group/panda_link5/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link5.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.185, 0.311), center=(9.990, 30.084, 2.414)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_7/Group/panda_link5/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link5_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(9.990, 30.000, 2.647)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_7/Group/panda_link6/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link6.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.180, 0.133, 0.100), center=(10.084, 29.986, 2.681)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_7/Group/panda_link6/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link6_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(9.990, 30.000, 2.647)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_7/Group/panda_link7/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link7.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.125, 0.125, 0.055), center=(10.230, 29.958, 2.468)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_7/Group/panda_link7/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link7_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(10.188, 30.000, 2.647)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_7/Group/panda_rightfinger/visuals' (Xform)
-
-* 引用: reference:./Props/panda_rightfinger.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.021, 0.026, 0.054), center=(10.167, 30.021, 2.214)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_7/Group/panda_rightfinger/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_rightfinger_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(10.188, 30.000, 2.275)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_8' (Xform)
-
-* 引用: reference:/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/IsaacLab/Robots/FrankaEmika/panda_instanceable1.usd
-* BBox (world): size=(0.755, 0.583, 2.508), center=(15.020, 30.000, 1.577)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_8/Group/panda_hand/visuals' (Xform)
-
-* 引用: reference:./Props/panda_hand.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.063, 0.205, 0.092), center=(15.185, 30.002, 2.361)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_8/Group/panda_hand/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_hand_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(15.188, 30.000, 2.406)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_8/Group/panda_leftfinger/visuals' (Xform)
-
-* 引用: reference:./Props/panda_leftfinger.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.021, 0.026, 0.054), center=(15.209, 29.979, 2.214)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_8/Group/panda_leftfinger/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_leftfinger_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(15.188, 30.000, 2.275)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_8/Group/panda_link0/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link0.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.226, 0.189, 0.140), center=(14.897, 30.000, 0.480)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_8/Group/panda_link0/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link0_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(14.990, 30.000, 0.323)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_8/Group/panda_link1/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link1.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.184, 0.247), center=(14.990, 29.916, 0.918)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_8/Group/panda_link1/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link1_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(14.990, 30.000, 1.072)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_8/Group/panda_link2/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link2.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.249, 0.184), center=(14.990, 30.083, 1.228)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_8/Group/panda_link2/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link2_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(14.990, 30.000, 1.072)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_8/Group/panda_link3/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link3.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.193, 0.166, 0.176), center=(15.083, 30.063, 1.709)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_8/Group/panda_link3/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link3_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(14.990, 30.000, 1.783)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_8/Group/panda_link4/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link4.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.193, 0.179, 0.166), center=(15.083, 29.937, 1.861)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_8/Group/panda_link4/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link4_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(15.175, 30.000, 1.783)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_8/Group/panda_link5/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link5.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.110, 0.185, 0.311), center=(14.990, 30.084, 2.414)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_8/Group/panda_link5/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link5_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(14.990, 30.000, 2.647)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_8/Group/panda_link6/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link6.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.180, 0.133, 0.100), center=(15.084, 29.986, 2.681)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_8/Group/panda_link6/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link6_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(14.990, 30.000, 2.647)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_8/Group/panda_link7/visuals' (Xform)
-
-* 引用: reference:./Props/panda_link7.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.125, 0.125, 0.055), center=(15.230, 29.958, 2.468)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_8/Group/panda_link7/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_link7_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(15.188, 30.000, 2.647)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_8/Group/panda_rightfinger/visuals' (Xform)
-
-* 引用: reference:./Props/panda_rightfinger.usd @/Root
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(0.021, 0.026, 0.054), center=(15.167, 30.021, 2.214)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
-
----
-
-### '/World/RobotArm_8/Group/panda_rightfinger/collisions' (Xform)
-
-* 引用: reference:./Props/instanceable_collision_meshes.usd @/panda_rightfinger_collisions
-* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
-* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(15.188, 30.000, 2.275)
-* 几何统计: Mesh=0, Vertices=0, Faces=0
 
 ---
 
@@ -7589,5 +5645,220 @@
 * BBox (world): size=(35.888, 35.888, 35.888), center=(16.200, 29.500, 0.996)
 * 几何统计: Mesh=1, Vertices=56, Faces=44
 * 子Mesh材质: /World/StackedCarton_2_8/Meshes/Sketchfab_model/f49ad5edc352496894d3a02181012422_fbx/RootNode/Box072/Box072_06___Default_0/Box072_06___Default_0 -> 未绑定
+
+---
+
+### '/World/HeavyDutyPackingTable_A01_01' (Xform)
+
+* 引用: payload:../device_data/usdz/Workbench/HeavyDutyPackingTable_A01_01.usdz
+* BBox (world): size=(186.690, 121.948, 99.405), center=(14.843, 29.361, 0.651)
+* 几何统计: Mesh=1, Vertices=52018, Faces=52533
+* 子Mesh材质: /World/HeavyDutyPackingTable_A01_01/SM_HeavyDutyPackingTable_A01_01 -> 未绑定
+
+---
+
+### '/World/panda_instanceable1' (Xform)
+
+* 引用: payload:../device_data/usdz/IndustrialRobot/panda_instanceable1.usdz
+* BBox (world): size=(0.503, 0.389, 1.672), center=(15.146, 29.424, 1.981)
+* 几何统计: Mesh=0, Vertices=0, Faces=0
+
+---
+
+### '/World/panda_instanceable1/Group/panda_hand/visuals' (Xform)
+
+* 引用: reference:/Flattened_Prototype_6 @/Flattened_Prototype_6
+* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
+* BBox (world): size=(0.063, 0.205, 0.092), center=(15.255, 29.425, 2.504)
+* 几何统计: Mesh=0, Vertices=0, Faces=0
+
+---
+
+### '/World/panda_instanceable1/Group/panda_hand/collisions' (Xform)
+
+* 引用: reference:/Flattened_Prototype_13 @/Flattened_Prototype_13
+* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
+* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(15.257, 29.424, 2.534)
+* 几何统计: Mesh=0, Vertices=0, Faces=0
+
+---
+
+### '/World/panda_instanceable1/Group/panda_leftfinger/visuals' (Xform)
+
+* 引用: reference:/Flattened_Prototype_2 @/Flattened_Prototype_2
+* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
+* BBox (world): size=(0.021, 0.026, 0.054), center=(15.271, 29.410, 2.406)
+* 几何统计: Mesh=0, Vertices=0, Faces=0
+
+---
+
+### '/World/panda_instanceable1/Group/panda_leftfinger/collisions' (Xform)
+
+* 引用: reference:/Flattened_Prototype_22 @/Flattened_Prototype_22
+* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
+* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(15.257, 29.424, 2.446)
+* 几何统计: Mesh=0, Vertices=0, Faces=0
+
+---
+
+### '/World/panda_instanceable1/Group/panda_link0/visuals' (Xform)
+
+* 引用: reference:/Flattened_Prototype_5 @/Flattened_Prototype_5
+* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
+* BBox (world): size=(0.226, 0.189, 0.140), center=(15.063, 29.423, 1.250)
+* 几何统计: Mesh=0, Vertices=0, Faces=0
+
+---
+
+### '/World/panda_instanceable1/Group/panda_link0/collisions' (Xform)
+
+* 引用: reference:/Flattened_Prototype_19 @/Flattened_Prototype_19
+* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
+* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(15.125, 29.424, 1.145)
+* 几何统计: Mesh=0, Vertices=0, Faces=0
+
+---
+
+### '/World/panda_instanceable1/Group/panda_link1/visuals' (Xform)
+
+* 引用: reference:/Flattened_Prototype_16 @/Flattened_Prototype_16
+* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
+* BBox (world): size=(0.110, 0.184, 0.247), center=(15.125, 29.368, 1.541)
+* 几何统计: Mesh=0, Vertices=0, Faces=0
+
+---
+
+### '/World/panda_instanceable1/Group/panda_link1/collisions' (Xform)
+
+* 引用: reference:/Flattened_Prototype_18 @/Flattened_Prototype_18
+* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
+* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(15.125, 29.424, 1.644)
+* 几何统计: Mesh=0, Vertices=0, Faces=0
+
+---
+
+### '/World/panda_instanceable1/Group/panda_link2/visuals' (Xform)
+
+* 引用: reference:/Flattened_Prototype_1 @/Flattened_Prototype_1
+* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
+* BBox (world): size=(0.110, 0.249, 0.184), center=(15.125, 29.479, 1.749)
+* 几何统计: Mesh=0, Vertices=0, Faces=0
+
+---
+
+### '/World/panda_instanceable1/Group/panda_link2/collisions' (Xform)
+
+* 引用: reference:/Flattened_Prototype_12 @/Flattened_Prototype_12
+* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
+* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(15.125, 29.424, 1.644)
+* 几何统计: Mesh=0, Vertices=0, Faces=0
+
+---
+
+### '/World/panda_instanceable1/Group/panda_link3/visuals' (Xform)
+
+* 引用: reference:/Flattened_Prototype_14 @/Flattened_Prototype_14
+* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
+* BBox (world): size=(0.193, 0.166, 0.176), center=(15.187, 29.466, 2.069)
+* 几何统计: Mesh=0, Vertices=0, Faces=0
+
+---
+
+### '/World/panda_instanceable1/Group/panda_link3/collisions' (Xform)
+
+* 引用: reference:/Flattened_Prototype_15 @/Flattened_Prototype_15
+* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
+* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(15.125, 29.424, 2.118)
+* 几何统计: Mesh=0, Vertices=0, Faces=0
+
+---
+
+### '/World/panda_instanceable1/Group/panda_link4/visuals' (Xform)
+
+* 引用: reference:/Flattened_Prototype_8 @/Flattened_Prototype_8
+* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
+* BBox (world): size=(0.193, 0.179, 0.166), center=(15.187, 29.382, 2.170)
+* 几何统计: Mesh=0, Vertices=0, Faces=0
+
+---
+
+### '/World/panda_instanceable1/Group/panda_link4/collisions' (Xform)
+
+* 引用: reference:/Flattened_Prototype_3 @/Flattened_Prototype_3
+* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
+* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(15.249, 29.424, 2.118)
+* 几何统计: Mesh=0, Vertices=0, Faces=0
+
+---
+
+### '/World/panda_instanceable1/Group/panda_link5/visuals' (Xform)
+
+* 引用: reference:/Flattened_Prototype_10 @/Flattened_Prototype_10
+* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
+* BBox (world): size=(0.110, 0.185, 0.311), center=(15.125, 29.480, 2.539)
+* 几何统计: Mesh=0, Vertices=0, Faces=0
+
+---
+
+### '/World/panda_instanceable1/Group/panda_link5/collisions' (Xform)
+
+* 引用: reference:/Flattened_Prototype_4 @/Flattened_Prototype_4
+* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
+* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(15.125, 29.424, 2.694)
+* 几何统计: Mesh=0, Vertices=0, Faces=0
+
+---
+
+### '/World/panda_instanceable1/Group/panda_link6/visuals' (Xform)
+
+* 引用: reference:/Flattened_Prototype_9 @/Flattened_Prototype_9
+* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
+* BBox (world): size=(0.180, 0.133, 0.100), center=(15.188, 29.414, 2.717)
+* 几何统计: Mesh=0, Vertices=0, Faces=0
+
+---
+
+### '/World/panda_instanceable1/Group/panda_link6/collisions' (Xform)
+
+* 引用: reference:/Flattened_Prototype_11 @/Flattened_Prototype_11
+* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
+* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(15.125, 29.424, 2.694)
+* 几何统计: Mesh=0, Vertices=0, Faces=0
+
+---
+
+### '/World/panda_instanceable1/Group/panda_link7/visuals' (Xform)
+
+* 引用: reference:/Flattened_Prototype_17 @/Flattened_Prototype_17
+* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
+* BBox (world): size=(0.125, 0.125, 0.055), center=(15.285, 29.396, 2.575)
+* 几何统计: Mesh=0, Vertices=0, Faces=0
+
+---
+
+### '/World/panda_instanceable1/Group/panda_link7/collisions' (Xform)
+
+* 引用: reference:/Flattened_Prototype_21 @/Flattened_Prototype_21
+* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
+* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(15.257, 29.424, 2.694)
+* 几何统计: Mesh=0, Vertices=0, Faces=0
+
+---
+
+### '/World/panda_instanceable1/Group/panda_rightfinger/visuals' (Xform)
+
+* 引用: reference:/Flattened_Prototype_7 @/Flattened_Prototype_7
+* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
+* BBox (world): size=(0.021, 0.026, 0.054), center=(15.243, 29.437, 2.406)
+* 几何统计: Mesh=0, Vertices=0, Faces=0
+
+---
+
+### '/World/panda_instanceable1/Group/panda_rightfinger/collisions' (Xform)
+
+* 引用: reference:/Flattened_Prototype_20 @/Flattened_Prototype_20
+* 变换: T=(0.000, 0.000, 0.000); R=(0.000, 0.000, 0.000); S=(1.000, 1.000, 1.000)
+* BBox (world): size=(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000), center=(15.257, 29.424, 2.446)
+* 几何统计: Mesh=0, Vertices=0, Faces=0
 
 ---

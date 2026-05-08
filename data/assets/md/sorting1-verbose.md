@@ -6,11 +6,11 @@
 *  **单位与坐标系 (Units & Coordinate System):**
    *   **米(Meters Per Unit):**1.0
    *   **Up Axis:**Z
-*  **场景描述(Scene Describe):**  该场景展示了一个规模庞大且结构复杂的自动化工业集成系统，其核心功能围绕高效的物料分拣、传输与智能协同展开。从整体工业布局来看，该系统打破了传统的直线型布局，采用了极具柔性的“Z”字型与多分支复合结构。空间格局呈现出高度开放式的特点，背景为具有粗犷纹理的红砖墙面，地面则铺设了深色的抗静电或硬化处理层，形成了一个深邃且专业化的工业背景。整个作业区被巧妙地划分为物料输入区、多级分拣流转区、机器人协作区以及终端处理区，各区域通过复杂的皮带输送网络实现物理连接。在工业设备构成上，首先引人注目的是其多支链的皮带输送系统。这套系统由数段蓝色的工业输送机组成，框架采用标准化的蓝色喷涂钢件，具备多级支撑结构。输送带分为两种类型：一种是带有防滑纹理的黑色合成皮带，主要用于长距离直线传输；另一种则是密集的辊筒式输送单元，分布在转弯处和分拣节点。这种混合排布方式极大增强了物料流转的灵活性。输送线上均匀分布着大量半圆柱形的浅色待分拣工件，体现了高频率的作业节奏。该系统的核心在于其庞大的机器人集群。图中至少识别到两种类型的工业机器人，总数达到5台以上。第一种是分布在输送线中段及分支处的四台橙黑色协作机器人（Cobot），它们采取了侧挂式或基座式安装，主要负责从主干道抓取工件并分流至支线。这些协作机器人拥有细长且灵活的机械臂，末端配备了精密的真空吸夹具或气动抓手。第二种是位于系统远端的一台大型黄色多轴重型工业机器人，它固定在一个巨大的圆盘底座上。这台重型机器人的作业半径覆盖了输送线的末端和一个多层结构的蓝色分拣货架。仓储与工装设备方面，画面中出现了多台自动引导运输车（AGV）。这些AGV采用了明亮的黄色涂装，顶部搭载着蓝色的塑料物流框。它们分布在输送线的各处开口位，有的正处于待命状态，有的则完成了与输送线的分拣对接，充当了柔性物料搬运的中坚力量。AGV的数量至少有4台，它们在地面上形成了一套动态的移动仓储系统。此外，在系统末端还配置了一组多层分拣货架和配套的工作台。货架采用了白色的垂直分隔板，能够将分拣后的工件按类别进行物理隔离。工作台台面为蓝色，结构紧凑，为人工介入或最后的精细化作业提供了物理支撑。控制柜和电力驱动单元则隐蔽地集成在输送机框架下方，通过成排的白色线缆管路实现动力和信号的传输，这些管路沿着输送机外缘整齐排列，展现了极高的工业排布标准。整体规划结构体现了“工业4.0”的典型特征：通过复杂的输送网络实现物料的无缝衔接，利用多机协作（协作机器人+重型机器人+AGV）实现从宏观搬运到微观分拣的全覆盖。设备间的排布关系呈现出“主干+支流”的树状拓扑：主输送线贯穿全场，AGV在各节点负责横向对接，协作机器人在交汇点执行精准分拨，最终由重型机器人完成末端的集货与上架。这种布局模式能够极大地适应多品种、小批量的生产需求，每一个分拣节点都能根据实时指令调整路径，展现了极高的系统集成度与空间利用效率。
+*  **场景描述(Scene Describe):** 该场景呈现出一个极具秩序感且高度数字化的模块化分拣车间，整体规划严谨地遵循了“Y型主干线+多支路协同”的创新性工业布局，展现了一个悬浮于深色背景中的纯净作业生态。厂区空间格局以极致的简约性为核心，地面与墙面完全隐没，使得所有蓝色的高架输送装置在视觉上构成了车间的几何骨架。整个场景被划分为一条笔直的长程主线和两条呈45度角对称散开的侧向分拣支路，形成了清晰的物料流转拓扑结构。核心工业设备由一套亮蓝色的金属架构滚筒输送系统组成，输送线采用了标准化设计的H型支撑腿，确保了在高速运转下的结构冗余。在这些黑白相间的滚筒带面上，整齐分布着大量半圆弧形的灰色工件，正由主干线向各个分拣节点精确流转。紧邻输送线的关键拐点与末端，对称布置了多个智能作业单元，每个单元均以淡色木纹顶面的金属工作台为基座。在这些平台上，部署了两种不同类型的工业机器人：一类是橙黑涂装的高灵敏度六轴分拣臂，它们分布在侧向支路的顶端，正处于灵活抓取的高频作业姿态，负责将特定工件从流水线剔除；另一类是底盘呈醒目亮黄色的重型六轴工业机器人，通常部署在主干线的入口或交汇处，配合其侧翼的多层白色金属货架进行工件的分类入库或上料。货架采用了深蓝色的层板设计，每一层都带有垂直的隔断，便于对细小物件进行精细化管理。此外，场景中还部署了两台极具特色的亮黄色AGV移动机器人，这些移动平台顶部载有一个淡蓝色的镂空周转筐，正按照预设的网格路径在主线与支路之间穿梭，执行从分拣点到缓存区的柔性物料运送。从设备排布方式与整体规划结构分析，该场景巧妙地将固定的线性自动化与灵活的移动式物流结合在一起，形成了一个“点线面”高度耦合的分拣矩阵。每一个机器人工作站都是一个独立的处理节点，而输送线则作为物理链接确保了物料流的连续性，AGV则作为柔性链接打破了物理结构的限制。设备的排布密度经过了严格的物理包络计算，确保了橙色机器人、黄色重型臂以及AGV在共同作业时，各自的运动轨迹互不干扰。整个画面色彩分区明确且具备工业审美：蓝色代表了物料的固定路径，黄色定义了移动的能量中心与存储重镇，橙色则标识了高频的分拣操作点。这种由高架滚筒链、多型号机器人阵列、智能货架以及自主移动车构成的混合动力景观，深刻诠释了柔性生产中关于“路径最优化”与“模块可重组”的顶层规划逻辑。该场景中没有冗余的视觉干扰，所有物流流向均呈现出极佳的几何美感，标志着一个高度成熟、具备自我调节能力的现代化智慧分拣示范工厂。
 * **设备数量(Device Number):**
   * **Scene: 1**
-  * **IndustrialRobot: 4**
-  * **Workbench: 1**
+  * **IndustrialRobot: 5**
+  * **Workbench: 6**
   * **Conveyor: 1**
   * **AGV: 3**
   * **Forklift: 0**
@@ -3013,765 +3013,6 @@
                         *   SM_ConveyorBelt_A23_RubberBand82_01 (Mesh)
                         *   SM_ConveyorBelt_A23_RubberBand83_01 (Mesh)
                         *   SM_ConveyorBelt_A23_RubberBand84_01 (Mesh)
-    *   SorterArm (Xform)
-        *   Materials (Scope)
-            *   _1___Default (Material)
-                *   pbr_shader (Shader)
-                *   uvset0 (Shader)
-                *   tex_base (Shader)
-        *   Meshes (Xform)
-            *   Sketchfab_model (Xform)
-                *   brazo_FBX (Xform)
-                    *   RootNode (Xform)
-                        *   Base (Xform)
-                            *   Base_01___Default_0 (Xform)
-                                *   Base_01___Default_0 (Mesh)
-                        *   Base_1 (Xform)
-                            *   Arm01 (Xform)
-                                *   Arm02 (Xform)
-                                    *   Cylinder016 (Xform)
-                                        *   Cylinder016_01___Default_0 (Xform)
-                                            *   Cylinder016_01___Default_0 (Mesh)
-                                    *   Arm03 (Xform)
-                                        *   Arm03Rotation (Xform)
-                                            *   Cylinder020 (Xform)
-                                                *   Cylinder020_01___Default_0 (Xform)
-                                                    *   Cylinder020_01___Default_0 (Mesh)
-                                            *   Cylinder019 (Xform)
-                                                *   Cylinder019_01___Default_0 (Xform)
-                                                    *   Cylinder019_01___Default_0 (Mesh)
-                                            *   Expand01 (Xform)
-                                                *   Expand02 (Xform)
-                                                    *   Expand03 (Xform)
-                                                        *   Cylinder022 (Xform)
-                                                            *   Object_20 (Xform)
-                                                                *   Cylinder022_01___Default_0 (Xform)
-                                                                    *   Cylinder022_01___Default_0 (Mesh)
-                                                        *   Object003 (Xform)
-                                                            *   Object003_01___Default_0 (Xform)
-                                                                *   Object003_01___Default_0 (Mesh)
-                                                        *   Finger01 (Xform)
-                                                            *   Box005 (Xform)
-                                                                *   Box005_01___Default_0 (Xform)
-                                                                    *   Box005_01___Default_0 (Mesh)
-                                                            *   Box006 (Xform)
-                                                                *   Box006_01___Default_0 (Xform)
-                                                                    *   Box006_01___Default_0 (Mesh)
-                                                            *   Box007 (Xform)
-                                                                *   Box007_01___Default_0 (Xform)
-                                                                    *   Box007_01___Default_0 (Mesh)
-                                                        *   Finger02 (Xform)
-                                                            *   Box004 (Xform)
-                                                                *   Box004_01___Default_0 (Xform)
-                                                                    *   Box004_01___Default_0 (Mesh)
-                                                            *   Box003 (Xform)
-                                                                *   Box003_01___Default_0 (Xform)
-                                                                    *   Box003_01___Default_0 (Mesh)
-                                                            *   Box002 (Xform)
-                                                                *   Box002_01___Default_0 (Xform)
-                                                                    *   Box002_01___Default_0 (Mesh)
-                                                    *   Object004 (Xform)
-                                                        *   Object004_01___Default_0 (Xform)
-                                                            *   Object004_01___Default_0 (Mesh)
-                                                *   Cylinder021 (Xform)
-                                                    *   Cylinder021_01___Default_0 (Xform)
-                                                        *   Cylinder021_01___Default_0 (Mesh)
-                                        *   Cylinder017 (Xform)
-                                            *   Cylinder017_01___Default_0 (Xform)
-                                                *   Cylinder017_01___Default_0 (Mesh)
-                                        *   Cylinder018 (Xform)
-                                            *   Cylinder018_01___Default_0 (Xform)
-                                                *   Cylinder018_01___Default_0 (Mesh)
-                                    *   Cylinder014 (Xform)
-                                        *   Cylinder014_01___Default_0 (Xform)
-                                            *   Cylinder014_01___Default_0 (Mesh)
-                                    *   Cylinder013 (Xform)
-                                        *   Cylinder013_01___Default_0 (Xform)
-                                            *   Cylinder013_01___Default_0 (Mesh)
-                                    *   Cylinder012 (Xform)
-                                        *   Cylinder012_01___Default_0 (Xform)
-                                            *   Cylinder012_01___Default_0 (Mesh)
-                                    *   Cylinder011 (Xform)
-                                        *   Cylinder011_01___Default_0 (Xform)
-                                            *   Cylinder011_01___Default_0 (Mesh)
-                                    *   Box001 (Xform)
-                                        *   Box001_01___Default_0 (Xform)
-                                            *   Box001_01___Default_0 (Mesh)
-                                    *   Cylinder009 (Xform)
-                                        *   Cylinder009_01___Default_0 (Xform)
-                                            *   Cylinder009_01___Default_0 (Mesh)
-                                    *   Object002 (Xform)
-                                        *   Object002_01___Default_0 (Xform)
-                                            *   Object002_01___Default_0 (Mesh)
-                                    *   Cylinder010 (Xform)
-                                        *   Cylinder010_01___Default_0 (Xform)
-                                            *   Cylinder010_01___Default_0 (Mesh)
-                                *   Cylinder008 (Xform)
-                                    *   Cylinder008_01___Default_0 (Xform)
-                                        *   Cylinder008_01___Default_0 (Mesh)
-                                *   Cylinder007 (Xform)
-                                    *   Cylinder007_01___Default_0 (Xform)
-                                        *   Cylinder007_01___Default_0 (Mesh)
-                                *   Cylinder005 (Xform)
-                                    *   Cylinder005_01___Default_0 (Xform)
-                                        *   Cylinder005_01___Default_0 (Mesh)
-                                *   Cylinder006 (Xform)
-                                    *   Cylinder006_01___Default_0 (Xform)
-                                        *   Cylinder006_01___Default_0 (Mesh)
-                            *   Cylinder002 (Xform)
-                                *   Object_71 (Xform)
-                                    *   Cylinder002_01___Default_0 (Xform)
-                                        *   Cylinder002_01___Default_0 (Mesh)
-                            *   Cylinder003 (Xform)
-                                *   Object_74 (Xform)
-                                    *   Cylinder003_01___Default_0 (Xform)
-                                        *   Cylinder003_01___Default_0 (Mesh)
-                            *   Cylinder001 (Xform)
-                                *   Cylinder001_01___Default_0 (Xform)
-                                    *   Cylinder001_01___Default_0 (Mesh)
-                        *   Object005 (Xform)
-    *   SorterArm_1 (Xform)
-        *   Materials (Scope)
-            *   robo_arm (Material)
-                *   pbr_shader (Shader)
-                *   uvset0 (Shader)
-                *   tex_base (Shader)
-                *   tex_metallic (Shader)
-                *   tex_roughness (Shader)
-                *   tex_normal (Shader)
-                *   tex_emissive (Shader)
-            *   robot_base (Material)
-                *   pbr_shader (Shader)
-                *   uvset0 (Shader)
-                *   tex_base (Shader)
-                *   tex_metallic (Shader)
-                *   tex_roughness (Shader)
-                *   tex_normal (Shader)
-                *   tex_emissive (Shader)
-        *   Meshes (Xform)
-            *   Sketchfab_model (Xform)
-                *   root (Xform)
-                    *   GLTF_SceneRootNode (Xform)
-                        *   roboarm_001_low_0 (Xform)
-                            *   Object_4 (Xform)
-                                *   Object_0 (Mesh)
-                        *   roboarm_002_low_1 (Xform)
-                            *   Object_6 (Xform)
-                                *   Object_1 (Mesh)
-                        *   roboarm_003_low_2 (Xform)
-                            *   Object_8 (Xform)
-                                *   Object_2 (Mesh)
-                        *   roboarm_004_low_3 (Xform)
-                            *   Object_10 (Xform)
-                                *   Object_3 (Mesh)
-                        *   roboarm_005_low_4 (Xform)
-                            *   Object_12 (Xform)
-                                *   Object_4 (Mesh)
-                        *   roboarm_006_low_5 (Xform)
-                            *   Object_14 (Xform)
-                                *   Object_5 (Mesh)
-                        *   roboarm_007_low_6 (Xform)
-                            *   Object_16 (Xform)
-                                *   Object_6 (Mesh)
-                        *   roboarm_008_low_7 (Xform)
-                            *   Object_18 (Xform)
-                                *   Object_7 (Mesh)
-                        *   roboarm_009_low_8 (Xform)
-                            *   Object_20 (Xform)
-                                *   Object_8 (Mesh)
-                        *   roboarm_010_low_9 (Xform)
-                            *   Object_22 (Xform)
-                                *   Object_9 (Mesh)
-                        *   roboarm_011_low_10 (Xform)
-                            *   Object_24 (Xform)
-                                *   Object_10 (Mesh)
-                        *   roboarm_012_low_11 (Xform)
-                            *   Object_26 (Xform)
-                                *   Object_11 (Mesh)
-                        *   roboarm_013_low_12 (Xform)
-                            *   Object_28 (Xform)
-                                *   Object_12 (Mesh)
-                        *   roboarm_014_low_13 (Xform)
-                            *   Object_30 (Xform)
-                                *   Object_13 (Mesh)
-                        *   roboarm_015_low_14 (Xform)
-                            *   Object_32 (Xform)
-                                *   Object_14 (Mesh)
-                        *   roboarm_016_low_15 (Xform)
-                            *   Object_34 (Xform)
-                                *   Object_15 (Mesh)
-                        *   roboarm_017_low_16 (Xform)
-                            *   Object_36 (Xform)
-                                *   Object_16 (Mesh)
-                        *   roboarm_018_low_17 (Xform)
-                            *   Object_38 (Xform)
-                                *   Object_17 (Mesh)
-                        *   roboarm_019_low_18 (Xform)
-                            *   Object_40 (Xform)
-                                *   Object_18 (Mesh)
-                        *   roboarm_020_low_19 (Xform)
-                            *   Object_42 (Xform)
-                                *   Object_19 (Mesh)
-                        *   roboarm_021_low_20 (Xform)
-                            *   Object_44 (Xform)
-                                *   Object_20 (Mesh)
-                        *   roboarm_022_low_21 (Xform)
-                            *   Object_46 (Xform)
-                                *   Object_21 (Mesh)
-                        *   roboarm_023_low_22 (Xform)
-                            *   Object_48 (Xform)
-                                *   Object_22 (Mesh)
-                        *   roboarm_024_low_23 (Xform)
-                            *   Object_50 (Xform)
-                                *   Object_23 (Mesh)
-                        *   roboarm_025_low_24 (Xform)
-                            *   Object_52 (Xform)
-                                *   Object_24 (Mesh)
-                        *   roboarm_026_low_25 (Xform)
-                            *   Object_54 (Xform)
-                                *   Object_25 (Mesh)
-                        *   roboarm_027_low_26 (Xform)
-                            *   Object_56 (Xform)
-                                *   Object_26 (Mesh)
-                        *   roboarm_028_low_27 (Xform)
-                            *   Object_58 (Xform)
-                                *   Object_27 (Mesh)
-                        *   roboarm_low_28 (Xform)
-                            *   Object_60 (Xform)
-                                *   Object_28 (Mesh)
-                        *   robot_base_010_low_29 (Xform)
-                            *   Object_62 (Xform)
-                                *   Object_29 (Mesh)
-                        *   robot_base_001_low_30 (Xform)
-                            *   Object_64 (Xform)
-                                *   Object_30 (Mesh)
-                        *   robot_base_002_low_31 (Xform)
-                            *   Object_66 (Xform)
-                                *   Object_31 (Mesh)
-                        *   robot_base_003_low_32 (Xform)
-                            *   Object_68 (Xform)
-                                *   Object_32 (Mesh)
-                        *   robot_base_004_low_33 (Xform)
-                            *   Object_70 (Xform)
-                                *   Object_33 (Mesh)
-                        *   robot_base_005_low_34 (Xform)
-                            *   Object_72 (Xform)
-                                *   Object_34 (Mesh)
-                        *   robot_base_006_low_35 (Xform)
-                            *   Object_74 (Xform)
-                                *   Object_35 (Mesh)
-                        *   robot_base_008_low_36 (Xform)
-                            *   Object_76 (Xform)
-                                *   Object_36 (Mesh)
-                        *   robot_base_009_low_37 (Xform)
-                            *   Object_78 (Xform)
-                                *   Object_37 (Mesh)
-                        *   robot_base_018_low_38 (Xform)
-                            *   Object_80 (Xform)
-                                *   Object_38 (Mesh)
-                        *   robot_base_011_low_39 (Xform)
-                            *   Object_82 (Xform)
-                                *   Object_39 (Mesh)
-                        *   robot_base_012_low_40 (Xform)
-                            *   Object_84 (Xform)
-                                *   Object_40 (Mesh)
-                        *   robot_base_013_low_41 (Xform)
-                            *   Object_86 (Xform)
-                                *   Object_41 (Mesh)
-                        *   robot_base_014_low_42 (Xform)
-                            *   Object_88 (Xform)
-                                *   Object_42 (Mesh)
-                        *   robot_base_015_low_43 (Xform)
-                            *   Object_90 (Xform)
-                                *   Object_43 (Mesh)
-                        *   robot_base_016_low_44 (Xform)
-                            *   Object_92 (Xform)
-                                *   Object_44 (Mesh)
-                        *   robot_base_017_low_45 (Xform)
-                            *   Object_94 (Xform)
-                                *   Object_45 (Mesh)
-                        *   robot_base_020_low_46 (Xform)
-                            *   Object_96 (Xform)
-                                *   Object_46 (Mesh)
-                        *   robot_base_019_low_47 (Xform)
-                            *   Object_98 (Xform)
-                                *   Object_47 (Mesh)
-                        *   robot_base_021_low_48 (Xform)
-                            *   Object_100 (Xform)
-                                *   Object_48 (Mesh)
-                        *   robot_base_022_low_49 (Xform)
-                            *   Object_102 (Xform)
-                                *   Object_49 (Mesh)
-                        *   robot_base_023_low_50 (Xform)
-                            *   Object_104 (Xform)
-                                *   Object_50 (Mesh)
-                        *   robot_base_low_51 (Xform)
-                            *   Object_106 (Xform)
-                                *   Object_51 (Mesh)
-                        *   robot_base_024_low_52 (Xform)
-                            *   Object_108 (Xform)
-                                *   Object_52 (Mesh)
-                        *   robot_base_025_low_53 (Xform)
-                            *   Object_110 (Xform)
-                                *   Object_53 (Mesh)
-                        *   robot_base_026_low_54 (Xform)
-                            *   Object_112 (Xform)
-                                *   Object_54 (Mesh)
-                        *   robot_base_027_low_55 (Xform)
-                            *   Object_114 (Xform)
-                                *   Object_55 (Mesh)
-                        *   robot_base_028_low_56 (Xform)
-                            *   Object_116 (Xform)
-                                *   Object_56 (Mesh)
-                        *   robot_base_029_low_57 (Xform)
-                            *   Object_118 (Xform)
-                                *   Object_57 (Mesh)
-                        *   robot_base_030_low_58 (Xform)
-                            *   Object_120 (Xform)
-                                *   Object_58 (Mesh)
-                        *   robot_base_031_low_59 (Xform)
-                            *   Object_122 (Xform)
-                                *   Object_59 (Mesh)
-                        *   robot_base_032_low_60 (Xform)
-                            *   Object_124 (Xform)
-                                *   Object_60 (Mesh)
-                        *   robot_base_007_low_61 (Xform)
-                            *   Object_126 (Xform)
-                                *   Object_61 (Mesh)
-                        *   robot_base_033_low_62 (Xform)
-                            *   Object_128 (Xform)
-                                *   Object_62 (Mesh)
-                        *   robot_base_035_low_63 (Xform)
-                            *   Object_130 (Xform)
-                                *   Object_63 (Mesh)
-    *   SorterArm_2 (Xform)
-        *   Materials (Scope)
-            *   robo_arm (Material)
-                *   pbr_shader (Shader)
-                *   uvset0 (Shader)
-                *   tex_base (Shader)
-                *   tex_metallic (Shader)
-                *   tex_roughness (Shader)
-                *   tex_normal (Shader)
-                *   tex_emissive (Shader)
-            *   robot_base (Material)
-                *   pbr_shader (Shader)
-                *   uvset0 (Shader)
-                *   tex_base (Shader)
-                *   tex_metallic (Shader)
-                *   tex_roughness (Shader)
-                *   tex_normal (Shader)
-                *   tex_emissive (Shader)
-        *   Meshes (Xform)
-            *   Sketchfab_model (Xform)
-                *   root (Xform)
-                    *   GLTF_SceneRootNode (Xform)
-                        *   roboarm_001_low_0 (Xform)
-                            *   Object_4 (Xform)
-                                *   Object_0 (Mesh)
-                        *   roboarm_002_low_1 (Xform)
-                            *   Object_6 (Xform)
-                                *   Object_1 (Mesh)
-                        *   roboarm_003_low_2 (Xform)
-                            *   Object_8 (Xform)
-                                *   Object_2 (Mesh)
-                        *   roboarm_004_low_3 (Xform)
-                            *   Object_10 (Xform)
-                                *   Object_3 (Mesh)
-                        *   roboarm_005_low_4 (Xform)
-                            *   Object_12 (Xform)
-                                *   Object_4 (Mesh)
-                        *   roboarm_006_low_5 (Xform)
-                            *   Object_14 (Xform)
-                                *   Object_5 (Mesh)
-                        *   roboarm_007_low_6 (Xform)
-                            *   Object_16 (Xform)
-                                *   Object_6 (Mesh)
-                        *   roboarm_008_low_7 (Xform)
-                            *   Object_18 (Xform)
-                                *   Object_7 (Mesh)
-                        *   roboarm_009_low_8 (Xform)
-                            *   Object_20 (Xform)
-                                *   Object_8 (Mesh)
-                        *   roboarm_010_low_9 (Xform)
-                            *   Object_22 (Xform)
-                                *   Object_9 (Mesh)
-                        *   roboarm_011_low_10 (Xform)
-                            *   Object_24 (Xform)
-                                *   Object_10 (Mesh)
-                        *   roboarm_012_low_11 (Xform)
-                            *   Object_26 (Xform)
-                                *   Object_11 (Mesh)
-                        *   roboarm_013_low_12 (Xform)
-                            *   Object_28 (Xform)
-                                *   Object_12 (Mesh)
-                        *   roboarm_014_low_13 (Xform)
-                            *   Object_30 (Xform)
-                                *   Object_13 (Mesh)
-                        *   roboarm_015_low_14 (Xform)
-                            *   Object_32 (Xform)
-                                *   Object_14 (Mesh)
-                        *   roboarm_016_low_15 (Xform)
-                            *   Object_34 (Xform)
-                                *   Object_15 (Mesh)
-                        *   roboarm_017_low_16 (Xform)
-                            *   Object_36 (Xform)
-                                *   Object_16 (Mesh)
-                        *   roboarm_018_low_17 (Xform)
-                            *   Object_38 (Xform)
-                                *   Object_17 (Mesh)
-                        *   roboarm_019_low_18 (Xform)
-                            *   Object_40 (Xform)
-                                *   Object_18 (Mesh)
-                        *   roboarm_020_low_19 (Xform)
-                            *   Object_42 (Xform)
-                                *   Object_19 (Mesh)
-                        *   roboarm_021_low_20 (Xform)
-                            *   Object_44 (Xform)
-                                *   Object_20 (Mesh)
-                        *   roboarm_022_low_21 (Xform)
-                            *   Object_46 (Xform)
-                                *   Object_21 (Mesh)
-                        *   roboarm_023_low_22 (Xform)
-                            *   Object_48 (Xform)
-                                *   Object_22 (Mesh)
-                        *   roboarm_024_low_23 (Xform)
-                            *   Object_50 (Xform)
-                                *   Object_23 (Mesh)
-                        *   roboarm_025_low_24 (Xform)
-                            *   Object_52 (Xform)
-                                *   Object_24 (Mesh)
-                        *   roboarm_026_low_25 (Xform)
-                            *   Object_54 (Xform)
-                                *   Object_25 (Mesh)
-                        *   roboarm_027_low_26 (Xform)
-                            *   Object_56 (Xform)
-                                *   Object_26 (Mesh)
-                        *   roboarm_028_low_27 (Xform)
-                            *   Object_58 (Xform)
-                                *   Object_27 (Mesh)
-                        *   roboarm_low_28 (Xform)
-                            *   Object_60 (Xform)
-                                *   Object_28 (Mesh)
-                        *   robot_base_010_low_29 (Xform)
-                            *   Object_62 (Xform)
-                                *   Object_29 (Mesh)
-                        *   robot_base_001_low_30 (Xform)
-                            *   Object_64 (Xform)
-                                *   Object_30 (Mesh)
-                        *   robot_base_002_low_31 (Xform)
-                            *   Object_66 (Xform)
-                                *   Object_31 (Mesh)
-                        *   robot_base_003_low_32 (Xform)
-                            *   Object_68 (Xform)
-                                *   Object_32 (Mesh)
-                        *   robot_base_004_low_33 (Xform)
-                            *   Object_70 (Xform)
-                                *   Object_33 (Mesh)
-                        *   robot_base_005_low_34 (Xform)
-                            *   Object_72 (Xform)
-                                *   Object_34 (Mesh)
-                        *   robot_base_006_low_35 (Xform)
-                            *   Object_74 (Xform)
-                                *   Object_35 (Mesh)
-                        *   robot_base_008_low_36 (Xform)
-                            *   Object_76 (Xform)
-                                *   Object_36 (Mesh)
-                        *   robot_base_009_low_37 (Xform)
-                            *   Object_78 (Xform)
-                                *   Object_37 (Mesh)
-                        *   robot_base_018_low_38 (Xform)
-                            *   Object_80 (Xform)
-                                *   Object_38 (Mesh)
-                        *   robot_base_011_low_39 (Xform)
-                            *   Object_82 (Xform)
-                                *   Object_39 (Mesh)
-                        *   robot_base_012_low_40 (Xform)
-                            *   Object_84 (Xform)
-                                *   Object_40 (Mesh)
-                        *   robot_base_013_low_41 (Xform)
-                            *   Object_86 (Xform)
-                                *   Object_41 (Mesh)
-                        *   robot_base_014_low_42 (Xform)
-                            *   Object_88 (Xform)
-                                *   Object_42 (Mesh)
-                        *   robot_base_015_low_43 (Xform)
-                            *   Object_90 (Xform)
-                                *   Object_43 (Mesh)
-                        *   robot_base_016_low_44 (Xform)
-                            *   Object_92 (Xform)
-                                *   Object_44 (Mesh)
-                        *   robot_base_017_low_45 (Xform)
-                            *   Object_94 (Xform)
-                                *   Object_45 (Mesh)
-                        *   robot_base_020_low_46 (Xform)
-                            *   Object_96 (Xform)
-                                *   Object_46 (Mesh)
-                        *   robot_base_019_low_47 (Xform)
-                            *   Object_98 (Xform)
-                                *   Object_47 (Mesh)
-                        *   robot_base_021_low_48 (Xform)
-                            *   Object_100 (Xform)
-                                *   Object_48 (Mesh)
-                        *   robot_base_022_low_49 (Xform)
-                            *   Object_102 (Xform)
-                                *   Object_49 (Mesh)
-                        *   robot_base_023_low_50 (Xform)
-                            *   Object_104 (Xform)
-                                *   Object_50 (Mesh)
-                        *   robot_base_low_51 (Xform)
-                            *   Object_106 (Xform)
-                                *   Object_51 (Mesh)
-                        *   robot_base_024_low_52 (Xform)
-                            *   Object_108 (Xform)
-                                *   Object_52 (Mesh)
-                        *   robot_base_025_low_53 (Xform)
-                            *   Object_110 (Xform)
-                                *   Object_53 (Mesh)
-                        *   robot_base_026_low_54 (Xform)
-                            *   Object_112 (Xform)
-                                *   Object_54 (Mesh)
-                        *   robot_base_027_low_55 (Xform)
-                            *   Object_114 (Xform)
-                                *   Object_55 (Mesh)
-                        *   robot_base_028_low_56 (Xform)
-                            *   Object_116 (Xform)
-                                *   Object_56 (Mesh)
-                        *   robot_base_029_low_57 (Xform)
-                            *   Object_118 (Xform)
-                                *   Object_57 (Mesh)
-                        *   robot_base_030_low_58 (Xform)
-                            *   Object_120 (Xform)
-                                *   Object_58 (Mesh)
-                        *   robot_base_031_low_59 (Xform)
-                            *   Object_122 (Xform)
-                                *   Object_59 (Mesh)
-                        *   robot_base_032_low_60 (Xform)
-                            *   Object_124 (Xform)
-                                *   Object_60 (Mesh)
-                        *   robot_base_007_low_61 (Xform)
-                            *   Object_126 (Xform)
-                                *   Object_61 (Mesh)
-                        *   robot_base_033_low_62 (Xform)
-                            *   Object_128 (Xform)
-                                *   Object_62 (Mesh)
-                        *   robot_base_035_low_63 (Xform)
-                            *   Object_130 (Xform)
-                                *   Object_63 (Mesh)
-    *   SorterArm_3 (Xform)
-        *   Materials (Scope)
-            *   robo_arm (Material)
-                *   pbr_shader (Shader)
-                *   uvset0 (Shader)
-                *   tex_base (Shader)
-                *   tex_metallic (Shader)
-                *   tex_roughness (Shader)
-                *   tex_normal (Shader)
-                *   tex_emissive (Shader)
-            *   robot_base (Material)
-                *   pbr_shader (Shader)
-                *   uvset0 (Shader)
-                *   tex_base (Shader)
-                *   tex_metallic (Shader)
-                *   tex_roughness (Shader)
-                *   tex_normal (Shader)
-                *   tex_emissive (Shader)
-        *   Meshes (Xform)
-            *   Sketchfab_model (Xform)
-                *   root (Xform)
-                    *   GLTF_SceneRootNode (Xform)
-                        *   roboarm_001_low_0 (Xform)
-                            *   Object_4 (Xform)
-                                *   Object_0 (Mesh)
-                        *   roboarm_002_low_1 (Xform)
-                            *   Object_6 (Xform)
-                                *   Object_1 (Mesh)
-                        *   roboarm_003_low_2 (Xform)
-                            *   Object_8 (Xform)
-                                *   Object_2 (Mesh)
-                        *   roboarm_004_low_3 (Xform)
-                            *   Object_10 (Xform)
-                                *   Object_3 (Mesh)
-                        *   roboarm_005_low_4 (Xform)
-                            *   Object_12 (Xform)
-                                *   Object_4 (Mesh)
-                        *   roboarm_006_low_5 (Xform)
-                            *   Object_14 (Xform)
-                                *   Object_5 (Mesh)
-                        *   roboarm_007_low_6 (Xform)
-                            *   Object_16 (Xform)
-                                *   Object_6 (Mesh)
-                        *   roboarm_008_low_7 (Xform)
-                            *   Object_18 (Xform)
-                                *   Object_7 (Mesh)
-                        *   roboarm_009_low_8 (Xform)
-                            *   Object_20 (Xform)
-                                *   Object_8 (Mesh)
-                        *   roboarm_010_low_9 (Xform)
-                            *   Object_22 (Xform)
-                                *   Object_9 (Mesh)
-                        *   roboarm_011_low_10 (Xform)
-                            *   Object_24 (Xform)
-                                *   Object_10 (Mesh)
-                        *   roboarm_012_low_11 (Xform)
-                            *   Object_26 (Xform)
-                                *   Object_11 (Mesh)
-                        *   roboarm_013_low_12 (Xform)
-                            *   Object_28 (Xform)
-                                *   Object_12 (Mesh)
-                        *   roboarm_014_low_13 (Xform)
-                            *   Object_30 (Xform)
-                                *   Object_13 (Mesh)
-                        *   roboarm_015_low_14 (Xform)
-                            *   Object_32 (Xform)
-                                *   Object_14 (Mesh)
-                        *   roboarm_016_low_15 (Xform)
-                            *   Object_34 (Xform)
-                                *   Object_15 (Mesh)
-                        *   roboarm_017_low_16 (Xform)
-                            *   Object_36 (Xform)
-                                *   Object_16 (Mesh)
-                        *   roboarm_018_low_17 (Xform)
-                            *   Object_38 (Xform)
-                                *   Object_17 (Mesh)
-                        *   roboarm_019_low_18 (Xform)
-                            *   Object_40 (Xform)
-                                *   Object_18 (Mesh)
-                        *   roboarm_020_low_19 (Xform)
-                            *   Object_42 (Xform)
-                                *   Object_19 (Mesh)
-                        *   roboarm_021_low_20 (Xform)
-                            *   Object_44 (Xform)
-                                *   Object_20 (Mesh)
-                        *   roboarm_022_low_21 (Xform)
-                            *   Object_46 (Xform)
-                                *   Object_21 (Mesh)
-                        *   roboarm_023_low_22 (Xform)
-                            *   Object_48 (Xform)
-                                *   Object_22 (Mesh)
-                        *   roboarm_024_low_23 (Xform)
-                            *   Object_50 (Xform)
-                                *   Object_23 (Mesh)
-                        *   roboarm_025_low_24 (Xform)
-                            *   Object_52 (Xform)
-                                *   Object_24 (Mesh)
-                        *   roboarm_026_low_25 (Xform)
-                            *   Object_54 (Xform)
-                                *   Object_25 (Mesh)
-                        *   roboarm_027_low_26 (Xform)
-                            *   Object_56 (Xform)
-                                *   Object_26 (Mesh)
-                        *   roboarm_028_low_27 (Xform)
-                            *   Object_58 (Xform)
-                                *   Object_27 (Mesh)
-                        *   roboarm_low_28 (Xform)
-                            *   Object_60 (Xform)
-                                *   Object_28 (Mesh)
-                        *   robot_base_010_low_29 (Xform)
-                            *   Object_62 (Xform)
-                                *   Object_29 (Mesh)
-                        *   robot_base_001_low_30 (Xform)
-                            *   Object_64 (Xform)
-                                *   Object_30 (Mesh)
-                        *   robot_base_002_low_31 (Xform)
-                            *   Object_66 (Xform)
-                                *   Object_31 (Mesh)
-                        *   robot_base_003_low_32 (Xform)
-                            *   Object_68 (Xform)
-                                *   Object_32 (Mesh)
-                        *   robot_base_004_low_33 (Xform)
-                            *   Object_70 (Xform)
-                                *   Object_33 (Mesh)
-                        *   robot_base_005_low_34 (Xform)
-                            *   Object_72 (Xform)
-                                *   Object_34 (Mesh)
-                        *   robot_base_006_low_35 (Xform)
-                            *   Object_74 (Xform)
-                                *   Object_35 (Mesh)
-                        *   robot_base_008_low_36 (Xform)
-                            *   Object_76 (Xform)
-                                *   Object_36 (Mesh)
-                        *   robot_base_009_low_37 (Xform)
-                            *   Object_78 (Xform)
-                                *   Object_37 (Mesh)
-                        *   robot_base_018_low_38 (Xform)
-                            *   Object_80 (Xform)
-                                *   Object_38 (Mesh)
-                        *   robot_base_011_low_39 (Xform)
-                            *   Object_82 (Xform)
-                                *   Object_39 (Mesh)
-                        *   robot_base_012_low_40 (Xform)
-                            *   Object_84 (Xform)
-                                *   Object_40 (Mesh)
-                        *   robot_base_013_low_41 (Xform)
-                            *   Object_86 (Xform)
-                                *   Object_41 (Mesh)
-                        *   robot_base_014_low_42 (Xform)
-                            *   Object_88 (Xform)
-                                *   Object_42 (Mesh)
-                        *   robot_base_015_low_43 (Xform)
-                            *   Object_90 (Xform)
-                                *   Object_43 (Mesh)
-                        *   robot_base_016_low_44 (Xform)
-                            *   Object_92 (Xform)
-                                *   Object_44 (Mesh)
-                        *   robot_base_017_low_45 (Xform)
-                            *   Object_94 (Xform)
-                                *   Object_45 (Mesh)
-                        *   robot_base_020_low_46 (Xform)
-                            *   Object_96 (Xform)
-                                *   Object_46 (Mesh)
-                        *   robot_base_019_low_47 (Xform)
-                            *   Object_98 (Xform)
-                                *   Object_47 (Mesh)
-                        *   robot_base_021_low_48 (Xform)
-                            *   Object_100 (Xform)
-                                *   Object_48 (Mesh)
-                        *   robot_base_022_low_49 (Xform)
-                            *   Object_102 (Xform)
-                                *   Object_49 (Mesh)
-                        *   robot_base_023_low_50 (Xform)
-                            *   Object_104 (Xform)
-                                *   Object_50 (Mesh)
-                        *   robot_base_low_51 (Xform)
-                            *   Object_106 (Xform)
-                                *   Object_51 (Mesh)
-                        *   robot_base_024_low_52 (Xform)
-                            *   Object_108 (Xform)
-                                *   Object_52 (Mesh)
-                        *   robot_base_025_low_53 (Xform)
-                            *   Object_110 (Xform)
-                                *   Object_53 (Mesh)
-                        *   robot_base_026_low_54 (Xform)
-                            *   Object_112 (Xform)
-                                *   Object_54 (Mesh)
-                        *   robot_base_027_low_55 (Xform)
-                            *   Object_114 (Xform)
-                                *   Object_55 (Mesh)
-                        *   robot_base_028_low_56 (Xform)
-                            *   Object_116 (Xform)
-                                *   Object_56 (Mesh)
-                        *   robot_base_029_low_57 (Xform)
-                            *   Object_118 (Xform)
-                                *   Object_57 (Mesh)
-                        *   robot_base_030_low_58 (Xform)
-                            *   Object_120 (Xform)
-                                *   Object_58 (Mesh)
-                        *   robot_base_031_low_59 (Xform)
-                            *   Object_122 (Xform)
-                                *   Object_59 (Mesh)
-                        *   robot_base_032_low_60 (Xform)
-                            *   Object_124 (Xform)
-                                *   Object_60 (Mesh)
-                        *   robot_base_007_low_61 (Xform)
-                            *   Object_126 (Xform)
-                                *   Object_61 (Mesh)
-                        *   robot_base_033_low_62 (Xform)
-                            *   Object_128 (Xform)
-                                *   Object_62 (Mesh)
-                        *   robot_base_035_low_63 (Xform)
-                            *   Object_130 (Xform)
-                                *   Object_63 (Mesh)
     *   Workbench (Xform)
         *   sm_tablemetal_a02_bolts_01 (Mesh)
         *   sm_tablemetal_a02_table_01 (Mesh)
@@ -5342,6 +4583,356 @@
                             *   Object_4 (Xform)
                                 *   Box003_Material__1_0 (Xform)
                                     *   Box003_Material__1_0 (Mesh)
+*   HeavyDutyPackingTable_A01_01 (Xform)
+    *   SM_HeavyDutyPackingTable_A01_01 (Mesh)
+        *   M_HeavyDutyPackingTable_A01_Body (GeomSubset)
+        *   M_HeavyDutyPackingTable_A01_Bolts (GeomSubset)
+        *   M_HeavyDutyPackingTable_A01_TableTop (GeomSubset)
+    *   Looks (Scope)
+        *   Wood_Maple_HeavyDutyPackingTable_A (Material)
+            *   Shader (Shader)
+        *   Metal_Glossy_A_HeavyDutyPackingTable_A (Material)
+            *   Shader (Shader)
+        *   Metal_Painted_Gray_Glossy_A_HeavyDutyPackingTable_A (Material)
+            *   Shader (Shader)
+*   Black_Honey___Robotic_Arm_01 (Xform)
+    *   Materials (Scope)
+        *   robo_arm (Material)
+            *   pbr_shader (Shader)
+            *   uvset0 (Shader)
+            *   tex_base (Shader)
+            *   tex_metallic (Shader)
+            *   tex_roughness (Shader)
+            *   tex_normal (Shader)
+            *   tex_emissive (Shader)
+        *   robot_base (Material)
+            *   pbr_shader (Shader)
+            *   uvset0 (Shader)
+            *   tex_base (Shader)
+            *   tex_metallic (Shader)
+            *   tex_roughness (Shader)
+            *   tex_normal (Shader)
+            *   tex_emissive (Shader)
+    *   Meshes (Xform)
+        *   Sketchfab_model (Xform)
+            *   root (Xform)
+                *   GLTF_SceneRootNode (Xform)
+                    *   roboarm_001_low_0 (Xform)
+                        *   Object_4 (Xform)
+                            *   Object_0 (Mesh)
+                    *   roboarm_002_low_1 (Xform)
+                        *   Object_6 (Xform)
+                            *   Object_1 (Mesh)
+                    *   roboarm_003_low_2 (Xform)
+                        *   Object_8 (Xform)
+                            *   Object_2 (Mesh)
+                    *   roboarm_004_low_3 (Xform)
+                        *   Object_10 (Xform)
+                            *   Object_3 (Mesh)
+                    *   roboarm_005_low_4 (Xform)
+                        *   Object_12 (Xform)
+                            *   Object_4 (Mesh)
+                    *   roboarm_006_low_5 (Xform)
+                        *   Object_14 (Xform)
+                            *   Object_5 (Mesh)
+                    *   roboarm_007_low_6 (Xform)
+                        *   Object_16 (Xform)
+                            *   Object_6 (Mesh)
+                    *   roboarm_008_low_7 (Xform)
+                        *   Object_18 (Xform)
+                            *   Object_7 (Mesh)
+                    *   roboarm_009_low_8 (Xform)
+                        *   Object_20 (Xform)
+                            *   Object_8 (Mesh)
+                    *   roboarm_010_low_9 (Xform)
+                        *   Object_22 (Xform)
+                            *   Object_9 (Mesh)
+                    *   roboarm_011_low_10 (Xform)
+                        *   Object_24 (Xform)
+                            *   Object_10 (Mesh)
+                    *   roboarm_012_low_11 (Xform)
+                        *   Object_26 (Xform)
+                            *   Object_11 (Mesh)
+                    *   roboarm_013_low_12 (Xform)
+                        *   Object_28 (Xform)
+                            *   Object_12 (Mesh)
+                    *   roboarm_014_low_13 (Xform)
+                        *   Object_30 (Xform)
+                            *   Object_13 (Mesh)
+                    *   roboarm_015_low_14 (Xform)
+                        *   Object_32 (Xform)
+                            *   Object_14 (Mesh)
+                    *   roboarm_016_low_15 (Xform)
+                        *   Object_34 (Xform)
+                            *   Object_15 (Mesh)
+                    *   roboarm_017_low_16 (Xform)
+                        *   Object_36 (Xform)
+                            *   Object_16 (Mesh)
+                    *   roboarm_018_low_17 (Xform)
+                        *   Object_38 (Xform)
+                            *   Object_17 (Mesh)
+                    *   roboarm_019_low_18 (Xform)
+                        *   Object_40 (Xform)
+                            *   Object_18 (Mesh)
+                    *   roboarm_020_low_19 (Xform)
+                        *   Object_42 (Xform)
+                            *   Object_19 (Mesh)
+                    *   roboarm_021_low_20 (Xform)
+                        *   Object_44 (Xform)
+                            *   Object_20 (Mesh)
+                    *   roboarm_022_low_21 (Xform)
+                        *   Object_46 (Xform)
+                            *   Object_21 (Mesh)
+                    *   roboarm_023_low_22 (Xform)
+                        *   Object_48 (Xform)
+                            *   Object_22 (Mesh)
+                    *   roboarm_024_low_23 (Xform)
+                        *   Object_50 (Xform)
+                            *   Object_23 (Mesh)
+                    *   roboarm_025_low_24 (Xform)
+                        *   Object_52 (Xform)
+                            *   Object_24 (Mesh)
+                    *   roboarm_026_low_25 (Xform)
+                        *   Object_54 (Xform)
+                            *   Object_25 (Mesh)
+                    *   roboarm_027_low_26 (Xform)
+                        *   Object_56 (Xform)
+                            *   Object_26 (Mesh)
+                    *   roboarm_028_low_27 (Xform)
+                        *   Object_58 (Xform)
+                            *   Object_27 (Mesh)
+                    *   roboarm_low_28 (Xform)
+                        *   Object_60 (Xform)
+                            *   Object_28 (Mesh)
+                    *   robot_base_010_low_29 (Xform)
+                        *   Object_62 (Xform)
+                            *   Object_29 (Mesh)
+                    *   robot_base_001_low_30 (Xform)
+                        *   Object_64 (Xform)
+                            *   Object_30 (Mesh)
+                    *   robot_base_002_low_31 (Xform)
+                        *   Object_66 (Xform)
+                            *   Object_31 (Mesh)
+                    *   robot_base_003_low_32 (Xform)
+                        *   Object_68 (Xform)
+                            *   Object_32 (Mesh)
+                    *   robot_base_004_low_33 (Xform)
+                        *   Object_70 (Xform)
+                            *   Object_33 (Mesh)
+                    *   robot_base_005_low_34 (Xform)
+                        *   Object_72 (Xform)
+                            *   Object_34 (Mesh)
+                    *   robot_base_006_low_35 (Xform)
+                        *   Object_74 (Xform)
+                            *   Object_35 (Mesh)
+                    *   robot_base_008_low_36 (Xform)
+                        *   Object_76 (Xform)
+                            *   Object_36 (Mesh)
+                    *   robot_base_009_low_37 (Xform)
+                        *   Object_78 (Xform)
+                            *   Object_37 (Mesh)
+                    *   robot_base_018_low_38 (Xform)
+                        *   Object_80 (Xform)
+                            *   Object_38 (Mesh)
+                    *   robot_base_011_low_39 (Xform)
+                        *   Object_82 (Xform)
+                            *   Object_39 (Mesh)
+                    *   robot_base_012_low_40 (Xform)
+                        *   Object_84 (Xform)
+                            *   Object_40 (Mesh)
+                    *   robot_base_013_low_41 (Xform)
+                        *   Object_86 (Xform)
+                            *   Object_41 (Mesh)
+                    *   robot_base_014_low_42 (Xform)
+                        *   Object_88 (Xform)
+                            *   Object_42 (Mesh)
+                    *   robot_base_015_low_43 (Xform)
+                        *   Object_90 (Xform)
+                            *   Object_43 (Mesh)
+                    *   robot_base_016_low_44 (Xform)
+                        *   Object_92 (Xform)
+                            *   Object_44 (Mesh)
+                    *   robot_base_017_low_45 (Xform)
+                        *   Object_94 (Xform)
+                            *   Object_45 (Mesh)
+                    *   robot_base_020_low_46 (Xform)
+                        *   Object_96 (Xform)
+                            *   Object_46 (Mesh)
+                    *   robot_base_019_low_47 (Xform)
+                        *   Object_98 (Xform)
+                            *   Object_47 (Mesh)
+                    *   robot_base_021_low_48 (Xform)
+                        *   Object_100 (Xform)
+                            *   Object_48 (Mesh)
+                    *   robot_base_022_low_49 (Xform)
+                        *   Object_102 (Xform)
+                            *   Object_49 (Mesh)
+                    *   robot_base_023_low_50 (Xform)
+                        *   Object_104 (Xform)
+                            *   Object_50 (Mesh)
+                    *   robot_base_low_51 (Xform)
+                        *   Object_106 (Xform)
+                            *   Object_51 (Mesh)
+                    *   robot_base_024_low_52 (Xform)
+                        *   Object_108 (Xform)
+                            *   Object_52 (Mesh)
+                    *   robot_base_025_low_53 (Xform)
+                        *   Object_110 (Xform)
+                            *   Object_53 (Mesh)
+                    *   robot_base_026_low_54 (Xform)
+                        *   Object_112 (Xform)
+                            *   Object_54 (Mesh)
+                    *   robot_base_027_low_55 (Xform)
+                        *   Object_114 (Xform)
+                            *   Object_55 (Mesh)
+                    *   robot_base_028_low_56 (Xform)
+                        *   Object_116 (Xform)
+                            *   Object_56 (Mesh)
+                    *   robot_base_029_low_57 (Xform)
+                        *   Object_118 (Xform)
+                            *   Object_57 (Mesh)
+                    *   robot_base_030_low_58 (Xform)
+                        *   Object_120 (Xform)
+                            *   Object_58 (Mesh)
+                    *   robot_base_031_low_59 (Xform)
+                        *   Object_122 (Xform)
+                            *   Object_59 (Mesh)
+                    *   robot_base_032_low_60 (Xform)
+                        *   Object_124 (Xform)
+                            *   Object_60 (Mesh)
+                    *   robot_base_007_low_61 (Xform)
+                        *   Object_126 (Xform)
+                            *   Object_61 (Mesh)
+                    *   robot_base_033_low_62 (Xform)
+                        *   Object_128 (Xform)
+                            *   Object_62 (Mesh)
+                    *   robot_base_035_low_63 (Xform)
+                        *   Object_130 (Xform)
+                            *   Object_63 (Mesh)
+*   Black_Honey___Robotic_Arm_02 (Prim)
+*   HeavyDutyPackingTable_A01_02 (Prim)
+*   Black_Honey___Robotic_Arm_03 (Prim)
+*   HeavyDutyPackingTable_A01_03 (Prim)
+*   Black_Honey___Robotic_Arm_04 (Prim)
+*   HeavyDutyPackingTable_A01_04 (Prim)
+*   HeavyDutyPackingTable_A01_05 (Prim)
+*   robot (Xform)
+    *   Materials (Scope)
+        *   _1___Default (Material)
+            *   pbr_shader (Shader)
+            *   uvset0 (Shader)
+            *   tex_base (Shader)
+    *   Meshes (Xform)
+        *   Sketchfab_model (Xform)
+            *   brazo_FBX (Xform)
+                *   RootNode (Xform)
+                    *   Base (Xform)
+                        *   Base_01___Default_0 (Xform)
+                            *   Base_01___Default_0 (Mesh)
+                    *   Base_1 (Xform)
+                        *   Arm01 (Xform)
+                            *   Arm02 (Xform)
+                                *   Cylinder016 (Xform)
+                                    *   Cylinder016_01___Default_0 (Xform)
+                                        *   Cylinder016_01___Default_0 (Mesh)
+                                *   Arm03 (Xform)
+                                    *   Arm03Rotation (Xform)
+                                        *   Cylinder020 (Xform)
+                                            *   Cylinder020_01___Default_0 (Xform)
+                                                *   Cylinder020_01___Default_0 (Mesh)
+                                        *   Cylinder019 (Xform)
+                                            *   Cylinder019_01___Default_0 (Xform)
+                                                *   Cylinder019_01___Default_0 (Mesh)
+                                        *   Expand01 (Xform)
+                                            *   Expand02 (Xform)
+                                                *   Expand03 (Xform)
+                                                    *   Cylinder022 (Xform)
+                                                        *   Object_20 (Xform)
+                                                            *   Cylinder022_01___Default_0 (Xform)
+                                                                *   Cylinder022_01___Default_0 (Mesh)
+                                                    *   Object003 (Xform)
+                                                        *   Object003_01___Default_0 (Xform)
+                                                            *   Object003_01___Default_0 (Mesh)
+                                                    *   Finger01 (Xform)
+                                                        *   Box005 (Xform)
+                                                            *   Box005_01___Default_0 (Xform)
+                                                                *   Box005_01___Default_0 (Mesh)
+                                                        *   Box006 (Xform)
+                                                            *   Box006_01___Default_0 (Xform)
+                                                                *   Box006_01___Default_0 (Mesh)
+                                                        *   Box007 (Xform)
+                                                            *   Box007_01___Default_0 (Xform)
+                                                                *   Box007_01___Default_0 (Mesh)
+                                                    *   Finger02 (Xform)
+                                                        *   Box004 (Xform)
+                                                            *   Box004_01___Default_0 (Xform)
+                                                                *   Box004_01___Default_0 (Mesh)
+                                                        *   Box003 (Xform)
+                                                            *   Box003_01___Default_0 (Xform)
+                                                                *   Box003_01___Default_0 (Mesh)
+                                                        *   Box002 (Xform)
+                                                            *   Box002_01___Default_0 (Xform)
+                                                                *   Box002_01___Default_0 (Mesh)
+                                                *   Object004 (Xform)
+                                                    *   Object004_01___Default_0 (Xform)
+                                                        *   Object004_01___Default_0 (Mesh)
+                                            *   Cylinder021 (Xform)
+                                                *   Cylinder021_01___Default_0 (Xform)
+                                                    *   Cylinder021_01___Default_0 (Mesh)
+                                    *   Cylinder017 (Xform)
+                                        *   Cylinder017_01___Default_0 (Xform)
+                                            *   Cylinder017_01___Default_0 (Mesh)
+                                    *   Cylinder018 (Xform)
+                                        *   Cylinder018_01___Default_0 (Xform)
+                                            *   Cylinder018_01___Default_0 (Mesh)
+                                *   Cylinder014 (Xform)
+                                    *   Cylinder014_01___Default_0 (Xform)
+                                        *   Cylinder014_01___Default_0 (Mesh)
+                                *   Cylinder013 (Xform)
+                                    *   Cylinder013_01___Default_0 (Xform)
+                                        *   Cylinder013_01___Default_0 (Mesh)
+                                *   Cylinder012 (Xform)
+                                    *   Cylinder012_01___Default_0 (Xform)
+                                        *   Cylinder012_01___Default_0 (Mesh)
+                                *   Cylinder011 (Xform)
+                                    *   Cylinder011_01___Default_0 (Xform)
+                                        *   Cylinder011_01___Default_0 (Mesh)
+                                *   Box001 (Xform)
+                                    *   Box001_01___Default_0 (Xform)
+                                        *   Box001_01___Default_0 (Mesh)
+                                *   Cylinder009 (Xform)
+                                    *   Cylinder009_01___Default_0 (Xform)
+                                        *   Cylinder009_01___Default_0 (Mesh)
+                                *   Object002 (Xform)
+                                    *   Object002_01___Default_0 (Xform)
+                                        *   Object002_01___Default_0 (Mesh)
+                                *   Cylinder010 (Xform)
+                                    *   Cylinder010_01___Default_0 (Xform)
+                                        *   Cylinder010_01___Default_0 (Mesh)
+                            *   Cylinder008 (Xform)
+                                *   Cylinder008_01___Default_0 (Xform)
+                                    *   Cylinder008_01___Default_0 (Mesh)
+                            *   Cylinder007 (Xform)
+                                *   Cylinder007_01___Default_0 (Xform)
+                                    *   Cylinder007_01___Default_0 (Mesh)
+                            *   Cylinder005 (Xform)
+                                *   Cylinder005_01___Default_0 (Xform)
+                                    *   Cylinder005_01___Default_0 (Mesh)
+                            *   Cylinder006 (Xform)
+                                *   Cylinder006_01___Default_0 (Xform)
+                                    *   Cylinder006_01___Default_0 (Mesh)
+                        *   Cylinder002 (Xform)
+                            *   Object_71 (Xform)
+                                *   Cylinder002_01___Default_0 (Xform)
+                                    *   Cylinder002_01___Default_0 (Mesh)
+                        *   Cylinder003 (Xform)
+                            *   Object_74 (Xform)
+                                *   Cylinder003_01___Default_0 (Xform)
+                                    *   Cylinder003_01___Default_0 (Mesh)
+                        *   Cylinder001 (Xform)
+                            *   Cylinder001_01___Default_0 (Xform)
+                                *   Cylinder001_01___Default_0 (Mesh)
+                    *   Object005 (Xform)
 
 ## 3. 对象详细描述 (Detailed Prim Descriptions)
 
@@ -5366,58 +4957,6 @@
 *  **世界包围盒 (World BBox):**
    *   Size: '(22.546, 11.193, 1.228)'
    *   Center: '(56.907, 1.086, 0.614)'
-
-
----
-
-
-### /World/SorterArm
-*  **Prim路径 (Prim Path):**/World/SorterArm
-*  **Prim类型 (Prim Type):**Xform
-*  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/assets/Robotic_Arm_-_Brazo_Robotico/robot.usd'
-*  **世界包围盒 (World BBox):**
-   *   Size: '(1.736, 2.613, 3.217)'
-   *   Center: '(47.000, 8.009, 1.387)'
-
-
----
-
-
-### /World/SorterArm_1
-*  **Prim路径 (Prim Path):**/World/SorterArm_1
-*  **Prim类型 (Prim Type):**Xform
-*  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/assets/Black_Honey_-_Robotic_Arm/Black_Honey_-_Robotic_Arm.usdc'
-*  **世界包围盒 (World BBox):**
-   *   Size: '(0.808, 2.273, 0.363)'
-   *   Center: '(56.672, 3.988, 2.046)'
-
-
----
-
-
-### /World/SorterArm_2
-*  **Prim路径 (Prim Path):**/World/SorterArm_2
-*  **Prim类型 (Prim Type):**Xform
-*  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/assets/Black_Honey_-_Robotic_Arm/Black_Honey_-_Robotic_Arm.usdc'
-*  **世界包围盒 (World BBox):**
-   *   Size: '(0.808, 2.273, 0.363)'
-   *   Center: '(68.672, 1.988, 2.046)'
-
-
----
-
-
-### /World/SorterArm_3
-*  **Prim路径 (Prim Path):**/World/SorterArm_3
-*  **Prim类型 (Prim Type):**Xform
-*  **外部引用 (Referenced USD Files):**
-       *   [reference] '/media/simple/another_Documents/isaacsim_assets/assets/Black_Honey_-_Robotic_Arm/Black_Honey_-_Robotic_Arm.usdc'
-*  **世界包围盒 (World BBox):**
-   *   Size: '(0.808, 2.273, 0.363)'
-   *   Center: '(62.672, 7.488, 2.046)'
 
 
 ---
@@ -5847,6 +5386,45 @@
 *  **世界包围盒 (World BBox):**
    *   Size: '(0.424, 0.365, 0.421)'
    *   Center: '(64.617, 6.027, 0.395)'
+
+
+---
+
+
+### /HeavyDutyPackingTable_A01_01
+*  **Prim路径 (Prim Path):**/HeavyDutyPackingTable_A01_01
+*  **Prim类型 (Prim Type):**Xform
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] '../device_data/usdz/Workbench/HeavyDutyPackingTable_A01_01.usdz'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(186.690, 121.948, 99.405)'
+   *   Center: '(68.940, 2.622, 0.497)'
+
+
+---
+
+
+### /Black_Honey___Robotic_Arm_01
+*  **Prim路径 (Prim Path):**/Black_Honey___Robotic_Arm_01
+*  **Prim类型 (Prim Type):**Xform
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] '../device_data/usdz/IndustrialRobot/Black_Honey_-_Robotic_Arm.usdz'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(80.801, 227.335, 36.268)'
+   *   Center: '(69.283, 2.976, 2.017)'
+
+
+---
+
+
+### /robot
+*  **Prim路径 (Prim Path):**/robot
+*  **Prim类型 (Prim Type):**Xform
+*  **外部引用 (Referenced USD Files):**
+       *   [reference] '../device_data/usdz/IndustrialRobot/robot.usdz'
+*  **世界包围盒 (World BBox):**
+   *   Size: '(0.434, 0.653, 0.804)'
+   *   Center: '(46.924, 8.000, 1.687)'
 
 
 ---
@@ -20599,596 +20177,6 @@
 ---
 
 
-### /World/SorterArm/Materials/_1___Default
-*  **Prim路径 (Prim Path):**/World/SorterArm/Materials/_1___Default
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/SorterArm/Materials/_1___Default/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/SorterArm/Materials/_1___Default/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f]
-               *   Connected: '/World/SorterArm/Materials/_1___Default/tex_base.outputs:rgb' @ '/World/SorterArm/Materials/_1___Default/tex_base'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: './0/01_-_Default_baseColor.jpg'
-           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
-           *   'metallic' [float] = '0'
-           *   'normal' [normal3f] = '(1.000, 1.000, 1.000)'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float] = '0.223895'
-       *   '/World/SorterArm/Materials/_1___Default/tex_base' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   './0/01_-_Default_baseColor.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
-           *   'file' [asset] = './0/01_-_Default_baseColor.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm/Materials/_1___Default/uvset0.outputs:result' @ '/World/SorterArm/Materials/_1___Default/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/SorterArm/Materials/_1___Default/uvset0' (ID: 'UsdPrimvarReader_float2')
-       *   Implementation: 'id'
-
-
----
-
-
-### /World/SorterArm_1/Materials/robo_arm
-*  **Prim路径 (Prim Path):**/World/SorterArm_1/Materials/robo_arm
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/SorterArm_1/Materials/robo_arm/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/SorterArm_1/Materials/robo_arm/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f]
-               *   Connected: '/World/SorterArm_1/Materials/robo_arm/tex_base.outputs:rgb' @ '/World/SorterArm_1/Materials/robo_arm/tex_base'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robo_arm_baseColor.jpg'
-           *   'emissiveColor' [color3f]
-               *   Connected: '/World/SorterArm_1/Materials/robo_arm/tex_emissive.outputs:rgb' @ '/World/SorterArm_1/Materials/robo_arm/tex_emissive'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robo_arm_emissive.jpg'
-           *   'metallic' [float]
-               *   Connected: '/World/SorterArm_1/Materials/robo_arm/tex_metallic.outputs:r' @ '/World/SorterArm_1/Materials/robo_arm/tex_metallic'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robo_arm_metallicRoughness_metal.jpg'
-           *   'normal' [normal3f]
-               *   Connected: '/World/SorterArm_1/Materials/robo_arm/tex_normal.outputs:rgb' @ '/World/SorterArm_1/Materials/robo_arm/tex_normal'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robo_arm_normal_norm.jpg'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float]
-               *   Connected: '/World/SorterArm_1/Materials/robo_arm/tex_roughness.outputs:r' @ '/World/SorterArm_1/Materials/robo_arm/tex_roughness'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robo_arm_metallicRoughness_rough.jpg'
-       *   '/World/SorterArm_1/Materials/robo_arm/tex_base' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robo_arm_baseColor.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
-           *   'file' [asset] = '0/robo_arm_baseColor.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_1/Materials/robo_arm/uvset0.outputs:result' @ '/World/SorterArm_1/Materials/robo_arm/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/SorterArm_1/Materials/robo_arm/uvset0' (ID: 'UsdPrimvarReader_float2')
-       *   Implementation: 'id'
-       *   '/World/SorterArm_1/Materials/robo_arm/tex_emissive' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robo_arm_emissive.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(0.000, 0.000, 0.000, 1.000)'
-           *   'file' [asset] = '0/robo_arm_emissive.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_1/Materials/robo_arm/uvset0.outputs:result' @ '/World/SorterArm_1/Materials/robo_arm/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/SorterArm_1/Materials/robo_arm/tex_metallic' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robo_arm_metallicRoughness_metal.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(0.000, 0.000, 0.000, 1.000)'
-           *   'file' [asset] = '0/robo_arm_metallicRoughness_metal.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_1/Materials/robo_arm/uvset0.outputs:result' @ '/World/SorterArm_1/Materials/robo_arm/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/SorterArm_1/Materials/robo_arm/tex_normal' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robo_arm_normal_norm.jpg'
-       *   Inputs:
-           *   'bias' [float4] = '(-1.000, -1.000, -1.000, -1.000)'
-           *   'fallback' [float4] = '(0.000, 0.000, 1.000, 1.000)'
-           *   'file' [asset] = '0/robo_arm_normal_norm.jpg'
-           *   'scale' [float4] = '(2.000, 2.000, 2.000, 2.000)'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_1/Materials/robo_arm/uvset0.outputs:result' @ '/World/SorterArm_1/Materials/robo_arm/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/SorterArm_1/Materials/robo_arm/tex_roughness' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robo_arm_metallicRoughness_rough.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(1.000, 0.000, 0.000, 1.000)'
-           *   'file' [asset] = '0/robo_arm_metallicRoughness_rough.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_1/Materials/robo_arm/uvset0.outputs:result' @ '/World/SorterArm_1/Materials/robo_arm/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-
-
----
-
-
-### /World/SorterArm_1/Materials/robot_base
-*  **Prim路径 (Prim Path):**/World/SorterArm_1/Materials/robot_base
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/SorterArm_1/Materials/robot_base/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/SorterArm_1/Materials/robot_base/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f]
-               *   Connected: '/World/SorterArm_1/Materials/robot_base/tex_base.outputs:rgb' @ '/World/SorterArm_1/Materials/robot_base/tex_base'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robot_base_baseColor.jpg'
-           *   'emissiveColor' [color3f]
-               *   Connected: '/World/SorterArm_1/Materials/robot_base/tex_emissive.outputs:rgb' @ '/World/SorterArm_1/Materials/robot_base/tex_emissive'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robot_base_emissive.jpg'
-           *   'metallic' [float]
-               *   Connected: '/World/SorterArm_1/Materials/robot_base/tex_metallic.outputs:r' @ '/World/SorterArm_1/Materials/robot_base/tex_metallic'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robot_base_metallicRoughness_metal.jpg'
-           *   'normal' [normal3f]
-               *   Connected: '/World/SorterArm_1/Materials/robot_base/tex_normal.outputs:rgb' @ '/World/SorterArm_1/Materials/robot_base/tex_normal'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robot_base_normal_norm.jpg'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float]
-               *   Connected: '/World/SorterArm_1/Materials/robot_base/tex_roughness.outputs:r' @ '/World/SorterArm_1/Materials/robot_base/tex_roughness'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robot_base_metallicRoughness_rough.jpg'
-       *   '/World/SorterArm_1/Materials/robot_base/tex_base' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robot_base_baseColor.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
-           *   'file' [asset] = '0/robot_base_baseColor.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_1/Materials/robot_base/uvset0.outputs:result' @ '/World/SorterArm_1/Materials/robot_base/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/SorterArm_1/Materials/robot_base/uvset0' (ID: 'UsdPrimvarReader_float2')
-       *   Implementation: 'id'
-       *   '/World/SorterArm_1/Materials/robot_base/tex_emissive' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robot_base_emissive.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(0.000, 0.000, 0.000, 1.000)'
-           *   'file' [asset] = '0/robot_base_emissive.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_1/Materials/robot_base/uvset0.outputs:result' @ '/World/SorterArm_1/Materials/robot_base/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/SorterArm_1/Materials/robot_base/tex_metallic' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robot_base_metallicRoughness_metal.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(0.000, 0.000, 0.000, 1.000)'
-           *   'file' [asset] = '0/robot_base_metallicRoughness_metal.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_1/Materials/robot_base/uvset0.outputs:result' @ '/World/SorterArm_1/Materials/robot_base/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/SorterArm_1/Materials/robot_base/tex_normal' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robot_base_normal_norm.jpg'
-       *   Inputs:
-           *   'bias' [float4] = '(-1.000, -1.000, -1.000, -1.000)'
-           *   'fallback' [float4] = '(0.000, 0.000, 1.000, 1.000)'
-           *   'file' [asset] = '0/robot_base_normal_norm.jpg'
-           *   'scale' [float4] = '(2.000, 2.000, 2.000, 2.000)'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_1/Materials/robot_base/uvset0.outputs:result' @ '/World/SorterArm_1/Materials/robot_base/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/SorterArm_1/Materials/robot_base/tex_roughness' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robot_base_metallicRoughness_rough.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(1.000, 0.000, 0.000, 1.000)'
-           *   'file' [asset] = '0/robot_base_metallicRoughness_rough.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_1/Materials/robot_base/uvset0.outputs:result' @ '/World/SorterArm_1/Materials/robot_base/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-
-
----
-
-
-### /World/SorterArm_2/Materials/robo_arm
-*  **Prim路径 (Prim Path):**/World/SorterArm_2/Materials/robo_arm
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/SorterArm_2/Materials/robo_arm/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/SorterArm_2/Materials/robo_arm/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f]
-               *   Connected: '/World/SorterArm_2/Materials/robo_arm/tex_base.outputs:rgb' @ '/World/SorterArm_2/Materials/robo_arm/tex_base'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robo_arm_baseColor.jpg'
-           *   'emissiveColor' [color3f]
-               *   Connected: '/World/SorterArm_2/Materials/robo_arm/tex_emissive.outputs:rgb' @ '/World/SorterArm_2/Materials/robo_arm/tex_emissive'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robo_arm_emissive.jpg'
-           *   'metallic' [float]
-               *   Connected: '/World/SorterArm_2/Materials/robo_arm/tex_metallic.outputs:r' @ '/World/SorterArm_2/Materials/robo_arm/tex_metallic'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robo_arm_metallicRoughness_metal.jpg'
-           *   'normal' [normal3f]
-               *   Connected: '/World/SorterArm_2/Materials/robo_arm/tex_normal.outputs:rgb' @ '/World/SorterArm_2/Materials/robo_arm/tex_normal'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robo_arm_normal_norm.jpg'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float]
-               *   Connected: '/World/SorterArm_2/Materials/robo_arm/tex_roughness.outputs:r' @ '/World/SorterArm_2/Materials/robo_arm/tex_roughness'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robo_arm_metallicRoughness_rough.jpg'
-       *   '/World/SorterArm_2/Materials/robo_arm/tex_base' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robo_arm_baseColor.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
-           *   'file' [asset] = '0/robo_arm_baseColor.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_2/Materials/robo_arm/uvset0.outputs:result' @ '/World/SorterArm_2/Materials/robo_arm/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/SorterArm_2/Materials/robo_arm/uvset0' (ID: 'UsdPrimvarReader_float2')
-       *   Implementation: 'id'
-       *   '/World/SorterArm_2/Materials/robo_arm/tex_emissive' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robo_arm_emissive.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(0.000, 0.000, 0.000, 1.000)'
-           *   'file' [asset] = '0/robo_arm_emissive.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_2/Materials/robo_arm/uvset0.outputs:result' @ '/World/SorterArm_2/Materials/robo_arm/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/SorterArm_2/Materials/robo_arm/tex_metallic' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robo_arm_metallicRoughness_metal.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(0.000, 0.000, 0.000, 1.000)'
-           *   'file' [asset] = '0/robo_arm_metallicRoughness_metal.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_2/Materials/robo_arm/uvset0.outputs:result' @ '/World/SorterArm_2/Materials/robo_arm/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/SorterArm_2/Materials/robo_arm/tex_normal' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robo_arm_normal_norm.jpg'
-       *   Inputs:
-           *   'bias' [float4] = '(-1.000, -1.000, -1.000, -1.000)'
-           *   'fallback' [float4] = '(0.000, 0.000, 1.000, 1.000)'
-           *   'file' [asset] = '0/robo_arm_normal_norm.jpg'
-           *   'scale' [float4] = '(2.000, 2.000, 2.000, 2.000)'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_2/Materials/robo_arm/uvset0.outputs:result' @ '/World/SorterArm_2/Materials/robo_arm/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/SorterArm_2/Materials/robo_arm/tex_roughness' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robo_arm_metallicRoughness_rough.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(1.000, 0.000, 0.000, 1.000)'
-           *   'file' [asset] = '0/robo_arm_metallicRoughness_rough.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_2/Materials/robo_arm/uvset0.outputs:result' @ '/World/SorterArm_2/Materials/robo_arm/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-
-
----
-
-
-### /World/SorterArm_2/Materials/robot_base
-*  **Prim路径 (Prim Path):**/World/SorterArm_2/Materials/robot_base
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/SorterArm_2/Materials/robot_base/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/SorterArm_2/Materials/robot_base/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f]
-               *   Connected: '/World/SorterArm_2/Materials/robot_base/tex_base.outputs:rgb' @ '/World/SorterArm_2/Materials/robot_base/tex_base'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robot_base_baseColor.jpg'
-           *   'emissiveColor' [color3f]
-               *   Connected: '/World/SorterArm_2/Materials/robot_base/tex_emissive.outputs:rgb' @ '/World/SorterArm_2/Materials/robot_base/tex_emissive'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robot_base_emissive.jpg'
-           *   'metallic' [float]
-               *   Connected: '/World/SorterArm_2/Materials/robot_base/tex_metallic.outputs:r' @ '/World/SorterArm_2/Materials/robot_base/tex_metallic'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robot_base_metallicRoughness_metal.jpg'
-           *   'normal' [normal3f]
-               *   Connected: '/World/SorterArm_2/Materials/robot_base/tex_normal.outputs:rgb' @ '/World/SorterArm_2/Materials/robot_base/tex_normal'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robot_base_normal_norm.jpg'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float]
-               *   Connected: '/World/SorterArm_2/Materials/robot_base/tex_roughness.outputs:r' @ '/World/SorterArm_2/Materials/robot_base/tex_roughness'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robot_base_metallicRoughness_rough.jpg'
-       *   '/World/SorterArm_2/Materials/robot_base/tex_base' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robot_base_baseColor.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
-           *   'file' [asset] = '0/robot_base_baseColor.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_2/Materials/robot_base/uvset0.outputs:result' @ '/World/SorterArm_2/Materials/robot_base/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/SorterArm_2/Materials/robot_base/uvset0' (ID: 'UsdPrimvarReader_float2')
-       *   Implementation: 'id'
-       *   '/World/SorterArm_2/Materials/robot_base/tex_emissive' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robot_base_emissive.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(0.000, 0.000, 0.000, 1.000)'
-           *   'file' [asset] = '0/robot_base_emissive.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_2/Materials/robot_base/uvset0.outputs:result' @ '/World/SorterArm_2/Materials/robot_base/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/SorterArm_2/Materials/robot_base/tex_metallic' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robot_base_metallicRoughness_metal.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(0.000, 0.000, 0.000, 1.000)'
-           *   'file' [asset] = '0/robot_base_metallicRoughness_metal.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_2/Materials/robot_base/uvset0.outputs:result' @ '/World/SorterArm_2/Materials/robot_base/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/SorterArm_2/Materials/robot_base/tex_normal' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robot_base_normal_norm.jpg'
-       *   Inputs:
-           *   'bias' [float4] = '(-1.000, -1.000, -1.000, -1.000)'
-           *   'fallback' [float4] = '(0.000, 0.000, 1.000, 1.000)'
-           *   'file' [asset] = '0/robot_base_normal_norm.jpg'
-           *   'scale' [float4] = '(2.000, 2.000, 2.000, 2.000)'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_2/Materials/robot_base/uvset0.outputs:result' @ '/World/SorterArm_2/Materials/robot_base/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/SorterArm_2/Materials/robot_base/tex_roughness' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robot_base_metallicRoughness_rough.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(1.000, 0.000, 0.000, 1.000)'
-           *   'file' [asset] = '0/robot_base_metallicRoughness_rough.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_2/Materials/robot_base/uvset0.outputs:result' @ '/World/SorterArm_2/Materials/robot_base/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-
-
----
-
-
-### /World/SorterArm_3/Materials/robo_arm
-*  **Prim路径 (Prim Path):**/World/SorterArm_3/Materials/robo_arm
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/SorterArm_3/Materials/robo_arm/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/SorterArm_3/Materials/robo_arm/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f]
-               *   Connected: '/World/SorterArm_3/Materials/robo_arm/tex_base.outputs:rgb' @ '/World/SorterArm_3/Materials/robo_arm/tex_base'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robo_arm_baseColor.jpg'
-           *   'emissiveColor' [color3f]
-               *   Connected: '/World/SorterArm_3/Materials/robo_arm/tex_emissive.outputs:rgb' @ '/World/SorterArm_3/Materials/robo_arm/tex_emissive'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robo_arm_emissive.jpg'
-           *   'metallic' [float]
-               *   Connected: '/World/SorterArm_3/Materials/robo_arm/tex_metallic.outputs:r' @ '/World/SorterArm_3/Materials/robo_arm/tex_metallic'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robo_arm_metallicRoughness_metal.jpg'
-           *   'normal' [normal3f]
-               *   Connected: '/World/SorterArm_3/Materials/robo_arm/tex_normal.outputs:rgb' @ '/World/SorterArm_3/Materials/robo_arm/tex_normal'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robo_arm_normal_norm.jpg'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float]
-               *   Connected: '/World/SorterArm_3/Materials/robo_arm/tex_roughness.outputs:r' @ '/World/SorterArm_3/Materials/robo_arm/tex_roughness'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robo_arm_metallicRoughness_rough.jpg'
-       *   '/World/SorterArm_3/Materials/robo_arm/tex_base' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robo_arm_baseColor.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
-           *   'file' [asset] = '0/robo_arm_baseColor.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_3/Materials/robo_arm/uvset0.outputs:result' @ '/World/SorterArm_3/Materials/robo_arm/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/SorterArm_3/Materials/robo_arm/uvset0' (ID: 'UsdPrimvarReader_float2')
-       *   Implementation: 'id'
-       *   '/World/SorterArm_3/Materials/robo_arm/tex_emissive' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robo_arm_emissive.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(0.000, 0.000, 0.000, 1.000)'
-           *   'file' [asset] = '0/robo_arm_emissive.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_3/Materials/robo_arm/uvset0.outputs:result' @ '/World/SorterArm_3/Materials/robo_arm/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/SorterArm_3/Materials/robo_arm/tex_metallic' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robo_arm_metallicRoughness_metal.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(0.000, 0.000, 0.000, 1.000)'
-           *   'file' [asset] = '0/robo_arm_metallicRoughness_metal.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_3/Materials/robo_arm/uvset0.outputs:result' @ '/World/SorterArm_3/Materials/robo_arm/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/SorterArm_3/Materials/robo_arm/tex_normal' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robo_arm_normal_norm.jpg'
-       *   Inputs:
-           *   'bias' [float4] = '(-1.000, -1.000, -1.000, -1.000)'
-           *   'fallback' [float4] = '(0.000, 0.000, 1.000, 1.000)'
-           *   'file' [asset] = '0/robo_arm_normal_norm.jpg'
-           *   'scale' [float4] = '(2.000, 2.000, 2.000, 2.000)'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_3/Materials/robo_arm/uvset0.outputs:result' @ '/World/SorterArm_3/Materials/robo_arm/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/SorterArm_3/Materials/robo_arm/tex_roughness' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robo_arm_metallicRoughness_rough.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(1.000, 0.000, 0.000, 1.000)'
-           *   'file' [asset] = '0/robo_arm_metallicRoughness_rough.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_3/Materials/robo_arm/uvset0.outputs:result' @ '/World/SorterArm_3/Materials/robo_arm/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-
-
----
-
-
-### /World/SorterArm_3/Materials/robot_base
-*  **Prim路径 (Prim Path):**/World/SorterArm_3/Materials/robot_base
-*  **Prim类型 (Prim Type):**Material
-*  **材质网络 (Material & Shader Details):**
-   *   **Surface Outputs:**
-       *   'outputs:surface' -> '/World/SorterArm_3/Materials/robot_base/pbr_shader'
-       *   Shader ID: 'UsdPreviewSurface'
-       *   Connection: 'surface' (Output)'
-   *   **Shader 节点 (Shader Nodes):**
-       *   '/World/SorterArm_3/Materials/robot_base/pbr_shader' (ID: 'UsdPreviewSurface')
-       *   Implementation: 'id'
-       *   Inputs:
-           *   'diffuseColor' [color3f]
-               *   Connected: '/World/SorterArm_3/Materials/robot_base/tex_base.outputs:rgb' @ '/World/SorterArm_3/Materials/robot_base/tex_base'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robot_base_baseColor.jpg'
-           *   'emissiveColor' [color3f]
-               *   Connected: '/World/SorterArm_3/Materials/robot_base/tex_emissive.outputs:rgb' @ '/World/SorterArm_3/Materials/robot_base/tex_emissive'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robot_base_emissive.jpg'
-           *   'metallic' [float]
-               *   Connected: '/World/SorterArm_3/Materials/robot_base/tex_metallic.outputs:r' @ '/World/SorterArm_3/Materials/robot_base/tex_metallic'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robot_base_metallicRoughness_metal.jpg'
-           *   'normal' [normal3f]
-               *   Connected: '/World/SorterArm_3/Materials/robot_base/tex_normal.outputs:rgb' @ '/World/SorterArm_3/Materials/robot_base/tex_normal'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robot_base_normal_norm.jpg'
-           *   'occlusion' [float] = '1'
-           *   'roughness' [float]
-               *   Connected: '/World/SorterArm_3/Materials/robot_base/tex_roughness.outputs:r' @ '/World/SorterArm_3/Materials/robot_base/tex_roughness'
-                   *   Shader ID: 'UsdUVTexture'
-                   *   Texture: '0/robot_base_metallicRoughness_rough.jpg'
-       *   '/World/SorterArm_3/Materials/robot_base/tex_base' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robot_base_baseColor.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
-           *   'file' [asset] = '0/robot_base_baseColor.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_3/Materials/robot_base/uvset0.outputs:result' @ '/World/SorterArm_3/Materials/robot_base/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/SorterArm_3/Materials/robot_base/uvset0' (ID: 'UsdPrimvarReader_float2')
-       *   Implementation: 'id'
-       *   '/World/SorterArm_3/Materials/robot_base/tex_emissive' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robot_base_emissive.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(0.000, 0.000, 0.000, 1.000)'
-           *   'file' [asset] = '0/robot_base_emissive.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_3/Materials/robot_base/uvset0.outputs:result' @ '/World/SorterArm_3/Materials/robot_base/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/SorterArm_3/Materials/robot_base/tex_metallic' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robot_base_metallicRoughness_metal.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(0.000, 0.000, 0.000, 1.000)'
-           *   'file' [asset] = '0/robot_base_metallicRoughness_metal.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_3/Materials/robot_base/uvset0.outputs:result' @ '/World/SorterArm_3/Materials/robot_base/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/SorterArm_3/Materials/robot_base/tex_normal' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robot_base_normal_norm.jpg'
-       *   Inputs:
-           *   'bias' [float4] = '(-1.000, -1.000, -1.000, -1.000)'
-           *   'fallback' [float4] = '(0.000, 0.000, 1.000, 1.000)'
-           *   'file' [asset] = '0/robot_base_normal_norm.jpg'
-           *   'scale' [float4] = '(2.000, 2.000, 2.000, 2.000)'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_3/Materials/robot_base/uvset0.outputs:result' @ '/World/SorterArm_3/Materials/robot_base/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-       *   '/World/SorterArm_3/Materials/robot_base/tex_roughness' (ID: 'UsdUVTexture')
-       *   Implementation: 'id'
-       *   纹理引用 (Texture Assets):
-           *   '0/robot_base_metallicRoughness_rough.jpg'
-       *   Inputs:
-           *   'fallback' [float4] = '(1.000, 0.000, 0.000, 1.000)'
-           *   'file' [asset] = '0/robot_base_metallicRoughness_rough.jpg'
-           *   'st' [float2]
-               *   Connected: '/World/SorterArm_3/Materials/robot_base/uvset0.outputs:result' @ '/World/SorterArm_3/Materials/robot_base/uvset0'
-                   *   Shader ID: 'UsdPrimvarReader_float2'
-
-
----
-
-
 ### /World/Workbench/Looks/Metal_Glossy_A_TableMetal_A
 *  **Prim路径 (Prim Path):**/World/Workbench/Looks/Metal_Glossy_A_TableMetal_A
 *  **Prim类型 (Prim Type):**Material
@@ -25879,6 +24867,297 @@
                *   Connected: '/World/StackedCarton2/Materials/Material_1/uvset0.outputs:result' @ '/World/StackedCarton2/Materials/Material_1/uvset0'
                    *   Shader ID: 'UsdPrimvarReader_float2'
        *   '/World/StackedCarton2/Materials/Material_1/uvset0' (ID: 'UsdPrimvarReader_float2')
+       *   Implementation: 'id'
+
+
+---
+
+
+### /HeavyDutyPackingTable_A01_01/Looks/Wood_Maple_HeavyDutyPackingTable_A
+*  **Prim路径 (Prim Path):**/HeavyDutyPackingTable_A01_01/Looks/Wood_Maple_HeavyDutyPackingTable_A
+*  **Prim类型 (Prim Type):**Material
+*  **材质网络 (Material & Shader Details):**
+   *   **Surface Outputs:**
+       *   'outputs:surface'
+       *   'outputs:mdl:surface' -> '/HeavyDutyPackingTable_A01_01/Looks/Wood_Maple_HeavyDutyPackingTable_A/Shader'
+       *   Connection: 'out' (Output)'
+   *   **Shader 节点 (Shader Nodes):**
+       *   '/HeavyDutyPackingTable_A01_01/Looks/Wood_Maple_HeavyDutyPackingTable_A/Shader'
+       *   Implementation: 'sourceAsset'
+       *   Source Assets:
+           *   [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
+       *   纹理引用 (Texture Assets):
+           *   '1/T_HeavyDutyPackingTable_A01_Albedo.png'
+           *   '1/T_HeavyDutyPackingTable_A01_Normal.png'
+           *   '1/T_HeavyDutyPackingTable_A01_ORM.png'
+       *   Inputs:
+           *   'albedo_add' [float] = '0'
+           *   'diffuse_texture' [asset] = '1/T_HeavyDutyPackingTable_A01_Albedo.png'
+           *   'diffuse_tint' [color3f] = '(0.784, 0.784, 0.784)'
+           *   'metallic_texture_influence' [float] = '1'
+           *   'normalmap_texture' [asset] = '1/T_HeavyDutyPackingTable_A01_Normal.png'
+           *   'ORM_texture' [asset] = '1/T_HeavyDutyPackingTable_A01_ORM.png'
+           *   'reflection_roughness_texture_influence' [float] = '1'
+
+
+---
+
+
+### /HeavyDutyPackingTable_A01_01/Looks/Metal_Glossy_A_HeavyDutyPackingTable_A
+*  **Prim路径 (Prim Path):**/HeavyDutyPackingTable_A01_01/Looks/Metal_Glossy_A_HeavyDutyPackingTable_A
+*  **Prim类型 (Prim Type):**Material
+*  **材质网络 (Material & Shader Details):**
+   *   **Surface Outputs:**
+       *   'outputs:surface'
+       *   'outputs:mdl:surface' -> '/HeavyDutyPackingTable_A01_01/Looks/Metal_Glossy_A_HeavyDutyPackingTable_A/Shader'
+       *   Connection: 'out' (Output)'
+   *   **Shader 节点 (Shader Nodes):**
+       *   '/HeavyDutyPackingTable_A01_01/Looks/Metal_Glossy_A_HeavyDutyPackingTable_A/Shader'
+       *   Implementation: 'sourceAsset'
+       *   Source Assets:
+           *   [mdl] '0/Metal_Glossy_A.mdl' (Sub Id: 'Metal_Glossy_A')  | Resolved: '/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Workbench/HeavyDutyPackingTable_A01_01.usdz[0/Metal_Glossy_A.mdl]'
+
+
+---
+
+
+### /HeavyDutyPackingTable_A01_01/Looks/Metal_Painted_Gray_Glossy_A_HeavyDutyPackingTable_A
+*  **Prim路径 (Prim Path):**/HeavyDutyPackingTable_A01_01/Looks/Metal_Painted_Gray_Glossy_A_HeavyDutyPackingTable_A
+*  **Prim类型 (Prim Type):**Material
+*  **材质网络 (Material & Shader Details):**
+   *   **Surface Outputs:**
+       *   'outputs:surface'
+       *   'outputs:mdl:surface' -> '/HeavyDutyPackingTable_A01_01/Looks/Metal_Painted_Gray_Glossy_A_HeavyDutyPackingTable_A/Shader'
+       *   Connection: 'out' (Output)'
+   *   **Shader 节点 (Shader Nodes):**
+       *   '/HeavyDutyPackingTable_A01_01/Looks/Metal_Painted_Gray_Glossy_A_HeavyDutyPackingTable_A/Shader'
+       *   Implementation: 'sourceAsset'
+       *   Source Assets:
+           *   [mdl] '0/Metal_Painted_White_Glossy_A.mdl' (Sub Id: 'Metal_Painted_White_Glossy_A')  | Resolved: '/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Workbench/HeavyDutyPackingTable_A01_01.usdz[0/Metal_Painted_White_Glossy_A.mdl]'
+       *   Inputs:
+           *   'diffuse_tint' [color3f] = '(0.170, 0.170, 0.170)'
+           *   'texture_scale' [float2] = '(2.000, 2.000)'
+
+
+---
+
+
+### /Black_Honey___Robotic_Arm_01/Materials/robo_arm
+*  **Prim路径 (Prim Path):**/Black_Honey___Robotic_Arm_01/Materials/robo_arm
+*  **Prim类型 (Prim Type):**Material
+*  **材质网络 (Material & Shader Details):**
+   *   **Surface Outputs:**
+       *   'outputs:surface' -> '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/pbr_shader'
+       *   Shader ID: 'UsdPreviewSurface'
+       *   Connection: 'surface' (Output)'
+   *   **Shader 节点 (Shader Nodes):**
+       *   '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/pbr_shader' (ID: 'UsdPreviewSurface')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'diffuseColor' [color3f]
+               *   Connected: '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/tex_base.outputs:rgb' @ '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/tex_base'
+                   *   Shader ID: 'UsdUVTexture'
+                   *   Texture: '0/robo_arm_baseColor.jpg'
+           *   'emissiveColor' [color3f]
+               *   Connected: '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/tex_emissive.outputs:rgb' @ '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/tex_emissive'
+                   *   Shader ID: 'UsdUVTexture'
+                   *   Texture: '0/robo_arm_emissive.jpg'
+           *   'metallic' [float]
+               *   Connected: '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/tex_metallic.outputs:r' @ '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/tex_metallic'
+                   *   Shader ID: 'UsdUVTexture'
+                   *   Texture: '0/robo_arm_metallicRoughness_metal.jpg'
+           *   'normal' [normal3f]
+               *   Connected: '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/tex_normal.outputs:rgb' @ '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/tex_normal'
+                   *   Shader ID: 'UsdUVTexture'
+                   *   Texture: '0/robo_arm_normal_norm.jpg'
+           *   'occlusion' [float] = '1'
+           *   'roughness' [float]
+               *   Connected: '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/tex_roughness.outputs:r' @ '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/tex_roughness'
+                   *   Shader ID: 'UsdUVTexture'
+                   *   Texture: '0/robo_arm_metallicRoughness_rough.jpg'
+       *   '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/tex_base' (ID: 'UsdUVTexture')
+       *   Implementation: 'id'
+       *   纹理引用 (Texture Assets):
+           *   '0/robo_arm_baseColor.jpg'
+       *   Inputs:
+           *   'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
+           *   'file' [asset] = '0/robo_arm_baseColor.jpg'
+           *   'st' [float2]
+               *   Connected: '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/uvset0.outputs:result' @ '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/uvset0'
+                   *   Shader ID: 'UsdPrimvarReader_float2'
+       *   '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/uvset0' (ID: 'UsdPrimvarReader_float2')
+       *   Implementation: 'id'
+       *   '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/tex_emissive' (ID: 'UsdUVTexture')
+       *   Implementation: 'id'
+       *   纹理引用 (Texture Assets):
+           *   '0/robo_arm_emissive.jpg'
+       *   Inputs:
+           *   'fallback' [float4] = '(0.000, 0.000, 0.000, 1.000)'
+           *   'file' [asset] = '0/robo_arm_emissive.jpg'
+           *   'st' [float2]
+               *   Connected: '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/uvset0.outputs:result' @ '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/uvset0'
+                   *   Shader ID: 'UsdPrimvarReader_float2'
+       *   '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/tex_metallic' (ID: 'UsdUVTexture')
+       *   Implementation: 'id'
+       *   纹理引用 (Texture Assets):
+           *   '0/robo_arm_metallicRoughness_metal.jpg'
+       *   Inputs:
+           *   'fallback' [float4] = '(0.000, 0.000, 0.000, 1.000)'
+           *   'file' [asset] = '0/robo_arm_metallicRoughness_metal.jpg'
+           *   'st' [float2]
+               *   Connected: '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/uvset0.outputs:result' @ '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/uvset0'
+                   *   Shader ID: 'UsdPrimvarReader_float2'
+       *   '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/tex_normal' (ID: 'UsdUVTexture')
+       *   Implementation: 'id'
+       *   纹理引用 (Texture Assets):
+           *   '0/robo_arm_normal_norm.jpg'
+       *   Inputs:
+           *   'bias' [float4] = '(-1.000, -1.000, -1.000, -1.000)'
+           *   'fallback' [float4] = '(0.000, 0.000, 1.000, 1.000)'
+           *   'file' [asset] = '0/robo_arm_normal_norm.jpg'
+           *   'scale' [float4] = '(2.000, 2.000, 2.000, 2.000)'
+           *   'st' [float2]
+               *   Connected: '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/uvset0.outputs:result' @ '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/uvset0'
+                   *   Shader ID: 'UsdPrimvarReader_float2'
+       *   '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/tex_roughness' (ID: 'UsdUVTexture')
+       *   Implementation: 'id'
+       *   纹理引用 (Texture Assets):
+           *   '0/robo_arm_metallicRoughness_rough.jpg'
+       *   Inputs:
+           *   'fallback' [float4] = '(1.000, 0.000, 0.000, 1.000)'
+           *   'file' [asset] = '0/robo_arm_metallicRoughness_rough.jpg'
+           *   'st' [float2]
+               *   Connected: '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/uvset0.outputs:result' @ '/Black_Honey___Robotic_Arm_01/Materials/robo_arm/uvset0'
+                   *   Shader ID: 'UsdPrimvarReader_float2'
+
+
+---
+
+
+### /Black_Honey___Robotic_Arm_01/Materials/robot_base
+*  **Prim路径 (Prim Path):**/Black_Honey___Robotic_Arm_01/Materials/robot_base
+*  **Prim类型 (Prim Type):**Material
+*  **材质网络 (Material & Shader Details):**
+   *   **Surface Outputs:**
+       *   'outputs:surface' -> '/Black_Honey___Robotic_Arm_01/Materials/robot_base/pbr_shader'
+       *   Shader ID: 'UsdPreviewSurface'
+       *   Connection: 'surface' (Output)'
+   *   **Shader 节点 (Shader Nodes):**
+       *   '/Black_Honey___Robotic_Arm_01/Materials/robot_base/pbr_shader' (ID: 'UsdPreviewSurface')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'diffuseColor' [color3f]
+               *   Connected: '/Black_Honey___Robotic_Arm_01/Materials/robot_base/tex_base.outputs:rgb' @ '/Black_Honey___Robotic_Arm_01/Materials/robot_base/tex_base'
+                   *   Shader ID: 'UsdUVTexture'
+                   *   Texture: '0/robot_base_baseColor.jpg'
+           *   'emissiveColor' [color3f]
+               *   Connected: '/Black_Honey___Robotic_Arm_01/Materials/robot_base/tex_emissive.outputs:rgb' @ '/Black_Honey___Robotic_Arm_01/Materials/robot_base/tex_emissive'
+                   *   Shader ID: 'UsdUVTexture'
+                   *   Texture: '0/robot_base_emissive.jpg'
+           *   'metallic' [float]
+               *   Connected: '/Black_Honey___Robotic_Arm_01/Materials/robot_base/tex_metallic.outputs:r' @ '/Black_Honey___Robotic_Arm_01/Materials/robot_base/tex_metallic'
+                   *   Shader ID: 'UsdUVTexture'
+                   *   Texture: '0/robot_base_metallicRoughness_metal.jpg'
+           *   'normal' [normal3f]
+               *   Connected: '/Black_Honey___Robotic_Arm_01/Materials/robot_base/tex_normal.outputs:rgb' @ '/Black_Honey___Robotic_Arm_01/Materials/robot_base/tex_normal'
+                   *   Shader ID: 'UsdUVTexture'
+                   *   Texture: '0/robot_base_normal_norm.jpg'
+           *   'occlusion' [float] = '1'
+           *   'roughness' [float]
+               *   Connected: '/Black_Honey___Robotic_Arm_01/Materials/robot_base/tex_roughness.outputs:r' @ '/Black_Honey___Robotic_Arm_01/Materials/robot_base/tex_roughness'
+                   *   Shader ID: 'UsdUVTexture'
+                   *   Texture: '0/robot_base_metallicRoughness_rough.jpg'
+       *   '/Black_Honey___Robotic_Arm_01/Materials/robot_base/tex_base' (ID: 'UsdUVTexture')
+       *   Implementation: 'id'
+       *   纹理引用 (Texture Assets):
+           *   '0/robot_base_baseColor.jpg'
+       *   Inputs:
+           *   'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
+           *   'file' [asset] = '0/robot_base_baseColor.jpg'
+           *   'st' [float2]
+               *   Connected: '/Black_Honey___Robotic_Arm_01/Materials/robot_base/uvset0.outputs:result' @ '/Black_Honey___Robotic_Arm_01/Materials/robot_base/uvset0'
+                   *   Shader ID: 'UsdPrimvarReader_float2'
+       *   '/Black_Honey___Robotic_Arm_01/Materials/robot_base/uvset0' (ID: 'UsdPrimvarReader_float2')
+       *   Implementation: 'id'
+       *   '/Black_Honey___Robotic_Arm_01/Materials/robot_base/tex_emissive' (ID: 'UsdUVTexture')
+       *   Implementation: 'id'
+       *   纹理引用 (Texture Assets):
+           *   '0/robot_base_emissive.jpg'
+       *   Inputs:
+           *   'fallback' [float4] = '(0.000, 0.000, 0.000, 1.000)'
+           *   'file' [asset] = '0/robot_base_emissive.jpg'
+           *   'st' [float2]
+               *   Connected: '/Black_Honey___Robotic_Arm_01/Materials/robot_base/uvset0.outputs:result' @ '/Black_Honey___Robotic_Arm_01/Materials/robot_base/uvset0'
+                   *   Shader ID: 'UsdPrimvarReader_float2'
+       *   '/Black_Honey___Robotic_Arm_01/Materials/robot_base/tex_metallic' (ID: 'UsdUVTexture')
+       *   Implementation: 'id'
+       *   纹理引用 (Texture Assets):
+           *   '0/robot_base_metallicRoughness_metal.jpg'
+       *   Inputs:
+           *   'fallback' [float4] = '(0.000, 0.000, 0.000, 1.000)'
+           *   'file' [asset] = '0/robot_base_metallicRoughness_metal.jpg'
+           *   'st' [float2]
+               *   Connected: '/Black_Honey___Robotic_Arm_01/Materials/robot_base/uvset0.outputs:result' @ '/Black_Honey___Robotic_Arm_01/Materials/robot_base/uvset0'
+                   *   Shader ID: 'UsdPrimvarReader_float2'
+       *   '/Black_Honey___Robotic_Arm_01/Materials/robot_base/tex_normal' (ID: 'UsdUVTexture')
+       *   Implementation: 'id'
+       *   纹理引用 (Texture Assets):
+           *   '0/robot_base_normal_norm.jpg'
+       *   Inputs:
+           *   'bias' [float4] = '(-1.000, -1.000, -1.000, -1.000)'
+           *   'fallback' [float4] = '(0.000, 0.000, 1.000, 1.000)'
+           *   'file' [asset] = '0/robot_base_normal_norm.jpg'
+           *   'scale' [float4] = '(2.000, 2.000, 2.000, 2.000)'
+           *   'st' [float2]
+               *   Connected: '/Black_Honey___Robotic_Arm_01/Materials/robot_base/uvset0.outputs:result' @ '/Black_Honey___Robotic_Arm_01/Materials/robot_base/uvset0'
+                   *   Shader ID: 'UsdPrimvarReader_float2'
+       *   '/Black_Honey___Robotic_Arm_01/Materials/robot_base/tex_roughness' (ID: 'UsdUVTexture')
+       *   Implementation: 'id'
+       *   纹理引用 (Texture Assets):
+           *   '0/robot_base_metallicRoughness_rough.jpg'
+       *   Inputs:
+           *   'fallback' [float4] = '(1.000, 0.000, 0.000, 1.000)'
+           *   'file' [asset] = '0/robot_base_metallicRoughness_rough.jpg'
+           *   'st' [float2]
+               *   Connected: '/Black_Honey___Robotic_Arm_01/Materials/robot_base/uvset0.outputs:result' @ '/Black_Honey___Robotic_Arm_01/Materials/robot_base/uvset0'
+                   *   Shader ID: 'UsdPrimvarReader_float2'
+
+
+---
+
+
+### /robot/Materials/_1___Default
+*  **Prim路径 (Prim Path):**/robot/Materials/_1___Default
+*  **Prim类型 (Prim Type):**Material
+*  **材质网络 (Material & Shader Details):**
+   *   **Surface Outputs:**
+       *   'outputs:surface' -> '/robot/Materials/_1___Default/pbr_shader'
+       *   Shader ID: 'UsdPreviewSurface'
+       *   Connection: 'surface' (Output)'
+   *   **Shader 节点 (Shader Nodes):**
+       *   '/robot/Materials/_1___Default/pbr_shader' (ID: 'UsdPreviewSurface')
+       *   Implementation: 'id'
+       *   Inputs:
+           *   'diffuseColor' [color3f]
+               *   Connected: '/robot/Materials/_1___Default/tex_base.outputs:rgb' @ '/robot/Materials/_1___Default/tex_base'
+                   *   Shader ID: 'UsdUVTexture'
+                   *   Texture: '0/01_-_Default_baseColor.jpg'
+           *   'emissiveColor' [color3f] = '(0.000, 0.000, 0.000)'
+           *   'metallic' [float] = '0'
+           *   'normal' [normal3f] = '(1.000, 1.000, 1.000)'
+           *   'occlusion' [float] = '1'
+           *   'roughness' [float] = '0.223895'
+       *   '/robot/Materials/_1___Default/tex_base' (ID: 'UsdUVTexture')
+       *   Implementation: 'id'
+       *   纹理引用 (Texture Assets):
+           *   '0/01_-_Default_baseColor.jpg'
+       *   Inputs:
+           *   'fallback' [float4] = '(1.000, 1.000, 1.000, 1.000)'
+           *   'file' [asset] = '0/01_-_Default_baseColor.jpg'
+           *   'st' [float2]
+               *   Connected: '/robot/Materials/_1___Default/uvset0.outputs:result' @ '/robot/Materials/_1___Default/uvset0'
+                   *   Shader ID: 'UsdPrimvarReader_float2'
+       *   '/robot/Materials/_1___Default/uvset0' (ID: 'UsdPrimvarReader_float2')
        *   Implementation: 'id'
 
 

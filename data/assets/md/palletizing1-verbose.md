@@ -7,15 +7,15 @@
 * **单位与坐标系 (Units & Coordinate System):**
   * **米(Meters Per Unit):**1.0
   * **Up Axis:**Z
-* **场景描述(Scene Describe):** 该工业场景呈现为一个极具规模感的多线并行自动化包装与装卸单元，其空间格局采用了“阵列式排布、分布式协作”的逻辑，旨在实现大批量标准化包裹的高速分类与移载。车间整体空间开阔且极具视觉节奏感，地面采用了大面积灰色大理石纹理的地砖铺设，具有明显的天然石材随机纹理与镜面反射效果，不仅增强了工业环境的质感，也为设备提供了坚实的视觉落脚点；墙体部分可见工业厂房特有的深色木质或金属质感墙面。在设备排布上，场景的核心由多条完全一致的并行短程带式输送机与与之配套的“机器人+AGV”协作单元构成。可见约5至6条独立的输送流水线呈阵列式横向排布，每条线均采用鲜艳的工业蓝金属框架，配以黑色的抗静电输送皮带，其上等间距码放着三至五个印有圆形标识的标准浅棕色纸箱包裹。紧邻每一条输送流水线的末端，部署了一组精密协作执行机构。每组单元包含一台白色的六轴工业机器人及一台配套的自主移动机器人（AGV）。六轴机器人底座垂直锚定于地面，机身呈现出纤细且平滑的现代感设计，处于向输送线末端抓取包裹的准备位姿；与其配合的AGV移动平台采用了明黄色的高醒目度配色，底盘低矮且稳固，顶部承载区域正接收或已经堆叠了两个标准纸箱包裹。这种“一流水线、一机器人、一AGV”的模块化配比，展现了极高的系统冗余度与任务并行处理能力。从空间格局上看，各作业单元之间保持了精确的几何间距，确保了AGV在输送机间的通道内具有充足的导航与回转空间。设备类型识别清晰：工业机械类包含大量的六轴多关节机器人；输送装置类包含多台阵列化排布的带式输送机；智能物流类包含多台带负载的AGV移动平台；工装设备类则包含标准化的物流周转包裹。相互排布关系呈现出极强的数学逻辑：输送机作为物料输入端，机器人作为转运枢纽，AGV作为柔性输出端，三者在空间上形成了一个个独立的垂直交叉作业节点。这种规划结构彻底打破了单一直线流水线的局限，通过多点并行的模式大幅提升了系统的吞吐量。在3D场景合成中，该场景提供了极丰富的重复资产库与完美的几何对齐参考，材质上涵盖了蓝色喷漆金属、白色半哑光漆面、明黄色反光漆面以及高级石材地面的多维对比。光影环境设定为全局均匀的漫反射照明，配合地面复杂的纹理与反射，使场景呈现出极强的工业写实深度与动态模拟潜力，是构建大型自动化分拣中心与智慧工厂数字孪生的理想专业素材基准。
+* **场景描述(Scene Describe):** 该场景呈现出一个高度标准化、模块化的智能化码垛车间，整体规划严谨地遵循了“单元化设计”与“矩阵式排列”的现代工业美学。从厂区的空间格局来看，地面铺设了具有大理石纹理的大型灰色瓷砖，砖缝清晰且整洁，为自动化设备的运行提供了极佳的水平度与视觉美感。整个车间被划分为多个重复且独立的作业集群，每个集群在空间分布上呈现出精准的几何对齐关系。核心工业设备由四组完全一致的自动化作业单元构成，它们在车间内呈等间距纵向排列，形成了一个强大的并行处理矩阵。每一组单元内部都包含三个关键模块：首先是高架式的蓝色带式输送机，这些输送装置采用醒目的亮蓝色钢制支架支撑，黑色皮带表面平整，上方正载有多个呈等距分布的淡黄色方形纸质包装箱，工件正由输送机向作业端平稳移动。其次是紧邻输送机末端部署的独立作业平台，平台顶部铺设有淡色实木纹理的面板，台面上安装有一台修长的白色六轴协作机器人，其机械臂正处于灵活的作业姿态，负责从流水线精准抓取工件并放置在移动端。最后是处于协作机器人下方的物流接驳模块，由一台亮黄色的自动导引运输车（AGV）组成。这些AGV底盘低矮，轮廓圆润，其顶部载有一个带有木质顶面的物料支架，且支架上已叠放了多个已完成封装的纸质包装箱，标志着物流的自动化收集阶段。在设备排布方式上，该场景采用了“流水线-机器人-移动平台”的一对一耦合结构，这种布阵方式消除了不同工位间的交叉干扰，极大提升了生产线的故障容忍度与扩展性。固定式的输送装置（共四条）作为生产的骨干脉络，提供了稳定的物料流；而四台白色协作机器人作为执行核心，实现了从静态流水线到动态物流车的无缝衔接。在场景的侧翼，还可以观察到深褐色的金属质感防护墙，为作业区提供了物理隔离与安全屏障。从整体规划结构分析，该场景巧妙地将固定的自动化生产线与灵活的移动机器人相结合，每一组作业单元都是一个自成体系的“微型工厂”。设备间的分布距离经过了精密测算，确保了AGV在集群间行驶时有充足的路径宽度，同时也保证了机器人的工作包络圆能够覆盖输送带末端与移动车顶部的所有作业点。这种由蓝色输送架、黄色物流车、白色机械手臂与灰色纹理地面构成的工业景观，不仅在视觉上层次分明，更在功能上诠释了“柔性制造”与“工业4.0”的核心内涵：通过高度重复的标准化模块实现大规模定制，通过无人化的协作流程确保生产精度与安全。整个车间逻辑清晰，没有任何冗余的杂物或暴露的电缆，展现了一个处于极佳运行状态、具备高度协同能力的现代化智能分拣装配范本。
 * **设备数量(Device Number):**
   * **Scene: 1**
   * **IndustrialRobot: 8**
-  * **Workbench: 0**
+  * **Workbench: 8**
   * **Conveyor: 8**
   * **AGV: 8**
   * **Forklift: 0**
-  * **Box: 48**
+  * **Box: 56**
   * **Rack: 0**
   * **Pallet: 0**
   * **Part: 0**
@@ -92,374 +92,6 @@
             * Object001 (Xform)
               * Object001_20___Default_0 (Xform)
                 * Object001_20___Default_0 (Mesh)
-  * RobotArm_1 (Xform)
-    * Group (Xform)
-      * panda_hand (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_finger_joint1 (PhysicsPrismaticJoint)
-        * panda_finger_joint2 (PhysicsPrismaticJoint)
-      * panda_leftfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * panda_link0 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint1 (PhysicsRevoluteJoint)
-      * panda_link1 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint2 (PhysicsRevoluteJoint)
-      * panda_link2 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint3 (PhysicsRevoluteJoint)
-      * panda_link3 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint4 (PhysicsRevoluteJoint)
-      * panda_link4 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint5 (PhysicsRevoluteJoint)
-      * panda_link5 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint6 (PhysicsRevoluteJoint)
-      * panda_link6 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint7 (PhysicsRevoluteJoint)
-      * panda_link7 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_hand_joint (PhysicsFixedJoint)
-      * panda_rightfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * rootJoint (PhysicsFixedJoint)
-  * RobotArm_2 (Xform)
-    * Group (Xform)
-      * panda_hand (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_finger_joint1 (PhysicsPrismaticJoint)
-        * panda_finger_joint2 (PhysicsPrismaticJoint)
-      * panda_leftfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * panda_link0 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint1 (PhysicsRevoluteJoint)
-      * panda_link1 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint2 (PhysicsRevoluteJoint)
-      * panda_link2 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint3 (PhysicsRevoluteJoint)
-      * panda_link3 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint4 (PhysicsRevoluteJoint)
-      * panda_link4 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint5 (PhysicsRevoluteJoint)
-      * panda_link5 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint6 (PhysicsRevoluteJoint)
-      * panda_link6 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint7 (PhysicsRevoluteJoint)
-      * panda_link7 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_hand_joint (PhysicsFixedJoint)
-      * panda_rightfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * rootJoint (PhysicsFixedJoint)
-  * RobotArm_3 (Xform)
-    * Group (Xform)
-      * panda_hand (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_finger_joint1 (PhysicsPrismaticJoint)
-        * panda_finger_joint2 (PhysicsPrismaticJoint)
-      * panda_leftfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * panda_link0 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint1 (PhysicsRevoluteJoint)
-      * panda_link1 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint2 (PhysicsRevoluteJoint)
-      * panda_link2 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint3 (PhysicsRevoluteJoint)
-      * panda_link3 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint4 (PhysicsRevoluteJoint)
-      * panda_link4 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint5 (PhysicsRevoluteJoint)
-      * panda_link5 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint6 (PhysicsRevoluteJoint)
-      * panda_link6 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint7 (PhysicsRevoluteJoint)
-      * panda_link7 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_hand_joint (PhysicsFixedJoint)
-      * panda_rightfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * rootJoint (PhysicsFixedJoint)
-  * RobotArm_4 (Xform)
-    * Group (Xform)
-      * panda_hand (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_finger_joint1 (PhysicsPrismaticJoint)
-        * panda_finger_joint2 (PhysicsPrismaticJoint)
-      * panda_leftfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * panda_link0 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint1 (PhysicsRevoluteJoint)
-      * panda_link1 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint2 (PhysicsRevoluteJoint)
-      * panda_link2 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint3 (PhysicsRevoluteJoint)
-      * panda_link3 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint4 (PhysicsRevoluteJoint)
-      * panda_link4 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint5 (PhysicsRevoluteJoint)
-      * panda_link5 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint6 (PhysicsRevoluteJoint)
-      * panda_link6 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint7 (PhysicsRevoluteJoint)
-      * panda_link7 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_hand_joint (PhysicsFixedJoint)
-      * panda_rightfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * rootJoint (PhysicsFixedJoint)
-  * RobotArm_5 (Xform)
-    * Group (Xform)
-      * panda_hand (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_finger_joint1 (PhysicsPrismaticJoint)
-        * panda_finger_joint2 (PhysicsPrismaticJoint)
-      * panda_leftfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * panda_link0 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint1 (PhysicsRevoluteJoint)
-      * panda_link1 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint2 (PhysicsRevoluteJoint)
-      * panda_link2 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint3 (PhysicsRevoluteJoint)
-      * panda_link3 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint4 (PhysicsRevoluteJoint)
-      * panda_link4 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint5 (PhysicsRevoluteJoint)
-      * panda_link5 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint6 (PhysicsRevoluteJoint)
-      * panda_link6 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint7 (PhysicsRevoluteJoint)
-      * panda_link7 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_hand_joint (PhysicsFixedJoint)
-      * panda_rightfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * rootJoint (PhysicsFixedJoint)
-  * RobotArm_6 (Xform)
-    * Group (Xform)
-      * panda_hand (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_finger_joint1 (PhysicsPrismaticJoint)
-        * panda_finger_joint2 (PhysicsPrismaticJoint)
-      * panda_leftfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * panda_link0 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint1 (PhysicsRevoluteJoint)
-      * panda_link1 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint2 (PhysicsRevoluteJoint)
-      * panda_link2 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint3 (PhysicsRevoluteJoint)
-      * panda_link3 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint4 (PhysicsRevoluteJoint)
-      * panda_link4 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint5 (PhysicsRevoluteJoint)
-      * panda_link5 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint6 (PhysicsRevoluteJoint)
-      * panda_link6 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint7 (PhysicsRevoluteJoint)
-      * panda_link7 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_hand_joint (PhysicsFixedJoint)
-      * panda_rightfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * rootJoint (PhysicsFixedJoint)
-  * RobotArm_7 (Xform)
-    * Group (Xform)
-      * panda_hand (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_finger_joint1 (PhysicsPrismaticJoint)
-        * panda_finger_joint2 (PhysicsPrismaticJoint)
-      * panda_leftfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * panda_link0 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint1 (PhysicsRevoluteJoint)
-      * panda_link1 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint2 (PhysicsRevoluteJoint)
-      * panda_link2 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint3 (PhysicsRevoluteJoint)
-      * panda_link3 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint4 (PhysicsRevoluteJoint)
-      * panda_link4 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint5 (PhysicsRevoluteJoint)
-      * panda_link5 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint6 (PhysicsRevoluteJoint)
-      * panda_link6 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint7 (PhysicsRevoluteJoint)
-      * panda_link7 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_hand_joint (PhysicsFixedJoint)
-      * panda_rightfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * rootJoint (PhysicsFixedJoint)
-  * RobotArm_8 (Xform)
-    * Group (Xform)
-      * panda_hand (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_finger_joint1 (PhysicsPrismaticJoint)
-        * panda_finger_joint2 (PhysicsPrismaticJoint)
-      * panda_leftfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * panda_link0 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint1 (PhysicsRevoluteJoint)
-      * panda_link1 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint2 (PhysicsRevoluteJoint)
-      * panda_link2 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint3 (PhysicsRevoluteJoint)
-      * panda_link3 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint4 (PhysicsRevoluteJoint)
-      * panda_link4 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint5 (PhysicsRevoluteJoint)
-      * panda_link5 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint6 (PhysicsRevoluteJoint)
-      * panda_link6 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_joint7 (PhysicsRevoluteJoint)
-      * panda_link7 (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-        * panda_hand_joint (PhysicsFixedJoint)
-      * panda_rightfinger (Xform)
-        * visuals (Xform)
-        * collisions (Xform)
-      * rootJoint (PhysicsFixedJoint)
   * agv_1 (Xform)
     * Materials (Scope)
       * ASELSAN_CATS_04 (Material)
@@ -5284,6 +4916,78 @@
             * Box072 (Xform)
               * Box072_06___Default_0 (Xform)
                 * Box072_06___Default_0 (Mesh)
+  * HeavyDutyPackingTable_A01_01 (Xform)
+    * SM_HeavyDutyPackingTable_A01_01 (Mesh)
+      * M_HeavyDutyPackingTable_A01_Body (GeomSubset)
+      * M_HeavyDutyPackingTable_A01_Bolts (GeomSubset)
+      * M_HeavyDutyPackingTable_A01_TableTop (GeomSubset)
+    * Looks (Scope)
+      * Wood_Maple_HeavyDutyPackingTable_A (Material)
+        * Shader (Shader)
+      * Metal_Glossy_A_HeavyDutyPackingTable_A (Material)
+        * Shader (Shader)
+      * Metal_Painted_Gray_Glossy_A_HeavyDutyPackingTable_A (Material)
+        * Shader (Shader)
+  * panda_instanceable1 (Xform)
+    * Group (Xform)
+      * panda_hand (Xform)
+        * visuals (Xform)
+        * collisions (Xform)
+        * panda_finger_joint1 (PhysicsPrismaticJoint)
+        * panda_finger_joint2 (PhysicsPrismaticJoint)
+      * panda_leftfinger (Xform)
+        * visuals (Xform)
+        * collisions (Xform)
+      * panda_link0 (Xform)
+        * visuals (Xform)
+        * collisions (Xform)
+        * panda_joint1 (PhysicsRevoluteJoint)
+      * panda_link1 (Xform)
+        * visuals (Xform)
+        * collisions (Xform)
+        * panda_joint2 (PhysicsRevoluteJoint)
+      * panda_link2 (Xform)
+        * visuals (Xform)
+        * collisions (Xform)
+        * panda_joint3 (PhysicsRevoluteJoint)
+      * panda_link3 (Xform)
+        * visuals (Xform)
+        * collisions (Xform)
+        * panda_joint4 (PhysicsRevoluteJoint)
+      * panda_link4 (Xform)
+        * visuals (Xform)
+        * collisions (Xform)
+        * panda_joint5 (PhysicsRevoluteJoint)
+      * panda_link5 (Xform)
+        * visuals (Xform)
+        * collisions (Xform)
+        * panda_joint6 (PhysicsRevoluteJoint)
+      * panda_link6 (Xform)
+        * visuals (Xform)
+        * collisions (Xform)
+        * panda_joint7 (PhysicsRevoluteJoint)
+      * panda_link7 (Xform)
+        * visuals (Xform)
+        * collisions (Xform)
+        * panda_hand_joint (PhysicsFixedJoint)
+      * panda_rightfinger (Xform)
+        * visuals (Xform)
+        * collisions (Xform)
+      * rootJoint (PhysicsFixedJoint)
+  * HeavyDutyPackingTable_A01_02 (Prim)
+  * panda_instanceable1_01 (Prim)
+  * HeavyDutyPackingTable_A01_03 (Prim)
+  * panda_instanceable1_02 (Prim)
+  * HeavyDutyPackingTable_A01_04 (Prim)
+  * panda_instanceable1_03 (Prim)
+  * HeavyDutyPackingTable_A01_05 (Prim)
+  * panda_instanceable1_04 (Prim)
+  * HeavyDutyPackingTable_A01_06 (Prim)
+  * panda_instanceable1_05 (Prim)
+  * HeavyDutyPackingTable_A01_07 (Prim)
+  * panda_instanceable1_06 (Prim)
+  * panda_instanceable1_07 (Prim)
+  * HeavyDutyPackingTable_A01_08 (Prim)
 
 ## 3. 对象详细描述 (Detailed Prim Descriptions)
 
@@ -5296,3094 +5000,6 @@
 * **世界包围盒 (World BBox):**
   * Size: '(49.139, 19.897, 67.754)'
   * Center: '(0.761, 0.769, 9.470)'
-
----
-
-### /World/RobotArm_1
-
-* **Prim路径 (Prim Path):**/World/RobotArm_1
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  *   [reference] '/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/IsaacLab/Robots/FrankaEmika/panda_instanceable1.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.755, 0.583, 2.508)'
-  * Center: '(-19.980, 30.000, 1.577)'
-
----
-
-### /World/RobotArm_1/Group/panda_hand/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_1/Group/panda_hand/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_hand.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.063, 0.205, 0.092)'
-  * Center: '(-19.815, 30.002, 2.361)'
-
----
-
-### /World/RobotArm_1/Group/panda_hand/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_1/Group/panda_hand/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_hand_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-19.812, 30.000, 2.406)'
-
----
-
-### /World/RobotArm_1/Group/panda_leftfinger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_1/Group/panda_leftfinger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_leftfinger.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.021, 0.026, 0.054)'
-  * Center: '(-19.791, 29.979, 2.214)'
-
----
-
-### /World/RobotArm_1/Group/panda_leftfinger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_1/Group/panda_leftfinger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_leftfinger_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-19.812, 30.000, 2.275)'
-
----
-
-### /World/RobotArm_1/Group/panda_link0/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_1/Group/panda_link0/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link0.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.226, 0.189, 0.140)'
-  * Center: '(-20.103, 30.000, 0.480)'
-
----
-
-### /World/RobotArm_1/Group/panda_link0/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_1/Group/panda_link0/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link0_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-20.010, 30.000, 0.323)'
-
----
-
-### /World/RobotArm_1/Group/panda_link1/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_1/Group/panda_link1/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link1.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.110, 0.184, 0.247)'
-  * Center: '(-20.010, 29.916, 0.918)'
-
----
-
-### /World/RobotArm_1/Group/panda_link1/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_1/Group/panda_link1/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link1_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-20.010, 30.000, 1.072)'
-
----
-
-### /World/RobotArm_1/Group/panda_link2/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_1/Group/panda_link2/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link2.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.110, 0.249, 0.184)'
-  * Center: '(-20.010, 30.083, 1.228)'
-
----
-
-### /World/RobotArm_1/Group/panda_link2/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_1/Group/panda_link2/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link2_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-20.010, 30.000, 1.072)'
-
----
-
-### /World/RobotArm_1/Group/panda_link3/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_1/Group/panda_link3/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link3.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.193, 0.166, 0.176)'
-  * Center: '(-19.917, 30.063, 1.709)'
-
----
-
-### /World/RobotArm_1/Group/panda_link3/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_1/Group/panda_link3/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link3_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-20.010, 30.000, 1.783)'
-
----
-
-### /World/RobotArm_1/Group/panda_link4/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_1/Group/panda_link4/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link4.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.193, 0.179, 0.166)'
-  * Center: '(-19.917, 29.937, 1.861)'
-
----
-
-### /World/RobotArm_1/Group/panda_link4/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_1/Group/panda_link4/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link4_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-19.825, 30.000, 1.783)'
-
----
-
-### /World/RobotArm_1/Group/panda_link5/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_1/Group/panda_link5/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link5.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.110, 0.185, 0.311)'
-  * Center: '(-20.010, 30.084, 2.414)'
-
----
-
-### /World/RobotArm_1/Group/panda_link5/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_1/Group/panda_link5/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link5_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-20.010, 30.000, 2.647)'
-
----
-
-### /World/RobotArm_1/Group/panda_link6/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_1/Group/panda_link6/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link6.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.180, 0.133, 0.100)'
-  * Center: '(-19.916, 29.986, 2.681)'
-
----
-
-### /World/RobotArm_1/Group/panda_link6/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_1/Group/panda_link6/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link6_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-20.010, 30.000, 2.647)'
-
----
-
-### /World/RobotArm_1/Group/panda_link7/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_1/Group/panda_link7/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link7.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.125, 0.125, 0.055)'
-  * Center: '(-19.770, 29.958, 2.468)'
-
----
-
-### /World/RobotArm_1/Group/panda_link7/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_1/Group/panda_link7/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link7_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-19.812, 30.000, 2.647)'
-
----
-
-### /World/RobotArm_1/Group/panda_rightfinger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_1/Group/panda_rightfinger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_rightfinger.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.021, 0.026, 0.054)'
-  * Center: '(-19.833, 30.021, 2.214)'
-
----
-
-### /World/RobotArm_1/Group/panda_rightfinger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_1/Group/panda_rightfinger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_rightfinger_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-19.812, 30.000, 2.275)'
-
----
-
-### /World/RobotArm_2
-
-* **Prim路径 (Prim Path):**/World/RobotArm_2
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  *   [reference] '/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/IsaacLab/Robots/FrankaEmika/panda_instanceable1.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.755, 0.583, 2.508)'
-  * Center: '(-14.980, 30.000, 1.577)'
-
----
-
-### /World/RobotArm_2/Group/panda_hand/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_2/Group/panda_hand/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_hand.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.063, 0.205, 0.092)'
-  * Center: '(-14.815, 30.002, 2.361)'
-
----
-
-### /World/RobotArm_2/Group/panda_hand/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_2/Group/panda_hand/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_hand_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-14.812, 30.000, 2.406)'
-
----
-
-### /World/RobotArm_2/Group/panda_leftfinger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_2/Group/panda_leftfinger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_leftfinger.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.021, 0.026, 0.054)'
-  * Center: '(-14.791, 29.979, 2.214)'
-
----
-
-### /World/RobotArm_2/Group/panda_leftfinger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_2/Group/panda_leftfinger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_leftfinger_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-14.812, 30.000, 2.275)'
-
----
-
-### /World/RobotArm_2/Group/panda_link0/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_2/Group/panda_link0/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link0.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.226, 0.189, 0.140)'
-  * Center: '(-15.103, 30.000, 0.480)'
-
----
-
-### /World/RobotArm_2/Group/panda_link0/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_2/Group/panda_link0/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link0_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-15.010, 30.000, 0.323)'
-
----
-
-### /World/RobotArm_2/Group/panda_link1/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_2/Group/panda_link1/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link1.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.110, 0.184, 0.247)'
-  * Center: '(-15.010, 29.916, 0.918)'
-
----
-
-### /World/RobotArm_2/Group/panda_link1/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_2/Group/panda_link1/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link1_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-15.010, 30.000, 1.072)'
-
----
-
-### /World/RobotArm_2/Group/panda_link2/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_2/Group/panda_link2/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link2.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.110, 0.249, 0.184)'
-  * Center: '(-15.010, 30.083, 1.228)'
-
----
-
-### /World/RobotArm_2/Group/panda_link2/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_2/Group/panda_link2/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link2_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-15.010, 30.000, 1.072)'
-
----
-
-### /World/RobotArm_2/Group/panda_link3/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_2/Group/panda_link3/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link3.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.193, 0.166, 0.176)'
-  * Center: '(-14.917, 30.063, 1.709)'
-
----
-
-### /World/RobotArm_2/Group/panda_link3/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_2/Group/panda_link3/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link3_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-15.010, 30.000, 1.783)'
-
----
-
-### /World/RobotArm_2/Group/panda_link4/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_2/Group/panda_link4/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link4.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.193, 0.179, 0.166)'
-  * Center: '(-14.917, 29.937, 1.861)'
-
----
-
-### /World/RobotArm_2/Group/panda_link4/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_2/Group/panda_link4/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link4_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-14.825, 30.000, 1.783)'
-
----
-
-### /World/RobotArm_2/Group/panda_link5/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_2/Group/panda_link5/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link5.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.110, 0.185, 0.311)'
-  * Center: '(-15.010, 30.084, 2.414)'
-
----
-
-### /World/RobotArm_2/Group/panda_link5/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_2/Group/panda_link5/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link5_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-15.010, 30.000, 2.647)'
-
----
-
-### /World/RobotArm_2/Group/panda_link6/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_2/Group/panda_link6/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link6.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.180, 0.133, 0.100)'
-  * Center: '(-14.916, 29.986, 2.681)'
-
----
-
-### /World/RobotArm_2/Group/panda_link6/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_2/Group/panda_link6/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link6_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-15.010, 30.000, 2.647)'
-
----
-
-### /World/RobotArm_2/Group/panda_link7/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_2/Group/panda_link7/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link7.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.125, 0.125, 0.055)'
-  * Center: '(-14.770, 29.958, 2.468)'
-
----
-
-### /World/RobotArm_2/Group/panda_link7/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_2/Group/panda_link7/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link7_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-14.812, 30.000, 2.647)'
-
----
-
-### /World/RobotArm_2/Group/panda_rightfinger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_2/Group/panda_rightfinger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_rightfinger.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.021, 0.026, 0.054)'
-  * Center: '(-14.833, 30.021, 2.214)'
-
----
-
-### /World/RobotArm_2/Group/panda_rightfinger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_2/Group/panda_rightfinger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_rightfinger_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-14.812, 30.000, 2.275)'
-
----
-
-### /World/RobotArm_3
-
-* **Prim路径 (Prim Path):**/World/RobotArm_3
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  *   [reference] '/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/IsaacLab/Robots/FrankaEmika/panda_instanceable1.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.755, 0.583, 2.508)'
-  * Center: '(-9.980, 30.000, 1.577)'
-
----
-
-### /World/RobotArm_3/Group/panda_hand/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_3/Group/panda_hand/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_hand.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.063, 0.205, 0.092)'
-  * Center: '(-9.815, 30.002, 2.361)'
-
----
-
-### /World/RobotArm_3/Group/panda_hand/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_3/Group/panda_hand/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_hand_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-9.812, 30.000, 2.406)'
-
----
-
-### /World/RobotArm_3/Group/panda_leftfinger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_3/Group/panda_leftfinger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_leftfinger.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.021, 0.026, 0.054)'
-  * Center: '(-9.791, 29.979, 2.214)'
-
----
-
-### /World/RobotArm_3/Group/panda_leftfinger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_3/Group/panda_leftfinger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_leftfinger_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-9.812, 30.000, 2.275)'
-
----
-
-### /World/RobotArm_3/Group/panda_link0/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_3/Group/panda_link0/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link0.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.226, 0.189, 0.140)'
-  * Center: '(-10.103, 30.000, 0.480)'
-
----
-
-### /World/RobotArm_3/Group/panda_link0/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_3/Group/panda_link0/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link0_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-10.010, 30.000, 0.323)'
-
----
-
-### /World/RobotArm_3/Group/panda_link1/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_3/Group/panda_link1/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link1.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.110, 0.184, 0.247)'
-  * Center: '(-10.010, 29.916, 0.918)'
-
----
-
-### /World/RobotArm_3/Group/panda_link1/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_3/Group/panda_link1/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link1_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-10.010, 30.000, 1.072)'
-
----
-
-### /World/RobotArm_3/Group/panda_link2/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_3/Group/panda_link2/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link2.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.110, 0.249, 0.184)'
-  * Center: '(-10.010, 30.083, 1.228)'
-
----
-
-### /World/RobotArm_3/Group/panda_link2/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_3/Group/panda_link2/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link2_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-10.010, 30.000, 1.072)'
-
----
-
-### /World/RobotArm_3/Group/panda_link3/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_3/Group/panda_link3/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link3.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.193, 0.166, 0.176)'
-  * Center: '(-9.917, 30.063, 1.709)'
-
----
-
-### /World/RobotArm_3/Group/panda_link3/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_3/Group/panda_link3/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link3_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-10.010, 30.000, 1.783)'
-
----
-
-### /World/RobotArm_3/Group/panda_link4/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_3/Group/panda_link4/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link4.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.193, 0.179, 0.166)'
-  * Center: '(-9.917, 29.937, 1.861)'
-
----
-
-### /World/RobotArm_3/Group/panda_link4/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_3/Group/panda_link4/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link4_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-9.825, 30.000, 1.783)'
-
----
-
-### /World/RobotArm_3/Group/panda_link5/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_3/Group/panda_link5/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link5.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.110, 0.185, 0.311)'
-  * Center: '(-10.010, 30.084, 2.414)'
-
----
-
-### /World/RobotArm_3/Group/panda_link5/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_3/Group/panda_link5/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link5_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-10.010, 30.000, 2.647)'
-
----
-
-### /World/RobotArm_3/Group/panda_link6/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_3/Group/panda_link6/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link6.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.180, 0.133, 0.100)'
-  * Center: '(-9.916, 29.986, 2.681)'
-
----
-
-### /World/RobotArm_3/Group/panda_link6/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_3/Group/panda_link6/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link6_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-10.010, 30.000, 2.647)'
-
----
-
-### /World/RobotArm_3/Group/panda_link7/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_3/Group/panda_link7/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link7.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.125, 0.125, 0.055)'
-  * Center: '(-9.770, 29.958, 2.468)'
-
----
-
-### /World/RobotArm_3/Group/panda_link7/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_3/Group/panda_link7/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link7_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-9.812, 30.000, 2.647)'
-
----
-
-### /World/RobotArm_3/Group/panda_rightfinger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_3/Group/panda_rightfinger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_rightfinger.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.021, 0.026, 0.054)'
-  * Center: '(-9.833, 30.021, 2.214)'
-
----
-
-### /World/RobotArm_3/Group/panda_rightfinger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_3/Group/panda_rightfinger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_rightfinger_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-9.812, 30.000, 2.275)'
-
----
-
-### /World/RobotArm_4
-
-* **Prim路径 (Prim Path):**/World/RobotArm_4
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  *   [reference] '/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/IsaacLab/Robots/FrankaEmika/panda_instanceable1.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.755, 0.583, 2.508)'
-  * Center: '(-4.980, 30.000, 1.577)'
-
----
-
-### /World/RobotArm_4/Group/panda_hand/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_4/Group/panda_hand/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_hand.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.063, 0.205, 0.092)'
-  * Center: '(-4.815, 30.002, 2.361)'
-
----
-
-### /World/RobotArm_4/Group/panda_hand/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_4/Group/panda_hand/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_hand_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-4.812, 30.000, 2.406)'
-
----
-
-### /World/RobotArm_4/Group/panda_leftfinger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_4/Group/panda_leftfinger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_leftfinger.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.021, 0.026, 0.054)'
-  * Center: '(-4.791, 29.979, 2.214)'
-
----
-
-### /World/RobotArm_4/Group/panda_leftfinger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_4/Group/panda_leftfinger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_leftfinger_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-4.812, 30.000, 2.275)'
-
----
-
-### /World/RobotArm_4/Group/panda_link0/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_4/Group/panda_link0/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link0.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.226, 0.189, 0.140)'
-  * Center: '(-5.103, 30.000, 0.480)'
-
----
-
-### /World/RobotArm_4/Group/panda_link0/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_4/Group/panda_link0/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link0_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-5.010, 30.000, 0.323)'
-
----
-
-### /World/RobotArm_4/Group/panda_link1/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_4/Group/panda_link1/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link1.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.110, 0.184, 0.247)'
-  * Center: '(-5.010, 29.916, 0.918)'
-
----
-
-### /World/RobotArm_4/Group/panda_link1/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_4/Group/panda_link1/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link1_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-5.010, 30.000, 1.072)'
-
----
-
-### /World/RobotArm_4/Group/panda_link2/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_4/Group/panda_link2/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link2.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.110, 0.249, 0.184)'
-  * Center: '(-5.010, 30.083, 1.228)'
-
----
-
-### /World/RobotArm_4/Group/panda_link2/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_4/Group/panda_link2/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link2_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-5.010, 30.000, 1.072)'
-
----
-
-### /World/RobotArm_4/Group/panda_link3/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_4/Group/panda_link3/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link3.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.193, 0.166, 0.176)'
-  * Center: '(-4.917, 30.063, 1.709)'
-
----
-
-### /World/RobotArm_4/Group/panda_link3/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_4/Group/panda_link3/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link3_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-5.010, 30.000, 1.783)'
-
----
-
-### /World/RobotArm_4/Group/panda_link4/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_4/Group/panda_link4/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link4.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.193, 0.179, 0.166)'
-  * Center: '(-4.917, 29.937, 1.861)'
-
----
-
-### /World/RobotArm_4/Group/panda_link4/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_4/Group/panda_link4/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link4_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-4.825, 30.000, 1.783)'
-
----
-
-### /World/RobotArm_4/Group/panda_link5/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_4/Group/panda_link5/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link5.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.110, 0.185, 0.311)'
-  * Center: '(-5.010, 30.084, 2.414)'
-
----
-
-### /World/RobotArm_4/Group/panda_link5/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_4/Group/panda_link5/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link5_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-5.010, 30.000, 2.647)'
-
----
-
-### /World/RobotArm_4/Group/panda_link6/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_4/Group/panda_link6/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link6.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.180, 0.133, 0.100)'
-  * Center: '(-4.916, 29.986, 2.681)'
-
----
-
-### /World/RobotArm_4/Group/panda_link6/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_4/Group/panda_link6/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link6_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-5.010, 30.000, 2.647)'
-
----
-
-### /World/RobotArm_4/Group/panda_link7/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_4/Group/panda_link7/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link7.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.125, 0.125, 0.055)'
-  * Center: '(-4.770, 29.958, 2.468)'
-
----
-
-### /World/RobotArm_4/Group/panda_link7/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_4/Group/panda_link7/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link7_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-4.812, 30.000, 2.647)'
-
----
-
-### /World/RobotArm_4/Group/panda_rightfinger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_4/Group/panda_rightfinger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_rightfinger.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.021, 0.026, 0.054)'
-  * Center: '(-4.833, 30.021, 2.214)'
-
----
-
-### /World/RobotArm_4/Group/panda_rightfinger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_4/Group/panda_rightfinger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_rightfinger_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-4.812, 30.000, 2.275)'
-
----
-
-### /World/RobotArm_5
-
-* **Prim路径 (Prim Path):**/World/RobotArm_5
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  *   [reference] '/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/IsaacLab/Robots/FrankaEmika/panda_instanceable1.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.755, 0.583, 2.508)'
-  * Center: '(0.020, 30.000, 1.577)'
-
----
-
-### /World/RobotArm_5/Group/panda_hand/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_5/Group/panda_hand/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_hand.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.063, 0.205, 0.092)'
-  * Center: '(0.185, 30.002, 2.361)'
-
----
-
-### /World/RobotArm_5/Group/panda_hand/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_5/Group/panda_hand/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_hand_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(0.188, 30.000, 2.406)'
-
----
-
-### /World/RobotArm_5/Group/panda_leftfinger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_5/Group/panda_leftfinger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_leftfinger.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.021, 0.026, 0.054)'
-  * Center: '(0.209, 29.979, 2.214)'
-
----
-
-### /World/RobotArm_5/Group/panda_leftfinger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_5/Group/panda_leftfinger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_leftfinger_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(0.188, 30.000, 2.275)'
-
----
-
-### /World/RobotArm_5/Group/panda_link0/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_5/Group/panda_link0/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link0.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.226, 0.189, 0.140)'
-  * Center: '(-0.103, 30.000, 0.480)'
-
----
-
-### /World/RobotArm_5/Group/panda_link0/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_5/Group/panda_link0/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link0_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-0.010, 30.000, 0.323)'
-
----
-
-### /World/RobotArm_5/Group/panda_link1/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_5/Group/panda_link1/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link1.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.110, 0.184, 0.247)'
-  * Center: '(-0.010, 29.916, 0.918)'
-
----
-
-### /World/RobotArm_5/Group/panda_link1/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_5/Group/panda_link1/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link1_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-0.010, 30.000, 1.072)'
-
----
-
-### /World/RobotArm_5/Group/panda_link2/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_5/Group/panda_link2/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link2.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.110, 0.249, 0.184)'
-  * Center: '(-0.010, 30.083, 1.228)'
-
----
-
-### /World/RobotArm_5/Group/panda_link2/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_5/Group/panda_link2/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link2_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-0.010, 30.000, 1.072)'
-
----
-
-### /World/RobotArm_5/Group/panda_link3/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_5/Group/panda_link3/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link3.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.193, 0.166, 0.176)'
-  * Center: '(0.083, 30.063, 1.709)'
-
----
-
-### /World/RobotArm_5/Group/panda_link3/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_5/Group/panda_link3/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link3_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-0.010, 30.000, 1.783)'
-
----
-
-### /World/RobotArm_5/Group/panda_link4/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_5/Group/panda_link4/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link4.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.193, 0.179, 0.166)'
-  * Center: '(0.083, 29.937, 1.861)'
-
----
-
-### /World/RobotArm_5/Group/panda_link4/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_5/Group/panda_link4/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link4_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(0.175, 30.000, 1.783)'
-
----
-
-### /World/RobotArm_5/Group/panda_link5/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_5/Group/panda_link5/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link5.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.110, 0.185, 0.311)'
-  * Center: '(-0.010, 30.084, 2.414)'
-
----
-
-### /World/RobotArm_5/Group/panda_link5/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_5/Group/panda_link5/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link5_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-0.010, 30.000, 2.647)'
-
----
-
-### /World/RobotArm_5/Group/panda_link6/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_5/Group/panda_link6/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link6.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.180, 0.133, 0.100)'
-  * Center: '(0.084, 29.986, 2.681)'
-
----
-
-### /World/RobotArm_5/Group/panda_link6/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_5/Group/panda_link6/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link6_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(-0.010, 30.000, 2.647)'
-
----
-
-### /World/RobotArm_5/Group/panda_link7/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_5/Group/panda_link7/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link7.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.125, 0.125, 0.055)'
-  * Center: '(0.230, 29.958, 2.468)'
-
----
-
-### /World/RobotArm_5/Group/panda_link7/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_5/Group/panda_link7/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link7_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(0.188, 30.000, 2.647)'
-
----
-
-### /World/RobotArm_5/Group/panda_rightfinger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_5/Group/panda_rightfinger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_rightfinger.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.021, 0.026, 0.054)'
-  * Center: '(0.167, 30.021, 2.214)'
-
----
-
-### /World/RobotArm_5/Group/panda_rightfinger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_5/Group/panda_rightfinger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_rightfinger_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(0.188, 30.000, 2.275)'
-
----
-
-### /World/RobotArm_6
-
-* **Prim路径 (Prim Path):**/World/RobotArm_6
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  *   [reference] '/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/IsaacLab/Robots/FrankaEmika/panda_instanceable1.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.755, 0.583, 2.508)'
-  * Center: '(5.020, 30.000, 1.577)'
-
----
-
-### /World/RobotArm_6/Group/panda_hand/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_6/Group/panda_hand/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_hand.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.063, 0.205, 0.092)'
-  * Center: '(5.185, 30.002, 2.361)'
-
----
-
-### /World/RobotArm_6/Group/panda_hand/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_6/Group/panda_hand/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_hand_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(5.188, 30.000, 2.406)'
-
----
-
-### /World/RobotArm_6/Group/panda_leftfinger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_6/Group/panda_leftfinger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_leftfinger.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.021, 0.026, 0.054)'
-  * Center: '(5.209, 29.979, 2.214)'
-
----
-
-### /World/RobotArm_6/Group/panda_leftfinger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_6/Group/panda_leftfinger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_leftfinger_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(5.188, 30.000, 2.275)'
-
----
-
-### /World/RobotArm_6/Group/panda_link0/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_6/Group/panda_link0/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link0.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.226, 0.189, 0.140)'
-  * Center: '(4.897, 30.000, 0.480)'
-
----
-
-### /World/RobotArm_6/Group/panda_link0/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_6/Group/panda_link0/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link0_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(4.990, 30.000, 0.323)'
-
----
-
-### /World/RobotArm_6/Group/panda_link1/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_6/Group/panda_link1/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link1.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.110, 0.184, 0.247)'
-  * Center: '(4.990, 29.916, 0.918)'
-
----
-
-### /World/RobotArm_6/Group/panda_link1/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_6/Group/panda_link1/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link1_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(4.990, 30.000, 1.072)'
-
----
-
-### /World/RobotArm_6/Group/panda_link2/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_6/Group/panda_link2/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link2.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.110, 0.249, 0.184)'
-  * Center: '(4.990, 30.083, 1.228)'
-
----
-
-### /World/RobotArm_6/Group/panda_link2/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_6/Group/panda_link2/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link2_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(4.990, 30.000, 1.072)'
-
----
-
-### /World/RobotArm_6/Group/panda_link3/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_6/Group/panda_link3/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link3.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.193, 0.166, 0.176)'
-  * Center: '(5.083, 30.063, 1.709)'
-
----
-
-### /World/RobotArm_6/Group/panda_link3/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_6/Group/panda_link3/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link3_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(4.990, 30.000, 1.783)'
-
----
-
-### /World/RobotArm_6/Group/panda_link4/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_6/Group/panda_link4/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link4.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.193, 0.179, 0.166)'
-  * Center: '(5.083, 29.937, 1.861)'
-
----
-
-### /World/RobotArm_6/Group/panda_link4/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_6/Group/panda_link4/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link4_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(5.175, 30.000, 1.783)'
-
----
-
-### /World/RobotArm_6/Group/panda_link5/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_6/Group/panda_link5/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link5.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.110, 0.185, 0.311)'
-  * Center: '(4.990, 30.084, 2.414)'
-
----
-
-### /World/RobotArm_6/Group/panda_link5/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_6/Group/panda_link5/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link5_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(4.990, 30.000, 2.647)'
-
----
-
-### /World/RobotArm_6/Group/panda_link6/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_6/Group/panda_link6/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link6.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.180, 0.133, 0.100)'
-  * Center: '(5.084, 29.986, 2.681)'
-
----
-
-### /World/RobotArm_6/Group/panda_link6/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_6/Group/panda_link6/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link6_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(4.990, 30.000, 2.647)'
-
----
-
-### /World/RobotArm_6/Group/panda_link7/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_6/Group/panda_link7/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link7.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.125, 0.125, 0.055)'
-  * Center: '(5.230, 29.958, 2.468)'
-
----
-
-### /World/RobotArm_6/Group/panda_link7/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_6/Group/panda_link7/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link7_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(5.188, 30.000, 2.647)'
-
----
-
-### /World/RobotArm_6/Group/panda_rightfinger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_6/Group/panda_rightfinger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_rightfinger.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.021, 0.026, 0.054)'
-  * Center: '(5.167, 30.021, 2.214)'
-
----
-
-### /World/RobotArm_6/Group/panda_rightfinger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_6/Group/panda_rightfinger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_rightfinger_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(5.188, 30.000, 2.275)'
-
----
-
-### /World/RobotArm_7
-
-* **Prim路径 (Prim Path):**/World/RobotArm_7
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  *   [reference] '/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/IsaacLab/Robots/FrankaEmika/panda_instanceable1.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.755, 0.583, 2.508)'
-  * Center: '(10.020, 30.000, 1.577)'
-
----
-
-### /World/RobotArm_7/Group/panda_hand/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_7/Group/panda_hand/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_hand.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.063, 0.205, 0.092)'
-  * Center: '(10.185, 30.002, 2.361)'
-
----
-
-### /World/RobotArm_7/Group/panda_hand/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_7/Group/panda_hand/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_hand_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(10.188, 30.000, 2.406)'
-
----
-
-### /World/RobotArm_7/Group/panda_leftfinger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_7/Group/panda_leftfinger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_leftfinger.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.021, 0.026, 0.054)'
-  * Center: '(10.209, 29.979, 2.214)'
-
----
-
-### /World/RobotArm_7/Group/panda_leftfinger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_7/Group/panda_leftfinger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_leftfinger_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(10.188, 30.000, 2.275)'
-
----
-
-### /World/RobotArm_7/Group/panda_link0/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_7/Group/panda_link0/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link0.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.226, 0.189, 0.140)'
-  * Center: '(9.897, 30.000, 0.480)'
-
----
-
-### /World/RobotArm_7/Group/panda_link0/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_7/Group/panda_link0/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link0_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(9.990, 30.000, 0.323)'
-
----
-
-### /World/RobotArm_7/Group/panda_link1/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_7/Group/panda_link1/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link1.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.110, 0.184, 0.247)'
-  * Center: '(9.990, 29.916, 0.918)'
-
----
-
-### /World/RobotArm_7/Group/panda_link1/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_7/Group/panda_link1/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link1_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(9.990, 30.000, 1.072)'
-
----
-
-### /World/RobotArm_7/Group/panda_link2/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_7/Group/panda_link2/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link2.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.110, 0.249, 0.184)'
-  * Center: '(9.990, 30.083, 1.228)'
-
----
-
-### /World/RobotArm_7/Group/panda_link2/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_7/Group/panda_link2/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link2_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(9.990, 30.000, 1.072)'
-
----
-
-### /World/RobotArm_7/Group/panda_link3/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_7/Group/panda_link3/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link3.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.193, 0.166, 0.176)'
-  * Center: '(10.083, 30.063, 1.709)'
-
----
-
-### /World/RobotArm_7/Group/panda_link3/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_7/Group/panda_link3/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link3_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(9.990, 30.000, 1.783)'
-
----
-
-### /World/RobotArm_7/Group/panda_link4/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_7/Group/panda_link4/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link4.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.193, 0.179, 0.166)'
-  * Center: '(10.083, 29.937, 1.861)'
-
----
-
-### /World/RobotArm_7/Group/panda_link4/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_7/Group/panda_link4/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link4_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(10.175, 30.000, 1.783)'
-
----
-
-### /World/RobotArm_7/Group/panda_link5/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_7/Group/panda_link5/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link5.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.110, 0.185, 0.311)'
-  * Center: '(9.990, 30.084, 2.414)'
-
----
-
-### /World/RobotArm_7/Group/panda_link5/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_7/Group/panda_link5/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link5_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(9.990, 30.000, 2.647)'
-
----
-
-### /World/RobotArm_7/Group/panda_link6/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_7/Group/panda_link6/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link6.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.180, 0.133, 0.100)'
-  * Center: '(10.084, 29.986, 2.681)'
-
----
-
-### /World/RobotArm_7/Group/panda_link6/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_7/Group/panda_link6/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link6_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(9.990, 30.000, 2.647)'
-
----
-
-### /World/RobotArm_7/Group/panda_link7/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_7/Group/panda_link7/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link7.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.125, 0.125, 0.055)'
-  * Center: '(10.230, 29.958, 2.468)'
-
----
-
-### /World/RobotArm_7/Group/panda_link7/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_7/Group/panda_link7/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link7_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(10.188, 30.000, 2.647)'
-
----
-
-### /World/RobotArm_7/Group/panda_rightfinger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_7/Group/panda_rightfinger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_rightfinger.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.021, 0.026, 0.054)'
-  * Center: '(10.167, 30.021, 2.214)'
-
----
-
-### /World/RobotArm_7/Group/panda_rightfinger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_7/Group/panda_rightfinger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_rightfinger_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(10.188, 30.000, 2.275)'
-
----
-
-### /World/RobotArm_8
-
-* **Prim路径 (Prim Path):**/World/RobotArm_8
-* **Prim类型 (Prim Type):**Xform
-* **外部引用 (Referenced USD Files):**
-  *   [reference] '/media/simple/another_Documents/isaacsim_assets/Assets/Isaac/5.0/Isaac/IsaacLab/Robots/FrankaEmika/panda_instanceable1.usd'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.755, 0.583, 2.508)'
-  * Center: '(15.020, 30.000, 1.577)'
-
----
-
-### /World/RobotArm_8/Group/panda_hand/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_8/Group/panda_hand/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_hand.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.063, 0.205, 0.092)'
-  * Center: '(15.185, 30.002, 2.361)'
-
----
-
-### /World/RobotArm_8/Group/panda_hand/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_8/Group/panda_hand/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_hand_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(15.188, 30.000, 2.406)'
-
----
-
-### /World/RobotArm_8/Group/panda_leftfinger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_8/Group/panda_leftfinger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_leftfinger.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.021, 0.026, 0.054)'
-  * Center: '(15.209, 29.979, 2.214)'
-
----
-
-### /World/RobotArm_8/Group/panda_leftfinger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_8/Group/panda_leftfinger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_leftfinger_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(15.188, 30.000, 2.275)'
-
----
-
-### /World/RobotArm_8/Group/panda_link0/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_8/Group/panda_link0/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link0.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.226, 0.189, 0.140)'
-  * Center: '(14.897, 30.000, 0.480)'
-
----
-
-### /World/RobotArm_8/Group/panda_link0/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_8/Group/panda_link0/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link0_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(14.990, 30.000, 0.323)'
-
----
-
-### /World/RobotArm_8/Group/panda_link1/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_8/Group/panda_link1/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link1.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.110, 0.184, 0.247)'
-  * Center: '(14.990, 29.916, 0.918)'
-
----
-
-### /World/RobotArm_8/Group/panda_link1/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_8/Group/panda_link1/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link1_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(14.990, 30.000, 1.072)'
-
----
-
-### /World/RobotArm_8/Group/panda_link2/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_8/Group/panda_link2/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link2.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.110, 0.249, 0.184)'
-  * Center: '(14.990, 30.083, 1.228)'
-
----
-
-### /World/RobotArm_8/Group/panda_link2/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_8/Group/panda_link2/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link2_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(14.990, 30.000, 1.072)'
-
----
-
-### /World/RobotArm_8/Group/panda_link3/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_8/Group/panda_link3/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link3.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.193, 0.166, 0.176)'
-  * Center: '(15.083, 30.063, 1.709)'
-
----
-
-### /World/RobotArm_8/Group/panda_link3/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_8/Group/panda_link3/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link3_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(14.990, 30.000, 1.783)'
-
----
-
-### /World/RobotArm_8/Group/panda_link4/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_8/Group/panda_link4/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link4.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.193, 0.179, 0.166)'
-  * Center: '(15.083, 29.937, 1.861)'
-
----
-
-### /World/RobotArm_8/Group/panda_link4/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_8/Group/panda_link4/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link4_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(15.175, 30.000, 1.783)'
-
----
-
-### /World/RobotArm_8/Group/panda_link5/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_8/Group/panda_link5/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link5.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.110, 0.185, 0.311)'
-  * Center: '(14.990, 30.084, 2.414)'
-
----
-
-### /World/RobotArm_8/Group/panda_link5/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_8/Group/panda_link5/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link5_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(14.990, 30.000, 2.647)'
-
----
-
-### /World/RobotArm_8/Group/panda_link6/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_8/Group/panda_link6/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link6.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.180, 0.133, 0.100)'
-  * Center: '(15.084, 29.986, 2.681)'
-
----
-
-### /World/RobotArm_8/Group/panda_link6/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_8/Group/panda_link6/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link6_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(14.990, 30.000, 2.647)'
-
----
-
-### /World/RobotArm_8/Group/panda_link7/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_8/Group/panda_link7/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_link7.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.125, 0.125, 0.055)'
-  * Center: '(15.230, 29.958, 2.468)'
-
----
-
-### /World/RobotArm_8/Group/panda_link7/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_8/Group/panda_link7/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_link7_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(15.188, 30.000, 2.647)'
-
----
-
-### /World/RobotArm_8/Group/panda_rightfinger/visuals
-
-* **Prim路径 (Prim Path):**/World/RobotArm_8/Group/panda_rightfinger/visuals
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/panda_rightfinger.usd'
-  *   Prim Path: '/Root'
-* **世界包围盒 (World BBox):**
-  * Size: '(0.021, 0.026, 0.054)'
-  * Center: '(15.167, 30.021, 2.214)'
-
----
-
-### /World/RobotArm_8/Group/panda_rightfinger/collisions
-
-* **Prim路径 (Prim Path):**/World/RobotArm_8/Group/panda_rightfinger/collisions
-* **Prim类型 (Prim Type):**Xform
-* **变换信息 (Transform):**
-  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
-  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
-  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
-* **外部引用 (Referenced USD Files):**
-  *   [reference] './Props/instanceable_collision_meshes.usd'
-  *   Prim Path: '/panda_rightfinger_collisions'
-* **世界包围盒 (World BBox):**
-  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
-  * Center: '(15.188, 30.000, 2.275)'
 
 ---
 
@@ -9248,6 +5864,404 @@
 * **世界包围盒 (World BBox):**
   * Size: '(35.888, 35.888, 35.888)'
   * Center: '(16.200, 29.500, 0.996)'
+
+---
+
+### /World/HeavyDutyPackingTable_A01_01
+
+* **Prim路径 (Prim Path):**/World/HeavyDutyPackingTable_A01_01
+* **Prim类型 (Prim Type):**Xform
+* **外部引用 (Referenced USD Files):**
+  *   [reference] '../device_data/usdz/Workbench/HeavyDutyPackingTable_A01_01.usdz'
+* **世界包围盒 (World BBox):**
+  * Size: '(186.690, 121.948, 99.405)'
+  * Center: '(14.843, 29.361, 0.651)'
+
+---
+
+### /World/panda_instanceable1
+
+* **Prim路径 (Prim Path):**/World/panda_instanceable1
+* **Prim类型 (Prim Type):**Xform
+* **外部引用 (Referenced USD Files):**
+  *   [reference] '../device_data/usdz/IndustrialRobot/panda_instanceable1.usdz'
+* **世界包围盒 (World BBox):**
+  * Size: '(0.503, 0.389, 1.672)'
+  * Center: '(15.146, 29.424, 1.981)'
+
+---
+
+### /World/panda_instanceable1/Group/panda_hand/visuals
+
+* **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_hand/visuals
+* **Prim类型 (Prim Type):**Xform
+* **变换信息 (Transform):**
+  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
+  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+* **外部引用 (Referenced USD Files):**
+  *   [reference] 'Reference 1'
+  *   Prim Path: '/Flattened_Prototype_6'
+* **世界包围盒 (World BBox):**
+  * Size: '(0.063, 0.205, 0.092)'
+  * Center: '(15.255, 29.425, 2.504)'
+
+---
+
+### /World/panda_instanceable1/Group/panda_hand/collisions
+
+* **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_hand/collisions
+* **Prim类型 (Prim Type):**Xform
+* **变换信息 (Transform):**
+  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
+  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+* **外部引用 (Referenced USD Files):**
+  *   [reference] 'Reference 1'
+  *   Prim Path: '/Flattened_Prototype_13'
+* **世界包围盒 (World BBox):**
+  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+  * Center: '(15.257, 29.424, 2.534)'
+
+---
+
+### /World/panda_instanceable1/Group/panda_leftfinger/visuals
+
+* **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_leftfinger/visuals
+* **Prim类型 (Prim Type):**Xform
+* **变换信息 (Transform):**
+  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
+  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+* **外部引用 (Referenced USD Files):**
+  *   [reference] 'Reference 1'
+  *   Prim Path: '/Flattened_Prototype_2'
+* **世界包围盒 (World BBox):**
+  * Size: '(0.021, 0.026, 0.054)'
+  * Center: '(15.271, 29.410, 2.406)'
+
+---
+
+### /World/panda_instanceable1/Group/panda_leftfinger/collisions
+
+* **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_leftfinger/collisions
+* **Prim类型 (Prim Type):**Xform
+* **变换信息 (Transform):**
+  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
+  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+* **外部引用 (Referenced USD Files):**
+  *   [reference] 'Reference 1'
+  *   Prim Path: '/Flattened_Prototype_22'
+* **世界包围盒 (World BBox):**
+  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+  * Center: '(15.257, 29.424, 2.446)'
+
+---
+
+### /World/panda_instanceable1/Group/panda_link0/visuals
+
+* **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link0/visuals
+* **Prim类型 (Prim Type):**Xform
+* **变换信息 (Transform):**
+  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
+  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+* **外部引用 (Referenced USD Files):**
+  *   [reference] 'Reference 1'
+  *   Prim Path: '/Flattened_Prototype_5'
+* **世界包围盒 (World BBox):**
+  * Size: '(0.226, 0.189, 0.140)'
+  * Center: '(15.063, 29.423, 1.250)'
+
+---
+
+### /World/panda_instanceable1/Group/panda_link0/collisions
+
+* **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link0/collisions
+* **Prim类型 (Prim Type):**Xform
+* **变换信息 (Transform):**
+  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
+  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+* **外部引用 (Referenced USD Files):**
+  *   [reference] 'Reference 1'
+  *   Prim Path: '/Flattened_Prototype_19'
+* **世界包围盒 (World BBox):**
+  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+  * Center: '(15.125, 29.424, 1.145)'
+
+---
+
+### /World/panda_instanceable1/Group/panda_link1/visuals
+
+* **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link1/visuals
+* **Prim类型 (Prim Type):**Xform
+* **变换信息 (Transform):**
+  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
+  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+* **外部引用 (Referenced USD Files):**
+  *   [reference] 'Reference 1'
+  *   Prim Path: '/Flattened_Prototype_16'
+* **世界包围盒 (World BBox):**
+  * Size: '(0.110, 0.184, 0.247)'
+  * Center: '(15.125, 29.368, 1.541)'
+
+---
+
+### /World/panda_instanceable1/Group/panda_link1/collisions
+
+* **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link1/collisions
+* **Prim类型 (Prim Type):**Xform
+* **变换信息 (Transform):**
+  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
+  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+* **外部引用 (Referenced USD Files):**
+  *   [reference] 'Reference 1'
+  *   Prim Path: '/Flattened_Prototype_18'
+* **世界包围盒 (World BBox):**
+  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+  * Center: '(15.125, 29.424, 1.644)'
+
+---
+
+### /World/panda_instanceable1/Group/panda_link2/visuals
+
+* **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link2/visuals
+* **Prim类型 (Prim Type):**Xform
+* **变换信息 (Transform):**
+  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
+  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+* **外部引用 (Referenced USD Files):**
+  *   [reference] 'Reference 1'
+  *   Prim Path: '/Flattened_Prototype_1'
+* **世界包围盒 (World BBox):**
+  * Size: '(0.110, 0.249, 0.184)'
+  * Center: '(15.125, 29.479, 1.749)'
+
+---
+
+### /World/panda_instanceable1/Group/panda_link2/collisions
+
+* **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link2/collisions
+* **Prim类型 (Prim Type):**Xform
+* **变换信息 (Transform):**
+  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
+  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+* **外部引用 (Referenced USD Files):**
+  *   [reference] 'Reference 1'
+  *   Prim Path: '/Flattened_Prototype_12'
+* **世界包围盒 (World BBox):**
+  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+  * Center: '(15.125, 29.424, 1.644)'
+
+---
+
+### /World/panda_instanceable1/Group/panda_link3/visuals
+
+* **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link3/visuals
+* **Prim类型 (Prim Type):**Xform
+* **变换信息 (Transform):**
+  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
+  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+* **外部引用 (Referenced USD Files):**
+  *   [reference] 'Reference 1'
+  *   Prim Path: '/Flattened_Prototype_14'
+* **世界包围盒 (World BBox):**
+  * Size: '(0.193, 0.166, 0.176)'
+  * Center: '(15.187, 29.466, 2.069)'
+
+---
+
+### /World/panda_instanceable1/Group/panda_link3/collisions
+
+* **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link3/collisions
+* **Prim类型 (Prim Type):**Xform
+* **变换信息 (Transform):**
+  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
+  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+* **外部引用 (Referenced USD Files):**
+  *   [reference] 'Reference 1'
+  *   Prim Path: '/Flattened_Prototype_15'
+* **世界包围盒 (World BBox):**
+  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+  * Center: '(15.125, 29.424, 2.118)'
+
+---
+
+### /World/panda_instanceable1/Group/panda_link4/visuals
+
+* **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link4/visuals
+* **Prim类型 (Prim Type):**Xform
+* **变换信息 (Transform):**
+  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
+  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+* **外部引用 (Referenced USD Files):**
+  *   [reference] 'Reference 1'
+  *   Prim Path: '/Flattened_Prototype_8'
+* **世界包围盒 (World BBox):**
+  * Size: '(0.193, 0.179, 0.166)'
+  * Center: '(15.187, 29.382, 2.170)'
+
+---
+
+### /World/panda_instanceable1/Group/panda_link4/collisions
+
+* **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link4/collisions
+* **Prim类型 (Prim Type):**Xform
+* **变换信息 (Transform):**
+  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
+  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+* **外部引用 (Referenced USD Files):**
+  *   [reference] 'Reference 1'
+  *   Prim Path: '/Flattened_Prototype_3'
+* **世界包围盒 (World BBox):**
+  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+  * Center: '(15.249, 29.424, 2.118)'
+
+---
+
+### /World/panda_instanceable1/Group/panda_link5/visuals
+
+* **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link5/visuals
+* **Prim类型 (Prim Type):**Xform
+* **变换信息 (Transform):**
+  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
+  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+* **外部引用 (Referenced USD Files):**
+  *   [reference] 'Reference 1'
+  *   Prim Path: '/Flattened_Prototype_10'
+* **世界包围盒 (World BBox):**
+  * Size: '(0.110, 0.185, 0.311)'
+  * Center: '(15.125, 29.480, 2.539)'
+
+---
+
+### /World/panda_instanceable1/Group/panda_link5/collisions
+
+* **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link5/collisions
+* **Prim类型 (Prim Type):**Xform
+* **变换信息 (Transform):**
+  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
+  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+* **外部引用 (Referenced USD Files):**
+  *   [reference] 'Reference 1'
+  *   Prim Path: '/Flattened_Prototype_4'
+* **世界包围盒 (World BBox):**
+  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+  * Center: '(15.125, 29.424, 2.694)'
+
+---
+
+### /World/panda_instanceable1/Group/panda_link6/visuals
+
+* **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link6/visuals
+* **Prim类型 (Prim Type):**Xform
+* **变换信息 (Transform):**
+  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
+  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+* **外部引用 (Referenced USD Files):**
+  *   [reference] 'Reference 1'
+  *   Prim Path: '/Flattened_Prototype_9'
+* **世界包围盒 (World BBox):**
+  * Size: '(0.180, 0.133, 0.100)'
+  * Center: '(15.188, 29.414, 2.717)'
+
+---
+
+### /World/panda_instanceable1/Group/panda_link6/collisions
+
+* **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link6/collisions
+* **Prim类型 (Prim Type):**Xform
+* **变换信息 (Transform):**
+  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
+  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+* **外部引用 (Referenced USD Files):**
+  *   [reference] 'Reference 1'
+  *   Prim Path: '/Flattened_Prototype_11'
+* **世界包围盒 (World BBox):**
+  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+  * Center: '(15.125, 29.424, 2.694)'
+
+---
+
+### /World/panda_instanceable1/Group/panda_link7/visuals
+
+* **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link7/visuals
+* **Prim类型 (Prim Type):**Xform
+* **变换信息 (Transform):**
+  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
+  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+* **外部引用 (Referenced USD Files):**
+  *   [reference] 'Reference 1'
+  *   Prim Path: '/Flattened_Prototype_17'
+* **世界包围盒 (World BBox):**
+  * Size: '(0.125, 0.125, 0.055)'
+  * Center: '(15.285, 29.396, 2.575)'
+
+---
+
+### /World/panda_instanceable1/Group/panda_link7/collisions
+
+* **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_link7/collisions
+* **Prim类型 (Prim Type):**Xform
+* **变换信息 (Transform):**
+  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
+  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+* **外部引用 (Referenced USD Files):**
+  *   [reference] 'Reference 1'
+  *   Prim Path: '/Flattened_Prototype_21'
+* **世界包围盒 (World BBox):**
+  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+  * Center: '(15.257, 29.424, 2.694)'
+
+---
+
+### /World/panda_instanceable1/Group/panda_rightfinger/visuals
+
+* **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_rightfinger/visuals
+* **Prim类型 (Prim Type):**Xform
+* **变换信息 (Transform):**
+  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
+  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+* **外部引用 (Referenced USD Files):**
+  *   [reference] 'Reference 1'
+  *   Prim Path: '/Flattened_Prototype_7'
+* **世界包围盒 (World BBox):**
+  * Size: '(0.021, 0.026, 0.054)'
+  * Center: '(15.243, 29.437, 2.406)'
+
+---
+
+### /World/panda_instanceable1/Group/panda_rightfinger/collisions
+
+* **Prim路径 (Prim Path):**/World/panda_instanceable1/Group/panda_rightfinger/collisions
+* **Prim类型 (Prim Type):**Xform
+* **变换信息 (Transform):**
+  * **平移 (Translate):**'(0.000, 0.000, 0.000)'
+  * **旋转 (Rotate XYZ, Degrees):**'(0.000, 0.000, 0.000)'
+  * **缩放 (Scale):**'(1.000, 1.000, 1.000)'
+* **外部引用 (Referenced USD Files):**
+  *   [reference] 'Reference 1'
+  *   Prim Path: '/Flattened_Prototype_20'
+* **世界包围盒 (World BBox):**
+  * Size: '(-680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000, -680564693277057719623408366969033850880.000)'
+  * Center: '(15.257, 29.424, 2.446)'
 
 ---
 
@@ -24152,5 +21166,71 @@
           * Shader ID: 'UsdPrimvarReader_float2'
     * '/World/StackedCarton_2_8/Materials/_6___Default/uvset0' (ID: 'UsdPrimvarReader_float2')
     * Implementation: 'id'
+
+---
+
+### /World/HeavyDutyPackingTable_A01_01/Looks/Wood_Maple_HeavyDutyPackingTable_A
+
+* **Prim路径 (Prim Path):**/World/HeavyDutyPackingTable_A01_01/Looks/Wood_Maple_HeavyDutyPackingTable_A
+* **Prim类型 (Prim Type):**Material
+* **材质网络 (Material & Shader Details):**
+  * **Surface Outputs:**
+    * 'outputs:surface'
+    * 'outputs:mdl:surface' -> '/World/HeavyDutyPackingTable_A01_01/Looks/Wood_Maple_HeavyDutyPackingTable_A/Shader'
+    * Connection: 'out' (Output)'
+  * **Shader 节点 (Shader Nodes):**
+    * '/World/HeavyDutyPackingTable_A01_01/Looks/Wood_Maple_HeavyDutyPackingTable_A/Shader'
+    * Implementation: 'sourceAsset'
+    * Source Assets:
+      * [mdl] 'OmniPBR.mdl' (Sub Id: 'OmniPBR')
+    * 纹理引用 (Texture Assets):
+      * '1/T_HeavyDutyPackingTable_A01_Albedo.png'
+      * '1/T_HeavyDutyPackingTable_A01_Normal.png'
+      * '1/T_HeavyDutyPackingTable_A01_ORM.png'
+    * Inputs:
+      * 'albedo_add' [float] = '0'
+      * 'diffuse_texture' [asset] = '1/T_HeavyDutyPackingTable_A01_Albedo.png'
+      * 'diffuse_tint' [color3f] = '(0.784, 0.784, 0.784)'
+      * 'metallic_texture_influence' [float] = '1'
+      * 'normalmap_texture' [asset] = '1/T_HeavyDutyPackingTable_A01_Normal.png'
+      * 'ORM_texture' [asset] = '1/T_HeavyDutyPackingTable_A01_ORM.png'
+      * 'reflection_roughness_texture_influence' [float] = '1'
+
+---
+
+### /World/HeavyDutyPackingTable_A01_01/Looks/Metal_Glossy_A_HeavyDutyPackingTable_A
+
+* **Prim路径 (Prim Path):**/World/HeavyDutyPackingTable_A01_01/Looks/Metal_Glossy_A_HeavyDutyPackingTable_A
+* **Prim类型 (Prim Type):**Material
+* **材质网络 (Material & Shader Details):**
+  * **Surface Outputs:**
+    * 'outputs:surface'
+    * 'outputs:mdl:surface' -> '/World/HeavyDutyPackingTable_A01_01/Looks/Metal_Glossy_A_HeavyDutyPackingTable_A/Shader'
+    * Connection: 'out' (Output)'
+  * **Shader 节点 (Shader Nodes):**
+    * '/World/HeavyDutyPackingTable_A01_01/Looks/Metal_Glossy_A_HeavyDutyPackingTable_A/Shader'
+    * Implementation: 'sourceAsset'
+    * Source Assets:
+      * [mdl] '0/Metal_Glossy_A.mdl' (Sub Id: 'Metal_Glossy_A')  | Resolved: '/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Workbench/HeavyDutyPackingTable_A01_01.usdz[0/Metal_Glossy_A.mdl]'
+
+---
+
+### /World/HeavyDutyPackingTable_A01_01/Looks/Metal_Painted_Gray_Glossy_A_HeavyDutyPackingTable_A
+
+* **Prim路径 (Prim Path):**/World/HeavyDutyPackingTable_A01_01/Looks/Metal_Painted_Gray_Glossy_A_HeavyDutyPackingTable_A
+* **Prim类型 (Prim Type):**Material
+* **材质网络 (Material & Shader Details):**
+  * **Surface Outputs:**
+    * 'outputs:surface'
+    * 'outputs:mdl:surface' -> '/World/HeavyDutyPackingTable_A01_01/Looks/Metal_Painted_Gray_Glossy_A_HeavyDutyPackingTable_A/Shader'
+    * Connection: 'out' (Output)'
+  * **Shader 节点 (Shader Nodes):**
+    * '/World/HeavyDutyPackingTable_A01_01/Looks/Metal_Painted_Gray_Glossy_A_HeavyDutyPackingTable_A/Shader'
+    * Implementation: 'sourceAsset'
+    * Source Assets:
+      * [mdl] '0/Metal_Painted_White_Glossy_A.mdl' (Sub Id: 'Metal_Painted_White_Glossy_A')  | Resolved: '/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Workbench/HeavyDutyPackingTable_A01_01.usdz[0/Metal_Painted_White_Glossy_A.mdl]'
+    * Inputs:
+      * 'diffuse_tint' [color3f] = '(0.170, 0.170, 0.170)'
+      * 'texture_scale' [float2] = '(2.000, 2.000)'
 
 ---

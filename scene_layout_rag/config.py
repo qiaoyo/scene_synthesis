@@ -83,8 +83,8 @@ class ModelConfig:
     lora_alpha: int = 64
     # OpenAI SDK / Responses API support
     llm_api_base_url: str = "https://openrouter.ai/api/v1"
-    #llm_api_key: str = os.environ.get("OPENROUTER_API_KEY", "")
-    llm_api_key: str = "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"
+    llm_api_key: str = os.environ.get("OPENROUTER_API_KEY", "")
+
     llm_api_model: str = "inclusionai/ling-2.6-1t:free"
 
 
