@@ -54,7 +54,8 @@ def main() -> int:
         cfg.model.llm_api_key = args.api_key
     if args.max_steps:
         cfg.agent.max_steps = args.max_steps
-    cfg.ensure_directories()
+    cfg.index_dir.mkdir(parents=True, exist_ok=True)
+    cfg.output_dir.mkdir(parents=True, exist_ok=True)
 
     rag = AssetRAG(cfg)
     if args.rebuild_corpus or not (cfg.index_dir / "corpus.jsonl").exists():

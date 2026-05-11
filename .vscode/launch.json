@@ -4,7 +4,7 @@
             "name": "Python Debugger: Python File",
             "type": "debugpy",
             "request": "launch",
-            "module": "scene_layout_rag.test.test_tool_use",
+            "module": "scene_layout_rag.test.test_tool_state",
             "args": [""],
             "env": {
         "http_proxy": "http://127.0.0.1:7897",

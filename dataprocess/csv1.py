@@ -63,6 +63,6 @@ def clean_csv_preserve_format(folder_path):
 # ===================== 你只需要改这里 =====================
 if __name__ == "__main__":
     # 改成你的CSV文件夹路径
-    FOLDER = "/home/simple/Desktop/Scene-Knowledge/xlsx/csv_output"  # 相对路径（脚本同目录下的csv_files文件夹）
+    FOLDER = "/home/simple/Desktop/Scene-Knowledge/xlsx/1/csv_output"  # 相对路径（脚本同目录下的csv_files文件夹）
     
     clean_csv_preserve_format(FOLDER)

@@ -1,5 +1,4 @@
 """Plain-data structures shared across the RAG corpus and the ReAct agent.
-
 设计原则:
 - 资产语料里的每条文档统一使用 ``AssetDocument``，content + metadata 二段式，
   方便序列化为 JSONL 索引（确定性、可读、可 diff）。
@@ -17,15 +16,14 @@ from typing import Any, Dict, List, Optional, Tuple
 @dataclass
 class AssetDocument:
     """统一的资产/场景文档结构，落到 ``data/indexes/corpus.jsonl``。"""
-
     doc_id: str
-    content: str
+    content: str = ""
     metadata: Dict[str, Any] = field(default_factory=dict)
     embedding: Optional[List[float]] = None
 
     def to_dict(self) -> Dict[str, Any]:
         data = asdict(self)
-        # embedding 体积大且只在 FAISS 模式下需要持久化
+        # embedding 体积大且只在 FAISS 模式下需要持久
         if data.get("embedding") is None:
             data.pop("embedding", None)
         return data
@@ -34,7 +32,7 @@ class AssetDocument:
     def from_dict(cls, payload: Dict[str, Any]) -> "AssetDocument":
         return cls(
             doc_id=payload["doc_id"],
-            content=payload["content"],
+            content=payload.get("content", ""),
             metadata=dict(payload.get("metadata", {})),
             embedding=payload.get("embedding"),
         )
@@ -102,7 +100,6 @@ class SceneState:
 @dataclass
 class Action:
     """LLM 决策出的一次动作。"""
-
     tool: str
     tool_input: Dict[str, Any] = field(default_factory=dict)
     thought: str = ""
@@ -114,7 +111,6 @@ class Action:
 @dataclass
 class Observation:
     """一次工具执行后的全面观测。结构对齐 ``方案/优化.md`` 中的优化方向 2。"""
-
     ok: bool = True
     tool_result: Dict[str, Any] = field(default_factory=dict)
     validation: Dict[str, Any] = field(default_factory=dict)

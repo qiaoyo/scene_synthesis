@@ -178,7 +178,7 @@ def get_single_object_bbox_with_unit(usd_file_path: str) -> Dict[str, object]:
 # ---------------- 调用示例 ----------------
 if __name__ == "__main__":
     # 在这里修改为你的 USD 文件路径
-    target_file = "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/AGV/model_AGV_1.usdz" 
+    target_file = "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Workbench/table.usdz" 
     
     try:
         bbox_info = get_single_object_bbox_with_unit(target_file)

@@ -111,4 +111,4 @@ def xlsx_to_csv_with_subscript(input_folder=".", output_folder="csv_output"):
 # ====================== 运行 ======================
 if __name__ == "__main__":
     # 当前目录下所有xlsx → 自动生成 csv_output 文件夹
-    xlsx_to_csv_with_subscript(input_folder="/home/simple/Desktop/Scene-Knowledge/xlsx", output_folder="/home/simple/Desktop/Scene-Knowledge/xlsx/csv_output")
+    xlsx_to_csv_with_subscript(input_folder="/home/simple/Desktop/Scene-Knowledge/xlsx/1", output_folder="/home/simple/Desktop/Scene-Knowledge/xlsx/1/csv_output")

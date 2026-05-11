@@ -30,10 +30,8 @@ class ToolResult:
     ok: bool
     data: Dict[str, Any] = field(default_factory=dict)
     error: Optional[str] = None
-
     def to_dict(self) -> Dict[str, Any]:
         return {"ok": self.ok, "data": self.data, "error": self.error}
-
 
 class Tool:
 

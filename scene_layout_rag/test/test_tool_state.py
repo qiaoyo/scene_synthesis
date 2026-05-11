@@ -6,7 +6,6 @@ import re
 # =====================================================
 # Import ALL Tools
 # =====================================================
-
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from scene_layout_rag.config import ProjectConfig
 from scene_layout_rag.scene_state import SceneStateManager
@@ -37,10 +36,11 @@ cfg = ProjectConfig()
 cfg.enable_faiss = False
 
 rag = AssetRAG(cfg)
-if (cfg.index_dir / "corpus.jsonl").exists():
-    rag.load()
-else:
-    rag.build(save=True)
+rag.build(save=True)  # 先构建不保存，后面根据情况决定是否保存
+# if (cfg.index_dir / "corpus.jsonl").exists():
+#     rag.load()
+# else:
+#     rag.build(save=True)
 
 context = ToolContext(
     scene=SceneStateManager(),
@@ -79,7 +79,7 @@ messages = [
     {
         "role": "user",
         "content": ("""
-            Retrieve a Forklift, a Conveyor and a Part, place them at [1.5,5.0,0.0], [1.7,5.2,0.0] and [1.8,5.3,0.0]. Set a supporting relation that the Part is placed at the end of the Conveyor. Then move the Forklift to [2.5,5.0,0.0]. Finally delete the Part. And give the final scene status.
+            Retrieve an IndustrialRobot, a Pallet and a Box, place them at [4.2,0.8,0.0], [4.4,1.0,0.0] and [4.5,1.1,0.0]. Set a supporting relation that the Box is fully supported by the Pallet. Then move the IndustrialRobot to [5.2,0.8,0.0]. Finally delete the Box. And give the final scene status.
             """),
     },
 ]

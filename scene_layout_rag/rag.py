@@ -83,11 +83,6 @@ def _match_filters(metadata: Dict[str, Any], filters: Dict[str, Any]) -> bool:
 
 
 class KeywordRetriever:
-    """轻量的 BM25-lite 检索器，作为始终可用的兜底。
-
-    选择理由：避免 100% 依赖嵌入模型。当 sentence-transformers 不可用或 corpus
-    很小（几千条）时，BM25 已能覆盖主要查询。
-    """
 
     k1 = 1.5
     b = 0.75
@@ -261,7 +256,8 @@ class AssetRAG:
         ingestor = AssetIngestor(self.config)
         self.documents = ingestor.build_documents()
         if save:
-            self.config.ensure_directories()
+            self.config.index_dir.mkdir(parents=True, exist_ok=True)
+            self.config.output_dir.mkdir(parents=True, exist_ok=True)
             corpus_path = save_corpus(self.documents, self.config.index_dir)
             print(f"[AssetRAG] 写入语料: {corpus_path} ({len(self.documents)} 条)")
         self.keyword = KeywordRetriever(self.documents)
