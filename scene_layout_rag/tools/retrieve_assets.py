@@ -1,7 +1,5 @@
 from __future__ import annotations
-
 from typing import Any, Dict, List, Optional
-
 from ..data_models import AssetDocument
 from .base import Tool, ToolContext, ToolResult, make_openai_tool_schema, register_tool
 

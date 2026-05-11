@@ -33,7 +33,6 @@ MODEL_NAME = "Qwen/Qwen3-32B-AWQ"
 # =====================================================
 
 cfg = ProjectConfig()
-cfg.enable_faiss = False
 
 rag = AssetRAG(cfg)
 rag.build(save=True)  # 先构建不保存，后面根据情况决定是否保存
@@ -79,8 +78,9 @@ messages = [
     {
         "role": "user",
         "content": ("""
-            Retrieve an IndustrialRobot, a Pallet and a Box, place them at [4.2,0.8,0.0], [4.4,1.0,0.0] and [4.5,1.1,0.0]. Set a supporting relation that the Box is fully supported by the Pallet. Then move the IndustrialRobot to [5.2,0.8,0.0]. Finally delete the Box. And give the final scene status.
-            """),
+            Retrieve an IndustrialRobot, """
+            #a Pallet and a Box, place them at [4.2,0.8,0.0], [4.4,1.0,0.0] and [4.5,1.1,0.0]. Set a supporting relation that the Box is fully supported by the Pallet. Then move the IndustrialRobot to [5.2,0.8,0.0]. Finally delete the Box. And give the final scene status.
+            ),
     },
 ]
 

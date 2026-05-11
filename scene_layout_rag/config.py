@@ -12,18 +12,21 @@ class ProjectConfig:
     assets_root: Path = _DEFAULT_ASSETS_ROOT
     inventory_csvs: List[Path] = field(default_factory=list)
     scene_md_files: List[Path] = field(default_factory=list)
-    chunk_size: int = 512
-    chunk_overlap: int = 64
     block_size: int = 3  # 用于 markdown 的段落聚合
+    """embedding_config"""
+    embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2"
+    embedding_batch_size: int = 32
+    device: str = "cuda:1"
+    index_dir: Path = Path("/home/simple/joey/scene_synthesis/data/indexes")
+    output_dir: Path = Path("/home/simple/joey/scene_synthesis/outputs")
+    
     
     """Holds model related knobs for embeddings, LLMs, and layout heads."""
     llm_backend: str = "local"  
-    embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2"
-    embedding_batch_size: int = 32
     llm_name_or_path: str = "Qwen/Qwen3-32B-AWQ"
     max_new_tokens: int = 512
     temperature: float = 0.2
-    device: str = "cuda:1"
+    
     use_8bit: bool = False
     load_in_4bit: bool = False
     gradient_checkpointing: bool = True
@@ -43,11 +46,8 @@ class ProjectConfig:
     collision_method: str = "aabb"
     warm_start: bool = True
 
-    index_dir: Path = Path("/home/simple/joey/scene_synthesis/data/indexes")
-    output_dir: Path = Path("/home/simple/joey/scene_synthesis/outputs")
 
     language: str = "en"
-    enable_faiss: bool = True
     retrieval_top_k: int = 5
     
     def __post_init__(self) -> None:

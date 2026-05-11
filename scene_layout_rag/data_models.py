@@ -1,12 +1,3 @@
-"""Plain-data structures shared across the RAG corpus and the ReAct agent.
-设计原则:
-- 资产语料里的每条文档统一使用 ``AssetDocument``，content + metadata 二段式，
-  方便序列化为 JSONL 索引（确定性、可读、可 diff）。
-- 场景运行时使用 ``SceneState`` + ``Instance``，描述当前布局、支撑关系和
-  语义标记；ReAct 的工具与观察器都围绕它读写。
-- ``Action`` / ``Observation`` / ``Reflection`` / ``Lesson`` 是 ReAct 循环里
-  线程之间传递的纯数据载体，避免把 LLM 输出和工具输出耦合到具体类。
-"""
 from __future__ import annotations
 
 from dataclasses import asdict, dataclass, field
@@ -27,7 +18,6 @@ class AssetDocument:
         if data.get("embedding") is None:
             data.pop("embedding", None)
         return data
-
     @classmethod
     def from_dict(cls, payload: Dict[str, Any]) -> "AssetDocument":
         return cls(
@@ -36,7 +26,6 @@ class AssetDocument:
             metadata=dict(payload.get("metadata", {})),
             embedding=payload.get("embedding"),
         )
-
 
 # ---------- 场景运行时 ----------
 

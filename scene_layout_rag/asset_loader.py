@@ -7,11 +7,11 @@ import json
 import re
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional
-
+import ast
 from .config import ProjectConfig
 from .data_models import AssetDocument
 
-def load_csv_documents(csv_path: Path, chunk_size: int, chunk_overlap: int) -> List[AssetDocument]:
+def load_csv_documents(csv_path: Path) -> List[AssetDocument]:
     documents: List[AssetDocument] = []
     with csv_path.open("r", encoding="utf-8-sig", newline="") as f:
         reader = csv.DictReader(f)
@@ -49,8 +49,10 @@ def load_csv_documents(csv_path: Path, chunk_size: int, chunk_overlap: int) -> L
             bbox_max = normalized_row.get("bbox_max_meters")
             bbox = None
             if bbox_min and bbox_max:
-                min_vals = [float(bbox_min[0]), float(bbox_min[1]), float(bbox_min[2])]
-                max_vals = [float(bbox_max[0]), float(bbox_max[1]), float(bbox_max[2])]
+                bbox_min_tuple = ast.literal_eval(bbox_min)
+                bbox_max_tuple = ast.literal_eval(bbox_max)
+                min_vals = [float(bbox_min_tuple[0]), float(bbox_min_tuple[1]), float(bbox_min_tuple[2])]
+                max_vals = [float(bbox_max_tuple[0]), float(bbox_max_tuple[1]), float(bbox_max_tuple[2])]
                 size = [round(max_vals[i] - min_vals[i], 6) for i in range(3)]
                 center = [round((max_vals[i] + min_vals[i]) / 2.0, 6) for i in range(3)]
                 bbox = {
@@ -78,8 +80,7 @@ def load_csv_documents(csv_path: Path, chunk_size: int, chunk_overlap: int) -> L
                     doc_id=doc_id,
                     content=content,
                     metadata=metadata
-                )
-                )
+                ))
     return documents
 
 def load_markdown_documents(md_path: Path, block_size: int = 3) -> List[AssetDocument]:
@@ -130,7 +131,7 @@ class AssetIngestor:
         # 1. 处理 CSV
         for csv_path in self.config.inventory_csvs:
             print(f"[AssetIngestor] 处理 CSV: {csv_path}")
-            docs.extend(load_csv_documents(csv_path, self.config.chunk_size, self.config.chunk_overlap))
+            docs.extend(load_csv_documents(csv_path))
         #2. 处理 md
         for md_path in self.config.scene_md_files:
             print(f"[AssetIngestor] 处理 Markdown: {md_path}")
