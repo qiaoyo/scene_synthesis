@@ -1,12 +1,4 @@
-"""AABB collision / support / scene-semantics validators.
 
-按用户选择「AABB 默认 + 留 IsaacSim 接入点」实现：
-- ``aabb_collisions``: 检查所有未处于支撑关系的实例对是否互相穿透。
-- ``check_support_geometry``: 几何上验证 child 是否真的「站」在 parent 上。
-- ``analyze_scene_semantics``: 简单走廊/工作区/流水路径分析。
-- ``run_static_simulation``: 当前作为 IsaacSim 的占位符，只做静态稳定性检查；
-  ``physics/isaac_bridge.py`` 留空接口给后续接入。
-"""
 from __future__ import annotations
 
 from typing import Any, Dict, List, Optional, Tuple

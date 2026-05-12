@@ -14,7 +14,7 @@ from scene_layout_rag.rag import AssetRAG
 from scene_layout_rag.tools.base import (
     TOOL_REGISTRY,
     ToolContext,
-    list_openai_tools,
+    list_tool_specs,
 )
 
 # =====================================================
@@ -33,13 +33,12 @@ MODEL_NAME = "Qwen/Qwen3-32B-AWQ"
 # =====================================================
 
 cfg = ProjectConfig()
-
 rag = AssetRAG(cfg)
-rag.build(save=True)  # 先构建不保存，后面根据情况决定是否保存
-# if (cfg.index_dir / "corpus.jsonl").exists():
-#     rag.load()
-# else:
-#     rag.build(save=True)
+#rag.build(save=True)  # 先构建不保存，后面根据情况决定是否保存
+if (cfg.index_dir / "corpus.jsonl").exists():
+    rag.load()
+else:
+    rag.build(save=True)
 
 context = ToolContext(
     scene=SceneStateManager(),
@@ -49,12 +48,6 @@ context = ToolContext(
 # =====================================================
 # Constants
 # =====================================================
-
-MODIFY_TOOLS = {
-    "place_instance",
-    "move_asset",
-    "delete_asset",
-}
 
 MAX_ITER = 20
 # =====================================================
@@ -78,8 +71,7 @@ messages = [
     {
         "role": "user",
         "content": ("""
-            Retrieve an IndustrialRobot, """
-            #a Pallet and a Box, place them at [4.2,0.8,0.0], [4.4,1.0,0.0] and [4.5,1.1,0.0]. Set a supporting relation that the Box is fully supported by the Pallet. Then move the IndustrialRobot to [5.2,0.8,0.0]. Finally delete the Box. And give the final scene status.
+            Retrieve an IndustrialRobot, Pallet and a Box, place them at [4.2,0.8,0.0], [4.4,1.0,0.0] and [4.5,1.1,0.0]. Set a supporting relation that the Box is fully supported by the Pallet. Then move the IndustrialRobot to [5.2,0.8,0.0]. Finally delete the Box. And give the final scene status."""
             ),
     },
 ]
@@ -98,7 +90,7 @@ for step in range(MAX_ITER):
     response = client.chat.completions.create(
         model=MODEL_NAME,
         messages=messages,
-        tools=list_openai_tools(),
+        tools=list_tool_specs(),
         tool_choice="auto",
         temperature=0.2,
         # vLLM + Qwen important  不思考直接输出结果

@@ -1,8 +1,6 @@
 from __future__ import annotations
-
 from dataclasses import asdict, dataclass, field
 from typing import Any, Dict, List, Optional, Tuple
-
 
 @dataclass
 class AssetDocument:
@@ -11,7 +9,6 @@ class AssetDocument:
     content: str = ""
     metadata: Dict[str, Any] = field(default_factory=dict)
     embedding: Optional[List[float]] = None
-
     def to_dict(self) -> Dict[str, Any]:
         data = asdict(self)
         # embedding 体积大且只在 FAISS 模式下需要持久
@@ -26,16 +23,11 @@ class AssetDocument:
             metadata=dict(payload.get("metadata", {})),
             embedding=payload.get("embedding"),
         )
-
 # ---------- 场景运行时 ----------
-
 Vec3 = Tuple[float, float, float]
-
-
 @dataclass
 class Instance:
     """场景中已经放置好的一个资产实例。"""
-
     instance_id: str
     asset_type: str
     asset_doc_id: str  # 指向语料库里的某条 AssetDocument
@@ -48,11 +40,6 @@ class Instance:
     description: Optional[str] = None  # 从资产文档继承的文本描述
 
     def aabb(self) -> Tuple[List[float], List[float]]:
-        """返回该实例当前的轴对齐包围盒 ``(min, max)``。
-
-        说明：本项目第一阶段不支持任意旋转的精确 OBB 碰撞，``rotation_deg`` 只用于
-        资产朝向标注。``check_collision`` 用 AABB；接入 IsaacSim 之后可替换。
-        """
         cx, cy, cz = self.position
         sx, sy, sz = self.bbox_size
         half = [sx / 2.0, sy / 2.0, sz / 2.0]
@@ -63,26 +50,18 @@ class Instance:
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
 
-
 @dataclass
 class SceneState:
     """整张场景的运行时快照。"""
-
     instances: Dict[str, Instance] = field(default_factory=dict)
     # 反向索引：parent_id -> [child_ids]
     support_children: Dict[str, List[str]] = field(default_factory=dict)
-    # 高层语义标签，供 LLM 记忆当前布局意图
-    work_zones: List[Dict[str, Any]] = field(default_factory=list)
-    notes: List[str] = field(default_factory=list)
 
     def to_dict(self) -> Dict[str, Any]:
         return {
             "instances": {iid: inst.to_dict() for iid, inst in self.instances.items()},
             "support_children": dict(self.support_children),
-            "work_zones": list(self.work_zones),
-            "notes": list(self.notes),
         }
-
 
 # ---------- ReAct 三段式 ----------
 
