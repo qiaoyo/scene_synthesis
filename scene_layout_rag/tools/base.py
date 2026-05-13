@@ -57,13 +57,10 @@ def register_tool(tool_cls: type) -> type:
     TOOL_REGISTRY[tool_name] = instance
     return tool_cls
 
-def list_tool_specs() -> List[Dict[str, Any]]:
-    return [tool.schema for tool in TOOL_REGISTRY.values()]
 __all__ = [
     "Tool",
     "ToolContext",
     "ToolResult",
     "TOOL_REGISTRY",
     "register_tool",
-    "list_tool_specs",
 ]

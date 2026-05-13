@@ -4,8 +4,8 @@
             "name": "Python Debugger: Python File",
             "type": "debugpy",
             "request": "launch",
-            "module": "scene_layout_rag.test.test_tool_state",
-            "args": [""],
+            "program":"/home/simple/joey/scene_synthesis/scripts/run_inference.py",
+            "args": [],
             "env": {
         "http_proxy": "http://127.0.0.1:7897",
         "https_proxy": "http://127.0.0.1:7897",

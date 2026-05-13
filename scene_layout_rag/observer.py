@@ -1,13 +1,7 @@
-"""Observer: 把工具结果与场景多维度检查打包成 ``Observation``。
-
-对应 ``方案/优化.md`` 优化方向 2「改观测内容」。每次 ReAct 循环执行完工具后，
-Observer 都做一次完整观察，给反思器提供充分上下文。
-"""
 from __future__ import annotations
-
 from typing import Any, Callable, Dict, List, Optional
-
-from .data_models import Observation, SceneState
+from dataclasses import asdict, dataclass, field
+from .data_models import SceneState
 from .scene_state import SceneStateManager
 from .tools.base import ToolResult
 from .validators import (
@@ -16,84 +10,94 @@ from .validators import (
     evaluate_support_state,
     run_static_simulation,
 )
-
-
 PhysicsCallable = Callable[[SceneState], Dict[str, Any]]
+
+@dataclass
+class Observation:
+    """一次工具执行后的全面观测。结构对齐 ``方案/优化.md`` 中的优化方向 2。"""
+    ok: bool = True
+    tool_result: Dict[str, Any] = field(default_factory=dict)
+    validation: Dict[str, Any] = field(default_factory=dict)
+    scene_semantics: Dict[str, Any] = field(default_factory=dict)
+    support_state: Dict[str, Any] = field(default_factory=dict)
+    physics_feedback: Dict[str, Any] = field(default_factory=dict)
+    suggestions: List[str] = field(default_factory=list)
+    error: Optional[str] = None
+
+    def to_dict(self) -> Dict[str, Any]:
+        return asdict(self)
 
 
 class Observer:
-    """组装观测。``physics_callable`` 默认是 ``run_static_simulation``。"""
-
-    def __init__(
-        self,
-        scene: SceneStateManager,
-        physics_callable: Optional[PhysicsCallable] = None,
-    ):
+    def __init__(self,scene: SceneStateManager,physics_callable=None,):
         self.scene = scene
-        self.physics_callable = physics_callable or run_static_simulation
-
-    def observe(self, action: str, tool_result: ToolResult) -> Observation:
-        state = self.scene.state
-        # 1. 静态验证 (碰撞)
-        collisions = aabb_collisions(state)
+        self.physics_callable = (physics_callable or run_static_simulation)
+        
+    def observe(self,command: str,tool_results: List[ToolResult],previous_state: SceneState,
+    ) -> Observation:
+        current_state = self.scene.state
+        # -------------------------------------------------
+        # Scene Delta
+        # -------------------------------------------------
+        # scene_delta = self._compute_scene_delta(
+        #     previous_state,
+        #     current_state,
+        # )
+        # -------------------------------------------------
+        # Validation
+        # -------------------------------------------------
+        collisions = aabb_collisions(current_state)
         validation = {
-            "ok": tool_result.ok and len(collisions) == 0,
-            "tool_ok": tool_result.ok,
+            "collision_free": len(collisions) == 0,
             "collisions": collisions,
         }
-        # 2. 场景语义
-        scene_semantics = analyze_scene_semantics(state)
-        # 3. 支撑状态
-        support_state = evaluate_support_state(state)
-        # 4. 物理反馈
-        physics_feedback = self.physics_callable(state)
-        # 5. 改进建议
-        suggestions = self._generate_suggestions(
-            collisions=collisions,
-            support_state=support_state,
-            physics_feedback=physics_feedback,
-            scene_semantics=scene_semantics,
+
+        # -------------------------------------------------
+        # Support
+        # -------------------------------------------------
+        support_state = evaluate_support_state(
+            current_state
         )
+
+        # -------------------------------------------------
+        # Physics
+        # -------------------------------------------------
+        physics_feedback = self.physics_callable(
+            current_state
+        )
+
+        # -------------------------------------------------
+        # Semantics
+        # -------------------------------------------------
+        scene_semantics = analyze_scene_semantics(
+            current_state
+        )
+
+        # -------------------------------------------------
+        # Task Progress
+        # -------------------------------------------------
+        # task_progress = self._evaluate_task_progress(
+        #     command,
+        #     current_state,
+        # )
+
+        # -------------------------------------------------
+        # Overall OK
+        # -------------------------------------------------
+
         ok = (
-            tool_result.ok
-            and not collisions
-            and not support_state["invalid_relations"]
+            validation["collision_free"]
             and physics_feedback["stable"]
+            and not support_state["invalid_relations"]
         )
+
         return Observation(
             ok=ok,
-            tool_result=tool_result.to_dict(),
+            tool_result = tool_results,
+            #scene_delta=scene_delta,
             validation=validation,
             scene_semantics=scene_semantics,
             support_state=support_state,
             physics_feedback=physics_feedback,
-            suggestions=suggestions,
-            error=tool_result.error if not tool_result.ok else None,
+            #task_progress=task_progress,
         )
-
-    @staticmethod
-    def _generate_suggestions(
-        collisions: List[Dict[str, Any]],
-        support_state: Dict[str, Any],
-        physics_feedback: Dict[str, Any],
-        scene_semantics: Dict[str, Any],
-    ) -> List[str]:
-        tips: List[str] = []
-        if collisions:
-            for c in collisions[:5]:
-                tips.append(f"AABB 碰撞: {c['a']} ({c['a_type']}) 与 {c['b']} ({c['b_type']})；考虑挪开或调整尺寸。")
-        for bad in support_state.get("invalid_relations", [])[:5]:
-            tips.append(
-                f"支撑关系不稳: {bad['child']} 在 {bad['parent']} 上 - " + "; ".join(bad.get("issues", []))
-            )
-        for warning in physics_feedback.get("warnings", [])[:5]:
-            tips.append(f"物理告警: {warning}")
-        for corridor in scene_semantics.get("corridors", []):
-            if corridor.get("blocked"):
-                tips.append(
-                    f"通道 {corridor['from']} → {corridor['to']} 被阻塞，宽度 {corridor['width']}m。"
-                )
-        return tips
-
-
-__all__ = ["Observer"]

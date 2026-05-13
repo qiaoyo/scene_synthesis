@@ -130,11 +130,6 @@ _WORK_ZONE_ANCHOR_TYPES = {"Workbench", "IndustrialRobot"}
 
 
 def analyze_scene_semantics(state: SceneState, corridor_width_min: float = 1.5) -> Dict[str, Any]:
-    """从当前布局抽取走廊 / 工作区 / 流水路径等高层结构。
-
-    设计取舍：当前用规则启发式（XY 投影 + 类型聚类）。后续可替换为 LLM
-    语义识别，见 ``observer.Observer`` 注释。
-    """
     instances = list(state.instances.values())
 
     # 工作区：以 Workbench/IndustrialRobot 为锚点，吸纳半径 2.5m 内的资产

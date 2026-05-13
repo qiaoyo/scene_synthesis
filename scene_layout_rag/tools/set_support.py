@@ -1,7 +1,4 @@
 from __future__ import annotations
-from typing import Any
-from ..data_models import Instance
-from ..validators import check_support_geometry
 from .base import Tool, ToolContext, ToolResult, register_tool
 
 @register_tool

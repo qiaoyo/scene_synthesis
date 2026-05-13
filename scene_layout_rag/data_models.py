@@ -63,65 +63,9 @@ class SceneState:
             "support_children": dict(self.support_children),
         }
 
-# ---------- ReAct 三段式 ----------
-
-@dataclass
-class Action:
-    """LLM 决策出的一次动作。"""
-    tool: str
-    tool_input: Dict[str, Any] = field(default_factory=dict)
-    thought: str = ""
-
-    def to_dict(self) -> Dict[str, Any]:
-        return asdict(self)
-
-
-@dataclass
-class Observation:
-    """一次工具执行后的全面观测。结构对齐 ``方案/优化.md`` 中的优化方向 2。"""
-    ok: bool = True
-    tool_result: Dict[str, Any] = field(default_factory=dict)
-    validation: Dict[str, Any] = field(default_factory=dict)
-    scene_semantics: Dict[str, Any] = field(default_factory=dict)
-    support_state: Dict[str, Any] = field(default_factory=dict)
-    physics_feedback: Dict[str, Any] = field(default_factory=dict)
-    suggestions: List[str] = field(default_factory=list)
-    error: Optional[str] = None
-
-    def to_dict(self) -> Dict[str, Any]:
-        return asdict(self)
-
-
-@dataclass
-class Reflection:
-    """LLM 在观察失败后产出的反思。"""
-
-    summary: str = ""
-    cause: str = ""
-    next_strategy: str = ""
-
-    def to_dict(self) -> Dict[str, Any]:
-        return asdict(self)
-
-
-@dataclass
-class Lesson:
-    """沉淀到 lessons_learned 中的复用经验。"""
-
-    situation: str
-    mistake: str
-    correction: str
-
-    def to_dict(self) -> Dict[str, Any]:
-        return asdict(self)
-
 
 __all__ = [
     "AssetDocument",
     "Instance",
     "SceneState",
-    "Action",
-    "Observation",
-    "Reflection",
-    "Lesson",
 ]

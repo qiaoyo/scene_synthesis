@@ -19,34 +19,40 @@ class ProjectConfig:
     device: str = "cuda:1"
     index_dir: Path = Path("/home/simple/joey/scene_synthesis/data/indexes")
     output_dir: Path = Path("/home/simple/joey/scene_synthesis/outputs")
+    """tool_ctx"""
+    physics_enabled: bool = False
     
-    
-    """Holds model related knobs for embeddings, LLMs, and layout heads."""
-    llm_backend: str = "local"  
-    llm_name_or_path: str = "Qwen/Qwen3-32B-AWQ"
+    """model config"""
+    model = "Qwen/Qwen3-32B-AWQ"
+    llm_api_base_url: str = "http://localhost:8000/v1"
+    llm_api_key: str = "EMPTY"  # 注意：默认值为字符串 "EMPTY"，而非 None 
     max_new_tokens: int = 512
+    max_output_tokens: int = 1024
     temperature: float = 0.2
+
     
+    """llm planner"""
+    
+    """agent config"""
+    max_steps: int = 5
+    
+    
+    
+    """Holds model related knobs for embeddings, LLMs, and layout heads.""" 
     use_8bit: bool = False
     load_in_4bit: bool = False
     gradient_checkpointing: bool = True
     lora_rank: int = 32
     lora_alpha: int = 64
-    llm_api_base_url: str = "http://localhost:8000/v1"
-    llm_api_key: str = "EMPTY"  # 注意：默认值为字符串 "EMPTY"，而非 None 或空字符串
     
     """Configuration for the ReAct agent loop."""
-    max_steps: int = 20
     reflection_enabled: bool = True
     strategy_adjust_enabled: bool = True
     max_lessons: int = 10
     max_working_memory: int = 15
-    physics_enabled: bool = False
     physics_sim_duration: float = 2.0
     collision_method: str = "aabb"
     warm_start: bool = True
-
-
     language: str = "en"
     retrieval_top_k: int = 5
     

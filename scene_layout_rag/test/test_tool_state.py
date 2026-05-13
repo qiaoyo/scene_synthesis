@@ -14,7 +14,6 @@ from scene_layout_rag.rag import AssetRAG
 from scene_layout_rag.tools.base import (
     TOOL_REGISTRY,
     ToolContext,
-    list_tool_specs,
 )
 
 # =====================================================
@@ -86,11 +85,11 @@ for step in range(MAX_ITER):
     # =================================================
     # LLM Request
     # =================================================
-    
+    tools = [tool.schema for tool in TOOL_REGISTRY.values()]
     response = client.chat.completions.create(
         model=MODEL_NAME,
         messages=messages,
-        tools=list_tool_specs(),
+        tools=tools,
         tool_choice="auto",
         temperature=0.2,
         # vLLM + Qwen important  不思考直接输出结果
