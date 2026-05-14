@@ -1,14 +1,11 @@
 from __future__ import annotations
-
 import json
 from collections import defaultdict
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
-
 import faiss  # noqa: WPS433
 import numpy as np
 from sentence_transformers import SentenceTransformer  # noqa: WPS433
-
 from .asset_loader import AssetIngestor
 from .config import ProjectConfig
 from .data_models import AssetDocument
@@ -104,7 +101,6 @@ class AssetRAG:
     # ==========================================================================
     # Load
     # ==========================================================================
-
     def load(self) -> List[AssetDocument]:
         """
         Load corpus + all FAISS indices from disk.
@@ -234,7 +230,6 @@ class AssetRAG:
     # ==========================================================================
     # Save
     # ==========================================================================
-
     def _save(self) -> None:
         """
         Save corpus + all indices.
@@ -246,9 +241,7 @@ class AssetRAG:
         with corpus_path.open("w",encoding="utf-8",) as f:
             for doc in self.documents:
                 f.write(json.dumps(doc.to_dict(),ensure_ascii=False,)+ "\n")
-
-        type_metadata = {}
-        
+        type_metadata = {}        
         for doc_type, index in self.indices_by_type.items():
             faiss.write_index(
                 index,
@@ -261,16 +254,13 @@ class AssetRAG:
                 "dim": index.d,
                 "index_file":f"{doc_type}.faiss",
             }
-
         meta = {
             "encoder": self.embedding_model,
             "total_documents": len(self.documents),
             "doc_types": list(self.indices_by_type.keys()),
             "type_metadata": type_metadata,
         }
-
         meta_path = self.config.index_dir / "index_meta.json"
-
         meta_path.write_text(
             json.dumps(meta, ensure_ascii=False, indent=2),
             encoding="utf-8",
@@ -279,26 +269,6 @@ class AssetRAG:
             f"[AssetRAG] Saved indices to "
             f"{self.config.index_dir}"
         )
-
-    # ==========================================================================
-    # Info
-    # ==========================================================================
-
-    def info(self) -> Dict[str, Any]:
-        """
-        Get retriever information.
-        """
-        return {
-            "embedding_model": self.embedding_model,
-            "num_documents": len(self.documents),
-            "doc_types": {
-                doc_type: len(docs)
-                for doc_type, docs
-                in self.documents_by_type.items()
-            },
-            "index_dir": str(self.config.index_dir),
-        }
-
 __all__ = [
     "AssetRAG",
 ]

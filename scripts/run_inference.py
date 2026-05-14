@@ -1,4 +1,6 @@
 from __future__ import annotations
+import os
+os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
 import argparse
 import sys
 from pathlib import Path
@@ -13,7 +15,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--command",
         type=str,
-        default="Retrieve an IndustrialRobot place it at [4.2,0.8,0.0]. Then move the IndustrialRobot to [5.2,0.8,0.0]. Finally delete it. And give the final scene status.",
+        default="Retrieve an IndustrialRobot place it at [4.2,0.8,0.0]. Then move the IndustrialRobot to [5.2,0.8,0.0]",
         help="Task description for the planner"
     )
     return parser.parse_args()
@@ -26,11 +28,9 @@ def main() -> int:
     else:
         rag.build(save=True)
     agent = ReActAgent(cfg, rag=rag)
-    record = agent.run(args.command)
-    out_path = agent.save(record)
-    print(f"[run_inference] {record.finish_reason}, {len(record.steps)} 步, "
-          f"final_instances={len(agent.scene.state.instances)}")
-    print(f"[run_inference] trace -> {out_path}")
+    record = agent.run(args.command,cfg.max_steps)
+    print(f"[run_inference] {len(record['steps'])} 步, "
+        f"final_instances={len(agent.scene.state.instances)}")
     return 0
 if __name__ == "__main__":
     raise SystemExit(main())

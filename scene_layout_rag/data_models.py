@@ -62,8 +62,6 @@ class SceneState:
             "instances": {iid: inst.to_dict() for iid, inst in self.instances.items()},
             "support_children": dict(self.support_children),
         }
-
-
 __all__ = [
     "AssetDocument",
     "Instance",

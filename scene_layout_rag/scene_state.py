@@ -1,7 +1,3 @@
-"""Runtime scene state manager.
-封装对 ``SceneState`` 的所有写操作。工具函数（place/move/delete/...）只通过
-该 manager 修改场景，避免散落在各处的 dict 改写造成不一致。
-"""
 from __future__ import annotations
 import json
 from pathlib import Path
