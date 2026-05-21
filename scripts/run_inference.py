@@ -6,16 +6,16 @@ import sys
 from pathlib import Path
 # Make the package importable when run as a script.
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from scene_layout_rag import ReActAgent  # noqa: E402
-from scene_layout_rag.config import ProjectConfig  # noqa: E402
-from scene_layout_rag.rag import AssetRAG  # noqa: E402
+from scene_layout_react import ReActAgent  # noqa: E402
+from scene_layout_react.config import ProjectConfig  # noqa: E402
+from scene_layout_react.rag import AssetRAG  # noqa: E402
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--command",
         type=str,
-        default="Retrieve an IndustrialRobot place it at [4.2,0.8,0.0]. Then move the IndustrialRobot to [5.2,0.8,0.0]",
+        default="Generate an unmanned automated assembly workshop scene combining linear production and grid logistics. Set a full-length black elevated baffle conveyor line in the center as the core assembly main line. Place two six-axis industrial robots symmetrically on both sides of the conveyor line for precise workpiece assembly. Equip the logistics area with three red AGV cars carrying blue turnover baskets and one black composite mobile robot equipped with a collaborative arm to transfer materials between stations. Arrange three workbenches including ordinary type and drawer cabinet base type for storing and holding assembly parts. Scatter 11 assembly parts on the flat ground around workbenches and robot working areas. Arrange all equipment compactly with smooth moving lines to build a complete and efficient unmanned intelligent assembly production system.",
         help="Task description for the planner"
     )
     return parser.parse_args()

@@ -2,29 +2,21 @@ import json
 from openai import OpenAI
 import sys
 from pathlib import Path
-
 # =====================================================
 # Import ALL Tools
 # =====================================================
-
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
-
-import scene_layout_rag.tools
-
-from scene_layout_rag.config import ProjectConfig
-from scene_layout_rag.scene_state import SceneStateManager
-from scene_layout_rag.rag import AssetRAG
-
-from scene_layout_rag.tools.base import (
+from scene_layout_react.config import ProjectConfig
+from scene_layout_react.scene_state import SceneStateManager
+from scene_layout_react.rag import AssetRAG
+from scene_layout_react.tools.base import (
     TOOL_REGISTRY,
     ToolContext,
     list_openai_tools,
 )
-
 # =====================================================
 # OpenAI Client
 # =====================================================
-
 client = OpenAI(
     api_key="EMPTY",
     base_url="http://localhost:8000/v1"

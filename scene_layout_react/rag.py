@@ -1,11 +1,8 @@
 from __future__ import annotations
 import json
 from collections import defaultdict
-from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
-import faiss  # noqa: WPS433
-import numpy as np
-from sentence_transformers import SentenceTransformer  # noqa: WPS433
+
 from .asset_loader import AssetIngestor
 from .config import ProjectConfig
 from .data_models import AssetDocument
@@ -13,23 +10,18 @@ from .data_models import AssetDocument
 class AssetRAG:
     """
     Multi-index RAG retriever.
-
     """
     def __init__(self, config: ProjectConfig):
         self.config = config
-
         # 全量文档（仅用于调试/info）
         self.documents: List[AssetDocument] = []
-
         # encoder
         self.embedding_model: Optional[str] = None
-        self.encoder: Optional[SentenceTransformer] = None
-
+        self.encoder: Any = None
         # 按类型组织
         self.documents_by_type: Dict[str, List[AssetDocument]] = {}
-        self.embeddings_by_type: Dict[str, np.ndarray] = {}
-        self.indices_by_type: Dict[str, faiss.Index] = {}
-
+        self.embeddings_by_type: Dict[str, Any] = {}
+        self.indices_by_type: Dict[str, Any] = {}
     # ==========================================================================
     # Build
     # ==========================================================================
@@ -38,9 +30,25 @@ class AssetRAG:
         """
         Build corpus + FAISS indices.
         """
+        try:
+            import faiss
+            from sentence_transformers import SentenceTransformer
+        except ModuleNotFoundError as exc:
+            raise RuntimeError(
+                "AssetRAG requires RAG dependencies: faiss, numpy, sentence-transformers."
+            ) from exc
         ingestor = AssetIngestor(self.config)
         self.documents = ingestor.build_documents()
 
+        if not self.documents:
+            raise ValueError(
+                "No asset documents were loaded. "
+                f"assets_root={self.config.assets_root}, "
+                f"inventory_csvs={len(self.config.inventory_csvs)}, "
+                f"scene_md_files={len(self.config.scene_md_files)}. "
+                "Check data/assets/csv and data/assets/md, or pass explicit input files."
+            )
+        
         print(
             f"[AssetRAG] Building indices "
             f"(model={self.config.embedding_model})"
@@ -105,6 +113,14 @@ class AssetRAG:
         """
         Load corpus + all FAISS indices from disk.
         """
+        try:
+            import faiss
+            from sentence_transformers import SentenceTransformer
+        except ModuleNotFoundError as exc:
+            raise RuntimeError(
+                "AssetRAG requires RAG dependencies: faiss, numpy, sentence-transformers."
+            ) from exc
+            
         corpus_path = self.config.index_dir / "corpus.jsonl"
 
         if not corpus_path.exists():
@@ -173,7 +189,6 @@ class AssetRAG:
     # ==========================================================================
     # Retrieve
     # ==========================================================================
-
     def retrieve(
         self,
         query: str,
@@ -234,6 +249,12 @@ class AssetRAG:
         """
         Save corpus + all indices.
         """
+        try:
+            import faiss
+        except ModuleNotFoundError as exc:
+            raise RuntimeError(
+                "AssetRAG requires RAG dependencies: faiss, numpy, sentence-transformers."
+            ) from exc
         self.config.index_dir.mkdir(parents=True,exist_ok=True,)
         
         corpus_path = self.config.index_dir / "corpus.jsonl"

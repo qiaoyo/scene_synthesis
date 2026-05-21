@@ -1,8 +1,8 @@
 from __future__ import annotations
 
-from scene_layout_rag.config import ProjectConfig
-from scene_layout_rag.llm_planner import LLMPlanner
-from scene_layout_rag.tools.base import Tool, get_tool_function_spec, make_openai_tool_schema
+from scene_layout_react.config import ProjectConfig
+from scene_layout_react.llm_planner import LLMPlanner
+from scene_layout_react.tools.base import Tool, get_tool_function_spec, make_openai_tool_schema
 
 
 class DummyTool(Tool):

@@ -5,6 +5,7 @@ from typing import Any, Dict, List, Optional
 from .config import ProjectConfig
 from .llm_planner import LLMPlanner,ToolDecision,ReflectionResult
 from .observer import Observer
+from .physics.isaac_bridge import run_isaac_physics_feedback
 from .rag import AssetRAG
 from .scene_state import SceneStateManager
 from .tools.base import (
@@ -16,9 +17,9 @@ import logging
 from datetime import datetime
 import os
 import json
-# =========================================================
+#========================================================
 # Runtime State
-# =========================================================
+#========================================================
 @dataclass
 class AgentStep:
     step: int
@@ -38,14 +39,21 @@ class ReActAgent:
         self.rag = rag
         self.scene = SceneStateManager()
         self.planner = LLMPlanner(config)
-        self.observer = Observer(self.scene)
+        physics_callable = None
+        if self.config.physics_enabled:
+            physics_callable =lambda state: run_isaac_physics_feedback(
+                    self.config,
+                    state,
+                )
+        self.observer = Observer(self.scene, physics_callable=physics_callable)
         self.tool_context = ToolContext(
             scene=self.scene,
             rag=self.rag,
+            config=self.config,
             physics_enabled=self.config.physics_enabled,
             extras={},
         )
-        self.toot_specs = [tool.schema for tool in TOOL_REGISTRY.values()]
+        self.tool_specs = [tool.schema for tool in TOOL_REGISTRY.values()]
         #logger
         self.logger = logging.getLogger(f"ReActAgent.{id(self)}")
         self.logger.setLevel(logging.DEBUG)
@@ -86,7 +94,6 @@ class ReActAgent:
                 step=step_idx,
                 max_steps=max_steps,
             )
-
             runtime.strategy = strategy_result
             self.logger.debug(f"Strategy: {json.dumps(strategy_result, indent=2, ensure_ascii=False)}")
             # -------------------------------------------------
@@ -97,7 +104,7 @@ class ReActAgent:
                 command=command,
                 strategy=strategy_result,
                 scene_summary=self.scene.to_dict(),
-                tool_specs=self.toot_specs,
+                tool_specs=self.tool_specs,
                 step=step_idx,
                 max_steps=max_steps,
                 tool_results =[[r.to_dict() for r in s.tool_results]  for s in history[-5:]  if s.tool_results],
@@ -147,27 +154,28 @@ class ReActAgent:
             # -------------------------------------------------
             # 6. Reflection
             # -------------------------------------------------
-            self.logger.info("Reflect...")
-            reflection = self.planner.reflect(
-                command=command,
-                strategy=strategy_result,
-                tool_calls=decision["calls"],
-                observation=observation.to_dict(),
-                tool_results=[
-                    r.to_dict()
-                    for r in tool_results
-                ],
-            )
-            runtime.reflection = reflection
+            if not observation.ok or not all(r.ok for r in tool_results):
+                self.logger.info("Reflect...")
+                reflection = self.planner.reflect(
+                    command=command,
+                    strategy=strategy_result,
+                    tool_calls=decision["calls"],
+                    observation=observation.to_dict(),
+                    tool_results=[
+                        r.to_dict()
+                        for r in tool_results
+                    ],
+                )
+                runtime.reflection = reflection
             # -------------------------------------------------
             # 7. Lesson Update
             # -------------------------------------------------
-            lesson = reflection.get("lesson")
-            if lesson:
-                lessons.append({
-                    "lesson": lesson,
-                })
-                self.logger.info(f"Lesson learned: {lesson}")
+                lesson = reflection.get("lesson")
+                if lesson:
+                    lessons.append({
+                        "lesson": lesson,
+                    })
+                    self.logger.info(f"Lesson learned: {lesson}")
             history.append(runtime)
         return {
             "ok": False,

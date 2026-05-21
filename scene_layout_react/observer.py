@@ -1,7 +1,7 @@
 # observer.py
 from __future__ import annotations
 from dataclasses import asdict, dataclass, field
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Callable, Dict, List, Optional, Tuple
 from .data_models import Instance, SceneState
 from .scene_state import SceneStateManager
 # =========================================================
@@ -36,8 +36,10 @@ class Observer:
     def __init__(
         self,
         scene: SceneStateManager,
+        physics_callable: Optional[Callable[[SceneState], Dict[str, Any]]] = None,
     ):
         self.scene = scene
+        self.physics_callable = physics_callable
     # =====================================================
     # Public API
     # =====================================================
@@ -55,6 +57,18 @@ class Observer:
         # -------------------------------------------------
         # Physics
         # -------------------------------------------------
+        physics_feedback: Dict[str, Any] = {}
+        if self.physics_callable is not None:
+            try:
+                physics_feedback = self.physics_callable(state)
+            except Exception as exc:
+                physics_feedback = {
+                    "stable": False,
+                    "fallen_assets": [],
+                    "contacts": [],
+                    "warnings": [],
+                    "error": str(exc),
+                }
 
         # -------------------------------------------------
         # Semantics
@@ -65,7 +79,10 @@ class Observer:
         # -------------------------------------------------
         ok = (
             validation["collision_free"]
-            #and physics_feedback["stable"]
+            and (
+                self.physics_callable is None
+                or bool(physics_feedback.get("stable", False))
+            )
             and not support_state["invalid_relations"]
         )
         return Observation(
@@ -73,7 +90,7 @@ class Observer:
             current_state=state.to_dict(),
             validation=validation,
             support_state=support_state,
-            #physics_feedback=physics_feedback,
+            physics_feedback=physics_feedback,
             #scene_semantics=scene_semantics,
         )
     # =====================================================
@@ -89,15 +106,13 @@ class Observer:
                 b = instances[j]
                 if a.instance_id and b.instance_id and (b.instance_id in state.support_children.get(a.instance_id, []) or a.instance_id in state.support_children.get(b.instance_id, [])):
                     continue
-                b_min, b_max = b.aabb()
                 tol = 1e-4
-                for i in range(3):
-                    if a_max[i] <= b_min[i] + tol:
-                        collision_value = False
-                    elif b_max[i] <= a_min[i] + tol:
-                        collision_value = False
-                    else:
-                        collision_value = True
+                b_min, b_max = b.aabb()
+                collision_value = all(
+                    a_max[axis] > b_min[axis] + tol
+                    and b_max[axis] > a_min[axis] + tol
+                    for axis in range(3)
+                )
                 if collision_value:
                     collisions.append({
                         "a": a.instance_id,
@@ -127,8 +142,8 @@ class Observer:
                     continue
                 child = state.instances[child_id]
                 
-                z_tolerance = 0.05,
-                overlap_threshold = 0.4,
+                z_tolerance = 0.05
+                overlap_threshold = 0.4
                 c_min, c_max = child.aabb()
                 p_min, p_max = parent.aabb()
                 # Z gap

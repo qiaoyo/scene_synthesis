@@ -2,7 +2,6 @@
 from __future__ import annotations
 import json
 from typing import Any, Dict, List, Optional
-from openai import OpenAI
 from .config import ProjectConfig
 from .tools.base import ToolResult
 # =========================================================
@@ -20,6 +19,13 @@ class LLMPlanner:
         config: ProjectConfig,
     ):
         self.config = config
+        try:
+            from openai import OpenAI
+        except ModuleNotFoundError as exc:
+            raise RuntimeError(
+                "LLMPlanner requires the `openai` package. "
+                "Install the LLM dependencies before constructing LLMPlanner."
+            ) from exc
         self._client = OpenAI(
             base_url=config.llm_api_base_url,
             api_key=config.llm_api_key,
@@ -174,11 +180,17 @@ class LLMPlanner:
                 to execute the current layout strategy.
                 Guidelines:
                 - use as few tools as possible
+                - always query the latest scene state before any scene-modifying operation.
+                - always query the scene again after modifying the scene.
+                - scene-modifying operations include: placement, movement, deletion, rotation, scaling, and spawning objects.
+                - never assume object states without querying the scene.
                 - avoid invalid placements
                 - respect support relationships
                 - maintain realistic scale and positioning
+                - avoid collisions and overlapping objects.
                 - prefer stable layouts
-                - avoid overlapping objects
+                - use previous tool results to avoid repeated failures.
+                - if a tool execution fails, adjust the strategy before retrying.
                 - do not explain reasoning
                 If the scene task is already complete,
                 respond normally without tool calls.

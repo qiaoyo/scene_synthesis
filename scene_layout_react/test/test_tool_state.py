@@ -7,11 +7,11 @@ import re
 # Import ALL Tools
 # =====================================================
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
-from scene_layout_rag.config import ProjectConfig
-from scene_layout_rag.scene_state import SceneStateManager
-from scene_layout_rag.rag import AssetRAG
+from scene_layout_react.config import ProjectConfig
+from scene_layout_react.scene_state import SceneStateManager
+from scene_layout_react.rag import AssetRAG
 
-from scene_layout_rag.tools.base import (
+from scene_layout_react.tools.base import (
     TOOL_REGISTRY,
     ToolContext,
 )
