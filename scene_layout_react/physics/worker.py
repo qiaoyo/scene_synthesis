@@ -14,18 +14,15 @@ import uuid
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Tuple
 
-
 def _safe_name(value: str) -> str:
     safe = re.sub(r"[^A-Za-z0-9-_]+", "_", value.strip()).strip("_")
     return safe or "instance"
-
 
 def _instances(scene: Dict[str, Any]) -> Dict[str, Dict[str, Any]]:
     raw = scene.get("instances", {})
     if isinstance(raw, dict):
         return raw
     return {}
-
 
 def _aabb_overlap(
     a_min: List[float],
@@ -64,7 +61,6 @@ def _set_transform(
     if rotation_deg is not None:
         xformable.AddRotateZOp().Set(float(rotation_deg))
 
-
 def _world_bbox(stage, prim_path: str) -> Tuple[List[float], List[float]]:
     from pxr import Usd, UsdGeom
 
@@ -84,7 +80,6 @@ def _world_bbox(stage, prim_path: str) -> Tuple[List[float], List[float]]:
         [float(max_pt[0]), float(max_pt[1]), float(max_pt[2])],
     )
 
-
 def _fallback_bbox(inst: Dict[str, Any]) -> Tuple[List[float], List[float]]:
     position = [float(v) for v in inst.get("position", [0.0, 0.0, 0.0])]
     size = [float(v) for v in inst.get("bbox_size", [1.0, 1.0, 1.0])]
@@ -93,7 +88,6 @@ def _fallback_bbox(inst: Dict[str, Any]) -> Tuple[List[float], List[float]]:
         [position[i] - half[i] for i in range(3)],
         [position[i] + half[i] for i in range(3)],
     )
-
 
 def _build_stage(request: Dict[str, Any]) -> Tuple[str, Dict[str, str]]:
     from pxr import Sdf, Usd, UsdGeom
@@ -115,6 +109,7 @@ def _build_stage(request: Dict[str, Any]) -> Tuple[str, Dict[str, str]]:
 
     for instance_id, inst in _instances(scene).items():
         base_name = _safe_name(instance_id)
+        name = base_name
         suffix = 1
         while name in used_names:
             suffix += 1
@@ -155,19 +150,18 @@ def _open_stage_in_isaac(sim_app, context, stage_path: str):
     for _ in range(3):
         sim_app.update()
     stage = context.get_stage()
-    if stage_path is None:
+    if stage is None:
         raise RuntimeError(f"failed to open stage in Isaac: {stage_path}")
-    return stage, context.get_stage()
+    return stage
 
 
 def _apply_instance_physics(
     stage, request: Dict[str, Any], prim_paths: Dict[str, str]
 ) -> List[str]:
     warnings: List[str] = []
-    scene = request.get("scene", {})
-    #approximation = request.get("collision_approximation", "convexhull")
+    scene = request.get("scene", {}) or {}
     approximation = request.get("collision_approximation") or "convexhull"
-    support_children = request.get("support_children", {}) or {}
+    support_children = scene.get("support_children", {}) or {}
     parent_ids = set(support_children.keys())
 
     for instance_id, prim_path in prim_paths.items():
@@ -255,7 +249,7 @@ def _iter_prim_hierarchy(root) -> Iterable[Any]:
 def _apply_rigid_body_and_colliders(
     prim, *, kinematic: bool, approximation_shape: str
 ) -> None:
-    from pxr import UsdPhysics
+    from pxr import UsdGeom, UsdPhysics
 
     rigid_api = UsdPhysics.RigidBodyAPI.Apply(prim)
     rigid_api.CreateRigidBodyEnabledAttr(True)
@@ -274,7 +268,7 @@ def _apply_rigid_body_and_colliders(
 def _collect_bboxes(stage, scene: Dict[str, Any], prim_paths: Dict[str, str]
 ) -> Dict[str, Dict[str, List[float]]]:
     bboxes: Dict[str, Dict[str, List[float]]] = {}
-    for instance_id, inst in _instance(scene).items():
+    for instance_id, inst in _instances(scene).items():
         try:
             bbox_min, bbox_max = _world_bbox(stage, prim_paths[instance_id])
         except Exception:
@@ -344,7 +338,7 @@ def _check_support(
 
 
 def _final_positions(stage, prim_paths: Dict[str, str]) -> Dict[str, List[float]]:
-    from pxr import UsdGeom
+    from pxr import Usd, UsdGeom
 
     positions: Dict[str, List[float]] = {}
     for instance_id, prim_path in prim_paths.items():

@@ -39,14 +39,35 @@ class PlaceInstanceTool(Tool):
         for d in context.rag.documents:
             if d.doc_id == doc_id:
                 doc = d
+                break
+            
         if doc is None:
-            return ToolResult(ok=False, error=f"asset_doc_id 不在语料库中: {doc_id}")
+            return ToolResult(
+                ok=False, 
+                error=f"asset_doc_id 不在语料库中: {doc_id}"
+                )
+            
         if doc.metadata.get("doc_type") != "asset":
-            return ToolResult(ok=False, error=f"asset_doc_id 必须指向 doc_type=asset 的文档: {doc_id}")
-        asset_type = str(doc.metadata.get("asset_type"))
-        usd_path = str(doc.metadata.get("usd_path"))
-        bbox = doc.metadata.get("bbox")
-        bbox_size = bbox.get("size",[1.0,1.0,1.0])
+            return ToolResult(
+                ok=False, 
+                error=f"asset_doc_id 必须指向 doc_type=asset 的文档: {doc_id}"
+                )
+            
+        try:
+            position = [float(p) for p in position]
+        except Exception as e:
+            return ToolResult(ok=False, error=f"position must contain numeric values")
+        if len(position) != 3:
+            return ToolResult(
+            ok=False,
+            error="position must contain exactly 3 values",
+        )
+        
+        asset_type = str(doc.metadata.get("asset_type") or "Unknown")
+        usd_path = str(doc.metadata.get("usd_path") or "")
+        bbox = doc.metadata.get("bbox") or {}
+        bbox_size = bbox.get("size") or [1.0, 1.0, 1.0]
+        
         instance_id = str(doc.metadata.get("instance_id"))
         if instance_id in context.scene.state.instances:
             return ToolResult(ok=False, error=f"instance_id 已存在: {instance_id}")
@@ -56,8 +77,8 @@ class PlaceInstanceTool(Tool):
             asset_doc_id=doc_id,
             usd_path=usd_path,
             position=position,
-            rotation_deg=rotation_deg,
-            bbox_size=bbox_size,
+            rotation_deg=float(rotation_deg),
+            bbox_size=[float(v) for v in bbox_size],
             tags=dict(doc.metadata.get("tags") or {}),
             description=str(doc.metadata.get("description") or ""),
         )

@@ -205,9 +205,13 @@ class AssetRAG:
                 "No indices loaded. "
                 "Please call build() or load()."
             )
+        if not query or not query.strip():
+            return []
 
-        k = top_k or self.config.retrieval_top_k
-
+        k = self.config.retrieval_top_k if top_k is None else int(top_k)
+        if k <= 0:
+            return []
+        
         query_vec = self.encoder.encode(
             [query],
             convert_to_numpy=True,
@@ -217,7 +221,10 @@ class AssetRAG:
         results: List[Tuple[AssetDocument, float]] = []
         if doc_type:
             index = self.indices_by_type.get(doc_type)
-            docs = self.documents_by_type[doc_type]
+            docs = self.documents_by_type.get(doc_type, [])
+            if index is None or not docs:
+                return []
+            
             scores, indices = index.search(query_vec,min(k, len(docs)),)
             for idx, score in zip(indices[0].tolist(),scores[0].tolist(),):
                 if idx < 0:

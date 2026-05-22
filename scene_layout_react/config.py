@@ -41,7 +41,7 @@ class ProjectConfig:
     max_steps: int = 10
     
     """isaacsim config"""
-    isaac_python: Path = Path("/home/simple/isaac-sim5.1/python.sh")
+    isaac_python: Path = Path("/home/simple/isaac_env/bin/python3")
     isaac_worker_path: Optional[Path] = _PROJECT_ROOT / "scene_layout_react" / "physics" / "worker.py"
     isaac_worker_timeout_sec: int = 120
     isaac_temp_dir: Path = Path("/tmp/scene_synthesis_isaac")

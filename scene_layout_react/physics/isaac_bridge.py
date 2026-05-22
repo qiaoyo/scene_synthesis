@@ -55,7 +55,13 @@ def run_isaac_operation(
     isaac_python = Path(
         getattr(config, "isaac_python", "/home/ubuntu/simkit/.venv/bin/python")
     ).expanduser()
+    
+    if not worker_path.exists():
+        raise IsaacBridgeError(f"Isaac worker script not found at {worker_path}")
+    if not isaac_python.exists():
+        raise IsaacBridgeError(f"Isaac Python executable not found at {isaac_python}")
     timeout_sec = float(getattr(config, "isaac_worker_timeout_sec", 120))
+    
     temp_dir = Path(getattr(config, "isaac_temp_dir", "/tmp/scene_synthesis_isaac"))
     collision_approximation = getattr(
         config,
@@ -82,9 +88,14 @@ def run_isaac_operation(
             text=True,
             timeout=timeout_sec,
         )
+
     except subprocess.TimeoutExpired as exc:
         raise IsaacBridgeError(
             f"Isaac worker timed out after {timeout_sec}s"
+        ) from exc
+    except OSError as exc:
+        raise IsaacBridgeError(
+            f"Isaac worker could not be started: {exc}"
         ) from exc
 
     if completed.returncode != 0:
