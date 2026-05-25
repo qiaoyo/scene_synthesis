@@ -1,0 +1,100 @@
+{
+  "instances": {
+    "Conveyor.b.2": {
+      "instance_id": "Conveyor.b.2",
+      "asset_type": "Conveyor",
+      "asset_doc_id": "Conveyor_with_bbox_meters-2-813b3edf",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Conveyor/ConveyorBelt_A09.usdz",
+      "position": [
+        0.0,
+        0.0,
+        0.18099520018477439
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        4.002979,
+        1.176837,
+        2.310949
+      ],
+      "parent_instance_id": null,
+      "tags": {
+        "Shape": "straight",
+        "Directionality": "one-way",
+        "DNA": "D_{C}(c)"
+      },
+      "description": "Functional Features: This object is a straight flat conveyor belt, functioning to transmit materials in a one-way straight line. It is used for automated transportation of boxed and plate-shaped goods in industrial production and warehousing sorting scenarios, and can connect production equipment or sorting systems to complete continuous material flow. Its application scenarios include finished product transportation in food processing lines and small cargo transfer in e-commerce warehouses. It can efficiently handle linear transportation tasks of various regular materials, improving the automated operation efficiency of production lines and warehouses.\nVisual Features: The main body features a blue metal frame with a silver-gray flat conveyor belt. The material combines metal (frame) and wear-resistant plate (conveyor belt), with a surface treatment that shows the solid texture of metal and the flat characteristics of the plate. The straight structure design is concise and practical, and the blue-silver color scheme against the black background highlights the professionalism and functionality of industrial equipment."
+    },
+    "Forklift.b.3": {
+      "instance_id": "Forklift.b.3",
+      "asset_type": "Forklift",
+      "asset_doc_id": "Forklift_with_bbox_meters-3-2493be05",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Forklift/Forklift_B01_PR_V_NVD_01.usdz",
+      "position": [
+        3.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        1.129838,
+        3.031279,
+        2.935141
+      ],
+      "parent_instance_id": null,
+      "tags": {
+        "Model": "Counterbalance Forklift",
+        "Manufacturer": "Self-made",
+        "Function": "Transporting, Lifting",
+        "DNA": "D_{H}(d)"
+      },
+      "description": "Functional Features:The object shown in the image is an electric reach truck designed for pallet handling, stacking, and high-level storage operations in warehouse logistics systems. Its primary function is to transport palletized goods efficiently between ground level and medium-to-high rack positions within narrow aisles. This type of equipment is widely used in automated warehouses, high-density storage facilities, distribution centers, and smart manufacturing workshops. In simulation and digital twin environments, it is commonly employed for forklift navigation, task scheduling, human–machine collaboration studies, and the validation of autonomous control and perception algorithms. The reach mechanism allows the forks to extend forward without moving the entire vehicle, improving flexibility and safety during high-rack operations.\nVisual Features:Visually, the forklift features a compact yet vertically oriented structure, consisting of a tall mast, extendable forks, and an integrated vehicle body. The dominant color scheme includes dark gray and black, complemented by a bright yellow side panel that enhances visibility and conveys industrial safety cues. The mast and forks are made of metal with matte-painted or powder-coated surface finishes to improve durability and corrosion resistance. Exterior panels appear smooth and minimal, likely made of engineering plastics or coated metal, giving the equipment a robust, functional, and professional industrial appearance suitable for simulation-oriented digital assets."
+    },
+    "AGV.a.2": {
+      "instance_id": "AGV.a.2",
+      "asset_type": "AGV",
+      "asset_doc_id": "AGV_with_bbox_meters-1-c456ee7c",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/AGV/model_AGV_1.usdz",
+      "position": [
+        -3.0,
+        0.0,
+        -0.18099520018477439
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        0.799225,
+        1.1652,
+        0.311995
+      ],
+      "parent_instance_id": null,
+      "tags": {
+        "Model": "Custom Industrial Transport AGV",
+        "Manufacturer": "SEER",
+        "DNA": "D_{B}(b)"
+      },
+      "description": "Functional Features: This object is an industrial-grade AGV/AMR mobile robot chassis. Its core function is to serve as an automated mobile carrier, which can be equipped with expansion modules such as robotic arms, sorting devices and material racks through the standardized mounting holes on the top. It has the capabilities of autonomous navigation, path planning and intelligent obstacle avoidance, and can complete automated operations including material transfer, station connection and warehousing sorting. It is widely used in scenarios such as intelligent manufacturing factories, e-commerce warehousing centers, 3C electronic production lines and pharmaceutical clean workshops, featuring compact structure, strong load capacity, flexible deployment and adaptability to multi-scenario automation transformation. \nVisual Features:  Visually, the main body adopts the classic industrial color scheme of black and yellow, with a compact rounded rectangular shape. The top matte black panel is equipped with array mounting holes and a central positioning hole, and the side bright yellow protective panel is matched with black driving wheel sets. The body is made of high-strength engineering plastic and metal sheet metal, with wear-resistant and anti-slip matte spraying on the surface and rounded anti-collision design on the edges. It has a tough and concise shape with distinct industrial attributes, and the black grid background of 3D modeling highlights its digital asset attribute."
+    },
+    "Pallet.a.2": {
+      "instance_id": "Pallet.a.2",
+      "asset_type": "Pallet",
+      "asset_doc_id": "Pallet_with_bbox_meters-1-86ef7ce7",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Pallet/Pallet_A1.usdz",
+      "position": [
+        0.0,
+        3.0,
+        0.0
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        1.204202,
+        0.800386,
+        0.208646
+      ],
+      "parent_instance_id": null,
+      "tags": {
+        "DNA": "D_{G}(b)"
+      },
+      "description": "Functional Features:This is a standard wooden pallet widely used in warehousing, logistics, loading, and transportation for supporting, stacking, and moving various goods. Its functional features include a sturdy structure, high compatibility, and ease of handling with forklifts and pallet jacks. It is suitable for automated storage systems and containerized shipping. The top surface consists of multiple wooden planks, while the bottom features block supports that provide elevation and ventilation. Markings such as “SAFETY” and serial numbers indicate compliance with safety and traceability standards, and the pallet is recyclable, supporting sustainable logistics.\nVisual Features:Visually, the pallet is made of natural wood in a light brown tone, with an untreated surface that retains its raw grain texture. It follows a typical nine-block design, with evenly spaced top planks and neatly aligned edges. Black printed text and symbols on the sides and blocks enhance traceability and operational clarity. The overall design is simple and functional, emphasizing load-bearing capacity, versatility, and environmental responsibility—making it a fundamental tool in modern logistics operations."
+    }
+  },
+  "support_children": {}
+}

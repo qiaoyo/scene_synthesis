@@ -1,0 +1,105 @@
+{
+  "instances": {
+    "Workbench.a.10": {
+      "instance_id": "Workbench.a.10",
+      "asset_type": "Workbench",
+      "asset_doc_id": "Workbench_with_bbox_meters-18-25ba6475",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Workbench/model_console_0.usdz",
+      "position": [
+        -1.0117373690744236,
+        -0.06200000047683722,
+        0.0
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        3.144669,
+        1.347701,
+        1.948431
+      ],
+      "parent_instance_id": null,
+      "tags": {
+        "DNA": "D_{D}(s)"
+      },
+      "description": "Functional Features:This object is an industrial-grade station workbench with a light stand. Its core function is to provide a standardized operating platform for production operations. The limit slots on the front and rear of the table can neatly store tools, materials and spare parts. The upper light stand can be equipped with lighting fixtures, and the reserved installation positions on the back panel can be used to post operation instructions, install tool hanging boards and electrical sockets. It supports modular splicing of assembly lines, effectively standardizing operation processes and improving production efficiency. It is widely used in scenarios including 3C electronic assembly workshops, electrical product production lines, laboratory testing stations, hardware maintenance work areas, and warehousing sorting and packaging, featuring a stable structure, strong scalability and wide adaptability. \nVisual Features:Visually, it has a long strip frame structure with full matte white color, a flat operating table with regular limit slots, an integrated upper light stand and back panel, and a bottom square tube bracket with transverse reinforcing connecting rods. It is made of high-strength cold-rolled steel sheet metal with matte anti-static spraying on the surface, presenting a concise and regular shape with sharp lines and distinct industrial attributes. The black grid background of 3D modeling highlights its digital asset attribute."
+    },
+    "IndustrialRobot.a.6": {
+      "instance_id": "IndustrialRobot.a.6",
+      "asset_type": "IndustrialRobot",
+      "asset_doc_id": "IndustrialRobot_with_bbox_meters-5-d6dfaf63",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/IndustrialRobot/INDUSTRIAL_ROBOTIC_ARM.usdz",
+      "position": [
+        0.08251359757181376,
+        0.22559491477726124,
+        1.946382742324723
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        0.780948,
+        1.265337,
+        1.126954
+      ],
+      "parent_instance_id": "Workbench.a.10",
+      "tags": {
+        "Model": "CRX-5iA/10iA",
+        "Manufacturer": "FANUC",
+        "DOF": "6",
+        "DNA": "D_{A}(f)"
+      },
+      "description": "Functional Features: The image shows an industrial robotic arm with multiple articulated joints and an end-effector (gripper), commonly used in automated manufacturing environments. Its functional characteristics include high-precision repeatability and flexible spatial motion, making it suitable for tasks such as assembly, material handling, welding, painting, and sorting. The arm’s jointed structure enables it to follow complex paths and integrate seamlessly into smart manufacturing systems, enhancing productivity, reducing labor costs, and improving operational consistency and safety.\nVisual Features:Visually, the robotic arm is bright yellow, offering high visibility in industrial settings. It is likely constructed from high-strength alloy steel or aluminum alloy, balancing structural rigidity with weight efficiency. The surface is smooth, possibly treated with paint or anodizing to improve corrosion resistance and durability. The overall form is compact, with fluid joint transitions, reflecting a modern industrial design that emphasizes both functionality and engineering aesthetics."
+    },
+    "Conveyor.a.2": {
+      "instance_id": "Conveyor.a.2",
+      "asset_type": "Conveyor",
+      "asset_doc_id": "Conveyor_with_bbox_meters-6-9eec2967",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Conveyor/ConveyorBelt_A60_PR_NVD_01.usdz",
+      "position": [
+        1.0982762609276981,
+        -0.28548287695537977,
+        0.0
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        3.027066,
+        4.000123,
+        2.310952
+      ],
+      "parent_instance_id": null,
+      "tags": {
+        "Shape": "straight",
+        "Directionality": "two-way",
+        "DNA": "D_{C}(g)"
+      },
+      "description": "Functional Features:This object is a modular conveyor system designed for efficient material handling in warehouses, manufacturing plants, assembly lines, and sorting centers. Its functional features include an L-shaped configuration that integrates both roller conveyor sections and belt conveyor segments. The rollers enable gravity-fed movement of items, while the powered belt sections allow for controlled transport, accommodating various types of goods. The system is supported by sturdy legs and cross braces, ensuring structural stability and load-bearing capacity. Its modular design allows for flexible reconfiguration based on operational needs.\nVisual Features:Visually, the conveyor system features a blue metal frame paired with silver rollers and black belts, creating a strong industrial contrast. The frame is made of high-strength metal with a powder-coated finish, offering excellent resistance to corrosion and wear—ideal for demanding environments. The overall structure is clean-lined and compact, emphasizing functionality, durability, and ease of maintenance. This system is a vital component in modern smart manufacturing and automated logistics operations."
+    },
+    "IndustrialPart.e.1": {
+      "instance_id": "IndustrialPart.e.1",
+      "asset_type": "IndustrialPart",
+      "asset_doc_id": "IndustrialPart_with_bbox_meters-4-8ef881f7",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Part/ping.usd",
+      "position": [
+        1.224231709078333,
+        -0.2914432043422359,
+        2.328952454328537
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        0.399994,
+        0.036,
+        0.012
+      ],
+      "parent_instance_id": "Conveyor.a.2",
+      "tags": {
+        "DNA": "D_{J}(e)"
+      },
+      "description": "Functional Features:This object is a flat key model. Functionally, it is one of the most basic standard connecting components in mechanical transmission systems, used for circumferential fixation between shafts and hubs to transmit torque and prevent relative rotation. It is widely applied in shaft-hub connections of machine tools, automobiles, and general machinery. With a simple structure, easy installation, and low cost, it meets the transmission needs of small and medium loads, making it one of the most commonly used positioning and force-transmitting elements in mechanical transmission. \nVisual Features: Visually, the model is light gray as a standard mockup, with a long prismatic main body, one end square and the other rounded. The surface is smooth without texture details, presenting a neat geometric form with clear edge transitions."
+    }
+  },
+  "support_children": {
+    "Workbench.a.10": [
+      "IndustrialRobot.a.6"
+    ],
+    "Conveyor.a.2": [
+      "IndustrialPart.e.1"
+    ]
+  }
+}

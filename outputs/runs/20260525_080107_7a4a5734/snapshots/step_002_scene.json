@@ -1,0 +1,126 @@
+{
+  "instances": {
+    "Rack.a.1": {
+      "instance_id": "Rack.a.1",
+      "asset_type": "Rack",
+      "asset_doc_id": "Rack_with_bbox_meters-0-9a222a7a",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Rack/Pallet_Rack.usdz",
+      "position": [
+        0.0,
+        0.0,
+        -0.8306264613141787
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        2.999732,
+        3.0,
+        0.729262
+      ],
+      "parent_instance_id": null,
+      "tags": {
+        "Layers": "3",
+        "Columns": "1",
+        "DNA": "D_{E}(a)"
+      },
+      "description": "Functional Features: This object is a three-layer industrial shelf, used to provide multi-layer material storage and classification space in scenarios such as warehousing and workshops. It can place tools, components, finished products, etc. Its application scenarios include layered storage of goods in e-commerce warehouses, parts organization in mechanical workshops, and material placement in small warehousing centers. It can efficiently utilize vertical space, increase storage capacity and the convenience of material access, and help orderly manage warehousing and production areas.\nVisual Features: The main frame is silver-gray (metal material) with blue edges, and the shelves are silver-gray metal. The surface treatment shows the solid texture of metal, with uniform and wear-resistant coating. The three-layer structural design is concise and stable, with clear layers against the black background. The color matching of silver-gray and blue highlights the practicality and recognizability of industrial equipment."
+    },
+    "Pallet.a.2": {
+      "instance_id": "Pallet.a.2",
+      "asset_type": "Pallet",
+      "asset_doc_id": "Pallet_with_bbox_meters-1-86ef7ce7",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Pallet/Pallet_A1.usdz",
+      "position": [
+        0.0,
+        2.0,
+        0.0
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        1.204202,
+        0.800386,
+        0.208646
+      ],
+      "parent_instance_id": null,
+      "tags": {
+        "DNA": "D_{G}(b)"
+      },
+      "description": "Functional Features:This is a standard wooden pallet widely used in warehousing, logistics, loading, and transportation for supporting, stacking, and moving various goods. Its functional features include a sturdy structure, high compatibility, and ease of handling with forklifts and pallet jacks. It is suitable for automated storage systems and containerized shipping. The top surface consists of multiple wooden planks, while the bottom features block supports that provide elevation and ventilation. Markings such as “SAFETY” and serial numbers indicate compliance with safety and traceability standards, and the pallet is recyclable, supporting sustainable logistics.\nVisual Features:Visually, the pallet is made of natural wood in a light brown tone, with an untreated surface that retains its raw grain texture. It follows a typical nine-block design, with evenly spaced top planks and neatly aligned edges. Black printed text and symbols on the sides and blocks enhance traceability and operational clarity. The overall design is simple and functional, emphasizing load-bearing capacity, versatility, and environmental responsibility—making it a fundamental tool in modern logistics operations."
+    },
+    "Box.a.7": {
+      "instance_id": "Box.a.7",
+      "asset_type": "Box",
+      "asset_doc_id": "Box_with_bbox_meters-10-4496a260",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Box/Cardbox_B1.usdz",
+      "position": [
+        0.34696047961055143,
+        2.0,
+        0.20931710505521794
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        0.510281,
+        0.509945,
+        0.520666
+      ],
+      "parent_instance_id": "Pallet.a.2",
+      "tags": {
+        "Colsure": "Close",
+        "DNA": "D_{F}(k)"
+      },
+      "description": "Functional Features:This is a standard corrugated cardboard box, widely used in warehousing, logistics, express delivery, and e-commerce shipping. Its functional features include lightweight construction, low cost, and good compression and cushioning performance, making it suitable for packaging and transporting small to medium-sized goods. The top is sealed with a cross-pattern of packing tape, enhancing closure strength for long-distance transport or repeated handling. It can be integrated with barcode labels, RFID tags, and automated sorting systems to improve logistics efficiency and traceability—an essential packaging unit in modern supply chains.\nVisual Features:Visually, the box is made of natural brown corrugated cardboard with a matte finish, presenting a simple and utilitarian industrial look. The sealing tape is beige and applied in a cross pattern to reinforce structural integrity and prevent splitting. The exterior is unprinted, allowing for flexible labeling or custom branding. The box has clean folds and sharp edges, reflecting standardized manufacturing. The overall design emphasizes practicality, versatility, and compatibility with logistics systems, making it ideal for high-volume and automated packaging operations."
+    },
+    "Box.a.8": {
+      "instance_id": "Box.a.8",
+      "asset_type": "Box",
+      "asset_doc_id": "Box_with_bbox_meters-11-b3231b7d",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Box/Cardbox_D1.usdz",
+      "position": [
+        -0.42968100541052934,
+        2.0,
+        0.20864308136346832
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        0.34484,
+        0.264385,
+        0.166112
+      ],
+      "parent_instance_id": "Pallet.a.2",
+      "tags": {
+        "Colsure": "Close",
+        "DNA": "D_{F}(l)"
+      },
+      "description": "Functional Features:This is a standard corrugated cardboard box, widely used in logistics, warehousing, e-commerce shipping, and general handling. Its functional features include lightweight construction, low cost, and good compression and cushioning performance, making it ideal for packaging a variety of small to medium-sized goods. The box is securely sealed, stackable, and compatible with barcodes, labels, and RFID systems for efficient tracking and inventory control. It serves as one of the most common and essential packaging units in modern supply chains, suitable for automated sorting and bulk shipping.\nVisual Features:Visually, the box is made of natural brown corrugated cardboard with a matte finish, presenting a clean and utilitarian industrial appearance. It has a rectangular shape with crisp fold lines and neatly sealed edges, reflecting standardized manufacturing. The surface is unprinted, allowing for flexible labeling, stamping, or branding. The material is typically three- or five-layer corrugated board, balancing light weight with structural strength. The overall design emphasizes versatility, cost-effectiveness, and compatibility with logistics systems, making it a foundational element in the packaging industry."
+    },
+    "AGV.a.1": {
+      "instance_id": "AGV.a.1",
+      "asset_type": "AGV",
+      "asset_doc_id": "AGV_with_bbox_meters-0-193eaf06",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/AGV/AGV_ready_1.usdz",
+      "position": [
+        -2.0,
+        0.0,
+        0.8306264613141787
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        1.456562,
+        0.340038,
+        0.668502
+      ],
+      "parent_instance_id": null,
+      "tags": {
+        "Model": "Custom Industrial Transport AGV",
+        "Manufacturer": "Self-made",
+        "DNA": "D_{B}(a)"
+      },
+      "description": "Functional Features: This object is a self-made industrial transport AGV, mainly used for transporting. It is designed to autonomously navigate and transport pallets, large materials, etc. in industrial workshops and warehousing logistics scenarios, improving material flow efficiency and reducing manual handling costs. Its application scenarios include parts distribution in automobile manufacturing workshops and cargo transfer in e-commerce warehouses, suitable for industrial environments requiring automated handling, and capable of stably completing repetitive handling tasks.\nVisual Features: The main body is eye-catching yellow, with a black top carrying area, front protective structure, and red details. The material combines industrial plastic and metal, with a smooth and hard surface finish. The yellow appearance is highly recognizable against the black background, and the overall design highlights the practicality and warning nature of industrial equipment."
+    }
+  },
+  "support_children": {
+    "Pallet.a.2": [
+      "Box.a.7",
+      "Box.a.8"
+    ]
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "instances": {
+    "Workbench.b.7": {
+      "instance_id": "Workbench.b.7",
+      "asset_type": "Workbench",
+      "asset_doc_id": "Workbench_with_bbox_meters-28-3d488d4a",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Workbench/model_lab_cabinet002.usdz",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        0.75,
+        1.5,
+        0.8
+      ],
+      "parent_instance_id": null,
+      "tags": {
+        "DNA": "D_{D}(ac)"
+      },
+      "description": "Functional Features:This object is a minimalist panel-type multi-functional workbench. Its core function is to provide a stable and flat operating space. The wide matte tabletop adapts to diverse needs including office work, experimental operation, equipment placement, learning and creation. The closed side panels on both sides form stable support, and the adjustable feet at the bottom can adapt to different grounds for leveling. The open and unobstructed legroom greatly improves the comfort of sedentary use, and the cabinet-free design can be flexibly matched with storage accessories with strong adaptability. It is widely used in university research laboratories, corporate open office areas, home study rooms, maker spaces, and testing institution operation rooms, featuring stable structure, convenient installation, versatile style and strong space adaptability.\nVisual Features: Visually, it adopts a classic black-and-white color contrast design, with a dark black wear-resistant matte tabletop matched with pure white closed support side panels. The square and simple rectangular shape has neat lines without extra decoration, with white adjustable horizontal feet at the bottom. The main body is made of eco-friendly high-density board with scratch-resistant and wear-resistant matte treatment, presenting a minimalist and modern style. The black grid background of 3D modeling highlights its digital asset attribute."
+    },
+    "Pallet.a.2": {
+      "instance_id": "Pallet.a.2",
+      "asset_type": "Pallet",
+      "asset_doc_id": "Pallet_with_bbox_meters-1-86ef7ce7",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Pallet/Pallet_A1.usdz",
+      "position": [
+        2.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        1.204202,
+        0.800386,
+        0.208646
+      ],
+      "parent_instance_id": null,
+      "tags": {
+        "DNA": "D_{G}(b)"
+      },
+      "description": "Functional Features:This is a standard wooden pallet widely used in warehousing, logistics, loading, and transportation for supporting, stacking, and moving various goods. Its functional features include a sturdy structure, high compatibility, and ease of handling with forklifts and pallet jacks. It is suitable for automated storage systems and containerized shipping. The top surface consists of multiple wooden planks, while the bottom features block supports that provide elevation and ventilation. Markings such as “SAFETY” and serial numbers indicate compliance with safety and traceability standards, and the pallet is recyclable, supporting sustainable logistics.\nVisual Features:Visually, the pallet is made of natural wood in a light brown tone, with an untreated surface that retains its raw grain texture. It follows a typical nine-block design, with evenly spaced top planks and neatly aligned edges. Black printed text and symbols on the sides and blocks enhance traceability and operational clarity. The overall design is simple and functional, emphasizing load-bearing capacity, versatility, and environmental responsibility—making it a fundamental tool in modern logistics operations."
+    },
+    "Box.a.7": {
+      "instance_id": "Box.a.7",
+      "asset_type": "Box",
+      "asset_doc_id": "Box_with_bbox_meters-10-4496a260",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Box/Cardbox_B1.usdz",
+      "position": [
+        2.0,
+        0.0,
+        0.5
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        0.510281,
+        0.509945,
+        0.520666
+      ],
+      "parent_instance_id": null,
+      "tags": {
+        "Colsure": "Close",
+        "DNA": "D_{F}(k)"
+      },
+      "description": "Functional Features:This is a standard corrugated cardboard box, widely used in warehousing, logistics, express delivery, and e-commerce shipping. Its functional features include lightweight construction, low cost, and good compression and cushioning performance, making it suitable for packaging and transporting small to medium-sized goods. The top is sealed with a cross-pattern of packing tape, enhancing closure strength for long-distance transport or repeated handling. It can be integrated with barcode labels, RFID tags, and automated sorting systems to improve logistics efficiency and traceability—an essential packaging unit in modern supply chains.\nVisual Features:Visually, the box is made of natural brown corrugated cardboard with a matte finish, presenting a simple and utilitarian industrial look. The sealing tape is beige and applied in a cross pattern to reinforce structural integrity and prevent splitting. The exterior is unprinted, allowing for flexible labeling or custom branding. The box has clean folds and sharp edges, reflecting standardized manufacturing. The overall design emphasizes practicality, versatility, and compatibility with logistics systems, making it ideal for high-volume and automated packaging operations."
+    },
+    "IndustrialPart.e.1": {
+      "instance_id": "IndustrialPart.e.1",
+      "asset_type": "IndustrialPart",
+      "asset_doc_id": "IndustrialPart_with_bbox_meters-4-8ef881f7",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Part/ping.usd",
+      "position": [
+        2.0,
+        1.0,
+        0.0
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        0.399994,
+        0.036,
+        0.012
+      ],
+      "parent_instance_id": null,
+      "tags": {
+        "DNA": "D_{J}(e)"
+      },
+      "description": "Functional Features:This object is a flat key model. Functionally, it is one of the most basic standard connecting components in mechanical transmission systems, used for circumferential fixation between shafts and hubs to transmit torque and prevent relative rotation. It is widely applied in shaft-hub connections of machine tools, automobiles, and general machinery. With a simple structure, easy installation, and low cost, it meets the transmission needs of small and medium loads, making it one of the most commonly used positioning and force-transmitting elements in mechanical transmission. \nVisual Features: Visually, the model is light gray as a standard mockup, with a long prismatic main body, one end square and the other rounded. The surface is smooth without texture details, presenting a neat geometric form with clear edge transitions."
+    },
+    "IndustrialPart.a.1": {
+      "instance_id": "IndustrialPart.a.1",
+      "asset_type": "IndustrialPart",
+      "asset_doc_id": "IndustrialPart_with_bbox_meters-9-d1b8144b",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Part/xiejian.usd",
+      "position": [
+        2.0,
+        -1.0,
+        0.0
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        0.018,
+        0.007,
+        0.004
+      ],
+      "parent_instance_id": null,
+      "tags": {
+        "DNA": "D_{J}(j)"
+      },
+      "description": "Functional Features:This object is a taper key model. Functionally, it is a connecting component with both circumferential and axial fixing functions in mechanical transmission. It achieves bidirectional positioning between the shaft and hub through wedge action, transmitting torque while withstanding axial loads. Widely used in heavy-duty equipment with impact loads (such as mining machinery and heavy machine tools), it features a simple structure and strong self-locking property, suitable for fixed connections that do not require frequent disassembly.\nVisual Features: Visually, the model is light gray as a standard mockup, with a tapered long prismatic main body, one end square and the other rounded. The surface is smooth without texture details, with soft edge transitions and a neat, concise form."
+    }
+  },
+  "support_children": {}
+}

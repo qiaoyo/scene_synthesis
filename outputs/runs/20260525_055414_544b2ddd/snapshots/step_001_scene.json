@@ -1,0 +1,75 @@
+{
+  "instances": {
+    "Workbench.c.9": {
+      "instance_id": "Workbench.c.9",
+      "asset_type": "Workbench",
+      "asset_doc_id": "Workbench_with_bbox_meters-27-d557a83e",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Workbench/model_lab_bench001.usdz",
+      "position": [
+        0.0,
+        0.0,
+        -0.07302826578244317
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        3.0,
+        0.739,
+        0.895887
+      ],
+      "parent_instance_id": null,
+      "tags": {
+        "DNA": "D_{D}(ab)"
+      },
+      "description": "Functional Features:This object is an all-steel laboratory side bench (also usable as a double long office console). Its core function is to provide a spacious and stable operating space for two people to work simultaneously. The flat and wide tabletop adapts to experimental testing, equipment placement, and office work. The embedded power module integrated on the tabletop can conveniently supply power to instruments and equipment. The symmetrical single-door three-drawer cabinets on both sides realize closed storage for experimental consumables, office supplies and documents, greatly improving space utilization and operating convenience. It is widely used in university research laboratories, testing institution labs, factory quality inspection workshops, corporate open office areas, and hospital clinical laboratories, featuring a stable structure, excellent storage performance, convenient power supply and strong adaptability.\nVisual Features: Visually, it adopts a full pure white matte design with a symmetrical long square shape, decorated with black skirting lines and a black-framed power panel for color contrast, with simple and neat silver embedded handles. The main body is made of high-strength cold-rolled steel with wear-resistant matte anti-static spraying on the surface, presenting a clean and simple style. The black grid background of 3D modeling highlights its digital asset attribute."
+    },
+    "Box.a.2": {
+      "instance_id": "Box.a.2",
+      "asset_type": "Box",
+      "asset_doc_id": "Box_with_bbox_meters-1-ad504646",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Box/Cardbox_C1.usdz",
+      "position": [
+        0.0,
+        0.0,
+        0.8730282657824432
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        0.513243,
+        0.510562,
+        0.259689
+      ],
+      "parent_instance_id": null,
+      "tags": {
+        "Colsure": "Close",
+        "DNA": "D_{F}(b)"
+      },
+      "description": "Functional Features: This object is a paper packaging box, used for packaging, storing and transporting items. It can protect the internal items from external bumps and dust, and also realize the classification management and identification of items. Its application scenarios include commodity packaging in e-commerce retail, gift box packaging of cultural and creative products, and daily sundries storage, etc. It can meet the protection and storage needs of items in different scenarios, and is a low-cost and practical packaging carrier.\nVisual Features: The main body is light brown, made of paper (presumably cardboard or kraft paper), with a flat and smooth surface treatment and no extra decoration. It has a regular cubic shape with a concise and neat structure. The light brown appearance against the black background is simple and elegant, highlighting its functionality and versatility as a packaging container."
+    },
+    "IndustrialRobot.a.10": {
+      "instance_id": "IndustrialRobot.a.10",
+      "asset_type": "IndustrialRobot",
+      "asset_doc_id": "IndustrialRobot_with_bbox_meters-10-8a357ee0",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/IndustrialRobot/rs007l_onrobot_rg2.usdz",
+      "position": [
+        2.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        0.3811,
+        0.318683,
+        1.584772
+      ],
+      "parent_instance_id": null,
+      "tags": {
+        "Model": "RS007L",
+        "Manufacturer": "Kawasaki Robotics",
+        "DOF": "6",
+        "DNA": "D_{A}(k)"
+      },
+      "description": "Functional Features:This is the RS007L industrial robot arm developed by Kawasaki Robotics, a lightweight, high-speed 6-axis manipulator. Its functional features include high-precision handling, rapid assembly, fine manipulation, and repetitive inspection tasks. It is ideal for electronics manufacturing, medical device processing, food packaging, and lab automation. With a reach of 930 mm and repeatability of ±0.03 mm, the RS007L operates efficiently in compact spaces and supports integration with vision systems and end-effectors, making it suitable for flexible automation cells and collaborative workstations.\nVisual Features:Visually, the arm features a clean, streamlined industrial design with a matte white body and gray or metallic joints, combining modern aesthetics with professional appeal. The structure is made from aluminum alloy and engineering plastics, with coated and anodized surfaces for corrosion resistance and refined texture. The joints are compact with internal cable routing, and the end includes a standard flange for quick tool changes. The overall form emphasizes lightweight construction and rigidity, reflecting the core traits of a high-performance industrial robot."
+    }
+  },
+  "support_children": {}
+}

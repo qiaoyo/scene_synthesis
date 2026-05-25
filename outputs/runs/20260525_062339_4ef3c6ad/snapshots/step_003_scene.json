@@ -1,0 +1,104 @@
+{
+  "instances": {
+    "Pallet.b.1": {
+      "instance_id": "Pallet.b.1",
+      "asset_type": "Pallet",
+      "asset_doc_id": "Pallet_with_bbox_meters-4-95008ed6",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Pallet/AluminumPallet_A01_PR_NVD_01.usdz",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        1.222365,
+        1.016391,
+        0.13612
+      ],
+      "parent_instance_id": null,
+      "tags": {
+        "DNA": "D_{G}(e)"
+      },
+      "description": "Functional Features:This object is an industrial pallet designed for use in warehousing, logistics, manufacturing, and transportation. Its functional features include a top surface composed of multiple horizontal slats and three longitudinal support beams underneath, forming a standard four-way forklift entry structure. This allows for efficient handling from any direction using forklifts or pallet jacks. The design supports stacking, loading, and circulation of goods, making it ideal for high-frequency operations in automated warehouses, assembly lines, and distribution centers.\nVisual Features:Visually, the pallet has a gray tone and appears to be made of aluminum alloy or specially treated wood, with a metallic texture that conveys strength and durability. The structure is clean and symmetrical, emphasizing industrial functionality. The surface may be treated with sandblasting or anodizing to enhance corrosion resistance and wear durability, making it suitable for long-term use in demanding or humid environments. Overall, the pallet presents a modern and professional appearance, aligning with the standardization and durability requirements of smart manufacturing and logistics systems."
+    },
+    "Box.a.5": {
+      "instance_id": "Box.a.5",
+      "asset_type": "Box",
+      "asset_doc_id": "Box_with_bbox_meters-8-1884cfe8",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Box/Cardbox_A3.usdz",
+      "position": [
+        0.0,
+        0.0,
+        0.13612007100135126
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        0.699435,
+        0.509927,
+        0.521152
+      ],
+      "parent_instance_id": "Pallet.b.1",
+      "tags": {
+        "Colsure": "Close",
+        "DNA": "D_{F}(i)"
+      },
+      "description": "Functional Features:This is a standardized cardboard shipping box designed for express delivery, warehouse dispatch, cross-border e-commerce, and supply chain logistics. Its functional features include high-capacity storage, secure sealing, and comprehensive labeling, making it suitable for packaging large items or bulk materials. The box is marked with “EXTRA LARGE” and “ABA EXPRESS DELIVERY SERVICES,” indicating its role as a standard unit in a courier system. It includes a barcode, QR code, CE mark, and recycling symbols, supporting logistics tracking, regulatory compliance, and environmental sorting—ideal for automated sorting systems and international shipping.\nVisual Features:Visually, the box has a natural kraft paper color and is made of corrugated cardboard, offering good compression resistance and cushioning. The surface is matte with clearly printed branding, size indicators, and compliance icons. It is sealed with transparent tape for added stability and protection during transit. The overall design emphasizes readability, structural integrity, and compatibility with logistics systems, making it a common and essential form of packaging in modern delivery networks."
+    },
+    "AGV.b.1": {
+      "instance_id": "AGV.b.1",
+      "asset_type": "AGV",
+      "asset_doc_id": "AGV_with_bbox_meters-4-beab85a6",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/AGV/model_AGV_4.usdz",
+      "position": [
+        2.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        0.638719,
+        0.9397,
+        0.240373
+      ],
+      "parent_instance_id": null,
+      "tags": {
+        "Model": "JZ-AGV-U",
+        "Manufacturer": "Wellwit Robotics",
+        "DNA": "D_{B}(e)"
+      },
+      "description": "Functional Features: This object is an industrial-grade U-shaped open heavy-duty AGV (Automated Guided Vehicle). Its core function is to directly adapt to standard pallets and material racks through the U-shaped open structure to realize automatic unmanned transfer of materials. It has the capabilities of autonomous navigation, path planning and intelligent obstacle avoidance, and can complete operations such as production line station connection, warehouse goods turnover and heavy-duty material distribution, greatly reducing manual handling costs and improving logistics circulation efficiency. It is widely used in heavy-duty industrial scenarios including automobile manufacturing, heavy machinery, home appliance production and auto parts processing, featuring convenient loading and unloading, strong heavy-duty capacity, stable operation and flexible deployment.\nVisual Features: Visually, the main body adopts highly recognizable bright red industrial coating, matched with a silver-gray open bearing platform, a double-split square fuselage, blue status light strips on the side, and an exposed design of driving wheels with red rims. The fuselage is made of high-strength metal sheet metal with matte wear-resistant industrial spraying on the surface, presenting a tough and regular shape with distinct industrial attributes. The black grid background of 3D modeling highlights its digital asset attribute."
+    },
+    "Box.a.2": {
+      "instance_id": "Box.a.2",
+      "asset_type": "Box",
+      "asset_doc_id": "Box_with_bbox_meters-1-ad504646",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Box/Cardbox_C1.usdz",
+      "position": [
+        2.0,
+        0.0,
+        0.246987912152264
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        0.513243,
+        0.510562,
+        0.259689
+      ],
+      "parent_instance_id": "AGV.b.1",
+      "tags": {
+        "Colsure": "Close",
+        "DNA": "D_{F}(b)"
+      },
+      "description": "Functional Features: This object is a paper packaging box, used for packaging, storing and transporting items. It can protect the internal items from external bumps and dust, and also realize the classification management and identification of items. Its application scenarios include commodity packaging in e-commerce retail, gift box packaging of cultural and creative products, and daily sundries storage, etc. It can meet the protection and storage needs of items in different scenarios, and is a low-cost and practical packaging carrier.\nVisual Features: The main body is light brown, made of paper (presumably cardboard or kraft paper), with a flat and smooth surface treatment and no extra decoration. It has a regular cubic shape with a concise and neat structure. The light brown appearance against the black background is simple and elegant, highlighting its functionality and versatility as a packaging container."
+    }
+  },
+  "support_children": {
+    "Pallet.b.1": [
+      "Box.a.5"
+    ],
+    "AGV.b.1": [
+      "Box.a.2"
+    ]
+  }
+}

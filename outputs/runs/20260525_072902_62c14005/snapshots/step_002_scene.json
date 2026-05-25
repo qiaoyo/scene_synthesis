@@ -1,0 +1,103 @@
+{
+  "instances": {
+    "Forklift.b.3": {
+      "instance_id": "Forklift.b.3",
+      "asset_type": "Forklift",
+      "asset_doc_id": "Forklift_with_bbox_meters-3-2493be05",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Forklift/Forklift_B01_PR_V_NVD_01.usdz",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        1.129838,
+        3.031279,
+        2.935141
+      ],
+      "parent_instance_id": null,
+      "tags": {
+        "Model": "Counterbalance Forklift",
+        "Manufacturer": "Self-made",
+        "Function": "Transporting, Lifting",
+        "DNA": "D_{H}(d)"
+      },
+      "description": "Functional Features:The object shown in the image is an electric reach truck designed for pallet handling, stacking, and high-level storage operations in warehouse logistics systems. Its primary function is to transport palletized goods efficiently between ground level and medium-to-high rack positions within narrow aisles. This type of equipment is widely used in automated warehouses, high-density storage facilities, distribution centers, and smart manufacturing workshops. In simulation and digital twin environments, it is commonly employed for forklift navigation, task scheduling, human–machine collaboration studies, and the validation of autonomous control and perception algorithms. The reach mechanism allows the forks to extend forward without moving the entire vehicle, improving flexibility and safety during high-rack operations.\nVisual Features:Visually, the forklift features a compact yet vertically oriented structure, consisting of a tall mast, extendable forks, and an integrated vehicle body. The dominant color scheme includes dark gray and black, complemented by a bright yellow side panel that enhances visibility and conveys industrial safety cues. The mast and forks are made of metal with matte-painted or powder-coated surface finishes to improve durability and corrosion resistance. Exterior panels appear smooth and minimal, likely made of engineering plastics or coated metal, giving the equipment a robust, functional, and professional industrial appearance suitable for simulation-oriented digital assets."
+    },
+    "Pallet.a.5": {
+      "instance_id": "Pallet.a.5",
+      "asset_type": "Pallet",
+      "asset_doc_id": "Pallet_with_bbox_meters-5-6e034cab",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Pallet/BlockPallet_B01_PR_NVD_01.usdz",
+      "position": [
+        2.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        1.204202,
+        0.800386,
+        0.208646
+      ],
+      "parent_instance_id": null,
+      "tags": {
+        "DNA": "D_{G}(f)"
+      },
+      "description": "Functional Features:This object is a standard industrial wooden pallet widely used in warehousing, logistics, transportation, and supply chain operations. Its functional features include a top surface made of parallel wooden planks that provide a stable platform for goods. The base structure allows for four-way forklift access, enabling efficient handling, stacking, and transport. Markings on the side, including a recycling symbol and alphanumeric codes, suggest traceability for manufacturing batches or reuse tracking. This pallet is essential for containerization, loading, storage, and distribution in modern logistics systems.\nVisual Features:Visually, the pallet has a light natural wood tone with visible grain and nail marks, reflecting a raw, utilitarian industrial style. The wood is lightly sanded to ensure a relatively smooth surface and reduce splinters. Black printed symbols and codes on the side enhance traceability and standardization. The overall structure is simple and well-proportioned, emphasizing practicality and versatility. It is designed for long-term use in high-frequency, heavy-duty logistics environments."
+    },
+    "AGV.b.2": {
+      "instance_id": "AGV.b.2",
+      "asset_type": "AGV",
+      "asset_doc_id": "AGV_with_bbox_meters-5-d59acfd7",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/AGV/AGV.usdz",
+      "position": [
+        -2.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        1.667694,
+        0.250211,
+        0.373041
+      ],
+      "parent_instance_id": null,
+      "tags": {
+        "Model": "MR-FL20000",
+        "Manufacturer": "Hangzhou Hikrobot Co., Ltd",
+        "DNA": "D_{B}(f)"
+      },
+      "description": "Functional Features: This object is an industrial-grade long-wheelbase heavy-duty flatbed AGV (Automated Guided Vehicle). Its core function is to realize automatic unmanned transfer of ultra-long and ultra-heavy materials, with capabilities of autonomous navigation, path planning and intelligent obstacle avoidance. The large-size long bearing platform can adapt to non-standard large goods such as large components and industrial profiles, completing long-distance material distribution in factories, production line station connection and heavy material turnover operations, greatly reducing the labor and safety risks of heavy-duty handling. It is widely used in heavy-duty scenarios including heavy machinery manufacturing, aerospace, shipbuilding industry and steel structure processing, featuring strong load capacity, stable operation and convenient maintenance. \nVisual Features: Visually, the main body adopts bright orange industrial coating, matched with a gray long bearing platform, a black and yellow warning anti-collision strip at the front, black tires with golden hubs, and maintenance cabinet doors with red latches on the side. The fuselage is made of high-strength metal sheet metal with matte wear-resistant industrial spraying on the surface. It has a low-center-of-gravity, long-strip square shape with tough lines and distinct industrial attributes, and the 3D modeling grid background highlights its digital asset attribute."
+    },
+    "Box.a.7": {
+      "instance_id": "Box.a.7",
+      "asset_type": "Box",
+      "asset_doc_id": "Box_with_bbox_meters-10-4496a260",
+      "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Box/Cardbox_B1.usdz",
+      "position": [
+        -2.0,
+        2.0433427483368405e-07,
+        0.2516791016064217
+      ],
+      "rotation_deg": 0.0,
+      "bbox_size": [
+        0.510281,
+        0.509945,
+        0.520666
+      ],
+      "parent_instance_id": "AGV.b.2",
+      "tags": {
+        "Colsure": "Close",
+        "DNA": "D_{F}(k)"
+      },
+      "description": "Functional Features:This is a standard corrugated cardboard box, widely used in warehousing, logistics, express delivery, and e-commerce shipping. Its functional features include lightweight construction, low cost, and good compression and cushioning performance, making it suitable for packaging and transporting small to medium-sized goods. The top is sealed with a cross-pattern of packing tape, enhancing closure strength for long-distance transport or repeated handling. It can be integrated with barcode labels, RFID tags, and automated sorting systems to improve logistics efficiency and traceability—an essential packaging unit in modern supply chains.\nVisual Features:Visually, the box is made of natural brown corrugated cardboard with a matte finish, presenting a simple and utilitarian industrial look. The sealing tape is beige and applied in a cross pattern to reinforce structural integrity and prevent splitting. The exterior is unprinted, allowing for flexible labeling or custom branding. The box has clean folds and sharp edges, reflecting standardized manufacturing. The overall design emphasizes practicality, versatility, and compatibility with logistics systems, making it ideal for high-volume and automated packaging operations."
+    }
+  },
+  "support_children": {
+    "AGV.b.2": [
+      "Box.a.7"
+    ]
+  }
+}

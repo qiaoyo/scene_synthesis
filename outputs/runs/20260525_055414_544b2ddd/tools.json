@@ -1,0 +1,1391 @@
+{
+  "run_id": "20260525_055414_544b2ddd",
+  "steps": [
+    {
+      "step": 0,
+      "tools": [
+        {
+          "tool_index": 0,
+          "timestamp": "2026-05-24T21:54:33.094094+00:00",
+          "tool": {
+            "name": "retrieve_asset",
+            "arguments": {
+              "query": "workbench",
+              "top_k": 1,
+              "expected_asset_type": "Workbench"
+            },
+            "ok": true,
+            "elapsed_ms": 265.658,
+            "result": {
+              "ok": true,
+              "data": {
+                "results": [
+                  {
+                    "doc_id": "Workbench_with_bbox_meters-27-d557a83e",
+                    "score": 0.5848,
+                    "asset_type": "Workbench",
+                    "doc_type": "asset",
+                    "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Workbench/model_lab_bench001.usdz",
+                    "instance_id": "Workbench.c.9",
+                    "bbox": {
+                      "min": [
+                        -1.4999526104904175,
+                        -0.37903890467300416,
+                        0.0
+                      ],
+                      "max": [
+                        1.5000473895095825,
+                        0.3599610879360199,
+                        0.8958868194126224
+                      ],
+                      "size": [
+                        3.0,
+                        0.739,
+                        0.895887
+                      ],
+                      "center": [
+                        4.7e-05,
+                        -0.009539,
+                        0.447943
+                      ],
+                      "unit": "m"
+                    },
+                    "tags": {
+                      "DNA": "D_{D}(ab)"
+                    },
+                    "description": "Functional Features:This object is an all-steel laboratory side bench (also usable as a double long office console). Its core function is to provide a spacious and stable operating space for two people to work simultaneously. The flat and wide tabletop adapts to experimental testing, equipment placement, and office work. The embedded power module integrated on the tabletop can conveniently supply power to instruments and equipment. The symmetrical single-door three-drawer cabinets on both sides realize closed storage for experimental consumables, office supplies and documents, greatly improving space utilization and operating convenience. It is widely used in university research laboratories, testing institution labs, factory quality inspection workshops, corporate open office areas, and hospital clinical laboratories, featuring a stable structure, excellent storage performance, convenient power supply and strong adaptability.\nVisual Features: Visually, it adopts a full pure white matte design with a symmetrical long square shape, decorated with black skirting lines and a black-framed power panel for color contrast, with simple and neat silver embedded handles. The main body is made of high-strength cold-rolled steel with wear-resistant matte anti-static spraying on the surface, presenting a clean and simple style. The black grid background of 3D modeling highlights its digital asset attribute.",
+                    "content": "Asset Type: Workbench\nDescription: Functional Features:This object is an all-steel laboratory side bench (also usable as a double long office console). Its core function is to provide a spacious and stable operating space for two people to work simultaneously. The flat and wide tabletop adapts to experimental testing, equipment placement, and office work. The embedded power module integrated on the tabletop can conveniently supply power to instruments and equipment. The symmetrical single-door three-drawer cabinets on both sides realize closed storage for experimental consumables, office supplies and documents, greatly improving space utilization and operating convenience. It is widely used in university research laboratories, testing institution labs, factory quality inspection workshops, corporate open office areas, and hospital clinical laboratories, featuring a stable structure, excellent storage performance, convenient power supply and strong adaptability.\nVisual Features: Visually, it adopts a full pure white matte design with a symmetrical long square shape, decorated with black skirting lines and a black-framed power panel for color contrast, with simple and neat silver embedded handles. The main body is made of high-strength cold-rolled steel with wear-resistant matte anti-static spraying on the surface, presenting a clean and simple style. The black grid background of 3D modeling highlights its digital asset attribute.\nTags: {\"DNA\": \"D_{D}(ab)\"}\n",
+                    "preview": "Asset Type: Workbench\nDescription: Functional Features:This object is an all-steel laboratory side bench (also usable as a double long office console). Its core function is to provide a spacious and stable operating space for two people to "
+                  }
+                ],
+                "count": 1,
+                "query": "workbench",
+                "doc_type": "asset",
+                "asset_type": "Workbench"
+              },
+              "error": null
+            }
+          },
+          "action_summary": {
+            "step": 0,
+            "name": "retrieve_asset",
+            "arguments": {
+              "query": "workbench",
+              "expected_asset_type": "Workbench",
+              "top_k": 1
+            },
+            "ok": true,
+            "error": null,
+            "summary": {
+              "count": 1,
+              "asset_type": "Workbench",
+              "top_doc_ids": [
+                "Workbench_with_bbox_meters-27-d557a83e"
+              ]
+            }
+          }
+        },
+        {
+          "tool_index": 1,
+          "timestamp": "2026-05-24T21:54:33.097952+00:00",
+          "tool": {
+            "name": "retrieve_asset",
+            "arguments": {
+              "query": "box",
+              "top_k": 1,
+              "expected_asset_type": "Box"
+            },
+            "ok": true,
+            "elapsed_ms": 3.445,
+            "result": {
+              "ok": true,
+              "data": {
+                "results": [
+                  {
+                    "doc_id": "Box_with_bbox_meters-1-ad504646",
+                    "score": 0.4683,
+                    "asset_type": "Box",
+                    "doc_type": "asset",
+                    "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Box/Cardbox_C1.usdz",
+                    "instance_id": "Box.a.2",
+                    "bbox": {
+                      "min": [
+                        -0.25662169836562043,
+                        -0.25528119470295607,
+                        -0.0001697121522639955
+                      ],
+                      "max": [
+                        0.25662169836562043,
+                        0.25528109933552656,
+                        0.2595197238135398
+                      ],
+                      "size": [
+                        0.513243,
+                        0.510562,
+                        0.259689
+                      ],
+                      "center": [
+                        0.0,
+                        -0.0,
+                        0.129675
+                      ],
+                      "unit": "m"
+                    },
+                    "tags": {
+                      "Colsure": "Close",
+                      "DNA": "D_{F}(b)"
+                    },
+                    "description": "Functional Features: This object is a paper packaging box, used for packaging, storing and transporting items. It can protect the internal items from external bumps and dust, and also realize the classification management and identification of items. Its application scenarios include commodity packaging in e-commerce retail, gift box packaging of cultural and creative products, and daily sundries storage, etc. It can meet the protection and storage needs of items in different scenarios, and is a low-cost and practical packaging carrier.\nVisual Features: The main body is light brown, made of paper (presumably cardboard or kraft paper), with a flat and smooth surface treatment and no extra decoration. It has a regular cubic shape with a concise and neat structure. The light brown appearance against the black background is simple and elegant, highlighting its functionality and versatility as a packaging container.",
+                    "content": "Asset Type: Box\nDescription: Functional Features: This object is a paper packaging box, used for packaging, storing and transporting items. It can protect the internal items from external bumps and dust, and also realize the classification management and identification of items. Its application scenarios include commodity packaging in e-commerce retail, gift box packaging of cultural and creative products, and daily sundries storage, etc. It can meet the protection and storage needs of items in different scenarios, and is a low-cost and practical packaging carrier.\nVisual Features: The main body is light brown, made of paper (presumably cardboard or kraft paper), with a flat and smooth surface treatment and no extra decoration. It has a regular cubic shape with a concise and neat structure. The light brown appearance against the black background is simple and elegant, highlighting its functionality and versatility as a packaging container.\nTags: {\"Colsure\": \"Close\", \"DNA\": \"D_{F}(b)\"}\n",
+                    "preview": "Asset Type: Box\nDescription: Functional Features: This object is a paper packaging box, used for packaging, storing and transporting items. It can protect the internal items from external bumps and dust, and also realize the classification "
+                  }
+                ],
+                "count": 1,
+                "query": "box",
+                "doc_type": "asset",
+                "asset_type": "Box"
+              },
+              "error": null
+            }
+          },
+          "action_summary": {
+            "step": 0,
+            "name": "retrieve_asset",
+            "arguments": {
+              "query": "box",
+              "expected_asset_type": "Box",
+              "top_k": 1
+            },
+            "ok": true,
+            "error": null,
+            "summary": {
+              "count": 1,
+              "asset_type": "Box",
+              "top_doc_ids": [
+                "Box_with_bbox_meters-1-ad504646"
+              ]
+            }
+          }
+        },
+        {
+          "tool_index": 2,
+          "timestamp": "2026-05-24T21:54:33.101022+00:00",
+          "tool": {
+            "name": "retrieve_asset",
+            "arguments": {
+              "query": "industrial robot",
+              "top_k": 1,
+              "expected_asset_type": "IndustrialRobot"
+            },
+            "ok": true,
+            "elapsed_ms": 2.644,
+            "result": {
+              "ok": true,
+              "data": {
+                "results": [
+                  {
+                    "doc_id": "IndustrialRobot_with_bbox_meters-10-8a357ee0",
+                    "score": 0.7108,
+                    "asset_type": "IndustrialRobot",
+                    "doc_type": "asset",
+                    "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/IndustrialRobot/rs007l_onrobot_rg2.usdz",
+                    "instance_id": "IndustrialRobot.a.10",
+                    "bbox": {
+                      "min": [
+                        -0.2591000231835047,
+                        -0.16999945345329878,
+                        -9.116831638580902e-13
+                      ],
+                      "max": [
+                        0.12200001207319902,
+                        0.14868347701952242,
+                        1.5847721733152866
+                      ],
+                      "size": [
+                        0.3811,
+                        0.318683,
+                        1.584772
+                      ],
+                      "center": [
+                        -0.06855,
+                        -0.010658,
+                        0.792386
+                      ],
+                      "unit": "m"
+                    },
+                    "tags": {
+                      "Model": "RS007L",
+                      "Manufacturer": "Kawasaki Robotics",
+                      "DOF": "6",
+                      "DNA": "D_{A}(k)"
+                    },
+                    "description": "Functional Features:This is the RS007L industrial robot arm developed by Kawasaki Robotics, a lightweight, high-speed 6-axis manipulator. Its functional features include high-precision handling, rapid assembly, fine manipulation, and repetitive inspection tasks. It is ideal for electronics manufacturing, medical device processing, food packaging, and lab automation. With a reach of 930 mm and repeatability of ±0.03 mm, the RS007L operates efficiently in compact spaces and supports integration with vision systems and end-effectors, making it suitable for flexible automation cells and collaborative workstations.\nVisual Features:Visually, the arm features a clean, streamlined industrial design with a matte white body and gray or metallic joints, combining modern aesthetics with professional appeal. The structure is made from aluminum alloy and engineering plastics, with coated and anodized surfaces for corrosion resistance and refined texture. The joints are compact with internal cable routing, and the end includes a standard flange for quick tool changes. The overall form emphasizes lightweight construction and rigidity, reflecting the core traits of a high-performance industrial robot.",
+                    "content": "Asset Type: IndustrialRobot\nDescription: Functional Features:This is the RS007L industrial robot arm developed by Kawasaki Robotics, a lightweight, high-speed 6-axis manipulator. Its functional features include high-precision handling, rapid assembly, fine manipulation, and repetitive inspection tasks. It is ideal for electronics manufacturing, medical device processing, food packaging, and lab automation. With a reach of 930 mm and repeatability of ±0.03 mm, the RS007L operates efficiently in compact spaces and supports integration with vision systems and end-effectors, making it suitable for flexible automation cells and collaborative workstations.\nVisual Features:Visually, the arm features a clean, streamlined industrial design with a matte white body and gray or metallic joints, combining modern aesthetics with professional appeal. The structure is made from aluminum alloy and engineering plastics, with coated and anodized surfaces for corrosion resistance and refined texture. The joints are compact with internal cable routing, and the end includes a standard flange for quick tool changes. The overall form emphasizes lightweight construction and rigidity, reflecting the core traits of a high-performance industrial robot.\nTags: {\"Model\": \"RS007L\", \"Manufacturer\": \"Kawasaki Robotics\", \"DOF\": \"6\", \"DNA\": \"D_{A}(k)\"}\n",
+                    "preview": "Asset Type: IndustrialRobot\nDescription: Functional Features:This is the RS007L industrial robot arm developed by Kawasaki Robotics, a lightweight, high-speed 6-axis manipulator. Its functional features include high-precision handling, rapi"
+                  }
+                ],
+                "count": 1,
+                "query": "industrial robot",
+                "doc_type": "asset",
+                "asset_type": "IndustrialRobot"
+              },
+              "error": null
+            }
+          },
+          "action_summary": {
+            "step": 0,
+            "name": "retrieve_asset",
+            "arguments": {
+              "query": "industrial robot",
+              "expected_asset_type": "IndustrialRobot",
+              "top_k": 1
+            },
+            "ok": true,
+            "error": null,
+            "summary": {
+              "count": 1,
+              "asset_type": "IndustrialRobot",
+              "top_doc_ids": [
+                "IndustrialRobot_with_bbox_meters-10-8a357ee0"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "step": 1,
+      "tools": [
+        {
+          "tool_index": 0,
+          "timestamp": "2026-05-24T21:55:16.144878+00:00",
+          "tool": {
+            "name": "place_instance",
+            "arguments": {
+              "doc_id": "Workbench_with_bbox_meters-27-d557a83e",
+              "position": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "ok": true,
+            "elapsed_ms": 0.915,
+            "result": {
+              "ok": true,
+              "data": {
+                "instance_id": "Workbench.c.9",
+                "base_instance_id": "Workbench.c.9",
+                "asset_type": "Workbench",
+                "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Workbench/model_lab_bench001.usdz",
+                "position": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "bbox_size": [
+                  3.0,
+                  0.739,
+                  0.895887
+                ],
+                "tags": {
+                  "DNA": "D_{D}(ab)"
+                },
+                "description": "Functional Features:This object is an all-steel laboratory side bench (also usable as a double long office console). Its core function is to provide a spacious and stable operating space for two people to work simultaneously. The flat and wide tabletop adapts to experimental testing, equipment placement, and office work. The embedded power module integrated on the tabletop can conveniently supply power to instruments and equipment. The symmetrical single-door three-drawer cabinets on both sides realize closed storage for experimental consumables, office supplies and documents, greatly improving space utilization and operating convenience. It is widely used in university research laboratories, testing institution labs, factory quality inspection workshops, corporate open office areas, and hospital clinical laboratories, featuring a stable structure, excellent storage performance, convenient power supply and strong adaptability.\nVisual Features: Visually, it adopts a full pure white matte design with a symmetrical long square shape, decorated with black skirting lines and a black-framed power panel for color contrast, with simple and neat silver embedded handles. The main body is made of high-strength cold-rolled steel with wear-resistant matte anti-static spraying on the surface, presenting a clean and simple style. The black grid background of 3D modeling highlights its digital asset attribute."
+              },
+              "error": null
+            }
+          },
+          "action_summary": {
+            "step": 1,
+            "name": "place_instance",
+            "arguments": {
+              "doc_id": "Workbench_with_bbox_meters-27-d557a83e",
+              "position": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "ok": true,
+            "error": null,
+            "summary": {
+              "instance_id": "Workbench.c.9",
+              "asset_type": "Workbench",
+              "position": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "bbox_size": [
+                3.0,
+                0.739,
+                0.895887
+              ]
+            }
+          }
+        },
+        {
+          "tool_index": 1,
+          "timestamp": "2026-05-24T21:55:16.146263+00:00",
+          "tool": {
+            "name": "place_instance",
+            "arguments": {
+              "doc_id": "Box_with_bbox_meters-1-ad504646",
+              "position": [
+                0.0,
+                0.0,
+                0.8
+              ]
+            },
+            "ok": true,
+            "elapsed_ms": 0.766,
+            "result": {
+              "ok": true,
+              "data": {
+                "instance_id": "Box.a.2",
+                "base_instance_id": "Box.a.2",
+                "asset_type": "Box",
+                "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Box/Cardbox_C1.usdz",
+                "position": [
+                  0.0,
+                  0.0,
+                  0.8
+                ],
+                "bbox_size": [
+                  0.513243,
+                  0.510562,
+                  0.259689
+                ],
+                "tags": {
+                  "Colsure": "Close",
+                  "DNA": "D_{F}(b)"
+                },
+                "description": "Functional Features: This object is a paper packaging box, used for packaging, storing and transporting items. It can protect the internal items from external bumps and dust, and also realize the classification management and identification of items. Its application scenarios include commodity packaging in e-commerce retail, gift box packaging of cultural and creative products, and daily sundries storage, etc. It can meet the protection and storage needs of items in different scenarios, and is a low-cost and practical packaging carrier.\nVisual Features: The main body is light brown, made of paper (presumably cardboard or kraft paper), with a flat and smooth surface treatment and no extra decoration. It has a regular cubic shape with a concise and neat structure. The light brown appearance against the black background is simple and elegant, highlighting its functionality and versatility as a packaging container."
+              },
+              "error": null
+            }
+          },
+          "action_summary": {
+            "step": 1,
+            "name": "place_instance",
+            "arguments": {
+              "doc_id": "Box_with_bbox_meters-1-ad504646",
+              "position": [
+                0.0,
+                0.0,
+                0.8
+              ]
+            },
+            "ok": true,
+            "error": null,
+            "summary": {
+              "instance_id": "Box.a.2",
+              "asset_type": "Box",
+              "position": [
+                0.0,
+                0.0,
+                0.8
+              ],
+              "bbox_size": [
+                0.513243,
+                0.510562,
+                0.259689
+              ]
+            }
+          }
+        },
+        {
+          "tool_index": 2,
+          "timestamp": "2026-05-24T21:55:16.154380+00:00",
+          "tool": {
+            "name": "place_instance",
+            "arguments": {
+              "doc_id": "IndustrialRobot_with_bbox_meters-10-8a357ee0",
+              "position": [
+                2.0,
+                0.0,
+                0.0
+              ]
+            },
+            "ok": true,
+            "elapsed_ms": 1.009,
+            "result": {
+              "ok": true,
+              "data": {
+                "instance_id": "IndustrialRobot.a.10",
+                "base_instance_id": "IndustrialRobot.a.10",
+                "asset_type": "IndustrialRobot",
+                "usd_path": "/media/simple/another_Documents/isaacsim_assets/device_data/usdz/IndustrialRobot/rs007l_onrobot_rg2.usdz",
+                "position": [
+                  2.0,
+                  0.0,
+                  0.0
+                ],
+                "bbox_size": [
+                  0.3811,
+                  0.318683,
+                  1.584772
+                ],
+                "tags": {
+                  "Model": "RS007L",
+                  "Manufacturer": "Kawasaki Robotics",
+                  "DOF": "6",
+                  "DNA": "D_{A}(k)"
+                },
+                "description": "Functional Features:This is the RS007L industrial robot arm developed by Kawasaki Robotics, a lightweight, high-speed 6-axis manipulator. Its functional features include high-precision handling, rapid assembly, fine manipulation, and repetitive inspection tasks. It is ideal for electronics manufacturing, medical device processing, food packaging, and lab automation. With a reach of 930 mm and repeatability of ±0.03 mm, the RS007L operates efficiently in compact spaces and supports integration with vision systems and end-effectors, making it suitable for flexible automation cells and collaborative workstations.\nVisual Features:Visually, the arm features a clean, streamlined industrial design with a matte white body and gray or metallic joints, combining modern aesthetics with professional appeal. The structure is made from aluminum alloy and engineering plastics, with coated and anodized surfaces for corrosion resistance and refined texture. The joints are compact with internal cable routing, and the end includes a standard flange for quick tool changes. The overall form emphasizes lightweight construction and rigidity, reflecting the core traits of a high-performance industrial robot."
+              },
+              "error": null
+            }
+          },
+          "action_summary": {
+            "step": 1,
+            "name": "place_instance",
+            "arguments": {
+              "doc_id": "IndustrialRobot_with_bbox_meters-10-8a357ee0",
+              "position": [
+                2.0,
+                0.0,
+                0.0
+              ]
+            },
+            "ok": true,
+            "error": null,
+            "summary": {
+              "instance_id": "IndustrialRobot.a.10",
+              "asset_type": "IndustrialRobot",
+              "position": [
+                2.0,
+                0.0,
+                0.0
+              ],
+              "bbox_size": [
+                0.3811,
+                0.318683,
+                1.584772
+              ]
+            }
+          }
+        },
+        {
+          "tool_index": 3,
+          "timestamp": "2026-05-24T21:55:16.155597+00:00",
+          "tool": {
+            "name": "set_support",
+            "arguments": {
+              "child_id": "Box_with_bbox_meters-1-ad504646_0",
+              "parent_id": "Workbench_with_bbox_meters-27-d557a83e_0"
+            },
+            "ok": false,
+            "elapsed_ms": 0.504,
+            "result": {
+              "ok": false,
+              "data": {},
+              "error": "child instance not found: Box_with_bbox_meters-1-ad504646_0"
+            }
+          },
+          "action_summary": {
+            "step": 1,
+            "name": "set_support",
+            "arguments": {
+              "child_id": "Box_with_bbox_meters-1-ad504646_0",
+              "parent_id": "Workbench_with_bbox_meters-27-d557a83e_0"
+            },
+            "ok": false,
+            "error": "child instance not found: Box_with_bbox_meters-1-ad504646_0",
+            "summary": {
+              "child": null,
+              "parent": null,
+              "registered": null,
+              "validation_performed": null
+            }
+          }
+        },
+        {
+          "tool_index": 4,
+          "timestamp": "2026-05-24T21:55:27.316093+00:00",
+          "tool": {
+            "name": "check_collision",
+            "arguments": {},
+            "ok": true,
+            "elapsed_ms": 11159.798,
+            "result": {
+              "ok": true,
+              "data": {
+                "backend": "isaacsim",
+                "collision_free": false,
+                "collisions": [
+                  {
+                    "a": "Workbench.c.9",
+                    "b": "Box.a.2",
+                    "method": "isaac_world_bbox",
+                    "axis": "z",
+                    "overlap": 0.09605653156488636,
+                    "overlap_depth": [
+                      0.5132433967312409,
+                      0.5105622940384826,
+                      0.09605653156488636
+                    ],
+                    "suggested_moves": [
+                      {
+                        "instance_id": "Workbench.c.9",
+                        "old_position": [
+                          0.0,
+                          0.0,
+                          0.0
+                        ],
+                        "move_vector": [
+                          0.0,
+                          0.0,
+                          -0.07302826578244317
+                        ],
+                        "final_position": [
+                          0.0,
+                          0.0,
+                          -0.07302826578244317
+                        ],
+                        "new_position": [
+                          0.0,
+                          0.0,
+                          -0.07302826578244317
+                        ],
+                        "collisions": [
+                          {
+                            "a": "Workbench.c.9",
+                            "b": "Box.a.2"
+                          }
+                        ]
+                      },
+                      {
+                        "instance_id": "Box.a.2",
+                        "old_position": [
+                          0.0,
+                          0.0,
+                          0.8
+                        ],
+                        "move_vector": [
+                          0.0,
+                          0.0,
+                          0.07302826578244317
+                        ],
+                        "final_position": [
+                          0.0,
+                          0.0,
+                          0.8730282657824432
+                        ],
+                        "new_position": [
+                          0.0,
+                          0.0,
+                          0.8730282657824432
+                        ],
+                        "collisions": [
+                          {
+                            "a": "Workbench.c.9",
+                            "b": "Box.a.2"
+                          }
+                        ]
+                      }
+                    ],
+                    "suggested_move": {
+                      "instance_id": "Workbench.c.9",
+                      "old_position": [
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      "move_vector": [
+                        0.0,
+                        0.0,
+                        -0.07302826578244317
+                      ],
+                      "final_position": [
+                        0.0,
+                        0.0,
+                        -0.07302826578244317
+                      ],
+                      "new_position": [
+                        0.0,
+                        0.0,
+                        -0.07302826578244317
+                      ],
+                      "collisions": [
+                        {
+                          "a": "Workbench.c.9",
+                          "b": "Box.a.2"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "suggested_move": {
+                  "instance_id": "Workbench.c.9",
+                  "final_position": [
+                    0.0,
+                    0.0,
+                    -0.07302826578244317
+                  ],
+                  "axis": "z",
+                  "move_vector": [
+                    0.0,
+                    0.0,
+                    -0.07302826578244317
+                  ],
+                  "new_position": [
+                    0.0,
+                    0.0,
+                    -0.07302826578244317
+                  ],
+                  "primary_move": {
+                    "instance_id": "Workbench.c.9",
+                    "old_position": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "move_vector": [
+                      0.0,
+                      0.0,
+                      -0.07302826578244317
+                    ],
+                    "final_position": [
+                      0.0,
+                      0.0,
+                      -0.07302826578244317
+                    ],
+                    "new_position": [
+                      0.0,
+                      0.0,
+                      -0.07302826578244317
+                    ],
+                    "collisions": [
+                      {
+                        "a": "Workbench.c.9",
+                        "b": "Box.a.2"
+                      }
+                    ]
+                  },
+                  "moves": [
+                    {
+                      "instance_id": "Workbench.c.9",
+                      "old_position": [
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      "move_vector": [
+                        0.0,
+                        0.0,
+                        -0.07302826578244317
+                      ],
+                      "final_position": [
+                        0.0,
+                        0.0,
+                        -0.07302826578244317
+                      ],
+                      "new_position": [
+                        0.0,
+                        0.0,
+                        -0.07302826578244317
+                      ],
+                      "collisions": [
+                        {
+                          "a": "Workbench.c.9",
+                          "b": "Box.a.2"
+                        }
+                      ]
+                    },
+                    {
+                      "instance_id": "Box.a.2",
+                      "old_position": [
+                        0.0,
+                        0.0,
+                        0.8
+                      ],
+                      "move_vector": [
+                        0.0,
+                        0.0,
+                        0.07302826578244317
+                      ],
+                      "final_position": [
+                        0.0,
+                        0.0,
+                        0.8730282657824432
+                      ],
+                      "new_position": [
+                        0.0,
+                        0.0,
+                        0.8730282657824432
+                      ],
+                      "collisions": [
+                        {
+                          "a": "Workbench.c.9",
+                          "b": "Box.a.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "final_positions": {
+                    "Workbench.c.9": {
+                      "instance_id": "Workbench.c.9",
+                      "final_position": [
+                        0.0,
+                        0.0,
+                        -0.07302826578244317
+                      ]
+                    },
+                    "Box.a.2": {
+                      "instance_id": "Box.a.2",
+                      "final_position": [
+                        0.0,
+                        0.0,
+                        0.8730282657824432
+                      ]
+                    },
+                    "IndustrialRobot.a.10": {
+                      "instance_id": "IndustrialRobot.a.10",
+                      "final_position": [
+                        2.0,
+                        0.0,
+                        0.0
+                      ]
+                    }
+                  },
+                  "unresolved_collisions": [],
+                  "resolved_collision_free": true,
+                  "iterations": 1,
+                  "margin": 0.05,
+                  "reason": "iteratively separate all colliding world AABBs and report the suggested final position for each checked instance"
+                },
+                "suggested_moves": [
+                  {
+                    "instance_id": "Workbench.c.9",
+                    "old_position": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "move_vector": [
+                      0.0,
+                      0.0,
+                      -0.07302826578244317
+                    ],
+                    "final_position": [
+                      0.0,
+                      0.0,
+                      -0.07302826578244317
+                    ],
+                    "new_position": [
+                      0.0,
+                      0.0,
+                      -0.07302826578244317
+                    ],
+                    "collisions": [
+                      {
+                        "a": "Workbench.c.9",
+                        "b": "Box.a.2"
+                      }
+                    ]
+                  },
+                  {
+                    "instance_id": "Box.a.2",
+                    "old_position": [
+                      0.0,
+                      0.0,
+                      0.8
+                    ],
+                    "move_vector": [
+                      0.0,
+                      0.0,
+                      0.07302826578244317
+                    ],
+                    "final_position": [
+                      0.0,
+                      0.0,
+                      0.8730282657824432
+                    ],
+                    "new_position": [
+                      0.0,
+                      0.0,
+                      0.8730282657824432
+                    ],
+                    "collisions": [
+                      {
+                        "a": "Workbench.c.9",
+                        "b": "Box.a.2"
+                      }
+                    ]
+                  }
+                ],
+                "suggested_final_positions": {
+                  "Workbench.c.9": {
+                    "instance_id": "Workbench.c.9",
+                    "final_position": [
+                      0.0,
+                      0.0,
+                      -0.07302826578244317
+                    ]
+                  },
+                  "Box.a.2": {
+                    "instance_id": "Box.a.2",
+                    "final_position": [
+                      0.0,
+                      0.0,
+                      0.8730282657824432
+                    ]
+                  },
+                  "IndustrialRobot.a.10": {
+                    "instance_id": "IndustrialRobot.a.10",
+                    "final_position": [
+                      2.0,
+                      0.0,
+                      0.0
+                    ]
+                  }
+                },
+                "warnings": [
+                  "physics authoring failed for Workbench.c.9: module 'pxr.PhysxSchema' has no attribute 'PhysxSDFCollisionAPI'",
+                  "physics authoring failed for Box.a.2: module 'pxr.PhysxSchema' has no attribute 'PhysxSDFCollisionAPI'",
+                  "physics authoring failed for IndustrialRobot.a.10: module 'pxr.PhysxSchema' has no attribute 'PhysxSDFCollisionAPI'"
+                ]
+              },
+              "error": null
+            }
+          },
+          "action_summary": {
+            "step": 1,
+            "name": "check_collision",
+            "arguments": {
+              "instance_id_a": null,
+              "instance_id_b": null
+            },
+            "ok": true,
+            "error": null,
+            "summary": {
+              "collision_free": false,
+              "collision_count": 1,
+              "first_collision": {
+                "a": "Workbench.c.9",
+                "b": "Box.a.2",
+                "overlap": 0.09605653156488636,
+                "suggested_move": {
+                  "instance_id": "Workbench.c.9",
+                  "old_position": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "move_vector": [
+                    0.0,
+                    0.0,
+                    -0.07302826578244317
+                  ],
+                  "final_position": [
+                    0.0,
+                    0.0,
+                    -0.07302826578244317
+                  ],
+                  "new_position": [
+                    0.0,
+                    0.0,
+                    -0.07302826578244317
+                  ],
+                  "collisions": [
+                    {
+                      "a": "Workbench.c.9",
+                      "b": "Box.a.2"
+                    }
+                  ]
+                }
+              },
+              "suggested_move": {
+                "instance_id": "Workbench.c.9",
+                "final_position": [
+                  0.0,
+                  0.0,
+                  -0.07302826578244317
+                ],
+                "axis": "z",
+                "move_vector": [
+                  0.0,
+                  0.0,
+                  -0.07302826578244317
+                ],
+                "new_position": [
+                  0.0,
+                  0.0,
+                  -0.07302826578244317
+                ],
+                "primary_move": {
+                  "instance_id": "Workbench.c.9",
+                  "old_position": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "move_vector": [
+                    0.0,
+                    0.0,
+                    -0.07302826578244317
+                  ],
+                  "final_position": [
+                    0.0,
+                    0.0,
+                    -0.07302826578244317
+                  ],
+                  "new_position": [
+                    0.0,
+                    0.0,
+                    -0.07302826578244317
+                  ],
+                  "collisions": [
+                    {
+                      "a": "Workbench.c.9",
+                      "b": "Box.a.2"
+                    }
+                  ]
+                },
+                "moves": [
+                  {
+                    "instance_id": "Workbench.c.9",
+                    "old_position": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "move_vector": [
+                      0.0,
+                      0.0,
+                      -0.07302826578244317
+                    ],
+                    "final_position": [
+                      0.0,
+                      0.0,
+                      -0.07302826578244317
+                    ],
+                    "new_position": [
+                      0.0,
+                      0.0,
+                      -0.07302826578244317
+                    ],
+                    "collisions": [
+                      {
+                        "a": "Workbench.c.9",
+                        "b": "Box.a.2"
+                      }
+                    ]
+                  },
+                  {
+                    "instance_id": "Box.a.2",
+                    "old_position": [
+                      0.0,
+                      0.0,
+                      0.8
+                    ],
+                    "move_vector": [
+                      0.0,
+                      0.0,
+                      0.07302826578244317
+                    ],
+                    "final_position": [
+                      0.0,
+                      0.0,
+                      0.8730282657824432
+                    ],
+                    "new_position": [
+                      0.0,
+                      0.0,
+                      0.8730282657824432
+                    ],
+                    "collisions": [
+                      {
+                        "a": "Workbench.c.9",
+                        "b": "Box.a.2"
+                      }
+                    ]
+                  }
+                ],
+                "final_positions": {
+                  "Workbench.c.9": {
+                    "instance_id": "Workbench.c.9",
+                    "final_position": [
+                      0.0,
+                      0.0,
+                      -0.07302826578244317
+                    ]
+                  },
+                  "Box.a.2": {
+                    "instance_id": "Box.a.2",
+                    "final_position": [
+                      0.0,
+                      0.0,
+                      0.8730282657824432
+                    ]
+                  },
+                  "IndustrialRobot.a.10": {
+                    "instance_id": "IndustrialRobot.a.10",
+                    "final_position": [
+                      2.0,
+                      0.0,
+                      0.0
+                    ]
+                  }
+                },
+                "unresolved_collisions": [],
+                "resolved_collision_free": true,
+                "iterations": 1,
+                "margin": 0.05,
+                "reason": "iteratively separate all colliding world AABBs and report the suggested final position for each checked instance"
+              },
+              "suggested_moves": [
+                {
+                  "instance_id": "Workbench.c.9",
+                  "old_position": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "move_vector": [
+                    0.0,
+                    0.0,
+                    -0.07302826578244317
+                  ],
+                  "final_position": [
+                    0.0,
+                    0.0,
+                    -0.07302826578244317
+                  ],
+                  "new_position": [
+                    0.0,
+                    0.0,
+                    -0.07302826578244317
+                  ],
+                  "collisions": [
+                    {
+                      "a": "Workbench.c.9",
+                      "b": "Box.a.2"
+                    }
+                  ]
+                },
+                {
+                  "instance_id": "Box.a.2",
+                  "old_position": [
+                    0.0,
+                    0.0,
+                    0.8
+                  ],
+                  "move_vector": [
+                    0.0,
+                    0.0,
+                    0.07302826578244317
+                  ],
+                  "final_position": [
+                    0.0,
+                    0.0,
+                    0.8730282657824432
+                  ],
+                  "new_position": [
+                    0.0,
+                    0.0,
+                    0.8730282657824432
+                  ],
+                  "collisions": [
+                    {
+                      "a": "Workbench.c.9",
+                      "b": "Box.a.2"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "tool_index": 5,
+          "timestamp": "2026-05-24T21:55:49.812396+00:00",
+          "tool": {
+            "name": "move_asset",
+            "arguments": {
+              "instance_id": "Workbench.c.9",
+              "new_position": [
+                0.0,
+                0.0,
+                -0.07302826578244317
+              ]
+            },
+            "ok": true,
+            "elapsed_ms": 0.838,
+            "result": {
+              "ok": true,
+              "data": {
+                "instance_id": "Workbench.c.9",
+                "old_position": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "new_position": [
+                  0.0,
+                  0.0,
+                  -0.07302826578244317
+                ]
+              },
+              "error": null
+            }
+          },
+          "action_summary": {
+            "step": 1,
+            "name": "move_asset",
+            "arguments": {
+              "instance_id": "Workbench.c.9",
+              "new_position": [
+                0.0,
+                0.0,
+                -0.07302826578244317
+              ]
+            },
+            "ok": true,
+            "error": null,
+            "summary": {
+              "instance_id": "Workbench.c.9",
+              "old_position": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "new_position": [
+                0.0,
+                0.0,
+                -0.07302826578244317
+              ]
+            }
+          }
+        },
+        {
+          "tool_index": 6,
+          "timestamp": "2026-05-24T21:55:49.814515+00:00",
+          "tool": {
+            "name": "move_asset",
+            "arguments": {
+              "instance_id": "Box.a.2",
+              "new_position": [
+                0.0,
+                0.0,
+                0.8730282657824432
+              ]
+            },
+            "ok": true,
+            "elapsed_ms": 0.614,
+            "result": {
+              "ok": true,
+              "data": {
+                "instance_id": "Box.a.2",
+                "old_position": [
+                  0.0,
+                  0.0,
+                  0.8
+                ],
+                "new_position": [
+                  0.0,
+                  0.0,
+                  0.8730282657824432
+                ]
+              },
+              "error": null
+            }
+          },
+          "action_summary": {
+            "step": 1,
+            "name": "move_asset",
+            "arguments": {
+              "instance_id": "Box.a.2",
+              "new_position": [
+                0.0,
+                0.0,
+                0.8730282657824432
+              ]
+            },
+            "ok": true,
+            "error": null,
+            "summary": {
+              "instance_id": "Box.a.2",
+              "old_position": [
+                0.0,
+                0.0,
+                0.8
+              ],
+              "new_position": [
+                0.0,
+                0.0,
+                0.8730282657824432
+              ]
+            }
+          }
+        },
+        {
+          "tool_index": 7,
+          "timestamp": "2026-05-24T21:55:49.822459+00:00",
+          "tool": {
+            "name": "move_asset",
+            "arguments": {
+              "instance_id": "IndustrialRobot.a.10",
+              "new_position": [
+                2.0,
+                0.0,
+                0.0
+              ]
+            },
+            "ok": true,
+            "elapsed_ms": 0.662,
+            "result": {
+              "ok": true,
+              "data": {
+                "instance_id": "IndustrialRobot.a.10",
+                "old_position": [
+                  2.0,
+                  0.0,
+                  0.0
+                ],
+                "new_position": [
+                  2.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "error": null
+            }
+          },
+          "action_summary": {
+            "step": 1,
+            "name": "move_asset",
+            "arguments": {
+              "instance_id": "IndustrialRobot.a.10",
+              "new_position": [
+                2.0,
+                0.0,
+                0.0
+              ]
+            },
+            "ok": true,
+            "error": null,
+            "summary": {
+              "instance_id": "IndustrialRobot.a.10",
+              "old_position": [
+                2.0,
+                0.0,
+                0.0
+              ],
+              "new_position": [
+                2.0,
+                0.0,
+                0.0
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "tools": [
+        {
+          "tool_index": 0,
+          "timestamp": "2026-05-24T21:56:31.419507+00:00",
+          "tool": {
+            "name": "set_support",
+            "arguments": {
+              "child_id": "Box.a.2",
+              "parent_id": "Workbench.c.9"
+            },
+            "ok": true,
+            "elapsed_ms": 0.655,
+            "result": {
+              "ok": true,
+              "data": {
+                "child": "Box.a.2",
+                "parent": "Workbench.c.9",
+                "old_parent": null,
+                "registered": true,
+                "validation_performed": false,
+                "next_recommended_tools": [
+                  "check_support",
+                  "query_scene"
+                ]
+              },
+              "error": null
+            }
+          },
+          "action_summary": {
+            "step": 2,
+            "name": "set_support",
+            "arguments": {
+              "child_id": "Box.a.2",
+              "parent_id": "Workbench.c.9"
+            },
+            "ok": true,
+            "error": null,
+            "summary": {
+              "child": "Box.a.2",
+              "parent": "Workbench.c.9",
+              "registered": true,
+              "validation_performed": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "tools": [
+        {
+          "tool_index": 0,
+          "timestamp": "2026-05-24T21:57:26.979298+00:00",
+          "tool": {
+            "name": "save_scene_usd",
+            "arguments": {
+              "keep_temp_stage": false
+            },
+            "ok": true,
+            "elapsed_ms": 10269.997,
+            "result": {
+              "ok": true,
+              "data": {
+                "ok": true,
+                "save": true,
+                "operation": "save_scene_usd",
+                "operations": "save_scene_usd",
+                "backend": "isaacsim",
+                "usd_path": "/home/simple/joey/scene_synthesis/outputs/runs/20260525_055414_544b2ddd/saved_scene.usd",
+                "temp_stage_path": null,
+                "instance_count": 3,
+                "exported_count": 3,
+                "prim_paths": {
+                  "Workbench.c.9": "/World/Instances/Workbench_c_9",
+                  "Box.a.2": "/World/Instances/Box_a_2",
+                  "IndustrialRobot.a.10": "/World/Instances/IndustrialRobot_a_10"
+                },
+                "warnings": [],
+                "stage_path": "/home/simple/joey/scene_synthesis/outputs/runs/20260525_055414_544b2ddd/scene_synthesis_81527b44f42b43d49a7a276b0a32f782.usd"
+              },
+              "error": null
+            }
+          },
+          "action_summary": {
+            "step": 3,
+            "name": "save_scene_usd",
+            "arguments": {
+              "keep_temp_stage": false
+            },
+            "ok": true,
+            "error": null,
+            "summary": {
+              "saved": true,
+              "usd_path": "/home/simple/joey/scene_synthesis/outputs/runs/20260525_055414_544b2ddd/saved_scene.usd",
+              "exported_count": 3,
+              "instance_count": 3
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
