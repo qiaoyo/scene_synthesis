@@ -15,7 +15,7 @@ class PlaceInstanceTool(Tool):
                 "properties": {
                     "doc_id": {
                         "type": "string",
-                        "description": "Asset document ID from retrieve_assets result."
+                        "description": "Asset document ID from retrieve_asset result."
                     },
                     "position": {
                         "type": "array",
@@ -36,6 +36,7 @@ class PlaceInstanceTool(Tool):
     }
 
     def run(self, context: ToolContext, doc_id: str, position: list[float], rotation_deg: float = 0.0) -> ToolResult:
+        doc: Optional[AssetDocument] = None
         for d in context.rag.documents:
             if d.doc_id == doc_id:
                 doc = d
@@ -44,13 +45,13 @@ class PlaceInstanceTool(Tool):
         if doc is None:
             return ToolResult(
                 ok=False, 
-                error=f"asset_doc_id 不在语料库中: {doc_id}"
+                error=f"Asset doc_id does not exist in corpus: {doc_id}"
                 )
             
         if doc.metadata.get("doc_type") != "asset":
             return ToolResult(
                 ok=False, 
-                error=f"asset_doc_id 必须指向 doc_type=asset 的文档: {doc_id}"
+                error=f"asset_doc_id must point to a document with doc_type=asset: {doc_id}"
                 )
             
         try:
@@ -69,8 +70,17 @@ class PlaceInstanceTool(Tool):
         bbox_size = bbox.get("size") or [1.0, 1.0, 1.0]
         
         instance_id = str(doc.metadata.get("instance_id"))
-        if instance_id in context.scene.state.instances:
-            return ToolResult(ok=False, error=f"instance_id 已存在: {instance_id}")
+        base_id = instance_id
+
+        if base_id in context.scene.state.instances:
+            idx = 1
+            while True:
+                new_id = f"{base_id}_{idx}"
+                if new_id not in context.scene.state.instances:
+                    instance_id = new_id
+                    break
+                idx += 1
+                
         inst = Instance(
             instance_id=instance_id,
             asset_type=asset_type,
@@ -82,9 +92,11 @@ class PlaceInstanceTool(Tool):
             tags=dict(doc.metadata.get("tags") or {}),
             description=str(doc.metadata.get("description") or ""),
         )
+            
         context.scene.add_instance(inst)
         return ToolResult(ok=True, data={
             "instance_id": instance_id,
+            "base_instance_id": base_id,
             "asset_type": asset_type,
             "usd_path": usd_path,
             "position": inst.position,

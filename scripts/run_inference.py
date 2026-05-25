@@ -15,8 +15,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--command",
         type=str,
-        default="Generate an unmanned automated assembly workshop scene combining linear production and grid logistics. Set a conveyor line in the center as the core assembly main line. Place two six-axis industrial robots symmetrically on both sides of the conveyor line for precise workpiece assembly. Equip the logistics area with three AGV cars carrying baskets and one mobile robot equipped with a collaborative arm to transfer materials between stations.",
+        default="Get a big robotic arm and place it on the workbench(set support), put a long straight conveyor belt beside it, then place one part on the belt(set support). ",
         help="Task description for the planner"
+        
     )
     return parser.parse_args()
 def main() -> int:

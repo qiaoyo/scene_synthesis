@@ -9,7 +9,7 @@ import os,sys
 
 if __name__ == "__main__":
     #usd_path = Path("/media/simple/another_Documents/isaacsim_assets/assets/Workbench_2/Workbench_2.usdc")
-    usd_path = Path("/media/simple/another_Documents/isaacsim_assets/assets/Robotic_Manipulator_low_poly/Robotic_Manipulator_low_poly.usdc")
+    usd_path = Path("/media/simple/another_Documents/isaacsim_assets/device_data/usdz/Part/xiejian.usd")
     usd_dir = usd_path.parent
     usd_name = usd_path.name
     usd_context = USDProcessingContext(str(usd_path))

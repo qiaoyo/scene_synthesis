@@ -216,7 +216,6 @@ def _build_stage(
 
     prim_paths: Dict[str, str] = {}
     used_names: set[str] = set()
-
     for instance_id, inst in _instances(scene).items():
         base_name = _safe_name(instance_id)
         name = base_name
@@ -527,6 +526,402 @@ def _collision_move_weights(
 
     return weight(a_id), weight(b_id)
 
+def _bboxes_collide(
+    a_bbox: Dict[str, List[float]],
+    b_bbox: Dict[str, List[float]],
+    *,
+    penetration_tolerance: float = 1e-5,
+) -> bool:
+    if not _aabb_overlap(
+        a_bbox["min"],
+        a_bbox["max"],
+        b_bbox["min"],
+        b_bbox["max"],
+    ):
+        return False
+
+    overlaps = _bbox_overlap_depth(a_bbox, b_bbox)
+    return all(overlap > penetration_tolerance for overlap in overlaps)
+
+def _translated_bbox_copy(
+    bbox: Dict[str, List[float]],
+    move_vector: List[float],
+) -> Dict[str, List[float]]:
+    translated = _copy_bbox(bbox)
+    _translate_bbox(translated, move_vector)
+    return translated
+
+def _xy_margin_bbox(
+    bbox: Dict[str, List[float]],
+    margin: float,
+) -> Dict[str, List[float]]:
+    padded = _copy_bbox(bbox)
+    if margin <= 0.0:
+        return padded
+    padded["min"][0] -= margin
+    padded["min"][1] -= margin
+    padded["max"][0] += margin
+    padded["max"][1] += margin
+    return padded
+
+def _bbox_collides_any(
+    candidate_bbox: Dict[str, List[float]],
+    obstacle_bboxes: Iterable[Dict[str, List[float]]],
+    *,
+    margin: float = 0.0,
+    penetration_tolerance: float = 1e-5,
+) -> bool:
+    test_bbox = _xy_margin_bbox(candidate_bbox, margin)
+    return any(
+        _bboxes_collide(
+            test_bbox,
+            obstacle_bbox,
+            penetration_tolerance=penetration_tolerance,
+        )
+        for obstacle_bbox in obstacle_bboxes
+    )
+
+def _bbox_xy_area(bbox: Dict[str, List[float]]) -> float:
+    size = _bbox_size(bbox)
+    return max(0.0, size[0]) * max(0.0, size[1])
+
+def _collision_degrees(collisions: List[Dict[str, Any]]) -> Dict[str, int]:
+    degrees: Dict[str, int] = {}
+    for collision in collisions:
+        a_id = collision.get("a")
+        b_id = collision.get("b")
+        if isinstance(a_id, str):
+            degrees[a_id] = degrees.get(a_id, 0) + 1
+        if isinstance(b_id, str):
+            degrees[b_id] = degrees.get(b_id, 0) + 1
+    return degrees
+
+def _collision_components(
+    ids: List[str],
+    collisions: List[Dict[str, Any]],
+) -> List[List[str]]:
+    id_set = set(ids)
+    graph: Dict[str, set[str]] = {instance_id: set() for instance_id in ids}
+
+    for collision in collisions:
+        a_id = collision.get("a")
+        b_id = collision.get("b")
+        if not isinstance(a_id, str) or not isinstance(b_id, str):
+            continue
+        if a_id not in id_set or b_id not in id_set:
+            continue
+        graph[a_id].add(b_id)
+        graph[b_id].add(a_id)
+
+    components: List[List[str]] = []
+    seen: set[str] = set()
+    for instance_id in ids:
+        if instance_id in seen or not graph[instance_id]:
+            continue
+
+        component: List[str] = []
+        stack = [instance_id]
+        seen.add(instance_id)
+        while stack:
+            current = stack.pop()
+            component.append(current)
+            for neighbor in sorted(graph[current], reverse=True):
+                if neighbor in seen:
+                    continue
+                seen.add(neighbor)
+                stack.append(neighbor)
+
+        if len(component) > 1:
+            components.append(component)
+
+    return components
+
+def _candidate_xy_offsets(
+    step_x: float,
+    step_y: float,
+    max_rings: int,
+) -> Iterable[Tuple[float, float]]:
+    yield 0.0, 0.0
+
+    for ring in range(1, max_rings + 1):
+        cells: List[Tuple[int, int]] = []
+        for ix in range(-ring, ring + 1):
+            for iy in range(-ring, ring + 1):
+                if max(abs(ix), abs(iy)) == ring:
+                    cells.append((ix, iy))
+
+        cells.sort(
+            key=lambda cell: (
+                (cell[0] * step_x) ** 2 + (cell[1] * step_y) ** 2,
+                abs(cell[0]) + abs(cell[1]),
+                cell[0],
+                cell[1],
+            )
+        )
+
+        for ix, iy in cells:
+            yield float(ix) * step_x, float(iy) * step_y
+
+def _find_non_colliding_xy_candidate(
+    base_bbox: Dict[str, List[float]],
+    obstacle_bboxes: Iterable[Dict[str, List[float]]],
+    *,
+    margin: float,
+    max_rings: int,
+    penetration_tolerance: float,
+) -> Tuple[Dict[str, List[float]], List[float]] | None:
+    obstacles = list(obstacle_bboxes)
+    size = _bbox_size(base_bbox)
+    step_x = max(size[0] + margin, margin * 2.0, 0.1)
+    step_y = max(size[1] + margin, margin * 2.0, 0.1)
+
+    for dx, dy in _candidate_xy_offsets(step_x, step_y, max_rings):
+        move_vector = [dx, dy, 0.0]
+        candidate = _translated_bbox_copy(base_bbox, move_vector)
+        if not _bbox_collides_any(
+            candidate,
+            obstacles,
+            margin=margin,
+            penetration_tolerance=penetration_tolerance,
+        ):
+            return candidate, move_vector
+
+    return None
+
+def _component_pack_order(
+    component_ids: List[str],
+    working_bboxes: Dict[str, Dict[str, List[float]]],
+    scene: Dict[str, Any],
+    collisions: List[Dict[str, Any]],
+) -> List[str]:
+    support_children = _support_children(scene)
+    degrees = _collision_degrees(collisions)
+
+    return sorted(
+        component_ids,
+        key=lambda instance_id: (
+            -len(support_children.get(instance_id, []) or []),
+            -_bbox_xy_area(working_bboxes[instance_id]),
+            -degrees.get(instance_id, 0),
+            instance_id,
+        ),
+    )
+
+def _pack_collision_component(
+    scene: Dict[str, Any],
+    component_ids: List[str],
+    working_bboxes: Dict[str, Dict[str, List[float]]],
+    offsets: Dict[str, List[float]],
+    all_ids: List[str],
+    collisions: List[Dict[str, Any]],
+    *,
+    margin: float,
+    max_rings: int,
+    penetration_tolerance: float,
+) -> Dict[str, Any]:
+    component_set = set(component_ids)
+    placed: set[str] = set()
+    failed: List[str] = []
+    ordered_ids = _component_pack_order(
+        component_ids,
+        working_bboxes,
+        scene,
+        collisions,
+    )
+
+    for instance_id in ordered_ids:
+        if instance_id not in working_bboxes:
+            continue
+
+        base_bbox = _copy_bbox(working_bboxes[instance_id])
+        obstacle_ids = [
+            other_id
+            for other_id in all_ids
+            if other_id != instance_id
+            and other_id in working_bboxes
+            and (other_id not in component_set or other_id in placed)
+        ]
+        candidate = _find_non_colliding_xy_candidate(
+            base_bbox,
+            [working_bboxes[other_id] for other_id in obstacle_ids],
+            margin=margin,
+            max_rings=max_rings,
+            penetration_tolerance=penetration_tolerance,
+        )
+
+        if candidate is None:
+            failed.append(instance_id)
+            placed.add(instance_id)
+            continue
+
+        candidate_bbox, move_vector = candidate
+        working_bboxes[instance_id] = candidate_bbox
+        for axis in range(3):
+            offsets[instance_id][axis] += move_vector[axis]
+        placed.add(instance_id)
+
+    return {
+        "component": component_ids,
+        "ordered": ordered_ids,
+        "failed": failed,
+    }
+
+def _scene_bounds(
+    bboxes: Iterable[Dict[str, List[float]]],
+) -> Tuple[List[float], List[float]]:
+    bbox_list = list(bboxes)
+    if not bbox_list:
+        return [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]
+
+    return (
+        [
+            min(bbox["min"][axis] for bbox in bbox_list)
+            for axis in range(3)
+        ],
+        [
+            max(bbox["max"][axis] for bbox in bbox_list)
+            for axis in range(3)
+        ],
+    )
+
+def _emergency_pack_unresolved(
+    working_bboxes: Dict[str, Dict[str, List[float]]],
+    offsets: Dict[str, List[float]],
+    move_ids: List[str],
+    *,
+    margin: float,
+) -> Dict[str, Any]:
+    move_set = {
+        instance_id
+        for instance_id in move_ids
+        if instance_id in working_bboxes
+    }
+    if not move_set:
+        return {"moved": [], "reason": "no movable unresolved instances"}
+
+    static_bboxes = [
+        bbox
+        for instance_id, bbox in working_bboxes.items()
+        if instance_id not in move_set
+    ]
+    bounds_source = static_bboxes or list(working_bboxes.values())
+    scene_min, scene_max = _scene_bounds(bounds_source)
+    anchor_y = (scene_min[1] + scene_max[1]) / 2.0
+    cursor_x = scene_max[0] + max(margin, 0.1)
+    moved: List[str] = []
+    ordered_ids = sorted(
+        move_set,
+        key=lambda instance_id: (
+            -_bbox_xy_area(working_bboxes[instance_id]),
+            instance_id,
+        ),
+    )
+
+    for instance_id in ordered_ids:
+        base_bbox = _copy_bbox(working_bboxes[instance_id])
+        base_center = _bbox_center(base_bbox)
+        cursor_x += margin
+        target_min_x = cursor_x
+        move_vector = [
+            target_min_x - base_bbox["min"][0],
+            anchor_y - base_center[1],
+            0.0,
+        ]
+        candidate_bbox = _translated_bbox_copy(base_bbox, move_vector)
+
+        working_bboxes[instance_id] = candidate_bbox
+        for axis in range(3):
+            offsets[instance_id][axis] += move_vector[axis]
+        cursor_x = candidate_bbox["max"][0] + margin
+        moved.append(instance_id)
+
+    return {
+        "moved": moved,
+        "reason": "packed unresolved instances outside the occupied scene bounds",
+    }
+
+def _resolve_collision_free_layout(
+    scene: Dict[str, Any],
+    bboxes: Dict[str, Dict[str, List[float]]],
+    ids: List[str],
+    collisions: List[Dict[str, Any]],
+    *,
+    margin: float,
+    max_rings: int,
+    penetration_tolerance: float,
+) -> Dict[str, Any]:
+    working_bboxes = {
+        instance_id: _copy_bbox(bboxes[instance_id])
+        for instance_id in ids
+        if instance_id in bboxes
+    }
+    offsets = {
+        instance_id: [0.0, 0.0, 0.0]
+        for instance_id in working_bboxes
+    }
+    components = _collision_components(ids, collisions)
+    component_stats: List[Dict[str, Any]] = []
+
+    for component_ids in components:
+        component_stats.append(
+            _pack_collision_component(
+                scene,
+                component_ids,
+                working_bboxes,
+                offsets,
+                ids,
+                collisions,
+                margin=margin,
+                max_rings=max_rings,
+                penetration_tolerance=penetration_tolerance,
+            )
+        )
+
+    unresolved = _collision_details(
+        ids,
+        working_bboxes,
+        penetration_tolerance=penetration_tolerance,
+    )
+    emergency = None
+    if unresolved:
+        original_collision_ids = {
+            instance_id
+            for collision in collisions
+            for instance_id in (collision.get("a"), collision.get("b"))
+            if isinstance(instance_id, str)
+        }
+        unresolved_ids = {
+            instance_id
+            for collision in unresolved
+            for instance_id in (collision.get("a"), collision.get("b"))
+            if isinstance(instance_id, str)
+        }
+        emergency_ids = sorted(unresolved_ids & original_collision_ids)
+        if not emergency_ids:
+            emergency_ids = sorted(unresolved_ids)
+
+        emergency = _emergency_pack_unresolved(
+            working_bboxes,
+            offsets,
+            emergency_ids,
+            margin=margin,
+        )
+        unresolved = _collision_details(
+            ids,
+            working_bboxes,
+            penetration_tolerance=penetration_tolerance,
+        )
+
+    return {
+        "working_bboxes": working_bboxes,
+        "offsets": offsets,
+        "components": components,
+        "component_stats": component_stats,
+        "unresolved": unresolved,
+        "emergency": emergency,
+        "iterations": len(components) + (1 if emergency else 0),
+    }
+
 def _suggest_collision_moves(
     scene: Dict[str, Any],
     bboxes: Dict[str, Dict[str, List[float]]],
@@ -542,71 +937,18 @@ def _suggest_collision_moves(
 
     axis_names = ["x", "y", "z"]
     instances = _instances(scene)
-    working_bboxes = {
-        instance_id: _copy_bbox(bboxes[instance_id])
-        for instance_id in ids
-        if instance_id in bboxes
-    }
-    offsets = {
-        instance_id: [0.0, 0.0, 0.0]
-        for instance_id in working_bboxes
-    }
-
-    iterations = 0
-    for iteration in range(max_iterations):
-        active_collisions = _collision_details(
-            ids,
-            working_bboxes,
-            penetration_tolerance=penetration_tolerance,
-        )
-        if not active_collisions:
-            break
-
-        moved = False
-        iterations = iteration + 1
-
-        for collision in active_collisions:
-            a_id = collision["a"]
-            b_id = collision["b"]
-            a_bbox = working_bboxes[a_id]
-            b_bbox = working_bboxes[b_id]
-            overlaps = _bbox_overlap_depth(a_bbox, b_bbox)
-            axis = _collision_axis(overlaps, penetration_tolerance)
-
-            separation = overlaps[axis] + margin
-            if separation <= penetration_tolerance:
-                continue
-
-            a_center = _bbox_center(a_bbox)
-            b_center = _bbox_center(b_bbox)
-            direction = 1.0 if b_center[axis] >= a_center[axis] else -1.0
-            a_weight, b_weight = _collision_move_weights(a_id, b_id, scene)
-            total_weight = a_weight + b_weight
-            if total_weight <= 0.0:
-                a_weight = 1.0
-                b_weight = 1.0
-                total_weight = 2.0
-
-            a_delta = -direction * separation * (a_weight / total_weight)
-            b_delta = direction * separation * (b_weight / total_weight)
-
-            for instance_id, delta in ((a_id, a_delta), (b_id, b_delta)):
-                if abs(delta) <= penetration_tolerance:
-                    continue
-                move_vector = [0.0, 0.0, 0.0]
-                move_vector[axis] = delta
-                _translate_bbox(working_bboxes[instance_id], move_vector)
-                offsets[instance_id][axis] += delta
-                moved = True
-
-        if not moved:
-            break
-
-    unresolved = _collision_details(
+    layout = _resolve_collision_free_layout(
+        scene,
+        bboxes,
         ids,
-        working_bboxes,
+        collisions,
+        margin=margin,
+        max_rings=max(max_iterations, 12),
         penetration_tolerance=penetration_tolerance,
     )
+    working_bboxes = layout["working_bboxes"]
+    offsets = layout["offsets"]
+    unresolved = layout["unresolved"]
 
     collision_refs: Dict[str, List[Dict[str, str]]] = {
         instance_id: []
@@ -662,8 +1004,12 @@ def _suggest_collision_moves(
             "final_positions": final_positions,
             "unresolved_collisions": unresolved,
             "resolved_collision_free": not unresolved,
-            "iterations": iterations,
+            "iterations": layout["iterations"],
             "margin": margin,
+            "method": "component_packing",
+            "components": layout["components"],
+            "component_stats": layout["component_stats"],
+            "emergency_pack": layout["emergency"],
             "reason": "collisions were detected, but no movable AABB separation was found",
         }
 
@@ -688,11 +1034,15 @@ def _suggest_collision_moves(
         "final_positions": final_positions,
         "unresolved_collisions": unresolved,
         "resolved_collision_free": not unresolved,
-        "iterations": iterations,
+        "iterations": layout["iterations"],
         "margin": margin,
+        "method": "component_packing",
+        "components": layout["components"],
+        "component_stats": layout["component_stats"],
+        "emergency_pack": layout["emergency"],
         "reason": (
-            "iteratively separate all colliding world AABBs and report the "
-            "suggested final position for each checked instance"
+            "pack connected collision components in XY, then verify all checked "
+            "world AABBs are collision-free"
         ),
     }
 

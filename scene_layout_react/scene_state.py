@@ -13,6 +13,8 @@ class SceneStateManager:
 
     # -- 实例 CRUD --
     def add_instance(self, inst: Instance) -> Instance:
+        if inst.instance_id in self.state.instances:
+            raise ValueError(f"instance_id 已存在: {inst.instance_id}")
         self.state.instances[inst.instance_id] = inst
         return inst
 

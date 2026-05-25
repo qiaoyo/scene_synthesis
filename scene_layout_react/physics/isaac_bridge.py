@@ -12,6 +12,9 @@ import json
 import subprocess
 from pathlib import Path
 from typing import Any, Dict
+import select
+import threading
+import uuid
 
 class IsaacBridgeError(RuntimeError):
     """Raised when the Isaac worker cannot complete a request."""
@@ -47,13 +50,15 @@ def run_isaac_operation(
     options: Dict[str, Any] | None = None,
 ) -> Dict[str, Any]:
     """Run one Isaac operation in the configured worker process."""
-    worker_path = Path(getattr(config, "isaac_worker_path", "") or "")
+    #worker_path = Path(getattr(config, "isaac_worker_path", "") or "")
+    worker_path = Path("/home/simple/joey/scene_synthesis/scene_layout_react/physics/worker.py")
+    #worker_path = Path("/home/simple/joey/scene_synthesis/scene_layout_react/physics/worker1.py")
     if not worker_path:
         worker_path = Path(__file__).with_name("worker.py")
     worker_path = worker_path.expanduser()
 
     isaac_python = Path(
-        getattr(config, "isaac_python", "/home/ubuntu/simkit/.venv/bin/python")
+        getattr(config, "isaac_python", "/home/simple/isaac_env/bin/python3")
     ).expanduser()
     
     if not worker_path.exists():
@@ -62,7 +67,13 @@ def run_isaac_operation(
         raise IsaacBridgeError(f"Isaac Python executable not found at {isaac_python}")
     timeout_sec = float(getattr(config, "isaac_worker_timeout_sec", 120))
     
-    temp_dir = Path(getattr(config, "isaac_temp_dir", "/tmp/scene_synthesis_isaac"))
+    operation_options = dict(options or {})
+    temp_dir = Path(
+        operation_options.get(
+            "temp_dir",
+            getattr(config, "isaac_temp_dir", "/tmp/scene_synthesis_isaac"),
+        )
+    )
     collision_approximation = getattr(
         config,
         "isaac_collision_approximation",
@@ -73,10 +84,15 @@ def run_isaac_operation(
     request = {
         "operation": operation,
         "scene": _scene_to_dict(scene),
-        "options": dict(options or {}),
+        "options": operation_options,
         "temp_dir": str(temp_dir),
         "simulation_config": simulation_config,
         "collision_approximation": collision_approximation,
+        "keep_stage": bool(
+            getattr(config, "isaac_keep_stage", False)
+            or operation_options.get("keep_stage", False)
+            or operation_options.get("keep_temp_stage", False)
+        ),
     }
 
     try:
@@ -145,7 +161,6 @@ def run_isaac_physics_feedback(config: Any, scene: Any) -> Dict[str, Any]:
         "warnings": payload.get("warnings", []),
         "backend": payload.get("backend", "isaacsim"),
     }
-
 
 __all__ = [
     "IsaacBridgeError",

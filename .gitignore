@@ -6,3 +6,10 @@ outputs/
 .pytest_cache/
 __pycache__/
 *.py[cod]
+.codex
+scene_layout_react/test/
+AGENTS.md
+scene_layout_react/physics/__pycache__/
+*.pyc
+scene_layout_react/tools/__pycache__/
+runtime/

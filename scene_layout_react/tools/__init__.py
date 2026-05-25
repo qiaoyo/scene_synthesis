@@ -9,6 +9,7 @@ from . import (  # noqa: F401  -- import for registration side-effect
     check_collision,
     check_support,
     simulate_step,
+    save_scene_usd,
 )
 
 __all__ = ["TOOL_REGISTRY", "Tool", "ToolContext", "ToolResult", "register_tool"]

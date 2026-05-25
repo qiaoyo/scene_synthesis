@@ -11,7 +11,7 @@ class CheckCollisionTool(Tool):
         "type": "function",
         "function": {
             "name": "check_collision",
-            "description": "Run Isaac Sim collision checking for the current scene or a specific pair of instances.",
+            "description": "Run Isaac Sim collision checking for the current scene or a specific pair of instances and return suggested collision-resolution moves.",
             "parameters": {
                 "type": "object",
                 "properties": {
@@ -72,7 +72,9 @@ class CheckCollisionTool(Tool):
             "backend": payload.get("backend", "isaacsim"),
             "collision_free": payload.get("collision_free", True),
             "collisions": payload.get("collisions", []),
+            "suggested_move": payload.get("suggested_move", None),
+            "suggested_moves": payload.get("suggested_moves", []),
+            "suggested_final_positions": payload.get("suggested_final_positions", {}),
             "warnings": payload.get("warnings", []),
         }
         return ToolResult(ok=True, data=data)
-

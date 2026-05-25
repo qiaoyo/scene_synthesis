@@ -63,5 +63,6 @@ class CheckSupportTool(Tool):
             "warnings": payload.get("warnings", []),
             "z_gap": payload.get("z_gap"),
             "xy_coverage": payload.get("xy_coverage"),
+            "suggested_move": payload.get("suggested_move"),
         }
         return ToolResult(ok=True, data=data)

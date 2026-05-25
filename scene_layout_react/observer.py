@@ -15,7 +15,6 @@ class Observation:
     support_state: Dict[str, Any] = field(default_factory=dict)
     physics_feedback: Dict[str, Any] = field(default_factory=dict)
     scene_semantics: Dict[str, Any] = field(default_factory=dict)
-    suggestions: List[str] = field(default_factory=list)
     error: Optional[str] = None
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
@@ -23,173 +22,142 @@ class Observation:
 # Observer
 # =========================================================
 class Observer:
-    """
-    场景观察器：
-    - collision validation
-    - support validation
-    - lightweight physics
-    - semantic analysis
-    """
-    # -----------------------------------------------------
-    # semantic config
-    # -----------------------------------------------------
     def __init__(
         self,
         scene: SceneStateManager,
-        physics_callable: Optional[Callable[[SceneState], Dict[str, Any]]] = None,
+        scene_observer: Optional[Callable[[SceneState], Dict[str, Any]]] = None,
+        physics_required: bool = False,
     ):
         self.scene = scene
-        self.physics_callable = physics_callable
-    # =====================================================
-    # Public API
-    # =====================================================
+        self.scene_observer = scene_observer
+        self.physics_required = physics_required
 
     def observe(self) -> Observation:
         state = self.scene.state
-        # -------------------------------------------------
-        # Validation
-        # -------------------------------------------------
-        validation = self._validate_collisions(state)
-        # -------------------------------------------------
-        # Support
-        # -------------------------------------------------
-        support_state = self._evaluate_support_state(state)
-        # -------------------------------------------------
-        # Physics
-        # -------------------------------------------------
-        physics_feedback: Dict[str, Any] = {}
-        if self.physics_callable is not None:
+        local = self._observe_local_state(state)
+
+        external = {
+            "ok": None,
+            "validation": {
+                "backend": "not_observed",
+                "authoritative": False,
+                "collision_free": None,
+                "collisions": [],
+                "suggested_move": None,
+                "suggested_moves": [],
+                "suggested_final_positions": {},
+            },
+            "support_state": {
+                "backend": "local_structure_only",
+                "authoritative": False,
+                "valid_relations": [],
+                "invalid_relations": [],
+            },
+            "physics_feedback": {
+                "backend": "not_observed",
+                "authoritative": False,
+                "stable": None,
+                "fallen_assets": [],
+            },
+            "error": None,
+        }
+
+        if self.scene_observer is not None:
             try:
-                physics_feedback = self.physics_callable(state)
+                external = self.scene_observer(state)
             except Exception as exc:
-                physics_feedback = {
-                    "stable": False,
-                    "fallen_assets": [],
-                    "contacts": [],
-                    "warnings": [],
-                    "error": str(exc),
-                }
+                external["ok"] = False
+                external["error"] = str(exc)
 
-        # -------------------------------------------------
-        # Semantics
-        # -------------------------------------------------
+        validation = external.get("validation", {})
+        support_state = external.get("support_state", {})
+        physics_feedback = external.get("physics_feedback", {})
 
-        # -------------------------------------------------
-        # Overall OK
-        # -------------------------------------------------
-        ok = (
-            validation["collision_free"]
-            and (
-                self.physics_callable is None
-                or bool(physics_feedback.get("stable", False))
-            )
-            and not support_state["invalid_relations"]
+        support_state["invalid_relations"] = (
+            local["invalid_relations"]
+            + support_state.get("invalid_relations", [])
         )
+        support_state["declared_relations"] = local["declared_relations"]
+        support_state["graph_complete"] = local["ok"]
+
+        if self.physics_required and self.scene_observer is None:
+            ok = False
+            error = "physics observation is required but no scene_observer is configured"
+        elif self.scene_observer is not None:
+            ok = (
+                local["ok"]
+                and external.get("ok") is True
+                and validation.get("collision_free") is True
+                and not support_state["invalid_relations"]
+                and physics_feedback.get("stable") is True
+            )
+            error = external.get("error")
+        else:
+            ok = local["ok"]
+            error = external.get("error")
+
         return Observation(
             ok=ok,
             current_state=state.to_dict(),
             validation=validation,
             support_state=support_state,
             physics_feedback=physics_feedback,
-            #scene_semantics=scene_semantics,
+            scene_semantics={"state_integrity": local},
+            error=error,
         )
-    # =====================================================
-    # Collision Validation
-    # =====================================================
-    def _validate_collisions(self,state: SceneState,) -> Dict[str, Any]:
-        instances = list(state.instances.values())
-        collisions: List[Dict[str, Any]] = []
-        for i in range(len(instances)):
-            a = instances[i]
-            a_min, a_max = a.aabb()
-            for j in range(i + 1, len(instances)):
-                b = instances[j]
-                if a.instance_id and b.instance_id and (b.instance_id in state.support_children.get(a.instance_id, []) or a.instance_id in state.support_children.get(b.instance_id, [])):
-                    continue
-                tol = 1e-4
-                b_min, b_max = b.aabb()
-                collision_value = all(
-                    a_max[axis] > b_min[axis] + tol
-                    and b_max[axis] > a_min[axis] + tol
-                    for axis in range(3)
-                )
-                if collision_value:
-                    collisions.append({
-                        "a": a.instance_id,
-                        "b": b.instance_id,
-                        "a_type": a.asset_type,
-                        "b_type": b.asset_type,
-                    })
-        return {
-            "collision_free": len(collisions) == 0,
-            "collisions": collisions,
-        }
-    # =====================================================
-    # Support Validation
-    # =====================================================
-    def _evaluate_support_state(
-        self,
-        state: SceneState,
-    ) -> Dict[str, Any]:
-        valid: List[Dict[str, Any]] = []
-        invalid: List[Dict[str, Any]] = []
+
+    def _observe_local_state(self, state: SceneState) -> Dict[str, Any]:
+        invalid = []
+        declared = []
+        child_to_parent = {}
+
         for parent_id, children in state.support_children.items():
             if parent_id not in state.instances:
+                invalid.append({"parent": parent_id, "issue": "missing parent instance"})
                 continue
-            parent = state.instances[parent_id]
+
             for child_id in children:
-                if child_id not in state.instances:
+                declared.append({"child": child_id, "parent": parent_id})
+
+                child = state.instances.get(child_id)
+                if child is None:
+                    invalid.append({
+                        "child": child_id,
+                        "parent": parent_id,
+                        "issue": "missing child instance",
+                    })
                     continue
-                child = state.instances[child_id]
-                
-                z_tolerance = 0.05
-                overlap_threshold = 0.4
-                c_min, c_max = child.aabb()
-                p_min, p_max = parent.aabb()
-                # Z gap
-                z_gap = c_min[2] - p_max[2]
-                z_aligned = abs(z_gap) <= z_tolerance
-                # XY overlap
-                dx = max(
-                    0.0,
-                    min(c_max[0], p_max[0])
-                    - max(c_min[0], p_min[0]),
-                )
-                dy = max(
-                    0.0,
-                    min(c_max[1], p_max[1])
-                    - max(c_min[1], p_min[1]),
-                )
-                overlap_area = dx*dy
-                child_area = max(
-                    1e-9,
-                    (c_max[0] - c_min[0]) *(c_max[1] - c_min[1]),
-                )
-                coverage = overlap_area / child_area
-                inside = coverage >= overlap_threshold
-                ok = z_aligned and inside
-                issues = []
-                if not z_aligned:
-                    issues.append(
-                        f"z_gap={z_gap:.3f} exceeds tolerance"
-                    )
-                if not inside:
-                    issues.append(
-                        f"xy_coverage={coverage:.2f} below threshold"
-                    )
-                entry = {
-                    "child": child_id,
-                    "parent": parent_id,
-                    "ok": ok,
-                    "z_gap": round(z_gap, 4),
-                    "xy_coverage": round(coverage, 3),
-                    "issues": issues,
-                }
-                if entry["ok"]:
-                    valid.append(entry)
-                else:
-                    invalid.append(entry)
+
+                if child_id == parent_id:
+                    invalid.append({"child": child_id, "parent": parent_id, "issue": "self support"})
+
+                if child_id in child_to_parent:
+                    invalid.append({"child": child_id, "parent": parent_id, "issue": "multiple parents"})
+
+                if child.parent_instance_id != parent_id:
+                    invalid.append({
+                        "child": child_id,
+                        "parent": parent_id,
+                        "issue": "parent link mismatch",
+                        "instance_parent": child.parent_instance_id,
+                    })
+
+                child_to_parent[child_id] = parent_id
+
+        for child_id, inst in state.instances.items():
+            parent_id = inst.parent_instance_id
+            if parent_id is None:
+                continue
+            if parent_id not in state.instances:
+                invalid.append({"child": child_id, "parent": parent_id, "issue": "missing parent instance"})
+            elif child_id not in state.support_children.get(parent_id, []):
+                invalid.append({"child": child_id, "parent": parent_id, "issue": "missing support_children edge"})
+
         return {
-            "valid_relations": valid,
+            "backend": "local_state",
+            "ok": len(invalid) == 0,
+            "instance_count": len(state.instances),
+            "support_edge_count": sum(len(v) for v in state.support_children.values()),
+            "declared_relations": declared,
             "invalid_relations": invalid,
         }

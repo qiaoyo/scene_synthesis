@@ -2,6 +2,8 @@ import json
 from openai import OpenAI
 import sys
 from pathlib import Path
+import os
+os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
 # =====================================================
 # Import ALL Tools
 # =====================================================
@@ -12,14 +14,13 @@ from scene_layout_react.rag import AssetRAG
 from scene_layout_react.tools.base import (
     TOOL_REGISTRY,
     ToolContext,
-    list_openai_tools,
 )
 # =====================================================
 # OpenAI Client
 # =====================================================
 client = OpenAI(
     api_key="EMPTY",
-    base_url="http://localhost:8000/v1"
+    base_url="http://127.0.0.1:8000/v1"
 )
 
 MODEL_NAME = "Qwen/Qwen3-32B-AWQ"
@@ -29,7 +30,7 @@ MODEL_NAME = "Qwen/Qwen3-32B-AWQ"
 # =====================================================
 
 cfg = ProjectConfig()
-cfg.enable_faiss = False
+cfg.enable_faiss = True
 
 rag = AssetRAG(cfg)
 if (cfg.index_dir / "corpus.jsonl").exists():
@@ -59,8 +60,8 @@ messages = [
     {
         "role": "user",
         "content": (
-            "Retrieve an indoor AGV and place it "
-            "at [1.0, 2.0, 0.0]"
+    """Retrieve a workbench and place it at [1.0, 2.0, 0.0], then retrieve a robot and place it at [10,10,10], then retrieve a conveyor and place it at [0,0,0], Finally, save the usd.
+    """
         ),
     }
 ]
@@ -70,7 +71,7 @@ messages = [
 # =====================================================
 
 MAX_ITER = 10
-
+tool_specs = [tool.schema for tool in TOOL_REGISTRY.values()]
 for step in range(MAX_ITER):
 
     print(f"\n================ STEP {step} ================\n")
@@ -78,7 +79,7 @@ for step in range(MAX_ITER):
     response = client.chat.completions.create(
         model=MODEL_NAME,
         messages=messages,
-        tools=list_openai_tools(),
+        tools=tool_specs,
         tool_choice="auto",
     )
 

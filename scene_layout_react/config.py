@@ -4,6 +4,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import List, Optional, Dict, Any
+import os
 
 _PROJECT_ROOT = Path(__file__).resolve().parents[1]
 _DEFAULT_ASSETS_ROOT = _PROJECT_ROOT / "data" / "assets"
@@ -17,7 +18,6 @@ class ProjectConfig:
     auto_discover_assets: bool = True
     block_size: int = 3  # 用于 markdown 的段落聚合
     
-    
     """embedding_config"""
     embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2"
     embedding_batch_size: int = 32
@@ -26,19 +26,20 @@ class ProjectConfig:
     index_dir: Path = _PROJECT_ROOT / "data" / "indexes"
     output_dir: Path = _PROJECT_ROOT / "outputs"
     
-    
     """tool_ctx"""
     physics_enabled: bool = True
-    
     
     """model config"""
     model: str = "Qwen/Qwen3-32B-AWQ"
     llm_api_base_url: str = "http://127.0.0.1:8000/v1"
     llm_api_key: str = "EMPTY" 
+    llm_timeout_sec: float = 60.0
+    llm_max_retries: int = 2
+    llm_enable_thinking: bool = True
     max_new_tokens: int = 512
     max_output_tokens: int = 1024
-    temperature: float = 0.2
-    max_steps: int = 10
+    temperature: float = 0.4
+    max_steps: int = 20
     
     """isaacsim config"""
     isaac_python: Path = Path("/home/simple/isaac_env/bin/python3")

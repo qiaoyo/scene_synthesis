@@ -30,7 +30,7 @@ from scene_layout_react.tools.base import (
 MAX_ITER = 20
 
 TEST_TOOL_NAMES = [
-    "retrieve_tool",
+    "retrieve_asset",
     "place_instance",
     "query_scene",
     "set_support",
