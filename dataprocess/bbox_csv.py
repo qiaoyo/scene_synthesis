@@ -196,7 +196,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         description="读取一个或多个 CSV，计算其中 USD 路径对应的米制 bbox，并追加到结果 CSV 末尾两列。",
     )
     parser.add_argument(
-        "inputs",
+        "--inputs",
         nargs="+",
         help="CSV 文件路径，或包含 CSV 的目录路径。",
     )
@@ -225,3 +225,6 @@ if __name__ == "__main__":
         raise SystemExit(main())
     finally:
         simulation_app.close()
+    """
+    python /home/simple/joey/scene_synthesis/dataprocess/bbox_csv.py --inputs /home/simple/joey/scene_synthesis/data/assets/csv/Scene.csv
+    """

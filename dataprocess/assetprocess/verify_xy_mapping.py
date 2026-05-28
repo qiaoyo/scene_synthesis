@@ -77,7 +77,8 @@ def experiment_bbox_overlay(xy_map, rgb_img, render_dir, stage, target_prim_path
     pts = np.array(pixels, dtype=np.int32)
     cv2.polylines(annotated, [pts], True, (0, 255, 0), 3)
     for px, py in pixels:
-        cv2.circle(annotated, px, py, 8, (0, 255, 0), -1)
+        #cv2.circle(annotated, px, py, 8, (0, 255, 0), -1)
+        cv2.circle(annotated, (px, py), 8, (0, 255, 0), -1)
 
     cx = (bbox_min[0] + bbox_max[0]) / 2
     cy = (bbox_min[1] + bbox_max[1]) / 2

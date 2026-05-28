@@ -3,7 +3,7 @@ set -euo pipefail
 
 ISAAC_PYTHON="/home/simple/isaac-sim5.1/python.sh"
 INPUT_DIR="/media/simple/another_Documents/isaacsim_assets/scenedata"
-OUTPUT_DIR="/home/simple/Desktop/Scene-Knowledge/md"
+OUTPUT_DIR="/home/simple/Desktop/Scene-Knowledge/scene_ouput/md"
 MAIN_SCRIPT="/home/simple/joey/scene_synthesis/dataprocess/usd2md/main.py"
 
 mkdir -p "$OUTPUT_DIR"

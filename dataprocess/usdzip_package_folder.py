@@ -194,3 +194,10 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+"""
+python3 /home/simple/joey/scene_synthesis/dataprocess/usdzip_package_folder.py \
+/media/simple/another_Documents/isaacsim_assets/device_data/usd/processed \
+/media/simple/another_Documents/isaacsim_assets/device_data/usd/processed/usdz \
+--recursive --overwrite -c -v
+
+"""

@@ -114,6 +114,6 @@ def process_all_csv(folder: Path):
 
 
 if __name__ == "__main__":
-    folder_path = Path("/home/simple/Desktop/Scene-Knowledge/csv/1")  # 修改为你的文件夹路径
+    folder_path = Path("/home/simple/joey/scene_synthesis/data/assets/csv/Scene_with_bbox_meters.csv")  # 修改为你的文件夹路径
     process_all_csv(folder_path)
 

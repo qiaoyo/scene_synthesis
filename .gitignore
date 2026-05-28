@@ -12,3 +12,7 @@ scene_layout_react/physics/__pycache__/
 *.pyc
 scene_layout_react/tools/__pycache__/
 runtime/
+outputs/
+dataprocess/usdprocess/
+scene_layout_react/reacat_agent1.py
+/docs

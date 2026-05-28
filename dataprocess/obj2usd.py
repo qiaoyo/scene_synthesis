@@ -68,8 +68,7 @@ if __name__ == "__main__":
 
     # ✅ 直接在这里定义参数
     folders = [
-        "/media/simple/another_Documents/isaacsim_assets/obj-20260107/_Qie_Xiang_Jian/chip key GB",
-
+        "/media/simple/another_Documents/isaacsim_assets/part/obj_centimete",
         # 可以继续添加多个文件夹
     ]
     max_models = 9999

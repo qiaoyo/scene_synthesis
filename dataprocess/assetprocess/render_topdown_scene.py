@@ -9,6 +9,8 @@ Usage:
     --usd_path /path/to/scene.usd \
     --output_dir ./output \
     --max_resolution 4096
+    
+    ~/isaac_env/bin/python /home/simple/joey/scene_synthesis/dataprocess/assetprocess/render_topdown_scene.py --usd_path /media/simple/another_Documents/isaacsim_assets/scenedata/IsaacScene/Collected_IsaacWarehouse/IsaacWarehouse_kong.usd --output_dir /home/simple/Desktop/Scene-Knowledge/scene_output/IsaacWarehouse_kong --max_resolution 4096
 """
 import argparse
 import os

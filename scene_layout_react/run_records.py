@@ -19,7 +19,6 @@ def new_run_id() -> str:
     stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     return f"{stamp}_{uuid.uuid4().hex[:8]}"
 
-
 def jsonable(value: Any) -> Any:
     if value is None or isinstance(value, (str, int, float, bool)):
         return value
