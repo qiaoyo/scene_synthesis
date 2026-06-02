@@ -63,7 +63,7 @@ class MoveAssetTool(Tool):
         return ToolResult(
             ok=True,
             data={
-                "instance_id": instance_id,
+                "moved_instance_id": instance_id,
                 "old_position": old_position,
                 "new_position": new_position,
             },

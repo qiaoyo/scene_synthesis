@@ -1,15 +1,15 @@
 # llm_planner.py
 from __future__ import annotations
-
 import json
 from typing import Any, Dict, List, Optional
-
 from .config import ProjectConfig
-ToolDecision = Dict[str, Any]
 # =========================================================
 # Planner
 # =========================================================
 class LLMPlanner:
+    # =====================================================
+    # Init
+    # =====================================================
     def __init__(
         self,
         config: ProjectConfig,
@@ -35,41 +35,35 @@ class LLMPlanner:
     # =====================================================
     def plan_action(
         self,
-        command: str,
-        scene_summary: Dict[str, Any],
-        latest_observation: Optional[Dict[str, Any]],
-        recent_actions: List[Dict[str, Any]],
+        messages: List[Dict[str, Any]],
         tool_specs: List[Dict[str, Any]],
-        step: int,
-        max_steps: int,
-    ) -> ToolDecision:
+    ) -> Dict[str, Any]:
+        """
+        Accept the full multi-turn message list built by ReActAgent
+        and return a tool-call or final-response decision.
+        """
         plan_system = """
-            You are a reactive planning agent. Follow user instructions and invoke proper tools to complete tasks until the scene becomes fully compliant. You must follow the rules below to complete the task.
-            Global Rules:
-            - Bulk asset retrieval and placement are supported.
-            - Retrieve all required assets in the retrieval phase and place all objects in the placement phase.
-            - The workflow proceeds sequentially: asset retrieval, object placement, collision/support detection and adjustment to eliminate collisions.
-            - retrieve_assets: Extract ALL required assets from the user command and retrieve them in ONE batch call using retrieve_asset. Do not proceed until all assets are retrieved.
-            - place_core_objects: Place ALL retrieved core objects in ONE batch using multiple place_instance calls.
-            - If there is a direct supporting relation between objects, use the setsupport tool to establish the relation after placing both objects.
-            -Save the scene once all required assets are positioned and the observation result is valid.
+            You are a reactive planning agent for robotic scene construction.
+            Follow user instructions and invoke proper tools to complete tasks
+            until the scene becomes fully compliant.
+            
+            Workflow:
+            - The workflow proceeds sequentially: 
+            - Retrieve_assets: Extract ALL required assets from the user
+              command and retrieve them in ONE batch call. Do not proceed
+              until all assets are retrieved. Tool:retrieve_asset.
+            - Place_core_objects: Place ALL retrieved core objects in ONE
+              batch using multiple place_instance calls. Tool:place_instance.
+            - Set support: After placing core objects, set support relations between them based on the scene context. Tool:set_support.
+            - Check and Adjust: Run collision and support checks after core object placement. Adjust positions iteratively for invalid layouts. If adjustments fail, delete the asset and re-place the instance. Tools: check_collision, check_support, move_asset, simulate_step, delete_asset, place_instance
+            - Save Scene: Once all core objects are placed and the scene is valid, save the scene. Tool:save_scene_usd.    
         """
-        user_prompt = f"""
-            User Command:{command}
-            Current Step:{step + 1} / {max_steps}
-            Current Scene Summary:{json.dumps(scene_summary, ensure_ascii=False, indent=2)}
-            Latest Observation:{json.dumps(latest_observation, ensure_ascii=False, indent=2)}
-            Recent Actions:{json.dumps(recent_actions, ensure_ascii=False, indent=2)}
-            Select the best tool calls for exactly one workflow step.
-            Use tool calls directly.
-        """
+        api_messages = [{"role": "system", "content": plan_system}] + list(messages)
+
         try:
             response = self._client.chat.completions.create(
                 model=self.config.model,
-                messages=[
-                    {"role": "system", "content": plan_system},
-                    {"role": "user", "content": user_prompt},
-                ],
+                messages=api_messages,
                 tools=tool_specs,
                 tool_choice="auto",
                 temperature=self.config.temperature,
@@ -86,9 +80,14 @@ class LLMPlanner:
                 "error": str(exc),
                 "error_class": exc.__class__.__name__,
             }
+
         message = response.choices[0].message
+
+        # =============================================
+        # Tool Calls
+        # =============================================
         if message.tool_calls:
-            calls = []
+            calls: List[Dict[str, Any]] = []
             for tool_call in message.tool_calls:
                 raw_args = tool_call.function.arguments or "{}"
                 try:
@@ -109,7 +108,10 @@ class LLMPlanner:
                 "calls": calls,
             }
 
+        # =============================================
+        # Final Response
+        # =============================================
         return {
             "type": "final",
             "content": message.content or "",
-    }
+        }

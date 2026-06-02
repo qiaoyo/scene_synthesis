@@ -7,7 +7,6 @@ Request JSON is read from stdin and one response JSON object is written to stdou
 from __future__ import annotations
 import json
 import re
-import shutil
 import sys
 import tempfile
 import traceback
@@ -15,138 +14,30 @@ import uuid
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Tuple
 
+try:
+    from collision_checks import _collision_pairs
+    from support_checks import _check_support
+except ModuleNotFoundError:
+    from .collision_checks import _collision_pairs
+    from .support_checks import _check_support
+# stage build
+def _start_isaac(request: Dict[str, Any]):
+    simulation_config = dict(request.get("simulation_config") or {"headless": True})
+    simulation_config.setdefault("headless", True)
+    from isaacsim import SimulationApp
 
-def _safe_name(value: str) -> str:
-    safe = re.sub(r"[^A-Za-z0-9-_]+", "_", value.strip()).strip("_")
-    return safe or "instance"
+    sim_app = SimulationApp(simulation_config)
 
-def _instances(scene: Dict[str, Any]) -> Dict[str, Dict[str, Any]]:
-    raw = scene.get("instances", {})
-    if isinstance(raw, dict):
-        return raw
-    return {}
+    import omni.kit.app
+    import omni.usd
 
-def _aabb_overlap(
-    a_min: List[float],
-    a_max: List[float],
-    b_min: List[float],
-    b_max: List[float],
-    tol: float = 1e-4,
-) -> bool:
-    for axis in range(3):
-        if a_max[axis] < b_min[axis] - tol:
-            return False
-        if b_max[axis] < a_min[axis] - tol:
-            return False
-    return True
-
-def xy_overlap_area(
-    a_min: List[float],
-    a_max: List[float],
-    b_min: List[float],
-    b_max: List[float],
-) -> float:
-    dx = max(0.0, min(a_max[0], b_max[0]) - max(a_min[0], b_min[0]))
-    dy = max(0.0, min(a_max[1], b_max[1]) - max(a_min[1], b_min[1]))
-    return dx * dy
-
-def _is_scene_authored_transform_op(op) -> bool:
-    return not op.GetOpName().endswith(":unitsResolve")
-
-
-def _remove_scene_authored_transform_ops(xformable) -> None:
-    preserved_ops = [
-        op
-        for op in xformable.GetOrderedXformOps()
-        if not _is_scene_authored_transform_op(op)
-    ]
-    for op in xformable.GetOrderedXformOps():
-        if _is_scene_authored_transform_op(op):
-            xformable.GetPrim().RemoveProperty(op.GetOpName())
-    xformable.SetXformOpOrder(preserved_ops)
-
-
-def _set_transform(
-    prim,
-    position: list | tuple = None,
-    rotation_deg: float = None,
-    scale: float = None
-) -> None:
-    from pxr import Gf, UsdGeom
-
-    xformable = UsdGeom.Xformable(prim)
-    _remove_scene_authored_transform_ops(xformable)
-
-    if position is not None:
-        translate_op = xformable.AddTranslateOp(
-            precision=UsdGeom.XformOp.PrecisionDouble
-        )
-        translate_op.Set(Gf.Vec3d(*(float(v) for v in position)))
-
-    if rotation_deg is not None:
-        rotate_op = xformable.AddRotateZOp(
-            precision=UsdGeom.XformOp.PrecisionDouble
-        )
-        rotate_op.Set(float(rotation_deg))
-
-    if scale is not None:
-        scale_op = xformable.AddScaleOp(
-            precision=UsdGeom.XformOp.PrecisionDouble
-        )
-        scale_op.Set(Gf.Vec3d(float(scale), float(scale), float(scale)))
-
-
-
-def _world_bbox(stage, prim_path: str) -> Tuple[List[float], List[float]]:
-    from pxr import Usd, UsdGeom
-
-    prim = stage.GetPrimAtPath(prim_path)
-    bbox_cache = UsdGeom.BBoxCache(
-        Usd.TimeCode.Default(),
-        [UsdGeom.Tokens.default_, UsdGeom.Tokens.render, UsdGeom.Tokens.proxy],
-        useExtentsHint=True,
+    context = omni.usd.get_context()
+    ext_manager = omni.kit.app.get_app().get_extension_manager()
+    ext_manager.set_extension_enabled_immediate(
+        "omni.usd.metrics.assembler.ui",
+        True,
     )
-    bbox = bbox_cache.ComputeWorldBound(prim).ComputeAlignedRange()
-    if bbox.IsEmpty():
-        raise RuntimeError(f"empty bbox for {prim_path}")
-    min_pt = bbox.GetMin()
-    max_pt = bbox.GetMax()
-    return (
-        [float(min_pt[0]), float(min_pt[1]), float(min_pt[2])],
-        [float(max_pt[0]), float(max_pt[1]), float(max_pt[2])],
-    )
-
-def _fallback_bbox(inst: Dict[str, Any]) -> Tuple[List[float], List[float]]:
-    position = [float(v) for v in inst.get("position", [0.0, 0.0, 0.0])]
-    size = [float(v) for v in inst.get("bbox_size", [1.0, 1.0, 1.0])]
-    half = [v / 2.0 for v in size]
-    return (
-        [position[i] - half[i] for i in range(3)],
-        [position[i] + half[i] for i in range(3)],
-    )
-
-
-def _get_stage_unit_info(stage, default: float = 1.0) -> Dict[str, Any]:
-    from pxr import UsdGeom
-
-    authored = False
-    if hasattr(UsdGeom, "StageHasAuthoredMetersPerUnit"):
-        authored = bool(UsdGeom.StageHasAuthoredMetersPerUnit(stage))
-
-    try:
-        meters_per_unit = float(UsdGeom.GetStageMetersPerUnit(stage))
-    except Exception:
-        meters_per_unit = default
-
-    if meters_per_unit <= 0:
-        meters_per_unit = default
-
-    return {
-        "meters_per_unit": meters_per_unit,
-        "authored": authored,
-    }
-
-
+    return sim_app, context
 
 def _create_stage(stage_path: Path, sim_app=None, usd_context=None):
     from pxr import Usd, UsdGeom
@@ -164,49 +55,27 @@ def _create_stage(stage_path: Path, sim_app=None, usd_context=None):
         raise RuntimeError("failed to create new Isaac stage")
     return stage
 
-
-def _save_stage(stage, stage_path: Path) -> None:
-    try:
-        exported = stage.GetRootLayer().Export(str(stage_path))
-        if exported is False:
-            raise RuntimeError(f"failed to export stage to {stage_path}")
-    except Exception as exc:
-        raise RuntimeError(f"failed to save stage to {stage_path}: {exc}") from exc
-
-
-def _add_reference(stage, prim_path, usd_path: str, usd_context=None):
-    if usd_context is not None:
-        from isaacsim.core.utils.stage import add_reference_to_stage
-
-        return add_reference_to_stage(
-            usd_path=str(usd_path),
-            prim_path=str(prim_path),
-            prim_type="Xform",
-        )
-
-    from pxr import Sdf
-
-    prim = stage.GetPrimAtPath(prim_path)
-    prim.GetReferences().AddReference(Sdf.Reference(str(usd_path)))
-    return prim
-
-
 def _build_stage(
     request: Dict[str, Any],
     *,
+    stage_path: Path | None = None,
     sim_app=None,
     usd_context=None,
 ) -> Tuple[str, Dict[str, str]]:
-    from pxr import UsdGeom
+    from pxr import Sdf, UsdGeom
 
-    temp_dir = Path(request.get("temp_dir") or tempfile.gettempdir())
-    temp_dir.mkdir(parents=True, exist_ok=True)
-    stage_path = temp_dir / f"scene_synthesis_{uuid.uuid4().hex}.usd"
+    if stage_path is None:
+        temp_dir = Path(request.get("temp_dir") or tempfile.gettempdir())
+        temp_dir.mkdir(parents=True, exist_ok=True)
+        stage_path = temp_dir / f"scene_synthesis_{uuid.uuid4().hex}.usd"
+    else:
+        stage_path = Path(stage_path).expanduser()
+        stage_path.parent.mkdir(parents=True, exist_ok=True)
+
     scene = request.get("scene", {})
     stage = _create_stage(stage_path, sim_app=sim_app, usd_context=usd_context)
 
-    target_meters_per_unit = 1.0
-    UsdGeom.SetStageMetersPerUnit(stage, target_meters_per_unit)
+    UsdGeom.SetStageMetersPerUnit(stage, 1.0)
     UsdGeom.SetStageUpAxis(stage, UsdGeom.Tokens.z)
 
     world = UsdGeom.Xform.Define(stage, "/World")
@@ -238,37 +107,27 @@ def _build_stage(
         if usd_path:
             asset_path = prim_path.AppendChild("Asset")
             stage.DefinePrim(asset_path, "Xform")
-            _add_reference(
-                stage,
-                asset_path,
-                str(usd_path),
-                usd_context=usd_context,
-            )
+
+            if usd_context is not None:
+                from isaacsim.core.utils.stage import add_reference_to_stage
+                add_reference_to_stage(
+                    usd_path=str(usd_path),
+                    prim_path=str(asset_path),
+                    prim_type="Xform",
+                )
+            else:
+                ref_prim = stage.GetPrimAtPath(asset_path)
+                ref_prim.GetReferences().AddReference(Sdf.Reference(str(usd_path)))
 
         prim_paths[instance_id] = prim_path
-
         
-
-    _save_stage(stage, stage_path)
+    try:
+        exported = stage.GetRootLayer().Export(str(stage_path))
+        if exported is False:
+            raise RuntimeError(f"failed to export stage to {stage_path}")
+    except Exception as exc:
+        raise RuntimeError(f"failed to save stage to {stage_path}: {exc}") from exc
     return str(stage_path), prim_paths
-
-def _start_isaac(request: Dict[str, Any]):
-    simulation_config = dict(request.get("simulation_config") or {"headless": True})
-    simulation_config.setdefault("headless", True)
-    from isaacsim import SimulationApp
-
-    sim_app = SimulationApp(simulation_config)
-    
-    import omni.kit.app
-    import omni.usd
-
-    context = omni.usd.get_context()
-    ext_manager = omni.kit.app.get_app().get_extension_manager()
-    ext_manager.set_extension_enabled_immediate(
-        "omni.usd.metrics.assembler.ui",
-        True,
-    )
-    return sim_app, context
 
 
 def _open_stage_in_isaac(sim_app, context, stage_path: str):
@@ -279,7 +138,104 @@ def _open_stage_in_isaac(sim_app, context, stage_path: str):
     if stage is None:
         raise RuntimeError(f"failed to open stage in Isaac: {stage_path}")
     return stage
+#save usd
+def _save_scene_usd(
+    request: Dict[str, Any],
+    *,
+    sim_app=None,
+    usd_context=None,
+) -> Dict[str, Any]:
+    options = request.get("options", {}) or {}
+    scene = request.get("scene", {}) or {}
+    output_path = Path(options["output_path"]).expanduser()
+    include_physics = bool(options.get("include_physics", False))
+    warnings: List[str] = []
 
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    if output_path.exists():
+        output_path.unlink()
+
+    stage_path, prim_paths = _build_stage(
+        request,
+        stage_path=output_path,
+        sim_app=sim_app,
+        usd_context=usd_context,
+    )
+
+    if include_physics:
+        stage = _open_stage_in_isaac(sim_app, usd_context, stage_path)
+        warnings.extend(_apply_instance_physics(stage, request, prim_paths))
+        if sim_app is not None:
+            for _ in range(3):
+                sim_app.update()
+        try:
+            exported = stage.GetRootLayer().Export(str(output_path))
+            if exported is False:
+                raise RuntimeError(f"failed to export stage to {output_path}")
+        except Exception as exc:
+            raise RuntimeError(f"failed to save stage to {output_path}: {exc}") from exc
+
+    return {
+        "ok": True,
+        "save": True,
+        "operation": "save_scene_usd",
+        "backend": "isaacsim",
+        "usd_path": str(output_path),
+        "include_physics": include_physics,
+        "instance_count": len(_instances(scene)),
+        "warnings": warnings,
+    }
+
+def _safe_name(value: str) -> str:
+    safe = re.sub(r"[^A-Za-z0-9-_]+", "_", value.strip()).strip("_")
+    return safe or "instance"
+
+def _instances(scene: Dict[str, Any]) -> Dict[str, Dict[str, Any]]:
+    raw = scene.get("instances", {})
+    if isinstance(raw, dict):
+        return raw
+    return {}
+
+def _set_transform(
+    prim,
+    position: list | tuple = None,
+    rotation_deg: float = None,
+    scale: float = None
+) -> None:
+    from pxr import Gf, UsdGeom
+
+    xformable = UsdGeom.Xformable(prim)
+    # 保留系统自带的 unitsResolve 变换，删除所有用户自定义变换
+    preserved_ops = []
+    for op in xformable.GetOrderedXformOps():
+        if op.GetOpName().endswith(":unitsResolve"):
+            preserved_ops.append(op)
+        else:
+            # 删除用户添加的 translate/rotate/scale 等
+            xformable.GetPrim().RemoveProperty(op.GetOpName())
+
+    # 重新设置保留的系统变换顺序
+    xformable.SetXformOpOrder(preserved_ops)
+
+    if position is not None:
+        translate_op = xformable.AddTranslateOp(
+            precision=UsdGeom.XformOp.PrecisionDouble
+        )
+        translate_op.Set(Gf.Vec3d(*(float(v) for v in position)))
+
+    if rotation_deg is not None:
+        rotate_op = xformable.AddRotateZOp(
+            precision=UsdGeom.XformOp.PrecisionDouble
+        )
+        rotate_op.Set(float(rotation_deg))
+
+    if scale is not None:
+        scale_op = xformable.AddScaleOp(
+            precision=UsdGeom.XformOp.PrecisionDouble
+        )
+        scale_op.Set(Gf.Vec3d(float(scale), float(scale), float(scale)))
+
+# physics bridge
 
 def _apply_instance_physics(
     stage, request: Dict[str, Any], prim_paths: Dict[str, str]
@@ -305,22 +261,23 @@ def _apply_instance_physics(
             warnings.append(f"physics authoring failed for {instance_id}: {exc}")
     return warnings
 
+def _apply_rigid_body_and_colliders(
+    prim, *, kinematic: bool, approximation_shape: str
+) -> None:
+    from pxr import UsdGeom, UsdPhysics
 
-def _supported_approximation(requested: str | None) -> str:
-    value = (requested or "convexhull").strip()
-    mapping = {
-        "convexhull": "convexhull",
-        "convexdecomposition": "convexdecomposition",
-        "meshsimplification": "meshsimplification",
-        "convexmeshsimplification": "convexmeshsimplification",
-        "boundingcube": "boundingcube",
-        "boundingsphere": "boundingsphere",
-        "spherefill": "spherefill",
-        "sdf": "sdf",
-        "none": "none",
-    }
-    return mapping.get(value.lower(), "convexhull")
+    rigid_api = UsdPhysics.RigidBodyAPI.Apply(prim)
+    rigid_api.CreateRigidBodyEnabledAttr(True)
+    rigid_api.CreateKinematicEnabledAttr(bool(kinematic))
 
+    physx_schema = _try_import_physx_schema()
+    if physx_schema is not None:
+        physx_rigid_api = physx_schema.PhysxRigidBodyAPI.Apply(prim)
+        physx_rigid_api.CreateEnableCCDAttr(True)
+
+    for member in _iter_prim_hierarchy(prim):
+        if member.IsA(UsdGeom.Gprim) or member.IsInstanceable():
+            _apply_collision_api(member, approximation_shape)
 
 def _try_import_physx_schema():
     try:
@@ -329,7 +286,6 @@ def _try_import_physx_schema():
         return PhysxSchema
     except Exception:
         return None
-
 
 def _apply_collision_api(prim, approximation_shape: str) -> None:
     from pxr import UsdGeom, UsdPhysics
@@ -361,6 +317,20 @@ def _apply_collision_api(prim, approximation_shape: str) -> None:
         if physx_mesh_api is not None:
             physx_mesh_api.Apply(prim)
 
+def _supported_approximation(requested: str | None) -> str:
+    value = (requested or "convexhull").strip()
+    mapping = {
+        "convexhull": "convexhull",
+        "convexdecomposition": "convexdecomposition",
+        "meshsimplification": "meshsimplification",
+        "convexmeshsimplification": "convexmeshsimplification",
+        "boundingcube": "boundingcube",
+        "boundingsphere": "boundingsphere",
+        "spherefill": "spherefill",
+        "sdf": "sdf",
+        "none": "none",
+    }
+    return mapping.get(value.lower(), "convexhull")
 
 def _iter_prim_hierarchy(root) -> Iterable[Any]:
     stack = [root]
@@ -372,25 +342,7 @@ def _iter_prim_hierarchy(root) -> Iterable[Any]:
         for child in reversed(current.GetChildren()):
             stack.append(child)
 
-def _apply_rigid_body_and_colliders(
-    prim, *, kinematic: bool, approximation_shape: str
-) -> None:
-    from pxr import UsdGeom, UsdPhysics
-
-    rigid_api = UsdPhysics.RigidBodyAPI.Apply(prim)
-    rigid_api.CreateRigidBodyEnabledAttr(True)
-    rigid_api.CreateKinematicEnabledAttr(bool(kinematic))
-
-    physx_schema = _try_import_physx_schema()
-    if physx_schema is not None:
-        physx_rigid_api = physx_schema.PhysxRigidBodyAPI.Apply(prim)
-        physx_rigid_api.CreateEnableCCDAttr(True)
-
-    for member in _iter_prim_hierarchy(prim):
-        if member.IsA(UsdGeom.Gprim) or member.IsInstanceable():
-            _apply_collision_api(member, approximation_shape)
-
-
+# collect bbox
 def _collect_bboxes(stage, scene: Dict[str, Any], prim_paths: Dict[str, str]
 ) -> Dict[str, Dict[str, List[float]]]:
     bboxes: Dict[str, Dict[str, List[float]]] = {}
@@ -402,456 +354,36 @@ def _collect_bboxes(stage, scene: Dict[str, Any], prim_paths: Dict[str, str]
         bboxes[instance_id] = {"min": bbox_min, "max": bbox_max}
     return bboxes
 
-def _bbox_center(bbox: Dict[str, List[float]]) -> List[float]:
-    return [
-        (bbox["min"][i] + bbox["max"][i]) / 2.0
-        for i in range(3)
-    ]
-def _bbox_size(bbox: Dict[str, List[float]]) -> List[float]:
-    return [
-        bbox["max"][axis] - bbox["min"][axis]
-        for axis in range(3)
-    ]
+def _world_bbox(stage, prim_path: str) -> Tuple[List[float], List[float]]:
+    from pxr import Usd, UsdGeom
 
-def _clamp(value: float, lower: float, upper: float) -> float:
-    if lower > upper:
-        return (lower + upper) / 2.0
-    return max(lower, min(value, upper))
-
-def _bbox_overlap_depth(
-    a_bbox: Dict[str, List[float]],
-    b_bbox: Dict[str, List[float]],
-) -> List[float]:
-    return [
-        max(
-            0.0,
-            min(a_bbox["max"][i], b_bbox["max"][i])
-            - max(a_bbox["min"][i], b_bbox["min"][i]),
-        )
-        for i in range(3)
-    ]
-
-def _copy_bbox(bbox: Dict[str, List[float]]) -> Dict[str, List[float]]:
-    return {
-        "min": [float(value) for value in bbox["min"]],
-        "max": [float(value) for value in bbox["max"]],
-    }
-
-def _translate_bbox(
-    bbox: Dict[str, List[float]],
-    move_vector: List[float],
-) -> None:
-    for axis in range(3):
-        bbox["min"][axis] += move_vector[axis]
-        bbox["max"][axis] += move_vector[axis]
-
-def _collision_axis(
-    overlaps: List[float],
-    penetration_tolerance: float,
-) -> int:
-    candidates = [
-        axis
-        for axis, overlap in enumerate(overlaps)
-        if overlap > penetration_tolerance
-    ]
-    if not candidates:
-        return min(range(3), key=lambda axis: overlaps[axis])
-    return min(candidates, key=lambda axis: overlaps[axis])
-
-def _collision_details(
-    ids: List[str],
-    bboxes: Dict[str, Dict[str, List[float]]],
-    *,
-    penetration_tolerance: float = 1e-5,
-) -> List[Dict[str, Any]]:
-    axis_names = ["x", "y", "z"]
-    collisions: List[Dict[str, Any]] = []
-
-    for idx, a_id in enumerate(ids):
-        if a_id not in bboxes:
-            continue
-        for b_id in ids[idx + 1:]:
-            if b_id not in bboxes:
-                continue
-
-            a_bbox = bboxes[a_id]
-            b_bbox = bboxes[b_id]
-
-            if not _aabb_overlap(
-                a_bbox["min"],
-                a_bbox["max"],
-                b_bbox["min"],
-                b_bbox["max"],
-            ):
-                continue
-
-            overlaps = _bbox_overlap_depth(a_bbox, b_bbox)
-            if any(overlap <= penetration_tolerance for overlap in overlaps):
-                continue
-
-            axis = _collision_axis(overlaps, penetration_tolerance)
-            collisions.append({
-                "a": a_id,
-                "b": b_id,
-                "method": "isaac_world_bbox",
-                "axis": axis_names[axis],
-                "overlap": overlaps[axis],
-                "overlap_depth": overlaps,
-            })
-
-    return collisions
-
-def _support_children(scene: Dict[str, Any]) -> Dict[str, List[str]]:
-    raw = scene.get("support_children", {}) or {}
-    if not isinstance(raw, dict):
-        return {}
-    return raw
-
-def _collision_move_weights(
-    a_id: str,
-    b_id: str,
-    scene: Dict[str, Any],
-) -> Tuple[float, float]:
-    support_children = _support_children(scene)
-
-    if b_id in (support_children.get(a_id, []) or []):
-        return 0.0, 1.0
-    if a_id in (support_children.get(b_id, []) or []):
-        return 1.0, 0.0
-
-    def weight(instance_id: str) -> float:
-        children = support_children.get(instance_id, []) or []
-        if children:
-            return 0.25
-        return 1.0
-
-    return weight(a_id), weight(b_id)
-
-def _suggest_collision_moves(
-    scene: Dict[str, Any],
-    bboxes: Dict[str, Dict[str, List[float]]],
-    ids: List[str],
-    collisions: List[Dict[str, Any]],
-    *,
-    margin: float = 0.05,
-    max_iterations: int = 12,
-    penetration_tolerance: float = 1e-5,
-) -> Dict[str, Any] | None:
-    if not collisions:
-        return None
-
-    axis_names = ["x", "y", "z"]
-    instances = _instances(scene)
-    working_bboxes = {
-        instance_id: _copy_bbox(bboxes[instance_id])
-        for instance_id in ids
-        if instance_id in bboxes
-    }
-    offsets = {
-        instance_id: [0.0, 0.0, 0.0]
-        for instance_id in working_bboxes
-    }
-
-    iterations = 0
-    for iteration in range(max_iterations):
-        active_collisions = _collision_details(
-            ids,
-            working_bboxes,
-            penetration_tolerance=penetration_tolerance,
-        )
-        if not active_collisions:
-            break
-
-        moved = False
-        iterations = iteration + 1
-
-        for collision in active_collisions:
-            a_id = collision["a"]
-            b_id = collision["b"]
-            a_bbox = working_bboxes[a_id]
-            b_bbox = working_bboxes[b_id]
-            overlaps = _bbox_overlap_depth(a_bbox, b_bbox)
-            axis = _collision_axis(overlaps, penetration_tolerance)
-
-            separation = overlaps[axis] + margin
-            if separation <= penetration_tolerance:
-                continue
-
-            a_center = _bbox_center(a_bbox)
-            b_center = _bbox_center(b_bbox)
-            direction = 1.0 if b_center[axis] >= a_center[axis] else -1.0
-            a_weight, b_weight = _collision_move_weights(a_id, b_id, scene)
-            total_weight = a_weight + b_weight
-            if total_weight <= 0.0:
-                a_weight = 1.0
-                b_weight = 1.0
-                total_weight = 2.0
-
-            a_delta = -direction * separation * (a_weight / total_weight)
-            b_delta = direction * separation * (b_weight / total_weight)
-
-            for instance_id, delta in ((a_id, a_delta), (b_id, b_delta)):
-                if abs(delta) <= penetration_tolerance:
-                    continue
-                move_vector = [0.0, 0.0, 0.0]
-                move_vector[axis] = delta
-                _translate_bbox(working_bboxes[instance_id], move_vector)
-                offsets[instance_id][axis] += delta
-                moved = True
-
-        if not moved:
-            break
-
-    unresolved = _collision_details(
-        ids,
-        working_bboxes,
-        penetration_tolerance=penetration_tolerance,
+    prim = stage.GetPrimAtPath(prim_path)
+    bbox_cache = UsdGeom.BBoxCache(
+        Usd.TimeCode.Default(),
+        [UsdGeom.Tokens.default_, UsdGeom.Tokens.render, UsdGeom.Tokens.proxy],
+        useExtentsHint=True,
+    )
+    bbox = bbox_cache.ComputeWorldBound(prim).ComputeAlignedRange()
+    if bbox.IsEmpty():
+        raise RuntimeError(f"empty bbox for {prim_path}")
+    min_pt = bbox.GetMin()
+    max_pt = bbox.GetMax()
+    return (
+        [float(min_pt[0]), float(min_pt[1]), float(min_pt[2])],
+        [float(max_pt[0]), float(max_pt[1]), float(max_pt[2])],
     )
 
-    collision_refs: Dict[str, List[Dict[str, str]]] = {
-        instance_id: []
-        for instance_id in working_bboxes
-    }
-    for collision in collisions:
-        ref = {"a": collision["a"], "b": collision["b"]}
-        collision_refs.setdefault(collision["a"], []).append(ref)
-        collision_refs.setdefault(collision["b"], []).append(ref)
-
-    moves: List[Dict[str, Any]] = []
-    final_positions: Dict[str, Dict[str, Any]] = {}
-
-    for instance_id in ids:
-        if instance_id not in working_bboxes:
-            continue
-
-        old_position = [
-            float(value)
-            for value in instances.get(instance_id, {}).get(
-                "position",
-                _bbox_center(bboxes[instance_id]),
-            )
-        ]
-        move_vector = offsets[instance_id]
-        new_position = [
-            old_position[axis] + move_vector[axis]
-            for axis in range(3)
-        ]
-        final_positions[instance_id] = {
-            "instance_id": instance_id,
-            "final_position": new_position,
-        }
-
-        if not any(abs(value) > penetration_tolerance for value in move_vector):
-            continue
-
-        moves.append({
-            "instance_id": instance_id,
-            "old_position": old_position,
-            "move_vector": move_vector,
-            "final_position": new_position,
-            "new_position": new_position,
-            "collisions": collision_refs.get(instance_id, []),
-        })
-
-    if not moves:
-        return {
-            "instance_id": None,
-            "move_vector": [0.0, 0.0, 0.0],
-            "new_position": None,
-            "moves": [],
-            "final_positions": final_positions,
-            "unresolved_collisions": unresolved,
-            "resolved_collision_free": not unresolved,
-            "iterations": iterations,
-            "margin": margin,
-            "reason": "collisions were detected, but no movable AABB separation was found",
-        }
-
-    primary_move = max(
-        moves,
-        key=lambda item: sum(abs(value) for value in item["move_vector"]),
+def _fallback_bbox(inst: Dict[str, Any]) -> Tuple[List[float], List[float]]:
+    position = [float(v) for v in inst.get("position", [0.0, 0.0, 0.0])]
+    size = [float(v) for v in inst.get("bbox_size", [1.0, 1.0, 1.0])]
+    half = [v / 2.0 for v in size]
+    return (
+        [position[i] - half[i] for i in range(3)],
+        [position[i] + half[i] for i in range(3)],
     )
 
-    return {
-        "instance_id": primary_move["instance_id"],
-        "final_position": primary_move["final_position"],
-        "axis": axis_names[
-            max(
-                range(3),
-                key=lambda axis: abs(primary_move["move_vector"][axis]),
-            )
-        ],
-        "move_vector": primary_move["move_vector"],
-        "new_position": primary_move["new_position"],
-        "primary_move": primary_move,
-        "moves": moves,
-        "final_positions": final_positions,
-        "unresolved_collisions": unresolved,
-        "resolved_collision_free": not unresolved,
-        "iterations": iterations,
-        "margin": margin,
-        "reason": (
-            "iteratively separate all colliding world AABBs and report the "
-            "suggested final position for each checked instance"
-        ),
-    }
 
-def _collision_pairs(
-    scene: Dict[str, Any],
-    bboxes: Dict[str, Dict[str, List[float]]],
-    pair: List[str] | None = None,
-) -> Tuple[List[Dict[str, Any]], Dict[str, Any] | None]:
-    ids = [
-        instance_id
-        for instance_id in _instances(scene).keys()
-        if instance_id in bboxes
-    ]
-    if pair:
-        ids = [item for item in pair if item in bboxes]
-
-    collisions = _collision_details(ids, bboxes)
-    suggested_move = _suggest_collision_moves(scene, bboxes, ids, collisions)
-
-    if suggested_move:
-        move_by_id = {
-            move["instance_id"]: move
-            for move in suggested_move.get("moves", [])
-        }
-        for collision in collisions:
-            pair_moves = [
-                move_by_id[instance_id]
-                for instance_id in (collision["a"], collision["b"])
-                if instance_id in move_by_id
-            ]
-            collision["suggested_moves"] = pair_moves
-            collision["suggested_move"] = pair_moves[0] if pair_moves else None
-
-    return collisions, suggested_move
-
-def _suggest_support_move(
-    child_id: str,
-    parent_id: str,
-    child_bbox: Dict[str, List[float]],
-    parent_bbox: Dict[str, List[float]],
-    scene: Dict[str, Any],
-    *,
-    z_tolerance: float = 0.05,
-    overlap_threshold: float = 0.4,
-) -> Dict[str, Any]:
-    instances = _instances(scene)
-    child_inst = instances.get(child_id, {})
-
-    old_position = [
-        float(value)
-        for value in child_inst.get("position", [0.0, 0.0, 0.0])
-    ]
-
-    child_center = _bbox_center(child_bbox)
-    parent_center = _bbox_center(parent_bbox)
-    child_size = _bbox_size(child_bbox)
-    parent_size = _bbox_size(parent_bbox)
-
-    c_min = child_bbox["min"]
-    p_min = parent_bbox["min"]
-    p_max = parent_bbox["max"]
-
-    z_gap = p_max[2] - c_min[2]
-    move_vector = [0.0, 0.0, 0.0]
-
-    if abs(z_gap) > z_tolerance:
-        move_vector[2] = z_gap
-
-    for axis in (0, 1):
-        child_half = child_size[axis] / 2.0
-
-        if parent_size[axis] >= child_size[axis]:
-            target_center = _clamp(
-                child_center[axis],
-                p_min[axis] + child_half,
-                p_max[axis] - child_half,
-            )
-        else:
-            target_center = parent_center[axis]
-
-        move_vector[axis] = target_center - child_center[axis]
-
-    new_position = [
-        old_position[axis] + move_vector[axis]
-        for axis in range(3)
-    ]
-
-    return {
-        "instance_id": child_id,
-        "parent_id": parent_id,
-        "move_vector": move_vector,
-        "new_position": new_position,
-        "z_delta": move_vector[2],
-        "xy_delta": [move_vector[0], move_vector[1]],
-        "reason": (
-            "move child so its bottom rests on parent top and its XY footprint "
-            "is inside the parent support area"
-        ),
-        "z_tolerance": z_tolerance,
-        "overlap_threshold": overlap_threshold,
-    }
-
-def _check_support(
-    child_id: str,
-    parent_id: str,
-    bboxes: Dict[str, Dict[str, List[float]]],
-    scene: Dict[str, Any],
-    z_tolerance: float = 0.05,
-    overlap_threshold: float = 0.4,
-) -> Dict[str, Any]:
-    child = bboxes[child_id]
-    parent = bboxes[parent_id]
-    c_min = child["min"]
-    c_max = child["max"]
-    p_min = parent["min"]
-    p_max = parent["max"]
-
-    z_gap = p_max[2] - c_min[2]
-    child_area = max(1e-9, (c_max[0] - c_min[0]) * (c_max[1] - c_min[1]))
-    xy_overlap = xy_overlap_area(c_min, c_max, p_min, p_max)
-    coverage = xy_overlap / child_area
-    issues: List[str] = []
-
-    if abs(z_gap) > z_tolerance:
-        issues.append(f"z_gap={z_gap:.3f} outside tolerance {z_tolerance:.3f}")
-    if coverage < overlap_threshold:
-        issues.append(f"xy_coverage={coverage:.3f} below threshold {overlap_threshold:.3f}")
-
-    supported = not issues
-
-    suggested_move = None
-
-    if issues:
-        suggested_move = _suggest_support_move(
-            child_id=child_id,
-            parent_id=parent_id,
-            child_bbox=child,
-            parent_bbox=parent,
-            scene=scene,
-            z_tolerance=z_tolerance,
-            overlap_threshold=overlap_threshold
-        )
-
-    return {
-        "supported": supported,
-        "child": child_id,
-        "parent": parent_id,
-        "z_gap": z_gap,
-        "xy_coverage": round(coverage, 3),
-        "contacts": (
-            [{"child": child_id, "parent": parent_id, "type": "support"}]
-            if supported
-            else []
-        ),
-        "issues": issues,
-        "suggested_move": suggested_move,
-    }
-
-
+#simulate_step
 def _final_positions(stage, prim_paths: Dict[str, str]) -> Dict[str, List[float]]:
     from pxr import Usd, UsdGeom
 
@@ -916,54 +448,58 @@ def _dispatch(
     *,
     emit_before_shutdown: bool = False,
 ) -> Dict[str, Any]:
-    operation = request.get("operation")
-    scene = request.get("scene", {})
-    options = request.get("options", {}) or {}
     sim_app = None
     usd_context = None
-    warnings: List[str] = []
     payload: Dict[str, Any] | None = None
-    stage_path: str | None = None
 
     try:
         sim_app, usd_context = _start_isaac(request)
+        payload = _dispatch_with_runtime(
+            request,
+            sim_app=sim_app,
+            usd_context=usd_context,
+        )
+        return payload
+    except Exception as exc:
+        # noqa: BLE001 - worker must return structured errors.
+        payload = _error_payload(request.get("operation"), exc)
+        return payload
+    finally:
+        if emit_before_shutdown and payload is not None:
+            _emit_payload(payload)
+        try:
+            if usd_context is not None:
+                usd_context.close_stage()
+        finally:
+            if sim_app is not None:
+                sim_app.close()
+
+
+def _dispatch_with_runtime(
+    request: Dict[str, Any],
+    *,
+    sim_app=None,
+    usd_context=None,
+) -> Dict[str, Any]:
+    operation = request.get("operation")
+    scene = request.get("scene", {})
+    options = request.get("options", {}) or {}
+    warnings: List[str] = []
+    stage_path: str | None = None
+
+    try:
+        if operation == "save_scene_usd":
+            return _save_scene_usd(
+                request,
+                sim_app=sim_app,
+                usd_context=usd_context,
+            )
+
         stage_path, prim_paths = _build_stage(
             request,
             sim_app=sim_app,
             usd_context=usd_context,
         )
-
-        if operation == "save_scene_usd":
-            output_path = Path(options["output_path"]).expanduser()
-            output_path.parent.mkdir(parents=True, exist_ok=True)
-
-            if output_path.exists():
-                output_path.unlink()
-
-            shutil.copy2(stage_path, output_path)
-
-            payload = {
-                "ok": True,
-                "save": True,
-                "operation": operation,
-                "operations": operation,
-                "backend": "isaacsim",
-                "usd_path": str(output_path),
-                "temp_stage_path": (
-                    stage_path
-                    if bool(options.get("keep_temp_stage"))
-                    else None
-                ),
-                "instance_count": len(_instances(scene)),
-                "exported_count": len(prim_paths),
-                "prim_paths": {
-                    instance_id: str(prim_path)
-                    for instance_id, prim_path in prim_paths.items()
-                },
-                "warnings": warnings,
-                "stage_path": stage_path,
-            }
-            return payload
 
         stage = _open_stage_in_isaac(sim_app, usd_context, stage_path)
         warnings.extend(_apply_instance_physics(stage, request, prim_paths))
@@ -982,12 +518,6 @@ def _dispatch(
                 "backend": "isaacsim",
                 "collision_free": len(collisions) == 0,
                 "collisions": collisions,
-                "suggested_move": suggested_move,
-                "suggested_moves": (
-                    suggested_move.get("moves", [])
-                    if suggested_move
-                    else []
-                ),
                 "suggested_final_positions": (
                     suggested_move.get("final_positions", {})
                     if suggested_move
@@ -1057,21 +587,16 @@ def _dispatch(
 
     except Exception as exc:
         # noqa: BLE001 - worker must return structured errors.
-        payload = _error_payload(operation, exc)
-        return payload
+        return _error_payload(operation, exc)
     finally:
-        if emit_before_shutdown and payload is not None:
-            _emit_payload(payload)
-        try:
-            if usd_context is not None:
-                usd_context.close_stage()
-        finally:
-            if sim_app is not None:
-                sim_app.close()
-        #save usd if needed for debugging
         keep_stage = bool(request.get("keep_stage"))
-        if not keep_stage:
+        if operation != "save_scene_usd" and not keep_stage:
             _cleanup_stage_file(stage_path)
+        if usd_context is not None:
+            try:
+                usd_context.close_stage()
+            except Exception:
+                pass
 
 
 def main() -> int:
@@ -1085,5 +610,52 @@ def main() -> int:
     _dispatch(request, emit_before_shutdown=True)
     return 0
 
+def serve() -> int:
+    sim_app = None
+    usd_context = None
+    try:
+        for line in sys.stdin:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                request = json.loads(line)
+            except Exception as exc:
+                _emit_payload(_error_payload(None, exc))
+                continue
+
+            if request.get("operation") == "__shutdown__":
+                _emit_payload({
+                    "ok": True,
+                    "operation": "__shutdown__",
+                    "backend": "isaacsim",
+                })
+                break
+
+            try:
+                if sim_app is None or usd_context is None:
+                    sim_app, usd_context = _start_isaac(request)
+                payload = _dispatch_with_runtime(
+                    request,
+                    sim_app=sim_app,
+                    usd_context=usd_context,
+                )
+            except Exception as exc:
+                payload = _error_payload(request.get("operation"), exc)
+            _emit_payload(payload)
+    except Exception as exc:
+        _emit_payload(_error_payload(None, exc))
+        return 0
+    finally:
+        try:
+            if usd_context is not None:
+                usd_context.close_stage()
+        finally:
+            if sim_app is not None:
+                sim_app.close()
+    return 0
+
 if __name__ == "__main__":
+    if "--serve" in sys.argv:
+        raise SystemExit(serve())
     raise SystemExit(main())

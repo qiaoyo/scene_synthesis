@@ -50,8 +50,6 @@ def observe_scene_with_isaac(config: Any, state: SceneState) -> Dict[str, Any]:
                 "authoritative": True,
                 "collision_free": payload.get("collision_free"),
                 "collisions": payload.get("collisions", []),
-                "suggested_move": payload.get("suggested_move"),
-                "suggested_moves": payload.get("suggested_moves", []),
                 "suggested_final_positions": payload.get("suggested_final_positions", {}),
             })
         else:
@@ -93,6 +91,7 @@ def observe_scene_with_isaac(config: Any, state: SceneState) -> Dict[str, Any]:
                     "parent": parent_id,
                     "issue": "isaac_check_failed",
                     "error": err,
+                    "suggested_move": payload.get("suggested_move"),
                 })
                 continue
 
@@ -112,7 +111,6 @@ def observe_scene_with_isaac(config: Any, state: SceneState) -> Dict[str, Any]:
                 relation["issues"] = payload.get("issues", [])
                 relation["suggested_move"] = payload.get("suggested_move")
                 support_state["invalid_relations"].append(relation)
-
     try:
         payload = run_isaac_operation(
             config=config,

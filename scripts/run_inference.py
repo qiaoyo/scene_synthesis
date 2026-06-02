@@ -15,7 +15,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--command",
         type=str,
-        default="Get a big robotic arm and place it on the workbench(set support), put a long straight conveyor belt beside it, then place one part on the belt(set support). ",
+        default="Get a big robotic arm and a workbench. And place the robot on the workbench and set support and check collisions, then replace the robot with another robot and finnally save thescene.",
         help="Task description for the planner"
         
     )

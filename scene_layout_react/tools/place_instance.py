@@ -67,7 +67,6 @@ class PlaceInstanceTool(Tool):
         asset_type = str(doc.metadata.get("asset_type") or "Unknown")
         usd_path = str(doc.metadata.get("usd_path") or "")
         bbox = doc.metadata.get("bbox") or {}
-        bbox_size = bbox.get("size") or [1.0, 1.0, 1.0]
         
         instance_id = str(doc.metadata.get("instance_id"))
         base_id = instance_id
@@ -88,19 +87,16 @@ class PlaceInstanceTool(Tool):
             usd_path=usd_path,
             position=position,
             rotation_deg=float(rotation_deg),
-            bbox_size=[float(v) for v in bbox_size],
+            bbox=bbox,
             tags=dict(doc.metadata.get("tags") or {}),
             description=str(doc.metadata.get("description") or ""),
         )
             
         context.scene.add_instance(inst)
         return ToolResult(ok=True, data={
-            "instance_id": instance_id,
+            "placed_instance_id": instance_id,
             "base_instance_id": base_id,
             "asset_type": asset_type,
             "usd_path": usd_path,
             "position": inst.position,
-            "bbox_size": inst.bbox_size,
-            "tags": inst.tags,
-            "description": inst.description,
         })

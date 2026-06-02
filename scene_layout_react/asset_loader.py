@@ -53,14 +53,9 @@ def load_csv_documents(csv_path: Path) -> List[AssetDocument]:
                 bbox_max_tuple = ast.literal_eval(bbox_max)
                 min_vals = [float(bbox_min_tuple[0]), float(bbox_min_tuple[1]), float(bbox_min_tuple[2])]
                 max_vals = [float(bbox_max_tuple[0]), float(bbox_max_tuple[1]), float(bbox_max_tuple[2])]
-                size = [round(max_vals[i] - min_vals[i], 6) for i in range(3)]
-                center = [round((max_vals[i] + min_vals[i]) / 2.0, 6) for i in range(3)]
                 bbox = {
                     "min": min_vals,
                     "max": max_vals,
-                    "size": size,
-                    "center": center,
-                    "unit": "m",
                 }
                 content = f"Asset Type: {asset_category}\nDescription: {description}\nTags: {json.dumps(tags)}\n"
                 metadata={  

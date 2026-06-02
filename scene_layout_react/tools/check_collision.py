@@ -38,6 +38,12 @@ class CheckCollisionTool(Tool):
         
         pair: List[str] | None = None
         if instance_id_a or instance_id_b:
+            
+            if instance_id_a == instance_id_b:
+                return ToolResult(
+                    ok=False,
+                    error="instance_id_a and instance_id_b must be different",
+                )
             if not instance_id_a or not instance_id_b:
                 return ToolResult(
                     ok=False,
@@ -72,8 +78,6 @@ class CheckCollisionTool(Tool):
             "backend": payload.get("backend", "isaacsim"),
             "collision_free": payload.get("collision_free", True),
             "collisions": payload.get("collisions", []),
-            "suggested_move": payload.get("suggested_move", None),
-            "suggested_moves": payload.get("suggested_moves", []),
             "suggested_final_positions": payload.get("suggested_final_positions", {}),
             "warnings": payload.get("warnings", []),
         }

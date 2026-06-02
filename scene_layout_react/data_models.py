@@ -34,18 +34,14 @@ class Instance:
     usd_path: str
     position: List[float] = field(default_factory=lambda: [0.0, 0.0, 0.0])
     rotation_deg: float = 0.0  # 仅绕 Z 轴
-    bbox_size: List[float] = field(default_factory=lambda: [1.0, 1.0, 1.0])
+    bbox: dict = field(default_factory=lambda: {
+                        "min": [0.0, 0.0, 0.0],
+                        "max": [1.0, 1.0, 1.0]
+                    })
+
     parent_instance_id: Optional[str] = None  # set_support 之后才会有
     tags: Dict[str, str] = field(default_factory=dict)
     description: Optional[str] = None  # 从资产文档继承的文本描述
-
-    def aabb(self) -> Tuple[List[float], List[float]]:
-        cx, cy, cz = self.position
-        sx, sy, sz = self.bbox_size
-        half = [sx / 2.0, sy / 2.0, sz / 2.0]
-        bbox_min = [cx - half[0], cy - half[1], cz - half[2]]
-        bbox_max = [cx + half[0], cy + half[1], cz + half[2]]
-        return bbox_min, bbox_max
 
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)

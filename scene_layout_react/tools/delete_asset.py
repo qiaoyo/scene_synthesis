@@ -35,6 +35,6 @@ class DeleteAssetTool(Tool):
         unparented = list(context.scene.state.support_children.get(instance_id, []))
         context.scene.delete(instance_id)
         return ToolResult(ok=True, data={
-            "instance_id": instance_id,
+            "deleted_instance_id": instance_id,
             "unparented_children": unparented,
         })

@@ -19,19 +19,11 @@ def _default_output_path(context: ToolContext) -> Path:
     return Path("/home/simple/joey/scene_synthesis/outputs/save_usd/saved_scene.usd")
 
 
-def _scene_to_dict(scene: Any) -> Dict[str, Any]:
-    if hasattr(scene, "to_dict"):
-        return scene.to_dict()
-    if isinstance(scene, dict):
-        return scene
-    raise TypeError(f"unsupported scene type: {type(scene)!r}")
-
-
 def export_scene_to_usd_with_worker(
     scene: Any,
     output_path: str | Path,
     config: Any,
-    keep_temp_stage: bool = False,
+    include_physics: bool = False,
 ) -> Dict[str, Any]:
     output_path = Path(output_path).expanduser()
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -39,11 +31,10 @@ def export_scene_to_usd_with_worker(
     payload = run_isaac_operation(
         config=config,
         operation="save_scene_usd",
-        scene=_scene_to_dict(scene),
+        scene=scene.to_dict(),
         options={
             "output_path": str(output_path),
-            "temp_dir": str(output_path.parent),
-            "keep_temp_stage": keep_temp_stage,
+            "include_physics": include_physics,
         },
     )
     if not payload.get("ok", False):
@@ -62,9 +53,9 @@ class SaveSceneUsdTool(Tool):
             "parameters": {
                 "type": "object",
                 "properties": {
-                    "keep_temp_stage": {
+                    "include_physics": {
                         "type": "boolean",
-                        "description": "Keep the intermediate worker-generated USD file for debugging.",
+                        "description": "If true, author rigid body and collision APIs before exporting.",
                     },
                 },
                 "additionalProperties": False,
@@ -75,7 +66,7 @@ class SaveSceneUsdTool(Tool):
     def run(
         self,
         context: ToolContext,
-        keep_temp_stage: bool = False,
+        include_physics: bool = False,
     ) -> ToolResult:
         output_path = _default_output_path(context)
 
@@ -83,6 +74,6 @@ class SaveSceneUsdTool(Tool):
             context.scene.state,
             output_path,
             context.config,
-            keep_temp_stage=keep_temp_stage,
+            include_physics=include_physics,
         )
         return ToolResult(ok=True, data=data)

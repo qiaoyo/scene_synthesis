@@ -38,8 +38,7 @@ class RetrieveAssetTool(Tool):
                         "type": "string",
                         "enum": SUPPORT_ASSET_TYPES,
                         "description": (
-                            "Expected asset category from the user command. "
-                            "When omitted, the tool tries to infer it from query."
+                            "Expected asset category from the user command. When omitted, the tool tries to infer it from query."
                         ),
                     },
                 },
@@ -94,14 +93,6 @@ class RetrieveAssetTool(Tool):
                     "doc_id": doc.doc_id,
                     "score": round(float(score), 4),
                     "asset_type": asset_type,
-                    "doc_type": doc.metadata.get("doc_type"),
-                    "usd_path": doc.metadata.get("usd_path"),
-                    "instance_id": doc.metadata.get("instance_id"),
-                    "bbox": doc.metadata.get("bbox"),
-                    "tags": doc.metadata.get("tags"),
-                    "description": doc.metadata.get("description"),
-                    "content": doc.content,
-                    "preview": doc.content[:240],
                 })
                 
         #final_items = filtered_items[:top_k] 

@@ -36,16 +36,13 @@ class QuerySceneTool(Tool):
                 continue
             if asset_type and inst.asset_type != asset_type:
                 continue
-            bbox_min, bbox_max = inst.aabb()
             instances.append({
                 "instance_id": inst.instance_id,
                 "asset_type": inst.asset_type,
                 "asset_doc_id": inst.asset_doc_id,
                 "position": inst.position,
                 "rotation_deg": inst.rotation_deg,
-                "bbox_size": inst.bbox_size,
-                "bbox_min": bbox_min,
-                "bbox_max": bbox_max,
+                "bbox": inst.bbox,
                 "parent_instance_id": inst.parent_instance_id,
             })
         if instance_id and not instances:

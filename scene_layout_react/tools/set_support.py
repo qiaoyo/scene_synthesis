@@ -68,7 +68,6 @@ class SetSupportTool(Tool):
                 "old_parent": old_parent_id,
                 "registered": True,
                 "validation_performed": False,
-                "next_recommended_tools": ["check_support", "query_scene"],
             },
         )
         
