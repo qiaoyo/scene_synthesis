@@ -13,7 +13,12 @@ class ReplaceInstanceTool(Tool):
         "function": {
             "name": "replace_instance",
             "description": (
-                "Replace an existing scene instance with a different retrieved asset of the same or requested asset type. The scene instance ID, transform, and support relations are preserved; only the asset metadata is changed. Use this when an instance repeatedly fails collision or support validation."
+                "Replace an existing scene instance with a different asset of "
+                "the same asset_type. The scene instance ID is migrated to the "
+                "replacement asset instance_id with conflict-safe suffixing, "
+                "while transform and support relations are preserved. Use this "
+                "after repeated collision, support, or stability failures when "
+                "moving the existing instance is insufficient."
             ),
             "parameters": {
                 "type": "object",
@@ -25,17 +30,18 @@ class ReplaceInstanceTool(Tool):
                     "query": {
                         "type": "string",
                         "description": (
-                            "Natural language retrieval query for the replacement. "
-                            "When omitted, the old instance asset type and "
-                            "description are used."
+                            "Optional natural language retrieval query for the "
+                            "replacement. When omitted, the current asset type "
+                            "and description are used."
                         ),
                     },
                     "top_k": {
                         "type": "integer",
+                        "minimum": 1,
                         "description": "Number of candidate replacements to consider.",
                     },
                 },
-                "required": ["instance_id","query"],
+                "required": ["instance_id", "query"],
                 "additionalProperties": False,
             },
         },
@@ -61,8 +67,10 @@ class ReplaceInstanceTool(Tool):
         inst = context.scene.state.instances[instance_id]
         replacement_type = inst.asset_type
 
-        retrieval_query = query
-        if not retrieval_query.strip():
+        retrieval_query = (query or f"{inst.asset_type} {inst.description or ''}").strip()
+        if not retrieval_query:
+            retrieval_query = inst.asset_type
+        if not retrieval_query:
             return ToolResult(ok=False, error="query is empty")
 
         excluded_doc_ids = {inst.asset_doc_id}
@@ -113,7 +121,30 @@ class ReplaceInstanceTool(Tool):
 
         doc, score = candidates[0]
 
-        inst.instance_id = doc.metadata.get("instance_id")
+        replacement_base_id = str(doc.metadata.get("instance_id") or "").strip()
+        if not replacement_base_id:
+            return ToolResult(
+                ok=False,
+                data={
+                    "replacement_doc_id": doc.doc_id,
+                    "query": retrieval_query,
+                },
+                error="replacement asset metadata is missing instance_id",
+            )
+
+        old_instance_id = instance_id
+        new_instance_id = _unique_instance_id(
+            base_id=replacement_base_id,
+            existing_ids=context.scene.state.instances,
+            current_id=old_instance_id,
+        )
+        _rename_scene_instance(
+            scene=context.scene,
+            old_id=old_instance_id,
+            new_id=new_instance_id,
+        )
+
+        inst = context.scene.state.instances[new_instance_id]
         inst.asset_type = str(doc.metadata.get("asset_type") or replacement_type)
         inst.asset_doc_id = doc.doc_id
         inst.usd_path = str(doc.metadata.get("usd_path") or "")
@@ -121,17 +152,13 @@ class ReplaceInstanceTool(Tool):
         inst.tags = dict(doc.metadata.get("tags") or {})
         inst.description = str(doc.metadata.get("description") or "")
 
-        children = list(context.scene.state.support_children.get(instance_id, []))
-        inherited_relations = {
-            "parent": inst.parent_instance_id,
-            "children": children,
-        }
-
         return ToolResult(
             ok=True,
             data={
-                "replaced_instance_id": instance_id,
-                "new_instance_id": inst.instance_id,
+                "old_instance_id": old_instance_id,
+                "new_instance_id": new_instance_id,
+                "replacement_base_instance_id": replacement_base_id,
+                "renamed": old_instance_id != new_instance_id,
                 "replaced": True,
                 "next_recommended_tools": [
                     "check_collision",
@@ -140,3 +167,81 @@ class ReplaceInstanceTool(Tool):
                 ],
             },
         )
+
+
+def _unique_instance_id(
+    base_id: str,
+    existing_ids: Dict[str, Any],
+    current_id: str,
+) -> str:
+    if base_id == current_id or base_id not in existing_ids:
+        return base_id
+
+    index = 1
+    while True:
+        candidate = f"{base_id}_{index}"
+        if candidate == current_id or candidate not in existing_ids:
+            return candidate
+        index += 1
+
+
+def _rename_scene_instance(
+    scene: Any,
+    old_id: str,
+    new_id: str,
+) -> None:
+    inst = scene.state.instances[old_id]
+    if old_id != new_id:
+        scene.state.instances.pop(old_id)
+        scene.state.instances[new_id] = inst
+
+    inst.instance_id = new_id
+
+    for parent_id, children in list(scene.state.support_children.items()):
+        scene.state.support_children[parent_id] = _replace_child_id(
+            children,
+            old_id=old_id,
+            new_id=new_id,
+        )
+
+    if old_id in scene.state.support_children:
+        old_children = scene.state.support_children.pop(old_id)
+        existing_children = scene.state.support_children.get(new_id, [])
+        scene.state.support_children[new_id] = _merge_children(
+            existing_children,
+            old_children,
+        )
+
+    for child_id, child in scene.state.instances.items():
+        if child_id == new_id:
+            continue
+        if child.parent_instance_id == old_id:
+            child.parent_instance_id = new_id
+
+
+def _replace_child_id(
+    children: List[str],
+    old_id: str,
+    new_id: str,
+) -> List[str]:
+    replaced = [
+        new_id if child_id == old_id else child_id
+        for child_id in children
+    ]
+    return _merge_children([], replaced)
+
+
+def _merge_children(
+    first: List[str],
+    second: List[str],
+) -> List[str]:
+    merged: List[str] = []
+    seen: set[str] = set()
+
+    for child_id in list(first) + list(second):
+        if child_id in seen:
+            continue
+        seen.add(child_id)
+        merged.append(child_id)
+
+    return merged

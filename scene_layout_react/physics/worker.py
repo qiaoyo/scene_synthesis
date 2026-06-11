@@ -511,32 +511,36 @@ def _dispatch_with_runtime(
 
         if operation == "check_collision":
             pair = options.get("pair")
-            collisions, suggested_move = _collision_pairs(scene, bboxes, pair=pair)
+            include_suggestions = bool(options.get("include_suggestions", False))
+            collisions, suggested_move = _collision_pairs(scene, bboxes, pair=pair, include_suggestions=include_suggestions)
             payload = {
                 "ok": True,
                 "operation": operation,
                 "backend": "isaacsim",
                 "collision_free": len(collisions) == 0,
                 "collisions": collisions,
-                "suggested_final_positions": (
-                    suggested_move.get("final_positions", {})
-                    if suggested_move
-                    else {}
-                ),
                 "warnings": warnings,
                 "stage_path": stage_path,
             }
+            
+            if include_suggestions:
+                payload["suggested_final_positions"] = (
+                    suggested_move.get("final_positions", {})
+                    if suggested_move
+                    else {}
+                )
             return payload
 
         if operation == "check_support":
             child_id = options["child_id"]
             parent_id = options["parent_id"]
-            support = _check_support(child_id, parent_id, bboxes, scene=scene)
+            include_suggestions = bool(options.get("include_suggestions", False))
+            support = _check_support(child_id, parent_id, bboxes, scene=scene, include_suggestions=include_suggestions)
             payload = {
                 "ok": True,
                 "operation": operation,
                 "backend": "isaacsim",
-                **support,
+                "support": support,
                 "warnings": warnings,
                 "stage_path": stage_path,
             }
@@ -556,20 +560,12 @@ def _dispatch_with_runtime(
             for instance_id, position in final_positions.items()
             if position[2] < initial_positons[instance_id][2] - 0.05
             ]
-            contacts = []
-            for parent_id, children in (scene.get("support_children", {}) or {}).items():
-                for child_id in children:
-                    if child_id in bboxes and parent_id in bboxes:
-                        support = _check_support(child_id, parent_id, bboxes,scene=scene)
-                        contacts.extend(support["contacts"])
-
             payload = {
                 "ok": True,
                 "operation": operation,
                 "backend": "isaacsim",
                 "stable": len(fallen_assets) == 0,
                 "fallen_assets": fallen_assets,
-                "contacts": contacts,
                 "final_positions": final_positions,
                 "warnings": warnings,
                 "stage_path": stage_path,

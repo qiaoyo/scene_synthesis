@@ -21,6 +21,7 @@ def _collision_pairs(
     scene: Dict[str, Any],
     bboxes: Dict[str, Dict[str, List[float]]],
     pair: List[str] | None = None,
+    include_suggestions: bool = False,
 ) -> Tuple[List[Dict[str, Any]], Dict[str, Any] | None]:
     ids = [
         instance_id
@@ -31,8 +32,9 @@ def _collision_pairs(
         ids = [item for item in pair if item in bboxes]
 
     collisions = _collision_details(ids, bboxes)
-    suggested_move = _suggest_collision_moves(scene, bboxes, ids, collisions)
-
+    suggested_move = None
+    if include_suggestions:
+        suggested_move = _suggest_collision_moves(scene, bboxes, ids, collisions) 
     return collisions, suggested_move
 
 def _collision_details(
@@ -118,6 +120,20 @@ def _collision_axis(
     return min(candidates, key=lambda axis: overlaps[axis])
 
 
+def _collision_suggest_axis_xy(
+    overlaps: List[float],
+    penetration_tolerance: float,
+) -> int | None:
+    candidates = [
+        axis
+        for axis in (0, 1)
+        if overlaps[axis] > penetration_tolerance
+    ]
+    if not candidates:
+        return None
+    return min(candidates, key=lambda axis: overlaps[axis])
+
+
 def _suggest_collision_moves(
     scene: Dict[str, Any],
     bboxes: Dict[str, Dict[str, List[float]]],
@@ -133,7 +149,6 @@ def _suggest_collision_moves(
     if not collisions:
         return None
 
-    axis_names = ["x", "y", "z"]
     instances = _instances(scene)
     original_bboxes = {
         instance_id: _copy_bbox(bboxes[instance_id])
@@ -174,8 +189,14 @@ def _suggest_collision_moves(
             a_id = collision["a"]
             b_id = collision["b"]
 
-            axis = collision["axis_idx"]
-            overlap = collision["overlap"]
+            axis = _collision_suggest_axis_xy(
+                collision["overlap_depth"],
+                penetration_tolerance,
+            )
+            if axis is None:
+                continue
+
+            overlap = collision["overlap_depth"][axis]
             separation = (overlap + margin) * damping
 
             if separation <= penetration_tolerance:
@@ -269,6 +290,7 @@ def _suggest_collision_moves(
         "unresolved_collisions": unresolved,
         "resolved_collision_free": not unresolved,
         "iterations": iterations,
+        "suggestion_axes": ["x", "y"],
     }
 
 def _copy_bbox(bbox: Dict[str, List[float]]) -> Dict[str, List[float]]:

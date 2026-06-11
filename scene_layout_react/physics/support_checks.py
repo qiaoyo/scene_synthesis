@@ -23,6 +23,7 @@ def _check_support(
     scene: Dict[str, Any],
     z_tolerance: float = 0.05,
     overlap_threshold: float = 0.4,
+    include_suggestions: bool = False,
 ) -> Dict[str, Any]:
     child = bboxes[child_id]
     parent = bboxes[parent_id]
@@ -42,7 +43,7 @@ def _check_support(
 
     suggested_move = None
 
-    if issues:
+    if issues and include_suggestions:
         suggested_move = _suggest_support_move(
             child_id=child_id,
             parent_id=parent_id,
@@ -53,7 +54,7 @@ def _check_support(
             overlap_threshold=overlap_threshold,
         )
 
-    return {
+    result = {
         "supported": supported,
         "child": child_id,
         "parent": parent_id,
@@ -64,8 +65,11 @@ def _check_support(
             if supported
             else []
         ),
-        "suggested_move": suggested_move,
+        "issues": issues,
     }
+    if include_suggestions:
+        result["suggested_move"] = suggested_move
+    return result
 
 
 def xy_overlap_area(

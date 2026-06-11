@@ -25,6 +25,8 @@ class ProjectConfig:
     device: str = "cuda:1"
     index_dir: Path = _PROJECT_ROOT / "data" / "indexes"
     output_dir: Path = _PROJECT_ROOT / "outputs"
+    scene_in_path: Optional[Path] = None
+    scene_out_path: Optional[Path] = None
     
     """tool_ctx"""
     physics_enabled: bool = True
@@ -34,7 +36,7 @@ class ProjectConfig:
     model: str = "Qwen/Qwen3.5-27B"
     llm_api_base_url: str = "http://127.0.0.1:8000/v1"
     llm_api_key: str = "EMPTY" 
-    llm_timeout_sec: float = 60.0
+    llm_timeout_sec: float = 120.0
     llm_max_retries: int = 2
     llm_enable_thinking: bool = True
     max_new_tokens: int = 512
@@ -61,12 +63,14 @@ class ProjectConfig:
         self.isaac_python = Path(self.isaac_python)
         if self.isaac_worker_path is not None:
             self.isaac_worker_path = Path(self.isaac_worker_path)
-
         self.inventory_csvs = [Path(p) for p in self.inventory_csvs]
         self.scene_md_files = [Path(p) for p in self.scene_md_files]
-
         if self.auto_discover_assets:
             self.discover_asset_inputs()
+        if self.scene_in_path is not None:
+            self.scene_in_path = Path(self.scene_in_path)
+        if self.scene_out_path is not None:
+            self.scene_out_path = Path(self.scene_out_path)
 
     def discover_asset_inputs(self) -> None:
         if not self.inventory_csvs:

@@ -110,6 +110,7 @@ class RunRecord:
     elapsed_ms: Optional[float] = None
     response: Optional[str] = None
     error: Optional[str] = None
+    final_scene_path: Optional[str] = None
     version: Dict[str, Any] = field(default_factory=dict)
     config: Dict[str, Any] = field(default_factory=dict)
     steps: List[StepRecord] = field(default_factory=list)
@@ -123,6 +124,7 @@ class RunRecord:
             "elapsed_ms": self.elapsed_ms,
             "response": self.response,
             "error": self.error,
+            "final_scene_path": self.final_scene_path,
             "version": self.version,
             "config": self.config,
             "steps": self.steps,
@@ -136,6 +138,7 @@ class RunRecorder:
         self.snapshot_dir = self.run_dir / "snapshots"
         self.events_path = self.run_dir / "events.jsonl"
         self.record_path = self.run_dir / "record.json"
+        self.planner_steps_path = self.run_dir / "planner_steps.jsonl"
         self.snapshot_dir.mkdir(parents=True, exist_ok=True)
         self.tools_path = self.run_dir / "tools.json"
         self._tool_steps: List[Dict[str, Any]] = []
@@ -148,11 +151,47 @@ class RunRecorder:
         )
         return str(path)
 
+    def save_final_scene(self, scene: Dict[str, Any]) -> str:
+        path = self.run_dir / "scene_state_final.json"
+        path.write_text(
+            json.dumps(jsonable(scene), ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+        return str(path)
+
     def save_record(self, record: RunRecord) -> None:
         self.record_path.write_text(
             json.dumps(record.to_dict(), ensure_ascii=False, indent=2),
             encoding="utf-8",
         )
+
+    def save_planner_step(
+        self,
+        step: int,
+        command: str,
+        messages: List[Dict[str, Any]],
+        decision: Dict[str, Any],
+    ) -> None:
+        payload = {
+            "run_id": self.run_id,
+            "step": step,
+            "timestamp": now_iso(),
+            "command": command,
+            "messages": messages,
+            "decision": decision,
+            "tool_calls": decision.get("calls", [])
+            if decision.get("type") == "tool_calls"
+            else [],
+            "final_response": decision.get("content")
+            if decision.get("type") == "final"
+            else None,
+            "error": decision.get("error")
+            if decision.get("type") in {"planner_error", "tool_chat_error"}
+            else None,
+        }
+        with self.planner_steps_path.open("a", encoding="utf-8") as handle:
+            handle.write(json.dumps(jsonable(payload), ensure_ascii=False))
+            handle.write("\n")
         
     def save_step_tool(
         self,

@@ -91,7 +91,5 @@ def _would_create_support_cycle(
         inst = context.scene.state.instances.get(current_id)
         if inst is None:
             return False
-
         current_id = inst.parent_instance_id
-
     return False

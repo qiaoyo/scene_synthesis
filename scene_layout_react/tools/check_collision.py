@@ -11,7 +11,7 @@ class CheckCollisionTool(Tool):
         "type": "function",
         "function": {
             "name": "check_collision",
-            "description": "Run Isaac Sim collision checking for the current scene or a specific pair of instances and return suggested collision-resolution moves.",
+            "description": "Run Isaac Sim collision checking. If instance_id_a and instance_id_b are omitted, check all scene instances. If both are provided, check only that pair. Returns collision details and suggested resolution positions.",
             "parameters": {
                 "type": "object",
                 "properties": {
@@ -56,13 +56,17 @@ class CheckCollisionTool(Tool):
                         error=f"instance not found: {instance_id}",
                     )
             pair = [instance_id_a, instance_id_b]
-
+        options: Dict[str, Any] = {
+            "include_suggestions": True,
+        }
+        if pair:
+            options["pair"] = pair
         try:
             payload = run_isaac_operation(
                 config=context.config,
                 operation="check_collision",
                 scene=context.scene.state,
-                options={"pair": pair} if pair else {},
+                options=options,
             )
         except IsaacBridgeError as exc:
             return ToolResult(ok=False, error=str(exc))

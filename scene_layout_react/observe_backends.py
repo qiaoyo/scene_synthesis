@@ -18,15 +18,13 @@ def observe_scene_with_isaac(config: Any, state: SceneState) -> Dict[str, Any]:
         "backend": "isaacsim",
         "authoritative": False,
         "collision_free": None,
-        "collisions": [],
-        "suggested_move": None,
-        "suggested_moves": [],
-        "suggested_final_positions": {},
+        "collision_count": None,
     }
     support_state = {
         "backend": "isaacsim",
         "authoritative": False,
-        "valid_relations": [],
+        "checked_relation_count": 0,
+        "valid_relation_count": 0,
         "invalid_relations": [],
     }
     physics_feedback = {
@@ -34,8 +32,6 @@ def observe_scene_with_isaac(config: Any, state: SceneState) -> Dict[str, Any]:
         "authoritative": False,
         "stable": None,
         "fallen_assets": [],
-        "contacts": [],
-        "final_positions": {},
     }
 
     try:
@@ -43,15 +39,19 @@ def observe_scene_with_isaac(config: Any, state: SceneState) -> Dict[str, Any]:
             config=config,
             operation="check_collision",
             scene=state,
+            options={"include_suggestions": False},
         )
         warnings.extend(payload.get("warnings", []))
         if payload.get("ok"):
+            collisions = payload.get("collisions", []) or []
             validation.update({
                 "authoritative": True,
                 "collision_free": payload.get("collision_free"),
-                "collisions": payload.get("collisions", []),
-                "suggested_final_positions": payload.get("suggested_final_positions", {}),
+                "collision_count": len(collisions),
             })
+            if collisions:
+                validation["collisions"] = collisions
+
         else:
             errors.append(f"check_collision: {_payload_error(payload)}")
     except IsaacBridgeError as exc:
@@ -65,17 +65,20 @@ def observe_scene_with_isaac(config: Any, state: SceneState) -> Dict[str, Any]:
             if child_id not in state.instances:
                 continue
 
+            support_state["checked_relation_count"] += 1
+
             try:
                 payload = run_isaac_operation(
                     config=config,
                     operation="check_support",
                     scene=state,
-                    options={"child_id": child_id, "parent_id": parent_id},
+                    options={"child_id": child_id, "parent_id": parent_id, "include_suggestions": False},
                 )
                 warnings.extend(payload.get("warnings", []))
             except IsaacBridgeError as exc:
                 errors.append(f"check_support({child_id}, {parent_id}): {exc}")
                 support_state["invalid_relations"].append({
+                    "source": "isaacsim",
                     "child": child_id,
                     "parent": parent_id,
                     "issue": "isaac_check_failed",
@@ -87,45 +90,41 @@ def observe_scene_with_isaac(config: Any, state: SceneState) -> Dict[str, Any]:
                 err = _payload_error(payload)
                 errors.append(f"check_support({child_id}, {parent_id}): {err}")
                 support_state["invalid_relations"].append({
+                    "source": "isaacsim",
                     "child": child_id,
                     "parent": parent_id,
                     "issue": "isaac_check_failed",
                     "error": err,
-                    "suggested_move": payload.get("suggested_move"),
                 })
                 continue
 
-            support_state["authoritative"] = True
-            relation = {
-                "child": child_id,
-                "parent": parent_id,
-                "contacts": payload.get("contacts", []),
-                "z_gap": payload.get("z_gap"),
-                "xy_coverage": payload.get("xy_coverage"),
-            }
-
-            if payload.get("supported"):
-                support_state["valid_relations"].append(relation)
+            support = payload.get("support", {}) or {}
+            if support.get("supported"):
+                support_state["valid_relation_count"] += 1
             else:
-                relation["issue"] = "not_supported"
-                relation["issues"] = payload.get("issues", [])
-                relation["suggested_move"] = payload.get("suggested_move")
-                support_state["invalid_relations"].append(relation)
+                support_state["invalid_relations"].append({
+                    "source": "isaacsim",
+                    "child": support.get("child", child_id),
+                    "parent": support.get("parent", parent_id),
+                    "issue": "not_supported",
+                    "issues": support.get("issues", []),
+                })
     try:
         payload = run_isaac_operation(
             config=config,
             operation="simulate_step",
             scene=state,
-            options={"duration": getattr(config, "physics_sim_duration", 2.0)},
+            options={"duration": getattr(config, "physics_sim_duration", 2.0),},
         )
         warnings.extend(payload.get("warnings", []))
         if payload.get("ok"):
+            stable = payload.get("stable")
+            fallen_assets = payload.get("fallen_assets", []) or []
+
             physics_feedback.update({
                 "authoritative": True,
-                "stable": payload.get("stable"),
-                "fallen_assets": payload.get("fallen_assets", []),
-                "contacts": payload.get("contacts", []),
-                "final_positions": payload.get("final_positions", {}),
+                "stable": stable,
+                "fallen_assets": fallen_assets,
             })
         else:
             errors.append(f"simulate_step: {_payload_error(payload)}")

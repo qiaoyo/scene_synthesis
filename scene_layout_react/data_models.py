@@ -46,11 +46,28 @@ class Instance:
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
 
+    @classmethod
+    def from_dict(cls, payload: Dict[str, Any]) -> "Instance":
+        return cls(
+            instance_id=str(payload["instance_id"]),
+            asset_type=str(payload["asset_type"]),
+            asset_doc_id=str(payload["asset_doc_id"]),
+            usd_path=str(payload.get("usd_path") or ""),
+            position=[float(value) for value in payload.get("position", [0.0, 0.0, 0.0])],
+            rotation_deg=float(payload.get("rotation_deg", 0.0)),
+            bbox=dict(payload.get("bbox") or {
+                "min": [0.0, 0.0, 0.0],
+                "max": [1.0, 1.0, 1.0],
+            }),
+            parent_instance_id=payload.get("parent_instance_id"),
+            tags=dict(payload.get("tags") or {}),
+            description=payload.get("description"),
+        )
+
 @dataclass
 class SceneState:
     """整张场景的运行时快照。"""
     instances: Dict[str, Instance] = field(default_factory=dict)
-    # 反向索引：parent_id -> [child_ids]
     support_children: Dict[str, List[str]] = field(default_factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
@@ -58,6 +75,28 @@ class SceneState:
             "instances": {iid: inst.to_dict() for iid, inst in self.instances.items()},
             "support_children": dict(self.support_children),
         }
+
+    @classmethod
+    def from_dict(cls, payload: Dict[str, Any]) -> "SceneState":
+        raw_instances = payload.get("instances", {}) or {}
+        instances = {
+            str(instance_id): Instance.from_dict(instance_payload)
+            for instance_id, instance_payload in raw_instances.items()
+            if isinstance(instance_payload, dict)
+        }
+        support_children = {
+            str(parent_id): [
+                str(child_id)
+                for child_id in children
+            ]
+            for parent_id, children in (payload.get("support_children", {}) or {}).items()
+            if isinstance(children, list)
+        }
+        return cls(
+            instances=instances,
+            support_children=support_children,
+        )
+        
 __all__ = [
     "AssetDocument",
     "Instance",

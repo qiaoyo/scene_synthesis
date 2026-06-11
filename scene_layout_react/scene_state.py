@@ -10,6 +10,7 @@ class SceneStateManager:
     def __init__(self, state: Optional[SceneState] = None):
         self.state: SceneState = state or SceneState()
         self._auto_id_counter: Dict[str, int] = {}
+        self.retrieval_memory: Dict[str, Any] = {"asset_queries": [],}
 
     # -- 实例 CRUD --
     def add_instance(self, inst: Instance) -> Instance:
@@ -70,12 +71,136 @@ class SceneStateManager:
             self.state.support_children[parent_id] = [c for c in siblings if c != child_id]
         # 子节点的父节点删除
         child.parent_instance_id = None
+
+    # -- 状态校验 --
+    def validate_integrity(self) -> Dict[str, Any]:
+        invalid = []
+        child_to_parent = {}
+
+        for parent_id, children in self.state.support_children.items():
+            if parent_id not in self.state.instances:
+                invalid.append({
+                    "source": "local_state",
+                    "parent": parent_id,
+                    "issue": "missing parent instance",
+                })
+                continue
+
+            for child_id in children:
+                child = self.state.instances.get(child_id)
+                if child is None:
+                    invalid.append({
+                        "source": "local_state",
+                        "child": child_id,
+                        "parent": parent_id,
+                        "issue": "missing child instance",
+                    })
+                    continue
+
+                if child_id == parent_id:
+                    invalid.append({
+                        "source": "local_state",
+                        "child": child_id,
+                        "parent": parent_id,
+                        "issue": "self support",
+                    })
+
+                if child_id in child_to_parent:
+                    invalid.append({
+                        "source": "local_state",
+                        "child": child_id,
+                        "parent": parent_id,
+                        "issue": "multiple parents",
+                    })
+
+                if child.parent_instance_id != parent_id:
+                    invalid.append({
+                        "source": "local_state",
+                        "child": child_id,
+                        "parent": parent_id,
+                        "issue": "parent link mismatch",
+                        "instance_parent": child.parent_instance_id,
+                    })
+
+                child_to_parent[child_id] = parent_id
+
+        for child_id, inst in self.state.instances.items():
+            parent_id = inst.parent_instance_id
+            if parent_id is None:
+                continue
+            if parent_id not in self.state.instances:
+                invalid.append({
+                    "source": "local_state",
+                    "child": child_id,
+                    "parent": parent_id,
+                    "issue": "missing parent instance",
+                })
+            elif child_id not in self.state.support_children.get(parent_id, []):
+                invalid.append({
+                    "source": "local_state",
+                    "child": child_id,
+                    "parent": parent_id,
+                    "issue": "missing support_children edge",
+                })
+
+        return {
+            "backend": "local_state",
+            "ok": len(invalid) == 0,
+            "instance_count": len(self.state.instances),
+            "support_edge_count": sum(
+                len(children)
+                for children in self.state.support_children.values()
+            ),
+            "invalid_relations": invalid,
+        }
+
     # -- 序列化 --
+    def remember_asset_retrievals(self, records: List[Dict[str, Any]]) -> None:
+        queries = self.retrieval_memory.setdefault("asset_queries", [])
+        for record in records:
+            candidates = []
+            for item in record.get("results", []) or []:
+                candidates.append({
+                    "doc_id": item.get("doc_id"),
+                    "instance_id": item.get("instance_id"),
+                    "usd_path": item.get("usd_path"),
+                })
+            compact = {
+                "query": record.get("query", ""),
+                "asset_type": record.get("asset_type", ""),
+                "count": len(candidates),
+                "candidates": candidates,
+            }
+            queries[:] = [
+                item for item in queries
+                if not (
+                    item.get("query") == compact["query"]
+                    and item.get("asset_type") == compact["asset_type"]
+                )
+            ]
+            queries.append(compact)
 
     def to_dict(self) -> Dict[str, Any]:
-        return self.state.to_dict()
+        payload = self.state.to_dict()
+        payload["retrieval_memory"] = self.retrieval_memory
+        return payload
+
+    @classmethod
+    def from_dict(cls, payload: Dict[str, Any]) -> "SceneStateManager":
+        manager = cls(SceneState.from_dict(payload))
+        manager.retrieval_memory = dict(payload.get("retrieval_memory") or {"asset_queries": []})
+        return manager
+
+    @classmethod
+    def load(cls, path: Path) -> "SceneStateManager":
+        path = Path(path).expanduser()
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        if not isinstance(payload, dict):
+            raise ValueError(f"scene state file must contain a JSON object: {path}")
+        return cls.from_dict(payload)
 
     def save(self, path: Path) -> None:
+        path = Path(path).expanduser()
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps(self.to_dict(), ensure_ascii=False, indent=2), encoding="utf-8")
 

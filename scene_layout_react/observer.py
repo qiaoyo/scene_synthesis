@@ -1,8 +1,8 @@
 # observer.py
 from __future__ import annotations
 from dataclasses import asdict, dataclass, field
-from typing import Any, Callable, Dict, List, Optional, Tuple
-from .data_models import Instance, SceneState
+from typing import Any, Callable, Dict, Optional
+from .data_models import SceneState
 from .scene_state import SceneStateManager
 # =========================================================
 # Observation
@@ -15,6 +15,7 @@ class Observation:
     support_state: Dict[str, Any] = field(default_factory=dict)
     physics_feedback: Dict[str, Any] = field(default_factory=dict)
     scene_semantics: Dict[str, Any] = field(default_factory=dict)
+    retrieval_memory: Dict[str, Any] = field(default_factory=dict)
     error: Optional[str] = None
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
@@ -34,7 +35,7 @@ class Observer:
 
     def observe(self) -> Observation:
         state = self.scene.state
-        local = self._observe_local_state(state)
+        local = self.scene.validate_integrity()
 
         external = {
             "ok": None,
@@ -42,15 +43,13 @@ class Observer:
                 "backend": "not_observed",
                 "authoritative": False,
                 "collision_free": None,
-                "collisions": [],
-                "suggested_move": None,
-                "suggested_moves": [],
-                "suggested_final_positions": {},
+                "collision_count": None,
             },
             "support_state": {
                 "backend": "local_structure_only",
                 "authoritative": False,
-                "valid_relations": [],
+                "checked_relation_count": 0,
+                "valid_relation_count": 0,
                 "invalid_relations": [],
             },
             "physics_feedback": {
@@ -77,8 +76,6 @@ class Observer:
             local["invalid_relations"]
             + support_state.get("invalid_relations", [])
         )
-        support_state["declared_relations"] = local["declared_relations"]
-        support_state["graph_complete"] = local["ok"]
 
         if self.physics_required and self.scene_observer is None:
             ok = False
@@ -96,68 +93,51 @@ class Observer:
             ok = local["ok"]
             error = external.get("error")
 
+        scene_semantics = {}
+        if not local["ok"]:
+            scene_semantics["state_integrity"] = local
+        else:
+            scene_semantics["ok"] = True
+
+        retrieval_memory = getattr(self.scene, "retrieval_memory", None) or {}
+        retrieval_memory_summary = {
+            "asset_queries": list(retrieval_memory.get("asset_queries", []))
+        }
+
         return Observation(
             ok=ok,
-            current_state=state.to_dict(),
+            current_state=self._summarize_current_state(state),
             validation=validation,
             support_state=support_state,
             physics_feedback=physics_feedback,
-            scene_semantics={"state_integrity": local},
+            scene_semantics=scene_semantics,
+            retrieval_memory=retrieval_memory_summary,
             error=error,
         )
 
-    def _observe_local_state(self, state: SceneState) -> Dict[str, Any]:
-        invalid = []
-        declared = []
-        child_to_parent = {}
+    def _summarize_current_state(self, state: SceneState) -> Dict[str, Any]:
+        instances = {}
+        for instance_id, inst in state.instances.items():
+            instances[instance_id] = {
+                "instance_id": instance_id,
+                "asset_type": inst.asset_type,
+                "position": list(inst.position),
+                "rotation_deg": inst.rotation_deg,
+                "bbox": inst.bbox,
+                "parent_instance_id": inst.parent_instance_id,
+            }
 
+        support_children = {}
         for parent_id, children in state.support_children.items():
             if parent_id not in state.instances:
-                invalid.append({"parent": parent_id, "issue": "missing parent instance"})
                 continue
 
-            for child_id in children:
-                declared.append({"child": child_id, "parent": parent_id})
+            valid_children = [child_id for child_id in children if child_id in state.instances]
 
-                child = state.instances.get(child_id)
-                if child is None:
-                    invalid.append({
-                        "child": child_id,
-                        "parent": parent_id,
-                        "issue": "missing child instance",
-                    })
-                    continue
-
-                if child_id == parent_id:
-                    invalid.append({"child": child_id, "parent": parent_id, "issue": "self support"})
-
-                if child_id in child_to_parent:
-                    invalid.append({"child": child_id, "parent": parent_id, "issue": "multiple parents"})
-
-                if child.parent_instance_id != parent_id:
-                    invalid.append({
-                        "child": child_id,
-                        "parent": parent_id,
-                        "issue": "parent link mismatch",
-                        "instance_parent": child.parent_instance_id,
-                    })
-
-                child_to_parent[child_id] = parent_id
-
-        for child_id, inst in state.instances.items():
-            parent_id = inst.parent_instance_id
-            if parent_id is None:
-                continue
-            if parent_id not in state.instances:
-                invalid.append({"child": child_id, "parent": parent_id, "issue": "missing parent instance"})
-            elif child_id not in state.support_children.get(parent_id, []):
-                invalid.append({"child": child_id, "parent": parent_id, "issue": "missing support_children edge"})
+            if valid_children:
+                support_children[parent_id] = valid_children
 
         return {
-            "backend": "local_state",
-            "ok": len(invalid) == 0,
-            "instance_count": len(state.instances),
-            "support_edge_count": sum(len(v) for v in state.support_children.values()),
-            "declared_relations": declared,
-            "invalid_relations": invalid,
+            "instances": instances,
+            "support_children": support_children,
         }

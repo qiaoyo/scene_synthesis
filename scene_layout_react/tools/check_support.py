@@ -12,7 +12,7 @@ class CheckSupportTool(Tool):
         "type": "function",
         "function": {
             "name": "check_support",
-            "description": "Run Isaac Sim support validation for a child instance on a parent instance.",
+            "description": "Run Isaac Sim support validation for a child instance on a parent instance. Returns whether the relation is physically supported, diagnostic details such as z_gap and xy_coverage, issue messages, contacts, and a suggested_move when the relation is invalid.",
             "parameters": {
                 "type": "object",
                 "properties": {
@@ -41,7 +41,7 @@ class CheckSupportTool(Tool):
                 config=context.config,
                 operation="check_support",
                 scene=context.scene.state,
-                options={"child_id": child_id, "parent_id": parent_id},
+                options={"child_id": child_id, "parent_id": parent_id,"include_suggestions": True,},
             )
         except IsaacBridgeError as exc:
             return ToolResult(ok=False, error=str(exc))
@@ -52,15 +52,17 @@ class CheckSupportTool(Tool):
                 data=payload,
                 error=payload.get("error") or "; ".join(payload.get("errors", [])),
             )
+        
+        support = payload.get("support",{}) or {}
 
         data: Dict[str, Any] = {
             "backend": payload.get("backend", "isaacsim"),
             "supported": payload.get("supported", False),
-            "child": payload.get("child", child_id),
-            "parent": payload.get("parent", parent_id),
-            "contacts": payload.get("contacts", []),
-            "issues": payload.get("issues", []),
+            "child": support.get("child", child_id),
+            "parent": support.get("parent", parent_id),
+            "contacts": support.get("contacts", []),
+            "issues": support.get("issues", []),
             "warnings": payload.get("warnings", []),
-            "suggested_move": payload.get("suggested_move"),
+            "suggested_move": support.get("suggested_move"),
         }
         return ToolResult(ok=True, data=data)
