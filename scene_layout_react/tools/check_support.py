@@ -57,7 +57,7 @@ class CheckSupportTool(Tool):
 
         data: Dict[str, Any] = {
             "backend": payload.get("backend", "isaacsim"),
-            "supported": payload.get("supported", False),
+            "supported": support.get("supported", False),
             "child": support.get("child", child_id),
             "parent": support.get("parent", parent_id),
             "contacts": support.get("contacts", []),

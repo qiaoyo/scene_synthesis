@@ -8,7 +8,6 @@ from typing import Any, Dict, Iterable, List, Optional
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_RUNS_ROOT = PROJECT_ROOT / "outputs" / "runs"
-DEFAULT_OUTPUT_JSONL = PROJECT_ROOT / "data" / "lora" / "planner_toolcall_sft.jsonl"
 DEFAULT_OUTPUT_JSON = PROJECT_ROOT / "data" / "lora" / "planner_toolcall_sft_preview.json"
 ALLOWED_TOOL_NAMES = {
     "delete_asset",
@@ -39,16 +38,10 @@ def parse_args() -> argparse.Namespace:
         help="Directory containing per-run subdirectories.",
     )
     parser.add_argument(
-        "--output-jsonl",
-        type=Path,
-        default=DEFAULT_OUTPUT_JSONL,
-        help="Training JSONL output path.",
-    )
-    parser.add_argument(
-        "--output-json",
+        "--output-path",
         type=Path,
         default=DEFAULT_OUTPUT_JSON,
-        help="Pretty JSON preview output path.",
+        help="Pretty JSON output path for human inspection and editing.",
     )
     parser.add_argument(
         "--successful-runs-only",
@@ -149,18 +142,6 @@ def build_tool_sample(
                 "tool_calls": assistant_tool_calls,
             },
         ],
-        "expected_output": {
-            "tool_calls": assistant_tool_calls,
-        },
-        "metadata": {
-            "source_path": str(source_path),
-            "run_id": row.get("run_id"),
-            "step": row.get("step"),
-            "timestamp": row.get("timestamp"),
-            "command": row.get("command"),
-            "run_ok": run_record.get("ok") if run_record else None,
-            "run_error": run_record.get("error") if run_record else None,
-        },
     }
     return sample
 
@@ -187,15 +168,6 @@ def build_final_sample(
                 "content": final_response,
             },
         ],
-        "metadata": {
-            "source_path": str(source_path),
-            "run_id": row.get("run_id"),
-            "step": row.get("step"),
-            "timestamp": row.get("timestamp"),
-            "command": row.get("command"),
-            "run_ok": run_record.get("ok") if run_record else None,
-            "run_error": run_record.get("error") if run_record else None,
-        },
     }
 
 
@@ -224,21 +196,9 @@ def convert_records(args: argparse.Namespace) -> List[Dict[str, Any]]:
     return samples
 
 
-def write_outputs(
-    samples: List[Dict[str, Any]],
-    output_jsonl: Path,
-    output_json: Path,
-) -> None:
-    output_jsonl = output_jsonl.expanduser()
+def write_output(samples: List[Dict[str, Any]], output_json: Path) -> None:
     output_json = output_json.expanduser()
-    output_jsonl.parent.mkdir(parents=True, exist_ok=True)
     output_json.parent.mkdir(parents=True, exist_ok=True)
-
-    with output_jsonl.open("w", encoding="utf-8") as handle:
-        for sample in samples:
-            handle.write(json.dumps(sample, ensure_ascii=False, separators=(",", ":")))
-            handle.write("\n")
-
     output_json.write_text(
         json.dumps(samples, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
@@ -248,20 +208,11 @@ def write_outputs(
 def main() -> int:
     args = parse_args()
     samples = convert_records(args)
-    write_outputs(samples, args.output_jsonl, args.output_json)
+    write_output(samples, args.output_path)
     print(f"[convert_lora] samples={len(samples)}")
-    print(f"[convert_lora] jsonl={args.output_jsonl}")
-    print(f"[convert_lora] json={args.output_json}")
+    print(f"[convert_lora] json={args.output_path}")
     return 0
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
-
-# 默认命令
-# cd /home/simple/joey/scene_synthesis
-# source ~/isaac_env/bin/activate
-# python dataprocess/convert_planner_steps_to_lora.py
-# 只转换成功的
-# python dataprocess/convert_planner_steps_to_lora.py --successful-runs-only
