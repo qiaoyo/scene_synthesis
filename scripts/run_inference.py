@@ -16,7 +16,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--command",
         type=str,
-        default="Retrieve a robot then place it on (0,0,0) and retrivel a workbench then place it on (0,0,0) and set support between them",
+        default="Retrieve a rack and place it at position (0, 0, 0). Then retrieve a plastic box and place it on top of the rack. Retrieve a part and place it inside the plastic box. Before saving the scene, check for collisions among the rack, the plastic box, and the part, and only save the scene if the layout is collision-free and physically valid.",
         help="Task description for the planner"
         
     )

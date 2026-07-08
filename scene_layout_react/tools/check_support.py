@@ -2,6 +2,11 @@ from __future__ import annotations
 
 from typing import Any, Dict
 
+from ..data_models import (
+    SUPPORT_TYPE_CONTAINER_INNER,
+    SUPPORT_TYPE_SURFACE,
+    normalize_support_type,
+)
 from ..physics.isaac_bridge import IsaacBridgeError, run_isaac_operation
 from .base import Tool, ToolContext, ToolResult, register_tool
 
@@ -24,6 +29,18 @@ class CheckSupportTool(Tool):
                         "type": "string",
                         "description": "Parent scene instance ID.",
                     },
+                    "support_type": {
+                        "type": "string",
+                        "enum": [
+                            SUPPORT_TYPE_SURFACE,
+                            SUPPORT_TYPE_CONTAINER_INNER,
+                        ],
+                        "description": (
+                            "Optional support mode. When omitted, the tool "
+                            "uses the support type registered for child_id, "
+                            "defaulting to surface."
+                        ),
+                    },
                 },
                 "required": ["child_id", "parent_id"],
                 "additionalProperties": False,
@@ -31,17 +48,34 @@ class CheckSupportTool(Tool):
         },
     }
 
-    def run(self, context: ToolContext, child_id: str, parent_id: str) -> ToolResult:
+    def run(
+        self,
+        context: ToolContext,
+        child_id: str,
+        parent_id: str,
+        support_type: str | None = None,
+    ) -> ToolResult:
         for instance_id in (child_id, parent_id):
             if instance_id not in context.scene.state.instances:
                 return ToolResult(ok=False, error=f"instance not found: {instance_id}")
+
+        resolved_support_type = normalize_support_type(
+            support_type
+            or context.scene.state.support_relation_types.get(child_id)
+            or SUPPORT_TYPE_SURFACE
+        )
 
         try:
             payload = run_isaac_operation(
                 config=context.config,
                 operation="check_support",
                 scene=context.scene.state,
-                options={"child_id": child_id, "parent_id": parent_id,"include_suggestions": True,},
+                options={
+                    "child_id": child_id,
+                    "parent_id": parent_id,
+                    "support_type": resolved_support_type,
+                    "include_suggestions": True,
+                },
             )
         except IsaacBridgeError as exc:
             return ToolResult(ok=False, error=str(exc))
@@ -60,6 +94,8 @@ class CheckSupportTool(Tool):
             "supported": support.get("supported", False),
             "child": support.get("child", child_id),
             "parent": support.get("parent", parent_id),
+            "support_type": support.get("support_type", resolved_support_type),
+            "support_backend": support.get("support_backend"),
             "contacts": support.get("contacts", []),
             "issues": support.get("issues", []),
             "warnings": payload.get("warnings", []),

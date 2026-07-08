@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Dict, List
 
-from .data_models import SceneState
+from .data_models import SUPPORT_TYPE_SURFACE, SceneState
 from .physics.isaac_bridge import IsaacBridgeError, run_isaac_operation
 
 
@@ -66,13 +66,19 @@ def observe_scene_with_isaac(config: Any, state: SceneState) -> Dict[str, Any]:
                 continue
 
             support_state["checked_relation_count"] += 1
+            support_type = state.support_relation_types.get(child_id, SUPPORT_TYPE_SURFACE)
 
             try:
                 payload = run_isaac_operation(
                     config=config,
                     operation="check_support",
                     scene=state,
-                    options={"child_id": child_id, "parent_id": parent_id, "include_suggestions": False},
+                    options={
+                        "child_id": child_id,
+                        "parent_id": parent_id,
+                        "support_type": support_type,
+                        "include_suggestions": False,
+                    },
                 )
                 warnings.extend(payload.get("warnings", []))
             except IsaacBridgeError as exc:
@@ -81,6 +87,7 @@ def observe_scene_with_isaac(config: Any, state: SceneState) -> Dict[str, Any]:
                     "source": "isaacsim",
                     "child": child_id,
                     "parent": parent_id,
+                    "support_type": support_type,
                     "issue": "isaac_check_failed",
                     "error": str(exc),
                 })
@@ -93,6 +100,7 @@ def observe_scene_with_isaac(config: Any, state: SceneState) -> Dict[str, Any]:
                     "source": "isaacsim",
                     "child": child_id,
                     "parent": parent_id,
+                    "support_type": support_type,
                     "issue": "isaac_check_failed",
                     "error": err,
                 })
@@ -106,6 +114,7 @@ def observe_scene_with_isaac(config: Any, state: SceneState) -> Dict[str, Any]:
                     "source": "isaacsim",
                     "child": support.get("child", child_id),
                     "parent": support.get("parent", parent_id),
+                    "support_type": support.get("support_type", support_type),
                     "issue": "not_supported",
                     "issues": support.get("issues", []),
                 })

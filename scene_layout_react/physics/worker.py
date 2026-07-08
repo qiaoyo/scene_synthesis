@@ -15,9 +15,21 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Tuple
 
 try:
+    from container_inner_support import (
+        SUPPORT_TYPE_CONTAINER_INNER,
+        normalize_support_type,
+        run_container_inner_support_check,
+        support_type_for_child,
+    )
     from collision_checks import _collision_pairs
     from support_checks import _check_support
 except ModuleNotFoundError:
+    from .container_inner_support import (
+        SUPPORT_TYPE_CONTAINER_INNER,
+        normalize_support_type,
+        run_container_inner_support_check,
+        support_type_for_child,
+    )
     from .collision_checks import _collision_pairs
     from .support_checks import _check_support
 # stage build
@@ -535,7 +547,29 @@ def _dispatch_with_runtime(
             child_id = options["child_id"]
             parent_id = options["parent_id"]
             include_suggestions = bool(options.get("include_suggestions", False))
-            support = _check_support(child_id, parent_id, bboxes, scene=scene, include_suggestions=include_suggestions)
+            support_type = normalize_support_type(
+                options.get("support_type")
+                or support_type_for_child(scene, child_id)
+            )
+            if support_type == SUPPORT_TYPE_CONTAINER_INNER:
+                support = run_container_inner_support_check(
+                    scene=scene,
+                    bboxes=bboxes,
+                    child_id=child_id,
+                    parent_id=parent_id,
+                    include_suggestions=include_suggestions,
+                    z_tolerance=float(options.get("support_z_tolerance", 0.08)),
+                )
+            else:
+                support = _check_support(
+                    child_id,
+                    parent_id,
+                    bboxes,
+                    scene=scene,
+                    include_suggestions=include_suggestions,
+                )
+                support["support_type"] = support_type
+                support.setdefault("support_backend", "bbox_top_surface")
             payload = {
                 "ok": True,
                 "operation": operation,

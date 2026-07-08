@@ -1,4 +1,10 @@
 from __future__ import annotations
+from ..data_models import (
+    SUPPORT_TYPE_CONTAINER_INNER,
+    SUPPORT_TYPE_SURFACE,
+    VALID_SUPPORT_TYPES,
+    normalize_support_type,
+)
 from .base import Tool, ToolContext, ToolResult, register_tool
 
 @register_tool
@@ -24,6 +30,19 @@ class SetSupportTool(Tool):
                             "Parent scene instance ID."
                         ),
                     },
+                    "support_type": {
+                        "type": "string",
+                        "enum": [
+                            SUPPORT_TYPE_SURFACE,
+                            SUPPORT_TYPE_CONTAINER_INNER,
+                        ],
+                        "default": SUPPORT_TYPE_SURFACE,
+                        "description": (
+                            "Support mode. Use surface for objects on top of a "
+                            "surface; use container_inner only for a child "
+                            "resting inside an open Box on its inner bottom."
+                        ),
+                    },
                 },
                 "required": [ "child_id","parent_id",],
                 "additionalProperties": False,
@@ -31,7 +50,20 @@ class SetSupportTool(Tool):
         },
     }
 
-    def run(self, context: ToolContext, child_id:str, parent_id:str) -> ToolResult:
+    def run(
+        self,
+        context: ToolContext,
+        child_id: str,
+        parent_id: str,
+        support_type: str = SUPPORT_TYPE_SURFACE,
+    ) -> ToolResult:
+        raw_support_type = str(support_type or SUPPORT_TYPE_SURFACE).strip().lower()
+        if raw_support_type not in VALID_SUPPORT_TYPES:
+            return ToolResult(
+                ok=False,
+                error=f"unsupported support_type: {support_type}",
+            )
+        support_type = normalize_support_type(support_type)
         
         if child_id not in context.scene.state.instances:
             return ToolResult(
@@ -58,14 +90,17 @@ class SetSupportTool(Tool):
             )
 
         old_parent_id = context.scene.state.instances[child_id].parent_instance_id
+        old_support_type = context.scene.state.support_relation_types.get(child_id)
 
-        context.scene.set_support(child_id, parent_id) 
+        context.scene.set_support(child_id, parent_id, support_type=support_type) 
         return ToolResult(
             ok=True,
             data={
                 "child": child_id,
                 "parent": parent_id,
+                "support_type": support_type,
                 "old_parent": old_parent_id,
+                "old_support_type": old_support_type,
                 "registered": True,
                 "validation_performed": False,
             },

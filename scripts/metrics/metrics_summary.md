@@ -6,31 +6,31 @@
 
 ### 工业/物理指标
 
-| 指标    | 名称                        | 当前状态 | 数据来源                                                                           |
-| ------- | --------------------------- | -------- | ---------------------------------------------------------------------------------- |
-| `SR`  | 任务成功率                  | 已实现   | `record.json` 中的 `save_scene_usd` 工具结果、USD 文件存在性、最终 observation |
-| `CFR` | 碰撞无关率                  | 已实现   | 最终 observation 的 `validation.collision_free`                                  |
-| `PSR` | 物理稳定率                  | 已实现   | 最终 observation 的 `physics_feedback.stable`                                    |
-|         | 场景任务可行性/<br />合理性 | 规划中   |                                                                                    |
+| 指标    | 名称       | 当前状态 | 数据来源                                                                           |
+| ------- | ---------- | -------- | ---------------------------------------------------------------------------------- |
+| `SR`  | 任务成功率 | 已实现   | `record.json` 中的 `save_scene_usd` 工具结果、USD 文件存在性、最终 observation |
+| `CFR` | 碰撞无关率 | 已实现   | 最终 observation 的`validation.collision_free`                                   |
+| `PSR` | 物理稳定率 | 已实现   | 最终 observation 的`physics_feedback.stable`                                     |
+|         |            |          |                                                                                    |
 
 ### 场景语义指标
 
-| 指标    | 名称           | 当前状态 | 数据来源或缺口                                                                                   |
-| ------- | -------------- | -------- | ------------------------------------------------------------------------------------------------ |
-| `SVR` | 支撑关系正确率 | 已实现   | 最终 observation 的 `support_state.valid_relation_count` 和 `current_state.support_children` |
-| `ACR` | 资产覆盖率     | 暂未实现 | 需要每条任务的 `required_assets` 标注                                                          |
-| `RSR` | 空间关系满足率 | 暂未实现 | 需要 `required_relations` 标注，并实现空间关系 checker                                         |
-| `PE`  | 位置误差       | 暂未实现 | 需要专家位置、人工标注位置或 gold scene state                                                    |
+| 指标    | 名称           | 当前状态 | 数据来源或缺口                                                                                  |
+| ------- | -------------- | -------- | ----------------------------------------------------------------------------------------------- |
+| `SVR` | 支撑关系正确率 | 已实现   | 最终 observation 的`support_state.valid_relation_count` 和 `current_state.support_children` |
+| `ACR` | 资产覆盖率     | 暂未实现 | 需要每条任务的`required_assets` 标注                                                          |
+| `RSR` | 空间关系满足率 | 暂未实现 | 需要`required_relations` 标注，并实现空间关系 checker                                         |
+| `PE`  | 位置误差       | 暂未实现 | 需要专家位置、人工标注位置或 gold scene state                                                   |
 
 ### Agent 行为指标
 
-| 指标    | 名称           | 当前状态 | 数据来源或缺口                                    |
-| ------- | -------------- | -------- | ------------------------------------------------- |
-| `AS`  | 平均步数       | 已实现   | `len(record.steps)`                             |
-| `ATC` | 平均工具调用数 | 已实现   | `sum(len(step.tools) for step in record.steps)` |
-| `TCA` | 工具调用准确率 | 暂未实现 | 需要专家 trace 或 gold tool sequence              |
-| `TPS` | 工具参数相似度 | 暂未实现 | 需要 gold 参数，并实现参数相似度函数              |
-| `RE`  | 纠错效率       | 暂未实现 | 需要从 trace 中追踪碰撞、修复动作和解决事件       |
+| 指标    | 名称                                   | 当前状态 | 数据来源或缺口                                    |
+| ------- | -------------------------------------- | -------- | ------------------------------------------------- |
+| `AS`  | 平均步数                               | 已实现   | `len(record.steps)`                             |
+| `ATC` | 平均工具调用数                         | 已实现   | `sum(len(step.tools) for step in record.steps)` |
+| `TCA` | 工具调用准确率  训练时候导出  最后的 | 暂未实现 | 需要专家 trace 或 gold tool sequence              |
+| `TPS` | 工具参数相似度                         | 暂未实现 | 需要 gold 参数，并实现参数相似度函数              |
+| `RE`  | 纠错效率                               | 暂未实现 | 需要从 trace 中追踪碰撞、修复动作和解决事件       |
 
 ## 已实现指标的具体方法
 
@@ -207,13 +207,13 @@ QS_available =
 
 建议将它定义为一个组合诊断指标，而不是单一布尔值。可拆成以下子项：
 
-| 子项 | 含义 | 可用数据 |
-| --- | --- | --- |
-| `layout_accessible` | 关键设备周围是否有可用通道/操作空间 | bbox、position、场景边界 |
-| `task_flow_valid` | 任务流程是否合理，例如 infeed -> workbench -> outfeed | 任务标注、空间关系 |
-| `orientation_valid` | 设备朝向是否符合任务，例如 conveyor east-west、robot facing bench | rotation、任务标注 |
-| `clearance_valid` | forklift、AGV、robot 周围是否保留安全间距 | bbox、position、阈值规则 |
-| `semantic_role_valid` | 资产角色是否合理，例如 pallet 承载 box，rack 存储 box | required_assets、required_relations |
+| 子项                    | 含义                                                              | 可用数据                            |
+| ----------------------- | ----------------------------------------------------------------- | ----------------------------------- |
+| `layout_accessible`   | 关键设备周围是否有可用通道/操作空间                               | bbox、position、场景边界            |
+| `task_flow_valid`     | 任务流程是否合理，例如 infeed -> workbench -> outfeed             | 任务标注、空间关系                  |
+| `orientation_valid`   | 设备朝向是否符合任务，例如 conveyor east-west、robot facing bench | rotation、任务标注                  |
+| `clearance_valid`     | forklift、AGV、robot 周围是否保留安全间距                         | bbox、position、阈值规则            |
+| `semantic_role_valid` | 资产角色是否合理，例如 pallet 承载 box，rack 存储 box             | required_assets、required_relations |
 
 第一版可以实现为规则分数：
 
@@ -311,12 +311,12 @@ ACR_count_i =
 
 建议输出：
 
-| 字段 | 含义 |
-| --- | --- |
-| `ACR_set` | 按资产类别集合计算 |
-| `ACR_count` | 按资产数量计算 |
-| `missing_assets` | 缺失资产类型 |
-| `extra_assets` | 额外放置资产类型 |
+| 字段               | 含义               |
+| ------------------ | ------------------ |
+| `ACR_set`        | 按资产类别集合计算 |
+| `ACR_count`      | 按资产数量计算     |
+| `missing_assets` | 缺失资产类型       |
+| `extra_assets`   | 额外放置资产类型   |
 
 ### RSR 空间关系满足率
 
@@ -352,16 +352,16 @@ current_state.support_children
 
 第一版 relation checker 可以按关系类型实现：
 
-| 关系 | 判断方法 |
-| --- | --- |
-| `on` | 优先检查 support graph；否则检查 z 接触和 xy overlap |
-| `beside` | 两个物体水平距离低于阈值，且没有明显上下支撑关系 |
-| `nearby` | 中心点水平距离低于 `near_threshold` |
-| `in_front_of` | subject 位于 object 的前方方向；需要约定前方轴或使用 object rotation |
-| `left_of/right_of` | 根据世界坐标或 object local frame 判断相对方向 |
-| `center` | subject 中心接近 object 或 scene center |
-| `fixed_on` | 类似 `on`，但要求位置偏差更小、稳定性更强 |
-| `carrying` | 可建模为 support relation + subject/object 类型约束 |
+| 关系                 | 判断方法                                                             |
+| -------------------- | -------------------------------------------------------------------- |
+| `on`               | 优先检查 support graph；否则检查 z 接触和 xy overlap                 |
+| `beside`           | 两个物体水平距离低于阈值，且没有明显上下支撑关系                     |
+| `nearby`           | 中心点水平距离低于`near_threshold`                                 |
+| `in_front_of`      | subject 位于 object 的前方方向；需要约定前方轴或使用 object rotation |
+| `left_of/right_of` | 根据世界坐标或 object local frame 判断相对方向                       |
+| `center`           | subject 中心接近 object 或 scene center                              |
+| `fixed_on`         | 类似`on`，但要求位置偏差更小、稳定性更强                           |
+| `carrying`         | 可建模为 support relation + subject/object 类型约束                  |
 
 推荐 checker 返回详细结果，而不是只返回 true/false：
 
@@ -394,12 +394,12 @@ relation_score = max(score(candidate_subject, candidate_object))
 
 建议输出：
 
-| 字段 | 含义 |
-| --- | --- |
-| `RSR` | 满足的关系比例 |
-| `relation_score_avg` | 关系软分平均值 |
-| `unsatisfied_relations` | 未满足关系列表 |
-| `ambiguous_relations` | 找不到唯一实体映射的关系 |
+| 字段                      | 含义                     |
+| ------------------------- | ------------------------ |
+| `RSR`                   | 满足的关系比例           |
+| `relation_score_avg`    | 关系软分平均值           |
+| `unsatisfied_relations` | 未满足关系列表           |
+| `ambiguous_relations`   | 找不到唯一实体映射的关系 |
 
 ### PE 位置误差
 
@@ -449,13 +449,13 @@ OE = mean(angle_distance(pred_rotation, gold_rotation))
 
 建议输出：
 
-| 字段 | 含义 |
-| --- | --- |
-| `PE` | 平均位置误差 |
-| `PE_by_asset_type` | 按资产类型分组的位置误差 |
-| `matched_instances` | 成功对齐的实例数量 |
-| `unmatched_gold_instances` | gold 中未匹配到的实例 |
-| `unmatched_pred_instances` | 预测中多出的实例 |
+| 字段                         | 含义                     |
+| ---------------------------- | ------------------------ |
+| `PE`                       | 平均位置误差             |
+| `PE_by_asset_type`         | 按资产类型分组的位置误差 |
+| `matched_instances`        | 成功对齐的实例数量       |
+| `unmatched_gold_instances` | gold 中未匹配到的实例    |
+| `unmatched_pred_instances` | 预测中多出的实例         |
 
 ## 暂未实现 Agent 指标的实现分析
 
@@ -521,12 +521,12 @@ insert/delete_cost = 1
 
 这样可以区分“工具顺序基本正确但多调用了一次工具”和“工具选择完全错误”。最终可同时输出：
 
-| 指标 | 含义 |
-| --- | --- |
-| `TCA_index` | 严格按位置对齐的工具准确率 |
-| `TCA_aligned` | 编辑距离对齐后的工具准确率 |
-| `extra_tool_calls` | 预测多出的工具调用数 |
-| `missing_tool_calls` | gold 中缺失的工具调用数 |
+| 指标                   | 含义                       |
+| ---------------------- | -------------------------- |
+| `TCA_index`          | 严格按位置对齐的工具准确率 |
+| `TCA_aligned`        | 编辑距离对齐后的工具准确率 |
+| `extra_tool_calls`   | 预测多出的工具调用数       |
+| `missing_tool_calls` | gold 中缺失的工具调用数    |
 
 建议第一阶段先实现 `TCA_index`，因为数据结构最直接；等 gold trace 稳定后再实现动态规划对齐。
 
@@ -544,16 +544,16 @@ TPS = mean(sim(pred_args_j, gold_args_j))
 
 #### 通用参数类型规则
 
-| 参数类型 | 相似度规则 |
-| --- | --- |
-| bool | exact match |
-| enum/string category | exact match |
-| number | `max(0, 1 - abs(pred - gold) / max_error)` |
-| position/vector | `max(0, 1 - distance(pred, gold) / d_max)` |
-| doc_id | exact match，或映射到 asset_type 后比较 |
-| instance_id | 先做实体对齐，再比较对齐后的实体 |
-| list | 按元素语义对齐后求平均 |
-| dict | 对关键字段加权平均 |
+| 参数类型             | 相似度规则                                   |
+| -------------------- | -------------------------------------------- |
+| bool                 | exact match                                  |
+| enum/string category | exact match                                  |
+| number               | `max(0, 1 - abs(pred - gold) / max_error)` |
+| position/vector      | `max(0, 1 - distance(pred, gold) / d_max)` |
+| doc_id               | exact match，或映射到 asset_type 后比较      |
+| instance_id          | 先做实体对齐，再比较对齐后的实体             |
+| list                 | 按元素语义对齐后求平均                       |
+| dict                 | 对关键字段加权平均                           |
 
 位置参数可使用已有公式：
 
@@ -687,14 +687,14 @@ collision_key = sorted([instance_id_a, instance_id_b])
 
 可输出：
 
-| 字段 | 含义 |
-| --- | --- |
-| `collision_events` | 碰撞 pair 出现次数 |
-| `resolved_collision_events` | 最终被解决的 pair 数 |
-| `repair_tool_calls` | 修复工具调用总数 |
-| `repair_steps` | 包含修复工具的 step 数 |
-| `RE_call_based` | `resolved_collision_events / repair_tool_calls` |
-| `RE_step_based` | `resolved_collision_events / repair_steps` |
+| 字段                          | 含义                                              |
+| ----------------------------- | ------------------------------------------------- |
+| `collision_events`          | 碰撞 pair 出现次数                                |
+| `resolved_collision_events` | 最终被解决的 pair 数                              |
+| `repair_tool_calls`         | 修复工具调用总数                                  |
+| `repair_steps`              | 包含修复工具的 step 数                            |
+| `RE_call_based`             | `resolved_collision_events / repair_tool_calls` |
+| `RE_step_based`             | `resolved_collision_events / repair_steps`      |
 
 #### RE 的注意点
 
@@ -712,3 +712,4 @@ collision_key = sorted([instance_id_a, instance_id_b])
 3. `TPS_basic`：在 `TCA_index` 对齐基础上，实现 bool、enum、number、position、doc_id 的基础相似度。
 4. `TCA_aligned`：用编辑距离或动态规划改善工具序列对齐。
 5. `TPS_entity_aligned`：加入实体对齐，提升 `instance_id`、support relation 参数的评分可靠性。
+

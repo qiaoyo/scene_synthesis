@@ -212,6 +212,10 @@ def _rename_scene_instance(
             old_children,
         )
 
+    if old_id in scene.state.support_relation_types:
+        support_type = scene.state.support_relation_types.pop(old_id)
+        scene.state.support_relation_types[new_id] = support_type
+
     for child_id, child in scene.state.instances.items():
         if child_id == new_id:
             continue

@@ -1,5 +1,16 @@
 # scene_synthesis · scene_layout_react
 
+source /home/simple/robot/bin/activate
+
+python scripts/metrics/evaluate_toolcall_tca.py
+  --data-path data/lora/toolcall_sft_test_8_2.jsonl
+  --model-name-or-path /media/simple/another_software/cache/huggingface/hub/models--Qwen--Qwen3.5-27B
+  --adapter-path outputs/lora/qwen35_toolcall_lora/checkpoint-200
+  --output-path outputs/metrics/checkpoint-200_tca.json
+  --predictions-path outputs/metrics/checkpoint-200_tca_predictions.jsonl
+  --bf16
+  --sample-size 64
+
 这是一个工业场景合成实验框架，当前代码包名为 `scene_layout_react`。
 核心流程是：
 
@@ -63,22 +74,22 @@ pip install -r requirements.txt
 
 主要配置位于 `scene_layout_react/config.py` 的 `ProjectConfig`。
 
-| 字段 | 当前默认值 | 说明 |
-| --- | --- | --- |
-| `assets_root` | `/home/simple/joey/scene_synthesis/data/assets` | 资产根目录 |
-| `inventory_csvs` | `[]` | 需要手动传入 CSV 文件列表，默认不会自动扫描 |
-| `scene_md_files` | `[]` | 需要手动传入 Markdown 文件列表，默认不会自动扫描 |
-| `embedding_model` | `sentence-transformers/all-MiniLM-L6-v2` | 检索嵌入模型 |
-| `device` | `cuda:1` | SentenceTransformer 运行设备 |
-| `index_dir` | `/home/simple/joey/scene_synthesis/data/indexes` | 索引目录 |
-| `output_dir` | `/home/simple/joey/scene_synthesis/outputs` | agent 日志目录 |
-| `physics_enabled` | `True` | 默认启用 Isaac 物理反馈 |
-| `model` | `Qwen/Qwen3-32B-AWQ` | OpenAI-compatible 服务中的模型名 |
-| `llm_api_base_url` | `http://127.0.0.1:8000/v1` | 本地 LLM 服务地址 |
-| `llm_api_key` | `EMPTY` | 本地服务占位 key |
-| `max_steps` | `10` | ReAct 最大步数 |
-| `isaac_python` | `/home/simple/isaac-sim5.1/python.sh` | Isaac Sim Python 启动脚本 |
-| `isaac_worker_path` | `scene_layout_react/physics/worker.py` 的绝对路径 | Isaac worker 路径 |
+| 字段                  | 当前默认值                                          | 说明                                             |
+| --------------------- | --------------------------------------------------- | ------------------------------------------------ |
+| `assets_root`       | `/home/simple/joey/scene_synthesis/data/assets`   | 资产根目录                                       |
+| `inventory_csvs`    | `[]`                                              | 需要手动传入 CSV 文件列表，默认不会自动扫描      |
+| `scene_md_files`    | `[]`                                              | 需要手动传入 Markdown 文件列表，默认不会自动扫描 |
+| `embedding_model`   | `sentence-transformers/all-MiniLM-L6-v2`          | 检索嵌入模型                                     |
+| `device`            | `cuda:1`                                          | SentenceTransformer 运行设备                     |
+| `index_dir`         | `/home/simple/joey/scene_synthesis/data/indexes`  | 索引目录                                         |
+| `output_dir`        | `/home/simple/joey/scene_synthesis/outputs`       | agent 日志目录                                   |
+| `physics_enabled`   | `True`                                            | 默认启用 Isaac 物理反馈                          |
+| `model`             | `Qwen/Qwen3-32B-AWQ`                              | OpenAI-compatible 服务中的模型名                 |
+| `llm_api_base_url`  | `http://127.0.0.1:8000/v1`                        | 本地 LLM 服务地址                                |
+| `llm_api_key`       | `EMPTY`                                           | 本地服务占位 key                                 |
+| `max_steps`         | `10`                                              | ReAct 最大步数                                   |
+| `isaac_python`      | `/home/simple/isaac-sim5.1/python.sh`             | Isaac Sim Python 启动脚本                        |
+| `isaac_worker_path` | `scene_layout_react/physics/worker.py` 的绝对路径 | Isaac worker 路径                                |
 
 ## 运行入口
 
@@ -201,17 +212,17 @@ Instance(
 
 工具注册通过 `scene_layout_react.tools` 的导入副作用完成；每个工具的 schema 在对应文件中定义。
 
-| 工具名 | 文件 | 当前作用 |
-| --- | --- | --- |
-| `retrieve_tool` | `tools/retrieve_assets.py` | 检索 `asset` 或 `scene_template` |
-| `place_instance` | `tools/place_instance.py` | 根据 `doc_id` 放置资产实例 |
-| `move_asset` | `tools/move_asset.py` | 移动已有实例 |
-| `delete_asset` | `tools/delete_asset.py` | 删除已有实例并解绑 children |
-| `query_scene` | `tools/query_scene.py` | 查询当前场景状态 |
-| `set_support` | `tools/set_support.py` | 登记 child -> parent 支撑关系 |
-| `check_collision` | `tools/check_collision.py` | 通过 Isaac bridge 做碰撞检查 |
-| `check_support` | `tools/check_support.py` | 通过 Isaac bridge 做支撑检查 |
-| `simulate_step` | `tools/simulate_step.py` | 通过 Isaac bridge 做仿真步进 |
+| 工具名              | 文件                         | 当前作用                            |
+| ------------------- | ---------------------------- | ----------------------------------- |
+| `retrieve_tool`   | `tools/retrieve_assets.py` | 检索`asset` 或 `scene_template` |
+| `place_instance`  | `tools/place_instance.py`  | 根据`doc_id` 放置资产实例         |
+| `move_asset`      | `tools/move_asset.py`      | 移动已有实例                        |
+| `delete_asset`    | `tools/delete_asset.py`    | 删除已有实例并解绑 children         |
+| `query_scene`     | `tools/query_scene.py`     | 查询当前场景状态                    |
+| `set_support`     | `tools/set_support.py`     | 登记 child -> parent 支撑关系       |
+| `check_collision` | `tools/check_collision.py` | 通过 Isaac bridge 做碰撞检查        |
+| `check_support`   | `tools/check_support.py`   | 通过 Isaac bridge 做支撑检查        |
+| `simulate_step`   | `tools/simulate_step.py`   | 通过 Isaac bridge 做仿真步进        |
 
 注意：README 旧版中的 `retrieve_assets` 不是当前 schema 名；当前工具名是 `retrieve_tool`。
 
@@ -280,3 +291,50 @@ agent.save(record)
 from scene_layout_rag import ProjectConfig
 from scene_layout_rag.agent import ReActAgent
 ```
+
+## lora 训练使用方法
+
+```Python
+训练：bf16 / fp16
+部署：fp8
+
+source /home/simple/robot/bin/activate
+lora训练
+python scripts/lora/train_qwen35_multimodal_toolcall_lora.py \
+  --data-path data/lora/toolcall_sft_train_8_2.jsonl \
+  --eval-data-path data/lora/toolcall_sft_test_8_2.jsonl \
+  --model-name-or-path /media/simple/another_software/cache/huggingface/hub/models--Qwen--Qwen3.5-27B \
+  --output-dir outputs/lora/qwen35_toolcall_lora \
+  --max-length 4096 \
+  --epochs 3 \
+  --batch-size 1 \
+  --gradient-accumulation-steps 8 \
+  --bf16 \
+  --gradient-checkpointing \
+  --learning-rate 2e-4 \
+  --save-steps 20 \
+  --eval-steps 20 \
+  --logging-steps 1
+
+source /home/simple/robot/bin/activate
+lora 测试
+python scripts/lora/evaluate_toolcall_tca.py \
+  --data-path data/lora/toolcall_sft_test_8_2.jsonl \
+  --model-name-or-path /media/simple/another_software/cache/huggingface/hub/models--Qwen--Qwen3.5-27B/snapshots/fc05daec18b0a78c049392ed2e771dde82bdf654 \
+  --adapter-path /home/simple/joey/scene_synthesis/outputs/lora/qwen35_toolcall_lora_aligned \
+  --output-path outputs/metrics/toolcall_tca_qwen35_lora_aligned_test.json \
+  --predictions-path outputs/metrics/toolcall_tca_qwen35_lora_aligned_test_predictions.jsonl \
+  --bf16 \
+  --sample-size 0
+
+原模型测试
+python scripts/lora/evaluate_toolcall_tca.py \
+  --model-name-or-path /media/simple/another_software/cache/huggingface/hub/models--Qwen--Qwen3.5-27B/snapshots/fc05daec18b0a78c049392ed2e771dde82bdf654 \
+  --data-path data/lora/toolcall_sft_test_8_2.jsonl \
+  --sample-size 0 \
+  --bf16 \
+  --output-path outputs/metrics/toolcall_tca_qwen35_base_test.json \
+  --predictions-path outputs/metrics/toolcall_tca_qwen35_base_test_predictions.jsonl
+```
+
+metric测试

@@ -50,8 +50,16 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--include-final",
+        dest="include_final",
         action="store_true",
+        default=True,
         help="Also convert final_response records into assistant content samples.",
+    )
+    parser.add_argument(
+        "--exclude-final",
+        dest="include_final",
+        action="store_false",
+        help="Do not convert final_response records into assistant content samples.",
     )
     parser.add_argument(
         "--max-records",
@@ -63,6 +71,12 @@ def parse_args() -> argparse.Namespace:
         "--allow-unknown-tools",
         action="store_true",
         help="Keep tool-call samples whose tool names are not in the project tool registry.",
+    )
+    parser.add_argument(
+        "--skipped-report-path",
+        type=Path,
+        default=None,
+        help="Optional JSONL report for rows skipped during conversion.",
     )
     return parser.parse_args()
 
@@ -91,23 +105,35 @@ def read_jsonl(path: Path) -> Iterable[Dict[str, Any]]:
         yield payload
 
 
+def normalize_arguments(arguments: Any, tool_name: str) -> Dict[str, Any]:
+    if arguments is None:
+        return {}
+    if isinstance(arguments, dict):
+        return arguments
+    if isinstance(arguments, str):
+        try:
+            parsed = json.loads(arguments or "{}")
+        except json.JSONDecodeError as exc:
+            raise ValueError(f"Invalid JSON arguments for {tool_name}") from exc
+        if not isinstance(parsed, dict):
+            raise ValueError(f"Arguments for {tool_name} must decode to an object")
+        return parsed
+    raise ValueError(f"Arguments for {tool_name} must be an object")
+
+
 def to_openai_tool_calls(calls: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     converted = []
     for call in calls:
         name = call.get("name")
         if not isinstance(name, str) or not name:
             raise ValueError(f"Invalid tool call name: {call}")
-        arguments = call.get("arguments", {})
+        arguments = normalize_arguments(call.get("arguments", {}), name)
         converted.append(
             {
                 "type": "function",
                 "function": {
                     "name": name,
-                    "arguments": json.dumps(
-                        arguments,
-                        ensure_ascii=False,
-                        separators=(",", ":"),
-                    ),
+                    "arguments": arguments,
                 },
             }
         )
@@ -119,19 +145,19 @@ def build_tool_sample(
     source_path: Path,
     run_record: Optional[Dict[str, Any]],
     allow_unknown_tools: bool,
-) -> Optional[Dict[str, Any]]:
+) -> tuple[Optional[Dict[str, Any]], Optional[str]]:
     messages = row.get("messages")
     tool_calls = row.get("tool_calls") or []
     if not isinstance(messages, list) or len(messages) < 2:
-        return None
+        return None, "missing_messages"
     if not isinstance(tool_calls, list) or not tool_calls:
-        return None
+        return None, "missing_tool_calls"
     if row.get("error"):
-        return None
+        return None, "planner_error"
     if not allow_unknown_tools:
         for call in tool_calls:
             if call.get("name") not in ALLOWED_TOOL_NAMES:
-                return None
+                return None, f"unknown_tool:{call.get('name')}"
 
     assistant_tool_calls = to_openai_tool_calls(tool_calls)
     sample = {
@@ -143,22 +169,22 @@ def build_tool_sample(
             },
         ],
     }
-    return sample
+    return sample, None
 
 
 def build_final_sample(
     row: Dict[str, Any],
     source_path: Path,
     run_record: Optional[Dict[str, Any]],
-) -> Optional[Dict[str, Any]]:
+) -> tuple[Optional[Dict[str, Any]], Optional[str]]:
     messages = row.get("messages")
     final_response = row.get("final_response")
     if not isinstance(messages, list) or len(messages) < 2:
-        return None
+        return None, "missing_messages"
     if not isinstance(final_response, str) or not final_response:
-        return None
+        return None, "missing_final_response"
     if row.get("error"):
-        return None
+        return None, "planner_error"
 
     return {
         "messages": [
@@ -168,11 +194,12 @@ def build_final_sample(
                 "content": final_response,
             },
         ],
-    }
+    }, None
 
 
-def convert_records(args: argparse.Namespace) -> List[Dict[str, Any]]:
+def convert_records(args: argparse.Namespace) -> tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
     samples: List[Dict[str, Any]] = []
+    skipped: List[Dict[str, Any]] = []
     for planner_path in iter_planner_files(args.runs_root):
         run_dir = planner_path.parent
         run_record = load_json(run_dir / "record.json")
@@ -180,20 +207,33 @@ def convert_records(args: argparse.Namespace) -> List[Dict[str, Any]]:
             continue
 
         for row in read_jsonl(planner_path):
-            sample = build_tool_sample(
-                row,
-                planner_path,
-                run_record,
-                allow_unknown_tools=args.allow_unknown_tools,
-            )
+            try:
+                sample, reason = build_tool_sample(
+                    row,
+                    planner_path,
+                    run_record,
+                    allow_unknown_tools=args.allow_unknown_tools,
+                )
+            except ValueError as exc:
+                sample, reason = None, str(exc)
             if sample is None and args.include_final:
-                sample = build_final_sample(row, planner_path, run_record)
+                sample, final_reason = build_final_sample(row, planner_path, run_record)
+                if sample is None:
+                    reason = final_reason or reason
             if sample is None:
+                skipped.append(
+                    {
+                        "source": str(planner_path),
+                        "run_id": row.get("run_id"),
+                        "step": row.get("step"),
+                        "reason": reason,
+                    }
+                )
                 continue
             samples.append(sample)
             if args.max_records is not None and len(samples) >= args.max_records:
-                return samples
-    return samples
+                return samples, skipped
+    return samples, skipped
 
 
 def write_output(samples: List[Dict[str, Any]], output_json: Path) -> None:
@@ -205,11 +245,23 @@ def write_output(samples: List[Dict[str, Any]], output_json: Path) -> None:
     )
 
 
+def write_skipped_report(skipped: List[Dict[str, Any]], path: Path) -> None:
+    path = path.expanduser()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as handle:
+        for item in skipped:
+            handle.write(json.dumps(item, ensure_ascii=False, sort_keys=True) + "\n")
+
+
 def main() -> int:
     args = parse_args()
-    samples = convert_records(args)
+    samples, skipped = convert_records(args)
     write_output(samples, args.output_path)
+    if args.skipped_report_path is not None:
+        write_skipped_report(skipped, args.skipped_report_path)
+        print(f"[convert_lora] skipped_report={args.skipped_report_path}")
     print(f"[convert_lora] samples={len(samples)}")
+    print(f"[convert_lora] skipped={len(skipped)}")
     print(f"[convert_lora] json={args.output_path}")
     return 0
 

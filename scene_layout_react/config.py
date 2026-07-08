@@ -33,7 +33,8 @@ class ProjectConfig:
     
     """model config"""
     #model: str = "Qwen/Qwen3-32B-AWQ"
-    model: str = "Qwen/Qwen3.5-27B"
+    #model: str = "Qwen/Qwen3.5-27B"
+    model: str = "qwen35-toolcall-lora-aligned"
     llm_api_base_url: str = "http://127.0.0.1:8000/v1"
     llm_api_key: str = "EMPTY" 
     llm_timeout_sec: float = 120.0
@@ -46,8 +47,9 @@ class ProjectConfig:
     
     """isaacsim config"""
     isaac_python: Path = Path("/home/simple/isaac_env/bin/python3")
-    isaac_worker_path: Optional[Path] = _PROJECT_ROOT / "scene_layout_react" / "physics" / "worker.py"
-    isaac_worker_timeout_sec: int = 120
+    #isaac_worker_path: Optional[Path] = _PROJECT_ROOT / "scene_layout_react" / "physics" / "worker.py"
+    isaac_worker_path: Optional[Path] = _PROJECT_ROOT / "scene_layout_react" / "physics" / "enhanced_worker.py"
+    isaac_worker_timeout_sec: int = 240
     isaac_worker_persistent: bool = True
     isaac_worker_restart_after: int = 100
     isaac_temp_dir: Path = Path("/tmp/scene_synthesis_isaac")

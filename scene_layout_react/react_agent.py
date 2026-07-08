@@ -128,6 +128,10 @@ class ReActAgent:
             - If assets are missing, retrieve them.
             - If required objects are not placed, place them.
             - If support relations are missing, set them.
+            - Use support_type="surface" for on top of, on surface, or supported by
+            relations.
+            - Use support_type="container_inner" only when a child is inside an
+            open Box and resting on the Box inner bottom surface.
             - If validation is missing or stale, run check_collision/check_support.
             - If check tools returned movement suggestions, use move_asset when reasonable.
             - If repeated movement fails, use replace_instance.
@@ -156,6 +160,10 @@ class ReActAgent:
             - Treat latest_observation as the authoritative scene state.
             - Movement suggestions must come from check_collision or check_support results,
             not from observation alone.
+            - For support relations, call set_support with support_type="surface"
+            for ordinary top-surface support. Call support_type="container_inner"
+            only for a child inside an open Box/bin/container, supported by the
+            inner bottom surface.
             - Prefer move_asset before replace_instance, and replace_instance before
             delete_asset.
             - Never save an incomplete, colliding, unsupported, or unstable scene.

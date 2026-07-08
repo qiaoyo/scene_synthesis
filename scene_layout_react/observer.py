@@ -2,7 +2,7 @@
 from __future__ import annotations
 from dataclasses import asdict, dataclass, field
 from typing import Any, Callable, Dict, Optional
-from .data_models import SceneState
+from .data_models import SUPPORT_TYPE_SURFACE, SceneState
 from .scene_state import SceneStateManager
 # =========================================================
 # Observation
@@ -128,6 +128,7 @@ class Observer:
             }
 
         support_children = {}
+        support_relation_types = {}
         for parent_id, children in state.support_children.items():
             if parent_id not in state.instances:
                 continue
@@ -136,8 +137,14 @@ class Observer:
 
             if valid_children:
                 support_children[parent_id] = valid_children
+                for child_id in valid_children:
+                    support_relation_types[child_id] = state.support_relation_types.get(
+                        child_id,
+                        SUPPORT_TYPE_SURFACE,
+                    )
 
         return {
             "instances": instances,
             "support_children": support_children,
+            "support_relation_types": support_relation_types,
         }

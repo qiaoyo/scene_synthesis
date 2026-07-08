@@ -2,7 +2,13 @@ from __future__ import annotations
 import json
 from pathlib import Path
 from typing import Any, Dict, List, Optional
-from .data_models import Instance, SceneState
+from .data_models import (
+    SUPPORT_TYPE_SURFACE,
+    VALID_SUPPORT_TYPES,
+    Instance,
+    SceneState,
+    normalize_support_type,
+)
 
 class SceneStateManager:
     """对 ``SceneState`` 的薄封装：提供 CRUD + 支撑关系维护 + 持久化。"""
@@ -38,19 +44,30 @@ class SceneStateManager:
             child = self.state.instances.get(child_id)
             if child is not None:
                 child.parent_instance_id = None
+            self.state.support_relation_types.pop(child_id, None)
         self.state.support_children.pop(instance_id, None)
         # 清理它自己的 parent 关系
         parent_id = self.state.instances[instance_id].parent_instance_id
         if parent_id and parent_id in self.state.support_children:
             siblings = self.state.support_children[parent_id]
             self.state.support_children[parent_id] = [c for c in siblings if c != instance_id]
+        self.state.support_relation_types.pop(instance_id, None)
         del self.state.instances[instance_id]
 
     # -- 支撑关系 --
-    def set_support(self, child_id: str, parent_id: str) -> None:
+    def set_support(
+        self,
+        child_id: str,
+        parent_id: str,
+        support_type: str = SUPPORT_TYPE_SURFACE,
+    ) -> None:
         """登记 ``child`` 被 ``parent`` 支撑。会先解除 child 之前的 parent。"""
         if child_id == parent_id:
             raise ValueError("child 与 parent 不能相同")
+        raw_support_type = str(support_type or SUPPORT_TYPE_SURFACE).strip().lower()
+        if raw_support_type not in VALID_SUPPORT_TYPES:
+            raise ValueError(f"unsupported support_type: {support_type}")
+        support_type = normalize_support_type(support_type)
         child = self.get(child_id)
         self.get(parent_id)
         # 先解绑旧 parent
@@ -61,6 +78,7 @@ class SceneStateManager:
         self.state.support_children.setdefault(parent_id, [])
         if child_id not in self.state.support_children[parent_id]:
             self.state.support_children[parent_id].append(child_id)
+        self.state.support_relation_types[child_id] = support_type
 
     def clear_support(self, child_id: str) -> None:
         child = self.get(child_id)
@@ -71,6 +89,7 @@ class SceneStateManager:
             self.state.support_children[parent_id] = [c for c in siblings if c != child_id]
         # 子节点的父节点删除
         child.parent_instance_id = None
+        self.state.support_relation_types.pop(child_id, None)
 
     # -- 状态校验 --
     def validate_integrity(self) -> Dict[str, Any]:
@@ -123,6 +142,18 @@ class SceneStateManager:
                     })
 
                 child_to_parent[child_id] = parent_id
+                support_type = self.state.support_relation_types.get(
+                    child_id,
+                    SUPPORT_TYPE_SURFACE,
+                )
+                if support_type not in VALID_SUPPORT_TYPES:
+                    invalid.append({
+                        "source": "local_state",
+                        "child": child_id,
+                        "parent": parent_id,
+                        "issue": "invalid support_type",
+                        "support_type": support_type,
+                    })
 
         for child_id, inst in self.state.instances.items():
             parent_id = inst.parent_instance_id
@@ -141,6 +172,15 @@ class SceneStateManager:
                     "child": child_id,
                     "parent": parent_id,
                     "issue": "missing support_children edge",
+                })
+
+        for child_id, support_type in self.state.support_relation_types.items():
+            if child_id not in child_to_parent:
+                invalid.append({
+                    "source": "local_state",
+                    "child": child_id,
+                    "issue": "stale support_type",
+                    "support_type": support_type,
                 })
 
         return {
