@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import random
 import re
 import sys
@@ -48,6 +49,10 @@ class TcaBucket:
     json_fallback_valid: int = 0
     schema_valid: int = 0
     argument_exact: int = 0
+    tps_overall_sum: float = 0.0
+    tps_overall_total: int = 0
+    tps_conditional_sum: float = 0.0
+    tps_conditional_total: int = 0
     gold_tool_counts: Counter[str] = field(default_factory=Counter)
     pred_tool_counts: Counter[str] = field(default_factory=Counter)
 
@@ -72,9 +77,24 @@ class TcaBucket:
         aligned = max(len(gold_names), len(pred_names))
         self.call_total += aligned
         for index in range(aligned):
-            gold = gold_names[index] if index < len(gold_names) else None
-            pred = pred_names[index] if index < len(pred_names) else None
-            self.call_correct += int(gold == pred)
+            gold_name = gold_names[index] if index < len(gold_names) else None
+            pred_name = pred_names[index] if index < len(pred_names) else None
+            self.call_correct += int(gold_name == pred_name)
+            gold_call = gold_calls[index] if index < len(gold_calls) else None
+            pred_call = pred_calls[index] if index < len(pred_calls) else None
+            overall_score = 0.0
+            if (
+                gold_name is not None
+                and pred_name is not None
+                and gold_name == pred_name
+                and gold_call is not None
+                and pred_call is not None
+            ):
+                overall_score = tool_parameter_similarity(gold_call, pred_call)
+                self.tps_conditional_sum += overall_score
+                self.tps_conditional_total += 1
+            self.tps_overall_sum += overall_score
+            self.tps_overall_total += 1
         self.tool_parse_valid += int(tool_parse_valid)
         self.json_fallback_valid += int(json_fallback_valid)
         self.schema_valid += int(schema_valid)
@@ -88,10 +108,16 @@ class TcaBucket:
             f"{prefix}_TCA_all_exact": percent(self.all_exact_correct, self.records),
             f"{prefix}_TCA_call_micro": percent(self.call_correct, self.call_total),
             f"{prefix}_argument_exact": percent(self.argument_exact, self.records),
+            f"{prefix}_TPS_overall": percent_float(self.tps_overall_sum, self.tps_overall_total),
+            f"{prefix}_TPS_conditional": percent_float(
+                self.tps_conditional_sum,
+                self.tps_conditional_total,
+            ),
             f"{prefix}_tool_parse_valid": percent(self.tool_parse_valid, self.records),
             f"{prefix}_tool_schema_valid": percent(self.schema_valid, self.records),
             f"{prefix}_tool_json_fallback_valid": percent(self.json_fallback_valid, self.records),
             f"{prefix}_call_total": self.call_total,
+            f"{prefix}_TPS_conditional_total": self.tps_conditional_total,
             f"{prefix}_gold_tool_counts": dict(sorted(self.gold_tool_counts.items())),
             f"{prefix}_pred_tool_counts": dict(sorted(self.pred_tool_counts.items())),
         }
@@ -161,6 +187,10 @@ def parse_args() -> argparse.Namespace:
 
 
 def percent(numerator: int, denominator: int) -> float:
+    return 100.0 * numerator / denominator if denominator else 0.0
+
+
+def percent_float(numerator: float, denominator: int) -> float:
     return 100.0 * numerator / denominator if denominator else 0.0
 
 
@@ -249,6 +279,157 @@ def canonical_tool_calls(calls: list[dict[str, Any]]) -> list[dict[str, Any]]:
         }
         for call in calls
     ]
+
+
+def call_arguments(call: dict[str, Any]) -> dict[str, Any]:
+    function = call.get("function") or {}
+    arguments = function.get("arguments") or {}
+    return arguments if isinstance(arguments, dict) else {}
+
+
+def call_name(call: dict[str, Any]) -> str:
+    function = call.get("function") or {}
+    return str(function.get("name") or "")
+
+
+def id_similarity(gold: Any, pred: Any) -> float:
+    if gold == pred:
+        return 1.0
+    gold_text = str(gold or "")
+    pred_text = str(pred or "")
+    if not gold_text or not pred_text:
+        return 0.0
+    gold_prefix = gold_text.split(".", 1)[0].split("_with_bbox", 1)[0]
+    pred_prefix = pred_text.split(".", 1)[0].split("_with_bbox", 1)[0]
+    return 0.5 if gold_prefix == pred_prefix else 0.0
+
+
+def number_similarity(gold: Any, pred: Any, scale: float = 1.0) -> float:
+    try:
+        diff = abs(float(gold) - float(pred))
+    except (TypeError, ValueError):
+        return 0.0
+    return max(0.0, 1.0 - diff / max(scale, 1e-9))
+
+
+def vector_similarity(gold: Any, pred: Any, scale: float = 2.0) -> float:
+    if not isinstance(gold, list) or not isinstance(pred, list) or not gold or not pred:
+        return 0.0
+    length = min(len(gold), len(pred))
+    try:
+        distance = math.sqrt(
+            sum((float(gold[index]) - float(pred[index])) ** 2 for index in range(length))
+        )
+    except (TypeError, ValueError):
+        return 0.0
+    length_penalty = abs(len(gold) - len(pred)) / max(len(gold), len(pred), 1)
+    return max(0.0, 1.0 - distance / max(scale, 1e-9) - length_penalty)
+
+
+def text_overlap_similarity(gold: Any, pred: Any) -> float:
+    gold_tokens = set(re.findall(r"[A-Za-z0-9_]+", str(gold or "").lower()))
+    pred_tokens = set(re.findall(r"[A-Za-z0-9_]+", str(pred or "").lower()))
+    if not gold_tokens and not pred_tokens:
+        return 1.0
+    if not gold_tokens or not pred_tokens:
+        return 0.0
+    return len(gold_tokens & pred_tokens) / len(gold_tokens | pred_tokens)
+
+
+def recursive_similarity(gold: Any, pred: Any) -> float:
+    if gold == pred:
+        return 1.0
+    if isinstance(gold, (int, float)) and isinstance(pred, (int, float)):
+        return number_similarity(gold, pred)
+    if isinstance(gold, str) and isinstance(pred, str):
+        return text_overlap_similarity(gold, pred)
+    if isinstance(gold, list) and isinstance(pred, list):
+        if all(isinstance(value, (int, float)) for value in gold + pred):
+            return vector_similarity(gold, pred)
+        length = max(len(gold), len(pred))
+        if length == 0:
+            return 1.0
+        total = 0.0
+        for index in range(length):
+            if index < len(gold) and index < len(pred):
+                total += recursive_similarity(gold[index], pred[index])
+        return total / length
+    if isinstance(gold, dict) and isinstance(pred, dict):
+        keys = set(gold) | set(pred)
+        if not keys:
+            return 1.0
+        return sum(recursive_similarity(gold.get(key), pred.get(key)) for key in keys) / len(keys)
+    return 0.0
+
+
+def weighted_average(parts: list[tuple[float, float]]) -> float:
+    total_weight = sum(weight for _, weight in parts)
+    if total_weight <= 0:
+        return 0.0
+    return sum(score * weight for score, weight in parts) / total_weight
+
+
+def retrieve_asset_similarity(gold: dict[str, Any], pred: dict[str, Any]) -> float:
+    gold_assets = gold.get("assets")
+    pred_assets = pred.get("assets")
+    if not isinstance(gold_assets, list) or not isinstance(pred_assets, list):
+        return recursive_similarity(gold, pred)
+    length = max(len(gold_assets), len(pred_assets))
+    if length == 0:
+        return 1.0
+    total = 0.0
+    for index in range(length):
+        if index >= len(gold_assets) or index >= len(pred_assets):
+            continue
+        gold_item = gold_assets[index] if isinstance(gold_assets[index], dict) else {}
+        pred_item = pred_assets[index] if isinstance(pred_assets[index], dict) else {}
+        total += weighted_average(
+            [
+                (
+                    1.0
+                    if gold_item.get("expected_asset_type") == pred_item.get("expected_asset_type")
+                    else 0.0,
+                    0.6,
+                ),
+                (number_similarity(gold_item.get("count", 1), pred_item.get("count", 1)), 0.15),
+                (number_similarity(gold_item.get("top_k", 1), pred_item.get("top_k", 1), 5.0), 0.1),
+                (text_overlap_similarity(gold_item.get("query"), pred_item.get("query")), 0.15),
+            ]
+        )
+    return total / length
+
+
+def tool_parameter_similarity(gold_call: dict[str, Any], pred_call: dict[str, Any]) -> float:
+    name = call_name(gold_call)
+    gold = call_arguments(gold_call)
+    pred = call_arguments(pred_call)
+    if name == "retrieve_asset":
+        return retrieve_asset_similarity(gold, pred)
+    if name == "place_instance":
+        return weighted_average(
+            [
+                (id_similarity(gold.get("doc_id"), pred.get("doc_id")), 0.5),
+                (vector_similarity(gold.get("position"), pred.get("position")), 0.4),
+                (number_similarity(gold.get("rotation_deg", 0.0), pred.get("rotation_deg", 0.0), 180.0), 0.1),
+            ]
+        )
+    if name == "move_asset":
+        return weighted_average(
+            [
+                (id_similarity(gold.get("instance_id"), pred.get("instance_id")), 0.4),
+                (vector_similarity(gold.get("new_position"), pred.get("new_position")), 0.6),
+            ]
+        )
+    if name in {"set_support", "check_support"}:
+        return weighted_average(
+            [
+                (id_similarity(gold.get("child_id"), pred.get("child_id")), 0.5),
+                (id_similarity(gold.get("parent_id"), pred.get("parent_id")), 0.5),
+            ]
+        )
+    if name in {"check_collision", "simulate_step", "save_scene_usd"}:
+        return recursive_similarity(gold, pred)
+    return recursive_similarity(gold, pred)
 
 
 def parse_parameter_value(raw_value: str) -> Any:
@@ -456,6 +637,36 @@ def evaluate_tca(args: argparse.Namespace) -> tuple[dict[str, Any], list[dict[st
                 tool_parse_valid = True
             schema_valid = validate_tool_call_schema(pred_calls, schemas)
             pred_names = tool_names_from_calls(pred_calls)
+            call_parameter_scores: list[dict[str, Any]] = []
+            aligned = max(len(gold_calls), len(pred_calls))
+            tps_overall_sum = 0.0
+            tps_conditional_sum = 0.0
+            tps_conditional_total = 0
+            for call_index in range(aligned):
+                gold_call = gold_calls[call_index] if call_index < len(gold_calls) else None
+                pred_call = pred_calls[call_index] if call_index < len(pred_calls) else None
+                gold_name = call_name(gold_call) if gold_call is not None else None
+                pred_name = call_name(pred_call) if pred_call is not None else None
+                score = 0.0
+                if (
+                    gold_name is not None
+                    and pred_name is not None
+                    and gold_name == pred_name
+                    and gold_call is not None
+                    and pred_call is not None
+                ):
+                    score = tool_parameter_similarity(gold_call, pred_call)
+                    tps_conditional_sum += score
+                    tps_conditional_total += 1
+                tps_overall_sum += score
+                call_parameter_scores.append(
+                    {
+                        "index": call_index,
+                        "gold_tool": gold_name,
+                        "pred_tool": pred_name,
+                        "score": score,
+                    }
+                )
 
             buckets["overall"].add(
                 gold_calls=gold_calls,
@@ -488,6 +699,9 @@ def evaluate_tca(args: argparse.Namespace) -> tuple[dict[str, Any], list[dict[st
                 ),
                 "TCA_all_exact": pred_names == gold_names,
                 "argument_exact": canonical_tool_calls(pred_calls) == canonical_tool_calls(gold_calls),
+                "TPS_overall": percent_float(tps_overall_sum, aligned),
+                "TPS_conditional": percent_float(tps_conditional_sum, tps_conditional_total),
+                "call_parameter_scores": call_parameter_scores,
             }
             if args.include_generated_text:
                 prediction["generated_text"] = decoded

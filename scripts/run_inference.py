@@ -2,6 +2,7 @@ from __future__ import annotations
 import os
 os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
 import argparse
+import json
 import sys
 from pathlib import Path
 # Make the package importable when run as a script.
@@ -20,10 +21,19 @@ def parse_args() -> argparse.Namespace:
         help="Task description for the planner"
         
     )
+    parser.add_argument(
+        "--result-json",
+        type=Path,
+        default=None,
+        help="Optional path to write a compact machine-readable run summary.",
+    )
     return parser.parse_args()
 def main() -> int:
     args = parse_args()
     cfg = ProjectConfig()
+    batch_output_dir = os.environ.get("SCENE_SYNTHESIS_OUTPUT_DIR")
+    if batch_output_dir:
+        cfg.output_dir = Path(batch_output_dir).expanduser()
     rag = AssetRAG(cfg)
     if (cfg.index_dir / "corpus.jsonl").exists():
         rag.load()
@@ -52,9 +62,29 @@ def main() -> int:
                 / "scene_state_final.json"
             )
     agent.scene.save(scene_out_path)
+    run_dir = agent.tool_context.extras.get("run_dir")
+    result = {
+        "run_id": record.get("run_id"),
+        "run_dir": str(run_dir) if run_dir else None,
+        "record_path": str(Path(run_dir) / "record.json") if run_dir else None,
+        "final_scene_path": str(scene_out_path),
+        "ok": record.get("ok"),
+        "steps": len(record.get("steps", []) or []),
+        "final_instances": len(agent.scene.state.instances),
+        "command": args.command,
+    }
+    if args.result_json is not None:
+        result_path = args.result_json.expanduser()
+        result_path.parent.mkdir(parents=True, exist_ok=True)
+        result_path.write_text(
+            json.dumps(result, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
     print(f"[run_inference] {len(record['steps'])} 步, "
           f"final_instances={len(agent.scene.state.instances)}")
     print(f"[run_inference] saved final scene_state={scene_out_path}")
+    if args.result_json is not None:
+        print(f"[run_inference] result_json={args.result_json.expanduser()}")
     return 0
 if __name__ == "__main__":
     raise SystemExit(main())

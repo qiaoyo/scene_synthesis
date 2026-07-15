@@ -39,7 +39,7 @@ DEFAULT_TARGET_SUFFIXES = (
     "down_proj",
 )
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-LOSS_MODES = ("plain", "toolcall", "role_aware")
+LOSS_MODES = ("plain", "toolcall", "role_aware", "tool_role_aware")
 PLAN_TOOLS = {"retrieve_asset", "place_instance"}
 TERMINATION_TOOLS = {"save_scene_usd"}
 ROLE_ORDER = ("plan", "correction", "termination", "final")
@@ -47,6 +47,7 @@ DEFAULT_OUTPUT_DIRS = {
     "plain": Path("outputs/lora/qwen35_plain_lora"),
     "toolcall": Path("outputs/lora/qwen35_toolcall_lora"),
     "role_aware": Path("outputs/lora/qwen35_roleaware_toolcall_lora"),
+    "tool_role_aware": Path("outputs/lora/qwen35_tool_roleaware_lora"),
 }
 
 
@@ -106,7 +107,8 @@ def parse_args() -> argparse.Namespace:
         default="toolcall",
         help=(
             "Training objective variant: plain assistant-only SFT, current "
-            "tool-call function-name weighting, or role-aware tool-call weighting."
+            "tool-call function-name weighting, role-aware tool-call weighting, "
+            "or combined within-role tool and role weighting."
         ),
     )
     parser.add_argument(
@@ -122,7 +124,10 @@ def parse_args() -> argparse.Namespace:
         "--role-alpha",
         type=float,
         default=0.5,
-        help="Role reweighting exponent for --loss-mode role_aware.",
+        help=(
+            "Role reweighting exponent for --loss-mode role_aware and "
+            "tool_role_aware."
+        ),
     )
     parser.add_argument(
         "--role-weight-normalize",
@@ -136,6 +141,31 @@ def parse_args() -> argparse.Namespace:
         dest="role_weight_normalize",
         action="store_false",
         help="Disable role-weight mean normalization.",
+    )
+    parser.add_argument(
+        "--tool-alpha",
+        type=float,
+        default=0.5,
+        help=(
+            "Within-role tool reweighting exponent for --loss-mode "
+            "tool_role_aware."
+        ),
+    )
+    parser.add_argument(
+        "--tool-weight-normalize",
+        dest="tool_weight_normalize",
+        action="store_true",
+        default=True,
+        help=(
+            "Normalize tool weights to keep each role's call-weighted mean "
+            "near 1.0."
+        ),
+    )
+    parser.add_argument(
+        "--no-tool-weight-normalize",
+        dest="tool_weight_normalize",
+        action="store_false",
+        help="Disable within-role tool-weight mean normalization.",
     )
     parser.add_argument(
         "--eval-steps",
@@ -378,6 +408,55 @@ def compute_role_weights(
     return weights
 
 
+def count_tools_by_role(
+    records: list[dict[str, Any]],
+) -> dict[str, dict[str, int]]:
+    counts: dict[str, dict[str, int]] = {role: {} for role in ROLE_ORDER}
+    for record in records:
+        role = role_for_record(record)
+        role_counts = counts.setdefault(role, {})
+        for tool_name in tool_names_from_record(record):
+            role_counts[tool_name] = role_counts.get(tool_name, 0) + 1
+    return counts
+
+
+def compute_tool_weights_by_role(
+    tool_counts_by_role: dict[str, dict[str, int]],
+    *,
+    alpha: float,
+    normalize: bool = True,
+) -> dict[str, dict[str, float]]:
+    weights_by_role: dict[str, dict[str, float]] = {}
+    for role in ROLE_ORDER:
+        counts = tool_counts_by_role.get(role, {})
+        positive_counts = {
+            tool_name: count
+            for tool_name, count in counts.items()
+            if count > 0
+        }
+        total = sum(positive_counts.values())
+        if total <= 0:
+            weights_by_role[role] = {}
+            continue
+
+        weights = {
+            tool_name: (total / count) ** alpha
+            for tool_name, count in positive_counts.items()
+        }
+        if normalize:
+            weighted_mean = sum(
+                weights[tool_name] * count
+                for tool_name, count in positive_counts.items()
+            ) / total
+            if weighted_mean > 0.0:
+                weights = {
+                    tool_name: weight / weighted_mean
+                    for tool_name, weight in weights.items()
+                }
+        weights_by_role[role] = weights
+    return weights_by_role
+
+
 def render_chat(
     processor: Any,
     messages: list[dict[str, Any]],
@@ -408,12 +487,12 @@ def token_offsets(tokenizer: Any, text: str) -> tuple[list[int], list[tuple[int,
     return encoded["input_ids"], encoded.get("offset_mapping")
 
 
-def find_tool_name_spans(
+def find_named_tool_name_spans(
     text: str,
     tool_names: list[str],
     start: int,
-) -> list[tuple[int, int]]:
-    spans: list[tuple[int, int]] = []
+) -> list[tuple[str, int, int]]:
+    spans: list[tuple[str, int, int]] = []
     for name in sorted(set(tool_names)):
         if not name:
             continue
@@ -422,7 +501,7 @@ def find_tool_name_spans(
         found_for_name = False
         for match in function_tag_pattern.finditer(text, pos=start):
             value_start = match.start() + len("<function=")
-            spans.append((value_start, value_start + len(name)))
+            spans.append((name, value_start, value_start + len(name)))
             found_for_name = True
 
         if found_for_name:
@@ -434,7 +513,7 @@ def find_tool_name_spans(
         found_for_name = False
         for match in quoted_name_pattern.finditer(text, pos=start):
             value_start = match.end() - len(name) - 1
-            spans.append((value_start, value_start + len(name)))
+            spans.append((name, value_start, value_start + len(name)))
             found_for_name = True
 
         if found_for_name:
@@ -445,9 +524,24 @@ def find_tool_name_spans(
             value_start = text.find(name, cursor)
             if value_start < 0:
                 break
-            spans.append((value_start, value_start + len(name)))
+            spans.append((name, value_start, value_start + len(name)))
             cursor = value_start + len(name)
     return spans
+
+
+def find_tool_name_spans(
+    text: str,
+    tool_names: list[str],
+    start: int,
+) -> list[tuple[int, int]]:
+    return [
+        (name_start, name_end)
+        for _, name_start, name_end in find_named_tool_name_spans(
+            text,
+            tool_names,
+            start,
+        )
+    ]
 
 
 def build_tca_loss_weights(
@@ -459,13 +553,20 @@ def build_tca_loss_weights(
     prompt_len: int,
     tool_names: list[str],
     tca_loss_weight: float,
+    tool_name_weights: dict[str, float] | None = None,
 ) -> list[float]:
     weights = [1.0] * token_count
-    if tca_loss_weight <= 1.0 or token_spans is None or not tool_names:
+    if token_spans is None or not tool_names:
+        return weights
+    if tca_loss_weight <= 1.0 and tool_name_weights is None:
         return weights
 
     target_start = len(prompt_text) if full_text.startswith(prompt_text) else 0
-    name_spans = find_tool_name_spans(full_text, tool_names, start=target_start)
+    name_spans = find_named_tool_name_spans(
+        full_text,
+        tool_names,
+        start=target_start,
+    )
     if not name_spans:
         return weights
 
@@ -477,8 +578,15 @@ def build_tca_loss_weights(
         token_start, token_end = int(span[0]), int(span[1])
         if token_start == token_end:
             continue
-        if any(token_start < name_end and token_end > name_start for name_start, name_end in name_spans):
-            weights[token_index] = tca_loss_weight
+        for tool_name, name_start, name_end in name_spans:
+            if token_start < name_end and token_end > name_start:
+                tool_weight = (
+                    tool_name_weights.get(tool_name, 1.0)
+                    if tool_name_weights is not None
+                    else 1.0
+                )
+                weights[token_index] = tca_loss_weight * tool_weight
+                break
     return weights
 
 
@@ -493,6 +601,7 @@ def build_loss_weight_vectors(
     tca_loss_weight: float,
     loss_mode: str,
     role_weight: float = 1.0,
+    tool_name_weights: dict[str, float] | None = None,
 ) -> tuple[list[float], list[float]]:
     if loss_mode not in LOSS_MODES:
         raise ValueError(f"Unsupported loss_mode: {loss_mode}")
@@ -506,8 +615,13 @@ def build_loss_weight_vectors(
         prompt_len=prompt_len,
         tool_names=tool_names,
         tca_loss_weight=effective_tca_weight,
+        tool_name_weights=(
+            tool_name_weights
+            if loss_mode == "tool_role_aware"
+            else None
+        ),
     )
-    if loss_mode == "role_aware":
+    if loss_mode in {"role_aware", "tool_role_aware"}:
         loss_weights = [float(role_weight) * weight for weight in normalizer_weights]
     else:
         loss_weights = list(normalizer_weights)
@@ -524,6 +638,7 @@ def tokenize_record(
     enable_thinking: bool = True,
     loss_mode: str = "toolcall",
     role_weight: float = 1.0,
+    tool_name_weights: dict[str, float] | None = None,
 ) -> dict[str, list[int] | list[float]]:
     tokenizer = processor.tokenizer
     messages = record["messages"]
@@ -560,11 +675,16 @@ def tokenize_record(
         tca_loss_weight=tca_loss_weight,
         loss_mode=loss_mode,
         role_weight=role_weight,
+        tool_name_weights=tool_name_weights,
     )
 
     if tokenizer.eos_token_id is not None:
         full_ids = full_ids + [tokenizer.eos_token_id]
-        eos_loss_weight = float(role_weight) if loss_mode == "role_aware" else 1.0
+        eos_loss_weight = (
+            float(role_weight)
+            if loss_mode in {"role_aware", "tool_role_aware"}
+            else 1.0
+        )
         loss_weights = loss_weights + [eos_loss_weight]
         normalizer_weights = normalizer_weights + [1.0]
 
@@ -798,6 +918,7 @@ def tokenize_records(
     enable_thinking: bool,
     loss_mode: str,
     role_weights: dict[str, float],
+    tool_weights_by_role: dict[str, dict[str, float]],
 ) -> list[dict[str, list[int] | list[float]]]:
     tokenized = []
     for record in records:
@@ -812,6 +933,7 @@ def tokenize_records(
                 enable_thinking=enable_thinking,
                 loss_mode=loss_mode,
                 role_weight=role_weights.get(role, 1.0),
+                tool_name_weights=tool_weights_by_role.get(role, {}),
             )
         )
     return tokenized
@@ -824,16 +946,33 @@ def training_metadata(
     eval_records: list[dict[str, Any]],
     role_counts: dict[str, int],
     role_weights: dict[str, float],
+    tool_counts_by_role: dict[str, dict[str, int]],
+    tool_weights_by_role: dict[str, dict[str, float]],
 ) -> dict[str, Any]:
     return {
         "loss_mode": args.loss_mode,
         "tca_loss_weight": args.tca_loss_weight,
         "role_alpha": args.role_alpha,
         "role_weight_normalize": args.role_weight_normalize,
+        "tool_alpha": args.tool_alpha,
+        "tool_weight_normalize": args.tool_weight_normalize,
         "role_counts": dict(sorted(role_counts.items())),
         "role_weights": {
             role: float(role_weights[role])
             for role in sorted(role_weights)
+        },
+        "tool_counts_by_role": {
+            role: dict(sorted(tool_counts_by_role.get(role, {}).items()))
+            for role in ROLE_ORDER
+        },
+        "tool_weights_by_role": {
+            role: {
+                tool_name: float(weight)
+                for tool_name, weight in sorted(
+                    tool_weights_by_role.get(role, {}).items()
+                )
+            }
+            for role in ROLE_ORDER
         },
         "data_path": str(args.data_path),
         "eval_data_path": (
@@ -866,6 +1005,8 @@ def main() -> int:
         raise ValueError("--tca-loss-weight must be positive.")
     if args.role_alpha < 0.0:
         raise ValueError("--role-alpha must be non-negative.")
+    if args.tool_alpha < 0.0:
+        raise ValueError("--tool-alpha must be non-negative.")
 
     processor = AutoProcessor.from_pretrained(
         args.model_name_or_path,
@@ -889,12 +1030,26 @@ def main() -> int:
         alpha=args.role_alpha,
         normalize=args.role_weight_normalize,
     )
+    tool_counts_by_role = count_tools_by_role(train_records)
+    tool_weights_by_role = compute_tool_weights_by_role(
+        tool_counts_by_role,
+        alpha=args.tool_alpha,
+        normalize=args.tool_weight_normalize,
+    )
 
     tool_specs = load_tool_specs()
     print(f"[lora] tool_specs={len(tool_specs)}")
     print(f"[lora] loss_mode={args.loss_mode}")
     print("[lora] role_counts=" + json.dumps(role_counts, ensure_ascii=False, sort_keys=True))
     print("[lora] role_weights=" + json.dumps(role_weights, ensure_ascii=False, sort_keys=True))
+    print(
+        "[lora] tool_counts_by_role="
+        + json.dumps(tool_counts_by_role, ensure_ascii=False, sort_keys=True)
+    )
+    print(
+        "[lora] tool_weights_by_role="
+        + json.dumps(tool_weights_by_role, ensure_ascii=False, sort_keys=True)
+    )
 
     train_tokenized_records = tokenize_records(
         train_records,
@@ -905,6 +1060,7 @@ def main() -> int:
         enable_thinking=args.enable_thinking,
         loss_mode=args.loss_mode,
         role_weights=role_weights,
+        tool_weights_by_role=tool_weights_by_role,
     )
     train_dataset = Dataset.from_list(train_tokenized_records)
     eval_dataset = None
@@ -919,6 +1075,7 @@ def main() -> int:
                 enable_thinking=args.enable_thinking,
                 loss_mode=args.loss_mode,
                 role_weights=role_weights,
+                tool_weights_by_role=tool_weights_by_role,
             )
         )
 
@@ -1020,6 +1177,8 @@ def main() -> int:
             eval_records=eval_records,
             role_counts=role_counts,
             role_weights=role_weights,
+            tool_counts_by_role=tool_counts_by_role,
+            tool_weights_by_role=tool_weights_by_role,
         ),
     )
 
